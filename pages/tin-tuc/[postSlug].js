@@ -1,10 +1,10 @@
 import React from "react";
-import { hygraphClient } from "../../../libs/hygraphClient";
-import { AllPMSPosts } from "../../../queries/guidesQueries";
+import { hygraphClient } from "../../libs/hygraphClient";
+import { AllNewsPosts } from "../../queries/guidesQueries";
 import {
   MoreRelatedPostsQueryInSameCategory,
   PostDetailsQuery,
-} from "../../../queries/postQuery";
+} from "../../queries/postQuery";
 
 export async function getStaticProps({ params }) {
   const client = hygraphClient();
@@ -13,19 +13,19 @@ export async function getStaticProps({ params }) {
     slug: params.postSlug,
   });
 
-  const { posts: relatedPosts } = await client.request(
-    MoreRelatedPostsQueryInSameCategory,
-    {
-      slug: params.postSlug,
-      category: "pambu-pms",
-    }
-  );
-
   if (!post) {
     return {
       notFound: true,
     };
   }
+
+  const { posts: relatedPosts } = await client.request(
+    MoreRelatedPostsQueryInSameCategory,
+    {
+      slug: params.postSlug,
+      category: "tin-tuc",
+    }
+  );
 
   return {
     props: {
@@ -41,7 +41,7 @@ export async function getStaticPaths() {
 
   const client = hygraphClient();
 
-  const posts = await client.request(AllPMSPosts);
+  const posts = await client.request(AllNewsPosts);
 
   posts.posts.forEach((post) => {
     paths.push({
@@ -57,10 +57,10 @@ export async function getStaticPaths() {
   };
 }
 
-const PMSDetailPost = ({ post, relatedPosts }) => {
+const NewsPostDetailsPage = ({ post, relatedPosts }) => {
   console.log(post);
   console.log(relatedPosts);
-  return <div>PMSDetailPost</div>;
+  return <div>NewsPostDetailsPage</div>;
 };
 
-export default PMSDetailPost;
+export default NewsPostDetailsPage;
