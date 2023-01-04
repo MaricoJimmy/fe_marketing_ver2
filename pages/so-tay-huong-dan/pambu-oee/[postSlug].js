@@ -21,12 +21,6 @@ export async function getStaticProps({ params }) {
     }
   );
 
-  if (!post) {
-    return {
-      notFound: true,
-    };
-  }
-
   return {
     props: {
       post,

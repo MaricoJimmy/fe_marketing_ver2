@@ -13,12 +13,6 @@ export async function getStaticProps({ params }) {
     slug: params.postSlug,
   });
 
-  if (!post) {
-    return {
-      notFound: true,
-    };
-  }
-
   const { posts: relatedPosts } = await client.request(
     MoreRelatedPostsQueryInSameCategory,
     {
