@@ -66,7 +66,7 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
   return (
     <div>
       <div className="w-full min-h-screen">
-        <div className="max-w-4xl mx-auto w-full p-4 text-justify">
+        <div className="max-w-3xl mx-auto w-full p-4 text-justify">
           <div className="mb-6">
             <h1 className="font-bold text-4xl text-green-600 mb-2">{title}</h1>
             <p className="text-gray-500 text-sm">Ngày xuất bản: {date}</p>
@@ -137,9 +137,15 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
                   {children}
                 </a>
               ),
-              img: ({ src, altText }) => (
+              img: ({ src, altText, width, height }) => (
                 <div className="my-6">
-                  <img src={src} alt={altText} className="w-full " />
+                  <img
+                    src={src}
+                    alt={altText}
+                    width={width}
+                    height={height}
+                    className="block mx-auto"
+                  />
                   <p className="text-center text-gray-500 text-sm mt-2">
                     {altText}
                   </p>
