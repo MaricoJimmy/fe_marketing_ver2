@@ -8,7 +8,7 @@ module.exports = {
     extend: {
       colors: {
         'green-primary': '#80CC2B',
-        'green-secondary': '#47780D',
+        'green-secondary': '#5D9830',
         'green-tertiary': 'rgba(128, 204, 43, 0.2)',
         "blue-primary": "#3592E9",
         "blue-secondary": "#0D4578",
@@ -16,9 +16,7 @@ module.exports = {
         "orange-secondary": "#78340D",
         "yellow-primary": "#FFE91F",
         "yellow-secondary": "#857700",
-        "gray-primary": "#ADADAD",
-        "gray-secondary": "#B9B9B9",
-        "gray-tertiary": "#F5F5F5",
+        "gray": "#2E2E2E",
         "red": "#CC352B",
       },
       screens: {

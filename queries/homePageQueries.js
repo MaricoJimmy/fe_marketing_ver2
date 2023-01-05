@@ -51,6 +51,7 @@ const NewsPostsQuery = gql`
       title
       slug
       desc
+      publishedAt
       featuredImg {
         height
         width
@@ -60,3 +61,4 @@ const NewsPostsQuery = gql`
   }
 `;
 export { OEEPostsQuery, PMSPostsQuery, NewsPostsQuery };
+

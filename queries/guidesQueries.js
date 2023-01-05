@@ -54,3 +54,4 @@ const AllNewsPosts = gql`
   }
 `;
 export { AllPMSPosts, AllOEEPosts, AllNewsPosts };
+

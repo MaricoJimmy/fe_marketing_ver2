@@ -1,0 +1,16 @@
+.container {
+    position: relative;
+}
+
+.container:hover .subMenu {
+    display: block;
+}
+
+.subMenu {
+    display: none;
+    position: absolute;
+    z-index: 3;
+    top: 25px;
+    left: 0;
+    transition: 0.5s linear;
+}
