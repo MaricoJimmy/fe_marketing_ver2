@@ -54,7 +54,7 @@ const OEELandingPage = () => {
               />
               <div className='mt-8 grid grid-cols-12 gap-6'>
                 <div className="col-span-12 lg:col-span-5 w-full flex items-start justify-center">
-                  <Image src="/image/oee/question.png" width="400" height="360" />
+                  <Image src="/image/oee/question.png" width="400" height="360" alt=""/>
                 </div>
                 <div className="col-span-12 lg:col-span-7">
                   <div onClick={() => handleClickQuestion(1)} className='pb-4 border-b border-gray/20 cursor-pointer'>

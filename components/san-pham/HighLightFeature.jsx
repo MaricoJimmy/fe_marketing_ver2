@@ -13,8 +13,8 @@ function HighLightFeature({ data }) {
                 {
                     data.map(feature => (
                         <div key={v4()} className="col-span-12 md:col-span-4">
-                            <div>
-                                <Image src={feature.img} width='500' height='400' />
+                            <div className='hover:scale-105 duration-200'>
+                                <Image src={feature.img} width='500' height='400' alt="" />
                             </div>
                             <h4 className="text-lg text-gray whitespace-normal font-bold">{feature.title}</h4>
                             <h6 className="mt-2 text-gray/80 whitespace-normal">{feature.desc}</h6>

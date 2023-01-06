@@ -60,7 +60,7 @@ function VersionApp({ data, img }) {
                     </table>
                 </div>
                 <div className="col-span-12 lg:col-span-5 w-full flex items-end justify-center">
-                    <Image src={img} width="500" height="420" />
+                    <Image src={img} width="500" height="420" alt='' />
                 </div>
             </div>
         </div>

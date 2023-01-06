@@ -32,10 +32,10 @@ function HeroSection({ data }) {
                         </div>
                     </div>
                     <div className="absolute top-0 left-0 w-full">
-                        <Image src='/image/line.png' width='500' height='500' />
+                        <Image src='/image/line.png' width='500' height='500' alt='' />
                     </div>
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex items-center justify-center">
-                        <Image src={data.img} width='430' height='400' />
+                        <Image src={data.img} width='430' height='400' alt='' />
                     </div>
                 </div>
             </div>
