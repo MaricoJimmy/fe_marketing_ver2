@@ -1,40 +1,40 @@
-export const OEEDataPage = {
+export const PMSDataPage = {
     heroSection: {
-        heading: "Pambu OEE - Giải Pháp Toàn Diện Về Quản Lý Hiệu Suất Và Bảo Dưỡng Máy Móc",
-        excerpt: "Pambu OEE là giải pháp toàn diện giúp doanh nghiệp quản lý hiệu quả máy móc, dây chuyền sản xuất. Hỗ trợ phân tích dữ liệu hoạt động sản xuất dựa trên những dữ liệu Pambu OEE thu thập được nhằm đưa ra các báo cáo, cảnh báo giúp khách hàng kịp thời đưa ra các quyết định chính xác.",
-        color: "green",
-        img: "/image/oee/mockup-oee.png"
+        heading: "Giám Sát Năng Lượng Cùng Pambu PMS",
+        excerpt: "Lãng phí tài nguyên là những phát cắt vào vết thương đang rỉ máu của doanh nghiệp. Pambu PMS là giải pháp toàn diện, đơn giản, hiệu quả giúp doanh nghiệp lên kế hoạch sử dụng năng lượng tối ưu. Theo dõi, phát hiện sớm những điểm thất thoát lãng phí. Cung cấp bức tranh toàn cảnh về mặt bằng sử dụng năng lượng và hơn thế nữa.",
+        color: "orange",
+        img: "/image/pms/mockup-pms.png"
     },
     features: [
         {
-            img: "/image/oee/feature/feature-1.png",
-            title: "Dữ liệu được thu thập trực tiếp, liên tục",
-            desc: "Giảm thiểu rủi ro sai sót, đảm bảo tính khách quan."
+            img: "/image/pms/feature/feature-1.png",
+            title: "Thống kê tiêu thụ theo thời gian thực",
+            desc: "Từng giờ, từng ngày, từng tuần, từng tháng chính xác, không ngừng, không chậm trễ."
         },
         {
-            img: "/image/oee/feature/feature-2.png",
-            title: "Đưa ra dự đoán, cảnh báo cho khách hàng",
-            desc: "Dựa trên việc phân tích dữ liệu hoạt động sản xuất từ dữ liệu thực thu thập được."
+            img: "/image/pms/feature/feature-2.png",
+            title: "Ghi nhớ, truy vết dữ liệu tiêu thụ, cảnh báo",
+            desc: "Dễ dàng truy vết được sự cố để đưa ra các phương án khắc phục kịp thời."
         },
         {
-            img: "/image/oee/feature/feature-3.png",
-            title: "Dữ liệu được lưu trữ lâu dài và bảo mật",
-            desc: "Mọi thông tin đều được mã hóa đầu cuối."
+            img: "/image/pms/feature/feature-3.png",
+            title: "Cảnh báo tiêu thụ, thống kê tỉ trọng phụ tải",
+            desc: "Giúp khách hàng nhận thức sớm được lượng tiêu thụ gia tăng đột biến."
         },
         {
-            img: "/image/oee/feature/feature-4.png",
-            title: "Xuất báo cáo đa dạng theo nhiều mẫu",
-            desc: "Phục vụ nhiều phòng ban khác nhau trong nhà máy nhưng vẫn đảm bảo đồng nhất dữ liệu."
+            img: "/image/pms/feature/feature-4.png",
+            title: "Đưa ra đánh giá sơ bộ theo tuần, tháng",
+            desc: "Có nhận định tổng quan về hệ thống năng lượng trong thời gian sử dụng phần mềm."
         },
         {
-            img: "/image/oee/feature/feature-5.png",
+            img: "/image/pms/feature/feature-5.png",
             title: "Chạy trên đa thiết bị và mọi lúc mọi nơi",
             desc: "Giúp khả năng quản lý và vận hành nhà máy hiệu quả hơn."
         },
         {
-            img: "/image/oee/feature/feature-6.png",
-            title: "Mở rộng phạm vi với cấu trúc module",
-            desc: "Tiết kiệm thời gian và chi phí triển khai."
+            img: "/image/pms/feature/feature-6.png",
+            title: "Trực quan hóa sơ đồ năng lượng",
+            desc: "Dễ dàng chuẩn đoán, tìm lỗi, có góc nhìn bao quát về mặt bằng năng lượng hiện hữu."
         }
     ],
     status: [
@@ -52,8 +52,8 @@ export const OEEDataPage = {
                 <path d="M22.0711 32.1474C21.8808 32.3005 21.6237 32.4888 21.3065 32.7081C20.9255 32.9734 20.6111 33.2091 20.3725 33.4072C20.1241 33.6135 19.9092 33.8566 19.734 34.1292C19.5478 34.419 19.4532 34.7399 19.4532 35.0837C19.4532 35.2777 19.5151 35.4406 19.637 35.5675C19.7598 35.6968 19.9227 35.7648 20.1085 35.7648H23.2003C23.3596 35.7648 23.5016 35.7042 23.6105 35.5904C23.7201 35.4782 23.7758 35.3366 23.7758 35.1705C23.7758 35.0059 23.7214 34.8643 23.615 34.7505C23.5057 34.6302 23.3624 34.5672 23.2003 34.5672H20.8555C20.8882 34.5336 20.9234 34.5009 20.9615 34.4681C21.1469 34.3068 21.4248 34.0924 21.7883 33.8296C22.2033 33.5382 22.5455 33.2787 22.8058 33.056C23.0788 32.8236 23.3166 32.5485 23.5122 32.2391C23.7193 31.9117 23.8245 31.5515 23.8245 31.17C23.8245 30.7812 23.7308 30.4316 23.5458 30.1329C23.36 29.8316 23.1062 29.595 22.791 29.4297C22.4771 29.2668 22.1272 29.1841 21.751 29.1841C21.0745 29.1841 20.4376 29.3421 19.8548 29.6564C19.6677 29.767 19.565 29.9511 19.565 30.1762C19.565 30.3334 19.6153 30.4677 19.7144 30.5749C19.8785 30.7534 20.1368 30.7935 20.3529 30.678C20.7511 30.4873 21.1784 30.3899 21.6225 30.3899C22.0015 30.3899 22.2721 30.4652 22.4264 30.6142C22.5815 30.764 22.6568 30.9654 22.6568 31.2298C22.6568 31.3878 22.606 31.5408 22.5066 31.6857C22.3924 31.8494 22.2459 32.005 22.0711 32.1474ZM28.6399 33.0814H28.2629V29.9601C28.2629 29.7604 28.1999 29.5877 28.0746 29.4452C27.9437 29.3012 27.7726 29.2275 27.5667 29.2275H27.4067C27.2896 29.2275 27.1766 29.2553 27.0714 29.3094C26.9671 29.3634 26.8787 29.4412 26.8185 29.5304L24.3046 32.993C24.2109 33.1191 24.1634 33.2705 24.1634 33.4416V33.5202C24.1634 33.7199 24.2309 33.891 24.3631 34.0293C24.4978 34.1718 24.6644 34.2438 24.8588 34.2438H27.0706V35.1877C27.0706 35.3587 27.1267 35.5053 27.2372 35.6215C27.3502 35.7435 27.4975 35.8073 27.6629 35.8073C27.827 35.8073 27.9748 35.7443 28.089 35.6248C28.2044 35.5061 28.2629 35.3587 28.2629 35.1877V34.2438H28.6399C28.7925 34.2438 28.9301 34.1849 29.0377 34.0735C29.1433 33.9655 29.1994 33.8247 29.1994 33.6667C29.1994 33.5112 29.1449 33.3704 29.0418 33.2591C28.9337 33.1428 28.795 33.0814 28.6399 33.0814ZM27.0706 33.0814H25.6225L27.0706 31.0669V33.0814ZM31.7153 28.8256C31.6302 28.8992 31.5692 28.9926 31.5348 29.1031L29.4114 35.8032C29.3881 35.8794 29.3774 35.9416 29.3774 35.9997C29.3774 36.156 29.4278 36.2919 29.5272 36.4041C29.632 36.5228 29.7736 36.585 29.9369 36.585C30.0732 36.585 30.1919 36.5432 30.2914 36.4589C30.3749 36.3844 30.435 36.2911 30.4698 36.1822L32.5932 29.4829C32.6166 29.4068 32.6272 29.3446 32.6272 29.2864C32.6272 29.1301 32.5769 28.9942 32.4774 28.8821C32.2859 28.6668 31.9298 28.6398 31.7153 28.8256ZM33.1802 29.4608C33.075 29.5795 33.0218 29.7203 33.0218 29.8816C33.0218 30.0453 33.0766 30.1869 33.1851 30.3048C33.298 30.4243 33.4368 30.4849 33.5972 30.4849H36.1422L34.0921 34.884C34.0466 34.983 34.0237 35.0853 34.0237 35.1877C34.0237 35.3563 34.079 35.502 34.1891 35.6215C34.302 35.7435 34.449 35.8073 34.6147 35.8073C34.8299 35.8073 35.0521 35.6852 35.171 35.4561L37.4475 30.43C37.5126 30.2745 37.5453 30.1165 37.5453 29.9601C37.5453 29.7653 37.4802 29.6 37.3513 29.469L37.3505 29.4673C37.2195 29.3364 37.0566 29.2701 36.8663 29.2701H33.5972C33.4343 29.2701 33.2944 29.3339 33.1802 29.4608ZM28.4993 27.5343C32.2816 27.5343 35.3586 24.4568 35.3586 20.6745C35.3586 16.8922 32.2816 13.8147 28.4993 13.8147C24.717 13.8147 21.6395 16.8922 21.6395 20.6745C21.6395 24.4568 24.717 27.5343 28.4993 27.5343ZM28.4993 15.4912C31.357 15.4912 33.6822 17.8168 33.6822 20.6745C33.6822 23.5322 31.357 25.8578 28.4993 25.8578C25.6412 25.8578 23.316 23.5322 23.316 20.6745C23.316 17.8168 25.6412 15.4912 28.4993 15.4912Z" fill="black" />
                 <path d="M25.1541 22.5364C25.3072 22.8118 25.5929 22.9674 25.8872 22.9674C26.0251 22.9674 26.1651 22.933 26.294 22.8609L27.661 22.1005V23.5256C27.661 23.989 28.0364 24.3639 28.4993 24.3639C28.9622 24.3639 29.3375 23.989 29.3375 23.5256V22.1005L30.7041 22.8609C30.8331 22.933 30.973 22.9674 31.111 22.9674C31.4053 22.9674 31.6909 22.8118 31.844 22.5364C32.0695 22.1316 31.9238 21.6216 31.5195 21.3965L30.2226 20.6745L31.5195 19.9525C31.9238 19.7274 32.0695 19.2174 31.844 18.8126C31.6193 18.4078 31.1085 18.2629 30.7041 18.488L29.3375 19.2485V17.8233C29.3375 17.36 28.9622 16.9851 28.4993 16.9851C28.0364 16.9851 27.661 17.36 27.661 17.8233V19.2485L26.294 18.488C25.8904 18.2629 25.3792 18.4078 25.1541 18.8126C24.9286 19.2174 25.0743 19.7274 25.4787 19.9525L26.7755 20.6745L25.4787 21.3965C25.0743 21.6216 24.9286 22.1316 25.1541 22.5364Z" fill="black" />
             </svg>,
-            title: "24/7",
-            desc: "Hoạt động ổn định liên tục"
+            title: "Realtime",
+            desc: "Cập nhật dữ liệu"
         },
         {
             icon: <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -67,36 +67,41 @@ export const OEEDataPage = {
     versions: {
         data: [
             {
-                title: "Thu thập, thống kê số lượng sản phẩm sản xuất từng máy, từng dây chuyền",
+                title: "Hiển thị, truy vết, cập nhật tức thời các phụ tải quan trọng cần theo dõi",
                 isBasic: true,
                 isPro: true
             },
             {
-                title: "Thu thập, thống kê các lỗi dừng máy",
+                title: "Theo dõi, thống kê lượng tiêu thụ qua các mốc thời gian",
                 isBasic: true,
                 isPro: true
             },
             {
-                title: "Tính toán chỉ số OEE, Productivity",
+                title: "Lưu trữ, cảnh báo, truy vết lịch sử lỗi",
                 isBasic: true,
                 isPro: true
             },
             {
-                title: "Theo dõi liên tục tình trạng vận hành của máy theo từng ca sản xuất",
+                title: "Cung cấp trực quan sơ đồ cây mặt bằng thiết bị",
                 isBasic: true,
                 isPro: true
             },
             {
-                title: "Lưu trữ người vận hành máy, lịch sử sửa chữa, lịch sử thay thế vật tư, thiết bị",
+                title: "Cảnh báo, thông báo sớm, vượt ngưỡng tiêu thụ",
                 isBasic: false,
                 isPro: true
             },
             {
-                title: "Cảnh báo sớm hạn sử dụng của vật tư thay thế, bảo dưỡng dự báo (predictive maintenance)",
+                title: "Thống kê tỉ trọng phụ tải sử dụng năng lượng",
+                isBasic: false,
+                isPro: true
+            },
+            {
+                title: "Ước tính bill tiền điện, nước, ga",
                 isBasic: false,
                 isPro: true
             }
         ],
-        img: "/image/oee/version-app.png"
+        img: "/image/pms/version-app.png"
     },
 }

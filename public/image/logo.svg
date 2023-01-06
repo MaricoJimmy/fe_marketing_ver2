@@ -1,5 +1,5 @@
 <svg width="53" height="83" viewBox="0 0 53 83" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="mask0_418_1432" style={{ 'mask-type': "alpha" }} maskUnits="userSpaceOnUse" x="24" y="0" width="22" height="21">
+<mask id="mask0_418_1432" style={{ 'maskType': "alpha" }} maskUnits="userSpaceOnUse" x="24" y="0" width="22" height="21">
 <path d="M24.8424 0H45.8773V20.1533H24.8424V0Z" fill="white"/>
 </mask>
 <g mask="url(#mask0_418_1432)">

@@ -3,11 +3,11 @@ import Footer from '../common/Footer'
 import Header from '../common/Header'
 import Hotline from '../common/Hotline'
 
-function DefaultLayout({ children }) {
+function PMSLayout({ children }) {
     return (
         <div className='bg-white w-full min-h-screen'>
-            <Hotline />
-            <Header />
+            <Hotline isPMSPage />
+            <Header isPMSPage />
             <div>
                 {
                     children
@@ -18,4 +18,4 @@ function DefaultLayout({ children }) {
     )
 }
 
-export default DefaultLayout
+export default PMSLayout
