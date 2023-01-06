@@ -26,12 +26,12 @@ function HeroSection({ data }) {
             <div className="col-span-12 lg:col-span-5 h-[400px] md:h-[450px]">
                 <div className="relative w-full h-full">
                     <div className="relative w-full h-full blur-3xl">
-                        <div className={`absolute top-16 left-1/2 w-[200px] h-[200px] rounded-full ${data.color === "green" ? "bg-green-primary" : "bg-orange-primary"}`}>
+                        <div className={`absolute top-16 left-1/2 md:left-2/3 lg:left-1/2 w-[200px] h-[200px] rounded-full ${data.color === "green" ? "bg-green-primary" : "bg-orange-primary"}`}>
                         </div>
-                        <div className={`absolute top-36 left-24 w-[250px] h-[250px] rounded-full ${data.color === "green" ? "bg-green-primary" : "bg-orange-primary"}`}>
+                        <div className={`absolute top-36 left-24 md:left-36 lg:left-24 w-[250px] h-[250px] rounded-full ${data.color === "green" ? "bg-green-primary" : "bg-orange-primary"}`}>
                         </div>
                     </div>
-                    <div className="absolute top-0 left-0 w-full">
+                    <div className="absolute top-0 left-1/2 md:left-0 w-full">
                         <Image src='/image/line.png' width='500' height='500' alt='' />
                     </div>
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex items-center justify-center">
