@@ -14,6 +14,22 @@ const schema = yup.object().shape({
   phoneNumber: yup.string().required("Số điện thoại không được để trống!").min(10, "Số điện thoại phải đủ 10 số!"),
   email: yup.string().email().required("Email không được để trống!"),
   address: yup.string().required("Địa chỉ không được để trống!"),
+  checkbox: yup.object().shape(
+    {
+      oee: yup.bool().when("pms", {
+        is: (pms) => !pms,
+        then: yup.bool().oneOf([true], "Hãy chọn ít nhất một loại sản phẩm!")
+      }),
+      pms: yup.bool().when("oee", {
+        is: (oee) => !oee,
+        then: yup.bool().oneOf([true], "Hãy chọn ít nhất một loại sản phẩm!")
+      })
+    },
+    [
+      ["oee", "pms"],
+      ["pms", "oee"]
+    ]
+  )
 });
 
 const BookDemoPage = () => {
@@ -166,7 +182,13 @@ const BookDemoPage = () => {
                     <span className="text-base font-medium">Chọn loại sản phẩm</span>
                     <div class="flex items-start mt-4">
                       <div className="mt-1">
-                        <input id="oee" type="checkbox" value="" class="w-4 h-4 bg-gray/40 border-gray/40 rounded " />
+                        <input
+                          {...register("checkbox.oee")}
+                          id="oee"
+                          // name="checkbox"
+                          type="checkbox"
+                          // value="oee"
+                          class="w-4 h-4 bg-gray/40 border-gray/40 rounded " />
                       </div>
                       <label for="oee" class="ml-4 font-medium text-gray-900">
                         <span className="font-semibold">Pambu OEE</span>: Giải pháp toàn diện về quản lý hiệu suất và bảo dưỡng máy móc
@@ -177,7 +199,13 @@ const BookDemoPage = () => {
                     </div>
                     <div class="flex items-start mt-4">
                       <div className="mt-1">
-                        <input id="pms" type="checkbox" value="" class="w-4 h-4 bg-gray/40 border-gray/40 rounded " />
+                        <input
+                          {...register("checkbox.pms")}
+                          id="pms"
+                          // name="checkbox"
+                          type="checkbox"
+                          // value="pms"
+                          class="w-4 h-4 bg-gray/40 border-gray/40 rounded " />
                       </div>
                       <label for="pms" class="ml-4 font-medium text-gray-900">
                         <span className="font-semibold">Pambu PMS</span>: Giám sát và quản lý năng lượng
@@ -186,6 +214,11 @@ const BookDemoPage = () => {
                         </Link>
                       </label>
                     </div>
+                    {errors.checkbox && (
+                      <p className="mt-4 text-sm text-red font-medium">
+                        {errors.checkbox?.pms?.message && errors.checkbox?.oee?.message}
+                      </p>
+                    )}
                   </div>
                   <div className='mt-10'>
                     <Button className="px-6 py-3 w-full bg-green-primary hover:bg-green-secondary text-white font-semibold">Đặt lịch</Button>
