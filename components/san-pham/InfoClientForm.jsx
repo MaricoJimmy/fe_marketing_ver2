@@ -123,7 +123,7 @@ function InfoClientForm({ isPMSPage }) {
           )}
         </div>
         <div className='mt-10'>
-          <Button className={`${isPMSPage && "bg-orange-primary" || "bg-green-primary"} px-6 py-3 w-full text-white font-semibold`}>Đặt lịch</Button>
+          <Button className={`${isPMSPage && "bg-orange-primary hover:bg-orange-secondary" || "bg-green-primary hover:bg-green-secondary"} px-6 py-3 w-full text-white font-semibold duration-200`}>Đặt lịch</Button>
         </div>
       </form>
     </div>
