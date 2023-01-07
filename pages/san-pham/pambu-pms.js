@@ -85,8 +85,14 @@ const PMSLandingPage = () => {
                     </div>
                     <div className={`${(idQuestion === 2 && openQuestion) && "translate-x-0 block" || "-translate-x-1/4 hidden"} mt-4 text-gray/60 font-medium`}>
                       <span>
-                        Bao gồm chí phí lắp đặt phần cứng và chi phí bản quyền phần mềm. Để biết thêm thông tin chi tiết vui lòng đặt lịch demo tại đây hoặc gọi điện trực tiếp để được đội ngũ chuyên gia tư vấn qua số hotline: <span className="font-bold">1900100</span>
+                        Bao gồm lắp đặt phần cứng, phầm mềm:
                       </span>
+                      <p>- Phần cứng được lựa chọn sản phẩm từ các tập đoàn lớn như Mitsubishi, Siemens, Schneider,… </p>
+                      <p>- Phần mềm được nghiên cứu phát triển và quá trình kiểm tra kỹ lưỡng. Bên cạnh đó sau khi sử dụng sản phẩm Pambu mỗi phiên bản mới đều sẽ tự động cập nhật miễn phí cho người sử dụng.</p>
+                      <span>Để biết thêm thông tin chi tiết vui lòng đặt lịch demo
+                        <Link href='/dat-lich-demo'>
+                          <a className='ml-1 text-blue-primary underline'>tại đây</a>
+                        </Link> hoặc gọi điện trực tiếp để được đội ngũ chuyên gia tư vấn qua số hotline: 012146213109</span>
                     </div>
                   </div>
                   <div onClick={() => handleClickQuestion(3)} className='py-4 border-b border-gray/20 cursor-pointer'>
@@ -100,7 +106,7 @@ const PMSLandingPage = () => {
                     </div>
                     <div className={`${(idQuestion === 3 && openQuestion) && "translate-x-0 block" || "-translate-x-1/4 hidden"} mt-4 text-gray/60 font-medium`}>
                       <span>
-                        Mạng lưới phân phối khắp cả nước: Bắc, Trung, Nam.
+                        Mạng lưới phân phối khắp cả nước với hai trụ sở văn phòng đặt tại Hà Nội và Hồ Chí Minh nhằm mục đích khách hàng được hỗ trợ tốt nhất bằng đội ngũ chuyên viên của Pambu
                       </span>
                     </div>
                   </div>

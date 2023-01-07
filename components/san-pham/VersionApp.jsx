@@ -26,7 +26,7 @@ function VersionApp({ data, img }) {
                             {
                                 data.map(featureInVersion => (
                                     <tr key={v4()} className='border-b border-gray/20 last:border-none'>
-                                        <td className='px-2 py-3 text-lg font-medium'>{featureInVersion.title}</td>
+                                        <td className='px-2 py-3 md:text-lg font-medium'>{featureInVersion.title}</td>
                                         <td className='px-2 md:px-3 py-3'>
                                             {featureInVersion.isBasic &&
                                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

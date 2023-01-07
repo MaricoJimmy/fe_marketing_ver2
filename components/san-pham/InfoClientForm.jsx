@@ -23,6 +23,13 @@ function InfoClientForm({ isPMSPage }) {
   const onSubmit = (formData) => {
     console.log(formData);
   };
+
+  // const inputRef = useRef(null);
+
+  // useEffect(() => {
+  //   inputRef.current && inputRef.current.focus()
+  // }, [])
+
   return (
     <div className='p-6 md:p-8 w-full bg-white rounded-lg'>
       <h3 className='text-2xl text-gray text-center font-bold'>Thông tin khách hàng</h3>
@@ -30,12 +37,13 @@ function InfoClientForm({ isPMSPage }) {
         <div>
           <FormGroup
             register={register}
+            // ref={inputRef}
             type="text"
             name="name"
             label="Họ và tên"
             placeholder="Nhập họ và tên"
             className={
-              errors?.userName
+              errors?.name
                 ? "border-red"
                 : (isValid && "border-green-primary") || ""
             }
@@ -54,7 +62,7 @@ function InfoClientForm({ isPMSPage }) {
             label="Tên công ty"
             placeholder="Nhập tên công ty"
             className={
-              errors?.userName
+              errors?.companyName
                 ? "border-red"
                 : (isValid && "border-green-primary") || ""
             }
@@ -73,7 +81,7 @@ function InfoClientForm({ isPMSPage }) {
             label="Số điện thoại"
             placeholder="Nhập số điện thoại"
             className={
-              errors?.userName
+              errors?.phoneNumber
                 ? "border-red"
                 : (isValid && "border-green-primary") || ""
             }
@@ -92,7 +100,7 @@ function InfoClientForm({ isPMSPage }) {
             label="Email"
             placeholder="Nhập email"
             className={
-              errors?.userName
+              errors?.email
                 ? "border-red"
                 : (isValid && "border-green-primary") || ""
             }
@@ -111,7 +119,7 @@ function InfoClientForm({ isPMSPage }) {
             label="Địa chỉ"
             placeholder="Nhập địa chỉ"
             className={
-              errors?.userName
+              errors?.address
                 ? "border-red"
                 : (isValid && "border-green-primary") || ""
             }

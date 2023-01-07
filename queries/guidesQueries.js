@@ -10,6 +10,7 @@ const AllPMSPosts = gql`
       desc
       title
       slug
+      publishedAt
       featuredImg {
         height
         width
@@ -29,6 +30,7 @@ const AllOEEPosts = gql`
       desc
       title
       slug
+      publishedAt
       featuredImg {
         height
         width
@@ -45,6 +47,7 @@ const AllNewsPosts = gql`
       desc
       title
       slug
+      publishedAt
       featuredImg {
         height
         width

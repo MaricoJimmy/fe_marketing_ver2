@@ -11,10 +11,10 @@ function HeroSection({ data, isPMSPage }) {
         <div className="grid grid-cols-12 gap-6">
             <div className="col-span-12 lg:col-span-7 order-last lg:order-first flex items-center justify-center">
                 <div className="w-full">
-                    <h1 className="text-4xl text-gray font-bold">
+                    <h1 className="text-2xl md:text-4xl text-gray font-bold">
                         {data.heading}
                     </h1>
-                    <p className="mt-6 text-gray/80 text-justify font-medium">{data.excerpt}</p>
+                    <p className="mt-6 text-gray/80 text-justify font-medium leading-8">{data.excerpt}</p>
                     <div className='flex items-center justify-center lg:justify-start'>
                         <Button onClick={() => setShowModal(true)} className={`mt-10 px-6 py-3 text-white font-semibold duration-200 ${data.color === "green" ? "bg-green-primary hover:bg-green-secondary" : "bg-orange-primary hover:bg-orange-secondary"}`}>
                             Đặt lịch demo

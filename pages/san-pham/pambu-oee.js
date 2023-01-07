@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import Title from "../../components/common/Title";
+import OEELayout from "../../components/layout/OEELayout";
 import FormDemo from "../../components/san-pham/FormDemo";
 import HeroSection from "../../components/san-pham/HeroSection";
 import HighLightFeature from "../../components/san-pham/HighLightFeature";
@@ -34,6 +35,7 @@ const OEELandingPage = () => {
         <div className="w-full flex justify-center items-center">
           <div className="px-5 py-3 md:px-8 md:py-6 max-w-screen-xl w-full overflow-hidden md:overflow-visible">
             <HeroSection data={OEEDataPage.heroSection} />
+            <Partner />
             <HighLightFeature data={OEEDataPage.features} />
           </div>
         </div>
@@ -54,7 +56,7 @@ const OEELandingPage = () => {
               />
               <div className='mt-8 grid grid-cols-12 gap-6'>
                 <div className="col-span-12 lg:col-span-5 w-full flex items-start justify-center">
-                  <Image src="/image/oee/question.png" width="400" height="360" alt=""/>
+                  <Image src="/image/oee/question.png" width="400" height="360" alt="" />
                 </div>
                 <div className="col-span-12 lg:col-span-7">
                   <div onClick={() => handleClickQuestion(1)} className='pb-4 border-b border-gray/20 cursor-pointer'>
@@ -66,7 +68,7 @@ const OEELandingPage = () => {
                         </svg>
                       </div>
                     </div>
-                    <div className={`${(idQuestion === 1 && openQuestion) && "translate-x-0 block" || "-translate-x-1/4 hidden"} mt-4 text-gray/60 font-medium`}>
+                    <div className={`${(idQuestion === 1 && openQuestion) && "translate-x-0 block" || "-translate-x-1/4 hidden"} mt-4 text-gray/80 leading-8 font-medium`}>
                       <span>OEE là Overall Equipment Effectiveness hay Hiệu Suất Tổng Thể Thiết Bị là thước đo hiệu quả hoạt động (effectiveness) của một thiết bị ...</span>
                       <Link href='/pambu-oee'>
                         <a className='ml-2 text-blue-primary underline'>Xem chi tiết tại đây</a>
@@ -82,7 +84,7 @@ const OEELandingPage = () => {
                         </svg>
                       </div>
                     </div>
-                    <div className={`${(idQuestion === 2 && openQuestion) && "translate-x-0 block" || "-translate-x-1/4 hidden"} mt-4 text-gray/60 font-medium`}>
+                    <div className={`${(idQuestion === 2 && openQuestion) && "translate-x-0 block" || "-translate-x-1/4 hidden"} mt-4 text-gray/80 leading-8 font-medium`}>
                       <span>
                         Những khó khăn mà phần lớn các nhà máy thường hay gặp phải trong quá trình sản xuất:
                       </span>
@@ -102,7 +104,7 @@ const OEELandingPage = () => {
                         </svg>
                       </div>
                     </div>
-                    <div className={`${(idQuestion === 3 && openQuestion) && "translate-x-0 block" || "-translate-x-1/4 hidden"} mt-4 text-gray/60 font-medium`}>
+                    <div className={`${(idQuestion === 3 && openQuestion) && "translate-x-0 block" || "-translate-x-1/4 hidden"} mt-4 text-gray/80 leading-8 font-medium`}>
                       <span>
                         Bao gồm lắp đặt phần cứng, phầm mềm:
                       </span>
@@ -123,7 +125,7 @@ const OEELandingPage = () => {
                         </svg>
                       </div>
                     </div>
-                    <div className={`${(idQuestion === 4 && openQuestion) && "translate-x-0 block" || "-translate-x-1/4 hidden"} mt-4 text-gray/60 font-medium`}>
+                    <div className={`${(idQuestion === 4 && openQuestion) && "translate-x-0 block" || "-translate-x-1/4 hidden"} mt-4 text-gray/80 leading-8 font-medium`}>
                       <span>
                         Mạng lưới phân phối khắp cả nước với hai trụ sở văn phòng đặt tại Hà Nội và Hồ Chí Minh nhằm mục đích khách hàng được hỗ trợ tốt nhất bằng đội ngũ chuyên viên của Pambu
                       </span>
@@ -138,7 +140,7 @@ const OEELandingPage = () => {
                         </svg>
                       </div>
                     </div>
-                    <div className={`${(idQuestion === 5 && openQuestion) && "translate-x-0 block" || "-translate-x-1/4 hidden"} mt-4 text-gray/60 font-medium`}>
+                    <div className={`${(idQuestion === 5 && openQuestion) && "translate-x-0 block" || "-translate-x-1/4 hidden"} mt-4 text-gray/80 leading-8 font-medium`}>
                       <span>
                         Ước tính khoảng 10 năm
                       </span>
@@ -147,7 +149,6 @@ const OEELandingPage = () => {
                 </div>
               </div>
             </div>
-            <Partner />
           </div>
         </div>
         <FormDemo />
@@ -156,3 +157,5 @@ const OEELandingPage = () => {
 };
 
 export default OEELandingPage;
+
+OEELandingPage.Layout = OEELayout

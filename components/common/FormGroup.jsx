@@ -9,7 +9,7 @@ function FormGroup({ label, ...rest }) {
     )
 }
 
-function Input({ register, name, className = "", ...rest }) {
+function Input({ register, name, className = "", ref, ...rest }) {
     if (!register) {
         return <input
             {...rest}

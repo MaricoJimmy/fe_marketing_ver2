@@ -9,32 +9,75 @@ function Technologies() {
                     SỬ DỤNG CÔNG NGHỆ, PHẦN CỨNG ĐẾN TỪ CÁC TẬP ĐOÀN HÀNG ĐẦU TRÊN THẾ GIỚI
                 </h3>
             </div>
-            <div className='mt-16 flex flex-wrap items-center justify-center gap-10 lg:gap-32'>
-                <div className='w-fit h-fit hover:-translate-y-2 duration-300'>
-                    <Image src="/image/technology/tech-1.png" width="100" height="60" alt='' />
+            <div className='hidden md:block'>
+                <div className='mt-16 flex flex-wrap items-center justify-center gap-10 lg:gap-32'>
+                    <div className='w-fit h-fit hover:-translate-y-2 duration-300'>
+                        <Image src="/image/technology/tech-1.png" width="100" height="60" alt='' />
+                    </div>
+                    <div className='w-fit h-fit hover:-translate-y-2 duration-300'>
+                        <Image src="/image/technology/tech-2.png" width="70" height="60" alt='' />
+                    </div>
+                    <div className='w-fit h-fit hover:-translate-y-2 duration-300'>
+                        <Image src="/image/technology/tech-3.png" width="80" height="60" alt='' />
+                    </div>
+                    <div className='w-fit h-fit hover:-translate-y-2 duration-300'>
+                        <Image src="/image/technology/tech-4.png" width="60" height="60" alt='' />
+                    </div>
                 </div>
-                <div className='w-fit h-fit hover:-translate-y-2 duration-300'>
-                    <Image src="/image/technology/tech-2.png" width="70" height="60" alt='' />
-                </div>
-                <div className='w-fit h-fit hover:-translate-y-2 duration-300'>
-                    <Image src="/image/technology/tech-3.png" width="80" height="60" alt='' />
-                </div>
-                <div className='w-fit h-fit hover:-translate-y-2 duration-300'>
-                    <Image src="/image/technology/tech-4.png" width="60" height="60" alt='' />
+                <div className='mt-10 flex flex-wrap items-center justify-center gap-10 lg:gap-24'>
+                    <div className='w-fit h-fit hover:-translate-y-2 duration-300'>
+                        <Image src="/image/technology/tech-5.png" width="90" height="70" alt='' />
+                    </div>
+                    <div className='w-fit h-fit hover:-translate-y-2 duration-300'>
+                        <Image src="/image/technology/tech-6.png" width="180" height="35" alt='' />
+                    </div>
+                    <div className='w-fit h-fit hover:-translate-y-2 duration-300'>
+                        <Image src="/image/technology/tech-7.png" width="70" height="65" alt='' />
+                    </div>
+                    <div className='w-fit h-fit hover:-translate-y-2 duration-300'>
+                        <Image src="/image/technology/tech-8.png" width="150" height="60" alt='' />
+                    </div>
                 </div>
             </div>
-            <div className='mt-10 flex flex-wrap items-center justify-center gap-10 lg:gap-24'>
-                <div className='w-fit h-fit hover:-translate-y-2 duration-300'>
-                    <Image src="/image/technology/tech-5.png" width="90" height="70" alt='' />
+            <div className="mt-16 grid md:hidden grid-cols-12 gap-6">
+                <div className="col-span-6">
+                    <div className='flex justify-center items-center w-full h-full hover:-translate-y-2 duration-300'>
+                        <Image src="/image/technology/tech-1.png" width="100" height="60" alt='' />
+                    </div>
                 </div>
-                <div className='w-fit h-fit hover:-translate-y-2 duration-300'>
-                    <Image src="/image/technology/tech-6.png" width="180" height="35" alt='' />
+                <div className="col-span-6">
+                    <div className='flex justify-center items-center w-full h-full hover:-translate-y-2 duration-300'>
+                        <Image src="/image/technology/tech-2.png" width="70" height="60" alt='' />
+                    </div>
                 </div>
-                <div className='w-fit h-fit hover:-translate-y-2 duration-300'>
-                    <Image src="/image/technology/tech-7.png" width="70" height="65" alt='' />
+                <div className="col-span-6">
+                    <div className='flex justify-center items-center w-full h-full hover:-translate-y-2 duration-300'>
+                        <Image src="/image/technology/tech-3.png" width="80" height="60" alt='' />
+                    </div>
                 </div>
-                <div className='w-fit h-fit hover:-translate-y-2 duration-300'>
-                    <Image src="/image/technology/tech-8.png" width="150" height="60" alt='' />
+                <div className="col-span-6">
+                    <div className='flex justify-center items-center w-full h-full hover:-translate-y-2 duration-300'>
+                        <Image src="/image/technology/tech-4.png" width="60" height="60" alt='' />
+                    </div>
+                </div>
+                <div className="col-span-6">
+                    <div className='flex justify-center items-center w-full h-full hover:-translate-y-2 duration-300'>
+                        <Image src="/image/technology/tech-5.png" width="90" height="70" alt='' />
+                    </div>
+                </div><div className="col-span-6">
+                    <div className='flex justify-center items-center w-full h-full hover:-translate-y-2 duration-300'>
+                        <Image src="/image/technology/tech-7.png" width="70" height="65" alt='' />
+                    </div>
+                </div>
+                <div className="col-span-6">
+                    <div className='flex justify-center items-center w-full h-full hover:-translate-y-2 duration-300'>
+                        <Image src="/image/technology/tech-6.png" width="180" height="35" alt='' />
+                    </div>
+                </div>
+                <div className="col-span-6">
+                    <div className='flex justify-center items-center w-full h-full hover:-translate-y-2 duration-300'>
+                        <Image src="/image/technology/tech-8.png" width="150" height="60" alt='' />
+                    </div>
                 </div>
             </div>
         </div>

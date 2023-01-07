@@ -1,6 +1,6 @@
 export const OEEDataPage = {
     heroSection: {
-        heading: "Pambu OEE - Giải Pháp Toàn Diện Về Quản Lý Hiệu Suất Và Bảo Dưỡng Máy Móc",
+        heading: "Pambu OEE - Giải Pháp Toàn Diện Về Quản Lý Hiệu Suất Và Bảo Dưỡng Máy",
         excerpt: "Pambu OEE là giải pháp toàn diện giúp doanh nghiệp quản lý hiệu quả máy móc, dây chuyền sản xuất. Hỗ trợ phân tích dữ liệu hoạt động sản xuất dựa trên những dữ liệu Pambu OEE thu thập được nhằm đưa ra các báo cáo, cảnh báo giúp khách hàng kịp thời đưa ra các quyết định chính xác.",
         color: "green",
         img: "/image/oee/mockup-oee.png"

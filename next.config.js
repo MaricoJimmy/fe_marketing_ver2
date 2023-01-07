@@ -1,5 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  images: {
+    domains: ['media.graphassets.com'],
+  },
   reactStrictMode: false,
   swcMinify: true,
   async rewrites() {
