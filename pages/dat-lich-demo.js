@@ -90,7 +90,7 @@ const BookDemoPage = () => {
                       label="Họ và tên"
                       placeholder="Nhập họ và tên"
                       className={
-                        errors?.userName
+                        errors?.name
                           ? "border-red"
                           : (isValid && "border-green-primary") || ""
                       }
@@ -109,7 +109,7 @@ const BookDemoPage = () => {
                       label="Tên công ty"
                       placeholder="Nhập tên công ty"
                       className={
-                        errors?.userName
+                        errors?.companyName
                           ? "border-red"
                           : (isValid && "border-green-primary") || ""
                       }
@@ -128,7 +128,7 @@ const BookDemoPage = () => {
                       label="Số điện thoại"
                       placeholder="Nhập số điện thoại"
                       className={
-                        errors?.userName
+                        errors?.phoneNumber
                           ? "border-red"
                           : (isValid && "border-green-primary") || ""
                       }
@@ -147,7 +147,7 @@ const BookDemoPage = () => {
                       label="Email"
                       placeholder="Nhập email"
                       className={
-                        errors?.userName
+                        errors?.email
                           ? "border-red"
                           : (isValid && "border-green-primary") || ""
                       }
@@ -166,7 +166,7 @@ const BookDemoPage = () => {
                       label="Địa chỉ"
                       placeholder="Nhập địa chỉ"
                       className={
-                        errors?.userName
+                        errors?.address
                           ? "border-red"
                           : (isValid && "border-green-primary") || ""
                       }
