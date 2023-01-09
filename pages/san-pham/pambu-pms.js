@@ -35,6 +35,7 @@ const PMSLandingPage = () => {
         <div className="w-full flex justify-center items-center">
           <div className="px-5 py-3 md:px-8 md:py-6 max-w-screen-xl w-full overflow-hidden md:overflow-visible">
             <HeroSection data={PMSDataPage.heroSection} isPMSPage />
+            <Partner />
             <HighLightFeature data={PMSDataPage.features} />
           </div>
         </div>
@@ -143,7 +144,6 @@ const PMSLandingPage = () => {
                 </div>
               </div>
             </div>
-            <Partner />
           </div>
         </div>
         <FormDemo isPMSPage />
