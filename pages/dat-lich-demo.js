@@ -57,7 +57,7 @@ const BookDemoPage = () => {
                 label="Yêu cầu Demo"
                 className='bg-blue-primary'
               />
-              <div className='mt-6 text-md text-gray/80 text-justify font-medium'>
+              <div className='mt-6 text-md text-gray/80 text-justify leading-7 font-medium'>
                 <p>Với mục tiêu cùng đồng hành với khách hàng, Pambu sẽ hỗ trợ khách hàng sử dụng demo miễn phí. Chương trình demo cụ thể như sau:</p>
                 <ul className="mt-6 ml-6 list-disc">
                   <li>Đối với phần mềm Pambu OEE: khách hàng sẽ được trải nghiệm bản basic trên 1 máy sản xuất trong thời gian 2 tháng.</li>

@@ -140,7 +140,6 @@ function HeaderDesktop({ stickyHeader, isProductPage, isPMSPage }) {
                                     </Link>
                                 )
                             }
-
                         </div>
                     </div>
                 </div>
