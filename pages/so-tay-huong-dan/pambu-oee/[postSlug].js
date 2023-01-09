@@ -97,7 +97,7 @@ const OEEDetailPost = ({ post, relatedPosts }) => {
             </div>
 
             <div className="mt-10">
-              <Image src={post.featuredImg.url} width="1000" height="500" />
+              <Image src={post.featuredImg.url} width="1000" height="500" alt=""/>
             </div>
 
             <RichText

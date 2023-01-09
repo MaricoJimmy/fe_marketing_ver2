@@ -13,7 +13,7 @@ function BlogRelated({ data }) {
                     </div>
                     <div className='mt-2 w-fit'>
                         <h5 className='text-lg text-gray font-semibold'>{data.title}</h5>
-                        <span className='text-sm text-gray/80'>{getDate(data.publishedAt)}</span>
+                        <span className='text-sm text-gray/80'>{getDate(data.createdAt)}</span>
                     </div>
                 </a>
             </Link>
