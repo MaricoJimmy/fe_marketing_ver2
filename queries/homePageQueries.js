@@ -11,6 +11,7 @@ const OEEPostsQuery = gql`
       title
       slug
       desc
+      publishedAt
       featuredImg {
         height
         width
@@ -31,6 +32,7 @@ const PMSPostsQuery = gql`
       title
       slug
       desc
+      publishedAt
       featuredImg {
         height
         width

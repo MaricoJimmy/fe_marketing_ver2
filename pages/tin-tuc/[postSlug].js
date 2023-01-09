@@ -10,6 +10,7 @@ import {
   MoreRelatedPostsQueryInSameCategory,
   PostDetailsQuery
 } from "../../queries/postQuery";
+import { getDate } from "../../utils";
 
 
 export async function getStaticProps({ params }) {
@@ -63,12 +64,6 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
   const content = post.content.raw;
   const title = post.title;
   const desc = post.desc
-  const date = new Date(post.createdAt).toLocaleDateString("vi-VN", {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-
 
   const breadcrumbs = useMemo(() => {
     return [
@@ -99,12 +94,12 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
             <div className="col-span-2">
               <div className="mb-6">
                 <h1 className="font-bold text-4xl text-green-secondary mb-2">{title}</h1>
-                <p className="mt-6 text-gray/80 text-sm">Ngày xuất bản: {date}</p>
+                <p className="mt-6 text-gray/80 text-sm">Ngày xuất bản: {getDate(post.createdAt)}</p>
                 <h3 className="mt-4 text-lg text-gray font-medium">{desc}</h3>
               </div>
 
               <div className="mt-10">
-                <Image src={post.featuredImg.url} width="1000" height="500" />
+                <Image src={post.featuredImg.url} width="1000" height="500" alt=""/>
               </div>
 
               <RichText

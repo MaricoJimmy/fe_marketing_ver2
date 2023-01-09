@@ -259,7 +259,7 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
                                         </a>
                                     ) || (
                                         <Link href='/dat-lich-demo'>
-                                            <a className={`py-3 px-6 w-full bg-green-primary hover:bg-green-secondary text-white font-bold rounded-md duration-200`}>
+                                            <a className={`py-3 px-6 block w-full bg-green-primary hover:bg-green-secondary text-white text-center font-bold rounded-md duration-200`}>
                                                 Đặt lịch demo
                                             </a>
                                         </Link>
