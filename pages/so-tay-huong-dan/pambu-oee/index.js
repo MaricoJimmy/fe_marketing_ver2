@@ -1,6 +1,7 @@
 import Head from "next/head";
 import React from "react";
 import BlogCard from "../../../components/common/BlogCard";
+import Breadcrumb from "../../../components/common/Breadcrumb";
 import Title from "../../../components/common/Title";
 import { hygraphClient } from "../../../libs/hygraphClient";
 import { AllOEEPosts } from "../../../queries/guidesQueries";
@@ -19,6 +20,15 @@ export async function getStaticProps() {
 }
 
 const OEEGuidesPage = ({ posts }) => {
+  const breadcrumbs = [
+    {
+      label: "Trang chủ",
+      slug: "/"
+    },
+    {
+      label: "Pambu OEE",
+    }
+  ]
   return <>
     <Head>
       <title>Tài liệu Pambu OEE | Pambu</title>
@@ -27,10 +37,13 @@ const OEEGuidesPage = ({ posts }) => {
     <div>
       <div className="w-full flex justify-center items-center">
         <div className="px-5 md:px-8 py-16 max-w-screen-xl w-full">
-          <Title
-            label="Tài liệu Pambu OEE"
-            className="bg-green-primary !w-full"
-          />
+          <Breadcrumb data={breadcrumbs} />
+          <div className="mt-8">
+            <Title
+              label="Tài liệu Pambu OEE"
+              className="bg-green-primary !w-full"
+            />
+          </div>
           <div className="mt-8">
             <ul className="grid grid-cols-12 gap-8">
               {

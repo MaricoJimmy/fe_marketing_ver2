@@ -1,6 +1,7 @@
 import Head from "next/head";
 import React from "react";
 import BlogCard from "../../components/common/BlogCard";
+import Breadcrumb from "../../components/common/Breadcrumb";
 import Title from "../../components/common/Title";
 import { hygraphClient } from "../../libs/hygraphClient";
 import { AllNewsPosts } from "../../queries/guidesQueries";
@@ -19,6 +20,15 @@ export async function getStaticProps() {
 }
 
 const AllNewsPage = ({ posts }) => {
+  const breadcrumbs = [
+    {
+      label: "Trang chủ",
+      slug: "/"
+    },
+    {
+      label: "Tin tức",
+    }
+  ]
   return (
     <>
       <Head>
@@ -28,10 +38,13 @@ const AllNewsPage = ({ posts }) => {
       <div>
         <div className="w-full flex justify-center items-center">
           <div className="px-5 md:px-8 py-16 max-w-screen-xl w-full">
-            <Title
-              label="Tin tức nổi bật"
-              className="bg-green-primary !w-full"
-            />
+            <Breadcrumb data={breadcrumbs} />
+            <div className="mt-8">
+              <Title
+                label="Tin tức nổi bật"
+                className="bg-green-primary !w-full"
+              />
+            </div>
             <div className="mt-8">
               <ul className="grid grid-cols-12 gap-8">
                 {

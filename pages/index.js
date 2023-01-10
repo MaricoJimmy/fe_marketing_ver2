@@ -29,9 +29,6 @@ export async function getStaticProps() {
 }
 
 const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
-  console.log("oeePosts", oeePosts);
-  console.log("pmsPosts", pmsPosts);
-  console.log("newsPosts", newsPosts);
   const firstPost = newsPosts.posts[0]
 
   return (
