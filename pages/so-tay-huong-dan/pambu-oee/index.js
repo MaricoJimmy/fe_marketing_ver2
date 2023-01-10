@@ -19,7 +19,6 @@ export async function getStaticProps() {
 }
 
 const OEEGuidesPage = ({ posts }) => {
-  console.log(posts);
   return <>
     <Head>
       <title>Tài liệu Pambu OEE | Pambu</title>

@@ -19,7 +19,7 @@ export async function getStaticProps() {
 }
 
 const PMSGuidesPage = ({ posts }) => {
-  console.log(posts);
+  console.log(posts)
   return <>
     <Head>
       <title>Tài liệu Pambu PMS | Pambu</title>

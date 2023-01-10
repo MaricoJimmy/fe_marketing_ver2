@@ -140,43 +140,27 @@ function FooterMobile() {
                                         </Link>
                                     </li>
                                     <li className='w-full'>
-                                        <div className='w-full flex items-center text-gray/80 font-semibold'>
-                                            <span className='mr-2'>Sản phẩm</span>
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M5.01247 7.51367L10.0132 12.513L15.0125 7.51224" stroke="#2e2e2e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                            </svg>
+                                        <div className='text-gray/80 font-semibold hover:text-green-secondary duration-200'>
+                                            <Link href="/san-pham/pambu-oee">
+                                                <a className='block w-full'>Pambu OEE</a>
+                                            </Link>
                                         </div>
-                                        <div className="ml-6 mt-6">
-                                            <div className='text-gray/80 font-semibold hover:text-green-secondary duration-200'>
-                                                <Link href="/san-pham/pambu-oee">
-                                                    <a className='block w-full'>Pambu OEE</a>
-                                                </Link>
-                                            </div>
-                                            <div className='mt-6 text-gray/80 font-semibold hover:text-green-secondary duration-200'>
-                                                <Link href="/san-pham/pambu-pms">
-                                                    <a className='block w-full'>Pambu PMS</a>
-                                                </Link>
-                                            </div>
+                                        <div className='mt-6 text-gray/80 font-semibold hover:text-green-secondary duration-200'>
+                                            <Link href="/san-pham/pambu-pms">
+                                                <a className='block w-full'>Pambu PMS</a>
+                                            </Link>
                                         </div>
                                     </li>
                                     <li className='w-full'>
-                                        <div className='w-full flex items-center text-gray/80 font-semibold'>
-                                            <span className='mr-2'>Sổ tay hướng dẫn</span>
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M5.01247 7.51367L10.0132 12.513L15.0125 7.51224" stroke="#2e2e2e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                                            </svg>
+                                        <div className='text-gray/80 font-semibold hover:text-green-secondary duration-200'>
+                                            <Link href="/pambu-oee">
+                                                <a className='block w-full'>Tài liệu Pambu OEE</a>
+                                            </Link>
                                         </div>
-                                        <div className="ml-6 mt-6">
-                                            <div className='text-gray/80 font-semibold hover:text-green-secondary duration-200'>
-                                                <Link href="/pambu-oee">
-                                                    <a className='block w-full'>Tài liệu Pambu OEE</a>
-                                                </Link>
-                                            </div>
-                                            <div className='mt-6 text-gray/80 font-semibold hover:text-green-secondary duration-200'>
-                                                <Link href="/pambu-pms">
-                                                    <a className='block w-full'>Tài liệu Pambu PMS</a>
-                                                </Link>
-                                            </div>
+                                        <div className='mt-6 text-gray/80 font-semibold hover:text-green-secondary duration-200'>
+                                            <Link href="/pambu-pms">
+                                                <a className='block w-full'>Tài liệu Pambu PMS</a>
+                                            </Link>
                                         </div>
                                     </li>
                                 </ul>

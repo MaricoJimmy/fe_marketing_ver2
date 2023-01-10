@@ -1,6 +1,8 @@
 import { yupResolver } from "@hookform/resolvers/yup";
+import axios from "axios";
 import React from 'react';
 import { useForm } from "react-hook-form";
+import { toast, Toaster } from "react-hot-toast";
 import * as yup from "yup";
 import Button from '../common/Button';
 import FormGroup from '../common/FormGroup';
@@ -21,7 +23,17 @@ function InfoClientForm({ isPMSPage }) {
   } = useForm({ resolver: yupResolver(schema) });
 
   const onSubmit = (formData) => {
-    console.log(formData);
+    axios({
+      method: "post",
+      url: `https://formspree.io/f/meqwqnrn`,
+      data: formData
+    })
+      .then(r => {
+        toast.success('Đặt lịch thành công!')
+      })
+      .catch(r => {
+        toast.error("Đã xảy ra lỗi!")
+      });
   };
 
   // const inputRef = useRef(null);
@@ -134,6 +146,10 @@ function InfoClientForm({ isPMSPage }) {
           <Button className={`${isPMSPage && "bg-orange-primary hover:bg-orange-secondary" || "bg-green-primary hover:bg-green-secondary"} px-6 py-3 w-full text-white font-semibold duration-200`}>Đặt lịch</Button>
         </div>
       </form>
+      <Toaster
+        position="top-center"
+        reverseOrder={false}
+      />
     </div>
   )
 }

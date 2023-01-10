@@ -58,8 +58,6 @@ export async function getStaticPaths() {
 }
 
 const OEEDetailPost = ({ post, relatedPosts }) => {
-  console.log(post);
-  console.log(relatedPosts);
   const content = post.content.raw;
   const title = post.title;
   const desc = post.desc
@@ -97,7 +95,7 @@ const OEEDetailPost = ({ post, relatedPosts }) => {
             </div>
 
             <div className="mt-10">
-              <Image src={post.featuredImg.url} width="1000" height="500" alt=""/>
+              <Image src={post.featuredImg.url} width="1000" height="500" alt="" />
             </div>
 
             <RichText

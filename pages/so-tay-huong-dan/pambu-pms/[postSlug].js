@@ -58,8 +58,6 @@ export async function getStaticPaths() {
 }
 
 const PMSDetailPost = ({ post, relatedPosts }) => {
-  console.log(post);
-  console.log(relatedPosts);
   const content = post.content.raw;
   const title = post.title;
   const desc = post.desc

@@ -61,14 +61,14 @@ const PMSLandingPage = () => {
                 <div className="col-span-12 lg:col-span-7">
                   <div onClick={() => handleClickQuestion(1)} className='pb-4 border-b border-gray/20 cursor-pointer'>
                     <div className='flex items-center justify-between'>
-                      <h4 className={`${(idQuestion === 1 && openQuestion) && "text-green-secondary" || "text-gray"} mr-2 text-xl text-gray font-semibold`}>PMS là gì ?</h4>
+                      <h4 className={`${(idQuestion === 1 && openQuestion) && "text-orange-secondary" || "text-gray"} mr-2 text-xl text-gray font-semibold`}>PMS là gì ?</h4>
                       <div>
                         <svg className={`${(idQuestion === 1 && openQuestion) && "rotate-180" || "rotate-0"}`} width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M5.01247 7.51367L10.0132 12.513L15.0125 7.51224" stroke="#2e2e2e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                       </div>
                     </div>
-                    <div className={`${(idQuestion === 1 && openQuestion) && "translate-x-0 block" || "-translate-x-1/4 hidden"} mt-4 text-gray/60 font-medium`}>
+                    <div className={`${(idQuestion === 1 && openQuestion) && "translate-x-0 block" || "-translate-x-1/4 hidden"} mt-4 text-gray/60 font-medium leading-8`}>
                       <span>PMS là từ viết tắt của Power Monitoring Software - Phần mềm giám sát năng lượng ...</span>
                       <Link href='/pambu-pms'>
                         <a className='ml-2 text-blue-primary underline'>Xem chi tiết tại đây</a>
@@ -77,14 +77,14 @@ const PMSLandingPage = () => {
                   </div>
                   <div onClick={() => handleClickQuestion(2)} className='py-4 border-b border-gray/20 cursor-pointer'>
                     <div className='flex items-center justify-between'>
-                      <h4 className={`${(idQuestion === 2 && openQuestion) && "text-green-secondary" || "text-gray"} mr-2 text-xl text-gray font-semibold`}>Chi phí lắp đặt Pambu PMS bao gồm những gì ?</h4>
+                      <h4 className={`${(idQuestion === 2 && openQuestion) && "text-orange-secondary" || "text-gray"} mr-2 text-xl text-gray font-semibold`}>Chi phí lắp đặt Pambu PMS bao gồm những gì ?</h4>
                       <div>
                         <svg className={`${(idQuestion === 2 && openQuestion) && "rotate-180" || "rotate-0"}`} width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M5.01247 7.51367L10.0132 12.513L15.0125 7.51224" stroke="#2e2e2e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                       </div>
                     </div>
-                    <div className={`${(idQuestion === 2 && openQuestion) && "translate-x-0 block" || "-translate-x-1/4 hidden"} mt-4 text-gray/60 font-medium`}>
+                    <div className={`${(idQuestion === 2 && openQuestion) && "translate-x-0 block" || "-translate-x-1/4 hidden"} mt-4 text-gray/60 font-medium leading-8`}>
                       <span>
                         Bao gồm lắp đặt phần cứng, phầm mềm:
                       </span>
@@ -98,14 +98,14 @@ const PMSLandingPage = () => {
                   </div>
                   <div onClick={() => handleClickQuestion(3)} className='py-4 border-b border-gray/20 cursor-pointer'>
                     <div className='flex items-center justify-between'>
-                      <h4 className={`${(idQuestion === 3 && openQuestion) && "text-green-secondary" || "text-gray"} mr-2 text-xl text-gray font-semibold`}>Mạng lưới phân phối của Pambu gồm những đâu ?</h4>
+                      <h4 className={`${(idQuestion === 3 && openQuestion) && "text-orange-secondary" || "text-gray"} mr-2 text-xl text-gray font-semibold`}>Mạng lưới phân phối của Pambu gồm những đâu ?</h4>
                       <div>
                         <svg className={`${(idQuestion === 3 && openQuestion) && "rotate-180" || "rotate-0"}`} width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M5.01247 7.51367L10.0132 12.513L15.0125 7.51224" stroke="#2e2e2e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                       </div>
                     </div>
-                    <div className={`${(idQuestion === 3 && openQuestion) && "translate-x-0 block" || "-translate-x-1/4 hidden"} mt-4 text-gray/60 font-medium`}>
+                    <div className={`${(idQuestion === 3 && openQuestion) && "translate-x-0 block" || "-translate-x-1/4 hidden"} mt-4 text-gray/60 font-medium leading-8`}>
                       <span>
                         Mạng lưới phân phối khắp cả nước với hai trụ sở văn phòng đặt tại Hà Nội và Hồ Chí Minh nhằm mục đích khách hàng được hỗ trợ tốt nhất bằng đội ngũ chuyên viên của Pambu
                       </span>
@@ -113,14 +113,14 @@ const PMSLandingPage = () => {
                   </div>
                   <div onClick={() => handleClickQuestion(4)} className='py-4 border-b border-gray/20 cursor-pointer'>
                     <div className='flex items-center justify-between'>
-                      <h4 className={`${(idQuestion === 4 && openQuestion) && "text-green-secondary" || "text-gray"} mr-2 text-xl text-gray font-semibold`}>Dữ liệu sẽ được lưu trữ trong bao lâu ?</h4>
+                      <h4 className={`${(idQuestion === 4 && openQuestion) && "text-orange-secondary" || "text-gray"} mr-2 text-xl text-gray font-semibold`}>Dữ liệu sẽ được lưu trữ trong bao lâu ?</h4>
                       <div>
                         <svg className={`${(idQuestion === 4 && openQuestion) && "rotate-180" || "rotate-0"}`} width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M5.01247 7.51367L10.0132 12.513L15.0125 7.51224" stroke="#2e2e2e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                       </div>
                     </div>
-                    <div className={`${(idQuestion === 4 && openQuestion) && "translate-x-0 block" || "-translate-x-1/4 hidden"} mt-4 text-gray/60 font-medium`}>
+                    <div className={`${(idQuestion === 4 && openQuestion) && "translate-x-0 block" || "-translate-x-1/4 hidden"} mt-4 text-gray/60 font-medium leading-8`}>
                       <span>
                         Ước tính khoảng 10 năm.
                       </span>
@@ -128,14 +128,14 @@ const PMSLandingPage = () => {
                   </div>
                   <div onClick={() => handleClickQuestion(5)} className='py-4 border-b border-gray/20 cursor-pointer'>
                     <div className='flex items-center justify-between'>
-                      <h4 className={`${(idQuestion === 5 && openQuestion) && "text-green-secondary" || "text-gray"} mr-2 text-xl text-gray font-semibold`}>Pambu PMS có phải cài đặt không? Chạy trên nền tảng nào? Có tốn bộ nhớ không?</h4>
+                      <h4 className={`${(idQuestion === 5 && openQuestion) && "text-orange-secondary" || "text-gray"} mr-2 text-xl text-gray font-semibold`}>Pambu PMS có phải cài đặt không? Chạy trên nền tảng nào? Có tốn bộ nhớ không?</h4>
                       <div>
                         <svg className={`${(idQuestion === 5 && openQuestion) && "rotate-180" || "rotate-0"}`} width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M5.01247 7.51367L10.0132 12.513L15.0125 7.51224" stroke="#2e2e2e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                       </div>
                     </div>
-                    <div className={`${(idQuestion === 5 && openQuestion) && "translate-x-0 block" || "-translate-x-1/4 hidden"} mt-4 text-gray/60 font-medium`}>
+                    <div className={`${(idQuestion === 5 && openQuestion) && "translate-x-0 block" || "-translate-x-1/4 hidden"} mt-4 text-gray/60 font-medium leading-8`}>
                       <span>
                         Pambu PMS chạy trên nền trình duyệt web, vậy nên phần mềm này có thể chạy trên đa thiết bị có trình duyệt web: laptop, máy tính bảng, smartphone v.v. Pambu PMS không cần cài đặt nên tốn rất ít bộ nhớ (hầu như không đáng kể).
                       </span>

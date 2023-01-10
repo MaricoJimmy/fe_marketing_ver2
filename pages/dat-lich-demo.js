@@ -1,8 +1,10 @@
 import { yupResolver } from "@hookform/resolvers/yup";
+import axios from "axios";
 import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 import { useForm } from "react-hook-form";
+import { toast, Toaster } from "react-hot-toast";
 import * as yup from "yup";
 import Button from "../components/common/Button";
 import FormGroup from "../components/common/FormGroup";
@@ -14,7 +16,7 @@ const schema = yup.object().shape({
   phoneNumber: yup.string().required("Số điện thoại không được để trống!").min(10, "Số điện thoại phải đủ 10 số!"),
   email: yup.string().email().required("Email không được để trống!"),
   address: yup.string().required("Địa chỉ không được để trống!"),
-  checkbox: yup.object().shape(
+  productType: yup.object().shape(
     {
       oee: yup.bool().when("pms", {
         is: (pms) => !pms,
@@ -40,7 +42,17 @@ const BookDemoPage = () => {
   } = useForm({ resolver: yupResolver(schema) });
 
   const onSubmit = (formData) => {
-    console.log(formData);
+    axios({
+      method: "post",
+      url: `https://formspree.io/f/mdovobpe`,
+      data: formData
+    })
+      .then(r => {
+        toast.success('Đặt lịch thành công!')
+      })
+      .catch(r => {
+        toast.error("Đã xảy ra lỗi!")
+      });
   };
 
   return <>
@@ -180,43 +192,43 @@ const BookDemoPage = () => {
                   <div className="my-10 w-full h-[1px] bg-gray/20" />
                   <div>
                     <span className="text-base font-medium">Chọn loại sản phẩm</span>
-                    <div class="flex items-start mt-4">
+                    <div className="flex items-start mt-4">
                       <div className="mt-1">
                         <input
-                          {...register("checkbox.oee")}
+                          {...register("productType.oee")}
                           id="oee"
                           // name="checkbox"
                           type="checkbox"
                           // value="oee"
-                          class="w-4 h-4 bg-gray/40 border-gray/40 rounded " />
+                          className="w-4 h-4 bg-gray/40 border-gray/40 rounded " />
                       </div>
-                      <label for="oee" class="ml-4 font-medium text-gray-900">
+                      <label htmlFor="oee" className="ml-4 font-medium text-gray-900">
                         <span className="font-semibold">Pambu OEE</span>: Giải pháp toàn diện về quản lý hiệu suất và bảo dưỡng máy móc
                         <Link href="/san-pham/pambu-oee">
                           <a className="ml-2 text-blue-primary underline">Xem chi tiết</a>
                         </Link>
                       </label>
                     </div>
-                    <div class="flex items-start mt-4">
+                    <div className="flex items-start mt-4">
                       <div className="mt-1">
                         <input
-                          {...register("checkbox.pms")}
+                          {...register("productType.pms")}
                           id="pms"
                           // name="checkbox"
                           type="checkbox"
                           // value="pms"
-                          class="w-4 h-4 bg-gray/40 border-gray/40 rounded " />
+                          className="w-4 h-4 bg-gray/40 border-gray/40 rounded " />
                       </div>
-                      <label for="pms" class="ml-4 font-medium text-gray-900">
+                      <label htmlFor="pms" className="ml-4 font-medium text-gray-900">
                         <span className="font-semibold">Pambu PMS</span>: Giám sát và quản lý năng lượng
                         <Link href="/san-pham/pambu-pms">
                           <a className="ml-2 text-blue-primary underline">Xem chi tiết</a>
                         </Link>
                       </label>
                     </div>
-                    {errors.checkbox && (
+                    {errors.productType && (
                       <p className="mt-4 text-sm text-red font-medium">
-                        {errors.checkbox?.pms?.message && errors.checkbox?.oee?.message}
+                        {errors.productType?.pms?.message && errors.productType?.oee?.message}
                       </p>
                     )}
                   </div>
@@ -229,6 +241,10 @@ const BookDemoPage = () => {
           </div>
         </div>
       </div>
+      <Toaster
+        position="top-center"
+        reverseOrder={false}
+      />
     </div>
   </>;
 };

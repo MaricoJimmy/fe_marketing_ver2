@@ -19,7 +19,6 @@ export async function getStaticProps() {
 }
 
 const AllNewsPage = ({ posts }) => {
-  console.log(posts);
   return (
     <>
       <Head>
