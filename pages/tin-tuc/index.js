@@ -33,6 +33,9 @@ const AllNewsPage = ({ posts }) => {
     <>
       <Head>
         <title>Tin tức | Pambu</title>
+        <meta property="og:title" content="Tin tức | Pambu"></meta>
+        <meta property="og:description" content="Khám phá các tin tức mới nhất của Pambu"></meta>
+        <meta property="og:image" content="/image/logo.png"></meta>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div>

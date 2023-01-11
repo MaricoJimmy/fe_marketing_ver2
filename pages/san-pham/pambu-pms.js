@@ -29,6 +29,9 @@ const PMSLandingPage = () => {
     <>
       <Head>
         <title>Pambu PMS | Pambu</title>
+        <meta property="og:title" content="Pambu PMS | Pambu"></meta>
+        <meta property="og:description" content="Giám Sát Năng Lượng Cùng Pambu PMS"></meta>
+        <meta property="og:image" content="/image/pms/mockup-pms.png"></meta>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className="">
@@ -146,7 +149,7 @@ const PMSLandingPage = () => {
             </div>
           </div>
         </div>
-        <FormDemo isPMSPage />
+        <FormDemo isPMSPage productType="pms" />
       </div>
     </>);
 };

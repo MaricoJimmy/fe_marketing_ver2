@@ -2,6 +2,7 @@ import { RichText } from "@graphcms/rich-text-react-renderer";
 import Head from "next/head";
 import Image from "next/image";
 import React, { useMemo } from "react";
+import { v4 } from "uuid";
 import BlogRelated from "../../../components/common/BlogRelated";
 import Breadcrumb from "../../../components/common/Breadcrumb";
 import { hygraphClient } from "../../../libs/hygraphClient";
@@ -80,6 +81,9 @@ const PMSDetailPost = ({ post, relatedPosts }) => {
   return <>
     <Head>
       <title>{post.title} | Pambu</title>
+      <meta property="og:title" content={`${post.title} | Pambu`}></meta>
+      <meta property="og:description" content={post.desc}></meta>
+      <meta property="og:image" content={post.featuredImg.url}></meta>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
     <div className="w-full flex justify-center items-center">
@@ -94,7 +98,7 @@ const PMSDetailPost = ({ post, relatedPosts }) => {
             </div>
 
             <div className="mt-10">
-              <Image src={post.featuredImg.url} width="1000" height="500" />
+              <Image src={post.featuredImg.url} width="1000" height="500" alt="" />
             </div>
 
             <RichText
@@ -187,7 +191,7 @@ const PMSDetailPost = ({ post, relatedPosts }) => {
               </div>
               <ul className="mt-6">
                 {relatedPosts.map(relatePost => (
-                  <li key={relatePost.id} className="mb-8 last:mb-0">
+                  <li key={v4()} className="mb-8 last:mb-0">
                     <BlogRelated data={relatePost} />
                   </li>
                 ))}

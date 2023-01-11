@@ -32,6 +32,9 @@ const OEEGuidesPage = ({ posts }) => {
   return <>
     <Head>
       <title>Tài liệu Pambu OEE | Pambu</title>
+      <meta property="og:title" content="Tài liệu Pambu OEE | Pambu"></meta>
+      <meta property="og:description" content="Số tay Pambu OEE cung cấp các cẩm nang chi tiết về khái niệm cũng như các nội dung liên quan đến Pambu OEE"></meta>
+      <meta property="og:image" content="/image/logo.png"></meta>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
     <div>

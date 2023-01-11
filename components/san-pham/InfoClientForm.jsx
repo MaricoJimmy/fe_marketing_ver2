@@ -15,7 +15,7 @@ const schema = yup.object().shape({
   address: yup.string().required("Địa chỉ không được để trống!"),
 });
 
-function InfoClientForm({ isPMSPage }) {
+function InfoClientForm({ isPMSPage, productType }) {
   const {
     register,
     handleSubmit,
@@ -25,11 +25,12 @@ function InfoClientForm({ isPMSPage }) {
   const onSubmit = (formData) => {
     axios({
       method: "post",
-      url: `https://formspree.io/f/meqwqnrn`,
-      data: formData
+      url: `https://formspree.io/f/xjvdvzpd`,
+      data: { formData, productType }
     })
       .then(r => {
         toast.success('Đặt lịch thành công!')
+        e.target.reset();
       })
       .catch(r => {
         toast.error("Đã xảy ra lỗi!")
@@ -57,7 +58,7 @@ function InfoClientForm({ isPMSPage }) {
             className={
               errors?.name
                 ? "border-red"
-                : (isValid && "border-green-primary") || ""
+                : ""
             }
           />
           {errors.name && (
@@ -76,7 +77,7 @@ function InfoClientForm({ isPMSPage }) {
             className={
               errors?.companyName
                 ? "border-red"
-                : (isValid && "border-green-primary") || ""
+                : ""
             }
           />
           {errors.companyName && (
@@ -95,7 +96,7 @@ function InfoClientForm({ isPMSPage }) {
             className={
               errors?.phoneNumber
                 ? "border-red"
-                : (isValid && "border-green-primary") || ""
+                : ""
             }
           />
           {errors.phoneNumber && (
@@ -114,7 +115,7 @@ function InfoClientForm({ isPMSPage }) {
             className={
               errors?.email
                 ? "border-red"
-                : (isValid && "border-green-primary") || ""
+                : ""
             }
           />
           {errors.email && (
@@ -133,7 +134,7 @@ function InfoClientForm({ isPMSPage }) {
             className={
               errors?.address
                 ? "border-red"
-                : (isValid && "border-green-primary") || ""
+                : ""
             }
           />
           {errors.address && (

@@ -35,6 +35,9 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
     <>
       <Head>
         <title>Pambu</title>
+        <meta property="og:title" content="Pambu"></meta>
+        <meta property="og:description" content="Pambu There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form,"></meta>
+        <meta property="og:image" content="/image/logo.png"></meta>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div>
@@ -47,7 +50,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
               />
               <div className="mt-8">
                 <div className="grid grid-cols-12 gap-8 lg:gap-16">
-                  <div className="col-span-12 md:col-span-5">
+                  <div className="col-span-12 md:col-span-7">
                     <Link href={`/tin-tuc/${firstPost.slug}`}>
                       <a className="block w-full h-fit shadow-lg rounded-lg">
                         <div className="w-full h-[200px] lg:h-[250px] relative">
@@ -65,7 +68,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                       </a>
                     </Link>
                   </div>
-                  <div className="col-span-12 md:col-span-7">
+                  <div className="col-span-12 md:col-span-5">
                     <ul>
                       {
                         newsPosts.posts.slice(1, 5).map(post => (

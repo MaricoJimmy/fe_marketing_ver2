@@ -52,14 +52,15 @@ const BookDemoPage = () => {
     }
   ]
 
-  const onSubmit = (formData) => {
+  const onSubmit = (formData, e) => {
     axios({
       method: "post",
-      url: `https://formspree.io/f/mdovobpe`,
+      url: `https://formspree.io/f/xbjejbpw`,
       data: formData
     })
       .then(r => {
         toast.success('Đặt lịch thành công!')
+        e.target.reset();
       })
       .catch(r => {
         toast.error("Đã xảy ra lỗi!")
@@ -69,6 +70,9 @@ const BookDemoPage = () => {
   return <>
     <Head>
       <title>Đặt lịch Demo | Pambu</title>
+      <meta property="og:title" content="Đặt lịch demo | Pambu"></meta>
+      <meta property="og:description" content="Với mục tiêu cùng đồng hành với khách hàng, Pambu sẽ hỗ trợ khách hàng sử dụng demo miễn phí."></meta>
+      <meta property="og:image" content="/image/logo.png"></meta>
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     </Head>
     <div>
@@ -116,7 +120,7 @@ const BookDemoPage = () => {
                       className={
                         errors?.name
                           ? "border-red"
-                          : (isValid && "border-green-primary") || ""
+                          : ""
                       }
                     />
                     {errors.name && (
@@ -135,7 +139,7 @@ const BookDemoPage = () => {
                       className={
                         errors?.companyName
                           ? "border-red"
-                          : (isValid && "border-green-primary") || ""
+                          : ""
                       }
                     />
                     {errors.companyName && (
@@ -154,7 +158,7 @@ const BookDemoPage = () => {
                       className={
                         errors?.phoneNumber
                           ? "border-red"
-                          : (isValid && "border-green-primary") || ""
+                          : ""
                       }
                     />
                     {errors.phoneNumber && (
@@ -173,7 +177,7 @@ const BookDemoPage = () => {
                       className={
                         errors?.email
                           ? "border-red"
-                          : (isValid && "border-green-primary") || ""
+                          : ""
                       }
                     />
                     {errors.email && (
@@ -192,7 +196,7 @@ const BookDemoPage = () => {
                       className={
                         errors?.address
                           ? "border-red"
-                          : (isValid && "border-green-primary") || ""
+                          : ""
                       }
                     />
                     {errors.address && (
