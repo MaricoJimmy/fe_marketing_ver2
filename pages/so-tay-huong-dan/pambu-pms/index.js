@@ -54,7 +54,7 @@ const PMSGuidesPage = ({ posts }) => {
               />
             </div>
             <div className="mt-8">
-              <ul className="grid grid-cols-12 gap-8">
+              <ul className="grid grid-cols-12 gap-6 md:gap-8">
                 {posts.map((post) => (
                   <li
                     key={post.id}

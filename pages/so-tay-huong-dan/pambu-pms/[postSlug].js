@@ -97,10 +97,10 @@ const PMSDetailPost = ({ post, relatedPosts }) => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className="w-full flex justify-center items-center">
-        <div className="px-5 py-3 md:px-8 md:py-10 max-w-screen-xl w-full">
+        <div className="px-5 md:px-8 py-10 max-w-screen-xl w-full">
           <Breadcrumb data={breadcrumbs} />
           <div className="mt-8 grid grid-cols-3 gap-10">
-            <div className="col-span-2">
+            <div className="col-span-3 md:col-span-2">
               <div className="mb-6">
                 <h1 className="font-bold text-4xl text-green-secondary mb-2">{post.title}</h1>
                 <p className="mt-6 text-gray/80 text-sm">Ngày xuất bản: {getDate(post.date)}</p>
@@ -115,8 +115,8 @@ const PMSDetailPost = ({ post, relatedPosts }) => {
               </div>
 
             </div>
-            <div className="col-span-1">
-              <div className="w-full bg-white border border-gray/20 p-8 rounded-lg">
+            <div className="col-span-3 md:col-span-1">
+              <div className="w-full bg-white border border-gray/20 p-6 md:p-8 rounded-lg">
                 <div className='w-fit'>
                   <h2 className='text-2xl text-center text-gray font-bold'>Bài viết liên quan</h2>
                   <div className='w-full flex'>

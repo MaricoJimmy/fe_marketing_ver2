@@ -138,7 +138,6 @@ input[type=number] {
 
 .desc-blog {
   display: -webkit-box;
-  /* max-width: 200px; */
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
@@ -165,7 +164,7 @@ input[type=number] {
   line-height: 1.4;
   font-size: 24px;
   font-weight: 700;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .content-wrapper h5 {
@@ -196,6 +195,14 @@ input[type=number] {
   margin-bottom: 8px;
 }
 
+.content-wrapper em {
+  color: var(--text-color);
+  text-decoration: underline;
+  font-weight: 700;
+  margin-bottom: 8px;
+  margin-right: 4px;
+}
+
 .content-wrapper a {
   text-decoration: underline;
   color: #5D9830;
@@ -215,8 +222,8 @@ input[type=number] {
 }
 
 .content-wrapper table,
-td,
-th {
+.content-wrapper td,
+.content-wrapper th {
   border-collapse: collapse;
   border: 1px solid rgba(46, 46, 46, 0.4);
   padding: 8px;
@@ -228,4 +235,5 @@ th {
 
 .content-wrapper tr:first-child {
   background-color: rgba(128, 204, 43, 0.2);
+  text-align: center;
 }

@@ -68,8 +68,8 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
             <div>
               <Title label="Tin tức nổi bật" className="bg-green-primary" />
               <div className="mt-8">
-                <div className="grid grid-cols-12 gap-8 lg:gap-16">
-                  <div className="col-span-12 md:col-span-7">
+                <div className="grid grid-cols-12 gap-6 lg:gap-16">
+                  <div className="col-span-12 md:col-span-6 lg:col-span-7">
                     <Link href={`/tin-tuc/${firstPost.slug}`}>
                       <a className="block w-full h-fit shadow-lg rounded-lg">
                         <div className="w-full h-[200px] lg:h-[250px] relative">
@@ -94,7 +94,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                       </a>
                     </Link>
                   </div>
-                  <div className="col-span-12 md:col-span-5">
+                  <div className="col-span-12 md:col-span-6 lg:col-span-5">
                     <ul>
                       {newsPosts.slice(1).map((post) => (
                         <li key={post.id} className="mb-8">
@@ -153,7 +153,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                           <li key={post.id} className="mb-6 last:mb-0">
                             <Link href={`/pambu-oee/${post.slug}`}>
                               <a className="flex items-start">
-                                <div className="min-w-[100px] w-[100px] h-[50px] md:w-[150px] md:h-[80px] lg:w-[100px] lg:h-[50px] relative">
+                                <div className="min-w-[100px] w-[100px] h-[50px] md:min-w-[150px] md:w-[150px] md:h-[80px] lg:min-w-[100px] lg:w-[100px] lg:h-[50px] relative">
                                   <Image
                                     src={post.featuredImage.node.mediaItemUrl}
                                     alt=""

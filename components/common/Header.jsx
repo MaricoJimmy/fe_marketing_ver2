@@ -199,7 +199,7 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
                                 <path d="M8.75 8.75L26.25 26.25" stroke="#2E2E2E" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
                             </svg>
                         </Button>
-                        <div className='mt-8'>
+                        <div className='py-8'>
                             <ul className='flex flex-col items-start gap-8 cursor-pointer'>
                                 <li onClick={() => setOpenMenu(!openMenu)} className='w-full'>
                                     <Link href='/tin-tuc'>

@@ -14,7 +14,7 @@ function VersionApp({ data, img }) {
             </div>
             <div className='mt-8 grid grid-cols-12 gap-6'>
                 <div className="col-span-12 lg:col-span-7 order-last lg:order-first">
-                    <table className="w-full table-auto">
+                    <table className="w-full table-auto ">
                         <thead>
                             <tr className='border-b border-gray/20'>
                                 <th className='px-2 py-1 text-xl text-left text-gray/80 font-semibold'>Tính năng</th>
