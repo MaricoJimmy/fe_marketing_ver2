@@ -43,7 +43,6 @@ export async function getStaticProps({ params }) {
       post,
       relatedPosts,
     },
-    revalidate: 60,
   };
 }
 
@@ -70,7 +69,7 @@ export async function getStaticPaths() {
 
   return {
     paths,
-    fallback: "blocking",
+    fallback: false,
   };
 }
 
