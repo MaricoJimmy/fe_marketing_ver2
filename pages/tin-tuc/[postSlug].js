@@ -95,7 +95,7 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
       <Head>
         <title>{post.title} | Pambu</title>
         <meta property="og:title" content={`${post.title} | Pambu`}></meta>
-        <meta property="og:description" content={post.excerpt}></meta>
+        <meta property="og:description" content={post.excerpt.replace(/<[^>]+>/g, '')}></meta>
         <meta property="og:image" content={post.featuredImage.node.mediaItemUrl}></meta>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
