@@ -38,7 +38,7 @@ const PMSGuidesPage = ({ posts }) => {
     <>
       <Head>
         <title>Tài liệu Pambu PMS | Pambu</title>
-        <meta property="og:title" content="Giám Sát Năng Lượng Cùng Pambu PMS"></meta>
+        <meta property="og:title" content="Giám Sát Và Quản Lý Năng Lượng"></meta>
         <meta property="og:description" content="Tài liệu Pambu PMS | Pambu"></meta>
         <meta property="og:image" content="/image/logo.png"></meta>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />

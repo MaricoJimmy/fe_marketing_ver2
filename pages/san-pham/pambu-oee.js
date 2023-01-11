@@ -30,7 +30,7 @@ const OEELandingPage = () => {
       <Head>
         <title>Pambu OEE | Pambu</title>
         <meta property="og:title" content="Pambu OEE | Pambu"></meta>
-        <meta property="og:description" content="Pambu OEE - Giải Pháp Toàn Diện Về Quản Lý Hiệu Suất Và Bảo Dưỡng Máy"></meta>
+        <meta property="og:description" content="Giải Pháp Toàn Diện Về Quản Lý Hiệu Suất Và Bảo Dưỡng Máy"></meta>
         <meta property="og:image" content="/image/oee/mockup-oee.png"></meta>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>

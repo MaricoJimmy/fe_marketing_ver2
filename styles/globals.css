@@ -21,6 +21,10 @@ a {
   box-sizing: border-box;
 }
 
+:root {
+  --text-color: #2e2e2e;
+}
+
 ::-webkit-scrollbar-track {
   background-color: #ffffff;
 }
@@ -141,7 +145,7 @@ input[type=number] {
 }
 
 .content-wrapper h2 {
-  color: #2e2e2e;
+  color: var(--text-color);
   font-size: 30px;
   line-height: 1.4;
   font-weight: bold;
@@ -149,7 +153,7 @@ input[type=number] {
 }
 
 .content-wrapper h3 {
-  color: #2e2e2e;
+  color: var(--text-color);
   line-height: 1.4;
   font-size: 24px;
   font-weight: bold;
@@ -157,7 +161,7 @@ input[type=number] {
 }
 
 .content-wrapper h4 {
-  color: #2e2e2e;
+  color: var(--text-color);
   line-height: 1.4;
   font-size: 24px;
   font-weight: 700;
@@ -165,28 +169,28 @@ input[type=number] {
 }
 
 .content-wrapper h5 {
-  color: #2e2e2e;
+  color: var(--text-color);
   line-height: 1.5;
   font-size: 18px;
   margin-bottom: 16px;
 }
 
 .content-wrapper h6 {
-  color: #2e2e2e;
+  color: var(--text-color);
   line-height: 1.5;
   font-size: 16px;
   margin-bottom: 16px;
 }
 
 .content-wrapper p {
-  color: #2e2e2e;
+  color: var(--text-color);
   line-height: 1.5;
   font-size: 18px;
   margin-bottom: 16px;
 }
 
 .content-wrapper strong {
-  color: #2e2e2e;
+  color: var(--text-color);
   line-height: 28px;
   font-size: 18px;
   margin-bottom: 8px;
