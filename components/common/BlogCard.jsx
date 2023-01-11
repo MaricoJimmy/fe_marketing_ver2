@@ -7,7 +7,7 @@ function BlogCard({ data, category }) {
     return (
         <div className=''>
             <Link href={`/${category}/${data.slug}`}>
-                <a className='block h-[480px] border border-gray/20 rounded-lg'>
+                <a className='block h-[500px] border border-gray/20 rounded-lg'>
                     <div className=''>
                         <Image src={data.featuredImage.node.mediaItemUrl} width="400" height="250" className='rounded-t-lg' alt='' />
                     </div>
