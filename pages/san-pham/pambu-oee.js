@@ -154,7 +154,7 @@ const OEELandingPage = () => {
             </div>
           </div>
         </div>
-        <FormDemo productType="oee" />
+        <FormDemo />
       </div>
     </>);
 };

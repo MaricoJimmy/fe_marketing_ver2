@@ -40,7 +40,7 @@ function HeroSection({ data, isPMSPage }) {
             </div>
             {showModal &&
                 <Modal onClose={() => setShowModal(false)} title="">
-                    <InfoClientForm isPMSPage={isPMSPage} />
+                    <InfoClientForm isPMSPage={isPMSPage} productType={isPMSPage && "pms" || "oee"} />
                 </Modal>
             }
         </div>

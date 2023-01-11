@@ -149,7 +149,7 @@ const PMSLandingPage = () => {
             </div>
           </div>
         </div>
-        <FormDemo isPMSPage productType="pms" />
+        <FormDemo isPMSPage />
       </div>
     </>);
 };

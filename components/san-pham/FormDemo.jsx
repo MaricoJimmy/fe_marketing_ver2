@@ -2,7 +2,7 @@ import React from 'react'
 import Title from '../common/Title'
 import InfoClientForm from './InfoClientForm'
 
-function FormDemo({ isPMSPage, productType }) {
+function FormDemo({ isPMSPage }) {
     return (
         <div className='mt-16 md:mt-32'>
             <div className={`w-full flex justify-center items-center ${isPMSPage && "bg-orange-primary/20" || "bg-green-primary/20"}`}>
@@ -18,7 +18,7 @@ function FormDemo({ isPMSPage, productType }) {
                             </div>
                         </div>
                         <div className="col-span-12 lg:col-span-6">
-                            <InfoClientForm isPMSPage={isPMSPage} productType={productType} />
+                            <InfoClientForm isPMSPage={isPMSPage} productType={isPMSPage && "pms" || "oee"} />
                         </div>
                     </div>
                 </div>

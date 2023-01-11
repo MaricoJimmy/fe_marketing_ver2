@@ -19,10 +19,10 @@ function InfoClientForm({ isPMSPage, productType }) {
   const {
     register,
     handleSubmit,
-    formState: { errors, isValid },
+    formState: { errors },
   } = useForm({ resolver: yupResolver(schema) });
 
-  const onSubmit = (formData) => {
+  const onSubmit = (formData, e) => {
     axios({
       method: "post",
       url: `https://formspree.io/f/xjvdvzpd`,
