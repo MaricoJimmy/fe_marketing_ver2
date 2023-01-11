@@ -101,6 +101,9 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
     <>
       {/* <Head>
         <title>{post.title} | Pambu</title>
+        <meta property="og:title" content={`${post.title} | Pambu`}></meta>
+        <meta property="og:description" content={post.desc}></meta>
+        <meta property="og:image" content={post.featuredImg.url}></meta>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className="w-full flex justify-center items-center">
@@ -115,7 +118,7 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
               </div>
 
               <div className="mt-10">
-                <Image src={post.featuredImg.url} width="1000" height="500" alt=""/>
+                <Image src={post.featuredImg.url} width="1000" height="500" alt="" />
               </div>
 
               <RichText

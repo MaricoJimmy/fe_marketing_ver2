@@ -2,6 +2,7 @@ import { RichText } from "@graphcms/rich-text-react-renderer";
 import Head from "next/head";
 import Image from "next/image";
 import React, { useMemo } from "react";
+import { v4 } from "uuid";
 import BlogRelated from "../../../components/common/BlogRelated";
 import Breadcrumb from "../../../components/common/Breadcrumb";
 import { getApolloClient } from "../../../libs/apollo-client";
