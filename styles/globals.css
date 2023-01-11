@@ -218,6 +218,10 @@ th {
   padding: 8px;
 }
 
+.content-wrapper table {
+  margin-bottom: 16px;
+}
+
 .content-wrapper tr:first-child {
   background-color: rgba(128, 204, 43, 0.2);
 }
