@@ -26,19 +26,18 @@ export async function getStaticProps() {
 }
 
 const AllNewsPage = ({ posts }) => {
-  // const breadcrumbs = [
-  //   {
-  //     label: "Trang chủ",
-  //     slug: "/"
-  //   },
-  //   {
-  //     label: "Tin tức",
-  //   }
-  // ]
-  console.log(posts);
+  const breadcrumbs = [
+    {
+      label: "Trang chủ",
+      slug: "/"
+    },
+    {
+      label: "Tin tức",
+    }
+  ]
   return (
     <>
-      {/* <Head>
+      <Head>
         <title>Tin tức | Pambu</title>
         <meta property="og:title" content="Tin tức | Pambu"></meta>
         <meta property="og:description" content="Khám phá các tin tức mới nhất của Pambu"></meta>
@@ -69,8 +68,7 @@ const AllNewsPage = ({ posts }) => {
             </div>
           </div>
         </div>
-      </div> */}
-      news posts page
+      </div>
     </>
   );
 };

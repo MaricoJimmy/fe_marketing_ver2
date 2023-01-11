@@ -8,7 +8,7 @@ import { getApolloClient } from "../libs/apollo-client";
 import {
   NewsPostsQuery,
   OEEPostsQuery,
-  PMSPostsQuery,
+  PMSPostsQuery
 } from "../queries/homePageQueries";
 import { getDate } from "../utils";
 
@@ -48,8 +48,7 @@ export async function getStaticProps() {
 }
 
 const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
-  // const firstPost = newsPosts.posts[0]
-  console.log(newsPosts);
+  const firstPost = newsPosts[0]
 
   return (
     <>
@@ -75,7 +74,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                       <a className="block w-full h-fit shadow-lg rounded-lg">
                         <div className="w-full h-[200px] lg:h-[250px] relative">
                           <Image
-                            src={firstPost.featuredImg.url}
+                            src={firstPost.featuredImage.node.mediaItemUrl}
                             alt=""
                             layout="fill"
                             objectFit="cover"
@@ -87,10 +86,9 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                             {firstPost.title}
                           </h3>
                           <span className="block mt-2 text-gray/60">
-                            {getDate(firstPost.publishedAt)}
+                            {getDate(firstPost.date)}
                           </span>
-                          <h5 className="mt-4 text-gray/80">
-                            {firstPost.desc}
+                          <h5 className="mt-4 text-gray/80" dangerouslySetInnerHTML={{ __html: firstPost.excerpt }}>
                           </h5>
                         </div>
                       </a>
@@ -98,13 +96,13 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                   </div>
                   <div className="col-span-12 md:col-span-5">
                     <ul>
-                      {newsPosts.posts.slice(1, 5).map((post) => (
+                      {newsPosts.slice(1).map((post) => (
                         <li key={post.id} className="mb-8">
                           <Link href={`/tin-tuc/${post.slug}`}>
                             <a className="flex items-start">
                               <div className="relative border border-gray/20 min-w-[150px] w-[150px] h-[80px] md:h-[65px] lg:h-[80px] rounded-lg">
                                 <Image
-                                  src={post.featuredImg.url}
+                                  src={post.featuredImage.node.mediaItemUrl}
                                   alt=""
                                   layout="fill"
                                   objectFit="cover"
@@ -116,7 +114,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                                   {post.title}
                                 </h4>
                                 <span className="mt-2 block text-gray/60">
-                                  {getDate(post.publishedAt)}
+                                  {getDate(post.date)}
                                 </span>
                               </div>
                             </a>
@@ -151,13 +149,13 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                         Tài liệu Pambu OEE
                       </h3>
                       <ul className="mt-8">
-                        {oeePosts.posts.map((post) => (
+                        {oeePosts.map((post) => (
                           <li key={post.id} className="mb-6 last:mb-0">
                             <Link href={`/pambu-oee/${post.slug}`}>
                               <a className="flex items-start">
                                 <div className="min-w-[100px] w-[100px] h-[50px] md:w-[150px] md:h-[80px] lg:w-[100px] lg:h-[50px] relative">
                                   <Image
-                                    src={post.featuredImg.url}
+                                    src={post.featuredImage.node.mediaItemUrl}
                                     alt=""
                                     layout="fill"
                                     objectFit="cover"
@@ -169,7 +167,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                                     {post.title}
                                   </h5>
                                   <span className="mt-2 text-gray/60">
-                                    {getDate(post.publishedAt)}
+                                    {getDate(post.date)}
                                   </span>
                                 </div>
                               </a>
@@ -202,13 +200,13 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                         Tài liệu Pambu PMS
                       </h3>
                       <ul className="mt-8">
-                        {pmsPosts.posts.map((post) => (
+                        {pmsPosts.map((post) => (
                           <li key={post.id} className="mb-6 last:mb-0">
                             <Link href={`/pambu-pms/${post.slug}`}>
                               <a className="flex items-start">
                                 <div className="min-w-[100px] w-[100px] h-[50px] md:w-[150px] md:h-[80px] lg:w-[100px] lg:h-[50px] relative">
                                   <Image
-                                    src={post.featuredImg.url}
+                                    src={post.featuredImage.node.mediaItemUrl}
                                     alt=""
                                     layout="fill"
                                     objectFit="cover"
@@ -220,7 +218,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                                     {post.title}
                                   </h5>
                                   <span className="mt-2 text-gray/60">
-                                    {getDate(post.publishedAt)}
+                                    {getDate(post.date)}
                                   </span>
                                 </div>
                               </a>

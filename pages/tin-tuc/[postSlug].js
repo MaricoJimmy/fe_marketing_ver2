@@ -1,17 +1,17 @@
-import { RichText } from "@graphcms/rich-text-react-renderer";
+import parse from "html-react-parser";
 import Head from "next/head";
 import Image from "next/image";
 import React, { useMemo } from "react";
+import { v4 } from "uuid";
 import BlogRelated from "../../components/common/BlogRelated";
 import Breadcrumb from "../../components/common/Breadcrumb";
 import { getApolloClient } from "../../libs/apollo-client";
 import { AllNewsPosts } from "../../queries/guidesQueries";
 import {
   MoreRelatedPostsQueryInSameCategory,
-  PostDetailsQuery,
+  PostDetailsQuery
 } from "../../queries/postQuery";
 import { getDate } from "../../utils";
-import parse from "html-react-parser";
 
 // import dynamic from "next/dynamic";
 
@@ -76,34 +76,28 @@ export async function getStaticPaths() {
 }
 
 const NewsPostDetailsPage = ({ post, relatedPosts }) => {
-  // const content = post.content.raw;
-  // const title = post.title;
-  // const desc = post.desc
-
-  // const breadcrumbs = useMemo(() => {
-  //   return [
-  //     {
-  //       label: "Trang chủ",
-  //       slug: "/"
-  //     },
-  //     {
-  //       label: "Tin tức",
-  //       slug: "/tin-tuc"
-  //     },
-  //     {
-  //       label: post.title,
-  //     }
-  //   ]
-  // }, [post])
-  console.log(post);
-  console.log(relatedPosts);
+  const breadcrumbs = useMemo(() => {
+    return [
+      {
+        label: "Trang chủ",
+        slug: "/"
+      },
+      {
+        label: "Tin tức",
+        slug: "/tin-tuc"
+      },
+      {
+        label: post.title,
+      }
+    ]
+  }, [post])
   return (
     <>
-      {/* <Head>
+      <Head>
         <title>{post.title} | Pambu</title>
         <meta property="og:title" content={`${post.title} | Pambu`}></meta>
         <meta property="og:description" content={post.desc}></meta>
-        <meta property="og:image" content={post.featuredImg.url}></meta>
+        <meta property="og:image" content={post.featuredImage.node.mediaItemUrl}></meta>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div className="w-full flex justify-center items-center">
@@ -112,92 +106,125 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
           <div className="mt-8 grid grid-cols-3 gap-10">
             <div className="col-span-2">
               <div className="mb-6">
-                <h1 className="font-bold text-4xl text-green-secondary mb-2">{title}</h1>
-                <p className="mt-6 text-gray/80 text-sm">Ngày xuất bản: {getDate(post.createdAt)}</p>
-                <h3 className="mt-4 text-lg text-gray font-medium">{desc}</h3>
+                <h1 className="font-bold text-4xl text-green-secondary mb-2">{post.title}</h1>
+                <p className="mt-6 text-gray/80 text-sm">Ngày xuất bản: {getDate(post.date)}</p>
+                <h3 className="mt-4 text-lg text-gray font-medium" dangerouslySetInnerHTML={{ __html: post.excerpt }}></h3>
               </div>
 
-              <div className="mt-10">
-                <Image src={post.featuredImg.url} width="1000" height="500" alt="" />
+              <div className="mt-8">
+                <Image src={post.featuredImage.node.mediaItemUrl} width="1000" height="500" alt="" />
               </div>
 
-              <RichText
-                content={content}
-                renderers={{
-                  h2: ({ children }) => (
-                    <h2 className="text-gray font-bold text-2xl my-4">{children}</h2>
-                  ),
-                  h3: ({ children }) => (
-                    <h3 className="text-gray font-bold text-xl my-4">{children}</h3>
-                  ),
-                  h5: ({ children }) => (
-                    <h5 className="text-gray font-bold text-sm my-4">{children}</h5>
-                  ),
-                  bold: ({ children }) => <strong>{children}</strong>,
-                  h4: ({ children }) => (
-                    <h4 className="my-4 text-gray font-bold text-xl ">{children}</h4>
-                  ),
-                  p: ({ children }) => (
-                    <p className="w-full text-gray leading-7">{children}</p>
-                  ),
-                  table: ({ children }) => (
-                    <table className="w-full border-collapse border border-gray-300 my-4">
-                      {children}
-                    </table>
-                  ),
-                  table_head: ({ children }) => (
-                    <thead className="border-collapse border border-gray-300 bg-green-300">
-                      {children}
-                    </thead>
-                  ),
-                  table_header_cell: ({ children }) => (
-                    <th className="text-gray border-collapse border border-gray-300 p-2">
-                      {children}
-                    </th>
-                  ),
-                  table_body: ({ children }) => (
-                    <tbody className="border-collapse border border-gray-300">
-                      {children}
-                    </tbody>
-                  ),
-
-                  table_cell: ({ children }) => (
-                    <td className="border-collapse border border-gray-300 p-2">
-                      {children}
-                    </td>
-                  ),
-
-                  ul: ({ children }) => (
-                    <ul className="list-disc list-inside">{children}</ul>
-                  ),
-                  ol: ({ children }) => (
-                    <ol className="list-decimal list-inside">{children}</ol>
-                  ),
-                  li: ({ children }) => <li className="my-2">{children}</li>,
-                  a: ({ children, href }) => (
-                    <a
-                      href={href ? href : "#"}
-                      className="text-green-700 hover:text-green-500"
-                    >
-                      {children}
-                    </a>
-                  ),
-                  img: ({ src, altText, width, height }) => (
-                    <div className="my-6">
+              {parse(post.content, {
+                replace: (domNode) => {
+                  // image
+                  if (domNode.name === "img") {
+                    return (
                       <img
-                        src={src}
-                        alt={altText}
-                        width={width}
-                        height={height}
-                        className="block mx-auto"
+                        src={domNode.attribs.src}
+                        alt={domNode.attribs.alt}
+                        className="block mx-auto w-full"
                       />
-                      <p className="text-center text-gray-500 text-sm mt-2">
-                        {altText}
+                    );
+                  }
+
+                  // image caption
+                  if (domNode.name === "figcaption") {
+                    return (
+                      <div className="text-center text-gray/80 italic text-md mt-2">
+                        {domNode.children[0].data}
+                      </div>
+                    );
+                  }
+
+                  // heading 2
+                  if (domNode.name === "h2") {
+                    return (
+                      <h2 className="text-gray font-bold text-3xl my-4">
+                        {domNode.children[0].data}
+                      </h2>
+                    );
+                  }
+
+                  // heading 3
+                  if (domNode.name === "h3") {
+                    return (
+                      <h3 className="text-gray font-bold text-2xl my-4">
+                        {domNode.children[0].data}
+                      </h3>
+                    );
+                  }
+
+                  // heading 4
+                  if (domNode.name === "h4") {
+                    return (
+                      <h4 className="text-gray font-bold text-xl my-4">
+                        {domNode.children[0].data}
+                      </h4>
+                    );
+                  }
+
+                  // heading 5
+                  if (domNode.name === "h5") {
+                    return (
+                      <h5 className="text-gray font-semibold text-lg my-4">
+                        {domNode.children[0].data}
+                      </h5>
+                    );
+                  }
+
+                  // heading 6
+                  if (domNode.name === "h6") {
+                    return (
+                      <h6 className="text-gray font-medium text-md my-4">
+                        {domNode.children[0].data}
+                      </h6>
+                    );
+                  }
+
+                  // p
+                  if (domNode.name === "p") {
+                    return (
+                      <p className="text-gray font-medium text-md my-4">
+                        {domNode.children[0].data}
                       </p>
-                    </div>
-                  ),
-                }}
-              />
+                    );
+                  }
+
+                  // table
+                  if (domNode.name === "table") {
+                    return (
+                      <table className="border-collapse">
+                        <thead>
+                          <tr>
+                            {
+                              domNode.children[0].children[0].children.map(item => {
+                                const data = item.children[0].children[0].data
+                                return <th key={v4()} className='p-2 text-gray text-md bg-green-primary/20 border border-gray/40 border-collapse'>{data}</th>
+                              })
+                            }
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {domNode.children[0].children.slice(1).map(item => {
+                            const childrenItem = item.children
+                            return (
+                              <tr key={v4()} className=''>
+                                {
+                                  childrenItem.map(td => {
+                                    const data = td.children[0].data
+                                    return <td key={v4()} className='p-2 text-gray text-md border border-gray/40 border-collapse'>{data}</td>
+                                  })
+                                }
+                              </tr>
+                            )
+                          })}
+                        </tbody>
+                      </table>
+                    );
+                  }
+                },
+              })}
 
             </div>
             <div className="col-span-1">
@@ -212,7 +239,7 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
                 <ul className="mt-6">
                   {relatedPosts.map(relatePost => (
                     <li key={relatePost.id} className="mb-8 last:mb-0">
-                      <BlogRelated data={relatePost} />
+                      <BlogRelated data={relatePost} category="tin-tuc" />
                     </li>
                   ))}
                 </ul>
@@ -220,9 +247,9 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
 
-      <div className="max-w-4xl mx-auto p-4">
+      {/* <div className="max-w-4xl mx-auto p-4">
         <h1 className="text-4xl font-bold my-6">{post.title}</h1>
         {parse(post.content, {
           replace: (domNode) => {
@@ -256,7 +283,7 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
             }
           },
         })}
-      </div>
+      </div> */}
     </>
   );
 };
