@@ -1,8 +1,6 @@
-import parse from "html-react-parser";
 import Head from "next/head";
 import Image from "next/image";
 import React, { useMemo } from "react";
-import { v4 } from "uuid";
 import BlogRelated from "../../../components/common/BlogRelated";
 import Breadcrumb from "../../../components/common/Breadcrumb";
 import { getApolloClient } from "../../../libs/apollo-client";
@@ -113,116 +111,8 @@ const OEEDetailPost = ({ post, relatedPosts }) => {
                 <Image src={post.featuredImage.node.mediaItemUrl} width="1000" height="500" alt="" />
               </div>
 
-              {parse(post.content, {
-                replace: (domNode) => {
-                  // image
-                  if (domNode.name === "img") {
-                    return (
-                      <img
-                        src={domNode.attribs.src}
-                        alt={domNode.attribs.alt}
-                        className="block mx-auto w-full"
-                      />
-                    );
-                  }
-
-                  // image caption
-                  if (domNode.name === "figcaption") {
-                    return (
-                      <div className="text-center text-gray/80 italic text-md mt-2">
-                        {domNode.children[0].data}
-                      </div>
-                    );
-                  }
-
-                  // heading 2
-                  if (domNode.name === "h2") {
-                    return (
-                      <h2 className="text-gray font-bold text-3xl my-4">
-                        {domNode.children[0].data}
-                      </h2>
-                    );
-                  }
-
-                  // heading 3
-                  if (domNode.name === "h3") {
-                    return (
-                      <h3 className="text-gray font-bold text-2xl my-4">
-                        {domNode.children[0].data}
-                      </h3>
-                    );
-                  }
-
-                  // heading 4
-                  if (domNode.name === "h4") {
-                    return (
-                      <h4 className="text-gray font-bold text-xl my-4">
-                        {domNode.children[0].data}
-                      </h4>
-                    );
-                  }
-
-                  // heading 5
-                  if (domNode.name === "h5") {
-                    return (
-                      <h5 className="text-gray font-semibold text-lg my-4">
-                        {domNode.children[0].data}
-                      </h5>
-                    );
-                  }
-
-                  // heading 6
-                  if (domNode.name === "h6") {
-                    return (
-                      <h6 className="text-gray font-medium text-md my-4">
-                        {domNode.children[0].data}
-                      </h6>
-                    );
-                  }
-
-                  // p
-                  if (domNode.name === "p") {
-                    return (
-                      <p className="text-gray font-medium text-md my-4">
-                        {domNode.children[0].data}
-                      </p>
-                    );
-                  }
-
-                  // table
-                  if (domNode.name === "table") {
-                    return (
-                      <table className="border-collapse">
-                        <thead>
-                          <tr>
-                            {
-                              domNode.children[0].children[0].children.map(item => {
-                                const data = item.children[0].children[0].data
-                                return <th key={v4()} className='p-2 text-gray text-md bg-green-primary/20 border border-gray/40 border-collapse'>{data}</th>
-                              })
-                            }
-                          </tr>
-                        </thead>
-                        <tbody>
-                          {domNode.children[0].children.slice(1).map(item => {
-                            const childrenItem = item.children
-                            return (
-                              <tr key={v4()} className=''>
-                                {
-                                  childrenItem.map(td => {
-                                    const data = td.children[0].data
-                                    return <td key={v4()} className='p-2 text-gray text-md border border-gray/40 border-collapse'>{data}</td>
-                                  })
-                                }
-                              </tr>
-                            )
-                          })}
-                        </tbody>
-                      </table>
-                    );
-                  }
-                },
-              })}
+              <div className="content-wrapper mt-6" dangerouslySetInnerHTML={{ __html: post.content }}>
+              </div>
 
             </div>
             <div className="col-span-1">
