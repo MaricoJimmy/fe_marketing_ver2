@@ -1,44 +1,52 @@
-import { gql } from "graphql-request";
+import { gql } from "@apollo/client";
 
 const PostDetailsQuery = gql`
-  query Post($slug: String!) {
-    post(where: { slug: $slug }) {
-      slug
+  query Post($slug: ID!) {
+    post(id: $slug, idType: SLUG) {
+      id
       title
-      content {
-        markdown
-        raw
-      }
-      createdAt
-      desc
-      featuredImg {
-        height
-        width
-        url
+      slug
+      excerpt
+      date
+      content
+      featuredImage {
+        node {
+          altText
+          caption
+          mediaItemUrl
+          mediaDetails {
+            height
+            width
+          }
+        }
       }
     }
   }
 `;
 
 const MoreRelatedPostsQueryInSameCategory = gql`
-  query RelatedPosts($slug: String!, $category: String!) {
+  query RelatedPosts($category: String!) {
     posts(
-      where: { slug_not: $slug, category: { slug: $category } }
-      orderBy: publishedAt_ASC
-      first: 5
+      where: { categoryName: $category, orderby: { field: DATE, order: DESC } }
+      first: 6
     ) {
-      slug
-      title
-      createdAt
-      desc
-      category {
+      nodes {
+        id
         title
         slug
-      }
-      featuredImg {
-        height
-        width
-        url
+        excerpt
+        date
+        featuredImage {
+          node {
+            altText
+            caption
+            mediaItemUrl
+            mediaDetails {
+              height
+              width
+            }
+          }
+        }
       }
     }
   }

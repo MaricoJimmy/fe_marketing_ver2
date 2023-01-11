@@ -4,30 +4,41 @@ import Image from "next/image";
 import React, { useMemo } from "react";
 import BlogRelated from "../../components/common/BlogRelated";
 import Breadcrumb from "../../components/common/Breadcrumb";
-import { hygraphClient } from "../../libs/hygraphClient";
+import { getApolloClient } from "../../libs/apollo-client";
 import { AllNewsPosts } from "../../queries/guidesQueries";
 import {
   MoreRelatedPostsQueryInSameCategory,
-  PostDetailsQuery
+  PostDetailsQuery,
 } from "../../queries/postQuery";
 import { getDate } from "../../utils";
+import parse from "html-react-parser";
 
+// import dynamic from "next/dynamic";
 
 export async function getStaticProps({ params }) {
-  const client = hygraphClient();
+  const client = getApolloClient();
 
-  const { post } = await client.request(PostDetailsQuery, {
-    slug: params.postSlug,
-  });
-
-  const { posts: relatedPosts } = await client.request(
-    MoreRelatedPostsQueryInSameCategory,
-    {
+  const {
+    data: { post },
+  } = await client.query({
+    query: PostDetailsQuery,
+    variables: {
       slug: params.postSlug,
+    },
+  });
+  const {
+    data: {
+      posts: { nodes: items },
+    },
+  } = await client.query({
+    query: MoreRelatedPostsQueryInSameCategory,
+    variables: {
       category: "tin-tuc",
-    }
-  );
-
+    },
+  });
+  const relatedPosts = items
+    .filter((item) => item.slug !== params.postSlug)
+    .slice(0, 5);
   return {
     props: {
       post,
@@ -40,11 +51,17 @@ export async function getStaticProps({ params }) {
 export async function getStaticPaths() {
   let paths = [];
 
-  const client = hygraphClient();
+  const client = getApolloClient();
 
-  const posts = await client.request(AllNewsPosts);
+  const {
+    data: {
+      posts: { nodes: items },
+    },
+  } = await client.query({
+    query: AllNewsPosts,
+  });
 
-  posts.posts.forEach((post) => {
+  items.forEach((post) => {
     paths.push({
       params: {
         postSlug: post.slug,
@@ -59,29 +76,30 @@ export async function getStaticPaths() {
 }
 
 const NewsPostDetailsPage = ({ post, relatedPosts }) => {
-  const content = post.content.raw;
-  const title = post.title;
-  const desc = post.desc
+  // const content = post.content.raw;
+  // const title = post.title;
+  // const desc = post.desc
 
-  const breadcrumbs = useMemo(() => {
-    return [
-      {
-        label: "Trang chủ",
-        slug: "/"
-      },
-      {
-        label: "Tin tức",
-        slug: "/tin-tuc"
-      },
-      {
-        label: post.title,
-      }
-    ]
-  }, [post])
-
+  // const breadcrumbs = useMemo(() => {
+  //   return [
+  //     {
+  //       label: "Trang chủ",
+  //       slug: "/"
+  //     },
+  //     {
+  //       label: "Tin tức",
+  //       slug: "/tin-tuc"
+  //     },
+  //     {
+  //       label: post.title,
+  //     }
+  //   ]
+  // }, [post])
+  console.log(post);
+  console.log(relatedPosts);
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>{post.title} | Pambu</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
@@ -199,6 +217,42 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
             </div>
           </div>
         </div>
+      </div> */}
+
+      <div className="max-w-4xl mx-auto p-4">
+        <h1 className="text-4xl font-bold my-6">{post.title}</h1>
+        {parse(post.content, {
+          replace: (domNode) => {
+            // image
+            if (domNode.name === "img") {
+              return (
+                <img
+                  src={domNode.attribs.src}
+                  alt={domNode.attribs.alt}
+                  className="block mx-auto w-full"
+                />
+              );
+            }
+
+            // image caption
+            if (domNode.name === "figcaption") {
+              return (
+                <div className="text-center text-gray-500 text-sm mt-2">
+                  {domNode.children[0].data}
+                </div>
+              );
+            }
+
+            // heading 2
+            if (domNode.name === "h2") {
+              return (
+                <h2 className="text-rose-600 font-bold text-2xl my-4">
+                  {domNode.children[0].data}
+                </h2>
+              );
+            }
+          },
+        })}
       </div>
     </>
   );

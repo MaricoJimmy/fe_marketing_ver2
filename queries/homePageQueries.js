@@ -1,21 +1,28 @@
-import { gql } from "graphql-request";
+import { gql } from "@apollo/client";
 
 const OEEPostsQuery = gql`
   query PostsForPambuOEE {
     posts(
-      where: { category: { slug: "pambu-oee" } }
-      orderBy: publishedAt_ASC
+      where: { categoryName: "pambu-oee", orderby: { field: DATE, order: ASC } }
       first: 5
     ) {
-      id
-      title
-      slug
-      desc
-      publishedAt
-      featuredImg {
-        height
-        width
-        url
+      nodes {
+        id
+        title
+        slug
+        excerpt
+        date
+        featuredImage {
+          node {
+            altText
+            caption
+            mediaItemUrl
+            mediaDetails {
+              height
+              width
+            }
+          }
+        }
       }
     }
   }
@@ -24,19 +31,26 @@ const OEEPostsQuery = gql`
 const PMSPostsQuery = gql`
   query PostsForPambuPMS {
     posts(
-      where: { category: { slug: "pambu-pms" } }
-      orderBy: publishedAt_ASC
+      where: { categoryName: "pambu-pms", orderby: { field: DATE, order: ASC } }
       first: 5
     ) {
-      id
-      title
-      slug
-      desc
-      publishedAt
-      featuredImg {
-        height
-        width
-        url
+      nodes {
+        id
+        title
+        slug
+        excerpt
+        date
+        featuredImage {
+          node {
+            altText
+            caption
+            mediaItemUrl
+            mediaDetails {
+              height
+              width
+            }
+          }
+        }
       }
     }
   }
@@ -45,22 +59,28 @@ const PMSPostsQuery = gql`
 const NewsPostsQuery = gql`
   query PostsForPambuPMS {
     posts(
-      where: { category: { slug: "tin-tuc" } }
-      orderBy: publishedAt_DESC
+      where: { categoryName: "tin-tuc", orderby: { field: DATE, order: DESC } }
       first: 5
     ) {
-      id
-      title
-      slug
-      desc
-      publishedAt
-      featuredImg {
-        height
-        width
-        url
+      nodes {
+        id
+        title
+        slug
+        excerpt
+        date
+        featuredImage {
+          node {
+            altText
+            caption
+            mediaItemUrl
+            mediaDetails {
+              height
+              width
+            }
+          }
+        }
       }
     }
   }
 `;
 export { OEEPostsQuery, PMSPostsQuery, NewsPostsQuery };
-

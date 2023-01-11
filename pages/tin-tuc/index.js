@@ -3,35 +3,42 @@ import React from "react";
 import BlogCard from "../../components/common/BlogCard";
 import Breadcrumb from "../../components/common/Breadcrumb";
 import Title from "../../components/common/Title";
-import { hygraphClient } from "../../libs/hygraphClient";
+import { getApolloClient } from "../../libs/apollo-client";
 import { AllNewsPosts } from "../../queries/guidesQueries";
 
 export async function getStaticProps() {
-  const client = hygraphClient();
+  const client = getApolloClient();
 
-  const { posts } = await client.request(AllNewsPosts);
+  const {
+    data: {
+      posts: { nodes: items },
+    },
+  } = await client.query({
+    query: AllNewsPosts,
+  });
 
   return {
     props: {
-      posts,
+      posts: items,
     },
     revalidate: 60,
   };
 }
 
 const AllNewsPage = ({ posts }) => {
-  const breadcrumbs = [
-    {
-      label: "Trang chủ",
-      slug: "/"
-    },
-    {
-      label: "Tin tức",
-    }
-  ]
+  // const breadcrumbs = [
+  //   {
+  //     label: "Trang chủ",
+  //     slug: "/"
+  //   },
+  //   {
+  //     label: "Tin tức",
+  //   }
+  // ]
+  console.log(posts);
   return (
     <>
-      <Head>
+      {/* <Head>
         <title>Tin tức | Pambu</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
@@ -47,19 +54,22 @@ const AllNewsPage = ({ posts }) => {
             </div>
             <div className="mt-8">
               <ul className="grid grid-cols-12 gap-8">
-                {
-                  posts.map(post => (
-                    <li key={post.id} className='col-span-12 md:col-span-6 lg:col-span-4'>
-                      <BlogCard data={post} category='tin-tuc' />
-                    </li>
-                  ))
-                }
+                {posts.map((post) => (
+                  <li
+                    key={post.id}
+                    className="col-span-12 md:col-span-6 lg:col-span-4"
+                  >
+                    <BlogCard data={post} category="tin-tuc" />
+                  </li>
+                ))}
               </ul>
             </div>
           </div>
         </div>
-      </div>
-    </>);
+      </div> */}
+      news posts page
+    </>
+  );
 };
 
 export default AllNewsPage;
