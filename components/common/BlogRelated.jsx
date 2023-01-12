@@ -8,8 +8,8 @@ function BlogRelated({ data, category }) {
         <div className=''>
             <Link href={`/${category}/${data.slug}`}>
                 <a className=''>
-                    <div className='relative border border-gray/20 w-full h-[200px] lg:h-[150px]'>
-                        <Image src={data.featuredImage.node.mediaItemUrl} layout="fill" objectFit='cover' alt='' />
+                    <div className='relative border border-gray/20 w-full h-[200px] lg:h-[150px] rounded'>
+                        <Image src={data.featuredImage.node.mediaItemUrl} layout="fill" objectFit='cover' alt='' className="rounded" />
                     </div>
                     <div className='mt-2 w-fit'>
                         <h5 className='text-lg text-gray font-semibold'>{data.title}</h5>

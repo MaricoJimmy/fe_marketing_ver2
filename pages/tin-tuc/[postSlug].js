@@ -109,7 +109,7 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
               </div>
 
               <div className="mt-8">
-                <Image src={post.featuredImage.node.mediaItemUrl} width="1000" height="500" alt="" />
+                <Image src={post.featuredImage.node.mediaItemUrl} width="1000" height="500" alt="" className="rounded" />
               </div>
 
               <div className="content-wrapper mt-6" dangerouslySetInnerHTML={{ __html: post.content }}>
@@ -137,42 +137,6 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
           </div>
         </div>
       </div>
-
-      {/* <div className="max-w-4xl mx-auto p-4">
-        <h1 className="text-4xl font-bold my-6">{post.title}</h1>
-        {parse(post.content, {
-          replace: (domNode) => {
-            // image
-            if (domNode.name === "img") {
-              return (
-                <img
-                  src={domNode.attribs.src}
-                  alt={domNode.attribs.alt}
-                  className="block mx-auto w-full"
-                />
-              );
-            }
-
-            // image caption
-            if (domNode.name === "figcaption") {
-              return (
-                <div className="text-center text-gray-500 text-sm mt-2">
-                  {domNode.children[0].data}
-                </div>
-              );
-            }
-
-            // heading 2
-            if (domNode.name === "h2") {
-              return (
-                <h2 className="text-rose-600 font-bold text-2xl my-4">
-                  {domNode.children[0].data}
-                </h2>
-              );
-            }
-          },
-        })}
-      </div> */}
     </>
   );
 };

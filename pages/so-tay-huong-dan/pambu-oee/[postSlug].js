@@ -108,7 +108,7 @@ const OEEDetailPost = ({ post, relatedPosts }) => {
               </div>
 
               <div className="mt-10">
-                <Image src={post.featuredImage.node.mediaItemUrl} width="1000" height="500" alt="" />
+                <Image src={post.featuredImage.node.mediaItemUrl} width="1000" height="500" alt="" className="rounded" />
               </div>
 
               <div className="content-wrapper mt-6" dangerouslySetInnerHTML={{ __html: post.content }}>
@@ -127,7 +127,7 @@ const OEEDetailPost = ({ post, relatedPosts }) => {
                 <ul className="mt-6">
                   {relatedPosts.map(relatePost => (
                     <li key={relatePost.id} className="mb-8 last:mb-0">
-                      <BlogRelated data={relatePost} category="tin-tuc" />
+                      <BlogRelated data={relatePost} category="pambu-oee" />
                     </li>
                   ))}
                 </ul>

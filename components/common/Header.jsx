@@ -9,7 +9,7 @@ function Header({ isProductPage, isPMSPage }) {
     useEffect(() => {
         const isSticky = () => {
             const scrollTop = window.scrollY;
-            const stickyClass = scrollTop >= 250 ? "is-sticky" : "";
+            const stickyClass = scrollTop >= 150 ? "is-sticky" : "";
             setStickyHeader(stickyClass);
         };
 
