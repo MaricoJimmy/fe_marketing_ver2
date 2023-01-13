@@ -2,5 +2,9 @@
 User-agent: *
 Allow: /
 
+# Host
+Host: https://pambu.org
+
+# Sitemap
 Sitemap: https://pambu.org/sitemap.xml
 Sitemap: https://www.pambu.org/sitemap.xml
