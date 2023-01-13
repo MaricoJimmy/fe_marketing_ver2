@@ -11,7 +11,7 @@ function PageSeoHead({ data }) {
                     property="og:description"
                     content={data.desc}
                 ></meta>
-                <meta name="description" content={data.desc} />
+                <meta name="description" content={data.desc}></meta>
                 <meta property="og:image" content={data.img}></meta>
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
             </Head>
