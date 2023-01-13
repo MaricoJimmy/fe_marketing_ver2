@@ -15,14 +15,14 @@ function Breadcrumb({ data }) {
                                         <span className='text-sm text-gray/80 font-semibold mr-2'>
                                             {item.label}
                                         </span>
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M7.5 5L12.5 10L7.5 15" stroke="#2e2e2e" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                                        <svg width="14" height="14" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4.5 3L7.5 6L4.5 9" stroke="#2E2E2E" strokeLinecap="round" strokeLinejoin="round" />
                                         </svg>
                                     </a>
                                 </Link>
                             ) || (
                                 <div className='flex items-center'>
-                                    <span className='text-sm text-gray/80 font-semibold mr-2'>
+                                    <span className='text-sm text-gray/80 font-semibold'>
                                         {item.label}
                                     </span>
                                 </div>

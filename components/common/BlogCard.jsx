@@ -8,7 +8,7 @@ function BlogCard({ data, category }) {
         <div className='w-full'>
             <Link href={`/${category}/${data.slug}`}>
                 <a className='block md:h-[500px] border border-gray/20 rounded-lg'>
-                    <div className='w-full h-[240px] relative'>
+                    <div className='w-full h-[240px] relative border-b border-gray/20'>
                         <Image src={data.featuredImage.node.mediaItemUrl} layout='fill' objectFit='cover' className='rounded-t-lg' alt='' />
                     </div>
                     <div className='p-6 w-full'>
