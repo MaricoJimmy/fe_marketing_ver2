@@ -14,7 +14,7 @@ function FormDemo({ isPMSPage }) {
                                     label="Yêu cầu Demo"
                                     className='bg-blue-primary'
                                 />
-                                <p className='mt-6 text-xl text-gray/80 text-justify font-medium'>Với mục tiêu cùng đồng hành với nhà máy để hiện đại hóa sản xuất công nghiệp, Pambu sẽ hỗ trợ khách hàng sử dụng demo <span className='font-bold'>MIỄN PHÍ</span>.</p>
+                                <p className='mt-6 text-xl text-gray/80 text-justify font-medium'>{isPMSPage && "Với mục tiêu cùng đồng hành với khách hàng để giải quyết các bài toán quản lý năng lượng" || "Với mục tiêu cùng đồng hành với nhà máy để hiện đại hóa sản xuất công nghiệp"}, Pambu sẽ hỗ trợ khách hàng sử dụng demo <span className='font-bold'>MIỄN PHÍ</span>.</p>
                             </div>
                         </div>
                         <div className="col-span-12 lg:col-span-6">
