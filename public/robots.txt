@@ -1,0 +1,6 @@
+# *
+User-agent: *
+Allow: /
+
+Sitemap: https://pambu.org/sitemap.xml
+Sitemap: https://www.pambu.org/sitemap.xml
