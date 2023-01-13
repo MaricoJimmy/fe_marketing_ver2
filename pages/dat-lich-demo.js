@@ -102,7 +102,7 @@ const BookDemoPage = () => {
                   <li>Lắp đặt demo và lắng nghe ý kiến phản hồi của khách hàng.</li>
                 </ul>
                 <p className="mt-6">
-                  Còn chần chừ gì nữa mà không liên hệ ngay với đội ngũ Pambu tại hotline <a href="tel:+8454321232" className="font-bold">+8454321232</a> hoặc điền vào form dưới đây để sử dụng sản phẩm. Pambu rất vui lòng được đồng hành!
+                  Còn chần chừ gì nữa mà không liên hệ ngay với đội ngũ Pambu tại hotline <a href="tel:0387430957" className="font-bold">0387 430 957</a> hoặc điền vào form dưới đây để sử dụng sản phẩm. Pambu rất vui lòng được đồng hành!
                 </p>
               </div>
             </div>

@@ -66,6 +66,41 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
         <div className="w-full flex justify-center items-center">
           <div className="px-5 md:px-8 py-10 max-w-screen-xl w-full overflow-hidden md:overflow-visible">
             <div>
+              <h1 className="hidden md:block text-4xl text-gray text-center font-bold">Pambu - Phần Mềm Quản Lý, Giám Sát <br /> <span className="text-green-secondary">Năng Lượng</span> Và <span className="text-green-secondary">Hiệu Suất</span> Máy</h1>
+              <h1 className="block md:hidden text-2xl text-gray text-center font-bold">Pambu - Phần Mềm Quản Lý, Giám Sát <span className="text-green-secondary">Năng Lượng</span> Và <span className="text-green-secondary">Hiệu Suất</span> Máy</h1>
+              <h4 className="mt-6 text-xl text-gray/80 text-center font-medium">
+                Chìa khóa mở ra  cánh cửa số hóa dữ liệu nhà máy. Tiên phong trong công nghệ Cloud
+              </h4>
+              <div className="mt-10 md:mt-16 grid grid-cols-2 gap-6 md:gap-16">
+                <div className="col-span-2 md:col-span-1">
+                  <h2 className="text-xl md:text-2xl text-gray text-center font-bold">
+                    Pambu OEE <br /><span className="text-gray/60 font-semibold">Phần mềm quản lý hiệu suất và bảo dưỡng máy</span>
+                  </h2>
+                  <div className="mt-8">
+                    <Image src="/image/oee/mockup-oee.png" width='1240' height='650' alt='' />
+                  </div>
+                  <div className="mt-8 flex items-center justify-center">
+                    <Link href='/san-pham/pambu-oee'>
+                      <a className="px-10 py-3 bg-white hover:bg-green-primary border border-green-primary text-green-primary hover:text-white font-semibold rounded-md duration-200">Xem chi tiết</a>
+                    </Link>
+                  </div>
+                </div>
+                <div className="col-span-2 md:col-span-1">
+                  <h2 className="text-xl md:text-2xl text-gray text-center font-bold">
+                    Pambu PMS <br /> <span className="text-gray/60 font-semibold">Phần mềm giám sát năng lượng</span>
+                  </h2>
+                  <div className="mt-8">
+                    <Image src="/image/pms/mockup-pms.png" width='1240' height='650' alt='' />
+                  </div>
+                  <div className="mt-8 flex items-center justify-center">
+                    <Link href='/san-pham/pambu-pms'>
+                      <a className="px-10 py-3 bg-white hover:bg-green-primary border border-green-primary text-green-primary hover:text-white font-semibold rounded-md duration-200">Xem chi tiết</a>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="mt-32">
               <Title label="Tin tức nổi bật" className="bg-green-primary" />
               <div className="mt-8">
                 <div className="grid grid-cols-12 gap-6 lg:gap-16">

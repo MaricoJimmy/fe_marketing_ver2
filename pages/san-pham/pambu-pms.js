@@ -96,7 +96,7 @@ const PMSLandingPage = () => {
                       <span>Để biết thêm thông tin chi tiết vui lòng đặt lịch demo
                         <Link href='/dat-lich-demo'>
                           <a className='ml-1 text-blue-primary underline'>tại đây</a>
-                        </Link> hoặc gọi điện trực tiếp để được đội ngũ chuyên gia tư vấn qua số hotline: 012146213109</span>
+                        </Link> hoặc gọi điện trực tiếp để được đội ngũ chuyên gia tư vấn qua số hotline: <a href="tel:0387430957" className="text-green-secondary underline">0387 430 957</a></span>
                     </div>
                   </div>
                   <div onClick={() => handleClickQuestion(3)} className='py-4 border-b border-gray/20 cursor-pointer'>

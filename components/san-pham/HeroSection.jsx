@@ -34,7 +34,7 @@ function HeroSection({ data, isPMSPage }) {
                         <Image src='/image/line.png' width='500' height='500' alt='' />
                     </div>
                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex items-center justify-center">
-                        <Image src={data.img} width='430' height='400' alt='' />
+                        <Image src={data.img} width='1240' height='650' alt='' />
                     </div>
                 </div>
             </div>
