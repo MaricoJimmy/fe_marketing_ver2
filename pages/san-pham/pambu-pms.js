@@ -1,7 +1,7 @@
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
+import PageSeoHead from "../../components/common/PageSeoHead";
 import Title from "../../components/common/Title";
 import PMSLayout from "../../components/layout/PMSLayout";
 import FormDemo from "../../components/san-pham/FormDemo";
@@ -25,15 +25,15 @@ const PMSLandingPage = () => {
       setOpenQuestion(true)
     }
   }
+
+  const metaTagData = {
+    title: "Giám Sát Năng Lượng Cùng Pambu PMS",
+    desc: "Lãng phí tài nguyên là vết thương đang rỉ máu của doanh nghiệp. Pambu PMS là giải pháp toàn diện, đơn giản, hiệu quả giúp doanh nghiệp lên kế hoạch sử dụng năng lượng tối ưu. Theo dõi, phát hiện sớm những điểm thất thoát lãng phí. Cung cấp bức tranh toàn cảnh về mặt bằng sử dụng năng lượng và hơn thế nữa.",
+    img: "/image/pms/pms-page.png"
+  }
   return (
     <>
-      <Head>
-        <title>Pambu PMS | Pambu</title>
-        <meta property="og:title" content="Pambu PMS | Pambu"></meta>
-        <meta property="og:description" content="Giám Sát Và Quản Lý Năng Lượng"></meta>
-        <meta property="og:image" content="/image/pms/mockup-pms.png"></meta>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
+      <PageSeoHead data={metaTagData} />
       <div className="">
         <div className="w-full flex justify-center items-center">
           <div className="px-5 py-3 md:px-8 md:py-6 max-w-screen-xl w-full overflow-hidden md:overflow-visible">

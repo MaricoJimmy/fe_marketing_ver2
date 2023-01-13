@@ -1,7 +1,7 @@
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
+import PageSeoHead from "../../components/common/PageSeoHead";
 import Title from "../../components/common/Title";
 import OEELayout from "../../components/layout/OEELayout";
 import FormDemo from "../../components/san-pham/FormDemo";
@@ -25,15 +25,15 @@ const OEELandingPage = () => {
       setOpenQuestion(true)
     }
   }
+
+  const metaTagData = {
+    title: "Pambu OEE - Giải Pháp Toàn Diện Về Quản Lý Hiệu Suất Và Bảo Dưỡng Máy",
+    desc: "Pambu OEE là giải pháp toàn diện giúp doanh nghiệp quản lý hiệu quả máy móc, dây chuyền sản xuất. Hỗ trợ phân tích dữ liệu hoạt động sản xuất dựa trên những dữ liệu Pambu OEE thu thập được nhằm đưa ra các báo cáo, cảnh báo giúp khách hàng kịp thời đưa ra các quyết định chính xác.",
+    img: "/image/oee/oee-page.png"
+  }
   return (
     <>
-      <Head>
-        <title>Pambu OEE | Pambu</title>
-        <meta property="og:title" content="Pambu OEE | Pambu"></meta>
-        <meta property="og:description" content="Giải Pháp Toàn Diện Về Quản Lý Hiệu Suất Và Bảo Dưỡng Máy"></meta>
-        <meta property="og:image" content="/image/oee/mockup-oee.png"></meta>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
+      <PageSeoHead data={metaTagData} />
       <div className="">
         <div className="w-full flex justify-center items-center">
           <div className="px-5 py-3 md:px-8 md:py-6 max-w-screen-xl w-full overflow-hidden md:overflow-visible">

@@ -1,6 +1,5 @@
 import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
-import Head from "next/head";
 import Link from "next/link";
 import React from "react";
 import { useForm } from "react-hook-form";
@@ -9,6 +8,7 @@ import * as yup from "yup";
 import Breadcrumb from "../components/common/Breadcrumb";
 import Button from "../components/common/Button";
 import FormGroup from "../components/common/FormGroup";
+import PageSeoHead from "../components/common/PageSeoHead";
 import Title from "../components/common/Title";
 
 const schema = yup.object().shape({
@@ -67,14 +67,14 @@ const BookDemoPage = () => {
       });
   };
 
+  const metaTagData = {
+    title: "Đặt lịch Demo | pambu.org",
+    desc: "Với mục tiêu cùng đồng hành với khách hàng, Pambu sẽ hỗ trợ khách hàng sử dụng demo MIỄN PHÍ.",
+    img: "/image/demo-page.png"
+  }
+
   return <>
-    <Head>
-      <title>Đặt lịch Demo | Pambu</title>
-      <meta property="og:title" content="Đặt lịch demo | Pambu"></meta>
-      <meta property="og:description" content="Với mục tiêu cùng đồng hành với khách hàng, Pambu sẽ hỗ trợ khách hàng sử dụng demo miễn phí."></meta>
-      <meta property="og:image" content="/image/logo.png"></meta>
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    </Head>
+    <PageSeoHead data={metaTagData} />
     <div>
       <div className="w-full flex justify-center items-center">
         <div className="px-5 md:px-8 py-16 max-w-screen-xl w-full">

@@ -1,7 +1,7 @@
-import Head from "next/head";
 import React from "react";
 import BlogCard from "../../components/common/BlogCard";
 import Breadcrumb from "../../components/common/Breadcrumb";
+import PageSeoHead from "../../components/common/PageSeoHead";
 import Title from "../../components/common/Title";
 import { getApolloClient } from "../../libs/apollo-client";
 import { AllNewsPosts } from "../../queries/guidesQueries";
@@ -35,15 +35,16 @@ const AllNewsPage = ({ posts }) => {
       label: "Tin tức",
     }
   ]
+
+  const metaTagData = {
+    title: "Tin tức | pambu.org",
+    desc: "Khám phá các tin tức mới nhất của Pambu",
+    img: "/image/home-page.png"
+  }
+
   return (
     <>
-      <Head>
-        <title>Tin tức | Pambu</title>
-        <meta property="og:title" content="Tin tức | Pambu"></meta>
-        <meta property="og:description" content="Khám phá các tin tức mới nhất của Pambu"></meta>
-        <meta property="og:image" content="/image/logo.png"></meta>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
+      <PageSeoHead data={metaTagData} />
       <div>
         <div className="w-full flex justify-center items-center">
           <div className="px-5 md:px-8 py-16 max-w-screen-xl w-full">

@@ -37,7 +37,7 @@ function HeaderDesktop({ stickyHeader, isProductPage, isPMSPage }) {
             <div className='max-w-screen-xl w-full'>
                 <div className={`${stickyHeader === "is-sticky" && "py-3" || "py-6"} px-8 w-full flex items-center justify-between`}>
                     <Link href='/'>
-                        <a>
+                        <a ariaLabel="logo">
                             {
                                 stickyHeader === "is-sticky" &&
                                 (
@@ -200,13 +200,13 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
                             </svg>
                         </Button>
                         <div className='py-8'>
-                            <ul className='flex flex-col items-start gap-8 cursor-pointer'>
-                                <li onClick={() => setOpenMenu(!openMenu)} className='w-full'>
+                            <ul className='cursor-pointer'>
+                                <li onClick={() => setOpenMenu(!openMenu)} className='mt-8 w-full'>
                                     <Link href='/tin-tuc'>
                                         <a className='block w-full font-semibold text-gray hover:text-green-secondary duration-200'>Tin tức</a>
                                     </Link>
                                 </li>
-                                <li className='w-full'>
+                                <li className='mt-8 w-full'>
                                     <div onClick={() => setOpenSubMenu({ ...openSubMenu, product: !openSubMenu.product })} className='flex items-center font-semibold'>
                                         <span className='mr-2'>Sản phẩm</span>
                                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -226,7 +226,7 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
                                         </div>
                                     </div>
                                 </li>
-                                <li className='w-full'>
+                                <li className='mt-8 w-full'>
                                     <div onClick={() => setOpenSubMenu({ ...openSubMenu, document: !openSubMenu.document })} className='w-full flex items-center font-semibold'>
                                         <span className='mr-2'>Cẩm nang hướng dẫn</span>
                                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -247,7 +247,7 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
                                     </div>
                                 </li>
                             </ul>
-                            <div className='mt-8'>
+                            <div className='mt-10'>
                                 {
                                     isProductPage && (
                                         <a

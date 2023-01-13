@@ -1,7 +1,7 @@
-import Head from "next/head";
 import React from "react";
 import BlogCard from "../../../components/common/BlogCard";
 import Breadcrumb from "../../../components/common/Breadcrumb";
+import PageSeoHead from "../../../components/common/PageSeoHead";
 import Title from "../../../components/common/Title";
 import { getApolloClient } from "../../../libs/apollo-client";
 import { AllOEEPosts } from "../../../queries/guidesQueries";
@@ -34,15 +34,15 @@ const OEEGuidesPage = ({ posts }) => {
       label: "Pambu OEE",
     },
   ];
+
+  const metaTagData = {
+    title: "Tài liệu Pambu OEE | pambu.org",
+    desc: "Giải Pháp Toàn Diện Về Quản Lý Hiệu Suất Và Bảo Dưỡng Máy",
+    img: "/image/home-page.png"
+  }
   return (
     <>
-      <Head>
-        <title>Tài liệu Pambu OEE | Pambu</title>
-        <meta property="og:title" content="Giải Pháp Toàn Diện Về Quản Lý Hiệu Suất Và Bảo Dưỡng Máy"></meta>
-        <meta property="og:description" content="Tài liệu Pambu OEE | Pambu"></meta>
-        <meta property="og:image" content="/image/logo.png"></meta>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
+      <PageSeoHead data={metaTagData} />
       <div>
         <div className="w-full flex justify-center items-center">
           <div className="px-5 md:px-8 py-16 max-w-screen-xl w-full">

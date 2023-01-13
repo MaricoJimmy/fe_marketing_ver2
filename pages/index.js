@@ -1,7 +1,7 @@
-import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import PageSeoHead from "../components/common/PageSeoHead";
 import Title from "../components/common/Title";
 import { getApolloClient } from "../libs/apollo-client";
 
@@ -50,18 +50,14 @@ export async function getStaticProps() {
 const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
   const firstPost = newsPosts[0]
 
+  const metaTagData = {
+    title: "Pambu - Phần Mềm Quản Lý, Giám Sát Năng Lượng Và Hiệu Suất Máy | pambu.org",
+    desc: "Chìa khóa mở ra cánh cửa số hóa dữ liệu nhà máy. Tiên phong trong công nghệ Cloud",
+    img: "/image/home-page.png"
+  }
   return (
     <>
-      <Head>
-        <title>Pambu</title>
-        <meta property="og:title" content="Pambu"></meta>
-        <meta
-          property="og:description"
-          content="Pambu There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form,"
-        ></meta>
-        <meta property="og:image" content="/image/logo.png"></meta>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
+      <PageSeoHead data={metaTagData} />
       <div>
         <div className="w-full flex justify-center items-center">
           <div className="px-5 md:px-8 py-10 max-w-screen-xl w-full overflow-hidden md:overflow-visible">
@@ -81,20 +77,20 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                   </div>
                   <div className="mt-8 flex items-center justify-center">
                     <Link href='/san-pham/pambu-oee'>
-                      <a className="px-10 py-3 bg-white hover:bg-green-primary border border-green-primary text-green-primary hover:text-white font-semibold rounded-md duration-200">Xem chi tiết</a>
+                      <a ariaLabel="pambu oee" className="px-10 py-3 bg-white hover:bg-green-secondary border border-green-secondary text-green-secondary hover:text-white font-semibold rounded-md duration-200">Xem chi tiết</a>
                     </Link>
                   </div>
                 </div>
                 <div className="col-span-2 md:col-span-1">
                   <h2 className="text-xl md:text-2xl text-gray text-center font-bold">
-                    Pambu PMS <br /> <span className="text-gray/60 font-semibold">Phần mềm giám sát năng lượng</span>
+                    Pambu PMS <br /> <span className="text-gray/60 font-semibold">Phần mềm giám sát năng lượng máy</span>
                   </h2>
                   <div className="mt-8">
                     <Image src="/image/pms/mockup-pms.png" width='1240' height='650' alt='' />
                   </div>
                   <div className="mt-8 flex items-center justify-center">
                     <Link href='/san-pham/pambu-pms'>
-                      <a className="px-10 py-3 bg-white hover:bg-green-primary border border-green-primary text-green-primary hover:text-white font-semibold rounded-md duration-200">Xem chi tiết</a>
+                      <a ariaLabel="pambu pms" className="px-10 py-3 bg-white hover:bg-green-secondary border border-green-secondary text-green-secondary hover:text-white font-semibold rounded-md duration-200">Xem chi tiết</a>
                     </Link>
                   </div>
                 </div>
@@ -106,7 +102,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                 <div className="grid grid-cols-12 gap-6 lg:gap-16">
                   <div className="col-span-12 md:col-span-6 lg:col-span-7">
                     <Link href={`/tin-tuc/${firstPost.slug}`}>
-                      <a className="block w-full h-fit shadow-lg rounded-lg">
+                      <a ariaLabel={firstPost.title} className="block w-full h-fit shadow-lg rounded-lg">
                         <div className="w-full h-[200px] lg:h-[250px] relative">
                           <Image
                             src={firstPost.featuredImage.node.mediaItemUrl}
@@ -120,10 +116,10 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                           <h3 className="text-xl text-gray font-semibold">
                             {firstPost.title}
                           </h3>
-                          <span className="block mt-2 text-gray/60">
+                          <span className="block mt-2 text-gray/80">
                             {getDate(firstPost.date)}
                           </span>
-                          <h5 className="mt-4 text-gray/80" dangerouslySetInnerHTML={{ __html: firstPost.excerpt }}>
+                          <h5 className="mt-4 text-gray" dangerouslySetInnerHTML={{ __html: firstPost.excerpt }}>
                           </h5>
                         </div>
                       </a>
@@ -148,7 +144,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                                 <h4 className="text-lg tex-gray font-semibold">
                                   {post.title}
                                 </h4>
-                                <span className="mt-2 block text-gray/60">
+                                <span className="mt-2 block text-gray/80">
                                   {getDate(post.date)}
                                 </span>
                               </div>

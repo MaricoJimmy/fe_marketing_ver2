@@ -1,8 +1,8 @@
-import Head from "next/head";
 import Image from "next/image";
 import React, { useMemo } from "react";
 import BlogRelated from "../../components/common/BlogRelated";
 import Breadcrumb from "../../components/common/Breadcrumb";
+import PageSeoHead from "../../components/common/PageSeoHead";
 import { getApolloClient } from "../../libs/apollo-client";
 import { AllNewsPosts } from "../../queries/guidesQueries";
 import {
@@ -88,15 +88,15 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
       }
     ]
   }, [post])
+
+  const metaTagData = {
+    title: `${post.title} | pambu.org`,
+    desc: post.excerpt.replace(/<[^>]+>/g, ''),
+    img: post.featuredImage.node.mediaItemUrl
+  }
   return (
     <>
-      <Head>
-        <title>{post.title} | Pambu</title>
-        <meta property="og:title" content={`${post.title} | Pambu`}></meta>
-        <meta property="og:description" content={post.excerpt.replace(/<[^>]+>/g, '')}></meta>
-        <meta property="og:image" content={post.featuredImage.node.mediaItemUrl}></meta>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      </Head>
+      <PageSeoHead data={metaTagData} />
       <div className="w-full flex justify-center items-center">
         <div className="px-5 md:px-8 py-10 max-w-screen-xl w-full">
           <Breadcrumb data={breadcrumbs} />

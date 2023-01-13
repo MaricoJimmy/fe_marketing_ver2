@@ -13,8 +13,8 @@ function BlogCard({ data, category }) {
                     </div>
                     <div className='p-6 w-full'>
                         <h4 className='text-xl text-gray font-semibold'>{data.title}</h4>
-                        <h6 className='mt-2 text-sm text-gray/60'>{getDate(data.date)}</h6>
-                        <h5 className='mt-4 text-lg text-gray/80 desc-blog' dangerouslySetInnerHTML={{ __html: data.excerpt }}></h5>
+                        <h6 className='mt-2 text-sm text-gray/80'>{getDate(data.date)}</h6>
+                        <h5 className='mt-4 text-lg text-gray desc-blog' dangerouslySetInnerHTML={{ __html: data.excerpt }}></h5>
                     </div>
                 </a>
             </Link>
