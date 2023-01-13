@@ -104,7 +104,7 @@ const OEEDetailPost = ({ post, relatedPosts }) => {
               <div className="mb-6">
                 <h1 className="font-bold text-4xl text-green-secondary mb-2">{post.title}</h1>
                 <p className="mt-6 text-gray/80 text-sm">Ngày xuất bản: {getDate(post.date)}</p>
-                <h3 className="mt-4 text-lg text-gray font-medium" dangerouslySetInnerHTML={{ __html: post.excerpt }}></h3>
+                <h3 className="mt-4 text-lg text-gray font-medium text-justify" dangerouslySetInnerHTML={{ __html: post.excerpt }}></h3>
               </div>
 
               <div className="mt-10">

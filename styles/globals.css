@@ -161,6 +161,7 @@ input[type=number] {
 
 .content-wrapper h4 {
   color: var(--text-color);
+  text-align: justify;
   line-height: 1.4;
   font-size: 24px;
   font-weight: 700;
@@ -169,6 +170,7 @@ input[type=number] {
 
 .content-wrapper h5 {
   color: var(--text-color);
+  text-align: justify;
   line-height: 1.5;
   font-size: 18px;
   margin-bottom: 16px;
@@ -176,6 +178,7 @@ input[type=number] {
 
 .content-wrapper h6 {
   color: var(--text-color);
+  text-align: justify;
   line-height: 1.5;
   font-size: 16px;
   margin-bottom: 16px;
@@ -183,6 +186,7 @@ input[type=number] {
 
 .content-wrapper p {
   color: var(--text-color);
+  text-align: justify;
   line-height: 1.5;
   font-size: 18px;
   margin-bottom: 16px;
@@ -190,6 +194,7 @@ input[type=number] {
 
 .content-wrapper strong {
   color: var(--text-color);
+  text-align: justify;
   line-height: 28px;
   font-size: 18px;
   margin-bottom: 8px;
@@ -213,6 +218,7 @@ input[type=number] {
   margin-bottom: 16px;
   list-style: disc;
   font-size: 18px;
+  text-align: justify;
 }
 
 .content-wrapper img {
