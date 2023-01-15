@@ -4,10 +4,10 @@ import React from 'react'
 function Footer() {
     return (
         <>
-            <div className='hidden md:block'>
+            <div className='hidden lg:block'>
                 <FooterDesktop />
             </div>
-            <div className='block md:hidden'>
+            <div className='block lg:hidden'>
                 <FooterMobile />
             </div>
         </>

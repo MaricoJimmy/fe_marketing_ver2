@@ -58,7 +58,7 @@ const OEEGuidesPage = ({ posts }) => {
                 {posts.map((post) => (
                   <li
                     key={post.id}
-                    className="col-span-12 md:col-span-6 lg:col-span-4"
+                    className="col-span-12 md:col-span-6 lg:col-span-4 h-full"
                   >
                     <BlogCard data={post} category="pambu-oee" />
                   </li>

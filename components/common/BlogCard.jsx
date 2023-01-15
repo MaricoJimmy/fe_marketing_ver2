@@ -5,9 +5,9 @@ import { getDate } from '../../utils';
 
 function BlogCard({ data, category }) {
     return (
-        <div className='w-full'>
+        <div className='w-full h-full'>
             <Link href={`/${category}/${data.slug}`}>
-                <a className='block md:h-[500px] border border-gray/20 rounded-lg'>
+                <a className='block h-full border border-gray/20 rounded-lg'>
                     <div className='w-full h-[240px] relative border-b border-gray/20'>
                         <Image src={data.featuredImage.node.mediaItemUrl} layout='fill' objectFit='cover' className='rounded-t-lg' alt='' />
                     </div>

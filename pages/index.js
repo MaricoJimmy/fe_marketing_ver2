@@ -209,7 +209,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                     </div>
                     <div className="mt-8 flex items-center justify-center">
                       <Link href="/pambu-oee">
-                        <a className="block px-6 py-3 bg-white text-green-primary border border-green-primary hover:bg-green-primary hover:text-white duration-200 rounded-md font-semibold">
+                        <a className="block px-6 py-3 bg-white hover:bg-green-secondary border border-green-secondary text-green-secondary hover:text-white duration-200 rounded-md font-semibold">
                           Xem tất cả
                         </a>
                       </Link>
@@ -260,7 +260,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                     </div>
                     <div className="mt-8 flex items-center justify-center">
                       <Link href="/pambu-pms">
-                        <a className="block px-6 py-3 bg-white text-green-primary border border-green-primary hover:bg-green-primary hover:text-white duration-200 rounded-md font-semibold">
+                        <a className="block px-6 py-3 bg-white hover:bg-green-secondary border border-green-secondary text-green-secondary hover:text-white duration-200 rounded-md font-semibold">
                           Xem tất cả
                         </a>
                       </Link>
