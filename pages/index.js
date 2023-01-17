@@ -83,7 +83,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                 </div>
                 <div className="col-span-2 md:col-span-1">
                   <h2 className="text-xl md:text-2xl text-gray text-center font-bold">
-                    Pambu PMS <br /> <span className="text-gray/60 font-semibold">Phần mềm giám sát năng lượng máy</span>
+                    Pambu PMS <br /> <span className="text-gray/60 font-semibold">Phần mềm giám sát năng lượng</span>
                   </h2>
                   <div className="mt-8">
                     <Image src="/image/pms/mockup-pms.png" width='1240' height='650' alt='' />
