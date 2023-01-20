@@ -213,6 +213,11 @@ input[type=number] {
   color: #5D9830;
 }
 
+.content-wrapper figcaption {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 .content-wrapper ul {
   margin-left: 20px;
   margin-bottom: 16px;
