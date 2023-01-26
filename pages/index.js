@@ -53,7 +53,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
   const metaTagData = {
     title: "Pambu - Phần Mềm Quản Lý, Giám Sát Năng Lượng Và Hiệu Suất Máy | pambu.org",
     desc: "Chìa khóa mở ra cánh cửa số hóa dữ liệu nhà máy. Tiên phong trong công nghệ Cloud",
-    img: "/image/home-page.png"
+    img: "/image/pambu.png"
   }
   return (
     <>

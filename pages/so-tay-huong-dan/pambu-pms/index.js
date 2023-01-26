@@ -38,7 +38,7 @@ const PMSGuidesPage = ({ posts }) => {
   const metaTagData = {
     title: "Tài liệu Pambu PMS | pambu.org",
     desc: "Giám Sát Và Quản Lý Năng Lượng",
-    img: "/image/home-page.png"
+    img: "/image/pambu.png"
   }
   return (
     <>

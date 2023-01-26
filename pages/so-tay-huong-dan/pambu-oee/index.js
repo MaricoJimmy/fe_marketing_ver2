@@ -38,7 +38,7 @@ const OEEGuidesPage = ({ posts }) => {
   const metaTagData = {
     title: "Tài liệu Pambu OEE | pambu.org",
     desc: "Giải Pháp Toàn Diện Về Quản Lý Hiệu Suất Và Bảo Dưỡng Máy",
-    img: "/image/home-page.png"
+    img: "/image/pambu.png"
   }
   return (
     <>

@@ -39,7 +39,7 @@ const AllNewsPage = ({ posts }) => {
   const metaTagData = {
     title: "Tin tức | pambu.org",
     desc: "Khám phá các tin tức mới nhất của Pambu",
-    img: "/image/home-page.png"
+    img: "/image/pambu.png"
   }
 
   return (
