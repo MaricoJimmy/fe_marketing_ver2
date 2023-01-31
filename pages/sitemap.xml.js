@@ -2,7 +2,7 @@ import { getApolloClient } from "../libs/apollo-client";
 import {
   AllNewsPosts,
   AllOEEPosts,
-  AllPMSPosts,
+  AllPMSPosts
 } from "../queries/guidesQueries";
 
 function generateSiteMap({ newsPosts, oeePosts, pmsPosts }) {
@@ -30,32 +30,32 @@ function generateSiteMap({ newsPosts, oeePosts, pmsPosts }) {
         <loc>https://www.pambu.org/dat-lich-demo</loc>
    </url>
      ${newsPosts
-       .map(({ slug }) => {
-         return `
+      .map(({ slug }) => {
+        return `
        <url>
            <loc>${`https://www.pambu.org/tin-tuc/${slug}`}</loc>
        </url>
      `;
-       })
-       .join("")}
+      })
+      .join("")}
        ${oeePosts
-         .map(({ slug }) => {
-           return `
+      .map(({ slug }) => {
+        return `
         <url>
             <loc>${`https://www.pambu.org/pambu-oee/${slug}`}</loc>
         </url>
       `;
-         })
-         .join("")}
+      })
+      .join("")}
         ${pmsPosts
-          .map(({ slug }) => {
-            return `
+      .map(({ slug }) => {
+        return `
             <url>
                 <loc>${`https://www.pambu.org/pambu-pms/${slug}`}</loc>
             </url>
           `;
-          })
-          .join("")}
+      })
+      .join("")}
    </urlset>
  `;
 }
