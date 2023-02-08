@@ -95,11 +95,6 @@ export const PMSDataPage = {
                 title: "Thống kê tỉ trọng phụ tải sử dụng năng lượng",
                 isBasic: false,
                 isPro: true
-            },
-            {
-                title: "Ước tính bill tiền điện, nước, ga",
-                isBasic: false,
-                isPro: true
             }
         ],
         img: "/image/pms/version-app.png"

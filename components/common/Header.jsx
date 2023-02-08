@@ -175,8 +175,8 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
                     </a>
                 </Link>
                 <div>
-                    <Button onClick={() => setOpenMenu(!openMenu)} className='p-2'>
-                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <Button onClick={() => setOpenMenu(!openMenu)} className='pl-2'>
+                        <svg width="30" height="30" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M34.8334 12.8333H9.16671" stroke="#2E2E2E" strokeWidth="3" strokeLinecap="round" />
                             <path d="M34.8334 22H16.5" stroke="#2E2E2E" strokeWidth="3" strokeLinecap="round" />
                             <path d="M34.8334 31.1667H23.8334" stroke="#2E2E2E" strokeWidth="3" strokeLinecap="round" />

@@ -1,8 +1,10 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 import React, { useMemo } from "react";
 import BlogRelated from "../../../components/common/BlogRelated";
 import Breadcrumb from "../../../components/common/Breadcrumb";
 import PageSeoHead from "../../../components/common/PageSeoHead";
+import SocialShare from "../../../components/common/SocialShare";
 import { getApolloClient } from "../../../libs/apollo-client";
 import { AllOEEPosts } from "../../../queries/guidesQueries";
 import {
@@ -71,6 +73,7 @@ export async function getStaticPaths() {
 }
 
 const OEEDetailPost = ({ post, relatedPosts }) => {
+  const router = useRouter()
   const breadcrumbs = useMemo(() => {
     return [
       {
@@ -103,12 +106,15 @@ const OEEDetailPost = ({ post, relatedPosts }) => {
             <div className="col-span-3 md:col-span-2">
               <div className="mb-6">
                 <h1 className="font-bold text-4xl text-green-secondary mb-2">{post.title}</h1>
-                <p className="mt-6 text-gray/80 text-sm">Ngày xuất bản: {getDate(post.date)}</p>
+                <div className="mt-3 flex items-center">
+                  <p className="mr-6 text-gray/80 text-sm">Ngày xuất bản: {getDate(post.date)}</p>
+                  <SocialShare data={router.asPath} />
+                </div>
                 <h3 className="mt-4 text-lg text-gray font-medium text-justify" dangerouslySetInnerHTML={{ __html: post.excerpt }}></h3>
               </div>
 
               <div className="mt-10">
-                <Image src={post.featuredImage.node.mediaItemUrl} width="1000" height="500" alt="" className="rounded" />
+                <Image src={post.featuredImage.node.mediaItemUrl} width="1000" height="600" alt="" className="rounded" />
               </div>
 
               <div className="content-wrapper mt-6" dangerouslySetInnerHTML={{ __html: post.content }}>

@@ -1,0 +1,16 @@
+import Image from 'next/image'
+import React from 'react'
+
+function SocialShare({ data }) {
+    return (
+        <a
+            href={`https://www.facebook.com/sharer.php?u=https://pambu.org/${data}`}
+            target="_blank"
+            rel="noreferrer"
+            className='p-2 block'>
+            <Image src="/image/facebook.png" alt='' width="30" height="30" />
+        </a>
+    )
+}
+
+export default SocialShare
