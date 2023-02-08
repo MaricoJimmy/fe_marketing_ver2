@@ -119,7 +119,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                           <span className="block mt-2 text-gray/80">
                             {getDate(firstPost.date)}
                           </span>
-                          <h5 className="mt-4 text-gray" dangerouslySetInnerHTML={{ __html: firstPost.excerpt }}>
+                          <h5 className="mt-4 text-gray desc-blog" dangerouslySetInnerHTML={{ __html: firstPost.excerpt }}>
                           </h5>
                         </div>
                       </a>
