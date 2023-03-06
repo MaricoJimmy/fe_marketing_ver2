@@ -244,6 +244,6 @@ input[type="number"] {
 }
 
 .content-wrapper tr:first-child {
-  background-color: rgb(2, 210, 218, 0.2);
+  background-color: #e0edff;
   text-align: center;
 }

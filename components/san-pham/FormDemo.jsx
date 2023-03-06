@@ -7,7 +7,7 @@ function FormDemo({ isPMSPage }) {
     <div className="mt-16 md:mt-32">
       <div
         className={`w-full flex justify-center items-center ${
-          (isPMSPage && "bg-orange-primary/20") || "bg-tertiary/20"
+          (isPMSPage && "bg-orange-primary/20") || "bg-tertiary"
         }`}
       >
         <div className="px-8 py-16 max-w-screen-xl w-full">

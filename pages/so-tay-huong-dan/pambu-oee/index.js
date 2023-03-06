@@ -50,7 +50,7 @@ const OEEGuidesPage = ({ posts }) => {
             <div className="mt-8">
               <Title
                 label="Tài liệu Pambu OEE"
-                className="bg-secondary !w-full"
+                className="bg-primary !w-full"
               />
             </div>
             <div className="mt-8">

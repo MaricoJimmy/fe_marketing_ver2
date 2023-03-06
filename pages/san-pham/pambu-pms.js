@@ -306,7 +306,7 @@ const PMSLandingPage = () => {
                   </div>
                   <div
                     onClick={() => handleClickQuestion(5)}
-                    className="py-4 border-b border-gray/20 cursor-pointer"
+                    className="py-4 cursor-pointer"
                   >
                     <div className="flex items-center justify-between">
                       <h4

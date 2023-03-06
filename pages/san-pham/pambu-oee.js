@@ -45,7 +45,7 @@ const OEELandingPage = () => {
         </div>
         <NumberStatus
           data={OEEDataPage.status}
-          className="from-tertiary/20 to-secondary/20"
+          className="from-primary/40 to-tertiary"
         />
         <div className="w-full flex justify-center items-center">
           <div className="px-5 py-3 md:px-8 md:py-6 max-w-screen-xl w-full">
@@ -75,7 +75,7 @@ const OEELandingPage = () => {
                         className={`${
                           (idQuestion === 1 &&
                             openQuestion &&
-                            "text-tertiary") ||
+                            "text-secondary") ||
                           "text-gray"
                         } mr-2 text-xl text-gray font-semibold`}
                       >
@@ -134,7 +134,7 @@ const OEELandingPage = () => {
                         className={`${
                           (idQuestion === 2 &&
                             openQuestion &&
-                            "text-tertiary") ||
+                            "text-secondary") ||
                           "text-gray"
                         } mr-2 text-xl text-gray font-semibold`}
                       >
@@ -208,7 +208,7 @@ const OEELandingPage = () => {
                         className={`${
                           (idQuestion === 3 &&
                             openQuestion &&
-                            "text-tertiary") ||
+                            "text-secondary") ||
                           "text-gray"
                         } mr-2 text-xl text-gray font-semibold`}
                       >
@@ -284,7 +284,7 @@ const OEELandingPage = () => {
                         className={`${
                           (idQuestion === 4 &&
                             openQuestion &&
-                            "text-tertiary") ||
+                            "text-secondary") ||
                           "text-gray"
                         } mr-2 text-xl text-gray font-semibold`}
                       >
@@ -332,14 +332,14 @@ const OEELandingPage = () => {
                   </div>
                   <div
                     onClick={() => handleClickQuestion(5)}
-                    className="py-4 border-b border-gray/20 cursor-pointer"
+                    className="py-4 cursor-pointer"
                   >
                     <div className="flex items-center justify-between">
                       <h4
                         className={`${
                           (idQuestion === 5 &&
                             openQuestion &&
-                            "text-tertiary") ||
+                            "text-secondary") ||
                           "text-gray"
                         } mr-2 text-xl text-gray font-semibold`}
                       >

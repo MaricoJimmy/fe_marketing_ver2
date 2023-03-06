@@ -46,7 +46,7 @@ function HeaderDesktop({ stickyHeader, isProductPage, isPMSPage }) {
       className={`${
         (stickyHeader === "is-sticky" && "fixed top-0 z-40 drop-shadow-md") ||
         "relative"
-      } flex justify-center items-center w-full bg-white`}
+      } flex justify-center items-center w-full bg-quaternary`}
     >
       <div className="max-w-screen-xl w-full">
         <div
@@ -94,12 +94,12 @@ function HeaderDesktop({ stickyHeader, isProductPage, isPMSPage }) {
                 </div>
                 <div className={styles.subMenu}>
                   <div className="bg-white rounded drop-shadow-lg">
-                    <div className="w-[160px] bg-white text-gray font-semibold rounded-t hover:bg-secondary/20 hover:text-primary duration-200">
+                    <div className="w-[160px] bg-white text-gray font-semibold rounded-t hover:bg-tertiary hover:text-primary duration-200">
                       <Link href="/san-pham/pambu-oee">
                         <a className="px-6 py-3 block w-full">Pambu OEE</a>
                       </Link>
                     </div>
-                    <div className="w-[160px] bg-white text-gray font-semibold rounded-b hover:bg-secondary/20 hover:text-primary duration-200">
+                    <div className="w-[160px] bg-white text-gray font-semibold rounded-b hover:bg-tertiary hover:text-primary duration-200">
                       <Link href="/san-pham/pambu-pms">
                         <a className="px-6 py-3 block w-full">Pambu PMS</a>
                       </Link>
@@ -128,14 +128,14 @@ function HeaderDesktop({ stickyHeader, isProductPage, isPMSPage }) {
                 </div>
                 <div className={styles.subMenu}>
                   <div className="bg-white rounded drop-shadow-lg">
-                    <div className="w-[200px] bg-white text-gray font-semibold rounded-t hover:bg-secondary/20 hover:text-primary duration-200">
+                    <div className="w-[200px] bg-white text-gray font-semibold rounded-t hover:bg-tertiary hover:text-primary duration-200">
                       <Link href="/pambu-oee">
                         <a className="px-6 py-3 block w-full">
                           Tài liệu Pambu OEE
                         </a>
                       </Link>
                     </div>
-                    <div className="w-[200px] bg-white text-gray font-semibold rounded-b hover:bg-secondary/20 hover:text-primary duration-200">
+                    <div className="w-[200px] bg-white text-gray font-semibold rounded-b hover:bg-tertiary hover:text-primary duration-200">
                       <Link href="/pambu-pms">
                         <a className="px-6 py-3 block w-full">
                           Tài liệu Pambu PMS
@@ -201,7 +201,7 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
       className={`${
         (stickyHeader === "is-sticky" && "fixed top-0 z-40 drop-shadow-md") ||
         "relative"
-      } py-3 px-5 w-full bg-white`}
+      } py-3 px-5 w-full bg-quaternary`}
     >
       <div className="flex items-center justify-between">
         <Link href="/">

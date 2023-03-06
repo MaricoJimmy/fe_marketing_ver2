@@ -36,14 +36,12 @@ function HeroSection({ data, isPMSPage }) {
           <div className="hidden md:block relative w-full h-full blur-3xl">
             <div
               className={`absolute top-16 left-1/2 md:left-2/3 lg:left-1/2 w-[200px] h-[200px] rounded-full ${
-                data.color === "green" ? "bg-tertiary/40" : "bg-orange-primary"
+                data.color === "green" ? "bg-primary/60" : "bg-orange-primary"
               }`}
             ></div>
             <div
               className={`absolute top-36 left-24 md:left-36 lg:left-24 w-[250px] h-[250px] rounded-full ${
-                data.color === "green"
-                  ? "bg-tertiary/40"
-                  : "bg-orange-secondary"
+                data.color === "green" ? "bg-primary/60" : "bg-orange-primary"
               }`}
             ></div>
           </div>

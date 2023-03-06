@@ -6,7 +6,7 @@ function Partner() {
   return (
     <div className="mt-16 md:mt-32">
       <div className="flex items-center justify-center">
-        <Title label="Đối tác" className="mx-auto bg-secondary" />
+        <Title label="Đối tác" className="mx-auto bg-primary" />
       </div>
       <div className="hidden md:block">
         <div className="mt-16 flex flex-wrap items-center justify-center gap-10 lg:gap-24">

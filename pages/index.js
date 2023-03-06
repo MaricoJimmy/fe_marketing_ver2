@@ -65,19 +65,19 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
             <div>
               <h1 className="hidden md:block text-4xl text-gray text-center font-bold">
                 Pambu - Phần Mềm Quản Lý, Giám Sát <br />{" "}
-                <span className="text-secondary">Năng Lượng</span> Và{" "}
-                <span className="text-secondary">Hiệu Suất</span> Máy
+                <span className="text-primary">Năng Lượng</span> Và{" "}
+                <span className="text-primary">Hiệu Suất</span> Máy
               </h1>
               <h1 className="block md:hidden text-2xl text-gray text-center font-bold">
                 Pambu - Phần Mềm Quản Lý, Giám Sát{" "}
-                <span className="text-secondary">Năng Lượng</span> Và{" "}
-                <span className="text-secondary">Hiệu Suất</span> Máy
+                <span className="text-primary">Năng Lượng</span> Và{" "}
+                <span className="text-primary">Hiệu Suất</span> Máy
               </h1>
               <h4 className="mt-6 text-xl text-gray/80 text-center font-medium">
                 Chìa khóa mở ra cánh cửa số hóa dữ liệu nhà máy. Tiên phong
                 trong công nghệ Cloud
               </h4>
-              <div className="mt-10 md:mt-16 grid grid-cols-2 gap-6 md:gap-16">
+              <div className="mt-10 md:mt-16 grid grid-cols-2 gap-10 md:gap-16">
                 <div className="col-span-2 md:col-span-1">
                   <h2 className="text-xl md:text-2xl text-gray text-center font-bold">
                     Pambu OEE <br />
@@ -97,7 +97,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                     <Link href="/san-pham/pambu-oee">
                       <a
                         ariaLabel="pambu oee"
-                        className="px-10 py-3 bg-white hover:bg-primary border border-primary text-primary hover:text-white font-semibold rounded-md duration-200"
+                        className="px-10 py-3 bg-primary hover:bg-secondary text-white font-semibold rounded-md duration-200"
                       >
                         Xem chi tiết
                       </a>
@@ -123,7 +123,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                     <Link href="/san-pham/pambu-pms">
                       <a
                         ariaLabel="pambu pms"
-                        className="px-10 py-3 bg-white hover:bg-primary border border-primary text-primary hover:text-white font-semibold rounded-md duration-200"
+                        className="px-10 py-3 bg-primary hover:bg-secondary text-white font-semibold rounded-md duration-200"
                       >
                         Xem chi tiết
                       </a>
@@ -133,14 +133,14 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
               </div>
             </div>
             <div className="mt-32">
-              <Title label="Tin tức nổi bật" className="bg-secondary" />
+              <Title label="Tin tức nổi bật" className="bg-primary" />
               <div className="mt-8">
                 <div className="grid grid-cols-12 gap-6 lg:gap-16">
                   <div className="col-span-12 md:col-span-6 lg:col-span-7">
                     <Link href={`/tin-tuc/${firstPost.slug}`}>
                       <a
                         ariaLabel={firstPost.title}
-                        className="block w-full h-fit shadow-lg rounded-lg"
+                        className="block w-full h-fit bg-white shadow-lg shadow-tertiary/80 rounded-3xl"
                       >
                         <div className="w-full h-[200px] lg:h-[250px] relative">
                           <Image
@@ -148,7 +148,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                             alt=""
                             layout="fill"
                             objectFit="cover"
-                            className="rounded-t-lg"
+                            className="rounded-t-3xl"
                           />
                         </div>
                         <div className="p-8 h-full ">
@@ -200,16 +200,16 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                 </div>
               </div>
             </div>
-            <div className="mt-16 md:mt-32">
+            <div className="my-16 md:mt-32">
               <div className="flex items-center justify-center">
                 <Title
                   label="Cẩm nang hướng dẫn"
-                  className="mx-auto bg-secondary"
+                  className="mx-auto bg-primary"
                 />
               </div>
-              <div className="mt-8 grid grid-cols-2 gap-8">
+              <div className="mt-8 grid grid-cols-2 gap-10">
                 <div className="col-span-2 lg:col-span-1">
-                  <div className="p-6 md:p-8 w-full h-full flex flex-col items-center justify-between bg-white border border-gray/20 rounded-lg">
+                  <div className="p-6 md:p-8 w-full h-full flex flex-col items-center justify-between bg-tertiary rounded-3xl">
                     <div className="w-full">
                       <div className="flex items-center justify-center">
                         <Image
@@ -252,7 +252,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                     </div>
                     <div className="mt-8 flex items-center justify-center">
                       <Link href="/pambu-oee">
-                        <a className="block px-6 py-3 bg-white hover:bg-primary border border-primary text-primary hover:text-white duration-200 rounded-md font-semibold">
+                        <a className="block px-10 py-3 bg-white hover:bg-primary text-primary hover:text-white border border-primary duration-200 rounded-md font-semibold">
                           Xem tất cả
                         </a>
                       </Link>
@@ -260,7 +260,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                   </div>
                 </div>
                 <div className="col-span-2 lg:col-span-1">
-                  <div className="p-6 md:p-8 w-full h-full flex flex-col items-center justify-between bg-white border border-gray/20 rounded-lg">
+                  <div className="p-6 md:p-8 w-full h-full flex flex-col items-center justify-between bg-tertiary rounded-3xl">
                     <div className="w-full">
                       <div className="flex items-center justify-center">
                         <Image
@@ -303,7 +303,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                     </div>
                     <div className="mt-8 flex items-center justify-center">
                       <Link href="/pambu-pms">
-                        <a className="block px-6 py-3 bg-white hover:bg-primary border border-primary text-primary hover:text-white duration-200 rounded-md font-semibold">
+                        <a className="block px-10 py-3 bg-white hover:bg-primary text-primary hover:text-white border border-primary duration-200 rounded-md font-semibold">
                           Xem tất cả
                         </a>
                       </Link>

@@ -137,15 +137,13 @@ const PMSDetailPost = ({ post, relatedPosts }) => {
               ></div>
             </div>
             <div className="col-span-3 md:col-span-1">
-              <div className="w-full bg-white border border-gray/20 p-6 md:p-8 rounded-lg">
+              <div className="w-full bg-white border border-gray/20 p-6 md:p-8 rounded-3xl">
                 <div className="w-fit">
                   <h2 className="text-2xl text-center text-gray font-bold">
                     Bài viết liên quan
                   </h2>
                   <div className="w-full flex">
-                    <div
-                      className={`mt-2 w-[100px] h-[3px] bg-secondary`}
-                    ></div>
+                    <div className={`mt-2 w-[100px] h-[3px] bg-primary`}></div>
                   </div>
                 </div>
                 <ul className="mt-6">

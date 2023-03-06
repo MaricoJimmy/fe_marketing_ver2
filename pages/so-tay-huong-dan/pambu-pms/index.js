@@ -50,7 +50,7 @@ const PMSGuidesPage = ({ posts }) => {
             <div className="mt-8">
               <Title
                 label="Tài liệu Pambu PMS"
-                className="bg-secondary !w-full"
+                className="bg-primary !w-full"
               />
             </div>
             <div className="mt-8">

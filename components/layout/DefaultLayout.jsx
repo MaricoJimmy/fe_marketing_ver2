@@ -5,7 +5,7 @@ import Hotline from "../common/Hotline";
 
 function DefaultLayout({ children }) {
   return (
-    <div className="bg-white w-full min-h-screen">
+    <div className="bg-quaternary w-full min-h-screen">
       <Hotline />
       <Header />
       <div>{children}</div>
