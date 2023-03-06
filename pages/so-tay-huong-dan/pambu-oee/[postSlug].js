@@ -9,7 +9,7 @@ import { getApolloClient } from "../../../libs/apollo-client";
 import { AllOEEPosts } from "../../../queries/guidesQueries";
 import {
   MoreRelatedPostsQueryInSameCategory,
-  PostDetailsQuery
+  PostDetailsQuery,
 } from "../../../queries/postQuery";
 import { getDate } from "../../../utils";
 
@@ -73,7 +73,7 @@ export async function getStaticPaths() {
 }
 
 const OEEDetailPost = ({ post, relatedPosts }) => {
-  const router = useRouter()
+  const router = useRouter();
   const breadcrumbs = useMemo(() => {
     return [
       {
@@ -92,9 +92,9 @@ const OEEDetailPost = ({ post, relatedPosts }) => {
 
   const metaTagData = {
     title: `${post.title} | pambu.org`,
-    desc: post.excerpt.replace(/<[^>]+>/g, ''),
-    img: post.featuredImage.node.mediaItemUrl
-  }
+    desc: post.excerpt.replace(/<[^>]+>/g, ""),
+    img: post.featuredImage.node.mediaItemUrl,
+  };
 
   return (
     <>
@@ -105,33 +105,50 @@ const OEEDetailPost = ({ post, relatedPosts }) => {
           <div className="mt-8 grid grid-cols-3 gap-10">
             <div className="col-span-3 md:col-span-2">
               <div className="mb-6">
-                <h1 className="font-bold text-4xl text-green-secondary mb-2">{post.title}</h1>
+                <h1 className="font-bold text-4xl text-green-secondary mb-2">
+                  {post.title}
+                </h1>
                 <div className="mt-3 flex items-center">
-                  <p className="mr-6 text-gray/80 text-sm">Ngày xuất bản: {getDate(post.date)}</p>
+                  <p className="mr-6 text-gray/80 text-sm">
+                    Ngày xuất bản: {getDate(post.date)}
+                  </p>
                   <SocialShare data={router.asPath} />
                 </div>
-                <h3 className="mt-4 text-lg text-gray font-medium text-justify" dangerouslySetInnerHTML={{ __html: post.excerpt }}></h3>
+                <h3
+                  className="mt-4 text-lg text-gray font-medium text-justify"
+                  dangerouslySetInnerHTML={{ __html: post.excerpt }}
+                ></h3>
               </div>
 
               <div className="mt-10">
-                <Image src={post.featuredImage.node.mediaItemUrl} width="1000" height="600" alt="" className="rounded" />
+                <Image
+                  src={post.featuredImage.node.mediaItemUrl}
+                  width="1000"
+                  height="600"
+                  alt=""
+                  className="rounded"
+                />
               </div>
 
-              <div className="content-wrapper mt-6" dangerouslySetInnerHTML={{ __html: post.content }}>
-              </div>
-
+              <div
+                className="content-wrapper mt-6"
+                dangerouslySetInnerHTML={{ __html: post.content }}
+              ></div>
             </div>
             <div className="col-span-3 md:col-span-1">
               <div className="w-full bg-white border border-gray/20 p-6 md:p-8 rounded-lg">
-                <div className='w-fit'>
-                  <h2 className='text-2xl text-center text-gray font-bold'>Bài viết liên quan</h2>
-                  <div className='w-full flex'>
-                    <div className={`mt-2 w-[100px] h-[3px] bg-green-primary`}>
-                    </div>
+                <div className="w-fit">
+                  <h2 className="text-2xl text-center text-gray font-bold">
+                    Bài viết liên quan
+                  </h2>
+                  <div className="w-full flex">
+                    <div
+                      className={`mt-2 w-[100px] h-[3px] bg-secondary`}
+                    ></div>
                   </div>
                 </div>
                 <ul className="mt-6">
-                  {relatedPosts.map(relatePost => (
+                  {relatedPosts.map((relatePost) => (
                     <li key={relatePost.id} className="mb-8 last:mb-0">
                       <BlogRelated data={relatePost} category="pambu-oee" />
                     </li>
@@ -146,4 +163,4 @@ const OEEDetailPost = ({ post, relatedPosts }) => {
   );
 };
 
-export default OEEDetailPost
+export default OEEDetailPost;

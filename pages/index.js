@@ -8,7 +8,7 @@ import { getApolloClient } from "../libs/apollo-client";
 import {
   NewsPostsQuery,
   OEEPostsQuery,
-  PMSPostsQuery
+  PMSPostsQuery,
 } from "../queries/homePageQueries";
 import { getDate } from "../utils";
 
@@ -48,13 +48,14 @@ export async function getStaticProps() {
 }
 
 const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
-  const firstPost = newsPosts[0]
+  const firstPost = newsPosts[0];
 
   const metaTagData = {
-    title: "Pambu - Phần Mềm Quản Lý, Giám Sát Năng Lượng Và Hiệu Suất Máy | pambu.org",
+    title:
+      "Pambu - Phần Mềm Quản Lý, Giám Sát Năng Lượng Và Hiệu Suất Máy | pambu.org",
     desc: "Chìa khóa mở ra cánh cửa số hóa dữ liệu nhà máy. Tiên phong trong công nghệ Cloud",
-    img: "/image/pambu.png"
-  }
+    img: "/image/pambu.png",
+  };
   return (
     <>
       <PageSeoHead data={metaTagData} />
@@ -62,47 +63,85 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
         <div className="w-full flex justify-center items-center">
           <div className="px-5 md:px-8 py-10 max-w-screen-xl w-full overflow-hidden md:overflow-visible">
             <div>
-              <h1 className="hidden md:block text-4xl text-gray text-center font-bold">Pambu - Phần Mềm Quản Lý, Giám Sát <br /> <span className="text-green-secondary">Năng Lượng</span> Và <span className="text-green-secondary">Hiệu Suất</span> Máy</h1>
-              <h1 className="block md:hidden text-2xl text-gray text-center font-bold">Pambu - Phần Mềm Quản Lý, Giám Sát <span className="text-green-secondary">Năng Lượng</span> Và <span className="text-green-secondary">Hiệu Suất</span> Máy</h1>
+              <h1 className="hidden md:block text-4xl text-gray text-center font-bold">
+                Pambu - Phần Mềm Quản Lý, Giám Sát <br />{" "}
+                <span className="text-secondary">Năng Lượng</span> Và{" "}
+                <span className="text-secondary">Hiệu Suất</span> Máy
+              </h1>
+              <h1 className="block md:hidden text-2xl text-gray text-center font-bold">
+                Pambu - Phần Mềm Quản Lý, Giám Sát{" "}
+                <span className="text-secondary">Năng Lượng</span> Và{" "}
+                <span className="text-secondary">Hiệu Suất</span> Máy
+              </h1>
               <h4 className="mt-6 text-xl text-gray/80 text-center font-medium">
-                Chìa khóa mở ra  cánh cửa số hóa dữ liệu nhà máy. Tiên phong trong công nghệ Cloud
+                Chìa khóa mở ra cánh cửa số hóa dữ liệu nhà máy. Tiên phong
+                trong công nghệ Cloud
               </h4>
               <div className="mt-10 md:mt-16 grid grid-cols-2 gap-6 md:gap-16">
                 <div className="col-span-2 md:col-span-1">
                   <h2 className="text-xl md:text-2xl text-gray text-center font-bold">
-                    Pambu OEE <br /><span className="text-gray/60 font-semibold">Phần mềm quản lý hiệu suất và bảo dưỡng máy</span>
+                    Pambu OEE <br />
+                    <span className="text-gray/60 font-semibold">
+                      Phần mềm quản lý hiệu suất và bảo dưỡng máy
+                    </span>
                   </h2>
                   <div className="mt-8">
-                    <Image src="/image/oee/mockup-oee.png" width='1240' height='650' alt='' />
+                    <Image
+                      src="/image/oee/mockup-oee.png"
+                      width="1240"
+                      height="650"
+                      alt=""
+                    />
                   </div>
                   <div className="mt-8 flex items-center justify-center">
-                    <Link href='/san-pham/pambu-oee'>
-                      <a ariaLabel="pambu oee" className="px-10 py-3 bg-white hover:bg-green-secondary border border-green-secondary text-green-secondary hover:text-white font-semibold rounded-md duration-200">Xem chi tiết</a>
+                    <Link href="/san-pham/pambu-oee">
+                      <a
+                        ariaLabel="pambu oee"
+                        className="px-10 py-3 bg-white hover:bg-primary border border-primary text-primary hover:text-white font-semibold rounded-md duration-200"
+                      >
+                        Xem chi tiết
+                      </a>
                     </Link>
                   </div>
                 </div>
                 <div className="col-span-2 md:col-span-1">
                   <h2 className="text-xl md:text-2xl text-gray text-center font-bold">
-                    Pambu PMS <br /> <span className="text-gray/60 font-semibold">Phần mềm giám sát năng lượng</span>
+                    Pambu PMS <br />{" "}
+                    <span className="text-gray/60 font-semibold">
+                      Phần mềm giám sát năng lượng
+                    </span>
                   </h2>
                   <div className="mt-8">
-                    <Image src="/image/pms/mockup-pms.png" width='1240' height='650' alt='' />
+                    <Image
+                      src="/image/pms/mockup-pms.png"
+                      width="1240"
+                      height="650"
+                      alt=""
+                    />
                   </div>
                   <div className="mt-8 flex items-center justify-center">
-                    <Link href='/san-pham/pambu-pms'>
-                      <a ariaLabel="pambu pms" className="px-10 py-3 bg-white hover:bg-green-secondary border border-green-secondary text-green-secondary hover:text-white font-semibold rounded-md duration-200">Xem chi tiết</a>
+                    <Link href="/san-pham/pambu-pms">
+                      <a
+                        ariaLabel="pambu pms"
+                        className="px-10 py-3 bg-white hover:bg-primary border border-primary text-primary hover:text-white font-semibold rounded-md duration-200"
+                      >
+                        Xem chi tiết
+                      </a>
                     </Link>
                   </div>
                 </div>
               </div>
             </div>
             <div className="mt-32">
-              <Title label="Tin tức nổi bật" className="bg-green-primary" />
+              <Title label="Tin tức nổi bật" className="bg-secondary" />
               <div className="mt-8">
                 <div className="grid grid-cols-12 gap-6 lg:gap-16">
                   <div className="col-span-12 md:col-span-6 lg:col-span-7">
                     <Link href={`/tin-tuc/${firstPost.slug}`}>
-                      <a ariaLabel={firstPost.title} className="block w-full h-fit shadow-lg rounded-lg">
+                      <a
+                        ariaLabel={firstPost.title}
+                        className="block w-full h-fit shadow-lg rounded-lg"
+                      >
                         <div className="w-full h-[200px] lg:h-[250px] relative">
                           <Image
                             src={firstPost.featuredImage.node.mediaItemUrl}
@@ -119,8 +158,12 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                           <span className="block mt-2 text-gray/80">
                             {getDate(firstPost.date)}
                           </span>
-                          <h5 className="mt-4 text-gray desc-blog" dangerouslySetInnerHTML={{ __html: firstPost.excerpt }}>
-                          </h5>
+                          <h5
+                            className="mt-4 text-gray desc-blog"
+                            dangerouslySetInnerHTML={{
+                              __html: firstPost.excerpt,
+                            }}
+                          ></h5>
                         </div>
                       </a>
                     </Link>
@@ -161,7 +204,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
               <div className="flex items-center justify-center">
                 <Title
                   label="Cẩm nang hướng dẫn"
-                  className="mx-auto bg-green-primary"
+                  className="mx-auto bg-secondary"
                 />
               </div>
               <div className="mt-8 grid grid-cols-2 gap-8">
@@ -209,7 +252,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                     </div>
                     <div className="mt-8 flex items-center justify-center">
                       <Link href="/pambu-oee">
-                        <a className="block px-6 py-3 bg-white hover:bg-green-secondary border border-green-secondary text-green-secondary hover:text-white duration-200 rounded-md font-semibold">
+                        <a className="block px-6 py-3 bg-white hover:bg-primary border border-primary text-primary hover:text-white duration-200 rounded-md font-semibold">
                           Xem tất cả
                         </a>
                       </Link>
@@ -260,7 +303,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                     </div>
                     <div className="mt-8 flex items-center justify-center">
                       <Link href="/pambu-pms">
-                        <a className="block px-6 py-3 bg-white hover:bg-green-secondary border border-green-secondary text-green-secondary hover:text-white duration-200 rounded-md font-semibold">
+                        <a className="block px-6 py-3 bg-white hover:bg-primary border border-primary text-primary hover:text-white duration-200 rounded-md font-semibold">
                           Xem tất cả
                         </a>
                       </Link>

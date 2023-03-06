@@ -29,18 +29,18 @@ const AllNewsPage = ({ posts }) => {
   const breadcrumbs = [
     {
       label: "Trang chủ",
-      slug: "/"
+      slug: "/",
     },
     {
       label: "Tin tức",
-    }
-  ]
+    },
+  ];
 
   const metaTagData = {
     title: "Tin tức | pambu.org",
     desc: "Khám phá các tin tức mới nhất của Pambu",
-    img: "/image/pambu.png"
-  }
+    img: "/image/pambu.png",
+  };
 
   return (
     <>
@@ -50,10 +50,7 @@ const AllNewsPage = ({ posts }) => {
           <div className="px-5 md:px-8 py-16 max-w-screen-xl w-full">
             <Breadcrumb data={breadcrumbs} />
             <div className="mt-8">
-              <Title
-                label="Tin tức nổi bật"
-                className="bg-green-primary !w-full"
-              />
+              <Title label="Tin tức nổi bật" className="bg-secondary !w-full" />
             </div>
             <div className="mt-8">
               <ul className="grid grid-cols-12 gap-6 md:gap-8">

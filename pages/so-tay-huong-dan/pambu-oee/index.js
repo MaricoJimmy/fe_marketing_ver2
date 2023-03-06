@@ -38,8 +38,8 @@ const OEEGuidesPage = ({ posts }) => {
   const metaTagData = {
     title: "Tài liệu Pambu OEE | pambu.org",
     desc: "Giải Pháp Toàn Diện Về Quản Lý Hiệu Suất Và Bảo Dưỡng Máy",
-    img: "/image/pambu.png"
-  }
+    img: "/image/pambu.png",
+  };
   return (
     <>
       <PageSeoHead data={metaTagData} />
@@ -50,7 +50,7 @@ const OEEGuidesPage = ({ posts }) => {
             <div className="mt-8">
               <Title
                 label="Tài liệu Pambu OEE"
-                className="bg-green-primary !w-full"
+                className="bg-secondary !w-full"
               />
             </div>
             <div className="mt-8">

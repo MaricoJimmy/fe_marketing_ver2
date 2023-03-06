@@ -38,8 +38,8 @@ const PMSGuidesPage = ({ posts }) => {
   const metaTagData = {
     title: "Tài liệu Pambu PMS | pambu.org",
     desc: "Giám Sát Và Quản Lý Năng Lượng",
-    img: "/image/pambu.png"
-  }
+    img: "/image/pambu.png",
+  };
   return (
     <>
       <PageSeoHead data={metaTagData} />
@@ -50,7 +50,7 @@ const PMSGuidesPage = ({ posts }) => {
             <div className="mt-8">
               <Title
                 label="Tài liệu Pambu PMS"
-                className="bg-green-primary !w-full"
+                className="bg-secondary !w-full"
               />
             </div>
             <div className="mt-8">
