@@ -19,7 +19,7 @@ function FooterDesktop() {
   return (
     <div className="w-full border-t border-gray/20">
       <div className="w-full flex justify-center items-center">
-        <div className="px-5 py-3 md:px-8 md:py-10  max-w-screen-xl w-full">
+        <div className="px-5 py-3 md:px-8 md:py-16  max-w-screen-xl w-full">
           <div className="grid grid-cols-4 gap-6">
             <div className="col-span-1 flex flex-col justify-between">
               <Link href="/">
