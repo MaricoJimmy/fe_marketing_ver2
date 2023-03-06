@@ -78,65 +78,71 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                 trong công nghệ Cloud
               </h4>
               <div className="mt-10 md:mt-16 grid grid-cols-2 gap-10 md:gap-16">
-                <div className="col-span-2 md:col-span-1">
+                <div className="col-span-2 md:col-span-1 flex flex-col justify-between">
                   <h2 className="text-xl md:text-2xl text-gray text-center font-bold">
                     Pambu OEE <br />
                     <span className="text-gray/60 font-semibold">
                       Phần mềm quản lý hiệu suất và bảo dưỡng máy
                     </span>
                   </h2>
-                  <div className="mt-8">
-                    <Image
-                      src="/image/oee/mockup-oee.png"
-                      width="1240"
-                      height="650"
-                      alt=""
-                    />
-                  </div>
-                  <div className="mt-8 flex items-center justify-center">
-                    <Link href="/san-pham/pambu-oee">
-                      <a
-                        ariaLabel="pambu oee"
-                        className="px-10 py-3 bg-primary hover:bg-secondary text-white font-semibold rounded-md duration-200"
-                      >
-                        Xem chi tiết
-                      </a>
-                    </Link>
+                  <div>
+                    <div className="mt-8">
+                      <Image
+                        src="/image/oee/mockup-oee.png"
+                        width="1240"
+                        height="650"
+                        alt=""
+                      />
+                    </div>
+                    <div className="mt-8 flex items-center justify-center">
+                      <Link href="/san-pham/pambu-oee">
+                        <a
+                          ariaLabel="pambu oee"
+                          className="px-10 py-3 bg-primary hover:bg-secondary text-white font-semibold rounded-md duration-200"
+                        >
+                          Xem chi tiết
+                        </a>
+                      </Link>
+                    </div>
                   </div>
                 </div>
-                <div className="col-span-2 md:col-span-1">
+                <div className="col-span-2 md:col-span-1 flex flex-col justify-between">
                   <h2 className="text-xl md:text-2xl text-gray text-center font-bold">
                     Pambu PMS <br />{" "}
                     <span className="text-gray/60 font-semibold">
                       Phần mềm giám sát năng lượng
                     </span>
                   </h2>
-                  <div className="mt-8">
-                    <Image
-                      src="/image/pms/mockup-pms.png"
-                      width="1240"
-                      height="650"
-                      alt=""
-                    />
-                  </div>
-                  <div className="mt-8 flex items-center justify-center">
-                    <Link href="/san-pham/pambu-pms">
-                      <a
-                        ariaLabel="pambu pms"
-                        className="px-10 py-3 bg-primary hover:bg-secondary text-white font-semibold rounded-md duration-200"
-                      >
-                        Xem chi tiết
-                      </a>
-                    </Link>
+                  <div>
+                    <div className="mt-8">
+                      <Image
+                        src="/image/pms/mockup-pms.png"
+                        width="1240"
+                        height="650"
+                        alt=""
+                      />
+                    </div>
+                    <div className="mt-8 flex items-center justify-center">
+                      <Link href="/san-pham/pambu-pms">
+                        <a
+                          ariaLabel="pambu pms"
+                          className="px-10 py-3 bg-primary hover:bg-secondary text-white font-semibold rounded-md duration-200"
+                        >
+                          Xem chi tiết
+                        </a>
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
             <div className="mt-32">
-              <Title label="Tin tức nổi bật" className="bg-primary" />
-              <div className="mt-8">
-                <div className="grid grid-cols-12 gap-6 lg:gap-16">
-                  <div className="col-span-12 md:col-span-6 lg:col-span-7">
+              <div className="flex items-center justify-center">
+                <Title label="Tin tức nổi bật" className="bg-primary mx-auto" />
+              </div>
+              <div className="mt-8 p-6 md:p-10 bg-[#EFF2FB] rounded-3xl">
+                <div className="grid grid-cols-12 gap-6 md:gap-10 lg:gap-16">
+                  <div className="col-span-12 tall-md:col-span-12 lg:col-span-7">
                     <Link href={`/tin-tuc/${firstPost.slug}`}>
                       <a
                         ariaLabel={firstPost.title}
@@ -152,7 +158,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                           />
                         </div>
                         <div className="p-8 h-full ">
-                          <h3 className="text-xl text-gray font-semibold">
+                          <h3 className="text-lg md:text-xl text-gray font-semibold">
                             {firstPost.title}
                           </h3>
                           <span className="block mt-2 text-gray/80">
@@ -168,10 +174,10 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                       </a>
                     </Link>
                   </div>
-                  <div className="col-span-12 md:col-span-6 lg:col-span-5">
+                  <div className="col-span-12 tall-md:col-span-12 lg:col-span-5">
                     <ul>
                       {newsPosts.slice(1).map((post) => (
-                        <li key={post.id} className="mb-8">
+                        <li key={post.id} className="mb-8 last:mb-0">
                           <Link href={`/tin-tuc/${post.slug}`}>
                             <a className="flex items-start">
                               <div className="relative border border-gray/20 min-w-[150px] w-[150px] h-[80px] md:h-[65px] lg:h-[80px] rounded-lg">

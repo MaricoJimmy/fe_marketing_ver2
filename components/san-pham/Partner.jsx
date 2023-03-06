@@ -8,8 +8,8 @@ function Partner() {
       <div className="flex items-center justify-center">
         <Title label="Đối tác" className="mx-auto bg-primary" />
       </div>
-      <div className="hidden md:block">
-        <div className="mt-16 flex flex-wrap items-center justify-center gap-10 lg:gap-24">
+      <div className="hidden md:block mt-16 px-10 py-16 bg-[#EFF2FB] rounded-3xl">
+        <div className="flex flex-wrap items-center justify-center gap-10 lg:gap-24">
           <div className="w-fit h-fit hover:-translate-y-2 duration-300">
             <Image
               src="/image/partner/partner-1.png"
@@ -54,7 +54,7 @@ function Partner() {
           </div>
         </div>
       </div>
-      <div className="mt-16 grid md:hidden grid-cols-12 gap-6 md:gap-10">
+      <div className="mt-10 px-4 py-16 bg-[#EFF2FB] grid md:hidden grid-cols-12 gap-6 md:gap-10 rounded-3xl">
         <div className="col-span-6 md:col-span-4">
           <div className="flex justify-center w-full h-fit hover:-translate-y-2 duration-300">
             <Image
