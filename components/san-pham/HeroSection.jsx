@@ -13,7 +13,7 @@ function HeroSection({ data, isPMSPage }) {
         data.color === "blue" ? "bg-primary" : "bg-orange-primary"
       }`}
     >
-      <div className="relative z-30 grid grid-cols-12 gap-6 px-8 py-20 max-w-screen-xl w-full">
+      <div className="relative z-30 grid grid-cols-12 gap-6 px-8 pt-20 pb-32 max-w-screen-xl w-full">
         <div className="col-span-12 lg:col-span-7 order-last lg:order-first flex items-center justify-center">
           <div className="w-full">
             <h1 className="text-2xl md:text-5xl text-white md:!leading-tight font-bold">
@@ -91,6 +91,7 @@ function HeroSection({ data, isPMSPage }) {
           </div>
         </>
       )}
+      <div className="absolute bottom-0 z-10 w-full h-[50px] bg-quaternary rounded-t-[64px]"></div>
     </div>
   );
 }

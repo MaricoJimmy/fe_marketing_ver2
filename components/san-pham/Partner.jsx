@@ -4,7 +4,7 @@ import Title from "../common/Title";
 
 function Partner() {
   return (
-    <div className="mt-16 md:mt-32">
+    <div className="mt-8 md:mt-16">
       <div className="flex items-center justify-center">
         <Title label="Đối tác" className="mx-auto bg-primary" />
       </div>

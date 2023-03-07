@@ -6,7 +6,10 @@ import Title from "../common/Title";
 function VersionApp({ data, img, className }) {
   return (
     <div className="mt-16 md:mt-32">
-      <div id="wave-container-top" className={`${className} w-full h-[50px]`} />
+      <div
+        id="wave-container-top"
+        className={`${className} -mb-1 w-full h-[50px]`}
+      />
       <div className={`w-full flex items-center justify-center ${className}`}>
         <div className="px-5 md:px-8 py-8 max-w-screen-xl w-full">
           <div className="w-full flex items-center justify-end">
@@ -97,7 +100,10 @@ function VersionApp({ data, img, className }) {
           </div>
         </div>
       </div>
-      <div id="wave-container-bot" className={`${className} w-full h-[30px]`} />
+      <div
+        id="wave-container-bot"
+        className={`${className} -mt-1 w-full h-[30px]`}
+      />
     </div>
   );
 }

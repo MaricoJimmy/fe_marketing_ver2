@@ -94,12 +94,16 @@ const BookDemoPage = () => {
                   </p>
                   <ul className="mt-6 ml-6 list-disc">
                     <li>
-                      Đối với phần mềm Pambu OEE: khách hàng sẽ được trải nghiệm
-                      bản basic trên 1 máy sản xuất trong thời gian 2 tháng.
+                      Đối với phần mềm{" "}
+                      <span className="text-primary">Pambu OEE</span>: khách
+                      hàng sẽ được trải nghiệm bản basic trên 1 máy sản xuất
+                      trong thời gian 2 tháng.
                     </li>
                     <li>
-                      Đối với phần mềm Pambu PMS: khách hàng sẽ được trải nghiệm
-                      bản basic trên 1 phụ tải điện trong thời gian 2 tháng.
+                      Đối với phần mềm{" "}
+                      <span className="text-primary">Pambu PMS</span>: khách
+                      hàng sẽ được trải nghiệm bản basic trên 1 phụ tải điện
+                      trong thời gian 2 tháng.
                     </li>
                     <li>
                       Toàn bộ thiết bị phần cứng Pambu cung cấp và lắp đặt miễn

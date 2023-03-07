@@ -42,10 +42,7 @@ const PMSLandingPage = () => {
             <HighLightFeature data={PMSDataPage.features} />
           </div>
         </div>
-        <NumberStatus
-          data={PMSDataPage.status}
-          className="bg-orange-primary/80"
-        />
+        <NumberStatus data={PMSDataPage.status} className="bg-[#EC905D]" />
         <div className="w-full flex justify-center items-center">
           <div className="px-5 py-3 md:px-8 md:py-6 max-w-screen-xl w-full">
             <Technologies />
@@ -54,7 +51,7 @@ const PMSLandingPage = () => {
         <VersionApp
           data={PMSDataPage.versions.data}
           img={PMSDataPage.versions.img}
-          className="bg-orange-primary/20"
+          className="bg-[#F6E0D6]"
         />
         <div className="w-full flex justify-center items-center">
           <div className="px-5 py-3 md:px-8 md:py-6 max-w-screen-xl w-full">

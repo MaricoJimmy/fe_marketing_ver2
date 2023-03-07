@@ -6,7 +6,7 @@ function NumberStatus({ data, className = "" }) {
     <div className="mt-16 md:mt-32">
       <div
         id="wave-container-top"
-        className={`${className} w-full h-[50px]`}
+        className={`${className} -mb-1 w-full h-[50px]`}
       />
       <div className={`w-full h-full bg-gradient-to-r ${className}`}>
         <div className="w-full h-fit flex justify-center items-center">
@@ -31,7 +31,10 @@ function NumberStatus({ data, className = "" }) {
           </div>
         </div>
       </div>
-      <div id="wave-container-bot" className={`${className} w-full h-[30px]`} />
+      <div
+        id="wave-container-bot"
+        className={`${className} -mt-1 w-full h-[30px]`}
+      />
     </div>
   );
 }
