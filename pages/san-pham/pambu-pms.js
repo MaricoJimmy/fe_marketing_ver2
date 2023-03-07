@@ -35,24 +35,29 @@ const PMSLandingPage = () => {
     <>
       <PageSeoHead data={metaTagData} />
       <div className="">
+        <HeroSection data={PMSDataPage.heroSection} isPMSPage />
         <div className="w-full flex justify-center items-center">
           <div className="px-5 py-3 md:px-8 md:py-6 max-w-screen-xl w-full overflow-hidden md:overflow-visible">
-            <HeroSection data={PMSDataPage.heroSection} isPMSPage />
             <Partner />
             <HighLightFeature data={PMSDataPage.features} />
           </div>
         </div>
         <NumberStatus
           data={PMSDataPage.status}
-          className="from-orange-primary/20 to-yellow-primary/20"
+          className="bg-orange-primary/80"
         />
         <div className="w-full flex justify-center items-center">
           <div className="px-5 py-3 md:px-8 md:py-6 max-w-screen-xl w-full">
             <Technologies />
-            <VersionApp
-              data={PMSDataPage.versions.data}
-              img={PMSDataPage.versions.img}
-            />
+          </div>
+        </div>
+        <VersionApp
+          data={PMSDataPage.versions.data}
+          img={PMSDataPage.versions.img}
+          className="bg-orange-primary/20"
+        />
+        <div className="w-full flex justify-center items-center">
+          <div className="px-5 py-3 md:px-8 md:py-6 max-w-screen-xl w-full">
             <div className="mt-16 md:mt-32">
               <Title label="Hỏi và đáp" className="mr-auto bg-yellow-primary" />
               <div className="mt-8 grid grid-cols-12 gap-6">

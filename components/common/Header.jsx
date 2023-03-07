@@ -22,14 +22,14 @@ function Header({ isProductPage, isPMSPage }) {
 
   return (
     <>
-      <div className="hidden w-full lg:block">
+      <div className="hidden w-full lg:block relative z-40">
         <HeaderDesktop
           stickyHeader={stickyHeader}
           isProductPage={isProductPage}
           isPMSPage={isPMSPage}
         />
       </div>
-      <div className="lg:hidden w-full block">
+      <div className="lg:hidden w-full block relative z-40">
         <HeaderMobile
           stickyHeader={stickyHeader}
           isProductPage={isProductPage}
@@ -44,7 +44,7 @@ function HeaderDesktop({ stickyHeader, isProductPage, isPMSPage }) {
   return (
     <div
       className={`${
-        (stickyHeader === "is-sticky" && "fixed top-0 z-40 drop-shadow-md") ||
+        (stickyHeader === "is-sticky" && "fixed top-0 drop-shadow-md") ||
         "relative"
       } flex justify-center items-center w-full bg-quaternary`}
     >
@@ -199,7 +199,7 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
   return (
     <div
       className={`${
-        (stickyHeader === "is-sticky" && "fixed top-0 z-40 drop-shadow-md") ||
+        (stickyHeader === "is-sticky" && "fixed top-0 drop-shadow-md") ||
         "relative"
       } py-3 px-5 w-full bg-quaternary`}
     >

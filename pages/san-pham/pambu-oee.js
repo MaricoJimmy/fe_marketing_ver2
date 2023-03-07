@@ -36,24 +36,26 @@ const OEELandingPage = () => {
     <>
       <PageSeoHead data={metaTagData} />
       <div className="">
+        <HeroSection data={OEEDataPage.heroSection} />
         <div className="w-full flex justify-center items-center">
           <div className="px-5 py-3 md:px-8 md:py-6 max-w-screen-xl w-full overflow-hidden md:overflow-visible">
-            <HeroSection data={OEEDataPage.heroSection} />
             <Partner />
             <HighLightFeature data={OEEDataPage.features} />
           </div>
         </div>
-        <NumberStatus
-          data={OEEDataPage.status}
-          className="from-primary/40 to-tertiary"
-        />
+        <NumberStatus data={OEEDataPage.status} className="bg-[#7BDEFF]" />
         <div className="w-full flex justify-center items-center">
           <div className="px-5 py-3 md:px-8 md:py-6 max-w-screen-xl w-full">
             <Technologies />
-            <VersionApp
-              data={OEEDataPage.versions.data}
-              img={OEEDataPage.versions.img}
-            />
+          </div>
+        </div>
+        <VersionApp
+          data={OEEDataPage.versions.data}
+          img={OEEDataPage.versions.img}
+          className="bg-tertiary"
+        />
+        <div className="w-full flex justify-center items-center">
+          <div className="px-5 py-3 md:px-8 md:py-6 max-w-screen-xl w-full">
             <div className="mt-16 md:mt-32">
               <Title label="Hỏi và đáp" className="mr-auto bg-yellow-primary" />
               <div className="mt-8 grid grid-cols-12 gap-6">

@@ -8,58 +8,88 @@ function HeroSection({ data, isPMSPage }) {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <div className="grid grid-cols-12 gap-6">
-      <div className="col-span-12 lg:col-span-7 order-last lg:order-first flex items-center justify-center">
-        <div className="w-full">
-          <h1 className="text-2xl md:text-4xl text-gray font-bold">
-            {data.heading}
-          </h1>
-          <p className="mt-6 text-gray/80 text-justify font-medium leading-8">
-            {data.excerpt}
-          </p>
-          <div className="flex items-center justify-center lg:justify-start">
-            <Button
-              onClick={() => setShowModal(true)}
-              className={`mt-10 px-6 py-3 text-white font-semibold duration-200 ${
-                data.color === "green"
-                  ? "bg-primary hover:bg-secondary"
-                  : "bg-orange-primary hover:bg-orange-secondary"
-              }`}
-            >
-              Đặt lịch demo
-            </Button>
+    <div
+      className={`relative w-full flex items-center justify-center overflow-hidden ${
+        data.color === "blue" ? "bg-primary" : "bg-orange-primary"
+      }`}
+    >
+      <div className="relative z-30 grid grid-cols-12 gap-6 px-8 py-20 max-w-screen-xl w-full">
+        <div className="col-span-12 lg:col-span-7 order-last lg:order-first flex items-center justify-center">
+          <div className="w-full">
+            <h1 className="text-2xl md:text-5xl text-white md:!leading-tight font-bold">
+              {data.heading}
+            </h1>
+            <p className="mt-6 text-lg text-white text-justify font-medium leading-8">
+              {data.excerpt}
+            </p>
+            <div className="flex items-center justify-center lg:justify-start">
+              <Button
+                onClick={() => setShowModal(true)}
+                className={`mt-10 px-6 py-3 bg-white text-gray hover:text-white font-semibold duration-200 ${
+                  data.color === "blue"
+                    ? "hover:bg-secondary"
+                    : "hover:bg-orange-secondary"
+                }`}
+              >
+                Đặt lịch demo
+              </Button>
+            </div>
           </div>
         </div>
-      </div>
-      <div className="col-span-12 lg:col-span-5 h-[250px] md:h-[450px]">
-        <div className="relative w-full h-full">
-          <div className="hidden md:block relative w-full h-full blur-3xl">
-            <div
-              className={`absolute top-16 left-1/2 md:left-2/3 lg:left-1/2 w-[200px] h-[200px] rounded-full ${
-                data.color === "green" ? "bg-primary/60" : "bg-orange-primary"
-              }`}
-            ></div>
-            <div
-              className={`absolute top-36 left-24 md:left-36 lg:left-24 w-[250px] h-[250px] rounded-full ${
-                data.color === "green" ? "bg-primary/60" : "bg-orange-primary"
-              }`}
-            ></div>
-          </div>
-          <div className="hidden md:block absolute top-0 left-0 w-fit">
-            <Image src="/image/line.png" width="500" height="500" alt="" />
-          </div>
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex items-center justify-center">
-            <Image src={data.img} width="1240" height="650" alt="" />
+        <div className="col-span-12 lg:col-span-5 h-[250px] md:h-[450px]">
+          <div className="relative w-full h-full">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex items-center justify-center">
+              <Image src={data.img} width="1240" height="650" alt="" />
+            </div>
           </div>
         </div>
+        {showModal && (
+          <Modal onClose={() => setShowModal(false)} title="">
+            <InfoClientForm
+              isPMSPage={isPMSPage}
+              productType={(isPMSPage && "pms") || "oee"}
+            />
+          </Modal>
+        )}
       </div>
-      {showModal && (
-        <Modal onClose={() => setShowModal(false)} title="">
-          <InfoClientForm
-            isPMSPage={isPMSPage}
-            productType={(isPMSPage && "pms") || "oee"}
-          />
-        </Modal>
+      {(data.color === "blue" && (
+        <>
+          <div className="absolute z-10 -right-20 -bottom-16 lg:-bottom-3 -rotate-45 opacity-80">
+            <Image
+              src="/image/hero/hero-2.png"
+              width="280"
+              height="280"
+              alt=""
+            />
+          </div>
+          <div className="absolute z-10 -left-16 -top-3 rotate-90 opacity-70">
+            <Image
+              src="/image/hero/hero-1.png"
+              width="300"
+              height="300"
+              alt=""
+            />
+          </div>
+        </>
+      )) || (
+        <>
+          <div className="absolute z-10 -right-20 -bottom-16 lg:-bottom-10 opacity-80">
+            <Image
+              src="/image/hero/hero-3.png"
+              width="300"
+              height="300"
+              alt=""
+            />
+          </div>
+          <div className="absolute z-10 -left-16 -top-3 opacity-70">
+            <Image
+              src="/image/hero/hero-4.png"
+              width="250"
+              height="250"
+              alt=""
+            />
+          </div>
+        </>
       )}
     </div>
   );
