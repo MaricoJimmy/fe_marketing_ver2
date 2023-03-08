@@ -1,12 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
+import Modal from "../../components/common/Modal";
 import PageSeoHead from "../../components/common/PageSeoHead";
 import Title from "../../components/common/Title";
 import OEELayout from "../../components/layout/OEELayout";
 import FormDemo from "../../components/san-pham/FormDemo";
 import HeroSection from "../../components/san-pham/HeroSection";
 import HighLightFeature from "../../components/san-pham/HighLightFeature";
+import InfoClientForm from "../../components/san-pham/InfoClientForm";
 import NumberStatus from "../../components/san-pham/NumberStatus";
 import Partner from "../../components/san-pham/Partner";
 import Technologies from "../../components/san-pham/Technologies";
@@ -16,6 +18,8 @@ import { OEEDataPage } from "../../data/oee";
 const OEELandingPage = () => {
   const [idQuestion, setIdQuestion] = useState(1);
   const [openQuestion, setOpenQuestion] = useState(false);
+
+  const [showModal, setShowModal] = useState(false);
 
   const handleClickQuestion = (id) => {
     setIdQuestion(id);
@@ -36,7 +40,15 @@ const OEELandingPage = () => {
     <>
       <PageSeoHead data={metaTagData} />
       <div className="">
-        <HeroSection data={OEEDataPage.heroSection} />
+        <HeroSection
+          data={OEEDataPage.heroSection}
+          setShowModal={setShowModal}
+        />
+        {showModal && (
+          <Modal onClose={() => setShowModal(false)} title="">
+            <InfoClientForm isPMSPage={false} productType="oee" />
+          </Modal>
+        )}
         <div className="w-full flex justify-center items-center">
           <div className="px-5 py-3 md:px-8 md:py-6 max-w-screen-xl w-full overflow-hidden md:overflow-visible">
             <Partner />

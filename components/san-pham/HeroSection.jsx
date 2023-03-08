@@ -1,12 +1,8 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 import Button from "../common/Button";
-import Modal from "../common/Modal";
-import InfoClientForm from "./InfoClientForm";
 
-function HeroSection({ data, isPMSPage }) {
-  const [showModal, setShowModal] = useState(false);
-
+function HeroSection({ data, setShowModal }) {
   return (
     <div
       className={`relative w-full flex items-center justify-center overflow-hidden ${
@@ -43,14 +39,6 @@ function HeroSection({ data, isPMSPage }) {
             </div>
           </div>
         </div>
-        {showModal && (
-          <Modal onClose={() => setShowModal(false)} title="">
-            <InfoClientForm
-              isPMSPage={isPMSPage}
-              productType={(isPMSPage && "pms") || "oee"}
-            />
-          </Modal>
-        )}
       </div>
       {(data.color === "blue" && (
         <>
