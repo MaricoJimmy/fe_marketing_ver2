@@ -179,17 +179,17 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                       {newsPosts.slice(1).map((post) => (
                         <li key={post.id} className="mb-8 last:mb-0">
                           <Link href={`/tin-tuc/${post.slug}`}>
-                            <a className="flex items-start">
-                              <div className="relative border border-gray/20 min-w-[150px] w-[150px] h-[80px] md:h-[65px] lg:h-[80px] rounded-lg">
+                            <a className="flex md:flex-row flex-col items-start">
+                              <div className="relative border border-gray/20 md:min-w-[150px] md:w-[150px] w-full h-[150px] md:h-[65px] lg:h-[80px] rounded-2xl md:rounded-lg">
                                 <Image
                                   src={post.featuredImage.node.mediaItemUrl}
                                   alt=""
                                   layout="fill"
                                   objectFit="cover"
-                                  className="rounded-md"
+                                  className="rounded-2xl md:rounded-lg"
                                 />
                               </div>
-                              <div className="ml-6">
+                              <div className="mt-4 md:mt-0 md:ml-6">
                                 <h4 className="text-lg tex-gray font-semibold">
                                   {post.title}
                                 </h4>
@@ -228,21 +228,21 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                       <h3 className="mt-6 text-2xl text-gray text-center font-semibold">
                         Tài liệu Pambu OEE
                       </h3>
-                      <ul className="mt-8">
+                      <ul className="mt-10">
                         {oeePosts.map((post) => (
-                          <li key={post.id} className="mb-6 last:mb-0">
+                          <li key={post.id} className="mb-8 last:mb-0">
                             <Link href={`/pambu-oee/${post.slug}`}>
-                              <a className="flex items-start">
-                                <div className="min-w-[100px] w-[100px] h-[50px] md:min-w-[150px] md:w-[150px] md:h-[80px] lg:min-w-[100px] lg:w-[100px] lg:h-[50px] relative">
+                              <a className="flex md:flex-row flex-col items-start">
+                                <div className="w-full h-[150px] md:min-w-[150px] md:w-[150px] md:h-[80px] lg:min-w-[100px] lg:w-[100px] lg:h-[50px] relative">
                                   <Image
                                     src={post.featuredImage.node.mediaItemUrl}
                                     alt=""
                                     layout="fill"
                                     objectFit="cover"
-                                    className="rounded-md"
+                                    className="rounded-2xl md:rounded-lg"
                                   />
                                 </div>
-                                <div className="ml-4">
+                                <div className="mt-4 md:mt-0 md:ml-4">
                                   <h5 className="text-lg text-gray font-semibold">
                                     {post.title}
                                   </h5>
@@ -279,21 +279,21 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                       <h3 className="mt-6 text-2xl text-gray text-center font-semibold">
                         Tài liệu Pambu PMS
                       </h3>
-                      <ul className="mt-8">
+                      <ul className="mt-10">
                         {pmsPosts.map((post) => (
-                          <li key={post.id} className="mb-6 last:mb-0">
+                          <li key={post.id} className="mb-8 last:mb-0">
                             <Link href={`/pambu-pms/${post.slug}`}>
-                              <a className="flex items-start">
-                                <div className="min-w-[100px] w-[100px] h-[50px] md:w-[150px] md:h-[80px] lg:w-[100px] lg:h-[50px] relative">
+                              <a className="flex md:flex-row flex-col items-start">
+                                <div className="w-full h-[150px] md:w-[150px] md:h-[80px] lg:w-[100px] lg:h-[50px] relative">
                                   <Image
                                     src={post.featuredImage.node.mediaItemUrl}
                                     alt=""
                                     layout="fill"
                                     objectFit="cover"
-                                    className="rounded-md"
+                                    className="rounded-2xl md:rounded-md"
                                   />
                                 </div>
-                                <div className="ml-4">
+                                <div className="mt-4 md:mt-0 md:ml-4">
                                   <h5 className="text-lg text-gray font-semibold">
                                     {post.title}
                                   </h5>
