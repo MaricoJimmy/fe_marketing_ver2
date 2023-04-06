@@ -140,7 +140,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
               <div className="flex items-center justify-center">
                 <Title label="Tin tức nổi bật" className="bg-primary mx-auto" />
               </div>
-              <div className="mt-8 p-6 md:p-10 bg-[#EFF2FB] rounded-3xl">
+              <div className="mt-8">
                 <div className="grid grid-cols-12 gap-6 md:gap-10 lg:gap-16">
                   <div className="col-span-12 tall-md:col-span-12 lg:col-span-7">
                     <Link href={`/tin-tuc/${firstPost.slug}`}>
@@ -174,7 +174,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                       </a>
                     </Link>
                   </div>
-                  <div className="col-span-12 tall-md:col-span-12 lg:col-span-5">
+                  <div className="mt-8 md:mt-0 col-span-12 tall-md:col-span-12 lg:col-span-5">
                     <ul>
                       {newsPosts.slice(1).map((post) => (
                         <li key={post.id} className="mb-8 last:mb-0">
@@ -215,7 +215,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
               </div>
               <div className="mt-8 grid grid-cols-2 gap-10">
                 <div className="col-span-2 lg:col-span-1">
-                  <div className="p-6 md:p-8 w-full h-full flex flex-col items-center justify-between bg-tertiary rounded-3xl">
+                  <div className="p-6 md:p-8 w-full h-full flex flex-col items-center justify-between bg-white border border-tertiary rounded-3xl">
                     <div className="w-full">
                       <div className="flex items-center justify-center">
                         <Image
@@ -266,7 +266,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                   </div>
                 </div>
                 <div className="col-span-2 lg:col-span-1">
-                  <div className="p-6 md:p-8 w-full h-full flex flex-col items-center justify-between bg-tertiary rounded-3xl">
+                  <div className="p-6 md:p-8 w-full h-full flex flex-col items-center justify-between bg-white border border-tertiary rounded-3xl">
                     <div className="w-full">
                       <div className="flex items-center justify-center">
                         <Image
@@ -284,7 +284,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                           <li key={post.id} className="mb-8 last:mb-0">
                             <Link href={`/pambu-pms/${post.slug}`}>
                               <a className="flex md:flex-row flex-col items-start">
-                                <div className="w-full h-[150px] md:w-[150px] md:h-[80px] lg:w-[100px] lg:h-[50px] relative">
+                                <div className="w-full h-[150px] md:w-[150px] md:h-[80px] lg:min-w-[100px] lg:w-[100px] lg:h-[50px] relative">
                                   <Image
                                     src={post.featuredImage.node.mediaItemUrl}
                                     alt=""
