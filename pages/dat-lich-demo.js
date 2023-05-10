@@ -128,8 +128,8 @@ const BookDemoPage = () => {
                   <p className="mt-6">
                     Còn chần chừ gì nữa mà không liên hệ ngay với đội ngũ Pambu
                     tại hotline{" "}
-                    <a href="tel:0387430957" className="font-bold">
-                      0387 430 957
+                    <a href="tel:0974074862" className="font-bold">
+                      0974 074 862
                     </a>{" "}
                     hoặc điền vào form dưới đây để sử dụng sản phẩm. Pambu rất
                     vui lòng được đồng hành!

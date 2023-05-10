@@ -281,10 +281,10 @@ const OEELandingPage = () => {
                         hoặc gọi điện trực tiếp để được đội ngũ chuyên gia tư
                         vấn qua số hotline:{" "}
                         <a
-                          href="tel:0387430957"
+                          href="tel:0974074862"
                           className="text-secondary underline"
                         >
-                          0387 430 957
+                          0974 074 862
                         </a>
                       </span>
                     </div>
