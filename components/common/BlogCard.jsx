@@ -3,10 +3,16 @@ import Link from "next/link";
 import React from "react";
 import { getDate } from "../../utils";
 
-function BlogCard({ data, category }) {
+function BlogCard({ data, category, locale }) {
   return (
     <div className="w-full h-full">
-      <Link href={`/${category}/${data.slug}`}>
+      <Link
+        href={{
+          pathname: `/${category}/[slug]`,
+          query: { slug: data.slug },
+        }}
+        locale={locale}
+      >
         <a className="block h-full bg-white shadow-md shadow-tertiary/80 rounded-3xl">
           <div className="w-full h-[240px] relative border-b border-gray/20">
             <Image
@@ -19,7 +25,9 @@ function BlogCard({ data, category }) {
           </div>
           <div className="p-6 w-full">
             <h4 className="text-xl text-gray font-semibold">{data.title}</h4>
-            <h6 className="mt-2 text-sm text-gray/80">{getDate(data.date)}</h6>
+            <h6 className="mt-2 text-sm text-gray/80">
+              {getDate(data.date, locale)}
+            </h6>
             <h5
               className="mt-4 text-lg text-gray desc-blog"
               dangerouslySetInnerHTML={{ __html: data.excerpt }}

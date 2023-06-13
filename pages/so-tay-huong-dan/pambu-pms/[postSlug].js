@@ -13,6 +13,7 @@ import {
   PostDetailsQuery,
 } from "../../../queries/postQuery";
 import { getDate } from "../../../utils";
+import { useTranslations } from "next-intl";
 
 export async function getStaticProps({ params }) {
   const client = getApolloClient();
@@ -46,7 +47,7 @@ export async function getStaticProps({ params }) {
   };
 }
 
-export async function getStaticPaths() {
+export async function getStaticPaths({ locales }) {
   let paths = [];
 
   const client = getApolloClient();
@@ -59,12 +60,13 @@ export async function getStaticPaths() {
     query: AllPMSPosts,
   });
 
-  items.forEach((post) => {
-    paths.push({
+  paths = items.flatMap((post) => {
+    return locales.map((locale) => ({
       params: {
         postSlug: post.slug,
       },
-    });
+      locale,
+    }));
   });
 
   return {
@@ -75,10 +77,11 @@ export async function getStaticPaths() {
 
 const PMSDetailPost = ({ post, relatedPosts }) => {
   const router = useRouter();
+  const t = useTranslations("Common");
   const breadcrumbs = useMemo(() => {
     return [
       {
-        label: "Trang chủ",
+        label: router.locale === "vi" ? "Trang chủ" : "Home",
         slug: "/",
       },
       {
@@ -111,7 +114,7 @@ const PMSDetailPost = ({ post, relatedPosts }) => {
                 </h1>
                 <div className="mt-3 flex items-center">
                   <p className="mr-6 text-gray/80 text-sm">
-                    Ngày xuất bản: {getDate(post.date)}
+                    {t("date")}: {getDate(post.date)}
                   </p>
                   <SocialShare data={router.asPath} />
                 </div>
@@ -136,11 +139,11 @@ const PMSDetailPost = ({ post, relatedPosts }) => {
                 dangerouslySetInnerHTML={{ __html: post.content }}
               ></div>
             </div>
-            <div className="col-span-3 md:col-span-1">
+            <div className="col-span-3 md:col-span-1 sticky top-24 w-fit h-screen overflow-auto common-wrapper">
               <div className="w-full bg-white border border-gray/20 p-6 md:p-8 rounded-3xl">
                 <div className="w-fit">
                   <h2 className="text-2xl text-center text-gray font-bold">
-                    Bài viết liên quan
+                  {t("relatedPost")}
                   </h2>
                   <div className="w-full flex">
                     <div className={`mt-2 w-[100px] h-[3px] bg-primary`}></div>

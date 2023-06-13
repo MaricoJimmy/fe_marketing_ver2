@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
-import React, { useMemo } from "react";
+import React, { useEffect, useMemo } from "react";
 import BlogRelated from "../../components/common/BlogRelated";
 import Breadcrumb from "../../components/common/Breadcrumb";
 import PageSeoHead from "../../components/common/PageSeoHead";
@@ -12,10 +12,11 @@ import {
   PostDetailsQuery,
 } from "../../queries/postQuery";
 import { getDate } from "../../utils";
+import { useTranslations } from "next-intl";
 
 // import dynamic from "next/dynamic";
 
-export async function getStaticProps({ params }) {
+export async function getStaticProps({ params, locale }) {
   const client = getApolloClient();
 
   const {
@@ -26,6 +27,7 @@ export async function getStaticProps({ params }) {
       slug: params.postSlug,
     },
   });
+
   const {
     data: {
       posts: { nodes: items },
@@ -36,18 +38,57 @@ export async function getStaticProps({ params }) {
       category: "tin-tuc",
     },
   });
+
+  const {
+    data: {
+      posts: { nodes: allPosts },
+    },
+  } = await client.query({
+    query: AllNewsPosts,
+  });
+
   const relatedPosts = items
     .filter((item) => item.slug !== params.postSlug)
-    .slice(0, 5);
+    .slice(0, 5)
+    .filter((post) => {
+      if (locale === "en") {
+        return post.title.startsWith("EN-");
+      } else if (locale === "vi") {
+        return post.title.startsWith("VN-");
+      }
+    });
+
+  const currentPost = {
+    ...post,
+    title:
+      locale === "en"
+        ? post.title.replace(/EN-\d{8}-/, "")
+        : post.title.replace(/VN-\d{8}-/, ""),
+    viSlug: post.title.includes("VN-")
+      ? post.slug
+      : allPosts.find((item) => {
+          const postDate = item.title.substring(3, 11);
+          const targetDate = post.title.substring(3, 11);
+          return postDate === targetDate && item.title.includes("VN-");
+        }).slug,
+    enSlug: post.title.includes("EN-")
+      ? post.slug
+      : allPosts.find((item) => {
+          const postDate = item.title.substring(3, 11);
+          const targetDate = post.title.substring(3, 11);
+          return postDate === targetDate && item.title.includes("EN-");
+        }).slug,
+  };
   return {
     props: {
-      post,
+      post: currentPost,
+      posts: allPosts,
       relatedPosts,
     },
   };
 }
 
-export async function getStaticPaths() {
+export async function getStaticPaths({ locales }) {
   let paths = [];
 
   const client = getApolloClient();
@@ -60,12 +101,21 @@ export async function getStaticPaths() {
     query: AllNewsPosts,
   });
 
-  items.forEach((post) => {
-    paths.push({
+  // items.forEach((post) => {
+  //   paths.push({
+  //     params: {
+  //       postSlug: post.slug,
+  //     },
+  //   });
+  // });
+
+  paths = items.flatMap((post) => {
+    return locales.map((locale) => ({
       params: {
         postSlug: post.slug,
       },
-    });
+      locale,
+    }));
   });
 
   return {
@@ -76,27 +126,43 @@ export async function getStaticPaths() {
 
 const NewsPostDetailsPage = ({ post, relatedPosts }) => {
   const router = useRouter();
+  const t = useTranslations("Common");
   const breadcrumbs = useMemo(() => {
     return [
       {
-        label: "Trang chủ",
+        label: router.locale === "vi" ? "Trang chủ" : "Home",
         slug: "/",
       },
       {
-        label: "Tin tức",
+        label: router.locale === "vi" ? "Tin tức" : "News",
         slug: "/tin-tuc",
       },
       {
-        label: post.title,
+        label:
+          router.locale === "en"
+            ? post.title.replace(/EN-\d{8}-/, "")
+            : post.title.replace(/VN-\d{8}-/, ""),
       },
     ];
-  }, [post]);
+  }, [post, router.locale]);
 
   const metaTagData = {
-    title: `${post.title} | pambu.org`,
+    title: `${
+      router.locale === "en"
+        ? post.title.replace(/EN-\d{8}-/, "")
+        : post.title.replace(/VN-\d{8}-/, "")
+    }} | pambu.org`,
     desc: post.excerpt.replace(/<[^>]+>/g, ""),
     img: post.featuredImage.node.mediaItemUrl,
   };
+
+  useEffect(() => {
+    if (router.locale === "vi") {
+      router.push("/tin-tuc/" + post.viSlug);
+    } else {
+      router.push("/news/" + post.enSlug);
+    }
+  }, [router.locale]);
   return (
     <>
       <PageSeoHead data={metaTagData} />
@@ -111,7 +177,7 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
                 </h1>
                 <div className="mt-3 flex items-center">
                   <p className="mr-6 text-gray/80 text-sm">
-                    Ngày xuất bản: {getDate(post.date)}
+                    {t("date")}: {getDate(post.date, router.locale)}
                   </p>
                   <SocialShare data={router.asPath} />
                 </div>
@@ -136,11 +202,11 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
                 dangerouslySetInnerHTML={{ __html: post.content }}
               ></div>
             </div>
-            <div className="col-span-3 md:col-span-1">
+            <div className="col-span-3 md:col-span-1 sticky top-24 w-fit h-screen overflow-auto common-wrapper">
               <div className="w-full bg-white border border-gray/20 p-6 md:p-8 rounded-3xl">
                 <div className="w-fit">
                   <h2 className="text-2xl text-center text-gray font-bold">
-                    Bài viết liên quan
+                    {t("relatedPost")}
                   </h2>
                   <div className="w-full flex">
                     <div className={`mt-2 w-[100px] h-[3px] bg-primary`}></div>

@@ -5,6 +5,8 @@ import PageSeoHead from "../../../components/common/PageSeoHead";
 import Title from "../../../components/common/Title";
 import { getApolloClient } from "../../../libs/apollo-client";
 import { AllOEEPosts } from "../../../queries/guidesQueries";
+import { useRouter } from "next/router";
+import { useTranslations } from "next-intl";
 
 export async function getStaticProps() {
   const client = getApolloClient();
@@ -25,9 +27,11 @@ export async function getStaticProps() {
 }
 
 const OEEGuidesPage = ({ posts }) => {
+  const { locale } = useRouter();
+  const t = useTranslations("Common");
   const breadcrumbs = [
     {
-      label: "Trang chủ",
+      label: locale === "vi" ? "Trang chủ" : "Home",
       slug: "/",
     },
     {
@@ -36,8 +40,8 @@ const OEEGuidesPage = ({ posts }) => {
   ];
 
   const metaTagData = {
-    title: "Tài liệu Pambu OEE | pambu.org",
-    desc: "Giải Pháp Toàn Diện Về Quản Lý Hiệu Suất Và Bảo Dưỡng Máy",
+    title: `${t("document.oee")} | pambu.org`,
+    desc: t("document.descOEE"),
     img: "/image/pambu.png",
   };
   return (
@@ -48,10 +52,7 @@ const OEEGuidesPage = ({ posts }) => {
           <div className="px-5 md:px-8 py-16 max-w-screen-xl w-full">
             <Breadcrumb data={breadcrumbs} />
             <div className="mt-8">
-              <Title
-                label="Tài liệu Pambu OEE"
-                className="bg-primary !w-full"
-              />
+              <Title label={t("document.oee")} className="bg-primary !w-full" />
             </div>
             <div className="mt-8">
               <ul className="grid grid-cols-12 gap-6 md:gap-8">
@@ -60,7 +61,11 @@ const OEEGuidesPage = ({ posts }) => {
                     key={post.id}
                     className="col-span-12 md:col-span-6 lg:col-span-4 h-full"
                   >
-                    <BlogCard data={post} category="pambu-oee" />
+                    <BlogCard
+                      data={post}
+                      category="pambu-oee"
+                      locale={locale}
+                    />
                   </li>
                 ))}
               </ul>

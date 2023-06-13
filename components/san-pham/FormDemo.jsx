@@ -1,8 +1,10 @@
 import React from "react";
 import Title from "../common/Title";
 import InfoClientForm from "./InfoClientForm";
+import { useTranslations } from "next-intl";
 
-function FormDemo({ isPMSPage }) {
+function FormDemo({ data, isPMSPage }) {
+  const t = useTranslations("Product");
   return (
     <div className="mt-16 md:mt-32">
       <div
@@ -14,14 +16,11 @@ function FormDemo({ isPMSPage }) {
           <div className="grid grid-cols-12 gap-6 md:gap-10">
             <div className="col-span-12 lg:col-span-6 flex items-center justify-center">
               <div className="w-full">
-                <Title label="Yêu cầu Demo" className="bg-blue-primary" />
-                <p className="mt-6 text-xl text-gray/80 text-justify font-medium">
-                  {(isPMSPage &&
-                    "Với mục tiêu cùng đồng hành với khách hàng để giải quyết các bài toán quản lý năng lượng") ||
-                    "Với mục tiêu cùng đồng hành với nhà máy để hiện đại hóa sản xuất công nghiệp"}
-                  , Pambu sẽ hỗ trợ khách hàng sử dụng demo{" "}
-                  <span className="font-bold">MIỄN PHÍ</span>.
-                </p>
+                <Title label={t("demo")} className="bg-blue-primary" />
+                <p
+                  className="mt-6 text-xl text-gray/80 text-justify font-medium"
+                  dangerouslySetInnerHTML={{ __html: data }}
+                ></p>
               </div>
             </div>
             <div className="col-span-12 lg:col-span-6">

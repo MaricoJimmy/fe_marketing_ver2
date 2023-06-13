@@ -3,6 +3,8 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import Button from "./Button";
 import styles from "./Header.module.css";
+import LanguageButton from "./LanguageButton";
+import { useTranslations } from "next-intl";
 
 function Header({ isProductPage, isPMSPage }) {
   const [stickyHeader, setStickyHeader] = useState(null);
@@ -41,6 +43,7 @@ function Header({ isProductPage, isPMSPage }) {
 }
 
 function HeaderDesktop({ stickyHeader, isProductPage, isPMSPage }) {
+  const t = useTranslations("Header");
   return (
     <div
       className={`${
@@ -54,28 +57,31 @@ function HeaderDesktop({ stickyHeader, isProductPage, isPMSPage }) {
             (stickyHeader === "is-sticky" && "py-3") || "py-6"
           } px-8 w-full flex items-center justify-between`}
         >
-          <Link href="/">
-            <a ariaLabel="logo">
-              <Image
-                src="/image/logo/logo_1.png"
-                width="180"
-                height="50"
-                alt=""
-              />
-            </a>
-          </Link>
+          <div className="flex items-center gap-5">
+            <Link href="/">
+              <a aria-label="logo" className="">
+                <Image
+                  src="/image/logo/logo_1.png"
+                  width="180"
+                  height="50"
+                  alt=""
+                />
+              </a>
+            </Link>
+            <LanguageButton />
+          </div>
           <div className="flex items-center gap-10">
             <ul className="flex items-center gap-10 cursor-pointer">
               <li>
                 <Link href="/tin-tuc">
                   <a className="font-semibold text-gray hover:text-primary duration-200">
-                    Tin tức
+                    {t("news")}
                   </a>
                 </Link>
               </li>
               <li className={styles.container}>
                 <div className="flex items-center font-semibold">
-                  <span className="mr-2">Sản phẩm</span>
+                  <span className="mr-2">{t("products")}</span>
                   <svg
                     width="20"
                     height="20"
@@ -109,7 +115,7 @@ function HeaderDesktop({ stickyHeader, isProductPage, isPMSPage }) {
               </li>
               <li className={styles.container}>
                 <div className="flex items-center font-semibold">
-                  <span className="mr-2">Cẩm nang hướng dẫn</span>
+                  <span className="mr-2">{t("instruction.main")}</span>
                   <svg
                     width="20"
                     height="20"
@@ -128,17 +134,17 @@ function HeaderDesktop({ stickyHeader, isProductPage, isPMSPage }) {
                 </div>
                 <div className={styles.subMenu}>
                   <div className="bg-white rounded drop-shadow-lg">
-                    <div className="w-[200px] bg-white text-gray font-semibold rounded-t hover:bg-tertiary hover:text-primary duration-200">
+                    <div className="min-w-[200px] w-full bg-white text-gray font-semibold rounded-t hover:bg-tertiary hover:text-primary duration-200">
                       <Link href="/pambu-oee">
-                        <a className="px-6 py-3 block w-full">
-                          Tài liệu Pambu OEE
+                        <a className="px-6 py-3 block w-full whitespace-nowrap">
+                          {t("instruction.sub.first")}
                         </a>
                       </Link>
                     </div>
-                    <div className="w-[200px] bg-white text-gray font-semibold rounded-b hover:bg-tertiary hover:text-primary duration-200">
+                    <div className="min-w-[200px] w-full bg-white text-gray font-semibold rounded-b hover:bg-tertiary hover:text-primary duration-200">
                       <Link href="/pambu-pms">
-                        <a className="px-6 py-3 block w-full">
-                          Tài liệu Pambu PMS
+                        <a className="px-6 py-3 block w-full whitespace-nowrap">
+                          {t("instruction.sub.second")}
                         </a>
                       </Link>
                     </div>
@@ -177,7 +183,7 @@ function HeaderDesktop({ stickyHeader, isProductPage, isPMSPage }) {
                   <a
                     className={`py-3 px-6 w-full bg-primary hover:bg-secondary text-white font-bold rounded-md duration-200`}
                   >
-                    Đặt lịch demo
+                    {t("bookDemo")}
                   </a>
                 </Link>
               )}
@@ -190,6 +196,7 @@ function HeaderDesktop({ stickyHeader, isProductPage, isPMSPage }) {
 }
 
 function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
+  const t = useTranslations("Header");
   const [openMenu, setOpenMenu] = useState(false);
   const [openSubMenu, setOpenSubMenu] = useState({
     product: true,
@@ -254,33 +261,38 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
           }`}
         >
           <div className="w-full h-full">
-            <Button
-              onClick={() => setOpenMenu(!openMenu)}
-              className="w-full flex items-center justify-end"
-            >
-              <svg
-                width="35"
-                height="35"
-                viewBox="0 0 35 35"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M26.25 8.75L8.75 26.25"
-                  stroke="#2E2E2E"
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M8.75 8.75L26.25 26.25"
-                  stroke="#2E2E2E"
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </Button>
+            <div className="flex items-center justify-between">
+              <LanguageButton />
+              <div>
+                <Button
+                  onClick={() => setOpenMenu(!openMenu)}
+                  className="w-full flex items-center justify-end"
+                >
+                  <svg
+                    width="35"
+                    height="35"
+                    viewBox="0 0 35 35"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M26.25 8.75L8.75 26.25"
+                      stroke="#2E2E2E"
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                    <path
+                      d="M8.75 8.75L26.25 26.25"
+                      stroke="#2E2E2E"
+                      strokeWidth="3"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </Button>
+              </div>
+            </div>
             <div className="py-8">
               <ul className="cursor-pointer">
                 <li
@@ -289,7 +301,7 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
                 >
                   <Link href="/tin-tuc">
                     <a className="block w-full font-semibold text-gray hover:text-primary duration-200">
-                      Tin tức
+                      {t("news")}
                     </a>
                   </Link>
                 </li>
@@ -303,7 +315,7 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
                     }
                     className="flex items-center font-semibold"
                   >
-                    <span className="mr-2">Sản phẩm</span>
+                    <span className="mr-2">{t("products")}</span>
                     <svg
                       width="20"
                       height="20"
@@ -354,7 +366,7 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
                     }
                     className="w-full flex items-center font-semibold"
                   >
-                    <span className="mr-2">Cẩm nang hướng dẫn</span>
+                    <span className="mr-2">{t("instruction.main")}</span>
                     <svg
                       width="20"
                       height="20"
@@ -382,7 +394,9 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
                       className="text-gray font-semibold hover:text-primary duration-200"
                     >
                       <Link href="/pambu-oee">
-                        <a className="block w-full">Tài liệu Pambu OEE</a>
+                        <a className="block w-full">
+                          {t("instruction.sub.first")}
+                        </a>
                       </Link>
                     </div>
                     <div
@@ -390,7 +404,9 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
                       className="mt-6 text-gray font-semibold hover:text-primary duration-200"
                     >
                       <Link href="/pambu-pms">
-                        <a className="block w-full">Tài liệu Pambu PMS</a>
+                        <a className="block w-full">
+                          {t("instruction.sub.second")}
+                        </a>
                       </Link>
                     </div>
                   </div>

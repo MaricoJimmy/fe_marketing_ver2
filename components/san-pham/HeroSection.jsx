@@ -1,8 +1,10 @@
 import Image from "next/image";
 import React from "react";
 import Button from "../common/Button";
+import { useTranslations } from "next-intl";
 
 function HeroSection({ data, setShowModal }) {
+  const t = useTranslations("Product");
   return (
     <div
       className={`relative w-full flex items-center justify-center overflow-hidden ${
@@ -27,7 +29,7 @@ function HeroSection({ data, setShowModal }) {
                     : "hover:bg-orange-secondary"
                 }`}
               >
-                Đặt lịch demo
+                {t("button.demo")}
               </Button>
             </div>
           </div>

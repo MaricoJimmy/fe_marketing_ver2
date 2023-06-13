@@ -11,8 +11,9 @@ import {
   PMSPostsQuery,
 } from "../queries/homePageQueries";
 import { getDate } from "../utils";
+import { useTranslations } from "next-intl";
 
-export async function getStaticProps() {
+export async function getStaticProps({ locale }) {
   const client = getApolloClient();
 
   const {
@@ -37,23 +38,41 @@ export async function getStaticProps() {
     query: NewsPostsQuery,
   });
 
+  const localeNewPosts = newsPosts
+    .filter((post) => {
+      if (locale === "en") {
+        return post.title.startsWith("EN-");
+      } else if (locale === "vi") {
+        return post.title.startsWith("VN-");
+      }
+    })
+    .map((post) => {
+      return {
+        ...post,
+        title:
+          locale === "en"
+            ? post.title.replace(/EN-\d{8}-/, "")
+            : post.title.replace(/VN-\d{8}-/, ""),
+      };
+    });
+
   return {
     props: {
       oeePosts,
       pmsPosts,
-      newsPosts,
+      newsPosts: localeNewPosts,
     },
     revalidate: 60,
   };
 }
 
 const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
+  const t = useTranslations("Index");
   const firstPost = newsPosts[0];
 
   const metaTagData = {
-    title:
-      "Pambu - Phần Mềm Quản Lý, Giám Sát Năng Lượng Và Hiệu Suất Máy | pambu.org",
-    desc: "Chìa khóa mở ra cánh cửa số hóa dữ liệu nhà máy. Tiên phong trong công nghệ Cloud",
+    title: `${t("titleSocial")} | pambu.org`,
+    desc: t("desc"),
     img: "/image/pambu.png",
   };
   return (
@@ -63,26 +82,24 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
         <div className="w-full flex justify-center items-center">
           <div className="px-5 md:px-8 py-10 max-w-screen-xl w-full overflow-hidden md:overflow-visible">
             <div>
-              <h1 className="hidden md:block text-4xl text-gray text-center font-bold">
-                Pambu - Phần Mềm Quản Lý, Giám Sát <br />{" "}
-                <span className="text-primary">Năng Lượng</span> Và{" "}
-                <span className="text-primary">Hiệu Suất</span> Máy
-              </h1>
-              <h1 className="block md:hidden text-2xl text-gray text-center font-bold">
-                Pambu - Phần Mềm Quản Lý, Giám Sát{" "}
-                <span className="text-primary">Năng Lượng</span> Và{" "}
-                <span className="text-primary">Hiệu Suất</span> Máy
-              </h1>
+              <h1
+                className="hidden md:block text-4xl text-gray text-center font-bold"
+                dangerouslySetInnerHTML={{ __html: t.raw("title.desktop") }}
+              ></h1>
+
+              <h1
+                className="block md:hidden text-2xl text-gray text-center font-bold"
+                dangerouslySetInnerHTML={{ __html: t.raw("title.mobile") }}
+              ></h1>
               <h4 className="mt-6 text-xl text-gray/80 text-center font-medium">
-                Chìa khóa mở ra cánh cửa số hóa dữ liệu nhà máy. Tiên phong
-                trong công nghệ Cloud
+                {t("desc")}
               </h4>
               <div className="mt-10 md:mt-16 grid grid-cols-2 gap-10 md:gap-16">
                 <div className="col-span-2 md:col-span-1 flex flex-col justify-between">
                   <h2 className="text-xl md:text-2xl text-gray text-center font-bold">
                     Pambu OEE <br />
                     <span className="text-gray/60 font-semibold">
-                      Phần mềm quản lý hiệu suất và bảo dưỡng máy
+                      {t("oee")}
                     </span>
                   </h2>
                   <div>
@@ -100,7 +117,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                           ariaLabel="pambu oee"
                           className="px-10 py-3 bg-primary hover:bg-secondary text-white font-semibold rounded-md duration-200"
                         >
-                          Xem chi tiết
+                          {t("button.details")}
                         </a>
                       </Link>
                     </div>
@@ -110,7 +127,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                   <h2 className="text-xl md:text-2xl text-gray text-center font-bold">
                     Pambu PMS <br />{" "}
                     <span className="text-gray/60 font-semibold">
-                      Phần mềm giám sát năng lượng
+                      {t("pms")}
                     </span>
                   </h2>
                   <div>
@@ -128,7 +145,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                           ariaLabel="pambu pms"
                           className="px-10 py-3 bg-primary hover:bg-secondary text-white font-semibold rounded-md duration-200"
                         >
-                          Xem chi tiết
+                          {t("button.details")}
                         </a>
                       </Link>
                     </div>
@@ -138,7 +155,10 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
             </div>
             <div className="mt-32">
               <div className="flex items-center justify-center">
-                <Title label="Tin tức nổi bật" className="bg-primary mx-auto" />
+                <Title
+                  label={t("section.news")}
+                  className="bg-primary mx-auto"
+                />
               </div>
               <div className="mt-8">
                 <div className="grid grid-cols-12 gap-6 md:gap-10 lg:gap-16">
@@ -209,7 +229,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
             <div className="my-16 md:mt-32">
               <div className="flex items-center justify-center">
                 <Title
-                  label="Cẩm nang hướng dẫn"
+                  label={t("section.instruction.main")}
                   className="mx-auto bg-primary"
                 />
               </div>
@@ -226,7 +246,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                         />
                       </div>
                       <h3 className="mt-6 text-2xl text-gray text-center font-semibold">
-                        Tài liệu Pambu OEE
+                        {t("section.instruction.sub.first")}
                       </h3>
                       <ul className="mt-10">
                         {oeePosts.map((post) => (
@@ -259,7 +279,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                     <div className="mt-8 flex items-center justify-center">
                       <Link href="/pambu-oee">
                         <a className="block px-10 py-3 bg-white hover:bg-primary text-primary hover:text-white border border-primary duration-200 rounded-md font-semibold">
-                          Xem tất cả
+                          {t("button.full")}
                         </a>
                       </Link>
                     </div>
@@ -277,7 +297,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                         />
                       </div>
                       <h3 className="mt-6 text-2xl text-gray text-center font-semibold">
-                        Tài liệu Pambu PMS
+                        {t("section.instruction.sub.second")}
                       </h3>
                       <ul className="mt-10">
                         {pmsPosts.map((post) => (
@@ -310,7 +330,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                     <div className="mt-8 flex items-center justify-center">
                       <Link href="/pambu-pms">
                         <a className="block px-10 py-3 bg-white hover:bg-primary text-primary hover:text-white border border-primary duration-200 rounded-md font-semibold">
-                          Xem tất cả
+                          {t("button.full")}
                         </a>
                       </Link>
                     </div>

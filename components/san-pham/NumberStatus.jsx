@@ -14,9 +14,10 @@ function NumberStatus({ data, className = "" }) {
             <ul className="flex flex-col md:flex-row items-center justify-center gap-12 lg:gap-32">
               {data.map((stat) => (
                 <li key={v4()}>
-                  <div className="flex items-center justify-center">
-                    {stat.icon}
-                  </div>
+                  <div
+                    className="flex items-center justify-center"
+                    dangerouslySetInnerHTML={{ __html: stat.icon }}
+                  ></div>
                   <div className="mt-6 text-center">
                     <h3 className="text-5xl text-gray font-bold">
                       {stat.title}

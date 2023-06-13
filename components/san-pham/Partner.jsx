@@ -1,12 +1,14 @@
 import Image from "next/image";
 import React from "react";
 import Title from "../common/Title";
+import { useTranslations } from "next-intl";
 
 function Partner() {
+  const t = useTranslations("Product");
   return (
     <div className="mt-8 md:mt-16">
       <div className="flex items-center justify-center">
-        <Title label="Đối tác" className="mx-auto bg-primary" />
+        <Title label={t("partner")} className="mx-auto bg-primary" />
       </div>
       <div className="hidden md:block mt-16 px-10 py-16 bg-[#EFF2FB] rounded-3xl">
         <div className="flex flex-wrap items-center justify-center gap-10 lg:gap-24">

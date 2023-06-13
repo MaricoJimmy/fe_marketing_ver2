@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -16,6 +17,7 @@ function Footer() {
 }
 
 function FooterDesktop() {
+  const t = useTranslations("Footer");
   return (
     <div className="w-full border-t border-gray/20">
       <div className="w-full flex justify-center items-center">
@@ -23,7 +25,7 @@ function FooterDesktop() {
           <div className="grid grid-cols-4 gap-6">
             <div className="col-span-1 flex flex-col justify-between">
               <Link href="/">
-                <a ariaLabel="logo">
+                <a aria-label="logo">
                   <Image
                     src="/image/logo/logo_1.png"
                     width="180"
@@ -37,29 +39,31 @@ function FooterDesktop() {
               </span>
             </div>
             <div className="col-span-1">
-              <h4 className="text-2xl text-gray font-bold">Đường dẫn nhanh</h4>
+              <h4 className="text-2xl text-gray font-bold">
+                {t("section.first.title")}
+              </h4>
               <ul className="mt-8 flex flex-col items-start gap-6 cursor-pointer">
                 <li className="w-full">
                   <Link href="/tin-tuc">
                     <a
                       className="block w-full text-gray/80 font-semibold hover:text-primary duration-200"
-                      ariaLabel="Tin tức"
+                      aria-label="Tin tức"
                     >
-                      Tin tức
+                      {t("section.first.links.news")}
                     </a>
                   </Link>
                 </li>
                 <li className="w-full">
                   <div className="text-gray/80 font-semibold hover:text-primary duration-200">
                     <Link href="/san-pham/pambu-oee">
-                      <a className="block w-full" ariaLabel="Pambu OEE">
+                      <a className="block w-full" aria-label="Pambu OEE">
                         Pambu OEE
                       </a>
                     </Link>
                   </div>
                   <div className="mt-6 text-gray/80 font-semibold hover:text-primary duration-200">
                     <Link href="/san-pham/pambu-pms">
-                      <a className="block w-full" ariaLabel="Pambu PMS">
+                      <a className="block w-full" aria-label="Pambu PMS">
                         Pambu PMS
                       </a>
                     </Link>
@@ -70,9 +74,9 @@ function FooterDesktop() {
                     <Link href="/pambu-oee">
                       <a
                         className="block w-full"
-                        ariaLabel="Tài liệu Pambu OEE"
+                        aria-label="Tài liệu Pambu OEE"
                       >
-                        Tài liệu Pambu OEE
+                        {t("section.first.links.oee")}
                       </a>
                     </Link>
                   </div>
@@ -80,9 +84,9 @@ function FooterDesktop() {
                     <Link href="/pambu-pms">
                       <a
                         className="block w-full"
-                        ariaLabel="Tài liệu Pambu PMS"
+                        aria-label="Tài liệu Pambu PMS"
                       >
-                        Tài liệu Pambu PMS
+                        {t("section.first.links.pms")}
                       </a>
                     </Link>
                   </div>
@@ -91,7 +95,7 @@ function FooterDesktop() {
             </div>
             <div className="col-span-1">
               <h4 className="text-2xl text-gray font-bold">
-                Thông tin liên hệ
+                {t("section.second.title")}
               </h4>
               <ul className="mt-8 flex flex-col items-start gap-6 cursor-pointer">
                 <li className="flex items-center justify-center">
@@ -154,19 +158,21 @@ function FooterDesktop() {
                     </svg>
                   </div>
                   <span className="ml-2 text-gray/80 font-semibold">
-                    Ô số 24, lô V5A – Khu nhà ở thấp tầng, khu đô thị mới Văn
-                    Phú , Phường Phú La, Quận Hà Đông, Thành phố Hà Nội, Việt
-                    Nam
+                    {t("section.second.address")}
                   </span>
                 </li>
               </ul>
             </div>
             <div className="col-span-1">
-              <h4 className="text-2xl text-gray font-bold">Giờ làm việc</h4>
-              <p className="mt-8 text-gray/80 font-semibold">
-                Thứ Hai - Thứ Sáu: 8:00 - 17:30 <br />
-                Thứ Bảy: 8:00 - 12:00
-              </p>
+              <h4 className="text-2xl text-gray font-bold">
+                {t("section.third.title")}
+              </h4>
+              <p
+                className="mt-8 text-gray/80 font-semibold"
+                dangerouslySetInnerHTML={{
+                  __html: t.raw("section.third.time"),
+                }}
+              ></p>
             </div>
           </div>
         </div>
@@ -184,7 +190,7 @@ function FooterMobile() {
             <div className="grid grid-cols-4 gap-6">
               <div className="col-span-4">
                 <Link href="/">
-                  <a ariaLabel="logo">
+                  <a aria-label="logo">
                     <Image
                       src="/image/logo/logo_1.png"
                       width="180"
@@ -202,7 +208,7 @@ function FooterMobile() {
                   <li className="w-full">
                     <Link href="/tin-tuc">
                       <a
-                        ariaLabel="tin tuc"
+                        aria-label="tin tuc"
                         className="block w-full text-gray/80 font-semibold hover:text-primary duration-200"
                       >
                         Tin tức
@@ -212,14 +218,14 @@ function FooterMobile() {
                   <li className="mt-6 w-full">
                     <div className="text-gray/80 font-semibold hover:text-primary duration-200">
                       <Link href="/san-pham/pambu-oee">
-                        <a className="block w-full" ariaLabel="pambu oee">
+                        <a className="block w-full" aria-label="pambu oee">
                           Pambu OEE
                         </a>
                       </Link>
                     </div>
                     <div className="mt-6 text-gray/80 font-semibold hover:text-primary duration-200">
                       <Link href="/san-pham/pambu-pms">
-                        <a className="block w-full" ariaLabel="pambu pms">
+                        <a className="block w-full" aria-label="pambu pms">
                           Pambu PMS
                         </a>
                       </Link>
@@ -230,7 +236,7 @@ function FooterMobile() {
                       <Link href="/pambu-oee">
                         <a
                           className="block w-full"
-                          ariaLabel="Tài liệu Pambu OEE"
+                          aria-label="Tài liệu Pambu OEE"
                         >
                           Tài liệu Pambu OEE
                         </a>
@@ -240,7 +246,7 @@ function FooterMobile() {
                       <Link href="/pambu-pms">
                         <a
                           className="block w-full"
-                          ariaLabel="Tài liệu Pambu PMS"
+                          aria-label="Tài liệu Pambu PMS"
                         >
                           Tài liệu Pambu PMS
                         </a>

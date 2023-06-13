@@ -10,35 +10,38 @@ import Button from "../components/common/Button";
 import FormGroup from "../components/common/FormGroup";
 import PageSeoHead from "../components/common/PageSeoHead";
 import Title from "../components/common/Title";
-
-const schema = yup.object().shape({
-  name: yup.string().required("Họ và tên không được để trống!"),
-  companyName: yup.string().required("Tên công ty không được để trống!"),
-  phoneNumber: yup
-    .string()
-    .required("Số điện thoại không được để trống!")
-    .min(10, "Số điện thoại phải đủ 10 số!"),
-  email: yup.string().email().required("Email không được để trống!"),
-  address: yup.string().required("Địa chỉ không được để trống!"),
-  productType: yup.object().shape(
-    {
-      oee: yup.bool().when("pms", {
-        is: (pms) => !pms,
-        then: yup.bool().oneOf([true], "Hãy chọn ít nhất một loại sản phẩm!"),
-      }),
-      pms: yup.bool().when("oee", {
-        is: (oee) => !oee,
-        then: yup.bool().oneOf([true], "Hãy chọn ít nhất một loại sản phẩm!"),
-      }),
-    },
-    [
-      ["oee", "pms"],
-      ["pms", "oee"],
-    ]
-  ),
-});
+import { useRouter } from "next/router";
+import { useTranslations } from "next-intl";
 
 const BookDemoPage = () => {
+  const router = useRouter();
+  const t = useTranslations("Product");
+  const schema = yup.object().shape({
+    name: yup.string().required(t("error.name")),
+    companyName: yup.string().required(t("error.company")),
+    phoneNumber: yup
+      .string()
+      .required(t("error.phone.required"))
+      .min(10, t("error.phone.min")),
+    email: yup.string().email().required(t("error.email")),
+    address: yup.string().required(t("error.address")),
+    productType: yup.object().shape(
+      {
+        oee: yup.bool().when("pms", {
+          is: (pms) => !pms,
+          then: yup.bool().oneOf([true], t("error.product")),
+        }),
+        pms: yup.bool().when("oee", {
+          is: (oee) => !oee,
+          then: yup.bool().oneOf([true], t("error.address")),
+        }),
+      },
+      [
+        ["oee", "pms"],
+        ["pms", "oee"],
+      ]
+    ),
+  });
   const {
     register,
     handleSubmit,
@@ -47,13 +50,15 @@ const BookDemoPage = () => {
 
   const breadcrumbs = [
     {
-      label: "Trang chủ",
+      label: router.locale === "vi" ? "Trang chủ" : "Home",
       slug: "/",
     },
     {
-      label: "Đặt lịch demo",
+      label: router.locale === "vi" ? "Đặt lịch Demo" : "Book a Demo",
     },
   ];
+
+  console.log();
 
   const onSubmit = (formData, e) => {
     axios({
@@ -71,8 +76,8 @@ const BookDemoPage = () => {
   };
 
   const metaTagData = {
-    title: "Đặt lịch Demo | pambu.org",
-    desc: "Với mục tiêu cùng đồng hành với khách hàng, Pambu sẽ hỗ trợ khách hàng sử dụng demo MIỄN PHÍ.",
+    title: `${t("demo")} | pambu.org`,
+    desc: t("titleDemo"),
     img: "/image/demo-page.png",
   };
 
@@ -85,61 +90,16 @@ const BookDemoPage = () => {
             <Breadcrumb data={breadcrumbs} />
             <div className="mt-8 grid grid-cols-12 gap-6 lg:gap-24">
               <div className="col-span-12 lg:col-span-6">
-                <Title label="Yêu cầu Demo" className="bg-blue-primary" />
-                <div className="mt-6 text-md text-gray/80 text-justify leading-7 font-medium">
-                  <p>
-                    Với mục tiêu cùng đồng hành với khách hàng, Pambu sẽ hỗ trợ
-                    khách hàng sử dụng demo miễn phí. Chương trình demo cụ thể
-                    như sau:
-                  </p>
-                  <ul className="mt-6 ml-6 list-disc">
-                    <li>
-                      Đối với phần mềm{" "}
-                      <span className="text-primary">Pambu OEE</span>: khách
-                      hàng sẽ được trải nghiệm bản basic trên 1 máy sản xuất
-                      trong thời gian 2 tháng.
-                    </li>
-                    <li>
-                      Đối với phần mềm{" "}
-                      <span className="text-primary">Pambu PMS</span>: khách
-                      hàng sẽ được trải nghiệm bản basic trên 1 phụ tải điện
-                      trong thời gian 2 tháng.
-                    </li>
-                    <li>
-                      Toàn bộ thiết bị phần cứng Pambu cung cấp và lắp đặt miễn
-                      phí, khách hàng cung cấp hạ tầng Internet.
-                    </li>
-                  </ul>
-                  <p className="mt-6">Các bước lên kế hoạch demo như sau:</p>
-                  <ul className="mt-6 ml-6 list-disc">
-                    <li>
-                      Khảo sát mặt bằng thiết bị cần demo tại site của khách
-                      hàng.
-                    </li>
-                    <li>Lên cấu hình và thời gian lắp đặt.</li>
-                    <li>
-                      Thống nhất các điều khoản lắp đặt và bảo quản tài sản
-                      demo.
-                    </li>
-                    <li>
-                      Lắp đặt demo và lắng nghe ý kiến phản hồi của khách hàng.
-                    </li>
-                  </ul>
-                  <p className="mt-6">
-                    Còn chần chừ gì nữa mà không liên hệ ngay với đội ngũ Pambu
-                    tại hotline{" "}
-                    <a href="tel:0974074862" className="font-bold">
-                      0974 074 862
-                    </a>{" "}
-                    hoặc điền vào form dưới đây để sử dụng sản phẩm. Pambu rất
-                    vui lòng được đồng hành!
-                  </p>
-                </div>
+                <Title label={t("demo")} className="bg-blue-primary" />
+                <div
+                  className="mt-6 text-md text-gray/80 text-justify leading-7 font-medium"
+                  dangerouslySetInnerHTML={{ __html: t.raw("bookDemo") }}
+                ></div>
               </div>
               <div className="col-span-12 lg:col-span-6">
                 <div className="p-6 md:p-8 w-full bg-white border border-gray/20 rounded-lg">
                   <h3 className="text-2xl text-gray text-center font-bold">
-                    Đặt lịch Demo
+                    {t("book")}
                   </h3>
                   <form
                     action=""
@@ -151,8 +111,8 @@ const BookDemoPage = () => {
                         register={register}
                         type="text"
                         name="name"
-                        label="Họ và tên"
-                        placeholder="Nhập họ và tên"
+                        label={t("form.name.label")}
+                        placeholder={t("form.name.phd")}
                         className={errors?.name ? "border-red" : ""}
                       />
                       {errors.name && (
@@ -166,8 +126,8 @@ const BookDemoPage = () => {
                         register={register}
                         type="text"
                         name="companyName"
-                        label="Tên công ty"
-                        placeholder="Nhập tên công ty"
+                        label={t("form.company.label")}
+                        placeholder={t("form.company.phd")}
                         className={errors?.companyName ? "border-red" : ""}
                       />
                       {errors.companyName && (
@@ -181,8 +141,8 @@ const BookDemoPage = () => {
                         register={register}
                         type="number"
                         name="phoneNumber"
-                        label="Số điện thoại"
-                        placeholder="Nhập số điện thoại"
+                        label={t("form.phone.label")}
+                        placeholder={t("form.phone.phd")}
                         className={errors?.phoneNumber ? "border-red" : ""}
                       />
                       {errors.phoneNumber && (
@@ -196,8 +156,8 @@ const BookDemoPage = () => {
                         register={register}
                         type="email"
                         name="email"
-                        label="Email"
-                        placeholder="Nhập email"
+                        label={t("form.email.label")}
+                        placeholder={t("form.email.phd")}
                         className={errors?.email ? "border-red" : ""}
                       />
                       {errors.email && (
@@ -211,8 +171,8 @@ const BookDemoPage = () => {
                         register={register}
                         type="text"
                         name="address"
-                        label="Địa chỉ"
-                        placeholder="Nhập địa chỉ"
+                        label={t("form.address.label")}
+                        placeholder={t("form.address.phd")}
                         className={errors?.address ? "border-red" : ""}
                       />
                       {errors.address && (
@@ -224,7 +184,7 @@ const BookDemoPage = () => {
                     <div className="my-10 w-full h-[1px] bg-gray/20" />
                     <div>
                       <span className="text-base font-medium">
-                        Chọn loại sản phẩm
+                        {t("form.product.title")}
                       </span>
                       <div className="flex items-start mt-4">
                         <div className="mt-1">
@@ -240,16 +200,10 @@ const BookDemoPage = () => {
                         <label
                           htmlFor="oee"
                           className="ml-4 font-medium text-gray-900"
-                        >
-                          <span className="font-semibold">Pambu OEE</span>: Giải
-                          pháp toàn diện về quản lý hiệu suất và bảo dưỡng máy
-                          móc
-                          <Link href="/san-pham/pambu-oee">
-                            <a className="ml-2 text-blue-primary underline">
-                              Xem chi tiết
-                            </a>
-                          </Link>
-                        </label>
+                          dangerouslySetInnerHTML={{
+                            __html: t.raw("form.product.oee"),
+                          }}
+                        ></label>
                       </div>
                       <div className="flex items-start mt-4">
                         <div className="mt-1">
@@ -265,15 +219,10 @@ const BookDemoPage = () => {
                         <label
                           htmlFor="pms"
                           className="ml-4 font-medium text-gray-900"
-                        >
-                          <span className="font-semibold">Pambu PMS</span>: Giám
-                          sát và quản lý năng lượng
-                          <Link href="/san-pham/pambu-pms">
-                            <a className="ml-2 text-blue-primary underline">
-                              Xem chi tiết
-                            </a>
-                          </Link>
-                        </label>
+                          dangerouslySetInnerHTML={{
+                            __html: t.raw("form.product.pms"),
+                          }}
+                        ></label>
                       </div>
                       {errors.productType && (
                         <p className="mt-4 text-sm text-red font-medium">
@@ -284,7 +233,7 @@ const BookDemoPage = () => {
                     </div>
                     <div className="mt-10">
                       <Button className="px-6 py-3 w-full bg-primary hover:bg-secondary text-white font-semibold">
-                        Đặt lịch
+                        {t("form.button")}
                       </Button>
                     </div>
                   </form>

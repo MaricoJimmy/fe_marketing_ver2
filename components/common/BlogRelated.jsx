@@ -2,8 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { getDate } from "../../utils";
+import { useRouter } from "next/router";
 
 function BlogRelated({ data, category }) {
+  const { locale } = useRouter();
   return (
     <div className="">
       <Link href={`/${category}/${data.slug}`}>
@@ -18,7 +20,11 @@ function BlogRelated({ data, category }) {
             />
           </div>
           <div className="mt-2 w-fit">
-            <h5 className="text-lg text-gray font-semibold">{data.title}</h5>
+            <h5 className="text-lg text-gray font-semibold">
+              {data.title.startsWith("EN-")
+                ? data.title.replace(/EN-\d{8}-/, "")
+                : data.title.replace(/VN-\d{8}-/, "")}
+            </h5>
             <span className="text-sm text-gray/80">{getDate(data.date)}</span>
           </div>
         </a>

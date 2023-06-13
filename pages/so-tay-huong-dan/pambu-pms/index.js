@@ -5,6 +5,8 @@ import PageSeoHead from "../../../components/common/PageSeoHead";
 import Title from "../../../components/common/Title";
 import { getApolloClient } from "../../../libs/apollo-client";
 import { AllPMSPosts } from "../../../queries/guidesQueries";
+import { useRouter } from "next/router";
+import { useTranslations } from "next-intl";
 
 export async function getStaticProps() {
   const client = getApolloClient();
@@ -25,9 +27,11 @@ export async function getStaticProps() {
 }
 
 const PMSGuidesPage = ({ posts }) => {
+  const { locale } = useRouter();
+  const t = useTranslations("Common");
   const breadcrumbs = [
     {
-      label: "Trang chủ",
+      label: locale === "vi" ? "Trang chủ" : "Home",
       slug: "/",
     },
     {
@@ -36,8 +40,8 @@ const PMSGuidesPage = ({ posts }) => {
   ];
 
   const metaTagData = {
-    title: "Tài liệu Pambu PMS | pambu.org",
-    desc: "Giám Sát Và Quản Lý Năng Lượng",
+    title: `${t("document.pms")} | pambu.org`,
+    desc: t("document.descPMS"),
     img: "/image/pambu.png",
   };
   return (
@@ -48,10 +52,7 @@ const PMSGuidesPage = ({ posts }) => {
           <div className="px-5 md:px-8 py-16 max-w-screen-xl w-full">
             <Breadcrumb data={breadcrumbs} />
             <div className="mt-8">
-              <Title
-                label="Tài liệu Pambu PMS"
-                className="bg-primary !w-full"
-              />
+              <Title label={t("document.pms")} className="bg-primary !w-full" />
             </div>
             <div className="mt-8">
               <ul className="grid grid-cols-12 gap-6 md:gap-8">
@@ -60,7 +61,11 @@ const PMSGuidesPage = ({ posts }) => {
                     key={post.id}
                     className="col-span-12 md:col-span-6 lg:col-span-4 h-full"
                   >
-                    <BlogCard data={post} category="pambu-pms" />
+                    <BlogCard
+                      data={post}
+                      category="pambu-pms"
+                      locale={locale}
+                    />
                   </li>
                 ))}
               </ul>

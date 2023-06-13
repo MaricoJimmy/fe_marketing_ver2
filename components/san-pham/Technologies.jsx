@@ -1,13 +1,14 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import React from "react";
 
 function Technologies() {
+  const t = useTranslations("Product");
   return (
     <div className="mt-16 md:mt-32">
       <div className="w-full flex items-center justify-center">
-        <h3 className="max-w-[900px] text-2xl md:text-3xl text-gray/60 text-center font-semibold">
-          SỬ DỤNG CÔNG NGHỆ, PHẦN CỨNG ĐẾN TỪ CÁC TẬP ĐOÀN HÀNG ĐẦU TRÊN THẾ
-          GIỚI
+        <h3 className="max-w-[900px] uppercase text-2xl md:text-3xl text-gray/60 text-center font-semibold">
+          {t("tech")}
         </h3>
       </div>
       <div className="hidden md:block mt-16">

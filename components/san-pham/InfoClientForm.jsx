@@ -6,19 +6,21 @@ import { toast, Toaster } from "react-hot-toast";
 import * as yup from "yup";
 import Button from "../common/Button";
 import FormGroup from "../common/FormGroup";
-
-const schema = yup.object().shape({
-  name: yup.string().required("Họ và tên không được để trống!"),
-  companyName: yup.string().required("Tên công ty không được để trống!"),
-  phoneNumber: yup
-    .string()
-    .required("Số điện thoại không được để trống!")
-    .min(10, "Số điện thoại phải đủ 10 số!"),
-  email: yup.string().email().required("Email không được để trống!"),
-  address: yup.string().required("Địa chỉ không được để trống!"),
-});
+import { useTranslations } from "next-intl";
 
 function InfoClientForm({ isPMSPage, productType }) {
+  const t = useTranslations("Product");
+
+  const schema = yup.object().shape({
+    name: yup.string().required(t("error.name")),
+    companyName: yup.string().required(t("error.company")),
+    phoneNumber: yup
+      .string()
+      .required(t("error.phone.required"))
+      .min(10, t("error.phone.min")),
+    email: yup.string().email().required(t("error.email")),
+    address: yup.string().required(t("error.address")),
+  });
   const {
     register,
     handleSubmit,
@@ -49,7 +51,7 @@ function InfoClientForm({ isPMSPage, productType }) {
   return (
     <div className="p-6 md:p-8 w-full bg-white rounded-lg">
       <h3 className="text-2xl text-gray text-center font-bold">
-        Thông tin khách hàng
+        {t("form.title")}
       </h3>
       <form action="" className="mt-8 w-full" onSubmit={handleSubmit(onSubmit)}>
         <div>
@@ -58,8 +60,8 @@ function InfoClientForm({ isPMSPage, productType }) {
             // ref={inputRef}
             type="text"
             name="name"
-            label="Họ và tên"
-            placeholder="Nhập họ và tên"
+            label={t("form.name.label")}
+            placeholder={t("form.name.phd")}
             className={errors?.name ? "border-red" : ""}
           />
           {errors.name && (
@@ -73,8 +75,8 @@ function InfoClientForm({ isPMSPage, productType }) {
             register={register}
             type="text"
             name="companyName"
-            label="Tên công ty"
-            placeholder="Nhập tên công ty"
+            label={t("form.company.label")}
+            placeholder={t("form.company.phd")}
             className={errors?.companyName ? "border-red" : ""}
           />
           {errors.companyName && (
@@ -88,8 +90,8 @@ function InfoClientForm({ isPMSPage, productType }) {
             register={register}
             type="number"
             name="phoneNumber"
-            label="Số điện thoại"
-            placeholder="Nhập số điện thoại"
+            label={t("form.phone.label")}
+            placeholder={t("form.phone.phd")}
             className={errors?.phoneNumber ? "border-red" : ""}
           />
           {errors.phoneNumber && (
@@ -103,8 +105,8 @@ function InfoClientForm({ isPMSPage, productType }) {
             register={register}
             type="email"
             name="email"
-            label="Email"
-            placeholder="Nhập email"
+            label={t("form.email.label")}
+            placeholder={t("form.email.phd")}
             className={errors?.email ? "border-red" : ""}
           />
           {errors.email && (
@@ -118,8 +120,8 @@ function InfoClientForm({ isPMSPage, productType }) {
             register={register}
             type="text"
             name="address"
-            label="Địa chỉ"
-            placeholder="Nhập địa chỉ"
+            label={t("form.address.label")}
+            placeholder={t("form.address.phd")}
             className={errors?.address ? "border-red" : ""}
           />
           {errors.address && (
@@ -135,7 +137,7 @@ function InfoClientForm({ isPMSPage, productType }) {
               "bg-primary hover:bg-secondary"
             } px-6 py-3 w-full text-white font-semibold duration-200`}
           >
-            Đặt lịch
+            {t("form.button")}
           </Button>
         </div>
       </form>

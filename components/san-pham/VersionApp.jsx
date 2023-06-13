@@ -2,8 +2,10 @@ import Image from "next/image";
 import React from "react";
 import { v4 } from "uuid";
 import Title from "../common/Title";
+import { useTranslations } from "next-intl";
 
 function VersionApp({ data, img, className }) {
+  const t = useTranslations("Product");
   return (
     <div className="mt-16 md:mt-32">
       <div
@@ -13,25 +15,21 @@ function VersionApp({ data, img, className }) {
       <div className={`w-full flex items-center justify-center ${className}`}>
         <div className="px-5 md:px-8 py-8 max-w-screen-xl w-full">
           <div className="w-full flex items-center justify-end">
-            <Title
-              label="Phiên bản phần mềm"
-              className="ml-auto bg-orange-primary"
-            />
+            <Title label={t("version")} className="ml-auto bg-orange-primary" />
           </div>
           <div className="mt-8 grid grid-cols-12 gap-6">
             <div className="col-span-12 lg:col-span-7 order-last lg:order-first">
               <table className="w-full table-auto ">
                 <thead>
                   <tr className="border-b border-gray/20">
-                    <th className="px-2 py-1 text-xl text-left text-gray/80 font-semibold">
-                      Tính năng
-                    </th>
-                    <th className="px-2 md:px-3 py-1 text-xl text-center text-gray/80 font-semibold">
-                      Basic
-                    </th>
-                    <th className="px-2 md:px-3 py-1 text-xl text-center text-gray/80 font-semibold">
-                      Pro
-                    </th>
+                    {t.raw("table").map((item) => (
+                      <th
+                        key={v4()}
+                        className="px-2 py-1 text-xl text-left text-gray/80 font-semibold"
+                      >
+                        {item}
+                      </th>
+                    ))}
                   </tr>
                 </thead>
                 <tbody>
