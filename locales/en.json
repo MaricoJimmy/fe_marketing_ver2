@@ -65,6 +65,10 @@
       },
       "button": "Reservation"
     },
+    "noti": {
+      "success": "Appointment successful!",
+      "error": "An error occurred!"
+    },
     "error": {
       "name": "Name cannot be blank!",
       "company": "Company name cannot be blank!",

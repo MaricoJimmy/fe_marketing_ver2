@@ -34,11 +34,11 @@ function InfoClientForm({ isPMSPage, productType }) {
       data: { formData, productType },
     })
       .then((r) => {
-        toast.success("Đặt lịch thành công!");
+        toast.success(t("noti.success"));
         e.target.reset();
       })
       .catch((r) => {
-        toast.error("Đã xảy ra lỗi!");
+        toast.error(t("noti.error"));
       });
   };
 

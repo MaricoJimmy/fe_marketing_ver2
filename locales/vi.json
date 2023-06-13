@@ -71,6 +71,10 @@
         "email": "Email không được để trống!"
       }
     },
+    "noti": {
+      "success": "Đặt lịch thành công!",
+      "error": "Đã xảy ra lỗi!"
+    },
     "error": {
       "name": "Họ và tên không được để trống!",
       "company": "Tên công ty không được để trống!",
