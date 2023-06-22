@@ -177,7 +177,7 @@
       "data": [
         {
           "ask": "What is PMS?",
-          "answer": "<span>PMS is an acronym for Power Monitoring Software ...</span><a href='/pambu-pms' class='ml-2 text-blue-primary underline'>See details here</a>"
+          "answer": "<span>PMS is an acronym for Power Monitoring Software ...</span><a href='/pambu-pms' class='ml-2 text-blue-primary underline link'>See details here</a>"
         },
         {
           "ask": "What does the installation cost of Pambu PMS include?",
@@ -295,7 +295,7 @@
       "data": [
         {
           "ask": "What is OEE?",
-          "answer": "<span>OEE stands for Overall Equipment Effectiveness which is a measure of the effectiveness of a device...</span><a href='/pambu-oee' class='ml-2 text-blue-primary underline'>See details here</a>"
+          "answer": "<span>OEE stands for Overall Equipment Effectiveness which is a measure of the effectiveness of a device...</span><a href='/pambu-oee' class='ml-2 text-blue-primary underline link'>See details here</a>"
         },
         {
           "ask": "Why should we use Pambu OEE ?",

@@ -471,3 +471,8 @@ input[type="number"] {
 .list-disc {
   list-style: disc;
 }
+
+.link {
+  text-decoration: underline;
+  color: #0b32ef;
+}

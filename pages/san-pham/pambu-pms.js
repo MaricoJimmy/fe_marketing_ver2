@@ -62,6 +62,7 @@ const PMSLandingPage = () => {
         <Questions
           data={t.raw("questions.data")}
           img={t.raw("questions.img")}
+          isPMSPage
         />
         <FormDemo isPMSPage data={t.raw("demo")} />
       </div>

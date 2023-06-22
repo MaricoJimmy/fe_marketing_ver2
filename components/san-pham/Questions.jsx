@@ -4,7 +4,7 @@ import { v4 } from "uuid";
 import Title from "../common/Title";
 import { useTranslations } from "next-intl";
 
-function Questions({ data, img }) {
+function Questions({ data, img, isPMSPage }) {
   const t = useTranslations("Product");
   const [idQuestion, setIdQuestion] = useState(1);
   const [openQuestion, setOpenQuestion] = useState(false);
@@ -17,6 +17,8 @@ function Questions({ data, img }) {
       setOpenQuestion(true);
     }
   };
+  const styleActiveQuestiion =
+    (isPMSPage && "text-orange-secondary") || "text-secondary";
   return (
     <div className="w-full flex justify-center items-center">
       <div className="px-5 py-3 md:px-8 md:py-6 max-w-screen-xl w-full">
@@ -38,7 +40,7 @@ function Questions({ data, img }) {
                       className={`${
                         (idQuestion === idx &&
                           openQuestion &&
-                          "text-orange-secondary") ||
+                          styleActiveQuestiion) ||
                         "text-gray"
                       } mr-2 text-xl text-gray font-semibold`}
                     >

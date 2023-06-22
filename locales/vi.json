@@ -183,7 +183,7 @@
       "data": [
         {
           "ask": "PMS là gì ?",
-          "answer": "<span>PMS là từ viết tắt của Power Monitoring Software - Phần mềm giám sát năng lượng ...</span><a href='/pambu-pms' class='ml-2 text-blue-primary underline'>Xem chi tiết tại đây</a>"
+          "answer": "<span>PMS là từ viết tắt của Power Monitoring Software - Phần mềm giám sát năng lượng ...</span><a href='/pambu-pms' class='ml-2 text-blue-primary underline link'>Xem chi tiết tại đây</a>"
         },
         {
           "ask": "Chi phí lắp đặt Pambu PMS bao gồm những gì ?",
@@ -301,7 +301,7 @@
       "data": [
         {
           "ask": "OEE là gì ?",
-          "answer": "<span>OEE là Overall Equipment Effectiveness hay Hiệu Suất Tổng Thể Thiết Bị là thước đo hiệu quả hoạt động (effectiveness) của một thiết bị ...</span><a href='/pambu-oee' class='ml-2 text-blue-primary underline'>Xem chi tiết tại đây</a>"
+          "answer": "<span>OEE là Overall Equipment Effectiveness hay Hiệu Suất Tổng Thể Thiết Bị là thước đo hiệu quả hoạt động (effectiveness) của một thiết bị ...</span><a href='/pambu-oee' class='ml-2 text-blue-primary underline link'>Xem chi tiết tại đây</a>"
         },
         {
           "ask": "Tại sao cần sử dụng Pambu OEE ?",

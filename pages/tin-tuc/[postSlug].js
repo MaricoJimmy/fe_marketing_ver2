@@ -72,22 +72,9 @@ export async function getStaticProps({ params, locale }) {
 
   const currentPost = {
     ...post,
-    title:
-      locale === "en"
-        ? post.title.replace(/EN-\d{8}-/, "")
-        : post.title.replace(/VN-\d{8}-/, ""),
-    // slug:
-    //   locale === "en"
-    //     ? allPosts.find((item) => {
-    //         const postDate = item.title.substring(3, 11);
-    //         const targetDate = post.title.substring(3, 11);
-    //         return postDate === targetDate && item.title.includes("EN-");
-    //       })?.slug
-    //     : allPosts.find((item) => {
-    //         const postDate = item.title.substring(3, 11);
-    //         const targetDate = post.title.substring(3, 11);
-    //         return postDate === targetDate && item.title.includes("VN-");
-    //       })?.slug,
+    title: post.title.includes("EN-")
+      ? post.title.replace(/EN-\d{8}-/, "")
+      : post.title.replace(/VN-\d{8}-/, ""),
     viSlug: post.title.includes("VN-")
       ? post.slug
       : viSlug
@@ -158,17 +145,16 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
         slug: "/tin-tuc",
       },
       {
-        label:
-          router.locale === "en"
-            ? post.title.replace(/EN-\d{8}-/, "")
-            : post.title.replace(/VN-\d{8}-/, ""),
+        label: post.title.includes("EN-")
+          ? post.title.replace(/EN-\d{8}-/, "")
+          : post.title.replace(/VN-\d{8}-/, ""),
       },
     ];
   }, [post, router.locale]);
 
   const metaTagData = {
     title: `${
-      router.locale === "en"
+      post.title.includes("EN-")
         ? post.title.replace(/EN-\d{8}-/, "")
         : post.title.replace(/VN-\d{8}-/, "")
     }} | pambu.org`,
@@ -232,13 +218,15 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
                     <div className={`mt-2 w-[100px] h-[3px] bg-primary`}></div>
                   </div>
                 </div>
-                <ul className="mt-6">
-                  {relatedPosts.map((relatePost) => (
-                    <li key={relatePost.id} className="mb-8 last:mb-0">
-                      <BlogRelated data={relatePost} category="tin-tuc" />
-                    </li>
-                  ))}
-                </ul>
+                {relatedPosts.length > 0 && (
+                  <ul className="mt-6">
+                    {relatedPosts.map((relatePost) => (
+                      <li key={relatePost.id} className="mb-8 last:mb-0">
+                        <BlogRelated data={relatePost} category="tin-tuc" />
+                      </li>
+                    ))}
+                  </ul>
+                )}
               </div>
             </div>
           </div>
