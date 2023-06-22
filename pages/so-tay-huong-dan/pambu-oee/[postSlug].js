@@ -138,7 +138,7 @@ const OEEDetailPost = ({ post, relatedPosts }) => {
                 dangerouslySetInnerHTML={{ __html: post.content }}
               ></div>
             </div>
-            <div className="col-span-3 md:col-span-1 sticky top-24 w-fit h-screen overflow-auto common-wrapper">
+            <div className="col-span-3 md:col-span-1">
               <div className="w-full bg-white border border-gray/20 p-6 md:p-8 rounded-3xl">
                 <div className="w-fit">
                   <h2 className="text-2xl text-center text-gray font-bold">

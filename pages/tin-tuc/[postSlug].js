@@ -58,26 +58,46 @@ export async function getStaticProps({ params, locale }) {
       }
     });
 
+  const viSlug = allPosts.find((item) => {
+    const postDate = item.title.substring(3, 11);
+    const targetDate = post.title.substring(3, 11);
+    return postDate === targetDate && item.title.includes("VN-");
+  })?.slug;
+
+  const enSlug = allPosts.find((item) => {
+    const postDate = item.title.substring(3, 11);
+    const targetDate = post.title.substring(3, 11);
+    return postDate === targetDate && item.title.includes("EN-");
+  })?.slug;
+
   const currentPost = {
     ...post,
     title:
       locale === "en"
         ? post.title.replace(/EN-\d{8}-/, "")
         : post.title.replace(/VN-\d{8}-/, ""),
+    // slug:
+    //   locale === "en"
+    //     ? allPosts.find((item) => {
+    //         const postDate = item.title.substring(3, 11);
+    //         const targetDate = post.title.substring(3, 11);
+    //         return postDate === targetDate && item.title.includes("EN-");
+    //       })?.slug
+    //     : allPosts.find((item) => {
+    //         const postDate = item.title.substring(3, 11);
+    //         const targetDate = post.title.substring(3, 11);
+    //         return postDate === targetDate && item.title.includes("VN-");
+    //       })?.slug,
     viSlug: post.title.includes("VN-")
       ? post.slug
-      : allPosts.find((item) => {
-          const postDate = item.title.substring(3, 11);
-          const targetDate = post.title.substring(3, 11);
-          return postDate === targetDate && item.title.includes("VN-");
-        }).slug,
+      : viSlug
+      ? viSlug
+      : post.slug,
     enSlug: post.title.includes("EN-")
       ? post.slug
-      : allPosts.find((item) => {
-          const postDate = item.title.substring(3, 11);
-          const targetDate = post.title.substring(3, 11);
-          return postDate === targetDate && item.title.includes("EN-");
-        }).slug,
+      : enSlug
+      ? enSlug
+      : post.slug,
   };
   return {
     props: {
@@ -158,9 +178,9 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
 
   useEffect(() => {
     if (router.locale === "vi") {
-      router.push("/tin-tuc/" + post.viSlug);
+      router.push("/tin-tuc/" + post.slug);
     } else {
-      router.push("/news/" + post.enSlug);
+      router.push("/news/" + post.slug);
     }
   }, [router.locale]);
   return (
@@ -202,7 +222,7 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
                 dangerouslySetInnerHTML={{ __html: post.content }}
               ></div>
             </div>
-            <div className="col-span-3 md:col-span-1 sticky top-24 w-fit h-screen overflow-auto common-wrapper">
+            <div className="col-span-3 md:col-span-1">
               <div className="w-full bg-white border border-gray/20 p-6 md:p-8 rounded-3xl">
                 <div className="w-fit">
                   <h2 className="text-2xl text-center text-gray font-bold">

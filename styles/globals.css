@@ -467,3 +467,7 @@ input[type="number"] {
     100% 76.04%
   );
 }
+
+.list-disc {
+  list-style: disc;
+}

@@ -1,9 +1,7 @@
-import Image from "next/image";
-import Link from "next/link";
-import React, { useState } from "react";
+import { useTranslations } from "next-intl";
+import React, { useEffect, useState } from "react";
 import Modal from "../../components/common/Modal";
 import PageSeoHead from "../../components/common/PageSeoHead";
-import Title from "../../components/common/Title";
 import PMSLayout from "../../components/layout/PMSLayout";
 import FormDemo from "../../components/san-pham/FormDemo";
 import HeroSection from "../../components/san-pham/HeroSection";
@@ -11,15 +9,23 @@ import HighLightFeature from "../../components/san-pham/HighLightFeature";
 import InfoClientForm from "../../components/san-pham/InfoClientForm";
 import NumberStatus from "../../components/san-pham/NumberStatus";
 import Partner from "../../components/san-pham/Partner";
+import Questions from "../../components/san-pham/Questions";
 import Technologies from "../../components/san-pham/Technologies";
 import VersionApp from "../../components/san-pham/VersionApp";
-import { PMSDataPage } from "../../data/pms";
-import { useTranslations } from "next-intl";
-import Questions from "../../components/san-pham/Questions";
+import { useRouter } from "next/router";
 
 const PMSLandingPage = () => {
   const t = useTranslations("PMS");
+  const router = useRouter();
   const [showModal, setShowModal] = useState(false);
+
+  useEffect(() => {
+    if (router.locale === "vi") {
+      router.push("/san-pham/pambu-pms");
+    } else {
+      router.push("/product/pambu-pms");
+    }
+  }, [router.locale]);
 
   const metaTagData = {
     title: t("heroSection.heading"),

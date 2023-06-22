@@ -42,9 +42,8 @@ export async function getStaticProps({ locale }) {
     .filter((post) => {
       if (locale === "en") {
         return post.title.startsWith("EN-");
-      } else if (locale === "vi") {
-        return post.title.startsWith("VN-");
       }
+      return post.title.startsWith("VN-");
     })
     .map((post) => {
       return {
@@ -114,7 +113,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                     <div className="mt-8 flex items-center justify-center">
                       <Link href="/san-pham/pambu-oee">
                         <a
-                          ariaLabel="pambu oee"
+                          aria-label="pambu oee"
                           className="px-10 py-3 bg-primary hover:bg-secondary text-white font-semibold rounded-md duration-200"
                         >
                           {t("button.details")}
@@ -142,7 +141,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                     <div className="mt-8 flex items-center justify-center">
                       <Link href="/san-pham/pambu-pms">
                         <a
-                          ariaLabel="pambu pms"
+                          aria-label="pambu pms"
                           className="px-10 py-3 bg-primary hover:bg-secondary text-white font-semibold rounded-md duration-200"
                         >
                           {t("button.details")}
@@ -153,79 +152,82 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                 </div>
               </div>
             </div>
-            <div className="mt-32">
-              <div className="flex items-center justify-center">
-                <Title
-                  label={t("section.news")}
-                  className="bg-primary mx-auto"
-                />
-              </div>
-              <div className="mt-8">
-                <div className="grid grid-cols-12 gap-6 md:gap-10 lg:gap-16">
-                  <div className="col-span-12 tall-md:col-span-12 lg:col-span-7">
-                    <Link href={`/tin-tuc/${firstPost.slug}`}>
-                      <a
-                        ariaLabel={firstPost.title}
-                        className="block w-full h-fit bg-white shadow-lg shadow-tertiary/80 rounded-3xl"
-                      >
-                        <div className="w-full h-[200px] lg:h-[250px] relative">
-                          <Image
-                            src={firstPost.featuredImage.node.mediaItemUrl}
-                            alt=""
-                            layout="fill"
-                            objectFit="cover"
-                            className="rounded-t-3xl"
-                          />
-                        </div>
-                        <div className="p-8 h-full ">
-                          <h3 className="text-lg md:text-xl text-gray font-semibold">
-                            {firstPost.title}
-                          </h3>
-                          <span className="block mt-2 text-gray/80">
-                            {getDate(firstPost.date)}
-                          </span>
-                          <h5
-                            className="mt-4 text-gray desc-blog"
-                            dangerouslySetInnerHTML={{
-                              __html: firstPost.excerpt,
-                            }}
-                          ></h5>
-                        </div>
-                      </a>
-                    </Link>
-                  </div>
-                  <div className="mt-8 md:mt-0 col-span-12 tall-md:col-span-12 lg:col-span-5">
-                    <ul>
-                      {newsPosts.slice(1).map((post) => (
-                        <li key={post.id} className="mb-8 last:mb-0">
-                          <Link href={`/tin-tuc/${post.slug}`}>
-                            <a className="flex md:flex-row flex-col items-start">
-                              <div className="relative border border-gray/20 md:min-w-[150px] md:w-[150px] w-full h-[150px] md:h-[65px] lg:h-[80px] rounded-2xl md:rounded-lg">
-                                <Image
-                                  src={post.featuredImage.node.mediaItemUrl}
-                                  alt=""
-                                  layout="fill"
-                                  objectFit="cover"
-                                  className="rounded-2xl md:rounded-lg"
-                                />
-                              </div>
-                              <div className="mt-4 md:mt-0 md:ml-6">
-                                <h4 className="text-lg tex-gray font-semibold">
-                                  {post.title}
-                                </h4>
-                                <span className="mt-2 block text-gray/80">
-                                  {getDate(post.date)}
-                                </span>
-                              </div>
-                            </a>
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
+
+            {newsPosts.length > 0 && (
+              <div className="mt-32">
+                <div className="flex items-center justify-center">
+                  <Title
+                    label={t("section.news")}
+                    className="bg-primary mx-auto"
+                  />
+                </div>
+                <div className="mt-8">
+                  <div className="grid grid-cols-12 gap-6 md:gap-10 lg:gap-16">
+                    <div className="col-span-12 tall-md:col-span-12 lg:col-span-7">
+                      <Link href={`/tin-tuc/${firstPost.slug}`}>
+                        <a
+                          ariaLabel={firstPost.title}
+                          className="block w-full h-fit bg-white shadow-lg shadow-tertiary/80 rounded-3xl"
+                        >
+                          <div className="w-full h-[200px] lg:h-[250px] relative">
+                            <Image
+                              src={firstPost.featuredImage.node.mediaItemUrl}
+                              alt=""
+                              layout="fill"
+                              objectFit="cover"
+                              className="rounded-t-3xl"
+                            />
+                          </div>
+                          <div className="p-8 h-full ">
+                            <h3 className="text-lg md:text-xl text-gray font-semibold">
+                              {firstPost.title}
+                            </h3>
+                            <span className="block mt-2 text-gray/80">
+                              {getDate(firstPost.date)}
+                            </span>
+                            <h5
+                              className="mt-4 text-gray desc-blog"
+                              dangerouslySetInnerHTML={{
+                                __html: firstPost.excerpt,
+                              }}
+                            ></h5>
+                          </div>
+                        </a>
+                      </Link>
+                    </div>
+                    <div className="mt-8 md:mt-0 col-span-12 tall-md:col-span-12 lg:col-span-5">
+                      <ul>
+                        {newsPosts.slice(1).map((post) => (
+                          <li key={post.id} className="mb-8 last:mb-0">
+                            <Link href={`/tin-tuc/${post.slug}`}>
+                              <a className="flex md:flex-row flex-col items-start">
+                                <div className="relative border border-gray/20 md:min-w-[150px] md:w-[150px] w-full h-[150px] md:h-[65px] lg:h-[80px] rounded-2xl md:rounded-lg">
+                                  <Image
+                                    src={post.featuredImage.node.mediaItemUrl}
+                                    alt=""
+                                    layout="fill"
+                                    objectFit="cover"
+                                    className="rounded-2xl md:rounded-lg"
+                                  />
+                                </div>
+                                <div className="mt-4 md:mt-0 md:ml-6">
+                                  <h4 className="text-lg tex-gray font-semibold">
+                                    {post.title}
+                                  </h4>
+                                  <span className="mt-2 block text-gray/80">
+                                    {getDate(post.date)}
+                                  </span>
+                                </div>
+                              </a>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
+            )}
             <div className="my-16 md:mt-32">
               <div className="flex items-center justify-center">
                 <Title

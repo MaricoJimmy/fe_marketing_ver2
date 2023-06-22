@@ -1,7 +1,7 @@
 import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { toast, Toaster } from "react-hot-toast";
 import * as yup from "yup";
@@ -58,8 +58,6 @@ const BookDemoPage = () => {
     },
   ];
 
-  console.log();
-
   const onSubmit = (formData, e) => {
     axios({
       method: "post",
@@ -74,6 +72,14 @@ const BookDemoPage = () => {
         toast.error(t("noti.error"));
       });
   };
+
+  useEffect(() => {
+    if (router.locale === "vi") {
+      router.push("/dat-lich-demo");
+    } else {
+      router.push("/book-a-demo");
+    }
+  }, [router.locale]);
 
   const metaTagData = {
     title: `${t("demo")} | pambu.org`,

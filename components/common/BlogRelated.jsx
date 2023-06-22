@@ -8,7 +8,7 @@ function BlogRelated({ data, category }) {
   const { locale } = useRouter();
   return (
     <div className="">
-      <Link href={`/${category}/${data.slug}`}>
+      <Link href={`/${category}/${data.slug}`} locale={locale}>
         <a className="">
           <div className="relative border border-gray/20 w-full h-[200px] lg:h-[150px] rounded-2xl">
             <Image

@@ -29,6 +29,14 @@ const nextConfig = {
         destination: "/tin-tuc/:path*",
         // locale: false,
       },
+      {
+        source: "/product/:path*",
+        destination: "/san-pham/:path*",
+      },
+      {
+        source: "/book-a-demo",
+        destination: "/dat-lich-demo",
+      },
     ];
   },
 };
