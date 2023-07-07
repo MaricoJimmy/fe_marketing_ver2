@@ -49,7 +49,7 @@ export async function getStaticProps({ params, locale }) {
 
   const relatedPosts = items
     .filter((item) => item.slug !== params.postSlug)
-    .slice(0, 5)
+    .slice(0, 20)
     .filter((post) => {
       if (locale === "en") {
         return post.title.startsWith("EN-");
@@ -132,6 +132,10 @@ export async function getStaticPaths({ locales }) {
 }
 
 const NewsPostDetailsPage = ({ post, relatedPosts }) => {
+  console.log(
+    "🚀 ~ file: [postSlug].js:135 ~ NewsPostDetailsPage ~ relatedPosts:",
+    relatedPosts
+  );
   const router = useRouter();
   const t = useTranslations("Common");
   const breadcrumbs = useMemo(() => {
@@ -164,9 +168,9 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
 
   useEffect(() => {
     if (router.locale === "vi") {
-      router.push("/tin-tuc/" + post.slug);
+      router.push("/tin-tuc/" + post.viSlug);
     } else {
-      router.push("/news/" + post.slug);
+      router.push("/news/" + post.enSlug);
     }
   }, [router.locale]);
   return (

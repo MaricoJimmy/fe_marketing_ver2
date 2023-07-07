@@ -28,7 +28,7 @@ const MoreRelatedPostsQueryInSameCategory = gql`
   query RelatedPosts($category: String!) {
     posts(
       where: { categoryName: $category, orderby: { field: DATE, order: DESC } }
-      first: 6
+      first: 100
     ) {
       nodes {
         id

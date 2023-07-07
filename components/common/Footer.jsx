@@ -182,6 +182,7 @@ function FooterDesktop() {
 }
 
 function FooterMobile() {
+  const t = useTranslations("Footer");
   return (
     <div className="w-full border-t border-gray/20">
       <div className="w-full flex justify-center items-center">
@@ -202,7 +203,7 @@ function FooterMobile() {
               </div>
               <div className="col-span-4">
                 <h4 className="text-2xl text-gray font-bold">
-                  Đường dẫn nhanh
+                  {t("section.first.title")}
                 </h4>
                 <ul className="mt-6 cursor-pointer">
                   <li className="w-full">
@@ -211,7 +212,7 @@ function FooterMobile() {
                         aria-label="tin tuc"
                         className="block w-full text-gray/80 font-semibold hover:text-primary duration-200"
                       >
-                        Tin tức
+                        {t("section.first.links.news")}
                       </a>
                     </Link>
                   </li>
@@ -238,7 +239,7 @@ function FooterMobile() {
                           className="block w-full"
                           aria-label="Tài liệu Pambu OEE"
                         >
-                          Tài liệu Pambu OEE
+                          {t("section.first.links.oee")}
                         </a>
                       </Link>
                     </div>
@@ -248,7 +249,7 @@ function FooterMobile() {
                           className="block w-full"
                           aria-label="Tài liệu Pambu PMS"
                         >
-                          Tài liệu Pambu PMS
+                          {t("section.first.links.pms")}
                         </a>
                       </Link>
                     </div>
@@ -257,7 +258,7 @@ function FooterMobile() {
               </div>
               <div className="col-span-4">
                 <h4 className="text-2xl text-gray font-bold">
-                  Thông tin liên hệ
+                  {t("section.second.title")}
                 </h4>
                 <ul className="mt-6 cursor-pointer">
                   <li className="flex items-center justify-start">
@@ -320,19 +321,21 @@ function FooterMobile() {
                       </svg>
                     </div>
                     <span className="ml-2 text-gray/80 font-semibold">
-                      Ô số 24, lô V5A – Khu nhà ở thấp tầng, khu đô thị mới Văn
-                      Phú , Phường Phú La, Quận Hà Đông, Thành phố Hà Nội, Việt
-                      Nam
+                      {t("section.second.address")}
                     </span>
                   </li>
                 </ul>
               </div>
               <div className="col-span-4">
-                <h4 className="text-2xl text-gray font-bold">Giờ làm việc</h4>
-                <p className="mt-6 text-gray/80 font-semibold">
-                  Thứ Hai - Thứ Sáu: 8:00 - 17:30 <br />
-                  Thứ Bảy: 8:00 - 12:00
-                </p>
+                <h4 className="text-2xl text-gray font-bold">
+                  {t("section.third.title")}
+                </h4>
+                <p
+                  className="mt-6 text-gray/80 font-semibold"
+                  dangerouslySetInnerHTML={{
+                    __html: t.raw("section.third.time"),
+                  }}
+                ></p>
               </div>
             </div>
             <div className="mt-6 flex items-center justify-center">

@@ -445,7 +445,7 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
                       onClick={() => setOpenMenu(!openMenu)}
                       className={`py-3 px-6 block w-full bg-primary hover:bg-secondary text-white text-center font-bold rounded-md duration-200`}
                     >
-                      Đặt lịch demo
+                      {t("bookDemo")}
                     </a>
                   </Link>
                 )}
