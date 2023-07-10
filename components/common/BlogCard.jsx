@@ -6,13 +6,7 @@ import { getDate } from "../../utils";
 function BlogCard({ data, category, locale }) {
   return (
     <div className="w-full h-full">
-      <Link
-        href={{
-          pathname: `/${category}/[slug]`,
-          query: { slug: data.slug },
-        }}
-        locale={locale}
-      >
+      <Link href={`/${category}/${data.slug}`} locale={locale}>
         <a className="block h-full bg-white shadow-md shadow-tertiary/80 rounded-3xl">
           <div className="w-full h-[240px] relative border-b border-gray/20">
             <Image
