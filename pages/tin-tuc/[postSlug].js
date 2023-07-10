@@ -14,8 +14,6 @@ import {
 import { getDate } from "../../utils";
 import { useTranslations } from "next-intl";
 
-// import dynamic from "next/dynamic";
-
 export async function getStaticProps({ params, locale }) {
   const client = getApolloClient();
 
@@ -132,10 +130,6 @@ export async function getStaticPaths({ locales }) {
 }
 
 const NewsPostDetailsPage = ({ post, relatedPosts }) => {
-  console.log(
-    "🚀 ~ file: [postSlug].js:135 ~ NewsPostDetailsPage ~ relatedPosts:",
-    relatedPosts
-  );
   const router = useRouter();
   const t = useTranslations("Common");
   const breadcrumbs = useMemo(() => {
@@ -161,7 +155,7 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
       post.title.includes("EN-")
         ? post.title.replace(/EN-\d{8}-/, "")
         : post.title.replace(/VN-\d{8}-/, "")
-    }} | pambu.org`,
+    } | pambu.org`,
     desc: post.excerpt.replace(/<[^>]+>/g, ""),
     img: post.featuredImage.node.mediaItemUrl,
   };
