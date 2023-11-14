@@ -25,7 +25,9 @@ function BlogRelated({ data, category }) {
                 ? data.title.replace(/EN-\d{8}-/, "")
                 : data.title.replace(/VN-\d{8}-/, "")}
             </h5>
-            <span className="text-sm text-gray/80">{getDate(data.date)}</span>
+            <span className="text-sm text-gray/80">
+              {getDate(data.date, locale)}
+            </span>
           </div>
         </a>
       </Link>

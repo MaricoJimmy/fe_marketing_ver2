@@ -4,7 +4,7 @@ const OEEPostsQuery = gql`
   query PostsForPambuOEE {
     posts(
       where: { categoryName: "pambu-oee", orderby: { field: DATE, order: ASC } }
-      first: 5
+      first: 100
     ) {
       nodes {
         id
@@ -32,7 +32,7 @@ const PMSPostsQuery = gql`
   query PostsForPambuPMS {
     posts(
       where: { categoryName: "pambu-pms", orderby: { field: DATE, order: ASC } }
-      first: 5
+      first: 100
     ) {
       nodes {
         id
@@ -60,7 +60,7 @@ const NewsPostsQuery = gql`
   query PostsForPambuPMS {
     posts(
       where: { categoryName: "tin-tuc", orderby: { field: DATE, order: DESC } }
-      first: 5
+      first: 100
     ) {
       nodes {
         id

@@ -65,8 +65,7 @@ const AllNewsPage = ({ posts, locale }) => {
             : post.title.replace(/VN-\d{8}-/, ""),
       };
     });
-  console.log(posts);
-  console.log(posts.length);
+
   useEffect(() => {
     if (router.locale === "vi") {
       router.push("/tin-tuc");

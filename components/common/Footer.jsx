@@ -112,10 +112,10 @@ function FooterDesktop() {
                     />
                   </svg>
                   <a
-                    href="tel:0974074862"
+                    href="tel:0387430957"
                     className="ml-2 text-gray/80 font-semibold"
                   >
-                    0974 074 862
+                    0387 430 957
                   </a>
                 </li>
                 <li className="flex items-center justify-center">
@@ -278,7 +278,7 @@ function FooterMobile() {
                       href="tel:0387430957"
                       className="ml-2 text-gray/80 font-semibold"
                     >
-                      0387430957
+                      0387 430 957
                     </a>
                   </li>
                   <li className="mt-6 flex items-center justify-start">

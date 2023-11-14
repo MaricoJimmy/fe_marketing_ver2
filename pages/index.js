@@ -12,6 +12,7 @@ import {
 } from "../queries/homePageQueries";
 import { getDate } from "../utils";
 import { useTranslations } from "next-intl";
+import { useRouter } from "next/router";
 
 export async function getStaticProps({ locale }) {
   const client = getApolloClient();
@@ -53,11 +54,30 @@ export async function getStaticProps({ locale }) {
             ? post.title.replace(/EN-\d{8}-/, "")
             : post.title.replace(/VN-\d{8}-/, ""),
       };
-    });
+    })
+    .slice(0, 5);
+
+  const localeOEEPosts = oeePosts
+    .filter((post) => {
+      if (locale === "en") {
+        return post.title.startsWith("EN-");
+      }
+      return post.title.startsWith("VN-");
+    })
+    .map((post) => {
+      return {
+        ...post,
+        title:
+          locale === "en"
+            ? post.title.replace(/EN-\d{8}-/, "")
+            : post.title.replace(/VN-\d{8}-/, ""),
+      };
+    })
+    .slice(0, 5);
 
   return {
     props: {
-      oeePosts,
+      oeePosts: localeOEEPosts,
       pmsPosts,
       newsPosts: localeNewPosts,
     },
@@ -66,6 +86,8 @@ export async function getStaticProps({ locale }) {
 }
 
 const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
+  console.log("🚀 ~ file: index.js:89 ~ HomePage ~ oeePosts:", oeePosts);
+  const { locale } = useRouter();
   const t = useTranslations("Index");
   const firstPost = newsPosts[0];
 
@@ -183,7 +205,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                               {firstPost.title}
                             </h3>
                             <span className="block mt-2 text-gray/80">
-                              {getDate(firstPost.date)}
+                              {getDate(firstPost.date, locale)}
                             </span>
                             <h5
                               className="mt-4 text-gray desc-blog"
@@ -215,7 +237,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                                     {post.title}
                                   </h4>
                                   <span className="mt-2 block text-gray/80">
-                                    {getDate(post.date)}
+                                    {getDate(post.date, locale)}
                                   </span>
                                 </div>
                               </a>
@@ -269,7 +291,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                                     {post.title}
                                   </h5>
                                   <span className="mt-2 text-gray/60">
-                                    {getDate(post.date)}
+                                    {getDate(post.date, locale)}
                                   </span>
                                 </div>
                               </a>
@@ -320,7 +342,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                                     {post.title}
                                   </h5>
                                   <span className="mt-2 text-gray/60">
-                                    {getDate(post.date)}
+                                    {getDate(post.date, locale)}
                                   </span>
                                 </div>
                               </a>

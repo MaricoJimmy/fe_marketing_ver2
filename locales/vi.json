@@ -86,7 +86,7 @@
       "address": "Địa chỉ không được để trống!",
       "product": "Hãy chọn ít nhất một loại sản phẩm!"
     },
-    "bookDemo": "<p>Với mục tiêu cùng đồng hành với khách hàng, Pambu sẽ hỗ trợ khách hàng sử dụng demo miễn phí. Chương trình demo cụ thể như sau:</p><ul class='mt-6 ml-6 list-disc'> <li> Đối với phần mềm <span class='text-primary'>Pambu OEE</span>: khách hàng sẽ được trải nghiệm bản basic trên 1 máy sản xuất trong thời gian 2 tháng. </li> <li>Đối với phần mềm <span class='text-primary'>Pambu PMS</span>: khách hàng sẽ được trải nghiệm bản basic trên 1 phụ tải điện trong thời gian 2 tháng. </li><li>Toàn bộ thiết bị phần cứng Pambu cung cấp và lắp đặt miễn phí, khách hàng cung cấp hạ tầng Internet. </li></ul><p class='mt-6'>Các bước lên kế hoạch demo như sau:</p><ul class='mt-6 ml-6 list-disc'><li>Khảo sát mặt bằng thiết bị cần demo tại site của khách hàng.</li><li>Lên cấu hình và thời gian lắp đặt.</li><li>Thống nhất các điều khoản lắp đặt và bảo quản tài sản demo.</li><li>Lắp đặt demo và lắng nghe ý kiến phản hồi của khách hàng.</li></ul><p class='mt-6'>Còn chần chừ gì nữa mà không liên hệ ngay với đội ngũ Pambu tại hotline <a href='tel:0974074862' class='font-bold'>0974 074 862</a> hoặc điền vào form dưới đây để sử dụng sản phẩm. Pambu rất vui lòng được đồng hành!</p>"
+    "bookDemo": "<p>Với mục tiêu cùng đồng hành với khách hàng, Pambu sẽ hỗ trợ khách hàng sử dụng demo miễn phí. Chương trình demo cụ thể như sau:</p><ul class='mt-6 ml-6 list-disc'> <li> Đối với phần mềm <span class='text-primary'>Pambu OEE</span>: khách hàng sẽ được trải nghiệm bản basic trên 1 máy sản xuất trong thời gian 2 tháng. </li> <li>Đối với phần mềm <span class='text-primary'>Pambu PMS</span>: khách hàng sẽ được trải nghiệm bản basic trên 1 phụ tải điện trong thời gian 2 tháng. </li><li>Toàn bộ thiết bị phần cứng Pambu cung cấp và lắp đặt miễn phí, khách hàng cung cấp hạ tầng Internet. </li></ul><p class='mt-6'>Các bước lên kế hoạch demo như sau:</p><ul class='mt-6 ml-6 list-disc'><li>Khảo sát mặt bằng thiết bị cần demo tại site của khách hàng.</li><li>Lên cấu hình và thời gian lắp đặt.</li><li>Thống nhất các điều khoản lắp đặt và bảo quản tài sản demo.</li><li>Lắp đặt demo và lắng nghe ý kiến phản hồi của khách hàng.</li></ul><p class='mt-6'>Còn chần chừ gì nữa mà không liên hệ ngay với đội ngũ Pambu tại hotline <a href='tel:0387430957' class='font-bold'>0387 430 957</a> hoặc điền vào form dưới đây để sử dụng sản phẩm. Pambu rất vui lòng được đồng hành!</p>"
   },
   "PMS": {
     "heroSection": {
@@ -187,7 +187,7 @@
         },
         {
           "ask": "Chi phí lắp đặt Pambu PMS bao gồm những gì ?",
-          "answer": "<span>Bao gồm lắp đặt phần cứng, phầm mềm:</span><p>- Phần cứng được lựa chọn sản phẩm từ các tập đoàn lớn như Mitsubishi, Siemens, Schneider,… </p><p> - Phần mềm được nghiên cứu phát triển và quá trình kiểm tra kỹ lưỡng. Bên cạnh đó sau khi sử dụng sản phẩm Pambu mỗi phiên bản mới đều sẽ tự động cập nhật miễn phí cho người sử dụng.</p><span>Để biết thêm thông tin chi tiết vui lòng đặt lịch demo<a href='/dat-lich-demo' class='ml-1 text-blue-primary underline'>tại đây</a> hoặc gọi điện trực tiếp để được đội ngũ chuyên gia tư vấnqua số hotline: <a href='tel:0974074862' class='text-secondary underline'>0974 074 862</a></span>"
+          "answer": "<span>Bao gồm lắp đặt phần cứng, phầm mềm:</span><p>- Phần cứng được lựa chọn sản phẩm từ các tập đoàn lớn như Mitsubishi, Siemens, Schneider,… </p><p> - Phần mềm được nghiên cứu phát triển và quá trình kiểm tra kỹ lưỡng. Bên cạnh đó sau khi sử dụng sản phẩm Pambu mỗi phiên bản mới đều sẽ tự động cập nhật miễn phí cho người sử dụng.</p><span>Để biết thêm thông tin chi tiết vui lòng đặt lịch demo<a href='/dat-lich-demo' class='ml-1 text-blue-primary underline'>tại đây</a> hoặc gọi điện trực tiếp để được đội ngũ chuyên gia tư vấnqua số hotline: <a href='tel:0387430957' class='text-secondary underline'>0387 430 957</a></span>"
         },
         {
           "ask": "Mạng lưới phân phối của Pambu gồm những đâu ?",
@@ -204,7 +204,7 @@
       ],
       "img": "/image/pms/question.png"
     },
-    "demo": "Với mục tiêu cùng đồng hành với khách hàng để giải quyết các bài toán quản lý năng lượng, Pambu sẽ hỗ trợ khách hàng sử dụng demo<span class='font-bold'>MIỄN PHÍ</span>."
+    "demo": "Với mục tiêu cùng đồng hành với khách hàng để giải quyết các bài toán quản lý năng lượng, Pambu sẽ hỗ trợ khách hàng sử dụng demo <span class='font-bold'>MIỄN PHÍ</span>."
   },
   "OEE": {
     "heroSection": {
@@ -309,7 +309,7 @@
         },
         {
           "ask": "Chi phí lắp đặt bao gồm những gì ?",
-          "answer": "<span>Bao gồm lắp đặt phần cứng, phầm mềm:</span> <p>- Phần cứng được lựa chọn sản phẩm từ các tập đoàn lớn như Mitsubishi, Siemens, Schneider,…</p> <p>- Phần mềm được nghiên cứu phát triển và quá trình kiểm tra kỹ lưỡng. Bên cạnh đó sau khi sử dụng sản phẩm Pambu mỗi phiên bản mới đều sẽ tự động cập nhật miễn phí cho người sử dụng. </p> <span>Để biết thêm thông tin chi tiết vui lòng đặt lịch demo <a href='/dat-lich-demo' class='ml-1 text-blue-primary underline'> tại đây </a> hoặc gọi điện trực tiếp để được đội ngũ chuyên gia tư vấn qua số hotline: <a href='tel:0974074862' class='text-secondary underline'>0974 074 862</a></span>"
+          "answer": "<span>Bao gồm lắp đặt phần cứng, phầm mềm:</span> <p>- Phần cứng được lựa chọn sản phẩm từ các tập đoàn lớn như Mitsubishi, Siemens, Schneider,…</p> <p>- Phần mềm được nghiên cứu phát triển và quá trình kiểm tra kỹ lưỡng. Bên cạnh đó sau khi sử dụng sản phẩm Pambu mỗi phiên bản mới đều sẽ tự động cập nhật miễn phí cho người sử dụng. </p> <span>Để biết thêm thông tin chi tiết vui lòng đặt lịch demo <a href='/dat-lich-demo' class='ml-1 text-blue-primary underline'> tại đây </a> hoặc gọi điện trực tiếp để được đội ngũ chuyên gia tư vấn qua số hotline: <a href='tel:0387430957' class='text-secondary underline'>0387 430 957</a></span>"
         },
         {
           "ask": "Mạng lưới phân phối gồm những đâu ?",
@@ -322,7 +322,7 @@
       ],
       "img": "/image/oee/question.png"
     },
-    "demo": "Với mục tiêu cùng đồng hành với khách hàng để hiện đại hóa sản xuất công nghiệp, Pambu sẽ hỗ trợ khách hàng sử dụng demo<span class='font-bold'>MIỄN PHÍ</span>."
+    "demo": "Với mục tiêu cùng đồng hành với khách hàng để hiện đại hóa sản xuất công nghiệp, Pambu sẽ hỗ trợ khách hàng sử dụng demo <span class='font-bold'>MIỄN PHÍ</span>."
   },
   "Header": {
     "news": "Tin tức",
@@ -337,7 +337,7 @@
     "bookDemo": "Đặt lịch demo"
   },
   "BookDemo": {
-    "desc": "<p>Với mục tiêu cùng đồng hành với khách hàng, Pambu sẽ hỗ trợ khách hàng sử dụng demo miễn phí. Chương trình demo cụ thể như sau:</p><ul class='mt-6 ml-6 list-disc'> <li> Đối với phần mềm <span class='text-primary'>Pambu OEE</span>: khách hàng sẽ được trải nghiệm bản basic trên 1 máy sản xuất trong thời gian 2 tháng. </li> <li>Đối với phần mềm <span class='text-primary'>Pambu PMS</span>: khách hàng sẽ được trải nghiệm bản basic trên 1 phụ tải điện trong thời gian 2 tháng. </li><li>Toàn bộ thiết bị phần cứng Pambu cung cấp và lắp đặt miễn phí, khách hàng cung cấp hạ tầng Internet. </li></ul><p class='mt-6'>Các bước lên kế hoạch demo như sau:</p><ul class='mt-6 ml-6 list-disc'><li>Khảo sát mặt bằng thiết bị cần demo tại site của khách hàng.</li><li>Lên cấu hình và thời gian lắp đặt.</li><li>Thống nhất các điều khoản lắp đặt và bảo quản tài sản demo.</li><li>Lắp đặt demo và lắng nghe ý kiến phản hồi của khách hàng.</li></ul><p class='mt-6'>Còn chần chừ gì nữa mà không liên hệ ngay với đội ngũ Pambu tại hotline <a href='tel:0974074862' class='font-bold'>0974 074 862</a> hoặc điền vào form dưới đây để sử dụng sản phẩm. Pambu rất vui lòng được đồng hành!</p>"
+    "desc": "<p>Với mục tiêu cùng đồng hành với khách hàng, Pambu sẽ hỗ trợ khách hàng sử dụng demo miễn phí. Chương trình demo cụ thể như sau:</p><ul class='mt-6 ml-6 list-disc'> <li> Đối với phần mềm <span class='text-primary'>Pambu OEE</span>: khách hàng sẽ được trải nghiệm bản basic trên 1 máy sản xuất trong thời gian 2 tháng. </li> <li>Đối với phần mềm <span class='text-primary'>Pambu PMS</span>: khách hàng sẽ được trải nghiệm bản basic trên 1 phụ tải điện trong thời gian 2 tháng. </li><li>Toàn bộ thiết bị phần cứng Pambu cung cấp và lắp đặt miễn phí, khách hàng cung cấp hạ tầng Internet. </li></ul><p class='mt-6'>Các bước lên kế hoạch demo như sau:</p><ul class='mt-6 ml-6 list-disc'><li>Khảo sát mặt bằng thiết bị cần demo tại site của khách hàng.</li><li>Lên cấu hình và thời gian lắp đặt.</li><li>Thống nhất các điều khoản lắp đặt và bảo quản tài sản demo.</li><li>Lắp đặt demo và lắng nghe ý kiến phản hồi của khách hàng.</li></ul><p class='mt-6'>Còn chần chừ gì nữa mà không liên hệ ngay với đội ngũ Pambu tại hotline <a href='tel:0387430957' class='font-bold'>0387 430 957</a> hoặc điền vào form dưới đây để sử dụng sản phẩm. Pambu rất vui lòng được đồng hành!</p>"
   },
   "Common": {
     "news": "Tin tức nổi bật",

@@ -47,14 +47,14 @@ export async function getStaticProps({ params, locale }) {
 
   const relatedPosts = items
     .filter((item) => item.slug !== params.postSlug)
-    .slice(0, 20)
     .filter((post) => {
       if (locale === "en") {
         return post.title.startsWith("EN-");
       } else if (locale === "vi") {
         return post.title.startsWith("VN-");
       }
-    });
+    })
+    .slice(0, 5);
 
   const viSlug = allPosts.find((item) => {
     const postDate = item.title.substring(3, 11);
@@ -220,7 +220,7 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
                   <ul className="mt-6">
                     {relatedPosts.map((relatePost) => (
                       <li key={relatePost.id} className="mb-8 last:mb-0">
-                        <BlogRelated data={relatePost} category="tin-tuc" />
+                        <BlogRelated data={relatePost} category="tin-tuc"  />
                       </li>
                     ))}
                   </ul>

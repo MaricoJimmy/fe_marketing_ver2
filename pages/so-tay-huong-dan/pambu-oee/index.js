@@ -27,6 +27,7 @@ export async function getStaticProps() {
 }
 
 const OEEGuidesPage = ({ posts }) => {
+  console.log("🚀 ~ file: index.js:30 ~ OEEGuidesPage ~ posts:", posts);
   const { locale } = useRouter();
   const t = useTranslations("Common");
   const breadcrumbs = [

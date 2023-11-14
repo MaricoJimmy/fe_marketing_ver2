@@ -155,7 +155,7 @@ function HeaderDesktop({ stickyHeader, isProductPage, isPMSPage }) {
             <div>
               {(isProductPage && (
                 <a
-                  href="tel:0974074862"
+                  href="tel:0387430957"
                   className={`${
                     (isPMSPage &&
                       "bg-orange-primary hover:bg-orange-secondary") ||
@@ -175,7 +175,7 @@ function HeaderDesktop({ stickyHeader, isProductPage, isPMSPage }) {
                     />
                   </svg>
                   <span className="ml-2 text-lg text-white font-semibold">
-                    0974 074 862
+                    0387 430 957
                   </span>
                 </a>
               )) || (
@@ -416,7 +416,7 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
                 {(isProductPage && (
                   <a
                     onClick={() => setOpenMenu(!openMenu)}
-                    href="tel:0974074862"
+                    href="tel:0387430957"
                     className={`${
                       (isPMSPage &&
                         "bg-orange-primary hover:bg-orange-secondary") ||
@@ -436,7 +436,7 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
                       />
                     </svg>
                     <span className="ml-2 text-lg text-white font-semibold">
-                      0974 074 862
+                      0387 430 957
                     </span>
                   </a>
                 )) || (

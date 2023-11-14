@@ -8,7 +8,7 @@ function Hotline({ isPMSPage }) {
       <div className="w-full flex justify-center items-center">
         <div className="max-w-screen-xl w-full">
           <a
-            href="tel:0974074862"
+            href="tel:0387430957"
             className="py-4 px-8 h-full flex items-center justify-end"
           >
             <svg
@@ -24,7 +24,7 @@ function Hotline({ isPMSPage }) {
               />
             </svg>
             <span className="ml-2 text-lg font-semibold">Hotline</span>
-            <span className="ml-2 text-lg font-semibold">0974 074 862</span>
+            <span className="ml-2 text-lg font-semibold">0387 430 957</span>
           </a>
         </div>
       </div>
