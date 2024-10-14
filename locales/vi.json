@@ -1,9 +1,9 @@
 {
   "Index": {
-    "titleSocial": "Pambu - Phần Mềm Quản Lý, Giám Sát Năng Lượng Và Hiệu Suất Máy",
+    "titleSocial": "Udata - Phần Mềm Quản Lý, Giám Sát Năng Lượng Và Hiệu Suất Máy",
     "title": {
-      "desktop": "Pambu - Phần Mềm Quản Lý, Giám Sát <br /><span class='text-primary'>Năng Lượng</span> Và <span class='text-primary'>Hiệu Suất</span> Máy",
-      "mobile": "Pambu - Phần Mềm Quản Lý, Giám Sát <span class='text-primary'>Năng Lượng</span> Và <span class='text-primary'>Hiệu Suất</span> Máy"
+      "desktop": "Udata - Phần Mềm Quản Lý, Giám Sát <br /><span class='text-primary'>Năng Lượng</span> Và <span class='text-primary'>Hiệu Suất</span> Máy",
+      "mobile": "Udata - Phần Mềm Quản Lý, Giám Sát <span class='text-primary'>Năng Lượng</span> Và <span class='text-primary'>Hiệu Suất</span> Máy"
     },
     "desc": "Chìa khóa mở ra cánh cửa số hóa dữ liệu nhà máy. Tiên phong trong công nghệ Cloud",
     "oee": "Phần mềm quản lý hiệu suất và bảo dưỡng máy",
@@ -31,7 +31,7 @@
     "ask": "Hỏi và đáp",
     "demo": "Yêu cầu Demo",
     "book": "Đặt lịch Demo",
-    "titleDemo": "Với mục tiêu cùng đồng hành với khách hàng, Pambu sẽ hỗ trợ khách hàng sử dụng demo MIỄN PHÍ.",
+    "titleDemo": "Với mục tiêu cùng đồng hành với khách hàng, Udata sẽ hỗ trợ khách hàng sử dụng demo MIỄN PHÍ.",
     "button": {
       "demo": "Đặt lịch demo"
     },
@@ -86,7 +86,7 @@
       "address": "Địa chỉ không được để trống!",
       "product": "Hãy chọn ít nhất một loại sản phẩm!"
     },
-    "bookDemo": "<p>Với mục tiêu cùng đồng hành với khách hàng, Pambu sẽ hỗ trợ khách hàng sử dụng demo miễn phí. Chương trình demo cụ thể như sau:</p><ul class='mt-6 ml-6 list-disc'> <li> Đối với phần mềm <span class='text-primary'>Pambu OEE</span>: khách hàng sẽ được trải nghiệm bản basic trên 1 máy sản xuất trong thời gian 2 tháng. </li> <li>Đối với phần mềm <span class='text-primary'>Pambu PMS</span>: khách hàng sẽ được trải nghiệm bản basic trên 1 phụ tải điện trong thời gian 2 tháng. </li><li>Toàn bộ thiết bị phần cứng Pambu cung cấp và lắp đặt miễn phí, khách hàng cung cấp hạ tầng Internet. </li></ul><p class='mt-6'>Các bước lên kế hoạch demo như sau:</p><ul class='mt-6 ml-6 list-disc'><li>Khảo sát mặt bằng thiết bị cần demo tại site của khách hàng.</li><li>Lên cấu hình và thời gian lắp đặt.</li><li>Thống nhất các điều khoản lắp đặt và bảo quản tài sản demo.</li><li>Lắp đặt demo và lắng nghe ý kiến phản hồi của khách hàng.</li></ul><p class='mt-6'>Còn chần chừ gì nữa mà không liên hệ ngay với đội ngũ Pambu tại hotline <a href='tel:0387430957' class='font-bold'>0387 430 957</a> hoặc điền vào form dưới đây để sử dụng sản phẩm. Pambu rất vui lòng được đồng hành!</p>"
+    "bookDemo": "<p>Với mục tiêu cùng đồng hành với khách hàng, Udata sẽ hỗ trợ khách hàng sử dụng demo miễn phí. Chương trình demo cụ thể như sau:</p><ul class='mt-6 ml-6 list-disc'> <li> Đối với phần mềm <span class='text-primary'>Pambu OEE</span>: khách hàng sẽ được trải nghiệm bản basic trên 1 máy sản xuất trong thời gian 2 tháng. </li> <li>Đối với phần mềm <span class='text-primary'>Pambu PMS</span>: khách hàng sẽ được trải nghiệm bản basic trên 1 phụ tải điện trong thời gian 2 tháng. </li><li>Toàn bộ thiết bị phần cứng Pambu cung cấp và lắp đặt miễn phí, khách hàng cung cấp hạ tầng Internet. </li></ul><p class='mt-6'>Các bước lên kế hoạch demo như sau:</p><ul class='mt-6 ml-6 list-disc'><li>Khảo sát mặt bằng thiết bị cần demo tại site của khách hàng.</li><li>Lên cấu hình và thời gian lắp đặt.</li><li>Thống nhất các điều khoản lắp đặt và bảo quản tài sản demo.</li><li>Lắp đặt demo và lắng nghe ý kiến phản hồi của khách hàng.</li></ul><p class='mt-6'>Còn chần chừ gì nữa mà không liên hệ ngay với đội ngũ Pambu tại hotline <a href='tel:0387430957' class='font-bold'>0387 430 957</a> hoặc điền vào form dưới đây để sử dụng sản phẩm. Pambu rất vui lòng được đồng hành!</p>"
   },
   "PMS": {
     "heroSection": {

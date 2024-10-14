@@ -86,7 +86,6 @@ export async function getStaticProps({ locale }) {
 }
 
 const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
-  console.log("🚀 ~ file: index.js:89 ~ HomePage ~ oeePosts:", oeePosts);
   const { locale } = useRouter();
   const t = useTranslations("Index");
   const firstPost = newsPosts[0];

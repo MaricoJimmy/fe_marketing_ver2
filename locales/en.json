@@ -1,9 +1,9 @@
 {
   "Index": {
-    "titleSocial": "Pambu - Solutions for Managing, Monitoring of Energy and Machine Performance",
+    "titleSocial": "Udata - Solutions for Managing, Monitoring of Energy and Machine Performance",
     "title": {
-      "desktop": "Pambu - Solutions for Managing, Monitoring of <br /> <span class='text-primary'>Energy</span> and Machine <span class='text-primary'>Performance</span>",
-      "mobile": "Pambu - Solutions for Managing, Monitoring of <span class='text-primary'>Energy</span> and Machine <span class='text-primary'>Performance</span>"
+      "desktop": "Udata - Solutions for Managing, Monitoring of <br /> <span class='text-primary'>Energy</span> and Machine <span class='text-primary'>Performance</span>",
+      "mobile": "Udata - Solutions for Managing, Monitoring of <span class='text-primary'>Energy</span> and Machine <span class='text-primary'>Performance</span>"
     },
     "desc": "The key that opens the door to digitizing factory data. Pioneer in Cloud technology",
     "oee": "Machine maintenance and performance management solutions",
@@ -31,7 +31,7 @@
     "ask": "Ask and answer",
     "demo": "Book a Demo",
     "book": "Schedule a Demo",
-    "titleDemo": "With the goal of accompanying customers, Pambu will support customers to use the FREE demo.",
+    "titleDemo": "With the goal of accompanying customers, Udata will support customers to use the FREE demo.",
     "button": {
       "demo": "Book a demo"
     },
@@ -80,7 +80,7 @@
       "address": "Address cannot be empty!",
       "product": "Please select at least one product category!"
     },
-    "bookDemo": "<p>With the goal of accompanying customers, Pambu will support customers to use the free demo. The specific demo program is as follows:</p><ul class='mt-6 ml-6 list-disc '><li>With software <span class='text-primary'>Pambu OEE</span>: Customers will be able to experience the basic version on a production machine for 2 months. </li><li>With software <span class='text-primary'>Pambu PMS</span>: Customers will experience the basic version on 1 electrical load for 2 months. </li><li>All hardware equipment Pambu provides and installs free of charge, customers provide Internet infrastructure. </li></ul><p class='mt-6'>The steps to plan the demo are as follows:</p><ul class='mt-6 ml-6 list-disc'><li>Site survey of equipment to be demoed at customer's site.</li><li>Up configuration and installation time.</li><li>Agree on terms of installation and maintenance of demo assets.</li><li>Install demo and listen to customer feedback.</li></ul><p class='mt-6'>Do not hesitate any longer without immediately contacting the Pambu team at the hotline <a href='tel:0387430957' class='font-bold'>0387 430 957</a> or fill out the form below to use the product. Pambu is pleased to accompany you!</p>"
+    "bookDemo": "<p>With the goal of accompanying customers, Udata will support customers to use the free demo. The specific demo program is as follows:</p><ul class='mt-6 ml-6 list-disc '><li>With software <span class='text-primary'>Pambu OEE</span>: Customers will be able to experience the basic version on a production machine for 2 months. </li><li>With software <span class='text-primary'>Pambu PMS</span>: Customers will experience the basic version on 1 electrical load for 2 months. </li><li>All hardware equipment Pambu provides and installs free of charge, customers provide Internet infrastructure. </li></ul><p class='mt-6'>The steps to plan the demo are as follows:</p><ul class='mt-6 ml-6 list-disc'><li>Site survey of equipment to be demoed at customer's site.</li><li>Up configuration and installation time.</li><li>Agree on terms of installation and maintenance of demo assets.</li><li>Install demo and listen to customer feedback.</li></ul><p class='mt-6'>Do not hesitate any longer without immediately contacting the Pambu team at the hotline <a href='tel:0387430957' class='font-bold'>0387 430 957</a> or fill out the form below to use the product. Pambu is pleased to accompany you!</p>"
   },
   "PMS": {
     "heroSection": {
