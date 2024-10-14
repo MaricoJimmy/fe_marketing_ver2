@@ -35,7 +35,7 @@ function FooterDesktop() {
                 </a>
               </Link>
               <span className="text-lg text-gray/60 font-semibold">
-                Copyright @ 2022 Pambu.org
+                Copyright @ 2022 Udata.ai
               </span>
             </div>
             <div className="col-span-1">
