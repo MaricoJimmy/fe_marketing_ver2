@@ -27,7 +27,7 @@ function MaintenanceLayout({ children }) {
           <div className="flex-1 flex flex-col justify-center items-center">
             <div>
               <Image
-                src="/image/coming-soon-2.png"
+                src="/image/coming-soon.svg"
                 width="500"
                 height="300"
                 alt=""
