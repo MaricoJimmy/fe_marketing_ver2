@@ -3,12 +3,14 @@ import DefaultLayout from "../components/layout/DefaultLayout";
 import "../styles/globals.css";
 import { IntlProvider } from "next-intl";
 import { useRouter } from "next/router";
+import MaintenanceLayout from "../components/layout/MaintenanceLayout";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
   const locale = router.locale || router.defaultLocale;
   const localeMessages = require(`../locales/${locale}.json`);
   const Layout = Component.Layout || DefaultLayout;
+
   return (
     <>
       <Script
@@ -25,9 +27,11 @@ function MyApp({ Component, pageProps }) {
         `}
       </Script>
       <IntlProvider messages={localeMessages} locale={locale}>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
+        <MaintenanceLayout>
+          <Layout>
+            <Component {...pageProps} />
+          </Layout>
+        </MaintenanceLayout>
       </IntlProvider>
     </>
   );
