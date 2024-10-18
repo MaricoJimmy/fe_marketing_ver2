@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }) {
           function gtag(){window.dataLayer.push(arguments);}
           gtag('js', new Date());
 
-          gtag('config', 'G-TF6YXCZ2TW');
+          gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
         `}
       </Script>
       <IntlProvider messages={localeMessages} locale={locale}>
