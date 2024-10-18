@@ -2,60 +2,60 @@ import { getApolloClient } from "../libs/apollo-client";
 import {
   AllNewsPosts,
   AllOEEPosts,
-  AllPMSPosts
+  AllPMSPosts,
 } from "../queries/guidesQueries";
 
 function generateSiteMap({ newsPosts, oeePosts, pmsPosts }) {
   return `<?xml version="1.0" encoding="UTF-8"?>
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
-        <loc>https://www.pambu.org/</loc>
+        <loc>https://www.udata.ai/</loc>
    </url>
    <url>
-        <loc>https://www.pambu.org/tin-tuc</loc>
+        <loc>https://www.udata.ai/tin-tuc</loc>
    </url>
    <url>
-        <loc>https://www.pambu.org/san-pham/pambu-oee</loc>
+        <loc>https://www.udata.ai/san-pham/pambu-oee</loc>
    </url>
    <url>
-        <loc>https://www.pambu.org/san-pham/pambu-pms</loc>
+        <loc>https://www.udata.ai/san-pham/pambu-pms</loc>
    </url>
    <url>
-        <loc>https://www.pambu.org/pambu-oee</loc>
+        <loc>https://www.udata.ai/pambu-oee</loc>
    </url>
    <url>
-        <loc>https://www.pambu.org/pambu-pms</loc>
+        <loc>https://www.udata.ai/pambu-pms</loc>
    </url>
    <url>
-        <loc>https://www.pambu.org/dat-lich-demo</loc>
+        <loc>https://www.udata.ai/dat-lich-demo</loc>
    </url>
      ${newsPosts
-      .map(({ slug }) => {
-        return `
+       .map(({ slug }) => {
+         return `
        <url>
-           <loc>${`https://www.pambu.org/tin-tuc/${slug}`}</loc>
+           <loc>${`https://www.udata.ai/tin-tuc/${slug}`}</loc>
        </url>
      `;
-      })
-      .join("")}
+       })
+       .join("")}
        ${oeePosts
-      .map(({ slug }) => {
-        return `
+         .map(({ slug }) => {
+           return `
         <url>
-            <loc>${`https://www.pambu.org/pambu-oee/${slug}`}</loc>
+            <loc>${`https://www.udata.ai/pambu-oee/${slug}`}</loc>
         </url>
       `;
-      })
-      .join("")}
+         })
+         .join("")}
         ${pmsPosts
-      .map(({ slug }) => {
-        return `
+          .map(({ slug }) => {
+            return `
             <url>
-                <loc>${`https://www.pambu.org/pambu-pms/${slug}`}</loc>
+                <loc>${`https://www.udata.ai/pambu-pms/${slug}`}</loc>
             </url>
           `;
-      })
-      .join("")}
+          })
+          .join("")}
    </urlset>
  `;
 }
