@@ -349,27 +349,27 @@
   },
   "Header": {
     "news": {
-      "title": "News",
+      "title": "Tin tức",
       "subMenus": {
         "case-study": "Các ví dụ thực tế về hiệu quả giải pháp",
         "blog": "Tin tức và chia sẻ về quản lý năng lượng"
       }
     },
     "products": {
-      "title": "Products",
+      "title": "Sản phẩm",
       "subMenus": {
         "pms": "Tối ưu năng lượng, tiết kiệm chi phí"
       }
     },
     "solutions": {
-      "title": "Solution",
+      "title": "Giải pháp",
       "subMenus": {
         "solar": "Giải pháp giám sát điện mặt trời áp mái"
       }
     },
     "contact": "Liên hệ",
     "about-us": "Về công ty",
-    "bookDemo": "Book a demo"
+    "bookDemo": "Yêu cầu demo"
   },
   "Contact": {
     "title": "Liên hệ với chúng tôi",
