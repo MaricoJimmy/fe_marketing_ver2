@@ -82,7 +82,7 @@ function FooterDesktop({ menus }) {
                   <li key={menu.title} className="w-full">
                     <div className="text-gray/80 font-semibold hover:text-primary duration-200">
                       <Link href={menu.href}>
-                        <a className="block w-full" aria-label="Pambu PMS">
+                        <a className="block w-full" aria-label="Udata PMS">
                           {menu.title}
                         </a>
                       </Link>
@@ -132,10 +132,10 @@ function FooterDesktop({ menus }) {
                     />
                   </svg>
                   <a
-                    href="mailto:pambu@DHG.asia"
+                    href="mailto:minhnt@udata.ai"
                     className="ml-2 text-gray/80 font-semibold"
                   >
-                    pambu@DHG.asia
+                    minhnt@udata.ai
                   </a>
                 </li>
                 <li className="flex items-start justify-center">
@@ -258,10 +258,10 @@ function FooterMobile({ menus }) {
                       />
                     </svg>
                     <a
-                      href="mailto:pambu@DHG.asia"
+                      href="mailto:minhnt@udata.ai"
                       className=" ml-2 text-gray/80 font-semibold"
                     >
-                      pambu@DHG.asia
+                      minhnt@udata.ai
                     </a>
                   </li>
                   <li className="mt-6 flex items-center justify-start">
