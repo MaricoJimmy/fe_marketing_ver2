@@ -66,13 +66,6 @@ const AllNewsPage = ({ posts, locale }) => {
       };
     });
 
-  useEffect(() => {
-    if (router.locale === "vi") {
-      router.push("/tin-tuc");
-    } else {
-      router.push("/news");
-    }
-  }, [router.locale]);
 
   return (
     <>

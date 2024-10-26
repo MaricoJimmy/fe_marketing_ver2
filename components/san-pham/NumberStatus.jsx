@@ -3,10 +3,10 @@ import { v4 } from "uuid";
 
 function NumberStatus({ data, className = "" }) {
   return (
-    <div className="mt-16 md:mt-32">
+    <div className="">
       <div
         id="wave-container-top"
-        className={`${className} -mb-1 w-full h-[50px]`}
+        className={`${className} bg-gradient-to-r -mb-[0.3px] w-full h-[50px]`}
       />
       <div className={`w-full h-full bg-gradient-to-r ${className}`}>
         <div className="w-full h-fit flex justify-center items-center">
@@ -19,10 +19,10 @@ function NumberStatus({ data, className = "" }) {
                     dangerouslySetInnerHTML={{ __html: stat.icon }}
                   ></div>
                   <div className="mt-6 text-center">
-                    <h3 className="text-5xl text-gray font-bold">
+                    <h3 className="text-5xl text-white font-bold">
                       {stat.title}
                     </h3>
-                    <h5 className="mt-4 text-lg text-gray/80 font-medium">
+                    <h5 className="mt-4 text-lg text-white/80 font-medium">
                       {stat.desc}
                     </h5>
                   </div>
@@ -34,7 +34,7 @@ function NumberStatus({ data, className = "" }) {
       </div>
       <div
         id="wave-container-bot"
-        className={`${className} -mt-1 w-full h-[30px]`}
+        className={`${className} bg-gradient-to-r w-full h-[30px]`}
       />
     </div>
   );

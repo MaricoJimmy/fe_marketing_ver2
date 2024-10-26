@@ -1,22 +1,57 @@
+import {
+  ROUTER_ABOUT_US,
+  ROUTER_BLOG,
+  ROUTER_CASE_STUDY,
+  ROUTER_CONTACT,
+  ROUTER_PMS,
+  ROUTER_SOLAR,
+} from "@/utils/constant";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 function Footer() {
+  const t = useTranslations("Footer");
+  const listMenu = [
+    {
+      title: "Udata PMS",
+      href: ROUTER_PMS,
+    },
+    {
+      title: "Solar rooftop",
+      href: ROUTER_SOLAR,
+    },
+    {
+      title: "Case study",
+      href: ROUTER_CASE_STUDY,
+    },
+    {
+      title: "Blog",
+      href: ROUTER_BLOG,
+    },
+    {
+      title: t("section.first.links.contact"),
+      href: ROUTER_CONTACT,
+    },
+    {
+      title: t("section.first.links.about-us"),
+      href: ROUTER_ABOUT_US,
+    },
+  ];
   return (
     <>
       <div className="hidden lg:block">
-        <FooterDesktop />
+        <FooterDesktop menus={listMenu} />
       </div>
       <div className="block lg:hidden">
-        <FooterMobile />
+        <FooterMobile menus={listMenu} />
       </div>
     </>
   );
 }
 
-function FooterDesktop() {
+function FooterDesktop({ menus }) {
   const t = useTranslations("Footer");
   return (
     <div className="w-full border-t border-gray/20">
@@ -43,54 +78,17 @@ function FooterDesktop() {
                 {t("section.first.title")}
               </h4>
               <ul className="mt-8 flex flex-col items-start gap-6 cursor-pointer">
-                <li className="w-full">
-                  <Link href="/tin-tuc">
-                    <a
-                      className="block w-full text-gray/80 font-semibold hover:text-primary duration-200"
-                      aria-label="Tin tức"
-                    >
-                      {t("section.first.links.news")}
-                    </a>
-                  </Link>
-                </li>
-                <li className="w-full">
-                  <div className="text-gray/80 font-semibold hover:text-primary duration-200">
-                    <Link href="/san-pham/pambu-oee">
-                      <a className="block w-full" aria-label="Pambu OEE">
-                        Pambu OEE
-                      </a>
-                    </Link>
-                  </div>
-                  <div className="mt-6 text-gray/80 font-semibold hover:text-primary duration-200">
-                    <Link href="/san-pham/pambu-pms">
-                      <a className="block w-full" aria-label="Pambu PMS">
-                        Pambu PMS
-                      </a>
-                    </Link>
-                  </div>
-                </li>
-                <li className="w-full">
-                  <div className="text-gray/80 font-semibold hover:text-primary duration-200">
-                    <Link href="/pambu-oee">
-                      <a
-                        className="block w-full"
-                        aria-label="Tài liệu Pambu OEE"
-                      >
-                        {t("section.first.links.oee")}
-                      </a>
-                    </Link>
-                  </div>
-                  <div className="mt-6 text-gray/80 font-semibold hover:text-primary duration-200">
-                    <Link href="/pambu-pms">
-                      <a
-                        className="block w-full"
-                        aria-label="Tài liệu Pambu PMS"
-                      >
-                        {t("section.first.links.pms")}
-                      </a>
-                    </Link>
-                  </div>
-                </li>
+                {menus.map((menu) => (
+                  <li key={menu.title} className="w-full">
+                    <div className="text-gray/80 font-semibold hover:text-primary duration-200">
+                      <Link href={menu.href}>
+                        <a className="block w-full" aria-label="Pambu PMS">
+                          {menu.title}
+                        </a>
+                      </Link>
+                    </div>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="col-span-1">
@@ -140,7 +138,7 @@ function FooterDesktop() {
                     pambu@DHG.asia
                   </a>
                 </li>
-                <li className="flex items-center justify-center">
+                <li className="flex items-start justify-center">
                   <div>
                     <svg
                       width="24"
@@ -181,7 +179,7 @@ function FooterDesktop() {
   );
 }
 
-function FooterMobile() {
+function FooterMobile({ menus }) {
   const t = useTranslations("Footer");
   return (
     <div className="w-full border-t border-gray/20">
@@ -202,62 +200,25 @@ function FooterMobile() {
                 </Link>
               </div>
               <div className="col-span-4">
-                <h4 className="text-2xl text-gray font-bold">
+                <h4 className="text-2xl text-gray font-semibold">
                   {t("section.first.title")}
                 </h4>
-                <ul className="mt-6 cursor-pointer">
-                  <li className="w-full">
-                    <Link href="/tin-tuc">
-                      <a
-                        aria-label="tin tuc"
-                        className="block w-full text-gray/80 font-semibold hover:text-primary duration-200"
-                      >
-                        {t("section.first.links.news")}
-                      </a>
-                    </Link>
-                  </li>
-                  <li className="mt-6 w-full">
-                    <div className="text-gray/80 font-semibold hover:text-primary duration-200">
-                      <Link href="/san-pham/pambu-oee">
-                        <a className="block w-full" aria-label="pambu oee">
-                          Pambu OEE
-                        </a>
-                      </Link>
-                    </div>
-                    <div className="mt-6 text-gray/80 font-semibold hover:text-primary duration-200">
-                      <Link href="/san-pham/pambu-pms">
-                        <a className="block w-full" aria-label="pambu pms">
-                          Pambu PMS
-                        </a>
-                      </Link>
-                    </div>
-                  </li>
-                  <li className="mt-6 w-full">
-                    <div className="text-gray/80 font-semibold hover:text-primary duration-200">
-                      <Link href="/pambu-oee">
-                        <a
-                          className="block w-full"
-                          aria-label="Tài liệu Pambu OEE"
-                        >
-                          {t("section.first.links.oee")}
-                        </a>
-                      </Link>
-                    </div>
-                    <div className="mt-6 text-gray/80 font-semibold hover:text-primary duration-200">
-                      <Link href="/pambu-pms">
-                        <a
-                          className="block w-full"
-                          aria-label="Tài liệu Pambu PMS"
-                        >
-                          {t("section.first.links.pms")}
-                        </a>
-                      </Link>
-                    </div>
-                  </li>
+                <ul className="mt-6 flex flex-col gap-6 cursor-pointer">
+                  {menus.map((menu) => (
+                    <li key={menu.title} className="w-full">
+                      <div className="text-gray/80 font-semibold hover:text-primary duration-200">
+                        <Link href={menu.href}>
+                          <a className="block w-full" aria-label="Pambu PMS">
+                            {menu.title}
+                          </a>
+                        </Link>
+                      </div>
+                    </li>
+                  ))}
                 </ul>
               </div>
               <div className="col-span-4">
-                <h4 className="text-2xl text-gray font-bold">
+                <h4 className="text-2xl text-gray font-semibold">
                   {t("section.second.title")}
                 </h4>
                 <ul className="mt-6 cursor-pointer">
@@ -327,7 +288,7 @@ function FooterMobile() {
                 </ul>
               </div>
               <div className="col-span-4">
-                <h4 className="text-2xl text-gray font-bold">
+                <h4 className="text-2xl text-gray font-semibold">
                   {t("section.third.title")}
                 </h4>
                 <p

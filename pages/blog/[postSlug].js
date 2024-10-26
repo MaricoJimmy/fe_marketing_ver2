@@ -160,13 +160,6 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
     img: post.featuredImage.node.mediaItemUrl,
   };
 
-  useEffect(() => {
-    if (router.locale === "vi") {
-      router.push("/tin-tuc/" + post.viSlug);
-    } else {
-      router.push("/news/" + post.enSlug);
-    }
-  }, [router.locale]);
   return (
     <>
       <PageSeoHead data={metaTagData} />
@@ -220,7 +213,7 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
                   <ul className="mt-6">
                     {relatedPosts.map((relatePost) => (
                       <li key={relatePost.id} className="mb-8 last:mb-0">
-                        <BlogRelated data={relatePost} category="tin-tuc"  />
+                        <BlogRelated data={relatePost} category="tin-tuc" />
                       </li>
                     ))}
                   </ul>
