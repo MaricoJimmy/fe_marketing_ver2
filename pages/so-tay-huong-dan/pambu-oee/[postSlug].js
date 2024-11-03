@@ -96,7 +96,7 @@ const OEEDetailPost = ({ post, relatedPosts }) => {
   const metaTagData = {
     title: `${post.title} | pambu.org`,
     desc: post.excerpt.replace(/<[^>]+>/g, ""),
-    img: post.featuredImage.node.mediaItemUrl,
+    img: post?.featuredImage?.node?.mediaItemUrl,
   };
 
   return (
