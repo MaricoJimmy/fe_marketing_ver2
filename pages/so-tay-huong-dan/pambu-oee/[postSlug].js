@@ -125,7 +125,7 @@ const OEEDetailPost = ({ post, relatedPosts }) => {
 
               <div className="mt-10">
                 <Image
-                  src={post.featuredImage.node.mediaItemUrl}
+                  src={post?.featuredImage?.node?.mediaItemUrl}
                   width="1000"
                   height="600"
                   alt=""

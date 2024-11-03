@@ -160,7 +160,6 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
     img: post.featuredImage.node.mediaItemUrl,
   };
 
-
   return (
     <>
       <PageSeoHead data={metaTagData} />
@@ -187,7 +186,7 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
 
               <div className="mt-8">
                 <Image
-                  src={post.featuredImage.node.mediaItemUrl}
+                  src={post?.featuredImage?.node?.mediaItemUrl}
                   width="1000"
                   height="600"
                   alt=""
@@ -214,7 +213,7 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
                   <ul className="mt-6">
                     {relatedPosts.map((relatePost) => (
                       <li key={relatePost.id} className="mb-8 last:mb-0">
-                        <BlogRelated data={relatePost} category="tin-tuc"  />
+                        <BlogRelated data={relatePost} category="tin-tuc" />
                       </li>
                     ))}
                   </ul>
