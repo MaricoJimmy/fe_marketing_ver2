@@ -50,9 +50,9 @@ const CaseStudyPage = ({ posts }) => {
       <div>
         <div className="w-full flex justify-center items-center">
           <div className="px-5 md:px-8 py-16 max-w-screen-xl w-full">
-            <Breadcrumb data={breadcrumbs} />
-            <div className="mt-8">
-              <Title label={t("document.oee")} />
+            {/* <Breadcrumb data={breadcrumbs} /> */}
+            <div className="mt-">
+              <Title label={"Case study"} />
             </div>
             <div className="mt-8">
               <ul className="grid grid-cols-12 gap-6 md:gap-8">
