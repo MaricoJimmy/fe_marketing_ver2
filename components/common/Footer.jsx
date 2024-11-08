@@ -110,10 +110,10 @@ function FooterDesktop({ menus }) {
                     />
                   </svg>
                   <a
-                    href="tel:0387430957"
+                    href="tel:1800255698"
                     className="ml-2 text-gray/80 font-semibold"
                   >
-                    0387 430 957
+                    1800 255 698
                   </a>
                 </li>
                 <li className="flex items-center justify-center">
@@ -132,10 +132,10 @@ function FooterDesktop({ menus }) {
                     />
                   </svg>
                   <a
-                    href="mailto:minhnt@udata.ai"
+                    href="mailto:support@udata.ai"
                     className="ml-2 text-gray/80 font-semibold"
                   >
-                    minhnt@udata.ai
+                    support@udata.ai
                   </a>
                 </li>
                 <li className="flex items-start justify-center">
@@ -155,9 +155,16 @@ function FooterDesktop({ menus }) {
                       />
                     </svg>
                   </div>
-                  <span className="ml-2 text-gray/80 font-semibold">
-                    {t("section.second.address")}
-                  </span>
+                  <div className="flex flex-col gap-2">
+                    <span className="ml-2 text-gray/80 font-semibold">
+                      Văn phòng Hà Nội: Tòa nhà Thiên Niên Kỷ, Tầng 9, Số 4
+                      Quang Trung, P. Yết Kiêu, Q. Hà Đông, Hà Nội.
+                    </span>
+                    <span className="ml-2 text-gray/80 font-semibold">
+                      Văn phòng Hồ Chí Minh: Tầng 6, Tòa nhà DHG, Số 31-33,
+                      Đường 18, Phường 8, Quận Gò Vấp, TP. Hồ Chí Minh
+                    </span>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -236,10 +243,10 @@ function FooterMobile({ menus }) {
                       />
                     </svg>
                     <a
-                      href="tel:0387430957"
+                      href="tel:1800255698"
                       className="ml-2 text-gray/80 font-semibold"
                     >
-                      0387 430 957
+                      1800 255 698
                     </a>
                   </li>
                   <li className="mt-6 flex items-center justify-start">
@@ -258,13 +265,13 @@ function FooterMobile({ menus }) {
                       />
                     </svg>
                     <a
-                      href="mailto:minhnt@udata.ai"
+                      href="mailto:support@udata.ai"
                       className=" ml-2 text-gray/80 font-semibold"
                     >
-                      minhnt@udata.ai
+                      support@udata.ai
                     </a>
                   </li>
-                  <li className="mt-6 flex items-center justify-start">
+                  <li className="mt-6 flex items-start justify-start">
                     <div>
                       <svg
                         width="24"
@@ -281,9 +288,16 @@ function FooterMobile({ menus }) {
                         />
                       </svg>
                     </div>
-                    <span className="ml-2 text-gray/80 font-semibold">
-                      {t("section.second.address")}
-                    </span>
+                    <div className="flex flex-col gap-2">
+                      <span className="ml-2 text-gray/80 font-semibold">
+                        Văn phòng Hà Nội: Tòa nhà Thiên Niên Kỷ, Tầng 9, Số 4
+                        Quang Trung, P. Yết Kiêu, Q. Hà Đông, Hà Nội.
+                      </span>
+                      <span className="ml-2 text-gray/80 font-semibold">
+                        Văn phòng Hồ Chí Minh: Tầng 6, Tòa nhà DHG, Số 31-33,
+                        Đường 18, Phường 8, Quận Gò Vấp, TP. Hồ Chí Minh
+                      </span>
+                    </div>
                   </li>
                 </ul>
               </div>

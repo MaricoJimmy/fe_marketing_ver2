@@ -20,7 +20,7 @@ const AboutUsPage = () => {
             <div>
               <h5 className="text-infor text-lg font-medium">{t("title")}</h5>
               <h1 className="mt-2 text-neutral lg:text-4xl text-3xl font-bold leading-snug">
-                Unlock your Data, Understand your Data and Upgrade your Data.
+                UDATA: Unlock your Data.
               </h1>
             </div>
             <div
