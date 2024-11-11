@@ -1,19 +1,17 @@
+import FormGroup from "@/components/common/FormGroup";
+import { Button } from "@/components/ui/button";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import { useTranslations } from "next-intl";
-import { useRouter } from "next/router";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast, Toaster } from "react-hot-toast";
 import * as yup from "yup";
 import PageSeoHead from "../components/common/PageSeoHead";
 import Title from "../components/common/Title";
-import FormGroup from "@/components/common/FormGroup";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Button } from "@/components/ui/button";
-import { useState } from "react";
 
 const ContactPage = () => {
-  const router = useRouter();
   const t = useTranslations("Contact");
 
   const [purpose, setPurpose] = useState("for-self");
@@ -77,54 +75,57 @@ const ContactPage = () => {
                     <div className="flex items-start gap-4">
                       <div className="p-1 w-10 h-10 flex items-center justify-center rounded-full border border-gray/10">
                         <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="20"
-                          height="20"
-                          viewBox="0 0 24 24"
+                          width="27"
+                          height="23"
+                          viewBox="0 0 27 23"
                           fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          class="lucide lucide-phone text-primary"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
-                          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                          <path
+                            d="M6.67962 3.32038L7.29289 2.70711C7.68342 2.31658 8.31658 2.31658 8.70711 2.70711L11.2929 5.29289C11.6834 5.68342 11.6834 6.31658 11.2929 6.70711L9.50048 8.49952C9.2016 8.7984 9.1275 9.255 9.31653 9.63307C10.4093 11.8186 12.1814 13.5907 14.3669 14.6835C14.745 14.8725 15.2016 14.7984 15.5005 14.4995L17.2929 12.7071C17.6834 12.3166 18.3166 12.3166 18.7071 12.7071L21.2929 15.2929C21.6834 15.6834 21.6834 16.3166 21.2929 16.7071L20.6796 17.3204C18.5683 19.4317 15.2257 19.6693 12.837 17.8777L11.6286 16.9714C9.88504 15.6638 8.33622 14.115 7.02857 12.3714L6.12226 11.163C4.33072 8.7743 4.56827 5.43173 6.67962 3.32038Z"
+                            fill="#0069FF"
+                          />
                         </svg>
                       </div>
                       <div className="flex flex-col gap-1">
                         <h4 className="text-xl text-neutral font-semibold">
-                          Sale
+                          Hot line
                         </h4>
-                        <h5 className="text-neutral font-medium">
-                          minhnt@udata.ai
-                        </h5>
+                        <a
+                          href="tel:1800255698"
+                          className="text-neutral font-medium"
+                        >
+                          1800 255 698
+                        </a>
                       </div>
                     </div>
                     <div className="flex items-start gap-4">
                       <div className="p-1 w-10 h-10 flex items-center justify-center rounded-full border border-gray/10">
                         <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="20"
-                          height="20"
+                          width="24"
+                          height="24"
                           viewBox="0 0 24 24"
                           fill="none"
-                          stroke="currentColor"
-                          stroke-width="2"
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          class="lucide lucide-headset text-primary"
+                          xmlns="http://www.w3.org/2000/svg"
                         >
-                          <path d="M3 11h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-5Zm0 0a9 9 0 1 1 18 0m0 0v5a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3Z" />
-                          <path d="M21 16v2a4 4 0 0 1-4 4h-5" />
+                          <path
+                            fillRule="evenodd"
+                            clipRule="evenodd"
+                            d="M3.87868 5.87868C3 6.75736 3 8.17157 3 11V13C3 15.8284 3 17.2426 3.87868 18.1213C4.75736 19 6.17157 19 9 19H15C17.8284 19 19.2426 19 20.1213 18.1213C21 17.2426 21 15.8284 21 13V11C21 8.17157 21 6.75736 20.1213 5.87868C19.2426 5 17.8284 5 15 5H9C6.17157 5 4.75736 5 3.87868 5.87868ZM6.5547 8.16795C6.09517 7.8616 5.4743 7.98577 5.16795 8.4453C4.8616 8.90483 4.98577 9.5257 5.4453 9.83205L10.8906 13.4622C11.5624 13.9101 12.4376 13.9101 13.1094 13.4622L18.5547 9.83205C19.0142 9.5257 19.1384 8.90483 18.8321 8.4453C18.5257 7.98577 17.9048 7.8616 17.4453 8.16795L12 11.7982L6.5547 8.16795Z"
+                            fill="#0069FF"
+                          />
                         </svg>
                       </div>
                       <div className="flex flex-col gap-1">
                         <h4 className="text-xl text-neutral font-semibold">
                           Support
                         </h4>
-                        <h5 className="text-neutral font-medium">
-                          support1@udata.ai
-                        </h5>
+                        <a
+                          href="mailto:support@udata.ai"
+                          className="text-neutral font-medium"
+                        >
+                          support@udata.ai
+                        </a>
                       </div>
                     </div>
                   </div>
