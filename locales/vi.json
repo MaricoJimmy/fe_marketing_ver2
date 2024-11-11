@@ -707,8 +707,8 @@
   },
   "Managers": {
     "heroSection": {
-      "title": "Giải pháp cho Các nhà quản lý",
-      "subTitle": "Tối ưu hóa hoạt động, nâng cao hiệu quả quản lý.",
+      "title": "Tối ưu hóa hoạt động, nâng cao hiệu quả quản lý.",
+      "subTitle": "Giải pháp cho Các nhà quản lý",
       "desc": "Udata cung cấp một nền tảng thống nhất để quản lý toàn bộ các dự án. Với giao diện trực quan và dễ sử dụng, bạn có thể dễ dàng theo dõi tiến độ, phân bổ tài nguyên và đánh giá hiệu quả công việc của từng dự án.",
       "contact": "Liên hệ"
     },
@@ -824,8 +824,8 @@
   },
   "Operators": {
     "heroSection": {
-      "title": "Giải pháp cho Các nhà quản lý vận hành (O&M)",
-      "subTitle": "Quản lý mọi dự án, mọi thiết bị tại một nơi.",
+      "title": "Quản lý mọi dự án, mọi thiết bị tại một nơi.",
+      "subTitle": "Giải pháp cho Các nhà quản lý vận hành (O&M)",
       "desc": "Udata cung cấp một nền tảng tập trung, giúp bạn quản lý hiệu quả tất cả các dự án và thiết bị của mình, bất kể chúng có độ phức tạp và đa dạng như thế nào. Với giao diện trực quan và dễ sử dụng, bạn có thể dễ dàng theo dõi, phân tích và điều khiển mọi hoạt động.",
       "contact": "Liên hệ"
     },

@@ -702,8 +702,8 @@
   },
   "Managers": {
     "heroSection": {
-      "title": "Solutions for Managers",
-      "subTitle": "Optimize operations, improve management efficiency.",
+      "title": "Optimize operations, improve management efficiency.",
+      "subTitle": "Solutions for Managers",
       "desc": "Udata provides a unified platform for managing all projects. With an intuitive and easy-to-use interface, you can easily track progress, allocate resources, and evaluate performance. work results of each project.",
       "contact": "Contact"
     },
@@ -819,8 +819,8 @@
   },
   "Operators": {
     "heroSection": {
-      "title": "Solutions for Operations Managers (O&M)",
-      "subTitle": "Manage every project, every device in one place.",
+      "title": "Manage every project, every device in one place.",
+      "subTitle": "Solutions for Operations Managers (O&M)",
       "desc": "Udata provides a centralized platform, helping you efficiently manage all your projects and devices, no matter how complex and diverse they are. With an intuitive interface and easy to use, you can easily monitor, analyze and control all activities.",
       "contact": "Contact"
     },
