@@ -1,7 +1,11 @@
 import Image from "next/image";
 import React from "react";
 
-function SingleFeatureSection({ isReverse = false, data = {} }) {
+function SingleFeatureSection({
+  isReverse = false,
+  data = {},
+  isCustom = false,
+}) {
   return (
     <div className="w-full flex items-center justify-center">
       <div className="lg:px-20 lg:py-24 md:px-10 md:py-14 px-4 py-8 w-full grid lg:grid-cols-2 grid-cols-1 lg:gap-10 gap-8 max-w-screen-xl">
@@ -22,10 +26,27 @@ function SingleFeatureSection({ isReverse = false, data = {} }) {
             <h2 className="text-4xl text-neutral font-semibold">
               {data.title}
             </h2>
-            <h6 className="mt-2 text-base text-neutral/80">{data.subTitle}</h6>
-            <h5 className="mt-8 text-lg text-neutral text-justify">
-              {data.desc}
-            </h5>
+            {isCustom ? (
+              <ol className="mt-8 ml-6 list-disc">
+                {data.listsContent.map((content) => (
+                  <li key={content.title}>
+                    <span className="text-neutral text-base font-semibold">
+                      {content.title}
+                    </span>
+                    : {content.content}
+                  </li>
+                ))}
+              </ol>
+            ) : (
+              <>
+                <h6 className="mt-2 text-base text-neutral/80">
+                  {data.subTitle}
+                </h6>
+                <h5 className="mt-8 text-lg text-neutral text-justify">
+                  {data.desc}
+                </h5>
+              </>
+            )}
           </div>
         </div>
       </div>

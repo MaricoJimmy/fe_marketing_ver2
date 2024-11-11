@@ -587,5 +587,356 @@
       "content": "Sẵn sàng nâng cao sản lượng của bạn? Liên hệ với chúng tôi để tìm hiểu thêm về cách giải pháp của chúng tôi có thể giúp bạn giám sát môi trường chăn nuôi, theo dõi tốc độ sinh trưởng của con giống, tăng doanh thu và hơn thế nữa.",
       "button": "Liên hệ"
     }
+  },
+  "Investors": {
+    "heroSection": {
+      "title": "Udata: Đối tác tin cậy của các chủ đầu tư.",
+      "subTitle": "Giải pháp cho Chủ đầu tư - Quản lý cấp cao",
+      "desc": "Với Udata, bạn có thể theo dõi sát sao tiến độ dự án, phân tích chi tiết các khoản chi tiêu, phát hiện sớm các rủi ro tiềm ẩn và cộng tác hiệu quả với các thành viên trong dự án. Hãy để Udata giúp bạn tối ưu hóa quản lý dự án, giảm thiểu chi phí và nâng cao hiệu quả kinh doanh.",
+      "contact": "Liên hệ"
+    },
+    "allFeatures": {
+      "title": "Các tính năng vượt trội của Udata đáp ứng các nhu cầu của chủ đầu tư",
+      "desc": "Bằng cách tự động hóa các quy trình, giảm thiểu thời gian xử lý sự cố và tối ưu hóa việc sử dụng tài nguyên, Udata giúp bạn tiết kiệm chi phí đáng kể và nâng cao hiệu quả hoạt động, thời gian thu hồi vốn nhanh.",
+      "lists": [
+        {
+          "id": "1",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-lock'><rect width='18' height='11' x='3' y='11' rx='2' ry='2'/><path d='M7 11V7a5 5 0 0 1 10 0v4'/></svg>",
+          "title": "",
+          "content": "Dữ liệu của bạn luôn được bảo mật tuyệt đối trên nền tảng đám mây của Udata."
+        },
+        {
+          "id": "2",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-clock-2'><circle cx='12' cy='12' r='10'/><polyline points='12 6 12 12 16 10'/></svg>",
+          "title": "",
+          "content": "Phân tích nhanh được tổn thất tài chính theo theo thời gian (Ngày/Tuần/Tháng/Quý/Năm)"
+        },
+        {
+          "id": "3",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-square-activity'><rect width='18' height='18' x='3' y='3' rx='2'/><path d='M17 12h-2l-2 5-2-10-2 5H7'/></svg>",
+          "title": "",
+          "content": "Giám sát tình hình khắc phục sự cố của đội ngũ O&M."
+        },
+        {
+          "id": "4",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-bell'><path d='M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9'/><path d='M10.3 21a1.94 1.94 0 0 0 3.4 0'/></svg>",
+          "title": "",
+          "content": "Định kỳ gửi báo cáo hoạt động của dự án theo những chỉ tiêu thiết lập sẵn."
+        }
+      ]
+    },
+    "singleFeature": {
+      "first": {
+        "title": "Lợi ích mà giải pháp mang lại",
+        "listsContent": [
+          {
+            "title": "Tăng hiệu quả đầu tư",
+            "content": "Giúp nhà đầu tư có cái nhìn tổng quan về toàn bộ hoạt động của dự án, từ đó đưa ra các quyết định nhanh chóng và chính xác."
+          },
+          {
+            "title": "Giảm thiểu rủi ro",
+            "content": "Phát hiện và xử lý các vấn đề tiềm ẩn một cách kịp thời, giúp giảm thiểu thiệt hại."
+          },
+          {
+            "title": "Nâng cao tính minh bạch",
+            "content": "Cung cấp thông tin minh bạch và chính xác về tình hình dự án cho tất cả các bên liên quan."
+          },
+          {
+            "title": "Tối ưu hóa tài nguyên",
+            "content": "Giúp sử dụng hiệu quả các nguồn lực như nhân lực, tài chính và thời gian."
+          }
+        ],
+        "img": "/image/solutions/investors/investors-feature-1.jpg"
+      },
+      "second": {
+        "title": "Các tính năng nổi bật của giải pháp",
+        "listsContent": [
+          {
+            "title": "Giao diện trực quan, dễ sử dụng",
+            "content": "Giúp người dùng dễ dàng làm quen và sử dụng hệ thống."
+          },
+          {
+            "title": "Tích hợp với các hệ thống khác",
+            "content": "Dễ dàng kết nối với các hệ thống hiện có của doanh nghiệp."
+          },
+          {
+            "title": "Bảo mật cao",
+            "content": "Bảo vệ dữ liệu của khách hàng một cách an toàn và bảo mật."
+          },
+          {
+            "title": "Hỗ trợ đa ngôn ngữ và đa nền tảng",
+            "content": "Phù hợp với nhu cầu của khách hàng trên toàn cầu."
+          }
+        ],
+        "img": "/image/solutions/investors/investors-feature-2.jpg"
+      },
+      "third": {
+        "title": "Phương thức triển khai và hỗ trợ khách hàng",
+        "listsContent": [
+          {
+            "title": "Tư vấn và triển khai",
+            "content": "Cung cấp dịch vụ tư vấn và triển khai giải pháp một cách chuyên nghiệp."
+          },
+          {
+            "title": "Đào tạo người dùng",
+            "content": "Tổ chức các khóa đào tạo để giúp người dùng sử dụng hệ thống một cách hiệu quả."
+          },
+          {
+            "title": "Hỗ trợ kỹ thuật",
+            "content": "Cung cấp dịch vụ hỗ trợ kỹ thuật 24/7 để giải đáp các thắc mắc và xử lý sự cố."
+          }
+        ],
+        "img": "/image/solutions/investors/investors-feature-3.jpg"
+      }
+    },
+    "callToAction": {
+      "title": "Sẵn sàng làm việc theo cách tập trung, đơn giản và hiệu quả?",
+      "content": "Hãy trao đổi với một trong những chuyên gia của chúng tôi để xác định giải pháp phù hợp với nhu cầu của bạn",
+      "actions": [
+        {
+          "title": "Xác định giải pháp lý tưởng của bạn",
+          "desc": "Bạn đang tìm kiếm giải pháp phù hợp nhất? Chúng tôi sẽ đồng hành cùng bạn. Các chuyên gia của chúng tôi sẽ lắng nghe nhu cầu của bạn và đưa ra những gợi ý phù hợp, giúp bạn tìm ra giải pháp tối ưu."
+        },
+        {
+          "title": "Thiết lập ban đầu của giải pháp tùy chỉnh",
+          "desc": "Chúng tôi sẽ triển khai giải pháp một cách chuyên nghiệp. Các chuyên gia của chúng tôi sẽ cấu hình và tùy chỉnh hệ thống để đáp ứng yêu cầu cụ thể của bạn."
+        }
+      ],
+      "button": "Đặt lịch demo"
+    }
+  },
+  "Managers": {
+    "heroSection": {
+      "title": "Giải pháp cho Các nhà quản lý",
+      "subTitle": "Tối ưu hóa hoạt động, nâng cao hiệu quả quản lý.",
+      "desc": "Udata cung cấp một nền tảng thống nhất để quản lý toàn bộ các dự án. Với giao diện trực quan và dễ sử dụng, bạn có thể dễ dàng theo dõi tiến độ, phân bổ tài nguyên và đánh giá hiệu quả công việc của từng dự án.",
+      "contact": "Liên hệ"
+    },
+    "allFeatures": {
+      "title": "Các tính năng vượt trội của Udata đáp ứng các nhu cầu của nhà quản lý",
+      "desc": "Udata là nền tảng phần mềm tập trung quản lý hoạt động chung của toàn bộ các dự án.",
+      "lists": [
+        {
+          "id": "1",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-clock-2'><circle cx='12' cy='12' r='10'/><polyline points='12 6 12 12 16 10'/></svg>",
+          "title": "",
+          "content": "Giảm thiểu thời gian dừng, hoạt động dưới công suất của hệ thống"
+        },
+        {
+          "id": "2",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-circle-alert'><circle cx='12' cy='12' r='10'/><line x1='12' x2='12' y1='8' y2='12'/><line x1='12' x2='12.01' y1='16' y2='16'/></svg>",
+          "title": "",
+          "content": "Cảnh báo kịp thời về những nguy cơ sự cố phát sinh qua email"
+        },
+        {
+          "id": "3",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-square-activity'><rect width='18' height='18' x='3' y='3' rx='2'/><path d='M17 12h-2l-2 5-2-10-2 5H7'/></svg>",
+          "title": "",
+          "content": "Theo dõi và đánh giá hiệu quả của các biện pháp đã xử lý."
+        },
+        {
+          "id": "4",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-rss'><path d='M4 11a9 9 0 0 1 9 9'/><path d='M4 4a16 16 0 0 1 16 16'/><circle cx='5' cy='19' r='1'/></svg>",
+          "title": "",
+          "content": "Cho phép nhà quản lý thiết lập và theo dõi các chỉ số KPI quan trọng để đánh giá hiệu quả hoạt động của dự án."
+        }
+      ]
+    },
+    "singleFeature": {
+      "first": {
+        "title": "Lợi ích mà giải pháp mang lại",
+        "listsContent": [
+          {
+            "title": "Tăng hiệu quả quản lý",
+            "content": "Giúp nhà quản lý có cái nhìn tổng quan về toàn bộ hoạt động của dự án, từ đó đưa ra các quyết định nhanh chóng và chính xác."
+          },
+          {
+            "title": "Giảm thiểu rủi ro",
+            "content": "Phát hiện và xử lý các vấn đề tiềm ẩn một cách kịp thời, giúp giảm thiểu thiệt hại."
+          },
+          {
+            "title": "Nâng cao tính minh bạch",
+            "content": "Cung cấp thông tin minh bạch và chính xác về tình hình dự án cho tất cả các bên liên quan."
+          },
+          {
+            "title": "Tối ưu hóa tài nguyên",
+            "content": "Giúp sử dụng hiệu quả các nguồn lực như nhân lực, tài chính và thời gian."
+          }
+        ],
+        "img": "/image/solutions/investors/investors-feature-1.jpg"
+      },
+      "second": {
+        "title": "Các tính năng nổi bật của giải pháp",
+        "listsContent": [
+          {
+            "title": "Giao diện trực quan, dễ sử dụng",
+            "content": "Giúp người dùng dễ dàng làm quen và sử dụng hệ thống."
+          },
+          {
+            "title": "Tích hợp với các hệ thống khác",
+            "content": "Dễ dàng kết nối với các hệ thống hiện có của doanh nghiệp."
+          },
+          {
+            "title": "Bảo mật cao",
+            "content": "Bảo vệ dữ liệu của khách hàng một cách an toàn và bảo mật."
+          },
+          {
+            "title": "Hỗ trợ đa ngôn ngữ và đa nền tảng",
+            "content": "Phù hợp với nhu cầu của khách hàng trên toàn cầu."
+          }
+        ],
+        "img": "/image/solutions/investors/investors-feature-2.jpg"
+      },
+      "third": {
+        "title": "Phương thức triển khai và hỗ trợ khách hàng",
+        "listsContent": [
+          {
+            "title": "Tư vấn và triển khai",
+            "content": "Cung cấp dịch vụ tư vấn và triển khai giải pháp một cách chuyên nghiệp."
+          },
+          {
+            "title": "Đào tạo người dùng",
+            "content": "Tổ chức các khóa đào tạo để giúp người dùng sử dụng hệ thống một cách hiệu quả."
+          },
+          {
+            "title": "Hỗ trợ kỹ thuật",
+            "content": "Cung cấp dịch vụ hỗ trợ kỹ thuật 24/7 để giải đáp các thắc mắc và xử lý sự cố."
+          }
+        ],
+        "img": "/image/solutions/investors/investors-feature-3.jpg"
+      }
+    },
+    "callToAction": {
+      "title": "Sẵn sàng làm việc theo cách tập trung, đơn giản và hiệu quả?",
+      "content": "Hãy trao đổi với một trong những chuyên gia của chúng tôi để xác định giải pháp phù hợp với nhu cầu của bạn",
+      "actions": [
+        {
+          "title": "Xác định giải pháp lý tưởng của bạn",
+          "desc": "Bạn đang tìm kiếm giải pháp phù hợp nhất? Chúng tôi sẽ đồng hành cùng bạn. Các chuyên gia của chúng tôi sẽ lắng nghe nhu cầu của bạn và đưa ra những gợi ý phù hợp, giúp bạn tìm ra giải pháp tối ưu."
+        },
+        {
+          "title": "Thiết lập ban đầu của giải pháp tùy chỉnh",
+          "desc": "Chúng tôi sẽ triển khai giải pháp một cách chuyên nghiệp. Các chuyên gia của chúng tôi sẽ cấu hình và tùy chỉnh hệ thống để đáp ứng yêu cầu cụ thể của bạn."
+        }
+      ],
+      "button": "Đặt lịch demo"
+    }
+  },
+  "Operators": {
+    "heroSection": {
+      "title": "Giải pháp cho Các nhà quản lý vận hành (O&M)",
+      "subTitle": "Quản lý mọi dự án, mọi thiết bị tại một nơi.",
+      "desc": "Udata cung cấp một nền tảng tập trung, giúp bạn quản lý hiệu quả tất cả các dự án và thiết bị của mình, bất kể chúng có độ phức tạp và đa dạng như thế nào. Với giao diện trực quan và dễ sử dụng, bạn có thể dễ dàng theo dõi, phân tích và điều khiển mọi hoạt động.",
+      "contact": "Liên hệ"
+    },
+    "allFeatures": {
+      "title": "Các tính năng vượt trội của Udata đáp ứng các nhu cầu của nhà quản lý vận hành",
+      "desc": "Udata là nền tảng phần mềm tập trung quản lý hoạt động chung của toàn bộ các dự án.",
+      "lists": [
+        {
+          "id": "1",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-clock-2'><circle cx='12' cy='12' r='10'/><polyline points='12 6 12 12 16 10'/></svg>",
+          "title": "",
+          "content": "Tính năng đồng bộ hóa dữ liệu thời gian thực đảm bảo thông tin luôn chính xác và cập nhật."
+        },
+        {
+          "id": "2",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-circle-alert'><circle cx='12' cy='12' r='10'/><line x1='12' x2='12' y1='8' y2='12'/><line x1='12' x2='12.01' y1='16' y2='16'/></svg>",
+          "title": "",
+          "content": "Cảnh báo và phân loại những nguy cơ sự cố và/hoặc sự cố phát sinh giúp nhà vận hành không cần liên tục chú ý vào màn hình quản lý vận hành"
+        },
+        {
+          "id": "3",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-square-activity'><rect width='18' height='18' x='3' y='3' rx='2'/><path d='M17 12h-2l-2 5-2-10-2 5H7'/></svg>",
+          "title": "",
+          "content": "Lưu trữ dữ liệu tới 30 ngày khi gặp sự cố mất mạng."
+        },
+        {
+          "id": "4",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-bell'><path d='M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9'/><path d='M10.3 21a1.94 1.94 0 0 0 3.4 0'/></svg>",
+          "title": "",
+          "content": "Định kỳ gửi báo cáo hoạt động của dự án theo những chỉ tiêu thiết lập sẵn."
+        }
+      ]
+    },
+    "singleFeature": {
+      "first": {
+        "title": "Lợi ích mà giải pháp mang lại",
+        "listsContent": [
+          {
+            "title": "Tăng hiệu quả quản lý",
+            "content": "Giúp nhà quản lý vận hành có cái nhìn tổng quan về toàn bộ hoạt động của máy móc, từ đó đưa ra các quyết định nhanh chóng và chính xác."
+          },
+          {
+            "title": "Giảm thiểu rủi ro",
+            "content": "Phát hiện và xử lý các vấn đề tiềm ẩn một cách kịp thời, giúp giảm thiểu thiệt hại."
+          },
+          {
+            "title": "Nâng cao tính minh bạch",
+            "content": "Cung cấp thông tin minh bạch và chính xác về tình hình dự án cho tất cả các bên liên quan."
+          },
+          {
+            "title": "Tối ưu hóa tài nguyên",
+            "content": "Giúp sử dụng hiệu quả các nguồn lực như nhân lực, tài chính và thời gian."
+          }
+        ],
+        "img": "/image/solutions/investors/investors-feature-1.jpg"
+      },
+      "second": {
+        "title": "Các tính năng nổi bật của giải pháp",
+        "listsContent": [
+          {
+            "title": "Giao diện trực quan, dễ sử dụng",
+            "content": "Giúp người dùng dễ dàng làm quen và sử dụng hệ thống."
+          },
+          {
+            "title": "Tích hợp với các hệ thống khác",
+            "content": "Dễ dàng kết nối với các hệ thống hiện có của doanh nghiệp."
+          },
+          {
+            "title": "Bảo mật cao",
+            "content": "Bảo vệ dữ liệu của khách hàng một cách an toàn và bảo mật."
+          },
+          {
+            "title": "Hỗ trợ đa ngôn ngữ và đa nền tảng",
+            "content": "Phù hợp với nhu cầu của khách hàng trên toàn cầu."
+          }
+        ],
+        "img": "/image/solutions/investors/investors-feature-2.jpg"
+      },
+      "third": {
+        "title": "Phương thức triển khai và hỗ trợ khách hàng",
+        "listsContent": [
+          {
+            "title": "Tư vấn và triển khai",
+            "content": "Cung cấp dịch vụ tư vấn và triển khai giải pháp một cách chuyên nghiệp."
+          },
+          {
+            "title": "Đào tạo người dùng",
+            "content": "Tổ chức các khóa đào tạo để giúp người dùng sử dụng hệ thống một cách hiệu quả."
+          },
+          {
+            "title": "Hỗ trợ kỹ thuật",
+            "content": "Cung cấp dịch vụ hỗ trợ kỹ thuật 24/7 để giải đáp các thắc mắc và xử lý sự cố."
+          }
+        ],
+        "img": "/image/solutions/investors/investors-feature-3.jpg"
+      }
+    },
+    "callToAction": {
+      "title": "Sẵn sàng làm việc theo cách tập trung, đơn giản và hiệu quả?",
+      "content": "Hãy trao đổi với một trong những chuyên gia của chúng tôi để xác định giải pháp phù hợp với nhu cầu của bạn",
+      "actions": [
+        {
+          "title": "Xác định giải pháp lý tưởng của bạn",
+          "desc": "Bạn đang tìm kiếm giải pháp phù hợp nhất? Chúng tôi sẽ đồng hành cùng bạn. Các chuyên gia của chúng tôi sẽ lắng nghe nhu cầu của bạn và đưa ra những gợi ý phù hợp, giúp bạn tìm ra giải pháp tối ưu."
+        },
+        {
+          "title": "Thiết lập ban đầu của giải pháp tùy chỉnh",
+          "desc": "Chúng tôi sẽ triển khai giải pháp một cách chuyên nghiệp. Các chuyên gia của chúng tôi sẽ cấu hình và tùy chỉnh hệ thống để đáp ứng yêu cầu cụ thể của bạn."
+        }
+      ],
+      "button": "Đặt lịch demo"
+    }
   }
 }

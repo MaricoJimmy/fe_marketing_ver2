@@ -20,6 +20,9 @@ import {
   ROUTER_CASE_STUDY,
   ROUTER_CONTACT,
   ROUTER_FISHERIES,
+  ROUTER_INVESTORS,
+  ROUTER_MANAGERS,
+  ROUTER_OPERATORS,
   ROUTER_PMS,
   ROUTER_SOLAR,
 } from "@/utils/constant";
@@ -104,14 +107,20 @@ function HeaderDesktop({ stickyHeader, locale }) {
                           <ul className="mt-2 min-w-[340px] border-none list-none">
                             <MenuItem
                               title="Chủ đầu tư - Quản lý cấp cao"
-                              href={"/"}
+                              href={ROUTER_INVESTORS}
                             >
                               Giải pháp cho Chủ đầu tư - Quản lý cấp cao
                             </MenuItem>
-                            <MenuItem title="Cấp quản lý" href={"/"}>
+                            <MenuItem
+                              title="Cấp quản lý"
+                              href={ROUTER_MANAGERS}
+                            >
                               Giải pháp cho Cấp quản lý
                             </MenuItem>
-                            <MenuItem title="Cấp vận hành" href={"/"}>
+                            <MenuItem
+                              title="Cấp vận hành"
+                              href={ROUTER_OPERATORS}
+                            >
                               Giải pháp cho Cấp vận hành
                             </MenuItem>
                           </ul>
@@ -209,16 +218,48 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
           href: ROUTER_PMS,
         },
       ],
+      multiMenu: false,
     },
     {
       id: "solution",
       menu: t("solutions.title"),
       subMenu: [
         {
-          title: "Solar rooftop",
-          href: ROUTER_SOLAR,
+          title: "Giải pháp cho đối tượng",
+          menus: [
+            {
+              title: "Chủ đầu tư - Quản lý cấp cao",
+              href: ROUTER_INVESTORS,
+            },
+            {
+              title: "Cấp quản lý",
+              href: ROUTER_MANAGERS,
+            },
+            {
+              title: "Cấp vận hành",
+              href: ROUTER_OPERATORS,
+            },
+          ],
+        },
+        {
+          title: "Giải pháp cho lĩnh vực",
+          menus: [
+            {
+              title: "Solar rooftop",
+              href: ROUTER_SOLAR,
+            },
+            {
+              title: "Nhà máy",
+              href: "/",
+            },
+            {
+              title: "Thủy sản",
+              href: ROUTER_FISHERIES,
+            },
+          ],
         },
       ],
+      multiMenu: true,
     },
     {
       id: "blog",
@@ -233,18 +274,21 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
           href: ROUTER_BLOG,
         },
       ],
+      multiMenu: false,
     },
     {
       id: "contact",
       menu: t("contact"),
       href: ROUTER_CONTACT,
       subMenu: null,
+      multiMenu: false,
     },
     {
       id: "about-us",
       menu: t("about-us"),
       href: ROUTER_ABOUT_US,
       subMenu: null,
+      multiMenu: false,
     },
   ];
 
@@ -388,17 +432,38 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
                         className={`${
                           (openSubMenu[menu.id] && "translate-y-0 block") ||
                           "-translate-y-1/4 hidden"
-                        } duration-200 ml-6 mt-6`}
+                        } duration-200 ml-4 mt-6`}
                       >
                         {menu.subMenu.map((subMenu) => (
                           <div
                             key={subMenu.title}
                             onClick={() => setOpenMenu((prev) => !prev)}
-                            className="mt-6 text-gray font-semibold hover:text-primary duration-200"
+                            className="mt-6"
                           >
-                            <Link href={subMenu.href}>
-                              <a className="block w-full">{subMenu.title}</a>
-                            </Link>
+                            {menu.multiMenu ? (
+                              <div>
+                                <h4 className="text-neutral font-bold">
+                                  {subMenu.title}
+                                </h4>
+                                <ul className="mt-2 ml-4 flex flex-col space-y-2">
+                                  {subMenu.menus.map((item) => (
+                                    <li key={item.title}>
+                                      <Link href={item.href}>
+                                        <a className="block w-full text-gray font-semibold hover:text-primary duration-200">
+                                          {item.title}
+                                        </a>
+                                      </Link>
+                                    </li>
+                                  ))}
+                                </ul>
+                              </div>
+                            ) : (
+                              <Link href={subMenu.href} className=" ">
+                                <a className="block w-full text-gray font-semibold hover:text-primary duration-200">
+                                  {subMenu.title}
+                                </a>
+                              </Link>
+                            )}
                           </div>
                         ))}
                       </div>

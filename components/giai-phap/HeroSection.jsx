@@ -19,7 +19,11 @@ function HeroSection({ data, image = "", bgColor = "bg-infor" }) {
           {data.desc}
         </p>
         <div className="mt-6 flex lg:justify-start justify-center">
-          <Button size="lg" onClick={() => router.push(ROUTER_CONTACT)}>
+          <Button
+            size="lg"
+            onClick={() => router.push(ROUTER_CONTACT)}
+            className="shadow-md"
+          >
             {data.contact}
           </Button>
         </div>

@@ -582,5 +582,356 @@
       "content": "Ready to increase your production? Contact us to learn more about how our solution can help you monitor your livestock environment, track the growth rate of your animals , increase revenue and more.",
       "button": "Contact"
     }
+  },
+  "Investors": {
+    "heroSection": {
+      "title": "Solutions for Investors - Senior Managers",
+      "subTitle": "Udata: Trusted partner of investors.",
+      "desc": "With Udata, you can closely monitor project progress, analyze expenditures in detail, detect potential risks early and collaborate effectively with project members. Let Udata help you optimize project management, reduce costs and improve business efficiency.",
+      "contact": "Contact"
+    },
+    "allFeatures": {
+      "title": "Udata's outstanding features meet the needs of investors",
+      "desc": "By automating processes, minimizing troubleshooting time, and optimizing resource utilization, Udata helps you save significant costs and improve operational efficiency and time. Fast capital recovery period.",
+      "lists": [
+        {
+          "id": "1",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-lock'><rect width='18' height='11' x='3' y='11' rx='2' ry='2'/><path d='M7 11V7a5 5 0 0 1 10 0v4'/></svg>",
+          "title": "",
+          "content": "Your data is always absolutely secure on Udata's cloud platform."
+        },
+        {
+          "id": "2",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-clock-2'><circle cx='12' cy='12' r='10'/><polyline points='12 6 12 12 16 10'/></svg>",
+          "title": "",
+          "content": "Quickly analyze financial losses over time (Day/Week/Month/Quarter/Year)"
+        },
+        {
+          "id": "3",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-square-activity'><rect width='18' height='18' x='3' y='3' rx='2'/><path d='M17 12h-2l-2 5-2-10-2 5H7'/></svg>",
+          "title": "",
+          "content": "Monitoring the troubleshooting situation of the O&M team."
+        },
+        {
+          "id": "4",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-bell'><path d='M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9'/><path d='M10.3 21a1.94 1.94 0 0 0 3.4 0'/></svg>",
+          "title": "",
+          "content": "Periodically send project activity reports according to pre-set targets."
+        }
+      ]
+    },
+    "singleFeature": {
+      "first": {
+        "title": "Benefits that the solution brings",
+        "listsContent": [
+          {
+            "title": "Increasing investment efficiency",
+            "content": "Helps investors have an overview of the entire project's activities, thereby making quick and accurate decisions."
+          },
+          {
+            "title": "Risk mitigation",
+            "content": "Detect and handle potential problems promptly, helping to minimize damage."
+          },
+          {
+            "title": "Improving transparency",
+            "content": "Provide transparent and accurate information about the project status to all stakeholders."
+          },
+          {
+            "title": "Resource Optimization",
+            "content": "Helps effectively use resources such as human resources, finance and time."
+          }
+        ],
+        "img": "/image/solutions/investors/investors-feature-1.jpg"
+      },
+      "second": {
+        "title": "Outstanding features of the solution",
+        "listsContent": [
+          {
+            "title": "Intuitive, easy-to-use interface",
+            "content": "Helps users easily get acquainted and use the system."
+          },
+          {
+            "title": "Integration with other systems",
+            "content": "Easily connect to existing business systems."
+          },
+          {
+            "title": "High Security",
+            "content": "Protect customer data safely and securely."
+          },
+          {
+            "title": "Multi-language and cross-platform support",
+            "content": "Relevant to global customer needs."
+          }
+        ],
+        "img": "/image/solutions/investors/investors-feature-2.jpg"
+      },
+      "third": {
+        "title": "Deployment methods and customer support",
+        "listsContent": [
+          {
+            "title": "Consulting and implementation",
+            "content": "Providing professional consulting and solution implementation services."
+          },
+          {
+            "title": "User Training",
+            "content": "Organize training courses to help users use the system effectively."
+          },
+          {
+            "title": "Technical Support",
+            "content": "Provides 24/7 technical support to answer questions and troubleshoot problems."
+          }
+        ],
+        "img": "/image/solutions/investors/investors-feature-3.jpg"
+      }
+    },
+    "callToAction": {
+      "title": "Ready to work in a focused, simple and effective way?",
+      "content": "Talk to one of our experts to determine the right solution for your needs,",
+      "actions": [
+        {
+          "title": "Determine your ideal solution",
+          "desc": "Are you looking for the most suitable solution? We will accompany you. Our experts will listen to your needs and provide suitable suggestions, helping you find a solution optimal solution."
+        },
+        {
+          "title": "Initial setup of custom solution",
+          "desc": "We will professionally deploy the solution. Our experts will configure and customize the system to meet your specific requirements."
+        }
+      ],
+      "button": "Schedule demo"
+    }
+  },
+  "Managers": {
+    "heroSection": {
+      "title": "Solutions for Managers",
+      "subTitle": "Optimize operations, improve management efficiency.",
+      "desc": "Udata provides a unified platform for managing all projects. With an intuitive and easy-to-use interface, you can easily track progress, allocate resources, and evaluate performance. work results of each project.",
+      "contact": "Contact"
+    },
+    "allFeatures": {
+      "title": "Udata's outstanding features meet the needs of managers",
+      "desc": "Udata is a centralized software platform that manages the overall operations of all projects.",
+      "lists": [
+        {
+          "id": "1",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-clock-2'><circle cx='12' cy='12' r='10 '/><polyline points='12 6 12 12 16 10'/></svg>",
+          "title": "",
+          "content": "Minimize downtime, operating under system capacity"
+        },
+        {
+          "id": "2",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-circle-alert'><circle cx='12' cy='12' r='10 '/><line x1='12' x2='12' y1='8' y2='12'/><line x1='12' x2='12.01' y1='16' y2='16'/ ></svg>",
+          "title": "",
+          "content": "Timely warnings about potential incidents arising via email"
+        },
+        {
+          "id": "3",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-square-activity'><rect width='18' height='18' x='3 ' y='3' rx='2'/><path d='M17 12h-2l-2 5-2-10-2 5H7'/></svg>",
+          "title": "",
+          "content": "Monitor and evaluate the effectiveness of the measures taken."
+        },
+        {
+          "id": "4",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-rss'><path d='M4 11a9 9 0 0 1 9 9'/><path d='M4 4a16 16 0 0 1 16 16'/><circle cx='5' cy='19' r='1'/></svg>",
+          "title": "",
+          "content": "Allows managers to set and track important KPIs to evaluate project performance."
+        }
+      ]
+    },
+    "singleFeature": {
+      "first": {
+        "title": "Benefits that the solution brings",
+        "listsContent": [
+          {
+            "title": "Increasing management efficiency",
+            "content": "Helps managers have an overview of the entire project's activities, thereby making quick and accurate decisions."
+          },
+          {
+            "title": "Risk mitigation",
+            "content": "Detect and handle potential problems promptly, helping to minimize damage."
+          },
+          {
+            "title": "Improving transparency",
+            "content": "Provide transparent and accurate information about the project status to all stakeholders."
+          },
+          {
+            "title": "Resource Optimization",
+            "content": "Helps effectively use resources such as human resources, finance and time."
+          }
+        ],
+        "img": "/image/solutions/investors/investors-feature-1.jpg"
+      },
+      "second": {
+        "title": "Outstanding features of the solution",
+        "listsContent": [
+          {
+            "title": "Intuitive, easy-to-use interface",
+            "content": "Helps users easily get acquainted and use the system."
+          },
+          {
+            "title": "Integration with other systems",
+            "content": "Easily connect to existing business systems."
+          },
+          {
+            "title": "High Security",
+            "content": "Protect customer data safely and securely."
+          },
+          {
+            "title": "Multi-language and cross-platform support",
+            "content": "Relevant to global customer needs."
+          }
+        ],
+        "img": "/image/solutions/investors/investors-feature-2.jpg"
+      },
+      "third": {
+        "title": "Deployment methods and customer support",
+        "listsContent": [
+          {
+            "title": "Consulting and implementation",
+            "content": "Providing professional consulting and solution implementation services."
+          },
+          {
+            "title": "User Training",
+            "content": "Organize training courses to help users use the system effectively."
+          },
+          {
+            "title": "Technical Support",
+            "content": "Provides 24/7 technical support to answer questions and troubleshoot problems."
+          }
+        ],
+        "img": "/image/solutions/investors/investors-feature-3.jpg"
+      }
+    },
+    "callToAction": {
+      "title": "Ready to work in a focused, simple and effective way?",
+      "content": "Talk to one of our experts to determine the right solution for your needs,",
+      "actions": [
+        {
+          "title": "Determine your ideal solution",
+          "desc": "Are you looking for the most suitable solution? We will accompany you. Our experts will listen to your needs and provide suitable suggestions, helping you find a solution optimal solution."
+        },
+        {
+          "title": "Initial setup of custom solution",
+          "desc": "We will professionally deploy the solution. Our experts will configure and customize the system to meet your specific requirements."
+        }
+      ],
+      "button": "Schedule demo"
+    }
+  },
+  "Operators": {
+    "heroSection": {
+      "title": "Solutions for Operations Managers (O&M)",
+      "subTitle": "Manage every project, every device in one place.",
+      "desc": "Udata provides a centralized platform, helping you efficiently manage all your projects and devices, no matter how complex and diverse they are. With an intuitive interface and easy to use, you can easily monitor, analyze and control all activities.",
+      "contact": "Contact"
+    },
+    "allFeatures": {
+      "title": "Udata's outstanding features meet the needs of operations managers",
+      "desc": "Udata is a centralized software platform that manages the overall operations of all projects.",
+      "lists": [
+        {
+          "id": "1",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-clock-2'><circle cx='12' cy='12' r='10 '/><polyline points='12 6 12 12 16 10'/></svg>",
+          "title": "",
+          "content": "Real-time data synchronization ensures information is always accurate and up to date."
+        },
+        {
+          "id": "2",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-circle-alert'><circle cx='12' cy='12' r='10 '/><line x1='12' x2='12' y1='8' y2='12'/><line x1='12' x2='12.01' y1='16' y2='16'/ ></svg>",
+          "title": "",
+          "content": "Warning and classifying risks of incidents and/or incidents that may arise so that operators do not need to constantly pay attention to the operation management screen"
+        },
+        {
+          "id": "3",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-square-activity'><rect width='18' height='18' x='3 ' y='3' rx='2'/><path d='M17 12h-2l-2 5-2-10-2 5H7'/></svg>",
+          "title": "",
+          "content": "Store data for up to 30 days when experiencing network failure."
+        },
+        {
+          "id": "4",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-bell'><path d='M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3 -2 3-9'/><path d='M10.3 21a1.94 1.94 0 0 0 3.4 0'/></svg>",
+          "title": "",
+          "content": "Periodically send project activity reports according to pre-set targets."
+        }
+      ]
+    },
+    "singleFeature": {
+      "first": {
+        "title": "Benefits that the solution brings",
+        "listsContent": [
+          {
+            "title": "Increasing management efficiency",
+            "content": "Helps operations managers have an overview of all machine operations, thereby making quick and accurate decisions."
+          },
+          {
+            "title": "Risk mitigation",
+            "content": "Detect and handle potential problems promptly, helping to minimize damage."
+          },
+          {
+            "title": "Improving transparency",
+            "content": "Provide transparent and accurate information about the project status to all stakeholders."
+          },
+          {
+            "title": "Resource Optimization",
+            "content": "Helps effectively use resources such as human resources, finance and time."
+          }
+        ],
+        "img": "/image/solutions/investors/investors-feature-1.jpg"
+      },
+      "second": {
+        "title": "Outstanding features of the solution",
+        "listsContent": [
+          {
+            "title": "Intuitive, easy-to-use interface",
+            "content": "Helps users easily get acquainted and use the system."
+          },
+          {
+            "title": "Integration with other systems",
+            "content": "Easily connect to existing business systems."
+          },
+          {
+            "title": "High Security",
+            "content": "Protect customer data safely and securely."
+          },
+          {
+            "title": "Multi-language and cross-platform support",
+            "content": "Relevant to global customer needs."
+          }
+        ],
+        "img": "/image/solutions/investors/investors-feature-2.jpg"
+      },
+      "third": {
+        "title": "Deployment methods and customer support",
+        "listsContent": [
+          {
+            "title": "Consulting and implementation",
+            "content": "Providing professional consulting and solution implementation services."
+          },
+          {
+            "title": "User Training",
+            "content": "Organize training courses to help users use the system effectively."
+          },
+          {
+            "title": "Technical Support",
+            "content": "Provides 24/7 technical support to answer questions and troubleshoot problems."
+          }
+        ],
+        "img": "/image/solutions/investors/investors-feature-3.jpg"
+      }
+    },
+    "callToAction": {
+      "title": "Ready to work in a focused, simple and effective way?",
+      "content": "Talk to one of our experts to determine the right solution for your needs,",
+      "actions": [
+        {
+          "title": "Determine your ideal solution",
+          "desc": "Are you looking for the most suitable solution? We will accompany you. Our experts will listen to your needs and provide suitable suggestions, helping you find a solution optimal solution."
+        },
+        {
+          "title": "Initial setup of custom solution",
+          "desc": "We will professionally deploy the solution. Our experts will configure and customize the system to meet your specific requirements."
+        }
+      ],
+      "button": "Schedule demo"
+    }
   }
 }
