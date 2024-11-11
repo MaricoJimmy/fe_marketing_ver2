@@ -4,10 +4,10 @@ import Image from "next/image";
 import { useRouter } from "next/router";
 import { ROUTER_CONTACT } from "@/utils/constant";
 
-function HeroSection({ data }) {
+function HeroSection({ data, image = "", bgColor = "bg-infor" }) {
   const router = useRouter();
   return (
-    <div className="grid lg:grid-cols-5 grid-cols-1 h-fit">
+    <div className="grid lg:grid-cols-5 grid-cols-1 h-fit lg:min-h-[600px]">
       <div className="lg:col-span-3 w-full h-full lg:px-20 lg:py-24 md:px-10 md:py-8 px-4 py-6 bg-gray/5">
         <h4 className="uppercase text-infor lg:text-lg text-sm lg:text-start text-center font-semibold">
           {data.subTitle}
@@ -24,10 +24,12 @@ function HeroSection({ data }) {
           </Button>
         </div>
       </div>
-      <div className="lg:col-span-2 md:p-6 p-3 flex items-center bg-infor w-full h-full">
+      <div
+        className={`${bgColor} lg:col-span-2 md:p-6 p-3 flex items-center w-full h-full`}
+      >
         <div className="lg:-ml-20 w-full flex items-center justify-center">
           <Image
-            src="/image/solar/solar.jpg"
+            src={image}
             width={750}
             height={500}
             alt=""

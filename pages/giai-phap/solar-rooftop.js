@@ -19,7 +19,11 @@ const SolarRooftopLandingPage = () => {
       <PageSeoHead data={metaTagData} />
       <div className="pb-14">
         {/* hero section */}
-        <HeroSection data={t.raw("heroSection")} />
+        <HeroSection
+          data={t.raw("heroSection")}
+          image="/image/solutions/solar/solar.jpg"
+          bgColor="bg-infor"
+        />
         {/* main features */}
         <HighLightFeature
           data={{

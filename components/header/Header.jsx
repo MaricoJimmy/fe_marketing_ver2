@@ -19,6 +19,7 @@ import {
   ROUTER_BLOG,
   ROUTER_CASE_STUDY,
   ROUTER_CONTACT,
+  ROUTER_FISHERIES,
   ROUTER_PMS,
   ROUTER_SOLAR,
 } from "@/utils/constant";
@@ -95,11 +96,43 @@ function HeaderDesktop({ stickyHeader, locale }) {
                       {t("solutions.title")}
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
-                      <ul className="min-w-[340px] p-2 border-none list-none">
-                        <MenuItem title="Solar Rooftop" href={ROUTER_SOLAR}>
-                          {t("solutions.subMenus.solar")}
-                        </MenuItem>
-                      </ul>
+                      <div className="flex items-center">
+                        <div className="p-4">
+                          <h3 className="text-neutral text-base font-semibold">
+                            Giải pháp theo đối tượng
+                          </h3>
+                          <ul className="mt-2 min-w-[340px] border-none list-none">
+                            <MenuItem
+                              title="Chủ đầu tư - Quản lý cấp cao"
+                              href={"/"}
+                            >
+                              Giải pháp cho Chủ đầu tư - Quản lý cấp cao
+                            </MenuItem>
+                            <MenuItem title="Cấp quản lý" href={"/"}>
+                              Giải pháp cho Cấp quản lý
+                            </MenuItem>
+                            <MenuItem title="Cấp vận hành" href={"/"}>
+                              Giải pháp cho Cấp vận hành
+                            </MenuItem>
+                          </ul>
+                        </div>
+                        <div className="p-4">
+                          <h3 className="text-neutral text-base font-semibold">
+                            Giải pháp theo lĩnh vực
+                          </h3>
+                          <ul className="mt-2 min-w-[340px] border-none list-none">
+                            <MenuItem title="Solar Rooftop" href={ROUTER_SOLAR}>
+                              {t("solutions.subMenus.solar")}
+                            </MenuItem>
+                            <MenuItem title="Nhà máy" href={"/"}>
+                              Giải pháp cho nhà máy công nghiệp
+                            </MenuItem>
+                            <MenuItem title="Thủy sản" href={ROUTER_FISHERIES}>
+                              Giải pháp cho nuôi trồng thủy sản
+                            </MenuItem>
+                          </ul>
+                        </div>
+                      </div>
                     </NavigationMenuContent>
                   </NavigationMenuItem>
                   <NavigationMenuItem className="hover:bg-neutral/5 hover:text-primary rounded-md">

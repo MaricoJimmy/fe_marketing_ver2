@@ -483,25 +483,25 @@
         "title": "Real-Time Performance Monitoring",
         "subTitle": "A section focusing on how real-time data and performance analytics provide transparency into system performance.",
         "desc": "Our platform provides detailed information about your solar energy output, allowing you to track key metrics such as output, inverter performance. Use performance data historical performance to identify inefficiencies and make data-driven decisions to optimize energy use.",
-        "img": "/image/solar/solar-feature-1.png"
+        "img": "/image/solutions/solar/solar-feature-1.png"
       },
       "second": {
         "title": "Automatic Alerts and Proactive Maintenance",
         "subTitle": "Explains how the system sends notifications when performance thresholds are crossed, helping to take quick action on system errors.",
         "desc": "Avoid downtime with our smart alert system. Receive real-time notifications of any issues affecting your solar power system output, ensuring your system operating at peak performance.",
-        "img": "/image/solar/solar-feature-2.png"
+        "img": "/image/solutions/solar/solar-feature-2.png"
       },
       "third": {
         "title": "Report an anomaly",
         "subTitle": "Focuses on the ability to synthesize information from anomalies that give warnings about revenue loss.",
         "desc": "We provide you with abnormal reports by day, week, and month. With specific and intuitive numbers, you can immediately grasp the problem occurring in the system, helping you make a decision immediately.",
-        "img": "/image/solar/solar-feature-3.png"
+        "img": "/image/solutions/solar/solar-feature-3.png"
       },
       "four": {
         "title": "Seamless Integration with Your Energy System",
         "subTitle": "Focuses on integration with existing energy management systems.",
         "desc": "Our rooftop solar solutions integrate seamlessly with your existing energy infrastructure. Manage solar, grid and storage all from one platform , optimize energy flow and reduce costs.",
-        "img": "/image/solar/solar-feature-4.png"
+        "img": "/image/solutions/solar/solar-feature-4.png"
       }
     },
     "callToAction": {
@@ -514,5 +514,73 @@
     "title": "About us",
     "content": "<p>Developed since 2022. In 2024, Udata is invested by DHG.</p> <p>Udata aims to become a software platform <span class='font-semibold'> leading Vietnam and Southeast Asia </span> in the field of energy management, IoT data analysis on cloud data platform (SaaS), we provide <span class='font-semibold'> comprehensive solution </span> for businesses and organizations to help analyze and optimize energy consumption, IoT operating parameters from machines, environment, equipment, ... from That reduces costs, increases productivity, and contributes to achieving sustainable development goals.</p> <p>Udata brings together enthusiasm and creative intelligence in the fields of technology and management, together Hands on creating a green future. From the management team, partners, investors, to businesses using Udata, we all share a common vision: As a companion to businesses, optimize performance, reduce costs and create a more sustainable energy system. </p><p>Let's optimize your productivity with Udata today!</p>",
     "excerpt": "Let's optimize your productivity with Udata today!"
+  },
+  "Fisheries": {
+    "heroSection": {
+      "title": "Optimal solution for the seafood industry",
+      "subTitle": "Environmental control and increased productivity",
+      "desc": "Udata is a smart monitoring solution for the seafood industry, helping to control the farming environment effectively and optimize productivity. This system continuously monitors important water quality parameters, Early warning of pollution risks and monitoring of animal growth. Experience it now.",
+      "contact": "Contact"
+    },
+    "allFeatures": {
+      "title": "Main features",
+      "lists": [
+        {
+          "id": "1",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-droplet'><path d='M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z ' /></svg>",
+          "title": "Water quality monitoring",
+          "content": "Udata provides a comprehensive water quality monitoring system, helping you monitor important parameters such as pH, salinity, temperature, dissolved oxygen content, etc."
+        },
+        {
+          "id": "2",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-worm'><path d='m19 12-1.5 3'/><path d='M19.63 18.81 22 20'/><path d='M6.47 8.23a1.68 1.68 0 0 1 2.44 1.93l-.64 2.08a6.76 6.76 0 0 0 10.16 7.67l.42-.27a1 1 0 1 0-2.73-4.21l-.42.27a1.76 1.76 0 0 1-2.63-1.99l.64-2.08A6.66 6.66 0 0 0 3.94 3.9l-.7.4a1 1 0 1 0 2.55 4.34z'/></svg>",
+          "title": "Monitoring the growth level of breeding animals",
+          "content": "Udata collects growth data of breeds, including weight, size, etc. The system helps you closely monitor the development process of breeds, identify abnormal trends early to take action. timely intervention."
+        },
+        {
+          "id": "3",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><rect width='7' height='7' x='14' y='3' rx='1'/><path d='M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3'/></svg>",
+          "title": "Smart Alerts and Automatic Notifications",
+          "content": "Receive automatic alerts about system errors or potential contamination. Customize thresholds to receive email or SMS notifications, helping you stay proactive about unexpected problems."
+        },
+        {
+          "id": "4",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-bell'><path d='M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9'/><path d='M10.3 21a1.94 1.94 0 0 0 3.4 0'/></svg>",
+          "title": "Report an anomaly",
+          "content": "Synthesis of abnormalities in data collected in the system. Indicates abnormal growth rate of breeds with daily, weekly, and monthly reports."
+        }
+      ]
+    },
+    "singleFeature": {
+      "first": {
+        "title": "Water quality monitoring",
+        "subTitle": "The system allows to collect and centralize real-time data from many different sources",
+        "desc": "Udata is a comprehensive water quality monitoring system that helps you continuously monitor important parameters such as pH, salinity, temperature, dissolved oxygen content, etc. with an advanced sensor system Udata provides an intuitive, easy-to-use interface that allows you to monitor parameters directly on your mobile device or computer by continuously monitoring quality parameters water, Udata helps you control the farming environment effectively, limit the risk of disease and pollution, and improve production efficiency, making it a useful tool for aquaculture farms.",
+        "img": "/image/solutions/solar/solar-feature-1.png"
+      },
+      "second": {
+        "title": "Monitoring the growth level of breeding animals",
+        "subTitle": "Udata collects data on the weight and size of animals, analyzes the data and displays the results in graphs and reports, helping you easily monitor and evaluate growth rates of the breed.",
+        "desc": "Udata not only monitors water quality but also expands functions to track and monitor the growth level of breeding animals. The system collects data on weight, growth rate, and analysis data, detect unusual trends.",
+        "img": "/image/solutions/solar/solar-feature-2.png"
+      },
+      "third": {
+        "title": "Smart Alerts and Automatic Notifications",
+        "subTitle": "The system sends notifications when data exceeds the safety threshold, helping to detect and resolve problems quickly.",
+        "desc": "Receive real-time notifications about all issues affecting the farming environment and the growth rate of the breed. Customize the threshold settings according to experience, any abnormalities will be recorded and Warning via Email/SMS. Early warning will help keep pets safe from harmful environmental factors.",
+        "img": "/image/solutions/solar/solar-feature-3.png"
+      },
+      "four": {
+        "title": "Report an anomaly",
+        "subTitle": "Focuses on the ability to synthesize information from anomalies and produce a comprehensive report.",
+        "desc": "We provide you with abnormal reports by day, week, and month. With specific and intuitive numbers, you can immediately grasp the problem that is happening in your farm system. you immediately.",
+        "img": "/image/solutions/solar/solar-feature-4.png"
+      }
+    },
+    "callToAction": {
+      "title": "Start increasing your productivity?",
+      "content": "Ready to increase your production? Contact us to learn more about how our solution can help you monitor your livestock environment, track the growth rate of your animals , increase revenue and more.",
+      "button": "Contact"
+    }
   }
 }

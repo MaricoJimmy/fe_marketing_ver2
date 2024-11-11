@@ -488,25 +488,25 @@
         "title": "Giám Sát Hiệu Suất Theo Thời Gian Thực",
         "subTitle": "Một phần tập trung vào cách dữ liệu theo thời gian thực và phân tích hiệu suất cung cấp sự minh bạch về hiệu suất hệ thống.",
         "desc": "Nền tảng của chúng tôi cung cấp các thông tin chi tiết về sản lượng năng lượng mặt trời của bạn, cho phép bạn theo dõi các chỉ số chính như sản lượng, hiệu suất biến tần. Sử dụng dữ liệu hiệu suất trong quá khứ để xác định những điểm kém hiệu quả và đưa ra các quyết định dựa trên dữ liệu để tối ưu hóa việc sử dụng năng lượng.",
-        "img": "/image/solar/solar-feature-1.png"
+        "img": "/image/solutions/solar/solar-feature-1.png"
       },
       "second": {
         "title": "Cảnh Báo Tự Động và Bảo Trì Chủ Động",
         "subTitle": "Giải thích cách hệ thống gửi thông báo khi vượt qua các ngưỡng hiệu suất, giúp thực hiện hành động nhanh chóng đối với các lỗi hệ thống.",
         "desc": "Tránh thời gian chết với hệ thống cảnh báo thông minh của chúng tôi. Nhận thông báo theo thời gian thực về mọi vấn đề ảnh hưởng đến sản lượng hệ thống điện mặt trời của bạn, đảm bảo hệ thống của bạn hoạt động ở hiệu suất cao nhất.",
-        "img": "/image/solar/solar-feature-2.png"
+        "img": "/image/solutions/solar/solar-feature-2.png"
       },
       "third": {
         "title": "Báo cáo điểm bất thường",
         "subTitle": "Tập trung vào khả năng tổng hợp thông tin từ điểm bất thường đưa ra cảnh báo về sự thất thoát doanh thu.",
         "desc": "Chúng tôi cung cấp cho bạn các báo cáo bất thường theo ngày, tuần, tháng. Với các con số cụ thể và trực quan, nắm bắt được ngay lập tức vấn đề đang xảy ra trong hệ thống, giúp bạn đưa ra quyết định ngay lập tức.",
-        "img": "/image/solar/solar-feature-3.png"
+        "img": "/image/solutions/solar/solar-feature-3.png"
       },
       "four": {
         "title": "Tích Hợp Liền Mạch với Hệ Thống Năng Lượng của Bạn",
         "subTitle": "Tập trung vào khả năng tích hợp với các hệ thống quản lý năng lượng hiện có.",
         "desc": "Giải pháp điện mặt trời áp mái của chúng tôi tích hợp liền mạch với hạ tầng năng lượng hiện có của bạn. Quản lý năng lượng mặt trời, năng lượng lưới và năng lượng lưu trữ tất cả từ một nền tảng, tối ưu hóa dòng năng lượng và giảm chi phí.",
-        "img": "/image/solar/solar-feature-4.png"
+        "img": "/image/solutions/solar/solar-feature-4.png"
       }
     },
     "callToAction": {
@@ -519,5 +519,73 @@
     "title": "Về chúng tôi",
     "content": "<p>Được phát triển từ năm 2022. Năm 2024, Udata được đầu tư bởi DHG.</p> <p>Udata hướng tới mục tiêu trở thành nền tảng phần mềm <span class='font-semibold'> hàng đầu Việt Nam và Đông Nam Á </span> trong lĩnh vực quản trị năng lượng, phân tích dự liệu IoT trên nền tảng dữ liệu đám mây (SaaS), chúng tôi cung cấp <span class='font-semibold'> giải pháp toàn diện </span> cho các doanh nghiệp, tổ chức giúp phân tích và tối ưu hóa tiêu thụ năng lượng, các thông số hoạt động IoT từ máy móc, môi trường, thiết bị, ... từ đó giảm chi phí, tăng năng suất, và góp phần đạt được mục tiêu phát triển bền vững.</p> <p>Udata hội tụ những tâm huyết, trí tuệ sáng tạo trong lĩnh vực công nghệ, quản lý, cùng chung tay kiến tạo một tương lai xanh. Từ đội ngũ quản lý, đối tác, nhà đầu tư, đến những doanh nghiệp sử dụng Udata, tất cả chúng tôi đều chia sẻ một tầm nhìn chung: Là người bạn đồng hành cùng doanh nghiệp, tối ưu hóa hiệu suất, giảm thiểu chi phí và kiến tạo hệ thống năng lượng bền vững hơn. </p><p>Hãy cùng Udata tối ưu năng suất của bạn ngay hôm nay!</p>",
     "excerpt": "Hãy cùng Udata tối ưu năng suất của bạn ngay hôm nay!"
+  },
+  "Fisheries": {
+    "heroSection": {
+      "title": "Giải pháp tối ưu cho ngành thủy sản",
+      "subTitle": "Kiểm soát môi trường và tăng năng suất",
+      "desc": "Udata là giải pháp giám sát thông minh cho ngành thủy sản, giúp kiểm soát môi trường nuôi trồng hiệu quả và tối ưu hóa năng suất. Hệ thống này theo dõi liên tục các thông số chất lượng nước quan trọng, cảnh báo sớm nguy cơ ô nhiễm và giám sát sinh trưởng của con giống. Hãy trải nghiệm ngay.",
+      "contact": "Liên hệ"
+    },
+    "allFeatures": {
+      "title": "Các tính năng chính",
+      "lists": [
+        {
+          "id": "1",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-droplet'><path d='M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z' /></svg>",
+          "title": "Giám sát chất lượng nước",
+          "content": "Udata cung cấp hệ thống giám sát chất lượng nước toàn diện, giúp bạn theo dõi các thông số quan trọng như pH, độ mặn, nhiệt độ, hàm lượng oxy hòa tan v.v."
+        },
+        {
+          "id": "2",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-worm'><path d='m19 12-1.5 3'/><path d='M19.63 18.81 22 20'/><path d='M6.47 8.23a1.68 1.68 0 0 1 2.44 1.93l-.64 2.08a6.76 6.76 0 0 0 10.16 7.67l.42-.27a1 1 0 1 0-2.73-4.21l-.42.27a1.76 1.76 0 0 1-2.63-1.99l.64-2.08A6.66 6.66 0 0 0 3.94 3.9l-.7.4a1 1 0 1 0 2.55 4.34z'/></svg>",
+          "title": "Giám sát mức độ sinh trưởng của con giống",
+          "content": "Udata thu thập dữ liệu sinh trưởng của con giống, bao gồm cân nặng, kích thước, v.v.  Hệ thống giúp bạn theo dõi sát sao quá trình phát triển của con giống, xác định sớm xu hướng bất thường để có biện pháp can thiệp kịp thời."
+        },
+        {
+          "id": "3",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><rect width='7' height='7' x='14' y='3' rx='1'/><path d='M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3'/></svg>",
+          "title": "Cảnh báo thông minh và Thông báo tự động",
+          "content": "Nhận cảnh báo tự động về lỗi hệ thống hoặc nguy cơ ô nhiễm. Tùy chỉnh các ngưỡng để nhận thông báo qua email hoặc SMS, giúp bạn luôn chủ động trước các sự cố bất ngờ."
+        },
+        {
+          "id": "4",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-bell'><path d='M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9'/><path d='M10.3 21a1.94 1.94 0 0 0 3.4 0'/></svg>",
+          "title": "Báo cáo điểm bất thường",
+          "content": "Tổng hợp các điểm bất thường về dữ liệu thu thập trong hệ thống. Chỉ ra tốc độ sinh trưởng bất thường của con giống với báo cáo ngày, tuần, tháng."
+        }
+      ]
+    },
+    "singleFeature": {
+      "first": {
+        "title": "Giám sát chất lượng nước",
+        "subTitle": "Hệ thống cho phép thu thập và tập trung dữ liệu thời gian thực từ nhiều nguồn khác nhau",
+        "desc": "Udata là hệ thống giám sát chất lượng nước toàn diện, giúp bạn theo dõi liên tục các thông số quan trọng như pH, độ mặn, nhiệt độ, hàm lượng oxy hòa tan, v.v. với hệ thống cảm biến tiên tiến hoạt động ổn định và chính xác. Udata cung cấp giao diện trực quan, dễ sử dụng, cho phép bạn theo dõi thông số trực tiếp trên thiết bị di động hoặc máy tính. Bằng cách theo dõi liên tục các thông số chất lượng nước, Udata giúp bạn kiểm soát môi trường nuôi trồng hiệu quả, hạn chế rủi ro bệnh tật, ô nhiễm, và nâng cao hiệu quả sản xuất, là công cụ hữu ích cho các trang trại nuôi trồng thủy sản.",
+        "img": "/image/solutions/fisheries/fisheries-feature-1.png"
+      },
+      "second": {
+        "title": "Giám sát mức độ sinh trưởng của con giống",
+        "subTitle": "Udata thu thập dữ liệu về trọng lượng và kích thước của con giống, phân tích dữ liệu và hiển thị kết quả dưới dạng biểu đồ và báo cáo, giúp bạn dễ dàng theo dõi và đánh giá tốc độ tăng trưởng của con giống.",
+        "desc": "Udata không chỉ giám sát chất lượng nước mà còn mở rộng chức năng để theo dõi và giám sát mức độ sinh trưởng của con giống. Hệ thống thu thập dữ liệu về cân nặng, tốc độ tăng trưởng, phân tích dữ liệu, phát hiện xu hướng bất thường.",
+        "img": "/image/solutions/fisheries/fisheries-feature-2.png"
+      },
+      "third": {
+        "title": "Cảnh Báo thông minh và Thông báo tự động",
+        "subTitle": "Hệ thống gửi thông báo khi số liệu vượt ngưỡng an toàn, giúp phát hiện và giải quyết vấn đề một cách nhanh chóng.",
+        "desc": "Nhận thông báo theo thời gian thực về mọi vấn đề ảnh hưởng đến môi trường nuôi trồng và tốc độ sinh trưởng của con giống. Tùy chỉnh các ngưỡng cài đặt theo kinh nghiệm, mọi bất thường sẽ được ghi nhận và cảnh báo qua Email/SMS. Cảnh báo sớm sẽ giúp vật nuôi an toàn trước các tác nhân có hại từ môi trường.",
+        "img": "/image/solutions/fisheries/fisheries-feature-3.png"
+      },
+      "four": {
+        "title": "Báo cáo điểm bất thường",
+        "subTitle": "Tập trung vào khả năng tổng hợp thông tin từ điểm bất thường và đưa ra báo cáo tổng hợp.",
+        "desc": "Chúng tôi cung cấp cho bạn các báo cáo bất thường theo ngày, tuần, tháng. Với các con số cụ thể và trực quan, nắm bắt được ngay lập tức vấn đề đang xảy ra trong hệ thống trang trại của bạn ngay lập tức.",
+        "img": "/image/solutions/fisheries/fisheries-feature-4.png"
+      }
+    },
+    "callToAction": {
+      "title": "Bắt đầu nâng cao sản lượng của bạn?",
+      "content": "Sẵn sàng nâng cao sản lượng của bạn? Liên hệ với chúng tôi để tìm hiểu thêm về cách giải pháp của chúng tôi có thể giúp bạn giám sát môi trường chăn nuôi, theo dõi tốc độ sinh trưởng của con giống, tăng doanh thu và hơn thế nữa.",
+      "button": "Liên hệ"
+    }
   }
 }

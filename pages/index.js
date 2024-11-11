@@ -1,7 +1,6 @@
 import Image from "next/image";
 import PageSeoHead from "../components/common/PageSeoHead";
 import { getApolloClient } from "../libs/apollo-client";
-
 import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/router";
