@@ -61,11 +61,7 @@ const BlogPage = ({ posts }) => {
                     key={post.id}
                     className="col-span-12 md:col-span-6 lg:col-span-4 h-full"
                   >
-                    <BlogCard
-                      data={post}
-                      category="pambu-pms"
-                      locale={locale}
-                    />
+                    <BlogCard data={post} category="blog" locale={locale} />
                   </li>
                 ))}
               </ul>

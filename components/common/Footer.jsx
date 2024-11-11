@@ -13,45 +13,77 @@ import React from "react";
 
 function Footer() {
   const t = useTranslations("Footer");
+  // const listMenu = [
+  //   {
+  //     title: "Udata PMS",
+  //     href: ROUTER_PMS,
+  //   },
+  //   {
+  //     title: "Solar rooftop",
+  //     href: ROUTER_SOLAR,
+  //   },
+  //   {
+  //     title: "Case study",
+  //     href: ROUTER_CASE_STUDY,
+  //   },
+  //   {
+  //     title: "Blog",
+  //     href: ROUTER_BLOG,
+  //   },
+  //   {
+  //     title: t("section.first.links.contact"),
+  //     href: ROUTER_CONTACT,
+  //   },
+  //   {
+  //     title: t("section.first.links.about-us"),
+  //     href: ROUTER_ABOUT_US,
+  //   },
+  // ];
+
   const listMenu = [
     {
-      title: "Udata PMS",
-      href: ROUTER_PMS,
+      section: "Công ty",
     },
     {
-      title: "Solar rooftop",
-      href: ROUTER_SOLAR,
+      section: "Giải pháp",
+      menus: [
+        "Chủ đầu tư - Quản lý cấp cao",
+        "Cấp quản lý",
+        "Cấp vận hành",
+        "Năng lượng mặt trời áp mái",
+        "Nhà máy công nghiệp",
+        "Quan trắc môi trường",
+        "Nông nghiệp",
+        "Viễn thông",
+        "Y tế",
+        "Bán lẻ - Ngân hàng",
+        "Xăng dầu",
+      ],
     },
     {
-      title: "Case study",
-      href: ROUTER_CASE_STUDY,
+      section: "Sản phẩm",
+      menus: ["Nền tảng SaaS", "Tích hợp dữ liệu"],
     },
     {
-      title: "Blog",
-      href: ROUTER_BLOG,
+      section: "Tin tức",
     },
     {
-      title: t("section.first.links.contact"),
-      href: ROUTER_CONTACT,
-    },
-    {
-      title: t("section.first.links.about-us"),
-      href: ROUTER_ABOUT_US,
+      section: "Tuyển dụng",
     },
   ];
   return (
     <>
       <div className="hidden lg:block">
-        <FooterDesktop menus={listMenu} />
+        <FooterDesktop sectionLinks={listMenu} />
       </div>
       <div className="block lg:hidden">
-        <FooterMobile menus={listMenu} />
+        <FooterMobile sectionLinks={listMenu} />
       </div>
     </>
   );
 }
 
-function FooterDesktop({ menus }) {
+function FooterDesktop({ sectionLinks }) {
   const t = useTranslations("Footer");
   return (
     <div className="w-full border-t border-gray/20">
@@ -70,7 +102,7 @@ function FooterDesktop({ menus }) {
                 </a>
               </Link>
               <span className="text-lg text-gray/60 font-semibold">
-                Copyright @ 2022 Udata.ai
+                Copyright @ 2024 Udata.ai
               </span>
             </div>
             <div className="col-span-1">
@@ -78,15 +110,25 @@ function FooterDesktop({ menus }) {
                 {t("section.first.title")}
               </h4>
               <ul className="mt-8 flex flex-col items-start gap-6 cursor-pointer">
-                {menus.map((menu) => (
-                  <li key={menu.title} className="w-full">
-                    <div className="text-gray/80 font-semibold hover:text-primary duration-200">
-                      <Link href={menu.href}>
+                {sectionLinks.map((sectionLink) => (
+                  <li key={sectionLink.section} className="w-full">
+                    {/* <Link href={menu.href}>
                         <a className="block w-full" aria-label="Udata PMS">
                           {menu.title}
                         </a>
-                      </Link>
-                    </div>
+                      </Link> */}
+                    <h3 className="text-neutral font-bold hover:text-primary duration-200">
+                      {sectionLink.section}
+                    </h3>
+                    {sectionLink.menus ? (
+                      <ul className="mt-2 flex flex-col space-y-1">
+                        {sectionLink.menus.map((menu) => (
+                          <li key={menu} className="text-gray/80 font-semibold">
+                            {menu}
+                          </li>
+                        ))}
+                      </ul>
+                    ) : null}
                   </li>
                 ))}
               </ul>
@@ -186,7 +228,7 @@ function FooterDesktop({ menus }) {
   );
 }
 
-function FooterMobile({ menus }) {
+function FooterMobile({ sectionLinks }) {
   const t = useTranslations("Footer");
   return (
     <div className="w-full border-t border-gray/20">
@@ -210,16 +252,29 @@ function FooterMobile({ menus }) {
                 <h4 className="text-2xl text-gray font-semibold">
                   {t("section.first.title")}
                 </h4>
-                <ul className="mt-6 flex flex-col gap-6 cursor-pointer">
-                  {menus.map((menu) => (
-                    <li key={menu.title} className="w-full">
-                      <div className="text-gray/80 font-semibold hover:text-primary duration-200">
-                        <Link href={menu.href}>
-                          <a className="block w-full" aria-label="Pambu PMS">
-                            {menu.title}
-                          </a>
-                        </Link>
-                      </div>
+                <ul className="mt-6 flex flex-col items-start gap-6 cursor-pointer">
+                  {sectionLinks.map((sectionLink) => (
+                    <li key={sectionLink.section} className="w-full">
+                      {/* <Link href={menu.href}>
+                        <a className="block w-full" aria-label="Udata PMS">
+                          {menu.title}
+                        </a>
+                      </Link> */}
+                      <h3 className="text-neutral font-bold hover:text-primary duration-200">
+                        {sectionLink.section}
+                      </h3>
+                      {sectionLink.menus ? (
+                        <ul className="mt-2 flex flex-col space-y-1">
+                          {sectionLink.menus.map((menu) => (
+                            <li
+                              key={menu}
+                              className="text-gray/80 font-semibold"
+                            >
+                              {menu}
+                            </li>
+                          ))}
+                        </ul>
+                      ) : null}
                     </li>
                   ))}
                 </ul>
@@ -315,7 +370,7 @@ function FooterMobile({ menus }) {
             </div>
             <div className="mt-6 flex items-center justify-center">
               <span className="text-gray/60 font-semibold">
-                Copyright @ 2022 Pambu.org
+                Copyright @ 2024 Udata.ai
               </span>
             </div>
           </div>

@@ -30,7 +30,7 @@ const AboutUsPage = () => {
           </div>
           <div className="w-full h-[400px] relative rounded-xl shadow-md">
             <Image
-              src="/image/about-us.jpg"
+              src="/image/about-us/about-us.jpg"
               layout="fill"
               alt=""
               className="object-cover rounded-xl"

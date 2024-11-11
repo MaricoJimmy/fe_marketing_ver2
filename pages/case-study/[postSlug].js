@@ -1,18 +1,16 @@
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import React, { useEffect, useMemo } from "react";
 import BlogRelated from "../../components/common/BlogRelated";
-import Breadcrumb from "../../components/common/Breadcrumb";
 import PageSeoHead from "../../components/common/PageSeoHead";
 import SocialShare from "../../components/common/SocialShare";
 import { getApolloClient } from "../../libs/apollo-client";
-import { AllNewsPosts } from "../../queries/guidesQueries";
+import { AllNewsPosts, AllOEEPosts } from "../../queries/guidesQueries";
 import {
   MoreRelatedPostsQueryInSameCategory,
   PostDetailsQuery,
 } from "../../queries/postQuery";
 import { getDate } from "../../utils";
-import { useTranslations } from "next-intl";
 
 export async function getStaticProps({ params, locale }) {
   const client = getApolloClient();
@@ -103,7 +101,7 @@ export async function getStaticPaths({ locales }) {
       posts: { nodes: items },
     },
   } = await client.query({
-    query: AllNewsPosts,
+    query: AllOEEPosts,
   });
 
   // items.forEach((post) => {

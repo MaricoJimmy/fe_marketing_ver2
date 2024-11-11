@@ -63,7 +63,7 @@ const CaseStudyPage = ({ posts }) => {
                   >
                     <BlogCard
                       data={post}
-                      category="pambu-oee"
+                      category="case-study"
                       locale={locale}
                     />
                   </li>
