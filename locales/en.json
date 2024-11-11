@@ -556,25 +556,25 @@
         "title": "Water quality monitoring",
         "subTitle": "The system allows to collect and centralize real-time data from many different sources",
         "desc": "Udata is a comprehensive water quality monitoring system that helps you continuously monitor important parameters such as pH, salinity, temperature, dissolved oxygen content, etc. with an advanced sensor system Udata provides an intuitive, easy-to-use interface that allows you to monitor parameters directly on your mobile device or computer by continuously monitoring quality parameters water, Udata helps you control the farming environment effectively, limit the risk of disease and pollution, and improve production efficiency, making it a useful tool for aquaculture farms.",
-        "img": "/image/solutions/solar/solar-feature-1.png"
+        "img": "/image/solutions/fisheries/fisheries-feature-1.png"
       },
       "second": {
         "title": "Monitoring the growth level of breeding animals",
         "subTitle": "Udata collects data on the weight and size of animals, analyzes the data and displays the results in graphs and reports, helping you easily monitor and evaluate growth rates of the breed.",
         "desc": "Udata not only monitors water quality but also expands functions to track and monitor the growth level of breeding animals. The system collects data on weight, growth rate, and analysis data, detect unusual trends.",
-        "img": "/image/solutions/solar/solar-feature-2.png"
+        "img": "/image/solutions/fisheries/fisheries-feature-2.png"
       },
       "third": {
         "title": "Smart Alerts and Automatic Notifications",
         "subTitle": "The system sends notifications when data exceeds the safety threshold, helping to detect and resolve problems quickly.",
         "desc": "Receive real-time notifications about all issues affecting the farming environment and the growth rate of the breed. Customize the threshold settings according to experience, any abnormalities will be recorded and Warning via Email/SMS. Early warning will help keep pets safe from harmful environmental factors.",
-        "img": "/image/solutions/solar/solar-feature-3.png"
+        "img": "/image/solutions/fisheries/fisheries-feature-3.png"
       },
       "four": {
         "title": "Report an anomaly",
         "subTitle": "Focuses on the ability to synthesize information from anomalies and produce a comprehensive report.",
         "desc": "We provide you with abnormal reports by day, week, and month. With specific and intuitive numbers, you can immediately grasp the problem that is happening in your farm system. you immediately.",
-        "img": "/image/solutions/solar/solar-feature-4.png"
+        "img": "/image/solutions/fisheries/fisheries-feature-4.png"
       }
     },
     "callToAction": {
