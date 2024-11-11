@@ -12,7 +12,12 @@ function CallToActionV2({ data }) {
           <h3 className="text-white lg:text-4xl text-2xl font-semibold">
             {data.title}
           </h3>
-          <Button size="lg" className="mt-8 shadow-md">
+          <Button
+            variant="secondary"
+            size="lg"
+            className="mt-8 shadow-md"
+            onClick={() => router.push(ROUTER_CONTACT)}
+          >
             {data.button}
           </Button>
           <h5 className="mt-4 text-white lg:text-lg font-medium">
