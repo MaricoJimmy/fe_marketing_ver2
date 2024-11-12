@@ -10,14 +10,14 @@ function MenuItem({ className, title, children, href, ...props }) {
           <a
             className={`${className} block select-none space-y-1 p-3 bg-transparent hover:bg-primary/5 no-underline outline-none transition-colors cursor-pointer rounded-md`}
           >
-            <div className="text-sm text-nowrap font-semibold leading-none">
+            <div className="text-base text-gray text-nowrap font-semibold leading-none">
               {title}
             </div>
-            {children ? (
+            {/* {children ? (
               <p className="line-clamp-2 text-nowrap text-sm leading-snug text-muted-foreground font-medium">
                 {children}
               </p>
-            ) : null}
+            ) : null} */}
           </a>
         </Link>
       </NavigationMenuLink>

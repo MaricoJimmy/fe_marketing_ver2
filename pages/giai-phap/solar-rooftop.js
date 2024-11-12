@@ -21,7 +21,7 @@ const SolarRooftopLandingPage = () => {
         {/* hero section */}
         <HeroSection
           data={t.raw("heroSection")}
-          image="/image/solutions/solar/solar.jpg"
+          image="/image/solutions/solar/solar.png"
           bgColor="bg-infor"
         />
         {/* main features */}

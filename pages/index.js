@@ -309,7 +309,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
             <h4 className="mt-2 text-white lg:text-2xl text-xl font-medium">
               Iot Platform
             </h4>
-            <h3 className="mt-10 text-white lg:text-4xl text-2xl font-semibold">
+            <h3 className="mt-10 text-white lg:text-3xl text-2xl font-semibold">
               Nền tảng quản lý và giám sát năng lượng
             </h3>
             <div className="mt-4">
@@ -321,7 +321,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
         <section className="w-full flex justify-center items-center">
           <div className="px-5 py-20 md:px-8 lg:py-44 max-w-screen-xl w-full">
             <h2 className="text-neutral text-center lg:text-4xl text-2xl font-bold">
-              Udata.Cloud phá vỡ giới hạn trong việc sử dụng dữ liệu của bạn
+              Udata.ai phá vỡ giới hạn trong việc sử dụng dữ liệu của bạn
             </h2>
             <div className="lg:mt-20 mt-6 grid lg:grid-cols-2 gap-10">
               <div>{renderSectionSolution(solutionsByObject)}</div>

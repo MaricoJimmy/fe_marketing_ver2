@@ -353,13 +353,13 @@
         "title": "Giám Sát Hiệu Suất Theo Thời Gian Thực",
         "subTitle": "Một phần tập trung vào cách dữ liệu theo thời gian thực và phân tích hiệu suất cung cấp sự minh bạch về hiệu suất hệ thống.",
         "desc": "Nền tảng của chúng tôi cung cấp các thông tin chi tiết về sản lượng năng lượng mặt trời của bạn, cho phép bạn theo dõi các chỉ số chính như sản lượng, hiệu suất biến tần. Sử dụng dữ liệu hiệu suất trong quá khứ để xác định những điểm kém hiệu quả và đưa ra các quyết định dựa trên dữ liệu để tối ưu hóa việc sử dụng năng lượng.",
-        "img": "/image/solutions/solar/solar-feature-1.png"
+        "img": "/image/solutions/solar/solar-feature-1.jpg"
       },
       "second": {
         "title": "Cảnh Báo Tự Động và Bảo Trì Chủ Động",
         "subTitle": "Giải thích cách hệ thống gửi thông báo khi vượt qua các ngưỡng hiệu suất, giúp thực hiện hành động nhanh chóng đối với các lỗi hệ thống.",
         "desc": "Tránh thời gian chết với hệ thống cảnh báo thông minh của chúng tôi. Nhận thông báo theo thời gian thực về mọi vấn đề ảnh hưởng đến sản lượng hệ thống điện mặt trời của bạn, đảm bảo hệ thống của bạn hoạt động ở hiệu suất cao nhất.",
-        "img": "/image/solutions/solar/solar-feature-2.png"
+        "img": "/image/solutions/solar/solar-feature-2.jpg"
       },
       "third": {
         "title": "Báo cáo điểm bất thường",
@@ -450,7 +450,7 @@
   },
   "Investors": {
     "heroSection": {
-      "title": "Udata: Quản lý tổng thể theo thời gian thực",
+      "title": "Quản lý tổng thể theo thời gian thực",
       "subTitle": "Giải pháp cho Chủ đầu tư",
       "desc": "Với Udata, bạn có thể kiểm soát từ tổng thể đến chi tiết hoạt động của các dự án tại nhiều địa điểm khác nhau. Cho bạn góc nhìn toàn cảnh ở các chỉ tiêu hiệu quả về tài chính, hiệu quả kỹ thuật, nhanh chóng phát hiện các điểm nóng cần giải quyết,... Hãy để Udata giúp bạn tối ưu hiệu suất đầu tư của bạn thông qua việc thúc đẩy hoạt động hiệu quả!",
       "contact": "Liên hệ"
@@ -953,22 +953,22 @@
     },
     "singleFeature": {
       "first": {
-        "title": "Ứng dụng duy nhất tại Việt Nam cho phép quản lý đa địa điểm, đa thiết bị của nhiều nhà sản xuất khác nhau trên cùng một nền tảng",
+        "title": "Ứng dụng cho phép quản lý đa địa điểm, đa thiết bị của nhiều nhà sản xuất khác nhau trên cùng một nền tảng",
         "subTitle": "",
-        "desc": "Với mong muốn mang đến giải pháp quản lý hiệu quả và toàn diện, chúng tôi đã phát triển ứng dụng đầu tiên và duy nhất tại Việt Nam cho phép quản lý đồng bộ nhiều địa điểm, nhiều thiết bị từ các nhà sản xuất khác nhau trên cùng một nền tảng. Điều này giúp doanh nghiệp tối ưu hóa quy trình quản lý, tiết kiệm thời gian và nâng cao hiệu quả hoạt động",
-        "img": "/image/solutions/fisheries/fisheries-feature-1.png"
+        "desc": "Với mong muốn mang đến giải pháp quản lý hiệu quả và toàn diện, chúng tôi đã phát triển ứng dụng đầu tiên và cho phép quản lý đồng bộ nhiều địa điểm, nhiều thiết bị từ các nhà sản xuất khác nhau trên cùng một nền tảng. Điều này giúp doanh nghiệp tối ưu hóa quy trình quản lý, tiết kiệm thời gian và nâng cao hiệu quả hoạt động",
+        "img": "/image/products/saas/saas-feature-1.jpg"
       },
       "second": {
-        "title": "Ứng dụng duy nhất ở Việt Nam cho phép cảnh báo tự động tới khách hàng theo kịch bản được thiết lập bởi người dùng",
+        "title": "Ứng dụng cho phép cảnh báo tự động tới khách hàng theo kịch bản được thiết lập bởi người dùng",
         "subTitle": "",
         "desc": "Ứng dụng của chúng tôi là giải pháp tiên phong tại Việt Nam, cung cấp tính năng cảnh báo tự động thông minh. Nhờ đó, khách hàng có thể chủ động thiết lập các kịch bản cảnh báo phù hợp với nhu cầu riêng, đảm bảo mọi sự cố được phát hiện và xử lý kịp thời, nâng cao hiệu quả quản lý và giảm thiểu rủi ro.",
-        "img": "/image/solutions/fisheries/fisheries-feature-2.png"
+        "img": "/image/products/saas/saas-feature-2.jpg"
       },
       "third": {
-        "title": "Ứng dụng duy nhất cho phép tùy biến và gửi định kỳ các loại báo cáo: báo cáo tổn thất, báo cáo phân tích lỗi thường xuyên phát sinh,…",
+        "title": "Ứng dụng cho phép tùy biến và gửi định kỳ các loại báo cáo: báo cáo tổn thất, báo cáo phân tích lỗi thường xuyên phát sinh,…",
         "subTitle": "",
         "desc": "Ứng dụng của chúng tôi là giải pháp hàng đầu, cho phép bạn tùy biến và tạo ra các báo cáo theo đúng yêu cầu cụ thể của doanh nghiệp. Từ báo cáo tổn thất chi tiết đến báo cáo phân tích lỗi thường gặp, mọi thông tin đều được tổng hợp và trình bày một cách rõ ràng, giúp bạn đưa ra quyết định chính xác và kịp thời.",
-        "img": "/image/solutions/fisheries/fisheries-feature-3.png"
+        "img": "/image/products/saas/saas-feature-3.png"
       }
     },
     "whyChooseUs": {
@@ -1052,19 +1052,19 @@
     },
     "singleFeature": {
       "first": {
-        "title": "Ứng dụng duy nhất tại Việt Nam cho phép quản lý đa địa điểm, đa thiết bị của nhiều nhà sản xuất khác nhau trên cùng một nền tảng.",
+        "title": "Ứng dụng cho phép quản lý đa địa điểm, đa thiết bị của nhiều nhà sản xuất khác nhau trên cùng một nền tảng.",
         "subTitle": "",
-        "desc": "Với mong muốn mang đến giải pháp quản lý hiệu quả và toàn diện, chúng tôi đã phát triển ứng dụng đầu tiên và duy nhất tại Việt Nam cho phép quản lý đồng bộ nhiều địa điểm, nhiều thiết bị từ các nhà sản xuất khác nhau trên cùng một nền tảng. Điều này giúp doanh nghiệp tối ưu hóa quy trình quản lý, tiết kiệm thời gian và nâng cao hiệu quả hoạt động",
+        "desc": "Với mong muốn mang đến giải pháp quản lý hiệu quả và toàn diện, chúng tôi đã phát triển ứng dụng đầu tiên và cho phép quản lý đồng bộ nhiều địa điểm, nhiều thiết bị từ các nhà sản xuất khác nhau trên cùng một nền tảng. Điều này giúp doanh nghiệp tối ưu hóa quy trình quản lý, tiết kiệm thời gian và nâng cao hiệu quả hoạt động",
         "img": "/image/solutions/fisheries/fisheries-feature-1.png"
       },
       "second": {
-        "title": "Ứng dụng duy nhất ở Việt Nam cho phép cảnh báo tự động tới khách hàng theo kịch bản được thiết lập bởi người dùng.",
+        "title": "Ứng dụng cho phép cảnh báo tự động tới khách hàng theo kịch bản được thiết lập bởi người dùng.",
         "subTitle": "",
         "desc": "Ứng dụng của chúng tôi là giải pháp tiên phong tại Việt Nam, cung cấp tính năng cảnh báo tự động thông minh. Nhờ đó, khách hàng có thể chủ động thiết lập các kịch bản cảnh báo phù hợp với nhu cầu riêng, đảm bảo mọi sự cố được phát hiện và xử lý kịp thời, nâng cao hiệu quả quản lý và giảm thiểu rủi ro.",
         "img": "/image/solutions/fisheries/fisheries-feature-2.png"
       },
       "third": {
-        "title": "Ứng dụng duy nhất cho phép tùy biến và gửi định kỳ các loại báo cáo: báo cáo tổn thất, báo cáo phân tích lỗi thường xuyên phát sinh,…",
+        "title": "Ứng dụng cho phép tùy biến và gửi định kỳ các loại báo cáo: báo cáo tổn thất, báo cáo phân tích lỗi thường xuyên phát sinh,…",
         "subTitle": "",
         "desc": "Ứng dụng của chúng tôi là giải pháp hàng đầu, cho phép bạn tùy biến và tạo ra các báo cáo theo đúng yêu cầu cụ thể của doanh nghiệp. Từ báo cáo tổn thất chi tiết đến báo cáo phân tích lỗi thường gặp, mọi thông tin đều được tổng hợp và trình bày một cách rõ ràng, giúp bạn đưa ra quyết định chính xác và kịp thời.",
         "img": "/image/solutions/fisheries/fisheries-feature-3.png"

@@ -111,7 +111,7 @@ function HeaderDesktop({ stickyHeader, locale }) {
                       {t("solutions.title")}
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
-                      <div className="flex items-center">
+                      <div className="flex items-start">
                         <div className="p-4">
                           <h3 className="text-neutral text-base font-semibold">
                             Theo đối tượng
@@ -141,9 +141,10 @@ function HeaderDesktop({ stickyHeader, locale }) {
                           <h3 className="text-neutral text-base font-semibold">
                             Theo lĩnh vực
                           </h3>
-                          <ul className="mt-2 min-w-[340px] border-none list-none">
+                          <ul className="mt-2 min-w-[380px] border-none list-none">
                             <MenuItem title="Solar Rooftop" href={ROUTER_SOLAR}>
-                              {t("solutions.subMenus.solar")}
+                              {/* {t("solutions.subMenus.solar")} */}
+                              Giải pháp quản lý vận hành điện mặt trời áp mái
                             </MenuItem>
                             <MenuItem title="Nhà máy" href={"/"}>
                               Giải pháp cho nhà máy công nghiệp
