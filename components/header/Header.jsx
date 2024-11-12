@@ -201,7 +201,7 @@ function HeaderDesktop({ stickyHeader, locale }) {
             </div>
           </div>
           <div className="flex items-center gap-4">
-            <LanguageButton />
+            {/* <LanguageButton /> */}
             <div>
               <Link href={ROUTER_CONTACT}>
                 <a
@@ -384,7 +384,7 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
         >
           <div className="w-full h-full">
             <div className="flex items-center justify-between">
-              <LanguageButton />
+              {/* <LanguageButton /> */}
               <div>
                 <Button
                   onClick={() => setOpenMenu(!openMenu)}

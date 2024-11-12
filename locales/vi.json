@@ -1022,7 +1022,7 @@
     },
     "dependDatas": {
       "title": "Udata không bị phụ thuộc vào nguồn dữ liệu và có thể thu thập dữ liệu từ:",
-      "subTitle": "Bạn có cần thu thập từu nhiều nguồn dữ liệu khác nhau không?",
+      "subTitle": "Bạn có cần thu thập từ nhiều nguồn dữ liệu khác nhau không?",
       "lists": [
         {
           "title": "DataLogger/Gateway",
