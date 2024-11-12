@@ -17,7 +17,7 @@ function HighLightFeature({ data, label }) {
             <h4 className="text-lg text-center text-neutral whitespace-normal font-bold">
               {feature.title}
             </h4>
-            <h6 className="mt-2 text-center text-neutral/80 whitespace-normal">
+            <h6 className="mt-2 text-center text-neutral/80 font-medium whitespace-normal">
               {feature.desc}
             </h6>
           </div>
