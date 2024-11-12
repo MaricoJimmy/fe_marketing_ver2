@@ -26,7 +26,7 @@ function HeroSectionV2({ data, page }) {
         <h1 className="lg:text-5xl text-3xl text-white font-bold">
           {data.heading}
         </h1>
-        <h5 className="mt-4 lg:text-lg text-sm text-white font-medium">
+        <h5 className="mt-4 lg:text-lg text-sm text-justify text-white font-medium">
           {data.excerpt}
         </h5>
         <div className="mt-10 flex items-center">

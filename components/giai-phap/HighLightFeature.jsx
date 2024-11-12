@@ -28,7 +28,7 @@ function HighLightFeature({ data, isCustom = false, custom }) {
                   {content.title}
                 </h3>
                 <h5
-                  className={`${custom} mt-1 text-justify text-neutral/80 text-base`}
+                  className={`${custom} mt-1 text-center text-neutral/80 text-base`}
                 >
                   {content.content}
                 </h5>
