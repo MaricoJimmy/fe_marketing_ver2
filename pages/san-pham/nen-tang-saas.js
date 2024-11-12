@@ -1,11 +1,11 @@
 import ScrollToTop from "@/components/common/ScrollToTop";
+import SingleFeatureSection from "@/components/giai-phap/SingleFeatureSection";
 import WhyChooseUs from "@/components/san-pham/WhyChooseUs";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import PageSeoHead from "../../components/common/PageSeoHead";
 import HeroSection from "../../components/san-pham/HeroSection";
 import HighLightFeature from "../../components/san-pham/HighLightFeature";
-import SingleFeatureSection from "@/components/giai-phap/SingleFeatureSection";
 
 const PMSLandingPage = () => {
   const t = useTranslations("SaaS");
@@ -13,7 +13,7 @@ const PMSLandingPage = () => {
   const metaTagData = {
     title: `${t("heroSection.heading")} | Udata.ai`,
     desc: t("heroSection.excerpt"),
-    img: "/image/pms/pms-page.png",
+    img: "/image/hero/saas-pv.png",
   };
   return (
     <>

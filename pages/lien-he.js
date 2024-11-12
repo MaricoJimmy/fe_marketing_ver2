@@ -49,7 +49,7 @@ const ContactPage = () => {
   const metaTagData = {
     title: `${t("title")} | pambu.org`,
     desc: t("subTitle"),
-    img: "/image/demo-page.png",
+    img: "/image/hero/home-pv.png",
   };
 
   return (

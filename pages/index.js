@@ -71,7 +71,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
   const metaTagData = {
     title: `${t("titleSocial")} | udata.ai`,
     desc: t("desc"),
-    img: "/image/pambu.png",
+    img: "/image/hero/home-pv.png",
   };
 
   const solutionsByObject = {

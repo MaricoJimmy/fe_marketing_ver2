@@ -12,7 +12,7 @@ const SolarRooftopLandingPage = () => {
   const metaTagData = {
     title: t("heroSection.title"),
     desc: t("heroSection.desc"),
-    img: "/image/pms/pms-page.png",
+    img: "/image/hero/fisheries-pv.png",
   };
   return (
     <>

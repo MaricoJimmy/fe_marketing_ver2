@@ -9,7 +9,7 @@ const AboutUsPage = () => {
   const metaTagData = {
     title: t("title"),
     desc: t("excerpt"),
-    img: "/image/pms/pms-page.png",
+    img: "/image/hero/home-pv.png",
   };
   return (
     <>

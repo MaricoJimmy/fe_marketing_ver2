@@ -1,13 +1,11 @@
 import ScrollToTop from "@/components/common/ScrollToTop";
+import CallToAction from "@/components/san-pham/CallToAction";
 import HeroSectionV2 from "@/components/san-pham/HeroSectionV2";
-import Questions from "@/components/san-pham/Questions";
-import WhyChooseUs from "@/components/san-pham/WhyChooseUs";
-import { useTranslations } from "next-intl";
-import Image from "next/image";
-import PageSeoHead from "../../components/common/PageSeoHead";
 import HighLightFeatureV2 from "@/components/san-pham/HighLightFeatureV2";
 import ListCardItems from "@/components/san-pham/ListCardItems";
-import CallToAction from "@/components/san-pham/CallToAction";
+import Questions from "@/components/san-pham/Questions";
+import { useTranslations } from "next-intl";
+import PageSeoHead from "../../components/common/PageSeoHead";
 
 const PMSLandingPage = () => {
   const t = useTranslations("Intergration");
@@ -15,7 +13,7 @@ const PMSLandingPage = () => {
   const metaTagData = {
     title: t("heroSection.heading"),
     desc: t("heroSection.excerpt"),
-    img: "/image/pms/pms-page.png",
+    img: "/image/hero/intergration-pv.png",
   };
   return (
     <>
