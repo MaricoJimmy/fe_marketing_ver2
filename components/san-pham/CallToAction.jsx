@@ -22,9 +22,8 @@ function CallToAction({ data }) {
           </div>
           <div className="mt-10">
             <Button
-              size="lg"
               onClick={() => router.push(ROUTER_CONTACT)}
-              className="shadow-md hover:shadow-lg transition-all"
+              className="lg:px-4 lg:py-3 lg:text-base shadow-md hover:shadow-lg transition-all"
             >
               {data.button}
             </Button>
