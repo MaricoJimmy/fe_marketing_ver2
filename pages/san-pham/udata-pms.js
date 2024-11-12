@@ -22,7 +22,7 @@ const PMSLandingPage = () => {
       <div className="pb-14">
         {/* hero section */}
         <div className="relative">
-          <HeroSection data={t.raw("heroSection")} />
+          <HeroSection data={t.raw("heroSection")} page="pms" />
 
           <div className="lg:-mt-20 -mt-10 lg:w-[1000px] lg:h-[500px] md:w-[600px] md:h-[300px] w-[350px] h-[180px] bg-white relative left-1/2 -translate-x-1/2 z-20 shadow-2xl rounded-md">
             <Image
@@ -38,7 +38,10 @@ const PMSLandingPage = () => {
         <div className="relative mt-10 w-full flex justify-center items-center">
           <div className="absolute top-0 left-0 w-full h-full bg-[url('/image/bg/bg-feature.jpg')] bg-center bg-no-repeat bg-cover opacity-25"></div>
           <div className="relative z-10 px-5 py-3 md:px-8 md:py-10 max-w-screen-xl w-full overflow-hidden md:overflow-visible">
-            <HighLightFeature data={t.raw("features")} />
+            <HighLightFeature
+              data={t.raw("features")}
+              label={t("features.title")}
+            />
           </div>
         </div>
 

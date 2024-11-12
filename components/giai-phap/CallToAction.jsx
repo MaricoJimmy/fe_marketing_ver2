@@ -12,10 +12,13 @@ function CallToAction({ data }) {
           <h2 className="text-center text-white text-3xl font-semibold">
             {data.title}
           </h2>
-          <h5 className="text-center text-white text-base">{data.content}</h5>
+          <h5 className="text-center text-white text-base font-medium">
+            {data.content}
+          </h5>
           <Button
             variant="secondary"
             size="lg"
+            className="shadow-md hover:shadow-lg transition-all"
             onClick={() => router.push(ROUTER_CONTACT)}
           >
             {data.button}

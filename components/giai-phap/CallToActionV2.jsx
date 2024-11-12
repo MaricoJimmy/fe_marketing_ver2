@@ -15,7 +15,7 @@ function CallToActionV2({ data }) {
           <Button
             variant="secondary"
             size="lg"
-            className="mt-8 shadow-md"
+            className="mt-8 shadow-md hover:shadow-lg transition-all"
             onClick={() => router.push(ROUTER_CONTACT)}
           >
             {data.button}
@@ -70,7 +70,9 @@ function CallToActionV2({ data }) {
                 <h4 className="text-neutral text-xl font-semibold">
                   {action.title}
                 </h4>
-                <h6 className="mt-2 text-gray/80 font-medium">{action.desc}</h6>
+                <h6 className="mt-2 text-gray/80 font-medium text-justify">
+                  {action.desc}
+                </h6>
               </div>
             </div>
           ))}

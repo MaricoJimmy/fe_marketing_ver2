@@ -60,7 +60,6 @@ const ContactPage = () => {
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-neutral/40 to-neutral/80"></div>
           <div className="z-10 px-5 md:px-8 py-16 max-w-screen-xl w-full lg:h-3/4 h-full flex flex-col gap-2">
             <Title label={t("title")} className="text-white" />
-            <p className="text-white text-lg">{t("subTitle")}</p>
           </div>
         </div>
         <div className="lg:-mt-20 relative z-10 w-full flex justify-center items-center">

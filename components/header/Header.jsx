@@ -17,13 +17,16 @@ import MenuItem from "./MenuItem";
 import {
   ROUTER_ABOUT_US,
   ROUTER_BLOG,
+  ROUTER_CAREER,
   ROUTER_CASE_STUDY,
   ROUTER_CONTACT,
   ROUTER_FISHERIES,
+  ROUTER_INTERGRATE,
   ROUTER_INVESTORS,
   ROUTER_MANAGERS,
   ROUTER_OPERATORS,
   ROUTER_PMS,
+  ROUTER_SAAS,
   ROUTER_SOLAR,
 } from "@/utils/constant";
 import { useRouter } from "next/router";
@@ -87,9 +90,18 @@ function HeaderDesktop({ stickyHeader, locale }) {
                       {t("products.title")}
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
-                      <ul className="min-w-[300px] p-2 border-none list-none">
-                        <MenuItem title="Udata PMS" href={ROUTER_PMS}>
+                      <ul className="min-w-[340px] p-2 border-none list-none">
+                        {/* <MenuItem title="Udata PMS" href={ROUTER_PMS}>
                           {t("products.subMenus.pms")}
+                        </MenuItem> */}
+                        <MenuItem
+                          title="Tích hợp dữ liệu"
+                          href={ROUTER_INTERGRATE}
+                        >
+                          Mở khóa dữ liệu của bạn với Udata
+                        </MenuItem>
+                        <MenuItem title="Nền tảng SaaS" href={ROUTER_SAAS}>
+                          Nền tảng dịch vụ phần mềm trên SaaS
                         </MenuItem>
                       </ul>
                     </NavigationMenuContent>
@@ -102,7 +114,7 @@ function HeaderDesktop({ stickyHeader, locale }) {
                       <div className="flex items-center">
                         <div className="p-4">
                           <h3 className="text-neutral text-base font-semibold">
-                            Giải pháp theo đối tượng
+                            Theo đối tượng
                           </h3>
                           <ul className="mt-2 min-w-[340px] border-none list-none">
                             <MenuItem
@@ -127,7 +139,7 @@ function HeaderDesktop({ stickyHeader, locale }) {
                         </div>
                         <div className="p-4">
                           <h3 className="text-neutral text-base font-semibold">
-                            Giải pháp theo lĩnh vực
+                            Theo lĩnh vực
                           </h3>
                           <ul className="mt-2 min-w-[340px] border-none list-none">
                             <MenuItem title="Solar Rooftop" href={ROUTER_SOLAR}>
@@ -177,6 +189,13 @@ function HeaderDesktop({ stickyHeader, locale }) {
                       </NavigationMenuLink>
                     </Link>
                   </NavigationMenuItem>
+                  {/* <NavigationMenuItem>
+                    <Link href={ROUTER_CAREER} legacyBehavior passHref>
+                      <NavigationMenuLink className="px-4 py-2 bg-transparent hover:bg-neutral/5 hover:text-primary text-base font-medium rounded-md">
+                        {t("career")}
+                      </NavigationMenuLink>
+                    </Link>
+                  </NavigationMenuItem> */}
                 </NavigationMenuList>
               </NavigationMenu>
             </div>
@@ -213,9 +232,17 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
       id: "product",
       menu: t("products.title"),
       subMenu: [
+        // {
+        //   title: "Udata PMS",
+        //   href: ROUTER_PMS,
+        // },
         {
-          title: "Udata PMS",
-          href: ROUTER_PMS,
+          title: "Tích hợp dữ liệu",
+          href: ROUTER_INTERGRATE,
+        },
+        {
+          title: "Nền tảng SaaS",
+          href: ROUTER_SAAS,
         },
       ],
       multiMenu: false,
@@ -225,7 +252,7 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
       menu: t("solutions.title"),
       subMenu: [
         {
-          title: "Giải pháp cho đối tượng",
+          title: "Theo đối tượng",
           menus: [
             {
               title: "Chủ đầu tư - Quản lý cấp cao",
@@ -242,7 +269,7 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
           ],
         },
         {
-          title: "Giải pháp cho lĩnh vực",
+          title: "Theo lĩnh vực",
           menus: [
             {
               title: "Solar rooftop",
@@ -302,8 +329,13 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
     >
       <div className="flex items-center justify-between">
         <Link href="/">
-          <a>
-            <Image src="/image/logo/logo_3.png" width="30" height="30" alt="" />
+          <a className="flex items-center">
+            <Image
+              src="/image/logo/logo_1.png"
+              width="110"
+              height="30"
+              alt=""
+            />
           </a>
         </Link>
         <div>

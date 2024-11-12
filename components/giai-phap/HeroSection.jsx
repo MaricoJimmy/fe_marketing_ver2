@@ -15,14 +15,14 @@ function HeroSection({ data, image = "", bgColor = "bg-infor" }) {
         <h2 className="lg:mt-2 mt-4 text-5xl text-neutral lg:text-start text-center font-bold">
           {data.title}
         </h2>
-        <p className="lg:mt-10 mt-6 text-neutral/80 text-lg lg:text-start text-center font-medium">
+        <p className="lg:mt-10 mt-6 text-neutral/80 text-lg text-justify font-medium">
           {data.desc}
         </p>
         <div className="mt-6 flex lg:justify-start justify-center">
           <Button
             size="lg"
             onClick={() => router.push(ROUTER_CONTACT)}
-            className="shadow-md"
+            className="shadow-md hover:shadow-lg transition-all"
           >
             {data.contact}
           </Button>

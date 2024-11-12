@@ -3,7 +3,13 @@ import {
   ROUTER_BLOG,
   ROUTER_CASE_STUDY,
   ROUTER_CONTACT,
+  ROUTER_FISHERIES,
+  ROUTER_INTERGRATE,
+  ROUTER_INVESTORS,
+  ROUTER_MANAGERS,
+  ROUTER_OPERATORS,
   ROUTER_PMS,
+  ROUTER_SAAS,
   ROUTER_SOLAR,
 } from "@/utils/constant";
 import { useTranslations } from "next-intl";
@@ -43,33 +49,68 @@ function Footer() {
   const listMenu = [
     {
       section: "Công ty",
+      href: ROUTER_ABOUT_US,
     },
     {
       section: "Giải pháp",
       menus: [
-        "Chủ đầu tư - Quản lý cấp cao",
-        "Cấp quản lý",
-        "Cấp vận hành",
-        "Năng lượng mặt trời áp mái",
-        "Nhà máy công nghiệp",
-        "Quan trắc môi trường",
-        "Nông nghiệp",
-        "Viễn thông",
-        "Y tế",
-        "Bán lẻ - Ngân hàng",
-        "Xăng dầu",
+        {
+          title: "Chủ đầu tư - Quản lý cấp cao",
+          href: ROUTER_INVESTORS,
+        },
+        {
+          title: "Cấp quản lý",
+          href: ROUTER_MANAGERS,
+        },
+        {
+          title: "Cấp vận hành",
+          href: ROUTER_OPERATORS,
+        },
+        {
+          title: "Năng lượng mặt trời áp mái",
+          href: ROUTER_SOLAR,
+        },
+        // "Nhà máy công nghiệp",
+        {
+          title: "Thủy sản",
+          href: ROUTER_FISHERIES,
+        },
+        // "Nông nghiệp",
+        // "Viễn thông",
+        // "Y tế",
+        // "Bán lẻ - Ngân hàng",
+        // "Xăng dầu",
       ],
     },
     {
       section: "Sản phẩm",
-      menus: ["Nền tảng SaaS", "Tích hợp dữ liệu"],
+      menus: [
+        {
+          title: "Nền tảng SaaS",
+          href: ROUTER_INTERGRATE,
+        },
+        {
+          title: "Tích hợp dữ liệu",
+          href: ROUTER_SAAS,
+        },
+      ],
     },
     {
       section: "Tin tức",
+      menus: [
+        {
+          title: "Case study",
+          href: ROUTER_CASE_STUDY,
+        },
+        {
+          title: "Blog",
+          href: ROUTER_BLOG,
+        },
+      ],
     },
-    {
-      section: "Tuyển dụng",
-    },
+    // {
+    //   section: "Tuyển dụng",
+    // },
   ];
   return (
     <>
@@ -117,15 +158,25 @@ function FooterDesktop({ sectionLinks }) {
                           {menu.title}
                         </a>
                       </Link> */}
-                    <h3 className="text-neutral font-bold hover:text-primary duration-200">
-                      {sectionLink.section}
-                    </h3>
+                    {sectionLink.menus ? (
+                      <h3 className="text-neutral font-bold hover:text-primary duration-200">
+                        {sectionLink.section}
+                      </h3>
+                    ) : (
+                      <Link href={sectionLink.href}>
+                        <a className="text-neutral font-bold hover:text-primary duration-200">
+                          {sectionLink.section}
+                        </a>
+                      </Link>
+                    )}
                     {sectionLink.menus ? (
                       <ul className="mt-2 flex flex-col space-y-1">
                         {sectionLink.menus.map((menu) => (
-                          <li key={menu} className="text-gray/80 font-semibold">
-                            {menu}
-                          </li>
+                          <Link key={menu.title} href={menu.href}>
+                            <a className="text-gray/80 font-semibold">
+                              {menu.title}
+                            </a>
+                          </Link>
                         ))}
                       </ul>
                     ) : null}
@@ -260,18 +311,25 @@ function FooterMobile({ sectionLinks }) {
                           {menu.title}
                         </a>
                       </Link> */}
-                      <h3 className="text-neutral font-bold hover:text-primary duration-200">
-                        {sectionLink.section}
-                      </h3>
+                      {sectionLink.menus ? (
+                        <h3 className="text-neutral font-bold hover:text-primary duration-200">
+                          {sectionLink.section}
+                        </h3>
+                      ) : (
+                        <Link href={sectionLink.href}>
+                          <a className="text-neutral font-bold hover:text-primary duration-200">
+                            {sectionLink.section}
+                          </a>
+                        </Link>
+                      )}
                       {sectionLink.menus ? (
                         <ul className="mt-2 flex flex-col space-y-1">
                           {sectionLink.menus.map((menu) => (
-                            <li
-                              key={menu}
-                              className="text-gray/80 font-semibold"
-                            >
-                              {menu}
-                            </li>
+                            <Link key={menu.title} href={menu.href}>
+                              <a className="text-gray/80 font-semibold">
+                                {menu.title}
+                              </a>
+                            </Link>
                           ))}
                         </ul>
                       ) : null}

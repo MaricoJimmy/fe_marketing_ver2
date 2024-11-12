@@ -88,147 +88,6 @@
     },
     "bookDemo": "<p>Với mục tiêu cùng đồng hành với khách hàng, Udata sẽ hỗ trợ khách hàng sử dụng demo miễn phí. Chương trình demo cụ thể như sau:</p><ul class='mt-6 ml-6 list-disc'> <li> Đối với phần mềm <span class='text-primary'>Pambu OEE</span>: khách hàng sẽ được trải nghiệm bản basic trên 1 máy sản xuất trong thời gian 2 tháng. </li> <li>Đối với phần mềm <span class='text-primary'>Pambu PMS</span>: khách hàng sẽ được trải nghiệm bản basic trên 1 phụ tải điện trong thời gian 2 tháng. </li><li>Toàn bộ thiết bị phần cứng Pambu cung cấp và lắp đặt miễn phí, khách hàng cung cấp hạ tầng Internet. </li></ul><p class='mt-6'>Các bước lên kế hoạch demo như sau:</p><ul class='mt-6 ml-6 list-disc'><li>Khảo sát mặt bằng thiết bị cần demo tại site của khách hàng.</li><li>Lên cấu hình và thời gian lắp đặt.</li><li>Thống nhất các điều khoản lắp đặt và bảo quản tài sản demo.</li><li>Lắp đặt demo và lắng nghe ý kiến phản hồi của khách hàng.</li></ul><p class='mt-6'>Còn chần chừ gì nữa mà không liên hệ ngay với đội ngũ Pambu tại hotline <a href='tel:0387430957' class='font-bold'>0387 430 957</a> hoặc điền vào form dưới đây để sử dụng sản phẩm. Pambu rất vui lòng được đồng hành!</p>"
   },
-  "PMS": {
-    "heroSection": {
-      "heading": "Power Management Software",
-      "excerpt": "Phần mềm quản lý năng lượng giúp bạn theo dõi sản lượng và nhiều hơn thế nữa.",
-      "color": "blue",
-      "contact": "Liên hệ",
-      "img": "/image/pms/mockup-pms.png"
-    },
-    "features": [
-      {
-        "img": "/image/pms/feature/feature-1.png",
-        "title": "Quản lý nhiều địa điểm đồng thời",
-        "desc": "Thu thập dữ liệu ở các địa điểm khác nhau, không giới hạn khoảng cách địa lý, quản lý tập trung tại một nền tảng duy nhất."
-      },
-      {
-        "img": "/image/pms/feature/feature-2.png",
-        "title": "Ngăn ngừa sử dụng năng lượng quá mức",
-        "desc": "Thu thập công suất hiệu dụng, công suất phản kháng và cảnh báo khi vượt ngưỡng. Phát hiện nhanh chóng điểm quá tải."
-      },
-      {
-        "img": "/image/pms/feature/feature-3.png",
-        "title": "Tối ưu hóa cho ngành Solar ",
-        "desc": "Thu thập dữ liệu từ biến tần, cảm biến và data logger. Đánh giá mức độ hiệu quả qua các đồ thị trực quan."
-      },
-      {
-        "img": "/image/pms/feature/feature-4.png",
-        "title": "Không giới hạn dữ liệu",
-        "desc": "Thu thập dữ liệu từ đa dạng các nguồn dữ liệu khác nhau: Hóa đơn điện EVN, hóa đơn nước sạch, dữ liệu từ cảm biến, đồng hồ, logger và nhiều hơn thế nữa."
-      },
-      {
-        "img": "/image/pms/feature/feature-6.png",
-        "title": "Đo đạc, kiểm chứng và hành động",
-        "desc": "Mô hình chuẩn từ phát hiện vấn đề, xác thực thông tin và xử lý sự cố. Phát hiện kịp thời và hành động nhanh chóng là điều kiện tiên quyết giúp bạn nâng cao hiệu suất sử dụng năng lượng, nâng cao độ bền thiết bị."
-      },
-      {
-        "img": "/image/pms/feature/feature-5.png",
-        "title": "Chạy trên đa thiết bị và mọi lúc mọi nơi",
-        "desc": "Giúp khả năng quản lý và vận hành nhà máy hiệu quả hơn."
-      }
-    ],
-    "status": [
-      {
-        "icon": "<svg width='61' height='47' viewBox='0 0 61 47' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M54.4877 41.6135C54.311 41.6135 54.1382 41.6657 53.9913 41.7636C53.8443 41.8615 53.7298 42.0007 53.6622 42.1635C53.5945 42.3263 53.5768 42.5054 53.6113 42.6782C53.6458 42.8511 53.7309 43.0098 53.8559 43.1344C53.9808 43.259 54.14 43.3439 54.3134 43.3783C54.4867 43.4127 54.6664 43.395 54.8296 43.3276C54.9929 43.2601 55.1325 43.1459 55.2307 42.9994C55.3288 42.8529 55.3813 42.6806 55.3813 42.5044C55.3813 42.3874 55.3581 42.2716 55.3132 42.1635C55.2683 42.0554 55.2025 41.9571 55.1195 41.8744C55.0366 41.7917 54.9381 41.726 54.8297 41.6813C54.7212 41.6365 54.605 41.6135 54.4877 41.6135ZM58.3193 25.6862H57.544V18.9117C57.5431 18.0456 57.1976 17.2152 56.5834 16.6028C55.9691 15.9903 55.1363 15.6458 54.2677 15.6449H47.2283V6.09013C47.2273 5.224 46.8819 4.39361 46.2676 3.78116C45.6534 3.16871 44.8206 2.82421 43.952 2.82324H3.27637C2.40772 2.82421 1.57493 3.16871 0.960698 3.78116C0.346471 4.39361 0.000971256 5.224 0 6.09013L0 34.9752C0.000971256 35.8413 0.346471 36.6717 0.960698 37.2842C1.57493 37.8966 2.40772 38.2411 3.27637 38.2421H14.8525C15.0285 39.3427 14.8289 40.4703 14.2856 41.4443L12.7258 44.2227C12.5687 44.5025 12.4877 44.8184 12.4909 45.139C12.4941 45.4597 12.5813 45.7739 12.744 46.0506C12.9066 46.3272 13.139 46.5566 13.418 46.716C13.697 46.8754 14.013 46.9593 14.3346 46.9593H22.171C22.2109 46.959 22.2507 46.9561 22.2902 46.9505C22.3658 46.9557 22.4418 46.9593 22.5187 46.9593H58.3193C59.03 46.9585 59.7114 46.6766 60.214 46.1755C60.7165 45.6744 60.9992 44.995 61 44.2864V28.3592C60.9992 27.6505 60.7165 26.9711 60.214 26.47C59.7114 25.9689 59.03 25.6871 58.3193 25.6862ZM54.2677 17.4268C54.6625 17.4272 55.0411 17.5838 55.3203 17.8622C55.5994 18.1406 55.7565 18.518 55.7569 18.9117V25.6862H53.6948V20.374C53.6948 20.2569 53.6717 20.1411 53.6268 20.033C53.5819 19.9249 53.5161 19.8267 53.4331 19.7439C53.3501 19.6612 53.2516 19.5956 53.1432 19.5508C53.0348 19.506 52.9186 19.483 52.8012 19.483H26.0742C25.9569 19.483 25.8407 19.506 25.7323 19.5508C25.6239 19.5956 25.5254 19.6612 25.4424 19.7439C25.3594 19.8267 25.2936 19.9249 25.2487 20.033C25.2038 20.1411 25.1807 20.2569 25.1807 20.374V37.7864C25.1807 37.9034 25.2038 38.0192 25.2487 38.1273C25.2936 38.2354 25.3594 38.3337 25.4424 38.4164C25.5254 38.4991 25.6239 38.5648 25.7323 38.6095C25.8407 38.6543 25.9569 38.6774 26.0742 38.6773H47.9753V40.7335H23.1185V18.9117C23.119 18.518 23.276 18.1406 23.5552 17.8622C23.8344 17.5838 24.2129 17.4272 24.6078 17.4268L54.2677 17.4268ZM1.78711 6.09013C1.78755 5.69643 1.9446 5.31899 2.22379 5.0406C2.50299 4.76222 2.88153 4.60562 3.27637 4.60518H43.952C44.3468 4.60562 44.7253 4.76222 45.0045 5.0406C45.2837 5.31899 45.4408 5.69643 45.4412 6.09013V15.6449H24.6078C23.7391 15.6458 22.9063 15.9903 22.2921 16.6028C21.6779 17.2152 21.3324 18.0456 21.3314 18.9117V29.8275H1.78711V6.09013ZM3.27637 36.4601C2.88153 36.4597 2.50299 36.3031 2.22379 36.0247C1.9446 35.7463 1.78755 35.3689 1.78711 34.9752V31.6095H21.3314V36.4601H15.5775C15.5745 36.4601 15.5715 36.4601 15.5684 36.4601H3.27637ZM19.2423 41.9716V43.6924C19.242 44.2089 19.3652 44.718 19.6018 45.1774H14.3346C14.3247 45.1774 14.315 45.1748 14.3064 45.1699C14.2978 45.165 14.2907 45.1579 14.2857 45.1494C14.2807 45.1409 14.278 45.1312 14.2779 45.1213C14.2778 45.1115 14.2803 45.1017 14.2852 45.0931L15.845 42.3147C16.5363 41.0753 16.8197 39.6507 16.6551 38.2421H21.3314V40.7335H20.4841C20.1549 40.7339 19.8393 40.8644 19.6065 41.0965C19.3737 41.3286 19.2427 41.6434 19.2423 41.9716ZM22.5187 45.1774C22.1238 45.1769 21.7453 45.0203 21.4661 44.7419C21.1869 44.4636 21.0299 44.0861 21.0294 43.6924V42.5155H47.9753V44.2864C47.9752 44.59 48.0272 44.8913 48.129 45.1774H22.5187ZM47.9753 28.3592V36.8954H26.9678V21.2649H51.9077V25.6862H50.656C49.9453 25.6871 49.2639 25.9689 48.7614 26.47C48.2588 26.9711 47.9761 27.6505 47.9753 28.3592ZM59.2129 44.2864C59.2126 44.5226 59.1184 44.7491 58.9509 44.9161C58.7834 45.0832 58.5562 45.1771 58.3193 45.1774H50.656C50.4191 45.1771 50.192 45.0832 50.0244 44.9161C49.8569 44.7491 49.7627 44.5226 49.7624 44.2864V28.3592C49.7627 28.1229 49.8569 27.8965 50.0244 27.7294C50.192 27.5624 50.4191 27.4684 50.656 27.4682H52.7088C52.7703 27.4745 52.8322 27.4745 52.8936 27.4682H56.5581C56.6195 27.4745 56.6815 27.4745 56.7429 27.4682H58.3193C58.5562 27.4684 58.7834 27.5624 58.9509 27.7294C59.1184 27.8965 59.2126 28.1229 59.2129 28.3592V44.2864Z' fill='white' /></svg>",
-        "title": "1,000,000+",
-        "desc": "Thiết bị kết nối đồng thời"
-      },
-      {
-        "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-badge-check'><path d='M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z'/><path d='m9 12 2 2 4-4'/></svg>",
-        "title": "99,99%",
-        "desc": "Độ tin cậy"
-      },
-      {
-        "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-smile'><circle cx='12' cy='12' r='10'/><path d='M8 14s1.5 2 4 2 4-2 4-2'/><line x1='9' x2='9.01' y1='9' y2='9'/><line x1='15' x2='15.01' y1='9' y2='9'/></svg>",
-        "title": "99.99%",
-        "desc": "Đẹp trai"
-      }
-    ],
-    "versionApp": {
-      "data": [
-        {
-          "title": "Hiển thị, truy vết, cập nhật tức thời các phụ tải quan trọng cần theo dõi",
-          "isBasic": true,
-          "isPro": true
-        },
-        {
-          "title": "Theo dõi, thống kê lượng tiêu thụ qua các mốc thời gian",
-          "isBasic": true,
-          "isPro": true
-        },
-        {
-          "title": "Lưu trữ, cảnh báo, truy vết lịch sử lỗi",
-          "isBasic": true,
-          "isPro": true
-        },
-        {
-          "title": "Cung cấp trực quan sơ đồ cây mặt bằng thiết bị",
-          "isBasic": true,
-          "isPro": true
-        },
-        {
-          "title": "Cảnh báo, thông báo sớm, vượt ngưỡng tiêu thụ",
-          "isBasic": false,
-          "isPro": true
-        },
-        {
-          "title": "Thống kê tỉ trọng phụ tải sử dụng năng lượng",
-          "isBasic": false,
-          "isPro": true
-        }
-      ],
-      "img": "/image/pms/version-app.png"
-    },
-    "questions": {
-      "data": [
-        {
-          "ask": "Udata PMS có phải cài đặt không? Chạy trên nền tảng nào? Có tốn bộ nhớ không?",
-          "answer": "PMS chạy trên nền trình duyệt web, vậy nên phần mềm này có thể chạy trên đa thiết bị có trình duyệt web: laptop, máy tính bảng , smartphone v.v. PMS không cần cài đặt nên tốn rất ít bộ nhớ (không đáng kể)."
-        },
-        {
-          "ask": "Dữ liệu được lưu trữ ở đâu? Có an toàn không?",
-          "answer": "Dữ liệu của Udata được lưu trữ trên Provider Cloud hàng đầu thế giới Digital Ocean và tuân theo tiêu chuẩn bảo mật ISO 27001."
-        },
-        {
-          "ask": "Udata có thể quản lý tối đa bao thiết bị?",
-          "answer": "Udata quản lý không giới hạn số lượng thiết bị kết nối."
-        }
-      ],
-      "img": "/image/pms/question.png"
-    },
-    "demo": "Với mục tiêu cùng đồng hành với khách hàng để giải quyết các bài toán quản lý năng lượng, Pambu sẽ hỗ trợ khách hàng sử dụng demo <span class='font-bold'>MIỄN PHÍ</span>.",
-    "whyChooseUs": {
-      "title": "Vì sao lại lựa chọn <span class='text-primary'>Udata</span>",
-      "subTitle": "Đạt được mục tiêu của bạn một cách hiệu quả",
-      "contents": [
-        {
-          "id": 1,
-          "title": "Dễ dàng sử dụng",
-          "content": "Giao diện thân thiện, dễ thao tác cho mọi người dùng, kể cả người mới.",
-          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-mouse-pointer-click'><path d='M14 4.1 12 6'/><path d='m5.1 8-2.9-.8'/><path d='m6 12-1.9 2'/><path d='M7.2 2.2 8 5.1'/><path d='M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z'/></svg>"
-        },
-        {
-          "id": 2,
-          "title": "Tùy biến cao",
-          "content": "Cho phép điều chỉnh theo nhu cầu riêng biệt của từng doanh nghiệp một cách dễ dàng.",
-          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-lightbulb'><path d='M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5'/><path d='M9 18h6'/><path d='M10 22h4'/></svg>"
-        },
-        {
-          "id": 3,
-          "title": "Triển khai linh hoạt",
-          "content": "Hỗ trợ triển khai nhanh chóng qua nhiều hình thức khác nhau, phù hợp với từng môi trường.",
-          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevrons-left-right'><path d='m9 7-5 5 5 5'/><path d='m15 7 5 5-5 5'/></svg>"
-        },
-        {
-          "id": 4,
-          "title": "Theo dõi tập trung",
-          "content": "Dữ liệu từ nhiều nguồn được quản lý và theo dõi trong một bảng điều khiển duy nhất.",
-          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-rss'><path d='M4 11a9 9 0 0 1 9 9'/><path d='M4 4a16 16 0 0 1 16 16'/><circle cx='5' cy='19' r='1'/></svg>"
-        }
-      ]
-    }
-  },
   "OEE": {
     "heroSection": {
       "heading": "Pambu OEE - Giải Pháp Toàn Diện Về Quản Lý Hiệu Suất Và Bảo Dưỡng Máy",
@@ -369,7 +228,8 @@
     },
     "contact": "Liên hệ",
     "about-us": "Về công ty",
-    "bookDemo": "Yêu cầu demo"
+    "bookDemo": "Yêu cầu demo",
+    "career": "Tuyển dụng"
   },
   "Contact": {
     "title": "Liên hệ với chúng tôi",
@@ -447,10 +307,15 @@
       }
     }
   },
+  "AboutUs": {
+    "title": "Về chúng tôi",
+    "content": "<p>Được phát triển từ năm 2022. Năm 2024, Udata được đầu tư bởi DHG.</p> <p>Udata hướng tới mục tiêu trở thành nền tảng phần mềm <span class='font-semibold'> hàng đầu Việt Nam và Đông Nam Á </span> trong lĩnh vực quản trị năng lượng, phân tích dự liệu IoT trên nền tảng dữ liệu đám mây (SaaS), chúng tôi cung cấp <span class='font-semibold'> giải pháp toàn diện </span> cho các doanh nghiệp, tổ chức giúp phân tích và tối ưu hóa tiêu thụ năng lượng, các thông số hoạt động IoT từ máy móc, môi trường, thiết bị, ... từ đó giảm chi phí, tăng năng suất, và góp phần đạt được mục tiêu phát triển bền vững.</p> <p>Udata hội tụ những tâm huyết, trí tuệ sáng tạo trong lĩnh vực công nghệ, quản lý, cùng chung tay kiến tạo một tương lai xanh. Từ đội ngũ quản lý, đối tác, nhà đầu tư, đến những doanh nghiệp sử dụng Udata, tất cả chúng tôi đều chia sẻ một tầm nhìn chung: Là người bạn đồng hành cùng doanh nghiệp, tối ưu hóa hiệu suất, giảm thiểu chi phí và kiến tạo hệ thống năng lượng bền vững hơn. </p><p>Hãy cùng Udata tối ưu năng suất của bạn ngay hôm nay!</p>",
+    "excerpt": "Hãy cùng Udata tối ưu năng suất của bạn ngay hôm nay!"
+  },
   "Solar": {
     "heroSection": {
-      "title": "Giải pháp giám sát điện mặt trời áp mái",
-      "subTitle": "Kiểm soát Hiệu suất Năng lượng của Bạn",
+      "title": "Kiểm soát Hiệu suất Năng lượng của Bạn",
+      "subTitle": "Giải pháp quản lý vận hành điện mặt trời áp mái",
       "desc": "Với hệ thống giám sát và quản lý điện mặt trời áp mái, bạn có thể kiểm soát toàn diện hệ thống của mình ở mọi lúc mọi nơi. Nền tảng của chúng tôi cung cấp các tính năng giám sát theo thời gian thực, cảnh báo tức thì khi phát hiện lỗi, và các công cụ phân tích hiệu suất để tối ưu hóa dòng năng lượng và tăng cường hiệu quả hoạt động. Giải pháp này giúp bạn không chỉ theo dõi mà còn chủ động quản lý, bảo trì và tối ưu hóa hệ thống năng lượng của mình, đảm bảo rằng bạn luôn khai thác tối đa từ các khoản đầu tư vào năng lượng tái tạo.",
       "contact": "Liên hệ"
     },
@@ -515,15 +380,10 @@
       "button": "Liên hệ"
     }
   },
-  "AboutUs": {
-    "title": "Về chúng tôi",
-    "content": "<p>Được phát triển từ năm 2022. Năm 2024, Udata được đầu tư bởi DHG.</p> <p>Udata hướng tới mục tiêu trở thành nền tảng phần mềm <span class='font-semibold'> hàng đầu Việt Nam và Đông Nam Á </span> trong lĩnh vực quản trị năng lượng, phân tích dự liệu IoT trên nền tảng dữ liệu đám mây (SaaS), chúng tôi cung cấp <span class='font-semibold'> giải pháp toàn diện </span> cho các doanh nghiệp, tổ chức giúp phân tích và tối ưu hóa tiêu thụ năng lượng, các thông số hoạt động IoT từ máy móc, môi trường, thiết bị, ... từ đó giảm chi phí, tăng năng suất, và góp phần đạt được mục tiêu phát triển bền vững.</p> <p>Udata hội tụ những tâm huyết, trí tuệ sáng tạo trong lĩnh vực công nghệ, quản lý, cùng chung tay kiến tạo một tương lai xanh. Từ đội ngũ quản lý, đối tác, nhà đầu tư, đến những doanh nghiệp sử dụng Udata, tất cả chúng tôi đều chia sẻ một tầm nhìn chung: Là người bạn đồng hành cùng doanh nghiệp, tối ưu hóa hiệu suất, giảm thiểu chi phí và kiến tạo hệ thống năng lượng bền vững hơn. </p><p>Hãy cùng Udata tối ưu năng suất của bạn ngay hôm nay!</p>",
-    "excerpt": "Hãy cùng Udata tối ưu năng suất của bạn ngay hôm nay!"
-  },
   "Fisheries": {
     "heroSection": {
-      "title": "Giải pháp tối ưu cho ngành thủy sản",
-      "subTitle": "Kiểm soát môi trường và tăng năng suất",
+      "title": "Kiểm soát môi trường và tăng năng suất",
+      "subTitle": "Giải pháp tối ưu cho ngành thủy sản",
       "desc": "Udata là giải pháp giám sát thông minh cho ngành thủy sản, giúp kiểm soát môi trường nuôi trồng hiệu quả và tối ưu hóa năng suất. Hệ thống này theo dõi liên tục các thông số chất lượng nước quan trọng, cảnh báo sớm nguy cơ ô nhiễm và giám sát sinh trưởng của con giống. Hãy trải nghiệm ngay.",
       "contact": "Liên hệ"
     },
@@ -590,9 +450,9 @@
   },
   "Investors": {
     "heroSection": {
-      "title": "Udata: Đối tác tin cậy của các chủ đầu tư.",
-      "subTitle": "Giải pháp cho Chủ đầu tư - Quản lý cấp cao",
-      "desc": "Với Udata, bạn có thể theo dõi sát sao tiến độ dự án, phân tích chi tiết các khoản chi tiêu, phát hiện sớm các rủi ro tiềm ẩn và cộng tác hiệu quả với các thành viên trong dự án. Hãy để Udata giúp bạn tối ưu hóa quản lý dự án, giảm thiểu chi phí và nâng cao hiệu quả kinh doanh.",
+      "title": "Udata: Quản lý tổng thể theo thời gian thực",
+      "subTitle": "Giải pháp cho Chủ đầu tư",
+      "desc": "Với Udata, bạn có thể kiểm soát từ tổng thể đến chi tiết hoạt động của các dự án tại nhiều địa điểm khác nhau. Cho bạn góc nhìn toàn cảnh ở các chỉ tiêu hiệu quả về tài chính, hiệu quả kỹ thuật, nhanh chóng phát hiện các điểm nóng cần giải quyết,... Hãy để Udata giúp bạn tối ưu hiệu suất đầu tư của bạn thông qua việc thúc đẩy hoạt động hiệu quả!",
       "contact": "Liên hệ"
     },
     "allFeatures": {
@@ -824,7 +684,7 @@
   },
   "Operators": {
     "heroSection": {
-      "title": "Quản lý mọi dự án, mọi thiết bị tại một nơi.",
+      "title": "Quản lý vận hành tập trung",
       "subTitle": "Giải pháp cho Các nhà quản lý vận hành (O&M)",
       "desc": "Udata cung cấp một nền tảng tập trung, giúp bạn quản lý hiệu quả tất cả các dự án và thiết bị của mình, bất kể chúng có độ phức tạp và đa dạng như thế nào. Với giao diện trực quan và dễ sử dụng, bạn có thể dễ dàng theo dõi, phân tích và điều khiển mọi hoạt động.",
       "contact": "Liên hệ"
@@ -937,6 +797,302 @@
         }
       ],
       "button": "Đặt lịch demo"
+    }
+  },
+  "PMS": {
+    "heroSection": {
+      "heading": "Power Management Software",
+      "excerpt": "Phần mềm quản lý năng lượng giúp bạn theo dõi sản lượng và nhiều hơn thế nữa.",
+      "color": "blue",
+      "contact": "Liên hệ",
+      "img": "/image/pms/mockup-pms.png"
+    },
+    "features": {
+      "title": "Tính năng nổi bật",
+      "lists": [
+        {
+          "img": "/image/pms/feature/feature-1.png",
+          "title": "Quản lý nhiều địa điểm đồng thời",
+          "desc": "Thu thập dữ liệu ở các địa điểm khác nhau, không giới hạn khoảng cách địa lý, quản lý tập trung tại một nền tảng duy nhất."
+        },
+        {
+          "img": "/image/pms/feature/feature-2.png",
+          "title": "Ngăn ngừa sử dụng năng lượng quá mức",
+          "desc": "Thu thập công suất hiệu dụng, công suất phản kháng và cảnh báo khi vượt ngưỡng. Phát hiện nhanh chóng điểm quá tải."
+        },
+        {
+          "img": "/image/pms/feature/feature-3.png",
+          "title": "Tối ưu hóa cho ngành Solar ",
+          "desc": "Thu thập dữ liệu từ biến tần, cảm biến và data logger. Đánh giá mức độ hiệu quả qua các đồ thị trực quan."
+        },
+        {
+          "img": "/image/pms/feature/feature-4.png",
+          "title": "Không giới hạn dữ liệu",
+          "desc": "Thu thập dữ liệu từ đa dạng các nguồn dữ liệu khác nhau: Hóa đơn điện EVN, hóa đơn nước sạch, dữ liệu từ cảm biến, đồng hồ, logger và nhiều hơn thế nữa."
+        },
+        {
+          "img": "/image/pms/feature/feature-6.png",
+          "title": "Đo đạc, kiểm chứng và hành động",
+          "desc": "Mô hình chuẩn từ phát hiện vấn đề, xác thực thông tin và xử lý sự cố. Phát hiện kịp thời và hành động nhanh chóng là điều kiện tiên quyết giúp bạn nâng cao hiệu suất sử dụng năng lượng, nâng cao độ bền thiết bị."
+        },
+        {
+          "img": "/image/pms/feature/feature-5.png",
+          "title": "Chạy trên đa thiết bị và mọi lúc mọi nơi",
+          "desc": "Giúp khả năng quản lý và vận hành nhà máy hiệu quả hơn."
+        }
+      ]
+    },
+    "status": [
+      {
+        "icon": "<svg width='61' height='47' viewBox='0 0 61 47' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M54.4877 41.6135C54.311 41.6135 54.1382 41.6657 53.9913 41.7636C53.8443 41.8615 53.7298 42.0007 53.6622 42.1635C53.5945 42.3263 53.5768 42.5054 53.6113 42.6782C53.6458 42.8511 53.7309 43.0098 53.8559 43.1344C53.9808 43.259 54.14 43.3439 54.3134 43.3783C54.4867 43.4127 54.6664 43.395 54.8296 43.3276C54.9929 43.2601 55.1325 43.1459 55.2307 42.9994C55.3288 42.8529 55.3813 42.6806 55.3813 42.5044C55.3813 42.3874 55.3581 42.2716 55.3132 42.1635C55.2683 42.0554 55.2025 41.9571 55.1195 41.8744C55.0366 41.7917 54.9381 41.726 54.8297 41.6813C54.7212 41.6365 54.605 41.6135 54.4877 41.6135ZM58.3193 25.6862H57.544V18.9117C57.5431 18.0456 57.1976 17.2152 56.5834 16.6028C55.9691 15.9903 55.1363 15.6458 54.2677 15.6449H47.2283V6.09013C47.2273 5.224 46.8819 4.39361 46.2676 3.78116C45.6534 3.16871 44.8206 2.82421 43.952 2.82324H3.27637C2.40772 2.82421 1.57493 3.16871 0.960698 3.78116C0.346471 4.39361 0.000971256 5.224 0 6.09013L0 34.9752C0.000971256 35.8413 0.346471 36.6717 0.960698 37.2842C1.57493 37.8966 2.40772 38.2411 3.27637 38.2421H14.8525C15.0285 39.3427 14.8289 40.4703 14.2856 41.4443L12.7258 44.2227C12.5687 44.5025 12.4877 44.8184 12.4909 45.139C12.4941 45.4597 12.5813 45.7739 12.744 46.0506C12.9066 46.3272 13.139 46.5566 13.418 46.716C13.697 46.8754 14.013 46.9593 14.3346 46.9593H22.171C22.2109 46.959 22.2507 46.9561 22.2902 46.9505C22.3658 46.9557 22.4418 46.9593 22.5187 46.9593H58.3193C59.03 46.9585 59.7114 46.6766 60.214 46.1755C60.7165 45.6744 60.9992 44.995 61 44.2864V28.3592C60.9992 27.6505 60.7165 26.9711 60.214 26.47C59.7114 25.9689 59.03 25.6871 58.3193 25.6862ZM54.2677 17.4268C54.6625 17.4272 55.0411 17.5838 55.3203 17.8622C55.5994 18.1406 55.7565 18.518 55.7569 18.9117V25.6862H53.6948V20.374C53.6948 20.2569 53.6717 20.1411 53.6268 20.033C53.5819 19.9249 53.5161 19.8267 53.4331 19.7439C53.3501 19.6612 53.2516 19.5956 53.1432 19.5508C53.0348 19.506 52.9186 19.483 52.8012 19.483H26.0742C25.9569 19.483 25.8407 19.506 25.7323 19.5508C25.6239 19.5956 25.5254 19.6612 25.4424 19.7439C25.3594 19.8267 25.2936 19.9249 25.2487 20.033C25.2038 20.1411 25.1807 20.2569 25.1807 20.374V37.7864C25.1807 37.9034 25.2038 38.0192 25.2487 38.1273C25.2936 38.2354 25.3594 38.3337 25.4424 38.4164C25.5254 38.4991 25.6239 38.5648 25.7323 38.6095C25.8407 38.6543 25.9569 38.6774 26.0742 38.6773H47.9753V40.7335H23.1185V18.9117C23.119 18.518 23.276 18.1406 23.5552 17.8622C23.8344 17.5838 24.2129 17.4272 24.6078 17.4268L54.2677 17.4268ZM1.78711 6.09013C1.78755 5.69643 1.9446 5.31899 2.22379 5.0406C2.50299 4.76222 2.88153 4.60562 3.27637 4.60518H43.952C44.3468 4.60562 44.7253 4.76222 45.0045 5.0406C45.2837 5.31899 45.4408 5.69643 45.4412 6.09013V15.6449H24.6078C23.7391 15.6458 22.9063 15.9903 22.2921 16.6028C21.6779 17.2152 21.3324 18.0456 21.3314 18.9117V29.8275H1.78711V6.09013ZM3.27637 36.4601C2.88153 36.4597 2.50299 36.3031 2.22379 36.0247C1.9446 35.7463 1.78755 35.3689 1.78711 34.9752V31.6095H21.3314V36.4601H15.5775C15.5745 36.4601 15.5715 36.4601 15.5684 36.4601H3.27637ZM19.2423 41.9716V43.6924C19.242 44.2089 19.3652 44.718 19.6018 45.1774H14.3346C14.3247 45.1774 14.315 45.1748 14.3064 45.1699C14.2978 45.165 14.2907 45.1579 14.2857 45.1494C14.2807 45.1409 14.278 45.1312 14.2779 45.1213C14.2778 45.1115 14.2803 45.1017 14.2852 45.0931L15.845 42.3147C16.5363 41.0753 16.8197 39.6507 16.6551 38.2421H21.3314V40.7335H20.4841C20.1549 40.7339 19.8393 40.8644 19.6065 41.0965C19.3737 41.3286 19.2427 41.6434 19.2423 41.9716ZM22.5187 45.1774C22.1238 45.1769 21.7453 45.0203 21.4661 44.7419C21.1869 44.4636 21.0299 44.0861 21.0294 43.6924V42.5155H47.9753V44.2864C47.9752 44.59 48.0272 44.8913 48.129 45.1774H22.5187ZM47.9753 28.3592V36.8954H26.9678V21.2649H51.9077V25.6862H50.656C49.9453 25.6871 49.2639 25.9689 48.7614 26.47C48.2588 26.9711 47.9761 27.6505 47.9753 28.3592ZM59.2129 44.2864C59.2126 44.5226 59.1184 44.7491 58.9509 44.9161C58.7834 45.0832 58.5562 45.1771 58.3193 45.1774H50.656C50.4191 45.1771 50.192 45.0832 50.0244 44.9161C49.8569 44.7491 49.7627 44.5226 49.7624 44.2864V28.3592C49.7627 28.1229 49.8569 27.8965 50.0244 27.7294C50.192 27.5624 50.4191 27.4684 50.656 27.4682H52.7088C52.7703 27.4745 52.8322 27.4745 52.8936 27.4682H56.5581C56.6195 27.4745 56.6815 27.4745 56.7429 27.4682H58.3193C58.5562 27.4684 58.7834 27.5624 58.9509 27.7294C59.1184 27.8965 59.2126 28.1229 59.2129 28.3592V44.2864Z' fill='white' /></svg>",
+        "title": "1,000,000+",
+        "desc": "Thiết bị kết nối đồng thời"
+      },
+      {
+        "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-badge-check'><path d='M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z'/><path d='m9 12 2 2 4-4'/></svg>",
+        "title": "99,99%",
+        "desc": "Độ tin cậy"
+      },
+      {
+        "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-smile'><circle cx='12' cy='12' r='10'/><path d='M8 14s1.5 2 4 2 4-2 4-2'/><line x1='9' x2='9.01' y1='9' y2='9'/><line x1='15' x2='15.01' y1='9' y2='9'/></svg>",
+        "title": "99.99%",
+        "desc": "Đẹp trai"
+      }
+    ],
+    "questions": {
+      "title": "Hỏi và đáp",
+      "data": [
+        {
+          "ask": "Udata PMS có phải cài đặt không? Chạy trên nền tảng nào? Có tốn bộ nhớ không?",
+          "answer": "PMS chạy trên nền trình duyệt web, vậy nên phần mềm này có thể chạy trên đa thiết bị có trình duyệt web: laptop, máy tính bảng , smartphone v.v. PMS không cần cài đặt nên tốn rất ít bộ nhớ (không đáng kể)."
+        },
+        {
+          "ask": "Dữ liệu được lưu trữ ở đâu? Có an toàn không?",
+          "answer": "Dữ liệu của Udata được lưu trữ trên Provider Cloud hàng đầu thế giới Digital Ocean và tuân theo tiêu chuẩn bảo mật ISO 27001."
+        },
+        {
+          "ask": "Udata có thể quản lý tối đa bao thiết bị?",
+          "answer": "Udata quản lý không giới hạn số lượng thiết bị kết nối."
+        }
+      ],
+      "img": "/image/pms/question.png"
+    },
+    "whyChooseUs": {
+      "title": "Vì sao lại lựa chọn <span class='text-primary'>Udata</span>",
+      "subTitle": "Đạt được mục tiêu của bạn một cách hiệu quả",
+      "contents": [
+        {
+          "id": 1,
+          "title": "Dễ dàng sử dụng",
+          "content": "Giao diện thân thiện, dễ thao tác cho mọi người dùng, kể cả người mới.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-mouse-pointer-click'><path d='M14 4.1 12 6'/><path d='m5.1 8-2.9-.8'/><path d='m6 12-1.9 2'/><path d='M7.2 2.2 8 5.1'/><path d='M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z'/></svg>"
+        },
+        {
+          "id": 2,
+          "title": "Tùy biến cao",
+          "content": "Cho phép điều chỉnh theo nhu cầu riêng biệt của từng doanh nghiệp một cách dễ dàng.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-lightbulb'><path d='M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5'/><path d='M9 18h6'/><path d='M10 22h4'/></svg>"
+        },
+        {
+          "id": 3,
+          "title": "Triển khai linh hoạt",
+          "content": "Hỗ trợ triển khai nhanh chóng qua nhiều hình thức khác nhau, phù hợp với từng môi trường.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevrons-left-right'><path d='m9 7-5 5 5 5'/><path d='m15 7 5 5-5 5'/></svg>"
+        },
+        {
+          "id": 4,
+          "title": "Theo dõi tập trung",
+          "content": "Dữ liệu từ nhiều nguồn được quản lý và theo dõi trong một bảng điều khiển duy nhất.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-rss'><path d='M4 11a9 9 0 0 1 9 9'/><path d='M4 4a16 16 0 0 1 16 16'/><circle cx='5' cy='19' r='1'/></svg>"
+        }
+      ]
+    }
+  },
+  "SaaS": {
+    "heroSection": {
+      "heading": "SaaS",
+      "excerpt": "Udata là nền tảng dịch vụ phần mềm trên nền tảng đám mây (SaaS) để phân tích và quản lý dữ liệu.",
+      "color": "blue",
+      "contact": "Bắt đầu",
+      "img": "/image/pms/mockup-pms.png"
+    },
+    "features": {
+      "title": "Quản lý năng lượng không giới hạn",
+      "lists": [
+        {
+          "img": "/image/pms/feature/feature-1.png",
+          "title": "Thu thập và phân tích dữ liệu thời gian thực",
+          "desc": "Giải pháp của chúng tôi vượt trội ở khả năng thu thập và phân tích dữ liệu một cách nhanh chóng và chính xác. Bằng việc giám sát liên tục các hoạt động, chúng tôi giúp bạn phát hiện sớm các vấn đề tiềm ẩn và đưa ra các giải pháp kịp thời"
+        },
+        {
+          "img": "/image/pms/feature/feature-2.png",
+          "title": "Tiêu chuẩn ISO 50001",
+          "desc": "Thúc đẩy việc triển khai Hệ thống quản lý năng lượng ISO 50001. Thu thập dữ liệu tự động, theo dõi các chỉ số hiệu suất năng lượng có liên quan, thiết lập các tình huống tham chiếu và đo lường mức tiết kiệm năng lượng theo hướng dẫn của IPMVP"
+        },
+        {
+          "img": "/image/pms/feature/feature-3.png",
+          "title": "Dễ sử dụng",
+          "desc": "Udata đơn giản hóa công việc của nhà quản lý vận hành và tiết kiệm thời gian. Trong một ngày đào tạo, bạn sẽ thành thạo nền tảng và tùy chỉnh nó theo cách hoàn toàn tự chủ"
+        },
+        {
+          "img": "/image/pms/feature/feature-4.png",
+          "title": "Cảnh báo tự động",
+          "desc": "Điều này giúp cho các tổ chức tiết kiệm thời gian và nguồn lực, có thể nhận diện sớm các vấn đề tiềm ẩn, từ đó đưa ra những biện pháp kịp thời để điều chỉnh và tối ưu hóa hoạt động"
+        },
+        {
+          "img": "/image/pms/feature/feature-6.png",
+          "title": "Tùy biến Dashboard",
+          "desc": "Bằng cách cho phép người dùng tùy chỉnh giao diện và các chỉ số theo nhu cầu cụ thể, nó giúp tối ưu hóa việc quản lý thông tin và ra quyết định một cách hiệu quả"
+        },
+        {
+          "img": "/image/pms/feature/feature-5.png",
+          "title": "Khả năng phân quyền theo vai trò, theo địa điểm, theo loại dữ liệu",
+          "desc": "Sự linh hoạt trong phân quyền giúp đảm bảo rằng chỉ những người có quyền hạn phù hợp mới có thể truy cập và thao tác với dữ liệu cần thiết, từ đó tăng cường bảo mật và hiệu quả hoạt động"
+        }
+      ]
+    },
+    "singleFeature": {
+      "first": {
+        "title": "Ứng dụng duy nhất tại Việt Nam cho phép quản lý đa địa điểm, đa thiết bị của nhiều nhà sản xuất khác nhau trên cùng một nền tảng",
+        "subTitle": "",
+        "desc": "Với mong muốn mang đến giải pháp quản lý hiệu quả và toàn diện, chúng tôi đã phát triển ứng dụng đầu tiên và duy nhất tại Việt Nam cho phép quản lý đồng bộ nhiều địa điểm, nhiều thiết bị từ các nhà sản xuất khác nhau trên cùng một nền tảng. Điều này giúp doanh nghiệp tối ưu hóa quy trình quản lý, tiết kiệm thời gian và nâng cao hiệu quả hoạt động",
+        "img": "/image/solutions/fisheries/fisheries-feature-1.png"
+      },
+      "second": {
+        "title": "Ứng dụng duy nhất ở Việt Nam cho phép cảnh báo tự động tới khách hàng theo kịch bản được thiết lập bởi người dùng",
+        "subTitle": "",
+        "desc": "Ứng dụng của chúng tôi là giải pháp tiên phong tại Việt Nam, cung cấp tính năng cảnh báo tự động thông minh. Nhờ đó, khách hàng có thể chủ động thiết lập các kịch bản cảnh báo phù hợp với nhu cầu riêng, đảm bảo mọi sự cố được phát hiện và xử lý kịp thời, nâng cao hiệu quả quản lý và giảm thiểu rủi ro.",
+        "img": "/image/solutions/fisheries/fisheries-feature-2.png"
+      },
+      "third": {
+        "title": "Ứng dụng duy nhất cho phép tùy biến và gửi định kỳ các loại báo cáo: báo cáo tổn thất, báo cáo phân tích lỗi thường xuyên phát sinh,…",
+        "subTitle": "",
+        "desc": "Ứng dụng của chúng tôi là giải pháp hàng đầu, cho phép bạn tùy biến và tạo ra các báo cáo theo đúng yêu cầu cụ thể của doanh nghiệp. Từ báo cáo tổn thất chi tiết đến báo cáo phân tích lỗi thường gặp, mọi thông tin đều được tổng hợp và trình bày một cách rõ ràng, giúp bạn đưa ra quyết định chính xác và kịp thời.",
+        "img": "/image/solutions/fisheries/fisheries-feature-3.png"
+      }
+    },
+    "whyChooseUs": {
+      "title": "Vì sao nên chọn <span class='text-primary'>Udata.Cloud</span>",
+      "subTitle": "Đạt được mục tiêu của bạn một cách hiệu quả",
+      "contents": [
+        {
+          "id": 1,
+          "title": "FIT",
+          "content": "Sẵn sàng đáp ứng nhu cầu người sử dụng trong nhiều lĩnh vực kinh tế",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-mouse-pointer-click'><path d='M14 4.1 12 6'/><path d='m5.1 8-2.9-.8'/><path d='m6 12-1.9 2'/><path d='M7.2 2.2 8 5.1'/><path d='M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z'/></svg>"
+        },
+        {
+          "id": 2,
+          "title": "FAST",
+          "content": "Triển khai nhanh chóng, vận hành mượt mà, đáp ứng nhanh các yêu cầu",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-lightbulb'><path d='M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5'/><path d='M9 18h6'/><path d='M10 22h4'/></svg>"
+        },
+        {
+          "id": 3,
+          "title": "FLEXIBLE",
+          "content": "Dễ dàng mở rộng, tích hợp với các hệ thống khác và điều chỉnh linh hoạt theo nhu cầu người sử dụng",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevrons-left-right'><path d='m9 7-5 5 5 5'/><path d='m15 7 5 5-5 5'/></svg>"
+        }
+      ]
+    }
+  },
+  "Intergration": {
+    "heroSection": {
+      "heading": "Mở khóa dữ liệu của bạn với Udata",
+      "excerpt": "Để quản lý năng lượng dựa trên dữ liệu hiệu quả, việc có dữ liệu tập trung và có cấu trúc là điều quan trọng. Chúng tôi cam kết giúp bạn thu thập và tích hợp dữ liệu một cách nhanh chóng và dễ dàng, đảm bảo rằng bạn không bao giờ bị chậm trễ hoặc gặp trở ngại trong quá trình này.",
+      "color": "green",
+      "contact": "Bắt đầu",
+      "img": "/image/pms/mockup-pms.png"
+    },
+    "features": {
+      "lists": [
+        {
+          "title": "Không phụ thuộc vào nguồn dữ liệu",
+          "desc": "Udata là giải pháp linh hoạt, hỗ trợ kết nối và xử lý dữ liệu từ đa dạng các nguồn như bộ ghi dữ liệu, nhà điều hành lưới điện, cảm biến IoT... Dù dữ liệu của bạn có dạng thức và giao thức nào, chúng tôi đều có thể tích hợp và khai thác hiệu quả."
+        },
+        {
+          "title": "Lưu trữ dữ liệu ngoại tuyến",
+          "desc": "Chúng tôi lưu trữ dữ liệu của bạn tới 30 ngày khi gặp sự cố mất mạng. Dữ liệu của bạn sẽ luôn được cập nhật và đảm bảo tính chính xác."
+        },
+        {
+          "title": "Di chuyển dữ liệu và tích hợp dữ liệu",
+          "desc": "Với dịch vụ di chuyển dữ liệu chuyên nghiệp, chúng tôi sẽ giúp bạn chuyển đổi mượt mà từ phần mềm quản lý năng lượng cũ sang nền tảng Udata. Không chỉ dừng lại ở đó, Udata còn có khả năng tích hợp với nhiều hệ thống khác nhau, giúp bạn xây dựng một giải pháp quản lý năng lượng toàn diện và phù hợp với nhu cầu riêng của doanh nghiệp."
+        }
+      ]
+    },
+    "dependDatas": {
+      "title": "Udata không bị phụ thuộc vào nguồn dữ liệu và có thể thu thập dữ liệu từ:",
+      "subTitle": "Bạn có cần thu thập từu nhiều nguồn dữ liệu khác nhau không?",
+      "lists": [
+        {
+          "title": "DataLogger/Gateway",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-between-horizontal-end'><rect width='13' height='7' x='3' y='3' rx='1'/><path d='m22 15-3-3 3-3'/><rect width='13' height='7' x='3' y='14' rx='1'/></svg>"
+        },
+        {
+          "title": "Đồng hồ năng lượng, đồng hồ đa chức năng",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-clock'><circle cx='12' cy='12' r='10'/><polyline points='12 6 12 12 16 14'/></svg>"
+        },
+        {
+          "title": "Kết nối IoT",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-arrow-down-up'><path d='m3 16 4 4 4-4'/><path d='M7 20V4'/><path d='m21 8-4-4-4 4'/><path d='M17 4v16'/></svg>"
+        },
+        {
+          "title": "File Excel",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-sheet'><rect width='18' height='18' x='3' y='3' rx='2' ry='2'/><line x1='3' x2='21' y1='9' y2='9'/><line x1='3' x2='21' y1='15' y2='15'/><line x1='9' x2='9' y1='9' y2='21'/><line x1='15' x2='15' y1='9' y2='21'/></svg>"
+        },
+        {
+          "title": "Cảm biến đo lường",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-aperture'><circle cx='12' cy='12' r='10'/><path d='m14.31 8 5.74 9.94'/><path d='M9.69 8h11.48'/><path d='m7.38 12 5.74-9.94'/><path d='M9.69 16 3.95 6.06'/><path d='M14.31 16H2.83'/><path d='m16.62 12-5.74 9.94'/></svg>"
+        },
+        {
+          "title": "Dữ liệu thời tiết",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-cloudy'><path d='M17.5 21H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z'/><path d='M22 10a3 3 0 0 0-3-3h-2.207a5.502 5.502 0 0 0-10.702.5'/></svg>"
+        }
+      ]
+    },
+    "singleFeature": {
+      "first": {
+        "title": "Ứng dụng duy nhất tại Việt Nam cho phép quản lý đa địa điểm, đa thiết bị của nhiều nhà sản xuất khác nhau trên cùng một nền tảng.",
+        "subTitle": "",
+        "desc": "Với mong muốn mang đến giải pháp quản lý hiệu quả và toàn diện, chúng tôi đã phát triển ứng dụng đầu tiên và duy nhất tại Việt Nam cho phép quản lý đồng bộ nhiều địa điểm, nhiều thiết bị từ các nhà sản xuất khác nhau trên cùng một nền tảng. Điều này giúp doanh nghiệp tối ưu hóa quy trình quản lý, tiết kiệm thời gian và nâng cao hiệu quả hoạt động",
+        "img": "/image/solutions/fisheries/fisheries-feature-1.png"
+      },
+      "second": {
+        "title": "Ứng dụng duy nhất ở Việt Nam cho phép cảnh báo tự động tới khách hàng theo kịch bản được thiết lập bởi người dùng.",
+        "subTitle": "",
+        "desc": "Ứng dụng của chúng tôi là giải pháp tiên phong tại Việt Nam, cung cấp tính năng cảnh báo tự động thông minh. Nhờ đó, khách hàng có thể chủ động thiết lập các kịch bản cảnh báo phù hợp với nhu cầu riêng, đảm bảo mọi sự cố được phát hiện và xử lý kịp thời, nâng cao hiệu quả quản lý và giảm thiểu rủi ro.",
+        "img": "/image/solutions/fisheries/fisheries-feature-2.png"
+      },
+      "third": {
+        "title": "Ứng dụng duy nhất cho phép tùy biến và gửi định kỳ các loại báo cáo: báo cáo tổn thất, báo cáo phân tích lỗi thường xuyên phát sinh,…",
+        "subTitle": "",
+        "desc": "Ứng dụng của chúng tôi là giải pháp hàng đầu, cho phép bạn tùy biến và tạo ra các báo cáo theo đúng yêu cầu cụ thể của doanh nghiệp. Từ báo cáo tổn thất chi tiết đến báo cáo phân tích lỗi thường gặp, mọi thông tin đều được tổng hợp và trình bày một cách rõ ràng, giúp bạn đưa ra quyết định chính xác và kịp thời.",
+        "img": "/image/solutions/fisheries/fisheries-feature-3.png"
+      }
+    },
+    "questions": {
+      "title": "Những câu hỏi thường gặp",
+      "data": [
+        {
+          "ask": "Dữ liệu của tôi trên Udata có an toàn không?",
+          "answer": "Dữ liệu của bạn được bảo mật tuyệt đối khi sử dụng Udata. Tất cả thông tin đều được lưu trữ tại các máy chủ và được sao lưu hàng ngày. Hệ thống của chúng tôi tuân thủ tiêu chuẩn bảo mật ISO 27001, đảm bảo dữ liệu của bạn luôn an toàn."
+        },
+        {
+          "ask": "Udata có sở hữu dữ liệu tôi đưa vào nền tảng không?",
+          "answer": "Không. Bạn là chủ sở hữu duy nhất của dữ liệu của mình. Chúng tôi chỉ lưu trữ dữ liệu để bạn phân tích và lấy giá trị thực của dữ liệu."
+        },
+        {
+          "ask": "Udata có thể giúp tôi cải thiện chất lượng dữ liệu không?",
+          "answer": "Udata có nhiều tính năng giúp bạn cải thiện chất lượng dữ liệu. Cảnh báo sẽ được kích hoạt nếu bất kỳ thiết bị nào của bạn không còn gửi dữ liệu đến Udata nữa và nó sẽ tính toán tính khả dụng của dữ liệu mọi lúc. Bạn cũng có thể sửa dữ liệu sai dựa trên các quy tắc."
+        }
+      ],
+      "img": "/image/pms/question.png"
+    },
+    "callToAction": {
+      "title": "Di chuyển dữ liệu & Tích hợp",
+      "subTitle": "Bạn đang sử dụng hệ thống tương tự và muốn chuyển sang Udata?",
+      "content": "Udata cung cấp dịch vụ di chuyển và tích hợp dữ liệu chuyên nghiệp, giúp bạn nâng cấp hệ thống quản lý năng lượng hiện tại. Chúng tôi hỗ trợ di chuyển dữ liệu từ các hệ thống khác nhau sang nền tảng Udata, đảm bảo tính toàn vẹn và bảo mật của dữ liệu. Ngoài ra, chúng tôi còn cung cấp các giải pháp tích hợp để kết nối Udata với các hệ thống khác trong doanh nghiệp của bạn.",
+      "button": "Nhận tư vấn từ chuyên gia của chúng tôi"
     }
   }
 }

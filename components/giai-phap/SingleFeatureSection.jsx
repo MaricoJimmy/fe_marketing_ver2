@@ -27,7 +27,7 @@ function SingleFeatureSection({
               {data.title}
             </h2>
             {isCustom ? (
-              <ol className="mt-8 ml-6 list-disc">
+              <ol className="mt-8 ml-6 list-disc text-justify">
                 {data.listsContent.map((content) => (
                   <li key={content.title}>
                     <span className="text-neutral text-base font-semibold">
@@ -39,7 +39,7 @@ function SingleFeatureSection({
               </ol>
             ) : (
               <>
-                <h6 className="mt-2 text-base text-neutral/80">
+                <h6 className="mt-2 text-base text-neutral/80 text-justify">
                   {data.subTitle}
                 </h6>
                 <h5 className="mt-8 text-lg text-neutral text-justify">
