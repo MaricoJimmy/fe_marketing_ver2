@@ -319,7 +319,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
         </section>
         {/* features */}
         <section className="w-full flex justify-center items-center">
-          <div className="px-5 py-20 md:px-8 lg:py-44 max-w-screen-xl w-full">
+          <div className="px-5 py-20 md:px-8 lg:py-32 max-w-screen-xl w-full">
             <h2 className="text-neutral text-center lg:text-4xl text-2xl font-bold">
               Udata.ai phá vỡ giới hạn trong việc sử dụng dữ liệu của bạn
             </h2>
@@ -331,7 +331,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
         </section>
         {/* blog */}
         <section className="w-full flex justify-center items-center bg-primary/5">
-          <div className="px-5 py-20 md:px-8 lg:py-44 max-w-screen-xl w-full">
+          <div className="px-5 py-20 md:px-8 lg:py-32 max-w-screen-xl w-full">
             <h2 className="text-neutral text-center lg:text-4xl text-2xl font-bold">
               Tin tức
             </h2>
@@ -357,7 +357,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
         </section>
         {/* about-us */}
         <section className="w-full flex justify-center items-center">
-          <div className="px-5 py-20 md:px-8 lg:py-44 max-w-screen-xl w-full grid lg:grid-cols-2 gap-10">
+          <div className="px-5 py-20 md:px-8 lg:py-32 max-w-screen-xl w-full grid lg:grid-cols-2 gap-10">
             <div>
               <div>
                 <h4 className="text-infor lg:text-2xl text-xl font-semibold uppercase">
