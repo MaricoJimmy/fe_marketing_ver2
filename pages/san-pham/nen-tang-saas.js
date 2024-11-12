@@ -29,6 +29,7 @@ const PMSLandingPage = () => {
               layout="fill"
               alt=""
               className="rounded-md overflow-hidden object-cover"
+              unoptimized={true}
             />
           </div>
         </div>
