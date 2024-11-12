@@ -4,5 +4,5 @@ Allow: /
 Allow: /*
 
 # Sitemap
-Sitemap: https://pambu.org/sitemap.xml
-Sitemap: https://www.pambu.org/sitemap.xml
+Sitemap: https://udata.ai/sitemap.xml
+Sitemap: https://www.udata.ai/sitemap.xml

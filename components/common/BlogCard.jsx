@@ -10,7 +10,7 @@ function BlogCard({ data, category, locale }) {
         <a className="block h-full bg-white shadow-md shadow-tertiary/80 rounded-3xl">
           <div className="w-full h-[240px] relative border-b border-gray/20">
             <Image
-              src={data.featuredImage.node.mediaItemUrl}
+              src={data?.featuredImage?.node?.mediaItemUrl}
               layout="fill"
               objectFit="cover"
               className="rounded-t-3xl"

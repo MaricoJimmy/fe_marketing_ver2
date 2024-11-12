@@ -1,87 +1,43 @@
-import Image from "next/image";
-import React from "react";
-import Button from "../common/Button";
-import { useTranslations } from "next-intl";
+import { ROUTER_CONTACT } from "@/utils/constant";
+import { useRouter } from "next/router";
+import { Button } from "../ui/button";
 
-function HeroSection({ data, setShowModal }) {
-  const t = useTranslations("Product");
+function HeroSection({ data, page }) {
+  const router = useRouter();
+  const renderBg = (page) => {
+    switch (page) {
+      case "pms":
+        return "bg-[url('/image/hero/pms-bg.jpg')]";
+      case "intergration":
+        return "bg-[url('/image/hero/intergrate-bg.jpg')]";
+      case "saas":
+        return "bg-[url('/image/hero/saas-bg.jpg')]";
+    }
+  };
   return (
     <div
-      className={`relative w-full flex items-center justify-center overflow-hidden ${
-        data.color === "blue" ? "bg-primary" : "bg-orange-primary"
-      }`}
+      className={`relative w-full min-h-[400px] flex items-center justify-center overflow-hidden bg-cover bg-center bg-no-repeat ${renderBg(
+        page
+      )}`}
     >
-      <div className="relative z-30 grid grid-cols-12 gap-6 px-8 pt-20 pb-32 max-w-screen-xl w-full">
-        <div className="col-span-12 lg:col-span-7 order-last lg:order-first flex items-center justify-center">
-          <div className="w-full">
-            <h1 className="text-2xl md:text-5xl text-white md:!leading-tight font-bold">
-              {data.heading}
-            </h1>
-            <p className="mt-6 text-lg text-white text-justify font-medium leading-8">
-              {data.excerpt}
-            </p>
-            <div className="flex items-center justify-center lg:justify-start">
-              <Button
-                onClick={() => setShowModal(true)}
-                className={`mt-10 px-6 py-3 bg-white text-gray hover:text-white font-semibold duration-200 ${
-                  data.color === "blue"
-                    ? "hover:bg-secondary"
-                    : "hover:bg-orange-secondary"
-                }`}
-              >
-                {t("button.demo")}
-              </Button>
-            </div>
-          </div>
-        </div>
-        <div className="col-span-12 lg:col-span-5 h-[250px] md:h-[450px]">
-          <div className="relative w-full h-full">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full flex items-center justify-center">
-              <Image src={data.img} width="1240" height="650" alt="" />
-            </div>
-          </div>
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-neutral/80 to-neutral/20"></div>
+      <div className="relative z-10 lg:px-10 px-4 py-6">
+        <h1 className="lg:text-5xl text-3xl text-center text-white font-bold">
+          {data.heading}
+        </h1>
+        <h5 className="mt-2 text-center lg:text-lg text-sm text-white font-medium">
+          {data.excerpt}
+        </h5>
+        <div className="mt-8 flex items-center justify-center">
+          <Button
+            onClick={() => router.push(ROUTER_CONTACT)}
+            className="shadow-md hover:shadow-lg transition-all"
+            size="lg"
+          >
+            {data.contact}
+          </Button>
         </div>
       </div>
-      {(data.color === "blue" && (
-        <>
-          <div className="absolute z-10 -right-20 -bottom-16 lg:-bottom-3 -rotate-45 opacity-80">
-            <Image
-              src="/image/hero/hero-2.png"
-              width="280"
-              height="280"
-              alt=""
-            />
-          </div>
-          <div className="absolute z-10 -left-16 -top-3 rotate-90 opacity-70">
-            <Image
-              src="/image/hero/hero-1.png"
-              width="300"
-              height="300"
-              alt=""
-            />
-          </div>
-        </>
-      )) || (
-        <>
-          <div className="absolute z-10 -right-20 -bottom-16 lg:-bottom-10 opacity-80">
-            <Image
-              src="/image/hero/hero-3.png"
-              width="300"
-              height="300"
-              alt=""
-            />
-          </div>
-          <div className="absolute z-10 -left-16 -top-3 opacity-70">
-            <Image
-              src="/image/hero/hero-4.png"
-              width="250"
-              height="250"
-              alt=""
-            />
-          </div>
-        </>
-      )}
-      <div className="absolute bottom-0 z-10 w-full h-[50px] bg-quaternary rounded-t-[64px]"></div>
     </div>
   );
 }

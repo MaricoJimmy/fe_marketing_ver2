@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  darkMode: ["class"],
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
@@ -7,24 +8,54 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#0069FF",
-        secondary: "#002C9B",
-        tertiary: "#E0EDFF",
-        quaternary: "#F9FAFE",
-        "blue-primary": "#3592E9",
-        "blue-secondary": "#0D4578",
-        "orange-primary": "#E97635",
-        "orange-secondary": "#78340D",
-        "yellow-primary": "#FFE91F",
-        "yellow-secondary": "#857700",
-        gray: "#2E2E2E",
-        red: "#CC352B",
+        primary: "#006AFF",
+        error: "#E91C2B",
+        success: "#58C27D",
+        warning: "#FFD166",
+        infor: "#3995DB",
+        neutral: "#1F2C45",
+        gray: "#383B42",
+        warning_v2: "#f97216",
+        success_v2: "#0AA350",
+        "neutral-second": "#232428",
       },
       screens: {
-        "tall-sm": { raw: "(max-height: 500px)" },
-        "tall-md": { raw: "(max-height: 700px)" },
+        "tall-sm": {
+          raw: "(max-height: 500px)",
+        },
+        "tall-md": {
+          raw: "(max-height: 700px)",
+        },
+        tabletLG: "1100px",
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      keyframes: {
+        "accordion-down": {
+          from: {
+            height: "0",
+          },
+          to: {
+            height: "var(--radix-accordion-content-height)",
+          },
+        },
+        "accordion-up": {
+          from: {
+            height: "var(--radix-accordion-content-height)",
+          },
+          to: {
+            height: "0",
+          },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
   },
-  plugins: [],
+  plugins: [require("tailwindcss-animate")],
 };

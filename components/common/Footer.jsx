@@ -1,22 +1,130 @@
+import {
+  ROUTER_ABOUT_US,
+  ROUTER_BLOG,
+  ROUTER_CASE_STUDY,
+  ROUTER_CONTACT,
+  ROUTER_FISHERIES,
+  ROUTER_INTERGRATE,
+  ROUTER_INVESTORS,
+  ROUTER_MANAGERS,
+  ROUTER_OPERATORS,
+  ROUTER_PMS,
+  ROUTER_SAAS,
+  ROUTER_SOLAR,
+} from "@/utils/constant";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 function Footer() {
+  const t = useTranslations("Footer");
+  // const listMenu = [
+  //   {
+  //     title: "Udata PMS",
+  //     href: ROUTER_PMS,
+  //   },
+  //   {
+  //     title: "Solar rooftop",
+  //     href: ROUTER_SOLAR,
+  //   },
+  //   {
+  //     title: "Case study",
+  //     href: ROUTER_CASE_STUDY,
+  //   },
+  //   {
+  //     title: "Blog",
+  //     href: ROUTER_BLOG,
+  //   },
+  //   {
+  //     title: t("section.first.links.contact"),
+  //     href: ROUTER_CONTACT,
+  //   },
+  //   {
+  //     title: t("section.first.links.about-us"),
+  //     href: ROUTER_ABOUT_US,
+  //   },
+  // ];
+
+  const listMenu = [
+    {
+      section: "Công ty",
+      href: ROUTER_ABOUT_US,
+    },
+    {
+      section: "Giải pháp",
+      menus: [
+        {
+          title: "Chủ đầu tư - Quản lý cấp cao",
+          href: ROUTER_INVESTORS,
+        },
+        {
+          title: "Cấp quản lý",
+          href: ROUTER_MANAGERS,
+        },
+        {
+          title: "Cấp vận hành",
+          href: ROUTER_OPERATORS,
+        },
+        {
+          title: "Năng lượng mặt trời áp mái",
+          href: ROUTER_SOLAR,
+        },
+        // "Nhà máy công nghiệp",
+        {
+          title: "Thủy sản",
+          href: ROUTER_FISHERIES,
+        },
+        // "Nông nghiệp",
+        // "Viễn thông",
+        // "Y tế",
+        // "Bán lẻ - Ngân hàng",
+        // "Xăng dầu",
+      ],
+    },
+    {
+      section: "Sản phẩm",
+      menus: [
+        {
+          title: "Nền tảng SaaS",
+          href: ROUTER_INTERGRATE,
+        },
+        {
+          title: "Tích hợp dữ liệu",
+          href: ROUTER_SAAS,
+        },
+      ],
+    },
+    {
+      section: "Tin tức",
+      menus: [
+        {
+          title: "Case study",
+          href: ROUTER_CASE_STUDY,
+        },
+        {
+          title: "Blog",
+          href: ROUTER_BLOG,
+        },
+      ],
+    },
+    // {
+    //   section: "Tuyển dụng",
+    // },
+  ];
   return (
     <>
       <div className="hidden lg:block">
-        <FooterDesktop />
+        <FooterDesktop sectionLinks={listMenu} />
       </div>
       <div className="block lg:hidden">
-        <FooterMobile />
+        <FooterMobile sectionLinks={listMenu} />
       </div>
     </>
   );
 }
 
-function FooterDesktop() {
+function FooterDesktop({ sectionLinks }) {
   const t = useTranslations("Footer");
   return (
     <div className="w-full border-t border-gray/20">
@@ -35,7 +143,7 @@ function FooterDesktop() {
                 </a>
               </Link>
               <span className="text-lg text-gray/60 font-semibold">
-                Copyright @ 2022 Udata.ai
+                Copyright @ 2024 Udata.ai
               </span>
             </div>
             <div className="col-span-1">
@@ -43,54 +151,37 @@ function FooterDesktop() {
                 {t("section.first.title")}
               </h4>
               <ul className="mt-8 flex flex-col items-start gap-6 cursor-pointer">
-                <li className="w-full">
-                  <Link href="/tin-tuc">
-                    <a
-                      className="block w-full text-gray/80 font-semibold hover:text-primary duration-200"
-                      aria-label="Tin tức"
-                    >
-                      {t("section.first.links.news")}
-                    </a>
-                  </Link>
-                </li>
-                <li className="w-full">
-                  <div className="text-gray/80 font-semibold hover:text-primary duration-200">
-                    <Link href="/san-pham/pambu-oee">
-                      <a className="block w-full" aria-label="Pambu OEE">
-                        Pambu OEE
-                      </a>
-                    </Link>
-                  </div>
-                  <div className="mt-6 text-gray/80 font-semibold hover:text-primary duration-200">
-                    <Link href="/san-pham/pambu-pms">
-                      <a className="block w-full" aria-label="Pambu PMS">
-                        Pambu PMS
-                      </a>
-                    </Link>
-                  </div>
-                </li>
-                <li className="w-full">
-                  <div className="text-gray/80 font-semibold hover:text-primary duration-200">
-                    <Link href="/pambu-oee">
-                      <a
-                        className="block w-full"
-                        aria-label="Tài liệu Pambu OEE"
-                      >
-                        {t("section.first.links.oee")}
-                      </a>
-                    </Link>
-                  </div>
-                  <div className="mt-6 text-gray/80 font-semibold hover:text-primary duration-200">
-                    <Link href="/pambu-pms">
-                      <a
-                        className="block w-full"
-                        aria-label="Tài liệu Pambu PMS"
-                      >
-                        {t("section.first.links.pms")}
-                      </a>
-                    </Link>
-                  </div>
-                </li>
+                {sectionLinks.map((sectionLink) => (
+                  <li key={sectionLink.section} className="w-full">
+                    {/* <Link href={menu.href}>
+                        <a className="block w-full" aria-label="Udata PMS">
+                          {menu.title}
+                        </a>
+                      </Link> */}
+                    {sectionLink.menus ? (
+                      <h3 className="text-neutral font-bold hover:text-primary duration-200">
+                        {sectionLink.section}
+                      </h3>
+                    ) : (
+                      <Link href={sectionLink.href}>
+                        <a className="text-neutral font-bold hover:text-primary duration-200">
+                          {sectionLink.section}
+                        </a>
+                      </Link>
+                    )}
+                    {sectionLink.menus ? (
+                      <ul className="mt-2 flex flex-col space-y-1">
+                        {sectionLink.menus.map((menu) => (
+                          <Link key={menu.title} href={menu.href}>
+                            <a className="text-gray/80 font-semibold">
+                              {menu.title}
+                            </a>
+                          </Link>
+                        ))}
+                      </ul>
+                    ) : null}
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="col-span-1">
@@ -112,10 +203,10 @@ function FooterDesktop() {
                     />
                   </svg>
                   <a
-                    href="tel:0387430957"
+                    href="tel:1800255698"
                     className="ml-2 text-gray/80 font-semibold"
                   >
-                    0387 430 957
+                    1800 255 698
                   </a>
                 </li>
                 <li className="flex items-center justify-center">
@@ -134,13 +225,13 @@ function FooterDesktop() {
                     />
                   </svg>
                   <a
-                    href="mailto:pambu@DHG.asia"
+                    href="mailto:support@udata.ai"
                     className="ml-2 text-gray/80 font-semibold"
                   >
-                    pambu@DHG.asia
+                    support@udata.ai
                   </a>
                 </li>
-                <li className="flex items-center justify-center">
+                <li className="flex items-start justify-center">
                   <div>
                     <svg
                       width="24"
@@ -157,9 +248,16 @@ function FooterDesktop() {
                       />
                     </svg>
                   </div>
-                  <span className="ml-2 text-gray/80 font-semibold">
-                    {t("section.second.address")}
-                  </span>
+                  <div className="flex flex-col gap-2">
+                    <span className="ml-2 text-gray/80 font-semibold">
+                      Văn phòng Hà Nội: Tòa nhà Thiên Niên Kỷ, Tầng 9, Số 4
+                      Quang Trung, P. Yết Kiêu, Q. Hà Đông, Hà Nội.
+                    </span>
+                    <span className="ml-2 text-gray/80 font-semibold">
+                      Văn phòng Hồ Chí Minh: Tầng 6, Tòa nhà DHG, Số 31-33,
+                      Đường 18, Phường 8, Quận Gò Vấp, TP. Hồ Chí Minh
+                    </span>
+                  </div>
                 </li>
               </ul>
             </div>
@@ -181,7 +279,7 @@ function FooterDesktop() {
   );
 }
 
-function FooterMobile() {
+function FooterMobile({ sectionLinks }) {
   const t = useTranslations("Footer");
   return (
     <div className="w-full border-t border-gray/20">
@@ -202,62 +300,45 @@ function FooterMobile() {
                 </Link>
               </div>
               <div className="col-span-4">
-                <h4 className="text-2xl text-gray font-bold">
+                <h4 className="text-2xl text-gray font-semibold">
                   {t("section.first.title")}
                 </h4>
-                <ul className="mt-6 cursor-pointer">
-                  <li className="w-full">
-                    <Link href="/tin-tuc">
-                      <a
-                        aria-label="tin tuc"
-                        className="block w-full text-gray/80 font-semibold hover:text-primary duration-200"
-                      >
-                        {t("section.first.links.news")}
-                      </a>
-                    </Link>
-                  </li>
-                  <li className="mt-6 w-full">
-                    <div className="text-gray/80 font-semibold hover:text-primary duration-200">
-                      <Link href="/san-pham/pambu-oee">
-                        <a className="block w-full" aria-label="pambu oee">
-                          Pambu OEE
+                <ul className="mt-6 flex flex-col items-start gap-6 cursor-pointer">
+                  {sectionLinks.map((sectionLink) => (
+                    <li key={sectionLink.section} className="w-full">
+                      {/* <Link href={menu.href}>
+                        <a className="block w-full" aria-label="Udata PMS">
+                          {menu.title}
                         </a>
-                      </Link>
-                    </div>
-                    <div className="mt-6 text-gray/80 font-semibold hover:text-primary duration-200">
-                      <Link href="/san-pham/pambu-pms">
-                        <a className="block w-full" aria-label="pambu pms">
-                          Pambu PMS
-                        </a>
-                      </Link>
-                    </div>
-                  </li>
-                  <li className="mt-6 w-full">
-                    <div className="text-gray/80 font-semibold hover:text-primary duration-200">
-                      <Link href="/pambu-oee">
-                        <a
-                          className="block w-full"
-                          aria-label="Tài liệu Pambu OEE"
-                        >
-                          {t("section.first.links.oee")}
-                        </a>
-                      </Link>
-                    </div>
-                    <div className="mt-6 text-gray/80 font-semibold hover:text-primary duration-200">
-                      <Link href="/pambu-pms">
-                        <a
-                          className="block w-full"
-                          aria-label="Tài liệu Pambu PMS"
-                        >
-                          {t("section.first.links.pms")}
-                        </a>
-                      </Link>
-                    </div>
-                  </li>
+                      </Link> */}
+                      {sectionLink.menus ? (
+                        <h3 className="text-neutral font-bold hover:text-primary duration-200">
+                          {sectionLink.section}
+                        </h3>
+                      ) : (
+                        <Link href={sectionLink.href}>
+                          <a className="text-neutral font-bold hover:text-primary duration-200">
+                            {sectionLink.section}
+                          </a>
+                        </Link>
+                      )}
+                      {sectionLink.menus ? (
+                        <ul className="mt-2 flex flex-col space-y-1">
+                          {sectionLink.menus.map((menu) => (
+                            <Link key={menu.title} href={menu.href}>
+                              <a className="text-gray/80 font-semibold">
+                                {menu.title}
+                              </a>
+                            </Link>
+                          ))}
+                        </ul>
+                      ) : null}
+                    </li>
+                  ))}
                 </ul>
               </div>
               <div className="col-span-4">
-                <h4 className="text-2xl text-gray font-bold">
+                <h4 className="text-2xl text-gray font-semibold">
                   {t("section.second.title")}
                 </h4>
                 <ul className="mt-6 cursor-pointer">
@@ -275,10 +356,10 @@ function FooterMobile() {
                       />
                     </svg>
                     <a
-                      href="tel:0387430957"
+                      href="tel:1800255698"
                       className="ml-2 text-gray/80 font-semibold"
                     >
-                      0387 430 957
+                      1800 255 698
                     </a>
                   </li>
                   <li className="mt-6 flex items-center justify-start">
@@ -297,13 +378,13 @@ function FooterMobile() {
                       />
                     </svg>
                     <a
-                      href="mailto:pambu@DHG.asia"
+                      href="mailto:support@udata.ai"
                       className=" ml-2 text-gray/80 font-semibold"
                     >
-                      pambu@DHG.asia
+                      support@udata.ai
                     </a>
                   </li>
-                  <li className="mt-6 flex items-center justify-start">
+                  <li className="mt-6 flex items-start justify-start">
                     <div>
                       <svg
                         width="24"
@@ -320,14 +401,21 @@ function FooterMobile() {
                         />
                       </svg>
                     </div>
-                    <span className="ml-2 text-gray/80 font-semibold">
-                      {t("section.second.address")}
-                    </span>
+                    <div className="flex flex-col gap-2">
+                      <span className="ml-2 text-gray/80 font-semibold">
+                        Văn phòng Hà Nội: Tòa nhà Thiên Niên Kỷ, Tầng 9, Số 4
+                        Quang Trung, P. Yết Kiêu, Q. Hà Đông, Hà Nội.
+                      </span>
+                      <span className="ml-2 text-gray/80 font-semibold">
+                        Văn phòng Hồ Chí Minh: Tầng 6, Tòa nhà DHG, Số 31-33,
+                        Đường 18, Phường 8, Quận Gò Vấp, TP. Hồ Chí Minh
+                      </span>
+                    </div>
                   </li>
                 </ul>
               </div>
               <div className="col-span-4">
-                <h4 className="text-2xl text-gray font-bold">
+                <h4 className="text-2xl text-gray font-semibold">
                   {t("section.third.title")}
                 </h4>
                 <p
@@ -340,7 +428,7 @@ function FooterMobile() {
             </div>
             <div className="mt-6 flex items-center justify-center">
               <span className="text-gray/60 font-semibold">
-                Copyright @ 2022 Pambu.org
+                Copyright @ 2024 Udata.ai
               </span>
             </div>
           </div>

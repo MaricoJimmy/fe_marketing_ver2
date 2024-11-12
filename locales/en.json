@@ -82,129 +82,12 @@
     },
     "bookDemo": "<p>With the goal of accompanying customers, Udata will support customers to use the free demo. The specific demo program is as follows:</p><ul class='mt-6 ml-6 list-disc '><li>With software <span class='text-primary'>Pambu OEE</span>: Customers will be able to experience the basic version on a production machine for 2 months. </li><li>With software <span class='text-primary'>Pambu PMS</span>: Customers will experience the basic version on 1 electrical load for 2 months. </li><li>All hardware equipment Pambu provides and installs free of charge, customers provide Internet infrastructure. </li></ul><p class='mt-6'>The steps to plan the demo are as follows:</p><ul class='mt-6 ml-6 list-disc'><li>Site survey of equipment to be demoed at customer's site.</li><li>Up configuration and installation time.</li><li>Agree on terms of installation and maintenance of demo assets.</li><li>Install demo and listen to customer feedback.</li></ul><p class='mt-6'>Do not hesitate any longer without immediately contacting the Pambu team at the hotline <a href='tel:0387430957' class='font-bold'>0387 430 957</a> or fill out the form below to use the product. Pambu is pleased to accompany you!</p>"
   },
-  "PMS": {
-    "heroSection": {
-      "heading": "Energy Monitoring With Pambu PMS",
-      "excerpt": "Waste of resources is the bleeding wound of the enterprise. Pambu PMS is a comprehensive, simple and effective solution to help businesses plan optimal energy use. Monitor and detect waste loss points early. Provide the big picture of energy usage and more.",
-      "color": "orange",
-      "img": "/image/pms/mockup-pms.png"
-    },
-    "features": [
-      {
-        "img": "/image/pms/feature/feature-1.png",
-        "title": "Real-time consumption statistics",
-        "desc": "Hour by hour, day by day, week by week, month by month precisely, non-stop, without delay."
-      },
-      {
-        "img": "/image/pms/feature/feature-2.png",
-        "title": "Memorize, track consumption data, alerts",
-        "desc": "Easily trace the problem to provide timely solutions."
-      },
-      {
-        "img": "/image/pms/feature/feature-3.png",
-        "title": "Consumption warning, load proportion statistics",
-        "desc": "Help customers realize the sudden increase in consumption."
-      },
-      {
-        "img": "/image/pms/feature/feature-4.png",
-        "title": "Give preliminary assessment by week, month",
-        "desc": "There is an overview of the energy system during the use of the software."
-      },
-      {
-        "img": "/image/pms/feature/feature-5.png",
-        "title": "Runs on multiple devices and anytime, anywhere",
-        "desc": "Helping the ability to manage and operate the plant more efficiently."
-      },
-      {
-        "img": "/image/pms/feature/feature-6.png",
-        "title": "Energy diagram visualization",
-        "desc": "Easy to diagnose, find fault, have a comprehensive view of the existing energy level."
-      }
-    ],
-    "status": [
-      {
-        "icon": "<svg width='61' height='47' viewBox='0 0 61 47' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M54.4877 41.6135C54.311 41.6135 54.1382 41.6657 53.9913 41.7636C53.8443 41.8615 53.7298 42.0007 53.6622 42.1635C53.5945 42.3263 53.5768 42.5054 53.6113 42.6782C53.6458 42.8511 53.7309 43.0098 53.8559 43.1344C53.9808 43.259 54.14 43.3439 54.3134 43.3783C54.4867 43.4127 54.6664 43.395 54.8296 43.3276C54.9929 43.2601 55.1325 43.1459 55.2307 42.9994C55.3288 42.8529 55.3813 42.6806 55.3813 42.5044C55.3813 42.3874 55.3581 42.2716 55.3132 42.1635C55.2683 42.0554 55.2025 41.9571 55.1195 41.8744C55.0366 41.7917 54.9381 41.726 54.8297 41.6813C54.7212 41.6365 54.605 41.6135 54.4877 41.6135ZM58.3193 25.6862H57.544V18.9117C57.5431 18.0456 57.1976 17.2152 56.5834 16.6028C55.9691 15.9903 55.1363 15.6458 54.2677 15.6449H47.2283V6.09013C47.2273 5.224 46.8819 4.39361 46.2676 3.78116C45.6534 3.16871 44.8206 2.82421 43.952 2.82324H3.27637C2.40772 2.82421 1.57493 3.16871 0.960698 3.78116C0.346471 4.39361 0.000971256 5.224 0 6.09013L0 34.9752C0.000971256 35.8413 0.346471 36.6717 0.960698 37.2842C1.57493 37.8966 2.40772 38.2411 3.27637 38.2421H14.8525C15.0285 39.3427 14.8289 40.4703 14.2856 41.4443L12.7258 44.2227C12.5687 44.5025 12.4877 44.8184 12.4909 45.139C12.4941 45.4597 12.5813 45.7739 12.744 46.0506C12.9066 46.3272 13.139 46.5566 13.418 46.716C13.697 46.8754 14.013 46.9593 14.3346 46.9593H22.171C22.2109 46.959 22.2507 46.9561 22.2902 46.9505C22.3658 46.9557 22.4418 46.9593 22.5187 46.9593H58.3193C59.03 46.9585 59.7114 46.6766 60.214 46.1755C60.7165 45.6744 60.9992 44.995 61 44.2864V28.3592C60.9992 27.6505 60.7165 26.9711 60.214 26.47C59.7114 25.9689 59.03 25.6871 58.3193 25.6862ZM54.2677 17.4268C54.6625 17.4272 55.0411 17.5838 55.3203 17.8622C55.5994 18.1406 55.7565 18.518 55.7569 18.9117V25.6862H53.6948V20.374C53.6948 20.2569 53.6717 20.1411 53.6268 20.033C53.5819 19.9249 53.5161 19.8267 53.4331 19.7439C53.3501 19.6612 53.2516 19.5956 53.1432 19.5508C53.0348 19.506 52.9186 19.483 52.8012 19.483H26.0742C25.9569 19.483 25.8407 19.506 25.7323 19.5508C25.6239 19.5956 25.5254 19.6612 25.4424 19.7439C25.3594 19.8267 25.2936 19.9249 25.2487 20.033C25.2038 20.1411 25.1807 20.2569 25.1807 20.374V37.7864C25.1807 37.9034 25.2038 38.0192 25.2487 38.1273C25.2936 38.2354 25.3594 38.3337 25.4424 38.4164C25.5254 38.4991 25.6239 38.5648 25.7323 38.6095C25.8407 38.6543 25.9569 38.6774 26.0742 38.6773H47.9753V40.7335H23.1185V18.9117C23.119 18.518 23.276 18.1406 23.5552 17.8622C23.8344 17.5838 24.2129 17.4272 24.6078 17.4268L54.2677 17.4268ZM1.78711 6.09013C1.78755 5.69643 1.9446 5.31899 2.22379 5.0406C2.50299 4.76222 2.88153 4.60562 3.27637 4.60518H43.952C44.3468 4.60562 44.7253 4.76222 45.0045 5.0406C45.2837 5.31899 45.4408 5.69643 45.4412 6.09013V15.6449H24.6078C23.7391 15.6458 22.9063 15.9903 22.2921 16.6028C21.6779 17.2152 21.3324 18.0456 21.3314 18.9117V29.8275H1.78711V6.09013ZM3.27637 36.4601C2.88153 36.4597 2.50299 36.3031 2.22379 36.0247C1.9446 35.7463 1.78755 35.3689 1.78711 34.9752V31.6095H21.3314V36.4601H15.5775C15.5745 36.4601 15.5715 36.4601 15.5684 36.4601H3.27637ZM19.2423 41.9716V43.6924C19.242 44.2089 19.3652 44.718 19.6018 45.1774H14.3346C14.3247 45.1774 14.315 45.1748 14.3064 45.1699C14.2978 45.165 14.2907 45.1579 14.2857 45.1494C14.2807 45.1409 14.278 45.1312 14.2779 45.1213C14.2778 45.1115 14.2803 45.1017 14.2852 45.0931L15.845 42.3147C16.5363 41.0753 16.8197 39.6507 16.6551 38.2421H21.3314V40.7335H20.4841C20.1549 40.7339 19.8393 40.8644 19.6065 41.0965C19.3737 41.3286 19.2427 41.6434 19.2423 41.9716ZM22.5187 45.1774C22.1238 45.1769 21.7453 45.0203 21.4661 44.7419C21.1869 44.4636 21.0299 44.0861 21.0294 43.6924V42.5155H47.9753V44.2864C47.9752 44.59 48.0272 44.8913 48.129 45.1774H22.5187ZM47.9753 28.3592V36.8954H26.9678V21.2649H51.9077V25.6862H50.656C49.9453 25.6871 49.2639 25.9689 48.7614 26.47C48.2588 26.9711 47.9761 27.6505 47.9753 28.3592ZM59.2129 44.2864C59.2126 44.5226 59.1184 44.7491 58.9509 44.9161C58.7834 45.0832 58.5562 45.1771 58.3193 45.1774H50.656C50.4191 45.1771 50.192 45.0832 50.0244 44.9161C49.8569 44.7491 49.7627 44.5226 49.7624 44.2864V28.3592C49.7627 28.1229 49.8569 27.8965 50.0244 27.7294C50.192 27.5624 50.4191 27.4684 50.656 27.4682H52.7088C52.7703 27.4745 52.8322 27.4745 52.8936 27.4682H56.5581C56.6195 27.4745 56.6815 27.4745 56.7429 27.4682H58.3193C58.5562 27.4684 58.7834 27.5624 58.9509 27.7294C59.1184 27.8965 59.2126 28.1229 59.2129 28.3592V44.2864Z' fill='#272A33' /></svg>",
-        "title": "300+",
-        "desc": "Simultaneously connected devices"
-      },
-      {
-        "icon": "<svg width='57' height='44' viewBox='0 0 57 44' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M53.8772 35.5304H52.2936V4.22145C52.2936 1.91057 50.4133 0.0302734 48.1024 0.0302734H8.89816C6.58728 0.0302734 4.70698 1.91057 4.70698 4.22145V35.5304H3.12342C2.26211 35.5304 1.58571 36.285 1.68639 37.1447C2.07563 40.4653 4.89403 42.9698 8.24247 42.9698H48.7581C52.1053 42.9698 54.9237 40.4657 55.3138 37.1447C55.3617 36.7358 55.2319 36.3241 54.9573 36.0159C54.6831 35.7077 54.2893 35.5304 53.8772 35.5304ZM6.38345 4.22145C6.38345 2.83476 7.51147 1.70674 8.89816 1.70674H48.1024C49.4891 1.70674 50.6171 2.83476 50.6171 4.22145V35.5296H6.38345V4.22145ZM48.7581 41.2933H8.24247C5.83172 41.2933 3.78893 39.5542 3.38864 37.2069H53.6115C53.2104 39.5542 51.1681 41.2933 48.7581 41.2933Z' fill='black' /><path d='M47.2843 3.98767H9.71429C9.25138 3.98767 8.87605 4.36299 8.87605 4.82591V32.4119C8.87605 32.8753 9.25138 33.2502 9.71429 33.2502H47.2843C47.7472 33.2502 48.1225 32.8753 48.1225 32.4119V4.82591C48.1225 4.36299 47.7472 3.98767 47.2843 3.98767ZM46.446 31.5737H10.5525V5.66414H46.446V31.5737ZM25.8806 40.0883H31.1196C31.5825 40.0883 31.9578 39.7129 31.9578 39.25C31.9578 38.7871 31.5825 38.4118 31.1196 38.4118H25.8806C25.4177 38.4118 25.0424 38.7871 25.0424 39.25C25.0424 39.7129 25.4177 40.0883 25.8806 40.0883Z' fill='black' /><path d='M22.0711 25.1474C21.8808 25.3005 21.6237 25.4888 21.3065 25.7081C20.9255 25.9734 20.6111 26.2091 20.3725 26.4072C20.1241 26.6135 19.9092 26.8566 19.734 27.1292C19.5478 27.419 19.4532 27.7399 19.4532 28.0837C19.4532 28.2777 19.5151 28.4406 19.637 28.5675C19.7598 28.6968 19.9227 28.7648 20.1085 28.7648H23.2003C23.3596 28.7648 23.5016 28.7042 23.6105 28.5904C23.7201 28.4782 23.7758 28.3366 23.7758 28.1705C23.7758 28.0059 23.7214 27.8643 23.615 27.7505C23.5057 27.6302 23.3624 27.5672 23.2003 27.5672H20.8555C20.8882 27.5336 20.9234 27.5009 20.9615 27.4681C21.1469 27.3068 21.4248 27.0924 21.7883 26.8296C22.2033 26.5382 22.5455 26.2787 22.8058 26.056C23.0788 25.8236 23.3166 25.5485 23.5122 25.2391C23.7193 24.9117 23.8245 24.5515 23.8245 24.17C23.8245 23.7812 23.7308 23.4316 23.5458 23.1329C23.36 22.8316 23.1062 22.595 22.791 22.4297C22.4771 22.2668 22.1272 22.1841 21.751 22.1841C21.0745 22.1841 20.4376 22.3421 19.8548 22.6564C19.6677 22.767 19.565 22.9511 19.565 23.1762C19.565 23.3334 19.6153 23.4677 19.7144 23.5749C19.8785 23.7534 20.1368 23.7935 20.3529 23.678C20.7511 23.4873 21.1784 23.3899 21.6225 23.3899C22.0015 23.3899 22.2721 23.4652 22.4264 23.6142C22.5815 23.764 22.6568 23.9654 22.6568 24.2298C22.6568 24.3878 22.606 24.5408 22.5066 24.6857C22.3924 24.8494 22.2459 25.005 22.0711 25.1474ZM28.6399 26.0814H28.2629V22.9601C28.2629 22.7604 28.1999 22.5877 28.0746 22.4452C27.9437 22.3012 27.7726 22.2275 27.5667 22.2275H27.4067C27.2896 22.2275 27.1766 22.2553 27.0714 22.3094C26.9671 22.3634 26.8787 22.4412 26.8185 22.5304L24.3046 25.993C24.2109 26.1191 24.1634 26.2705 24.1634 26.4416V26.5202C24.1634 26.7199 24.2309 26.891 24.3631 27.0293C24.4978 27.1718 24.6644 27.2438 24.8588 27.2438H27.0706V28.1877C27.0706 28.3587 27.1267 28.5053 27.2372 28.6215C27.3502 28.7435 27.4975 28.8073 27.6629 28.8073C27.827 28.8073 27.9748 28.7443 28.089 28.6248C28.2044 28.5061 28.2629 28.3587 28.2629 28.1877V27.2438H28.6399C28.7925 27.2438 28.9301 27.1849 29.0377 27.0735C29.1433 26.9655 29.1994 26.8247 29.1994 26.6667C29.1994 26.5112 29.1449 26.3704 29.0418 26.2591C28.9337 26.1428 28.795 26.0814 28.6399 26.0814ZM27.0706 26.0814H25.6225L27.0706 24.0669V26.0814ZM31.7153 21.8256C31.6302 21.8992 31.5692 21.9926 31.5348 22.1031L29.4114 28.8032C29.3881 28.8794 29.3774 28.9416 29.3774 28.9997C29.3774 29.156 29.4278 29.2919 29.5272 29.4041C29.632 29.5228 29.7736 29.585 29.9369 29.585C30.0732 29.585 30.1919 29.5432 30.2914 29.4589C30.3749 29.3844 30.435 29.2911 30.4698 29.1822L32.5932 22.4829C32.6166 22.4068 32.6272 22.3446 32.6272 22.2864C32.6272 22.1301 32.5769 21.9942 32.4774 21.8821C32.2859 21.6668 31.9298 21.6398 31.7153 21.8256ZM33.1802 22.4608C33.075 22.5795 33.0218 22.7203 33.0218 22.8816C33.0218 23.0453 33.0766 23.1869 33.1851 23.3048C33.298 23.4243 33.4368 23.4849 33.5972 23.4849H36.1422L34.0921 27.884C34.0466 27.983 34.0237 28.0853 34.0237 28.1877C34.0237 28.3563 34.079 28.502 34.1891 28.6215C34.302 28.7435 34.449 28.8073 34.6147 28.8073C34.8299 28.8073 35.0521 28.6852 35.171 28.4561L37.4475 23.43C37.5126 23.2745 37.5453 23.1165 37.5453 22.9601C37.5453 22.7653 37.4802 22.6 37.3513 22.469L37.3505 22.4673C37.2195 22.3364 37.0566 22.2701 36.8663 22.2701H33.5972C33.4343 22.2701 33.2944 22.3339 33.1802 22.4608ZM28.4993 20.5343C32.2816 20.5343 35.3586 17.4568 35.3586 13.6745C35.3586 9.89218 32.2816 6.8147 28.4993 6.8147C24.717 6.8147 21.6395 9.89218 21.6395 13.6745C21.6395 17.4568 24.717 20.5343 28.4993 20.5343ZM28.4993 8.49117C31.357 8.49117 33.6822 10.8168 33.6822 13.6745C33.6822 16.5322 31.357 18.8578 28.4993 18.8578C25.6412 18.8578 23.316 16.5322 23.316 13.6745C23.316 10.8168 25.6412 8.49117 28.4993 8.49117Z' fill='black' /><path d='M25.1541 15.5364C25.3072 15.8118 25.5929 15.9674 25.8872 15.9674C26.0251 15.9674 26.1651 15.933 26.294 15.8609L27.661 15.1005V16.5256C27.661 16.989 28.0364 17.3639 28.4993 17.3639C28.9622 17.3639 29.3375 16.989 29.3375 16.5256V15.1005L30.7041 15.8609C30.8331 15.933 30.973 15.9674 31.111 15.9674C31.4053 15.9674 31.6909 15.8118 31.844 15.5364C32.0695 15.1316 31.9238 14.6216 31.5195 14.3965L30.2226 13.6745L31.5195 12.9525C31.9238 12.7274 32.0695 12.2174 31.844 11.8126C31.6193 11.4078 31.1085 11.2629 30.7041 11.488L29.3375 12.2485V10.8233C29.3375 10.36 28.9622 9.98511 28.4993 9.98511C28.0364 9.98511 27.661 10.36 27.661 10.8233V12.2485L26.294 11.488C25.8904 11.2629 25.3792 11.4078 25.1541 11.8126C24.9286 12.2174 25.0743 12.7274 25.4787 12.9525L26.7755 13.6745L25.4787 14.3965C25.0743 14.6216 24.9286 15.1316 25.1541 15.5364Z' fill='black' /></svg>",
-        "title": "Realtime",
-        "desc": "Updating data"
-      },
-      {
-        "icon": "<svg width='52' height='52' viewBox='0 0 52 52' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M26.7668 49.5321C28.4832 48.4403 30.2047 47.3536 31.9211 46.2618C32.698 45.7692 33.4852 45.2817 34.2418 44.7536C36.0039 43.5247 37.6543 42.1231 39.1168 40.5489C42.0215 37.4309 44.2355 33.729 45.6371 29.7071C46.7898 26.3911 47.2773 22.9075 47.2773 19.4036C47.2773 17.2098 47.2773 15.0161 47.2773 12.8223C47.2773 12.7614 47.2773 12.7055 47.2773 12.6446C47.2773 11.9641 46.8 11.37 46.1602 11.177C45.5406 10.9891 44.9262 10.7961 44.332 10.5473C44.4539 10.5981 44.5758 10.6489 44.6977 10.6997C44.0883 10.4407 43.4941 10.1411 42.9305 9.79576C42.6512 9.6231 42.377 9.44537 42.1078 9.2524C42.0367 9.20162 41.9707 9.15084 41.8996 9.10005C41.8691 9.07974 41.8438 9.05435 41.8133 9.03404C41.6863 8.93755 41.9961 9.1813 41.9758 9.16099C41.8539 9.04419 41.7066 8.94771 41.5797 8.84107C41.077 8.41959 40.6098 7.95748 40.173 7.46998C40.0664 7.35318 39.9648 7.2313 39.8633 7.10943C39.8074 7.04341 39.7566 6.9774 39.7008 6.91138C39.5535 6.72857 39.9242 7.21099 39.7363 6.95709C39.5383 6.69302 39.3504 6.42388 39.1727 6.14459C38.7613 5.50474 38.4059 4.82935 38.1113 4.12857C38.1621 4.25044 38.2129 4.37232 38.2637 4.49419C38.1113 4.12857 37.9691 3.75279 37.8473 3.37701C37.6391 2.73716 37.0703 2.25982 36.3797 2.25982C35.6891 2.25982 34.9984 2.25982 34.3078 2.25982C32.6523 2.25982 30.9918 2.25982 29.3363 2.25982C27.3406 2.25982 25.3449 2.25982 23.3492 2.25982C21.6176 2.25982 19.8859 2.25982 18.1543 2.25982C17.3164 2.25982 16.4734 2.23443 15.6355 2.25982C15.6254 2.25982 15.6102 2.25982 15.6 2.25982C14.9094 2.25982 14.3355 2.73716 14.1324 3.37701C14.0105 3.75787 13.8734 4.12857 13.716 4.49419C13.7668 4.37232 13.8176 4.25044 13.8684 4.12857C13.6094 4.73795 13.3047 5.33209 12.9594 5.89576C12.7867 6.17505 12.6039 6.44927 12.4109 6.71841C12.3602 6.78951 12.3094 6.85552 12.2586 6.92662C12.2383 6.95709 12.2129 6.98248 12.1926 7.01295C12.0961 7.1399 12.3398 6.83013 12.3195 6.85044C12.2027 6.96724 12.1063 7.11959 11.9996 7.24654C11.5781 7.74927 11.116 8.21646 10.6234 8.6481C10.5066 8.75474 10.3848 8.8563 10.2629 8.95279C10.1969 9.00865 10.1309 9.05943 10.0648 9.11021C9.88203 9.25748 10.3645 8.88677 10.1106 9.06959C9.84649 9.26763 9.57735 9.45552 9.29805 9.63326C8.65821 10.0446 7.98282 10.395 7.28203 10.6946C7.40391 10.6438 7.52578 10.593 7.64766 10.5422C7.04844 10.7911 6.43907 10.984 5.81953 11.1719C5.17461 11.3649 4.70235 11.959 4.70235 12.6395C4.70235 14.6809 4.70235 16.7223 4.70235 18.7637C4.70235 19.8403 4.70235 20.9169 4.77852 21.9934C4.93594 24.1364 5.30157 26.2743 5.90586 28.336C7.1043 32.429 9.16602 36.2122 11.9082 39.4723C14.0563 42.0215 16.641 44.0883 19.4492 45.8708C21.323 47.059 23.1969 48.2473 25.0707 49.4356C25.1164 49.4661 25.1672 49.4965 25.2129 49.527C25.8883 49.9536 26.9242 49.6895 27.2949 48.9786C27.691 48.227 27.4676 47.3485 26.7465 46.8965C24.8574 45.6981 22.9684 44.4997 21.0793 43.3012C20.8305 43.1438 20.5816 42.9864 20.3328 42.829C19.9418 42.5801 19.5508 42.3211 19.1699 42.052C18.9414 41.8895 18.7129 41.7219 18.4844 41.5544C18.3828 41.4782 18.2813 41.3969 18.1797 41.3208C18.6012 41.6407 18.1695 41.3106 18.068 41.2294C17.1844 40.5235 16.3465 39.7668 15.5543 38.9645C14.7773 38.1723 13.9902 37.3395 13.3402 36.4407C13.3453 36.4458 13.584 36.7606 13.4418 36.5676C13.3809 36.4864 13.3199 36.4102 13.259 36.329C13.1676 36.2071 13.0813 36.0852 12.9898 35.9633C12.8121 35.7196 12.6395 35.4758 12.4719 35.227C12.1215 34.709 11.7863 34.1809 11.4715 33.6376C10.8367 32.5559 10.2781 31.4336 9.79063 30.2809C9.84141 30.4028 9.89219 30.5247 9.94297 30.6465C8.95274 28.2954 8.27735 25.8274 7.93711 23.2985C7.95743 23.4356 7.97266 23.5676 7.99297 23.7047C7.77461 22.0594 7.73907 20.4141 7.73907 18.7637C7.73907 17.159 7.73907 15.5544 7.73907 13.9497C7.73907 13.5129 7.73907 13.0813 7.73907 12.6446C7.36836 13.1321 6.99258 13.6247 6.62188 14.1122C8.33321 13.5993 9.97852 12.9086 11.4359 11.8626C13.127 10.6489 14.5641 9.13052 15.6355 7.34302C16.2297 6.35279 16.702 5.2813 17.0523 4.18443C16.5648 4.55513 16.0723 4.93091 15.5848 5.30162C16.2754 5.30162 16.966 5.30162 17.6566 5.30162C19.3121 5.30162 20.9727 5.30162 22.6281 5.30162C24.6238 5.30162 26.6195 5.30162 28.6152 5.30162C30.3469 5.30162 32.0785 5.30162 33.8102 5.30162C34.6481 5.30162 35.491 5.32701 36.3289 5.30162C36.3391 5.30162 36.3543 5.30162 36.3645 5.30162C35.877 4.93091 35.3844 4.55513 34.8969 4.18443C36.1563 8.04888 38.9746 11.3751 42.6563 13.1067C43.5297 13.518 44.4336 13.8379 45.3578 14.1122C44.9871 13.6247 44.6113 13.1321 44.2406 12.6446C44.2406 13.7821 44.2406 14.9196 44.2406 16.0571C44.2406 17.3215 44.2406 18.586 44.2406 19.8454C44.2406 21.1352 44.1543 22.4251 43.9867 23.7047C44.007 23.5676 44.0223 23.4356 44.0426 23.2985C43.6973 25.8223 43.0219 28.2954 42.0367 30.6465C42.0875 30.5247 42.1383 30.4028 42.1891 30.2809C41.3207 32.3325 40.2188 34.2825 38.8984 36.0852C38.8223 36.1868 38.7512 36.2883 38.675 36.3848C38.6039 36.4813 38.3094 36.8419 38.6395 36.4356C38.4516 36.6692 38.2637 36.9079 38.0758 37.1415C37.7203 37.568 37.3547 37.9844 36.9789 38.3907C36.2223 39.2032 35.4148 39.9751 34.5668 40.6961C34.3535 40.879 34.1352 41.0567 33.9168 41.2294C33.8152 41.3106 33.7137 41.3868 33.6172 41.468C34.0336 41.1329 33.5969 41.4833 33.5004 41.5544C33.0484 41.8946 32.5863 42.2196 32.1141 42.5294C31.8094 42.7274 31.5047 42.9254 31.1949 43.1184C30.0879 43.8192 28.9809 44.52 27.8738 45.2258C26.9953 45.7844 26.1168 46.3379 25.2383 46.8965C24.568 47.3231 24.2328 48.2727 24.6898 48.9786C25.1164 49.659 26.0508 49.9891 26.7668 49.5321Z' fill='black' /><path d='M16.0113 25.5328C17.748 27.2695 19.4848 29.0062 21.2266 30.748C21.4754 30.9968 21.7242 31.2457 21.968 31.4894C22.552 32.0734 23.5371 32.0734 24.1211 31.4894C25.4617 30.1488 26.8074 28.8031 28.148 27.4625C30.2707 25.3398 32.3984 23.2121 34.5211 21.0894C35.0086 20.6019 35.5012 20.1093 35.9887 19.6218C36.5523 19.0582 36.593 18.0222 35.9887 17.4687C35.3793 16.9101 34.4348 16.8644 33.8355 17.4687C32.4949 18.8093 31.1492 20.1551 29.8086 21.4957C27.6859 23.6183 25.5582 25.7461 23.4355 27.8687C22.948 28.3562 22.4555 28.8488 21.968 29.3363C22.684 29.3363 23.4051 29.3363 24.1211 29.3363C22.3844 27.5996 20.6477 25.8629 18.9059 24.1211C18.657 23.8722 18.4082 23.6234 18.1645 23.3797C17.6008 22.816 16.5648 22.7754 16.0113 23.3797C15.4527 23.984 15.407 24.9285 16.0113 25.5328Z' fill='black' /></svg>",
-        "title": "99,99%",
-        "desc": "Reliability"
-      }
-    ],
-    "versionApp": {
-      "data": [
-        {
-          "title": "Instantly display, track, and update important loads that need to be monitored",
-          "isBasic": true,
-          "isPro": true
-        },
-        {
-          "title": "Monitoring and statistics of consumption over time",
-          "isBasic": true,
-          "isPro": true
-        },
-        {
-          "title": "Storing, warning, tracing error history",
-          "isBasic": true,
-          "isPro": true
-        },
-        {
-          "title": "Provide a visual representation of the equipment floor plan",
-          "isBasic": true,
-          "isPro": true
-        },
-        {
-          "title": "Monitoring and statistics of consumption over time",
-          "isBasic": false,
-          "isPro": true
-        },
-        {
-          "title": "Statistics on the proportion of loads using energy",
-          "isBasic": false,
-          "isPro": true
-        }
-      ],
-      "img": "/image/pms/version-app.png"
-    },
-    "questions": {
-      "data": [
-        {
-          "ask": "What is PMS?",
-          "answer": "<span>PMS is an acronym for Power Monitoring Software ...</span><a href='/pambu-pms' class='ml-2 text-blue-primary underline link'>See details here</a>"
-        },
-        {
-          "ask": "What does the installation cost of Pambu PMS include?",
-          "answer": "<span>Including hardware and software installation:</span><p>- Hardware products are selected from large corporations such as Mitsubishi, Siemens, Schneider, etc. </p><p> - The software is researched, developed and thoroughly tested. Besides, after using Pambu products, each new version will automatically update for free for users.</p><span>For more information please schedule a demo<a href='/dat-lich-demo' class='ml-1 text-blue-primary underline'>here </a>Or call directly to get advice from a team of experts via hotline: <a href='tel:0387430957' class='text-secondary underline'>0387 430 957</a></span>"
-        },
-        {
-          "ask": "Where does Pambu's distribution network include?",
-          "answer": "<span>Distribution network throughout the country with two offices located in Hanoi and Ho Chi Minh for the purpose that customers are best supported by Pambu's expert team.</span>"
-        },
-        {
-          "ask": "How long will the data be stored?",
-          "answer": "<span>Approximately 10 years.</span>"
-        },
-        {
-          "ask": "Does Pambu PMS have to be installed? On which platform does it run? Does it take up memory?",
-          "answer": "<span>Pambu PMS runs on a web browser, so it can be run on multiple devices with a web browser: laptop, tablet, smartphone, etc. Pambu PMS does not need to be installed so it takes very little memory (almost negligible).</span>"
-        }
-      ],
-      "img": "/image/pms/question.png"
-    },
-    "demo": "With the goal of accompanying customers to solve energy management problems, Pambu will support customers to use a <span class='font-bold'>FREE</span> demo."
-  },
   "OEE": {
     "heroSection": {
       "heading": "Pambu OEE - Machine maintenance and performance management solutions",
       "excerpt": "Pambu OEE is a comprehensive solution to help businesses effectively manage machines and production lines. Support to analyze production data based on the collected data of Pambu OEE to provide reports and warnings to help customers make timely decisions.",
       "color": "blue",
+      "contact": "Contact",
       "img": "/image/oee/mockup-oee.png"
     },
     "features": [
@@ -318,8 +201,47 @@
     },
     "demo": "With the goal of accompanying customers to modernize industrial production, Pambu will support customers to use a <span class='font-bold'>FREE</span> demo."
   },
-  "BookDemo": {
-    "desc": "<p>With the goal of accompanying customers, Pambu will support customers to use the free demo. The specific demo program is as follows:</p><ul class='mt-6 ml-6 list-disc'> <li> With software <span class='text-primary'>Pambu OEE</span>: Customers will be able to experience the basic version on a production machine for 2 months. </li> <li>With software <span class='text-primary'>Pambu PMS</span>: Customers will experience the basic version on 1 electrical load for 2 months. </li><li>All hardware equipment Pambu provides and installs free of charge, customers provide Internet infrastructure. </li></ul><p class='mt-6'>The steps to plan the demo are as follows:</p><ul class='mt-6 ml-6 list-disc'><li>Site survey of equipment to be demoed at customer's site.</li><li>Up configuration and installation time.</li><li>Agree on terms of installation and maintenance of demo assets.</li><li>Install demo and listen to customer feedback.</li></ul><p class='mt-6'>Do not hesitate any longer without immediately contacting the Pambu team at the hotline <a href='tel:0387430957' class='font-bold'>0387 430 957</a> or fill out the form below to use the product. Pambu is pleased to accompany you!</p>"
+  "Contact": {
+    "title": "Contact us",
+    "subTitle": "Contact us if you need a demo",
+    "titleSection": {
+      "first": "Contact information",
+      "second": "Request demo"
+    },
+    "form": {
+      "name": {
+        "label": "Full name",
+        "phd": "Enter full name"
+      },
+      "company": {
+        "label": "Company name",
+        "phd": "Enter company name"
+      },
+      "email": {
+        "label": "Email",
+        "phd": "Enter email"
+      },
+      "target": {
+        "label": "Contact purpose",
+        "for-self": "Use the software for yourself",
+        "for-customer": "Use the software for customers"
+      },
+      "message": {
+        "label": "Message",
+        "phd": "Enter messsage"
+      },
+      "button": "Send",
+      "error": {
+        "name": "Full name cannot be blank!",
+        "company": "Company name cannot be empty!",
+        "phone": "Phone number cannot be empty!",
+        "email": "Email cannot be empty!"
+      }
+    },
+    "noti": {
+      "success": "Schedule successful!",
+      "error": "An error occurred!"
+    }
   },
   "Common": {
     "news": "Featured news",
@@ -334,15 +256,27 @@
     "titleNews": "Discover the latest news of Pambu"
   },
   "Header": {
-    "news": "News",
-    "products": "Products",
-    "instruction": {
-      "main": "Instruction Manual",
-      "sub": {
-        "first": "Pambu OEE documents",
-        "second": "Pambu PMS documents"
+    "news": {
+      "title": "News",
+      "subMenus": {
+        "case-study": "Practical examples of solution effectiveness",
+        "blog": "News and sharing about energy management"
       }
     },
+    "products": {
+      "title": "Products",
+      "subMenus": {
+        "pms": "Optimize energy, save costs"
+      }
+    },
+    "solutions": {
+      "title": "Solution",
+      "subMenus": {
+        "solar": "Rooftop solar power monitoring solution"
+      }
+    },
+    "contact": "Contact",
+    "about-us": "About the company",
     "bookDemo": "Book a demo"
   },
   "Footer": {
@@ -352,7 +286,9 @@
         "links": {
           "news": "News",
           "oee": "Pambu OEE documents",
-          "pms": "Pambu PMS documents"
+          "pms": "Pambu PMS documents",
+          "contact": "Contact",
+          "about-us": "About the company"
         }
       },
       "second": {
@@ -363,6 +299,794 @@
         "title": "Work time",
         "time": "Monday - Friday: 8:00 - 17:30 <br /> Saturday: 8:00 - 12:00"
       }
+    }
+  },
+  "AboutUs": {
+    "title": "About us",
+    "content": "<p>Developed since 2022. In 2024, Udata is invested by DHG.</p> <p>Udata aims to become a software platform <span class='font-semibold'> leading Vietnam and Southeast Asia </span> in the field of energy management, IoT data analysis on cloud data platform (SaaS), we provide <span class='font-semibold'> comprehensive solution </span> for businesses and organizations to help analyze and optimize energy consumption, IoT operating parameters from machines, environment, equipment, ... from That reduces costs, increases productivity, and contributes to achieving sustainable development goals.</p> <p>Udata brings together enthusiasm and creative intelligence in the fields of technology and management, together Hands on creating a green future. From the management team, partners, investors, to businesses using Udata, we all share a common vision: As a companion to businesses, optimize performance, reduce costs and create a more sustainable energy system. </p><p>Let's optimize your productivity with Udata today!</p>",
+    "excerpt": "Let's optimize your productivity with Udata today!"
+  },
+  "Solar": {
+    "heroSection": {
+      "title": "Taking Control of Your Energy Efficiency",
+      "subTitle": "Rooftop solar power operation management solution",
+      "desc": "With a rooftop solar power monitoring and management system, you can have comprehensive control over your system anytime, anywhere. Our platform provides real-time monitoring features real-time alerts when errors are detected, and performance analysis tools to optimize energy flow and increase operational efficiency This solution helps you not only monitor but also proactively manage , maintain and optimize your energy system, ensuring that you always get the most from your renewable energy investments.",
+      "contact": "Contact"
+    },
+    "allFeatures": {
+      "title": "Main features",
+      "lists": [
+        {
+          "id": "1",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-timer'><line x1='10' x2='14' y1='2' y2 ='2'/><line x1='12' x2='15' y1='14' y2='11'/><circle cx='12' cy='14' r='8'/>< /svg>",
+          "title": "Real-time monitoring",
+          "content": "Monitor your solar power system's performance with real-time data. Our platform allows you to monitor energy output and output through an intuitive dashboard interface."
+        },
+        {
+          "id": "2",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-bell'><path d='M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3 -2 3-9'/><path d='M10.3 21a1.94 1.94 0 0 0 3.4 0'/></svg>",
+          "title": "Smart Alerts and Automatic Notifications",
+          "content": "Receive automatic alerts about system errors or low performance. Customize thresholds to receive email or SMS notifications, helping you stay proactive."
+        },
+        {
+          "id": "3",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'stroke-linecap='round'stroke-linejoin='round'class='lucide lucide-bug'><path d='m8 2 1.88 1.88' /><path d='M14.12 3.88 16 2' /><path d='M9 7.13v-1a3.003 3.003 0 1 1 6 0v1' /><path d='M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6' /><path d='M12 20v-9' /><path d='M6.53 9C4.6 8.8 3 7.1 3 5' /><path d='M6 13H2' /><path d='M3 21c0-2.1 1.7-3.9 3.8-4' /><path d='M20.97 5c0 2.1-1.6 3.8-3.5 4' /><path d='M22 13h-4' /><path d='M17.2 17c2.1.1 3.8 1.9 3.8 4' /></svg>",
+          "title": "Report an anomaly",
+          "content": "Synthesis of abnormalities in the system. Present the risk of loss of output and revenue with daily, weekly, and monthly reports."
+        },
+        {
+          "id": "4",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><rect width='7' height='7' x='14' y ='3' rx='1'/><path d='M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3'/></svg>",
+          "title": "Seamless integration with other systems",
+          "content": "Integrate your rooftop solar PV system with existing energy management systems to optimize energy flow and improve system efficiency."
+        }
+      ]
+    },
+    "singleFeature": {
+      "first": {
+        "title": "Real-Time Performance Monitoring",
+        "subTitle": "A section focusing on how real-time data and performance analytics provide transparency into system performance.",
+        "desc": "Our platform provides detailed information about your solar energy output, allowing you to track key metrics such as output, inverter performance. Use performance data historical performance to identify inefficiencies and make data-driven decisions to optimize energy use.",
+        "img": "/image/solutions/solar/solar-feature-1.png"
+      },
+      "second": {
+        "title": "Automatic Alerts and Proactive Maintenance",
+        "subTitle": "Explains how the system sends notifications when performance thresholds are crossed, helping to take quick action on system errors.",
+        "desc": "Avoid downtime with our smart alert system. Receive real-time notifications of any issues affecting your solar power system output, ensuring your system operating at peak performance.",
+        "img": "/image/solutions/solar/solar-feature-2.png"
+      },
+      "third": {
+        "title": "Report an anomaly",
+        "subTitle": "Focuses on the ability to synthesize information from anomalies that give warnings about revenue loss.",
+        "desc": "We provide you with abnormal reports by day, week, and month. With specific and intuitive numbers, you can immediately grasp the problem occurring in the system, helping you make a decision immediately.",
+        "img": "/image/solutions/solar/solar-feature-3.png"
+      },
+      "four": {
+        "title": "Seamless Integration with Your Energy System",
+        "subTitle": "Focuses on integration with existing energy management systems.",
+        "desc": "Our rooftop solar solutions integrate seamlessly with your existing energy infrastructure. Manage solar, grid and storage all from one platform , optimize energy flow and reduce costs.",
+        "img": "/image/solutions/solar/solar-feature-4.png"
+      }
+    },
+    "callToAction": {
+      "title": "Get Started with Rooftop Solar Power Monitoring Solution?",
+      "content": "Ready to optimize your solar power system? Contact us to learn more about how our solutions can help you improve efficiency, increase revenue and more more like that.",
+      "button": "Contact"
+    }
+  },
+  "Fisheries": {
+    "heroSection": {
+      "title": "Environmental control and increased productivity",
+      "subTitle": "Optimal solution for the seafood industry",
+      "desc": "Udata is a smart monitoring solution for the seafood industry, helping to control the farming environment effectively and optimize productivity. This system continuously monitors important water quality parameters, Early warning of pollution risks and monitoring of animal growth. Experience it now.",
+      "contact": "Contact"
+    },
+    "allFeatures": {
+      "title": "Main features",
+      "lists": [
+        {
+          "id": "1",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-droplet'><path d='M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z ' /></svg>",
+          "title": "Water quality monitoring",
+          "content": "Udata provides a comprehensive water quality monitoring system, helping you monitor important parameters such as pH, salinity, temperature, dissolved oxygen content, etc."
+        },
+        {
+          "id": "2",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-worm'><path d='m19 12-1.5 3'/><path d='M19.63 18.81 22 20'/><path d='M6.47 8.23a1.68 1.68 0 0 1 2.44 1.93l-.64 2.08a6.76 6.76 0 0 0 10.16 7.67l.42-.27a1 1 0 1 0-2.73-4.21l-.42.27a1.76 1.76 0 0 1-2.63-1.99l.64-2.08A6.66 6.66 0 0 0 3.94 3.9l-.7.4a1 1 0 1 0 2.55 4.34z'/></svg>",
+          "title": "Monitoring the growth level of breeding animals",
+          "content": "Udata collects growth data of breeds, including weight, size, etc. The system helps you closely monitor the development process of breeds, identify abnormal trends early to take action. timely intervention."
+        },
+        {
+          "id": "3",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><rect width='7' height='7' x='14' y='3' rx='1'/><path d='M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3'/></svg>",
+          "title": "Smart Alerts and Automatic Notifications",
+          "content": "Receive automatic alerts about system errors or potential contamination. Customize thresholds to receive email or SMS notifications, helping you stay proactive about unexpected problems."
+        },
+        {
+          "id": "4",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-bell'><path d='M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9'/><path d='M10.3 21a1.94 1.94 0 0 0 3.4 0'/></svg>",
+          "title": "Report an anomaly",
+          "content": "Synthesis of abnormalities in data collected in the system. Indicates abnormal growth rate of breeds with daily, weekly, and monthly reports."
+        }
+      ]
+    },
+    "singleFeature": {
+      "first": {
+        "title": "Water quality monitoring",
+        "subTitle": "The system allows to collect and centralize real-time data from many different sources",
+        "desc": "Udata is a comprehensive water quality monitoring system that helps you continuously monitor important parameters such as pH, salinity, temperature, dissolved oxygen content, etc. with an advanced sensor system Udata provides an intuitive, easy-to-use interface that allows you to monitor parameters directly on your mobile device or computer by continuously monitoring quality parameters water, Udata helps you control the farming environment effectively, limit the risk of disease and pollution, and improve production efficiency, making it a useful tool for aquaculture farms.",
+        "img": "/image/solutions/fisheries/fisheries-feature-1.png"
+      },
+      "second": {
+        "title": "Monitoring the growth level of breeding animals",
+        "subTitle": "Udata collects data on the weight and size of animals, analyzes the data and displays the results in graphs and reports, helping you easily monitor and evaluate growth rates of the breed.",
+        "desc": "Udata not only monitors water quality but also expands functions to track and monitor the growth level of breeding animals. The system collects data on weight, growth rate, and analysis data, detect unusual trends.",
+        "img": "/image/solutions/fisheries/fisheries-feature-2.png"
+      },
+      "third": {
+        "title": "Smart Alerts and Automatic Notifications",
+        "subTitle": "The system sends notifications when data exceeds the safety threshold, helping to detect and resolve problems quickly.",
+        "desc": "Receive real-time notifications about all issues affecting the farming environment and the growth rate of the breed. Customize the threshold settings according to experience, any abnormalities will be recorded and Warning via Email/SMS. Early warning will help keep pets safe from harmful environmental factors.",
+        "img": "/image/solutions/fisheries/fisheries-feature-3.png"
+      },
+      "four": {
+        "title": "Report an anomaly",
+        "subTitle": "Focuses on the ability to synthesize information from anomalies and produce a comprehensive report.",
+        "desc": "We provide you with abnormal reports by day, week, and month. With specific and intuitive numbers, you can immediately grasp the problem that is happening in your farm system. you immediately.",
+        "img": "/image/solutions/fisheries/fisheries-feature-4.png"
+      }
+    },
+    "callToAction": {
+      "title": "Start increasing your productivity?",
+      "content": "Ready to increase your production? Contact us to learn more about how our solution can help you monitor your livestock environment, track the growth rate of your animals , increase revenue and more.",
+      "button": "Contact"
+    }
+  },
+  "Investors": {
+    "heroSection": {
+      "title": "Real-time total management",
+      "subTitle": "Solutions for Investors",
+      "desc": "With Udata, you can control from overall to detailed the activities of projects at many different locations. Giving you a panoramic view of financial and efficiency indicators. techniques, quickly detect hot spots that need to be resolved,... Let Udata help you optimize your investment performance by promoting efficient operations!",
+      "contact": "Contact"
+    },
+    "allFeatures": {
+      "title": "Udata's outstanding features meet the needs of investors",
+      "desc": "By automating processes, minimizing troubleshooting time, and optimizing resource utilization, Udata helps you save significant costs and improve operational efficiency and time. Fast capital recovery period.",
+      "lists": [
+        {
+          "id": "1",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-lock'><rect width='18' height='11' x='3' y='11' rx='2' ry='2'/><path d='M7 11V7a5 5 0 0 1 10 0v4'/></svg>",
+          "title": "",
+          "content": "Your data is always absolutely secure on Udata's cloud platform."
+        },
+        {
+          "id": "2",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-clock-2'><circle cx='12' cy='12' r='10'/><polyline points='12 6 12 12 16 10'/></svg>",
+          "title": "",
+          "content": "Quickly analyze financial losses over time (Day/Week/Month/Quarter/Year)"
+        },
+        {
+          "id": "3",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-square-activity'><rect width='18' height='18' x='3' y='3' rx='2'/><path d='M17 12h-2l-2 5-2-10-2 5H7'/></svg>",
+          "title": "",
+          "content": "Monitoring the troubleshooting situation of the O&M team."
+        },
+        {
+          "id": "4",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-bell'><path d='M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9'/><path d='M10.3 21a1.94 1.94 0 0 0 3.4 0'/></svg>",
+          "title": "",
+          "content": "Periodically send project activity reports according to pre-set targets."
+        }
+      ]
+    },
+    "singleFeature": {
+      "first": {
+        "title": "Benefits that the solution brings",
+        "listsContent": [
+          {
+            "title": "Increasing investment efficiency",
+            "content": "Helps investors have an overview of the entire project's activities, thereby making quick and accurate decisions."
+          },
+          {
+            "title": "Risk mitigation",
+            "content": "Detect and handle potential problems promptly, helping to minimize damage."
+          },
+          {
+            "title": "Improving transparency",
+            "content": "Provide transparent and accurate information about the project status to all stakeholders."
+          },
+          {
+            "title": "Resource Optimization",
+            "content": "Helps effectively use resources such as human resources, finance and time."
+          }
+        ],
+        "img": "/image/solutions/investors/investors-feature-1.jpg"
+      },
+      "second": {
+        "title": "Outstanding features of the solution",
+        "listsContent": [
+          {
+            "title": "Intuitive, easy-to-use interface",
+            "content": "Helps users easily get acquainted and use the system."
+          },
+          {
+            "title": "Integration with other systems",
+            "content": "Easily connect to existing business systems."
+          },
+          {
+            "title": "High Security",
+            "content": "Protect customer data safely and securely."
+          },
+          {
+            "title": "Multi-language and cross-platform support",
+            "content": "Relevant to global customer needs."
+          }
+        ],
+        "img": "/image/solutions/investors/investors-feature-2.jpg"
+      },
+      "third": {
+        "title": "Deployment methods and customer support",
+        "listsContent": [
+          {
+            "title": "Consulting and implementation",
+            "content": "Providing professional consulting and solution implementation services."
+          },
+          {
+            "title": "User Training",
+            "content": "Organize training courses to help users use the system effectively."
+          },
+          {
+            "title": "Technical Support",
+            "content": "Provides 24/7 technical support to answer questions and troubleshoot problems."
+          }
+        ],
+        "img": "/image/solutions/investors/investors-feature-3.jpg"
+      }
+    },
+    "callToAction": {
+      "title": "Ready to work in a focused, simple and effective way?",
+      "content": "Talk to one of our experts to determine the right solution for your needs,",
+      "actions": [
+        {
+          "title": "Determine your ideal solution",
+          "desc": "Are you looking for the most suitable solution? We will accompany you. Our experts will listen to your needs and provide suitable suggestions, helping you find a solution optimal solution."
+        },
+        {
+          "title": "Initial setup of custom solution",
+          "desc": "We will professionally deploy the solution. Our experts will configure and customize the system to meet your specific requirements."
+        }
+      ],
+      "button": "Schedule demo"
+    }
+  },
+  "Managers": {
+    "heroSection": {
+      "title": "Optimize operations, improve management efficiency",
+      "subTitle": "Solutions for Managers",
+      "desc": "Udata provides a unified platform for managing all projects. With an intuitive and easy-to-use interface, you can easily track progress, allocate resources, and evaluate performance. work results of each project.",
+      "contact": "Contact"
+    },
+    "allFeatures": {
+      "title": "Udata's outstanding features meet the needs of managers",
+      "desc": "Udata is a centralized software platform that manages the overall operations of all projects.",
+      "lists": [
+        {
+          "id": "1",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-clock-2'><circle cx='12' cy='12' r='10 '/><polyline points='12 6 12 12 16 10'/></svg>",
+          "title": "",
+          "content": "Minimize downtime, operating under system capacity"
+        },
+        {
+          "id": "2",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-circle-alert'><circle cx='12' cy='12' r='10 '/><line x1='12' x2='12' y1='8' y2='12'/><line x1='12' x2='12.01' y1='16' y2='16'/ ></svg>",
+          "title": "",
+          "content": "Timely warnings about potential incidents arising via email"
+        },
+        {
+          "id": "3",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-square-activity'><rect width='18' height='18' x='3 ' y='3' rx='2'/><path d='M17 12h-2l-2 5-2-10-2 5H7'/></svg>",
+          "title": "",
+          "content": "Monitor and evaluate the effectiveness of the measures taken."
+        },
+        {
+          "id": "4",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-rss'><path d='M4 11a9 9 0 0 1 9 9'/><path d='M4 4a16 16 0 0 1 16 16'/><circle cx='5' cy='19' r='1'/></svg>",
+          "title": "",
+          "content": "Allows managers to set and track important KPIs to evaluate project performance."
+        }
+      ]
+    },
+    "singleFeature": {
+      "first": {
+        "title": "Benefits that the solution brings",
+        "listsContent": [
+          {
+            "title": "Increasing management efficiency",
+            "content": "Helps managers have an overview of the entire project's activities, thereby making quick and accurate decisions."
+          },
+          {
+            "title": "Risk mitigation",
+            "content": "Detect and handle potential problems promptly, helping to minimize damage."
+          },
+          {
+            "title": "Improving transparency",
+            "content": "Provide transparent and accurate information about the project status to all stakeholders."
+          },
+          {
+            "title": "Resource Optimization",
+            "content": "Helps effectively use resources such as human resources, finance and time."
+          }
+        ],
+        "img": "/image/solutions/investors/investors-feature-1.jpg"
+      },
+      "second": {
+        "title": "Outstanding features of the solution",
+        "listsContent": [
+          {
+            "title": "Intuitive, easy-to-use interface",
+            "content": "Helps users easily get acquainted and use the system."
+          },
+          {
+            "title": "Integration with other systems",
+            "content": "Easily connect to existing business systems."
+          },
+          {
+            "title": "High Security",
+            "content": "Protect customer data safely and securely."
+          },
+          {
+            "title": "Multi-language and cross-platform support",
+            "content": "Relevant to global customer needs."
+          }
+        ],
+        "img": "/image/solutions/investors/investors-feature-2.jpg"
+      },
+      "third": {
+        "title": "Deployment methods and customer support",
+        "listsContent": [
+          {
+            "title": "Consulting and implementation",
+            "content": "Providing professional consulting and solution implementation services."
+          },
+          {
+            "title": "User Training",
+            "content": "Organize training courses to help users use the system effectively."
+          },
+          {
+            "title": "Technical Support",
+            "content": "Provides 24/7 technical support to answer questions and troubleshoot problems."
+          }
+        ],
+        "img": "/image/solutions/investors/investors-feature-3.jpg"
+      }
+    },
+    "callToAction": {
+      "title": "Ready to work in a focused, simple and effective way?",
+      "content": "Talk to one of our experts to determine the right solution for your needs,",
+      "actions": [
+        {
+          "title": "Determine your ideal solution",
+          "desc": "Are you looking for the most suitable solution? We will accompany you. Our experts will listen to your needs and provide suitable suggestions, helping you find a solution optimal solution."
+        },
+        {
+          "title": "Initial setup of custom solution",
+          "desc": "We will professionally deploy the solution. Our experts will configure and customize the system to meet your specific requirements."
+        }
+      ],
+      "button": "Schedule demo"
+    }
+  },
+  "Operators": {
+    "heroSection": {
+      "title": "Centralized operations management",
+      "subTitle": "Solutions for Operations Managers (O&M)",
+      "desc": "Udata provides a centralized platform, helping you efficiently manage all your projects and devices, no matter how complex and diverse they are. With an intuitive interface and easy to use, you can easily monitor, analyze and control all activities.",
+      "contact": "Contact"
+    },
+    "allFeatures": {
+      "title": "Udata's outstanding features meet the needs of operations managers",
+      "desc": "Udata is a centralized software platform that manages the overall operations of all projects.",
+      "lists": [
+        {
+          "id": "1",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-clock-2'><circle cx='12' cy='12' r='10 '/><polyline points='12 6 12 12 16 10'/></svg>",
+          "title": "",
+          "content": "Real-time data synchronization ensures information is always accurate and up to date."
+        },
+        {
+          "id": "2",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-circle-alert'><circle cx='12' cy='12' r='10 '/><line x1='12' x2='12' y1='8' y2='12'/><line x1='12' x2='12.01' y1='16' y2='16'/ ></svg>",
+          "title": "",
+          "content": "Warning and classifying risks of incidents and/or incidents that may arise so that operators do not need to constantly pay attention to the operation management screen"
+        },
+        {
+          "id": "3",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-square-activity'><rect width='18' height='18' x='3 ' y='3' rx='2'/><path d='M17 12h-2l-2 5-2-10-2 5H7'/></svg>",
+          "title": "",
+          "content": "Store data for up to 30 days when experiencing network failure."
+        },
+        {
+          "id": "4",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-bell'><path d='M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3 -2 3-9'/><path d='M10.3 21a1.94 1.94 0 0 0 3.4 0'/></svg>",
+          "title": "",
+          "content": "Periodically send project activity reports according to pre-set targets."
+        }
+      ]
+    },
+    "singleFeature": {
+      "first": {
+        "title": "Benefits that the solution brings",
+        "listsContent": [
+          {
+            "title": "Increasing management efficiency",
+            "content": "Helps operations managers have an overview of all machine operations, thereby making quick and accurate decisions."
+          },
+          {
+            "title": "Risk mitigation",
+            "content": "Detect and handle potential problems promptly, helping to minimize damage."
+          },
+          {
+            "title": "Improving transparency",
+            "content": "Provide transparent and accurate information about the project status to all stakeholders."
+          },
+          {
+            "title": "Resource Optimization",
+            "content": "Helps effectively use resources such as human resources, finance and time."
+          }
+        ],
+        "img": "/image/solutions/investors/investors-feature-1.jpg"
+      },
+      "second": {
+        "title": "Outstanding features of the solution",
+        "listsContent": [
+          {
+            "title": "Intuitive, easy-to-use interface",
+            "content": "Helps users easily get acquainted and use the system."
+          },
+          {
+            "title": "Integration with other systems",
+            "content": "Easily connect to existing business systems."
+          },
+          {
+            "title": "High Security",
+            "content": "Protect customer data safely and securely."
+          },
+          {
+            "title": "Multi-language and cross-platform support",
+            "content": "Relevant to global customer needs."
+          }
+        ],
+        "img": "/image/solutions/investors/investors-feature-2.jpg"
+      },
+      "third": {
+        "title": "Deployment methods and customer support",
+        "listsContent": [
+          {
+            "title": "Consulting and implementation",
+            "content": "Providing professional consulting and solution implementation services."
+          },
+          {
+            "title": "User Training",
+            "content": "Organize training courses to help users use the system effectively."
+          },
+          {
+            "title": "Technical Support",
+            "content": "Provides 24/7 technical support to answer questions and troubleshoot problems."
+          }
+        ],
+        "img": "/image/solutions/investors/investors-feature-3.jpg"
+      }
+    },
+    "callToAction": {
+      "title": "Ready to work in a focused, simple and effective way?",
+      "content": "Talk to one of our experts to determine the right solution for your needs,",
+      "actions": [
+        {
+          "title": "Determine your ideal solution",
+          "desc": "Are you looking for the most suitable solution? We will accompany you. Our experts will listen to your needs and provide suitable suggestions, helping you find a solution optimal solution."
+        },
+        {
+          "title": "Initial setup of custom solution",
+          "desc": "We will professionally deploy the solution. Our experts will configure and customize the system to meet your specific requirements."
+        }
+      ],
+      "button": "Schedule demo"
+    }
+  },
+  "PMS": {
+    "heroSection": {
+      "heading": "Power Management Software",
+      "excerpt": "Energy management software that helps you monitor production and more.",
+      "color": "blue",
+      "contact": "Contact",
+      "img": "/image/pms/mockup-pms.png"
+    },
+    "features": {
+      "title": "Main features",
+      "lists": [
+        {
+          "img": "/image/pms/feature/feature-1.png",
+          "title": "Manage multiple locations simultaneously",
+          "desc": "Collect data in different locations, unlimited geographical distance, centralized management at a single platform."
+        },
+        {
+          "img": "/image/pms/feature/feature-2.png",
+          "title": "Preventing excessive energy use",
+          "desc": "Collect active power, reactive power and warn when threshold is exceeded. Quickly detect overload points."
+        },
+        {
+          "img": "/image/pms/feature/feature-3.png",
+          "title": "Optimization for the Solar industry",
+          "desc": "Collect data from inverters, sensors and data loggers. Evaluate effectiveness through visual graphs."
+        },
+        {
+          "img": "/image/pms/feature/feature-4.png",
+          "title": "Unlimited data",
+          "desc": "Collect data from a variety of different data sources: EVN electricity bills, clean water bills, data from sensors, meters, loggers and more."
+        },
+        {
+          "img": "/image/pms/feature/feature-6.png",
+          "title": "Measure, verify and act",
+          "desc": "Standard model from problem detection, information validation and troubleshooting. Timely detection and quick action are prerequisites to help you improve energy efficiency, increase High durability equipment."
+        },
+        {
+          "img": "/image/pms/feature/feature-5.png",
+          "title": "Runs on multiple devices and anytime, anywhere",
+          "desc": "Helps manage and operate the factory more effectively."
+        }
+      ]
+    },
+    "status": [
+      {
+        "icon": "<svg width='61' height='47' viewBox='0 0 61 47' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M54.4877 41.6135C54.311 41.6135 54.1382 41.6657 53.9913 41.7636C53.8443 41.8615 53.7298 42.0007 53.6622 42.1635C53.5945 42.3263 53.5768 42.5054 53.6113 42.6782C53.6458 42.8511 53.7309 43.0098 53.8559 43.1344C53.9808 43.259 54.14 43.3439 54.3134 43.3783C54.4867 43.4127 54.6664 43.395 54.8296 43.3276C54.9929 43.2601 55.1325 43.1459 55.2307 42.9994C55.3288 42.8529 55.3813 42.6806 55.3813 42.5044C55.3813 42.3874 55.3581 42.2716 55.3132 42.1635C55.2683 42.0554 55.2025 41.9571 55.1195 41.8744C55.0366 41.7917 54.9381 41.726 54.8297 41.6813C54.7212 41.6365 54.605 41.6135 54.4877 41.6135ZM58.3193 25.6862H57.544V18.9117C57.5431 18.0456 57.1976 17.2152 56.5834 16.6028C55.9691 15.9903 55.1363 15.6458 54.2677 15.6449H47.2283V6.09013C47.2273 5.224 46.8819 4.39361 46.2676 3.78116C45.6534 3.16871 44.8206 2.82421 43.952 2.82324H3.27637C2.40772 2.82421 1.57493 3.16871 0.960698 3.78116C0.346471 4.39361 0.000971256 5.224 0 6.09013L0 34.9752C0.000971256 35.8413 0.346471 36.6717 0.960698 37.2842C1.57493 37.8966 2.40772 38.2411 3.27637 38.2421H14.8525C15.0285 39.3427 14.8289 40.4703 14.2856 41.4443L12.7258 44.2227C12.5687 44.5025 12.4877 44.8184 12.4909 45.139C12.4941 45.4597 12.5813 45.7739 12.744 46.0506C12.9066 46.3272 13.139 46.5566 13.418 46.716C13.697 46.8754 14.013 46.9593 14.3346 46.9593H22.171C22.2109 46.959 22.2507 46.9561 22.2902 46.9505C22.3658 46.9557 22.4418 46.9593 22.5187 46.9593H58.3193C59.03 46.9585 59.7114 46.6766 60.214 46.1755C60.7165 45.6744 60.9992 44.995 61 44.2864V28.3592C60.9992 27.6505 60.7165 26.9711 60.214 26.47C59.7114 25.9689 59.03 25.6871 58.3193 25.6862ZM54.2677 17.4268C54.6625 17.4272 55.0411 17.5838 55.3203 17.8622C55.5994 18.1406 55.7565 18.518 55.7569 18.9117V25.6862H53.6948V20.374C53.6948 20.2569 53.6717 20.1411 53.6268 20.033C53.5819 19.9249 53.5161 19.8267 53.4331 19.7439C53.3501 19.6612 53.2516 19.5956 53.1432 19.5508C53.0348 19.506 52.9186 19.483 52.8012 19.483H26.0742C25.9569 19.483 25.8407 19.506 25.7323 19.5508C25.6239 19.5956 25.5254 19.6612 25.4424 19.7439C25.3594 19.8267 25.2936 19.9249 25.2487 20.033C25.2038 20.1411 25.1807 20.2569 25.1807 20.374V37.7864C25.1807 37.9034 25.2038 38.0192 25.2487 38.1273C25.2936 38.2354 25.3594 38.3337 25.4424 38.4164C25.5254 38.4991 25.6239 38.5648 25.7323 38.6095C25.8407 38.6543 25.9569 38.6774 26.0742 38.6773H47.9753V40.7335H23.1185V18.9117C23.119 18.518 23.276 18.1406 23.5552 17.8622C23.8344 17.5838 24.2129 17.4272 24.6078 17.4268L54.2677 17.4268ZM1.78711 6.09013C1.78755 5.69643 1.9446 5.31899 2.22379 5.0406C2.50299 4.76222 2.88153 4.60562 3.27637 4.60518H43.952C44.3468 4.60562 44.7253 4.76222 45.0045 5.0406C45.2837 5.31899 45.4408 5.69643 45.4412 6.09013V15.6449H24.6078C23.7391 15.6458 22.9063 15.9903 22.2921 16.6028C21.6779 17.2152 21.3324 18.0456 21.3314 18.9117V29.8275H1.78711V6.09013ZM3.27637 36.4601C2.88153 36.4597 2.50299 36.3031 2.22379 36.0247C1.9446 35.7463 1.78755 35.3689 1.78711 34.9752V31.6095H21.3314V36.4601H15.5775C15.5745 36.4601 15.5715 36.4601 15.5684 36.4601H3.27637ZM19.2423 41.9716V43.6924C19.242 44.2089 19.3652 44.718 19.6018 45.1774H14.3346C14.3247 45.1774 14.315 45.1748 14.3064 45.1699C14.2978 45.165 14.2907 45.1579 14.2857 45.1494C14.2807 45.1409 14.278 45.1312 14.2779 45.1213C14.2778 45.1115 14.2803 45.1017 14.2852 45.0931L15.845 42.3147C16.5363 41.0753 16.8197 39.6507 16.6551 38.2421H21.3314V40.7335H20.4841C20.1549 40.7339 19.8393 40.8644 19.6065 41.0965C19.3737 41.3286 19.2427 41.6434 19.2423 41.9716ZM22.5187 45.1774C22.1238 45.1769 21.7453 45.0203 21.4661 44.7419C21.1869 44.4636 21.0299 44.0861 21.0294 43.6924V42.5155H47.9753V44.2864C47.9752 44.59 48.0272 44.8913 48.129 45.1774H22.5187ZM47.9753 28.3592V36.8954H26.9678V21.2649H51.9077V25.6862H50.656C49.9453 25.6871 49.2639 25.9689 48.7614 26.47C48.2588 26.9711 47.9761 27.6505 47.9753 28.3592ZM59.2129 44.2864C59.2126 44.5226 59.1184 44.7491 58.9509 44.9161C58.7834 45.0832 58.5562 45.1771 58.3193 45.1774H50.656C50.4191 45.1771 50.192 45.0832 50.0244 44.9161C49.8569 44.7491 49.7627 44.5226 49.7624 44.2864V28.3592C49.7627 28.1229 49.8569 27.8965 50.0244 27.7294C50.192 27.5624 50.4191 27.4684 50.656 27.4682H52.7088C52.7703 27.4745 52.8322 27.4745 52.8936 27.4682H56.5581C56.6195 27.4745 56.6815 27.4745 56.7429 27.4682H58.3193C58.5562 27.4684 58.7834 27.5624 58.9509 27.7294C59.1184 27.8965 59.2126 28.1229 59.2129 28.3592V44.2864Z' fill='white' /></svg>",
+        "title": "1,000,000+",
+        "desc": "Devices connected at the same time"
+      },
+      {
+        "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-badge-check'><path d='M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z'/><path d='m9 12 2 2 4-4'/></svg>",
+        "title": "99,99%",
+        "desc": "Reliability"
+      },
+      {
+        "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-smile'><circle cx='12' cy='12' r='10'/><path d='M8 14s1.5 2 4 2 4-2 4-2'/><line x1='9' x2='9.01' y1='9' y2='9'/><line x1='15' x2='15.01' y1='9' y2='9'/></svg>",
+        "title": "99.99%",
+        "desc": "Handsome"
+      }
+    ],
+    "questions": {
+      "title": "Q&A",
+      "data": [
+        {
+          "ask": "Does Udata PMS have to be installed? What platform does it run on? Does it take up memory?",
+          "answer": "PMS runs on a web browser, so this software can run on many devices with web browsers: laptops, tablets, smartphones, etc. PMS does not need to be installed so it takes up very little memory ( trivial)."
+        },
+        {
+          "ask": "Where is the data stored? Is it safe?",
+          "answer": "Udata's data is stored on the world's leading Cloud Provider Digital Ocean and complies with ISO 27001 security standards."
+        },
+        {
+          "ask": "Udata can manage a maximum of how many devices?",
+          "answer": "Udata manages an unlimited number of connected devices."
+        }
+      ],
+      "img": "/image/pms/question.png"
+    },
+    "whyChooseUs": {
+      "title": " Why choose <span class='text-primary'>Udata</span>",
+      "subTitle": "Achieve your goals effectively",
+      "contents": [
+        {
+          "id": 1,
+          "title": "Easy to use",
+          "content": "Friendly interface, easy to operate for all users, including newbies.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-mouse-pointer-click'><path d='M14 4.1 12 6'/><path d='m5.1 8-2.9-.8'/><path d='m6 12-1.9 2'/><path d='M7.2 2.2 8 5.1'/><path d='M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z'/></svg>"
+        },
+        {
+          "id": 2,
+          "title": "Highly customizable",
+          "content": "Allow easy adjustment to the unique needs of each business.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-lightbulb'><path d='M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5'/><path d='M9 18h6'/><path d='M10 22h4'/></svg>"
+        },
+        {
+          "id": 3,
+          "title": "Flexible deployment",
+          "content": "Supports rapid deployment through many different forms, suitable for each environment.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevrons-left-right'><path d='m9 7-5 5 5 5'/><path d='m15 7 5 5-5 5'/></svg>"
+        },
+        {
+          "id": 4,
+          "title": "Focused Tracking",
+          "content": "Data from multiple sources is managed and tracked in a single and efficient dashboard.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-rss'><path d='M4 11a9 9 0 0 1 9 9'/><path d='M4 4a16 16 0 0 1 16 16'/><circle cx='5' cy='19' r='1'/></svg>"
+        }
+      ]
+    }
+  },
+  "SaaS": {
+    "heroSection": {
+      "heading": "SaaS",
+      "excerpt": "Udata is a cloud software-as-a-service (SaaS) platform for data analysis and management.",
+      "color": "blue",
+      "contact": "Get Started",
+      "img": "/image/pms/mockup-pms.png"
+    },
+    "features": {
+      "title": "Unlimited power management",
+      "lists": [
+        {
+          "img": "/image/pms/feature/feature-1.png",
+          "title": "Real-time data collection and analysis",
+          "desc": "Our solution excels in its ability to collect and analyze data quickly and accurately. By continuously monitoring operations, we help you detect problems early potential and provide timely solutions"
+        },
+        {
+          "img": "/image/pms/feature/feature-2.png",
+          "title": "ISO 50001 Standard",
+          "desc": "Promote the implementation of the ISO 50001 Energy Management System. Collect data automatically, track relevant energy performance indicators, establish reference scenarios and measure save energy according to IPMVP instructions"
+        },
+        {
+          "img": "/image/pms/feature/feature-3.png",
+          "title": "Easy to use",
+          "desc": "Udata simplifies the operations manager's work and saves time. In one day of training, you will master the platform and customize it in a completely autonomous way"
+        },
+        {
+          "img": "/image/pms/feature/feature-4.png",
+          "title": "Automatic warnings",
+          "desc": "This helps organizations save time and resources, identify potential problems early, and then take timely measures to adjust and optimize operations"
+        },
+        {
+          "img": "/image/pms/feature/feature-6.png",
+          "title": "Customize Dashboard",
+          "desc": "By allowing users to customize the interface and indicators according to specific needs, it helps optimize information management and effective decision making"
+        },
+        {
+          "img": "/image/pms/feature/feature-5.png",
+          "title": "Ability to assign permissions by role, by location, by data type",
+          "desc": "Flexibility in decentralization helps ensure that only people with appropriate permissions can access and manipulate necessary data, thereby increasing security and operational efficiency"
+        }
+      ]
+    },
+    "singleFeature": {
+      "first": {
+        "title": "The only application in Vietnam that allows multi-location, multi-device management of many different manufacturers on the same platform.",
+        "subTitle": "",
+        "desc": "With the desire to provide an effective and comprehensive management solution, we have developed the first and only application in Vietnam that allows synchronous management of multiple locations, multiple devices from different locations. different manufacturers on the same platform, this helps businesses optimize management processes, save time and improve operational efficiency.",
+        "img": "/image/solutions/fisheries/fisheries-feature-1.png"
+      },
+      "second": {
+        "title": "The only application in Vietnam that allows automatic warnings to customers according to scenarios set by the user.",
+        "subTitle": "",
+        "desc": "Our application is a pioneering solution in Vietnam, providing smart automatic warning features. Thanks to that, customers can proactively set up warning scenarios to suit their needs. specific requirements, ensuring all incidents are detected and handled promptly, improving management efficiency and minimizing risks.",
+        "img": "/image/solutions/fisheries/fisheries-feature-2.png"
+      },
+      "third": {
+        "title": "The only application that allows customization and periodic sending of various types of reports: loss reports, frequently occurring error analysis reports,...",
+        "subTitle": "",
+        "desc": "Our application is a leading solution, allowing you to customize and create reports according to the specific requirements of your business. From detailed loss reports to error analysis reports Usually, all information is synthesized and presented clearly, helping you make accurate and timely decisions.",
+        "img": "/image/solutions/fisheries/fisheries-feature-3.png"
+      }
+    },
+    "whyChooseUs": {
+      "title": "Why should you choose <span class='text-primary'>Udata.Cloud</span>",
+      "subTitle": "Achieve your goals effectively",
+      "contents": [
+        {
+          "id": 1,
+          "title": "FIT",
+          "content": "Ready to meet user needs in many economic fields",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-mouse-pointer-click'><path d='M14 4.1 12 6'/><path d='m5.1 8-2.9-.8'/><path d='m6 12-1.9 2'/><path d='M7.2 2.2 8 5.1'/><path d='M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z'/ ></svg>"
+        },
+        {
+          "id": 2,
+          "title": "FAST",
+          "content": "Quick deployment, smooth operation, quick response to requirements",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-lightbulb'><path d='M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5'/><path d='M9 18h6'/><path d='M10 22h4' /></svg>"
+        },
+        {
+          "id": 3,
+          "title": "FLEXIBLE",
+          "content": "Easy to expand, integrate with other systems and flexibly adjust according to user needs",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevrons-left-right'><path d='m9 7-5 5 5 5'/ ><path d='m15 7 5 5-5 5'/></svg>"
+        }
+      ]
+    }
+  },
+  "Intergration": {
+    "heroSection": {
+      "heading": "Unlock your data with Udata",
+      "excerpt": "For effective data-driven energy management, having centralized and structured data is key. We are committed to helping you collect and integrate data quickly and easily, ensuring that you never experience delays or hitches in the process.",
+      "color": "green",
+      "contact": "Get Started",
+      "img": "/image/pms/mockup-pms.png"
+    },
+    "features": {
+      "lists": [
+        {
+          "title": "Independent of data source",
+          "desc": "Udata is a flexible solution that supports connecting and processing data from a variety of sources such as data loggers, grid operators, IoT sensors... Whether your data is Whatever format and protocol, we can integrate and exploit effectively."
+        },
+        {
+          "title": "Offline data storage",
+          "desc": "We store your data for up to 30 days when there is a network outage. Your data will always be updated and guaranteed to be accurate."
+        },
+        {
+          "title": "Data migration and data integration",
+          "desc": "With professional data migration services, we will help you make a smooth transition from old energy management software to the Udata platform. Not only that, Udata also has the ability to integrate compatible with many different systems, helping you build a comprehensive energy management solution that suits the unique needs of your business."
+        }
+      ]
+    },
+    "dependDatas": {
+      "title": "Udata is independent of data sources and can collect data from:",
+      "subTitle": "Do you need to collect data from multiple sources?",
+      "lists": [
+        {
+          "title": "DataLogger/Gateway",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-between-horizontal-end'><rect width='13' height='7' x='3' y='3' rx='1'/><path d='m22 3-15-3 3-3'/><rect width='13 'height='7' x='3' y='14' rx='1'/></svg>"
+        },
+        {
+          "title": "Energy meter, multi-function meter",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-clock'><circle cx='12' cy='12' r='10'/><polyline points='12 6 12 12 16 14'/></svg>"
+        },
+        {
+          "title": "IoT Connection",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-arrow-down-up'><path d='m3 16 4 4 4-4'/><path d='M7 20V4'/><path d='m21 8-4-4-4 4'/><path d='M17 4v16'/></svg> "
+        },
+        {
+          "title": "Excel File",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-sheet'><rect width='18' height='18' x='3' y='3' rx='2' ry='2'/><line x1='3' x2='21' y1='9' y2='9'/ ><line x1='3' x2='21' y1='15' y2='15'/><line x1='9' x2='9' y1='9' y2='21'/>< line x1='15' x2='15' y1='9' y2='21'/></svg>"
+        },
+        {
+          "title": "Measurement sensor",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-aperture'><circle cx='12' cy='12' r='10'/><path d='m14.31 8 5.74 9.94'/><path d='M9.69 8h11.48'/><path d='m7.38 12 5.74 -9.94'/><path d='M9.69 16 3.95 6.06'/><path d='M14.31 16H2.83'/><path d='m16.62 12-5.74 9.94'/></svg>"
+        },
+        {
+          "title": "Weather data",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-cloudy'><path d='M17.5 21H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z'/><path d='M22 10a3 3 0 0 0-3-3h-2.207a5.502 5.502 0 0 0-10.702.5' /></svg>"
+        }
+      ]
+    },
+    "singleFeature": {
+      "first": {
+        "title": "The only application in Vietnam that allows multi-location, multi-device management of many different manufacturers on the same platform.",
+        "subTitle": "",
+        "desc": "With the desire to provide an effective and comprehensive management solution, we have developed the first and only application in Vietnam that allows synchronous management of multiple locations, multiple devices from different locations. different manufacturers on the same platform, this helps businesses optimize management processes, save time and improve operational efficiency.",
+        "img": "/image/solutions/fisheries/fisheries-feature-1.png"
+      },
+      "second": {
+        "title": "The only application in Vietnam that allows automatic warnings to customers according to scenarios set by the user.",
+        "subTitle": "",
+        "desc": "Our application is a pioneering solution in Vietnam, providing smart automatic warning features. Thanks to that, customers can proactively set up warning scenarios to suit their needs. specific requirements, ensuring all incidents are detected and handled promptly, improving management efficiency and minimizing risks.",
+        "img": "/image/solutions/fisheries/fisheries-feature-2.png"
+      },
+      "third": {
+        "title": "The only application that allows customization and periodic sending of various types of reports: loss reports, frequently occurring error analysis reports,...",
+        "subTitle": "",
+        "desc": "Our application is a leading solution, allowing you to customize and create reports according to the specific requirements of your business. From detailed loss reports to error analysis reports Usually, all information is synthesized and presented clearly, helping you make accurate and timely decisions.",
+        "img": "/image/solutions/fisheries/fisheries-feature-3.png"
+      }
+    },
+    "questions": {
+      "title": "Frequently Asked Questions",
+      "data": [
+        {
+          "ask": "Is my data on Udata safe?",
+          "answer": "Your data is absolutely secure when using Udata. All information is stored on servers and backed up daily. Our system complies with ISO security standards 27001, ensuring your data is always safe."
+        },
+        {
+          "ask": "Does Udata own the data I put into the platform?",
+          "answer": "No. You are the sole owner of your data. We only store it for you to analyze and get its real value."
+        },
+        {
+          "ask": "Can Udata help me improve data quality?",
+          "answer": "Udata has many features that help you improve data quality. An alert will be triggered if any of your devices are no longer sending data to Udata and it will calculate the availability of data at all times. You can also correct incorrect data based on rules."
+        }
+      ],
+      "img": "/image/pms/question.png"
+    },
+    "callToAction": {
+      "title": "Data Migration & Integration",
+      "subTitle": "Are you using the same system and want to switch to Udata?",
+      "content": "Udata provides professional data integration and migration services, helping you upgrade your current energy management system. We support data migration from different systems to the platform Udata, ensures data integrity and security. In addition, we provide integrated solutions to connect Udata with other systems in your business.",
+      "button": "Get advice from our experts"
     }
   }
 }

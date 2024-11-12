@@ -1,18 +1,16 @@
 import Image from "next/image";
-import Link from "next/link";
-import React from "react";
 import PageSeoHead from "../components/common/PageSeoHead";
-import Title from "../components/common/Title";
 import { getApolloClient } from "../libs/apollo-client";
-
+import { Button } from "@/components/ui/button";
+import { useTranslations } from "next-intl";
+import { useRouter } from "next/router";
 import {
   NewsPostsQuery,
   OEEPostsQuery,
   PMSPostsQuery,
 } from "../queries/homePageQueries";
-import { getDate } from "../utils";
-import { useTranslations } from "next-intl";
-import { useRouter } from "next/router";
+import { getDate } from "@/utils";
+import { ROUTER_BLOG, ROUTER_CASE_STUDY } from "@/utils/constant";
 
 export async function getStaticProps({ locale }) {
   const client = getApolloClient();
@@ -40,37 +38,17 @@ export async function getStaticProps({ locale }) {
   });
 
   const localeNewPosts = newsPosts
-    .filter((post) => {
-      if (locale === "en") {
-        return post.title.startsWith("EN-");
-      }
-      return post.title.startsWith("VN-");
-    })
     .map((post) => {
       return {
         ...post,
-        title:
-          locale === "en"
-            ? post.title.replace(/EN-\d{8}-/, "")
-            : post.title.replace(/VN-\d{8}-/, ""),
       };
     })
     .slice(0, 5);
 
   const localeOEEPosts = oeePosts
-    .filter((post) => {
-      if (locale === "en") {
-        return post.title.startsWith("EN-");
-      }
-      return post.title.startsWith("VN-");
-    })
     .map((post) => {
       return {
         ...post,
-        title:
-          locale === "en"
-            ? post.title.replace(/EN-\d{8}-/, "")
-            : post.title.replace(/VN-\d{8}-/, ""),
       };
     })
     .slice(0, 5);
@@ -86,283 +64,352 @@ export async function getStaticProps({ locale }) {
 }
 
 const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
-  const { locale } = useRouter();
+  const router = useRouter();
   const t = useTranslations("Index");
   const firstPost = newsPosts[0];
 
   const metaTagData = {
-    title: `${t("titleSocial")} | pambu.org`,
+    title: `${t("titleSocial")} | udata.ai`,
     desc: t("desc"),
-    img: "/image/pambu.png",
+    img: "/image/hero/home-pv.png",
+  };
+
+  const solutionsByObject = {
+    title: "Giải pháp theo đối tượng",
+    solutions: [
+      {
+        title: "Giải pháp cho Chủ đầu tư - Quản lý cấp cao",
+        icon: (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="lucide lucide-user"
+          >
+            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+        ),
+      },
+      {
+        title: "Giải pháp cho Cấp quản lý",
+        icon: (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M12 7m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+            <path d="M17 16m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+            <path d="M7 16m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+          </svg>
+        ),
+      },
+      {
+        title: "Giải pháp cho Cấp vận hành",
+        icon: (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+            <circle cx="12" cy="12" r="4" />
+          </svg>
+        ),
+      },
+    ],
+  };
+
+  const solutionsByFields = {
+    title: "Giải pháp theo từng lĩnh vực",
+    solutions: [
+      {
+        title: "Năng lượng mặt trời áp mái",
+        icon: (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2" />
+            <path d="M12 20v2" />
+            <path d="m4.93 4.93 1.41 1.41" />
+            <path d="m17.66 17.66 1.41 1.41" />
+            <path d="M2 12h2" />
+            <path d="M20 12h2" />
+            <path d="m6.34 17.66-1.41 1.41" />
+            <path d="m19.07 4.93-1.41 1.41" />
+          </svg>
+        ),
+      },
+      {
+        title: "Nhà máy công nghiệp",
+        icon: (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z" />
+            <path d="M17 18h1" />
+            <path d="M12 18h1" />
+            <path d="M7 18h1" />
+          </svg>
+        ),
+      },
+      {
+        title: "Nuôi trồng thủy sản",
+        icon: (
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          >
+            <path d="M2 16s9-15 20-4C11 23 2 8 2 8" />
+          </svg>
+        ),
+      },
+    ],
+  };
+
+  const renderSectionSolution = ({ title, solutions }) => {
+    return (
+      <>
+        <h4 className="text-gray lg:text-2xl text-xl text-center font-semibold">
+          {title}
+        </h4>
+        <ul className="mt-6 flex flex-col lg:space-y-8 space-y-4">
+          {solutions.map((solution) => (
+            <li
+              key={solution.title}
+              className="px-10 py-8 bg-infor/10 flex items-center gap-2 rounded-lg shadow-md"
+            >
+              <div className="shrink-0 text-primary">{solution.icon}</div>
+              <h5 className="flex-1 lg:text-lg text-sm text-center font-medium">
+                {solution.title}
+              </h5>
+            </li>
+          ))}
+        </ul>
+      </>
+    );
+  };
+
+  const renderSectionBlog = ({ title, img, blogs, link }) => {
+    return (
+      <div className="px-6 py-8 w-full h-full flex flex-col items-center justify-between gap-10 bg-white rounded-xl shadow-md">
+        <div className="flex flex-col space-y-4">
+          <div className="shrink-0 flex items-center justify-center">
+            <Image
+              src={img}
+              width={300}
+              height={200}
+              alt=""
+              objectFit="contain"
+            />
+          </div>
+          <h3 className="text-center text-neutral text-2xl font-semibold">
+            {title}
+          </h3>
+          <ul className="flex-1 flex flex-col space-y-4">
+            {blogs.length > 0 ? (
+              blogs.map((blog) => (
+                <li
+                  key={blog._id}
+                  className="flex items-center gap-4 cursor-pointer"
+                  onClick={() => router.push(`${link}/${blog.slug}`)}
+                >
+                  <div className="relative shrink-0 w-[100px] h-[50px]">
+                    <Image
+                      src={blog?.featuredImage?.node?.mediaItemUrl}
+                      width={0}
+                      height={0}
+                      layout="fill"
+                      alt=""
+                      objectFit="contain"
+                      className="rounded-md"
+                    />
+                  </div>
+                  <div>
+                    <h5 className="text-base text-neutral font-semibold">
+                      {blog.title}
+                    </h5>
+                    <h6 className="text-gray text-sm">
+                      {getDate(blog.date, router.locale)}
+                    </h6>
+                  </div>
+                </li>
+              ))
+            ) : (
+              <div className="w-full h-full flex-1 flex items-center justify-center">
+                <h4 className="text-lg text-center text-gray font-semibold">
+                  Hiện chưa có bài viết nào!
+                </h4>
+              </div>
+            )}
+          </ul>
+        </div>
+        <div>
+          <Button variant="outline" onClick={() => router.push(link)}>
+            Xem thêm
+          </Button>
+        </div>
+      </div>
+    );
   };
   return (
     <>
       <PageSeoHead data={metaTagData} />
       <div>
-        <div className="w-full flex justify-center items-center">
-          <div className="px-5 md:px-8 py-10 max-w-screen-xl w-full overflow-hidden md:overflow-visible">
-            <div>
-              <h1
-                className="hidden md:block text-4xl text-gray text-center font-bold"
-                dangerouslySetInnerHTML={{ __html: t.raw("title.desktop") }}
-              ></h1>
-
-              <h1
-                className="block md:hidden text-2xl text-gray text-center font-bold"
-                dangerouslySetInnerHTML={{ __html: t.raw("title.mobile") }}
-              ></h1>
-              <h4 className="mt-6 text-xl text-gray/80 text-center font-medium">
-                {t("desc")}
-              </h4>
-              <div className="mt-10 md:mt-16 grid grid-cols-2 gap-10 md:gap-16">
-                <div className="col-span-2 md:col-span-1 flex flex-col justify-between">
-                  <h2 className="text-xl md:text-2xl text-gray text-center font-bold">
-                    Pambu OEE <br />
-                    <span className="text-gray/60 font-semibold">
-                      {t("oee")}
-                    </span>
-                  </h2>
-                  <div>
-                    <div className="mt-8">
-                      <Image
-                        src="/image/oee/mockup-oee.png"
-                        width="1240"
-                        height="650"
-                        alt=""
-                      />
-                    </div>
-                    <div className="mt-8 flex items-center justify-center">
-                      <Link href="/san-pham/pambu-oee">
-                        <a
-                          aria-label="pambu oee"
-                          className="px-10 py-3 bg-primary hover:bg-secondary text-white font-semibold rounded-md duration-200"
-                        >
-                          {t("button.details")}
-                        </a>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-span-2 md:col-span-1 flex flex-col justify-between">
-                  <h2 className="text-xl md:text-2xl text-gray text-center font-bold">
-                    Pambu PMS <br />{" "}
-                    <span className="text-gray/60 font-semibold">
-                      {t("pms")}
-                    </span>
-                  </h2>
-                  <div>
-                    <div className="mt-8">
-                      <Image
-                        src="/image/pms/mockup-pms.png"
-                        width="1240"
-                        height="650"
-                        alt=""
-                      />
-                    </div>
-                    <div className="mt-8 flex items-center justify-center">
-                      <Link href="/san-pham/pambu-pms">
-                        <a
-                          aria-label="pambu pms"
-                          className="px-10 py-3 bg-primary hover:bg-secondary text-white font-semibold rounded-md duration-200"
-                        >
-                          {t("button.details")}
-                        </a>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
+        {/* hero section */}
+        <section className="w-full h-[500px] flex md:items-center bg-[url('/image/bg/bg-home.png')] bg-center bg-cover bg-no-repeat">
+          <div className="lg:p-14 p-8 lg:w-full md:w-[70%]">
+            <h1 className="lg:text-7xl text-4xl text-white font-semibold">
+              Udata
+            </h1>
+            <h4 className="mt-2 text-white lg:text-2xl text-xl font-medium">
+              Iot Platform
+            </h4>
+            <h3 className="mt-10 text-white lg:text-3xl text-2xl font-semibold">
+              Nền tảng quản lý và giám sát năng lượng
+            </h3>
+            <div className="mt-4">
+              <Button size="lg">Bắt đầu</Button>
             </div>
-
-            {newsPosts.length > 0 && (
-              <div className="mt-32">
-                <div className="flex items-center justify-center">
-                  <Title
-                    label={t("section.news")}
-                    className="bg-primary mx-auto"
-                  />
-                </div>
-                <div className="mt-8">
-                  <div className="grid grid-cols-12 gap-6 md:gap-10 lg:gap-16">
-                    <div className="col-span-12 tall-md:col-span-12 lg:col-span-7">
-                      <Link href={`/tin-tuc/${firstPost.slug}`}>
-                        <a
-                          ariaLabel={firstPost.title}
-                          className="block w-full h-fit bg-white shadow-lg shadow-tertiary/80 rounded-3xl"
-                        >
-                          <div className="w-full h-[200px] lg:h-[250px] relative">
-                            <Image
-                              src={firstPost.featuredImage.node.mediaItemUrl}
-                              alt=""
-                              layout="fill"
-                              objectFit="cover"
-                              className="rounded-t-3xl"
-                            />
-                          </div>
-                          <div className="p-8 h-full ">
-                            <h3 className="text-lg md:text-xl text-gray font-semibold">
-                              {firstPost.title}
-                            </h3>
-                            <span className="block mt-2 text-gray/80">
-                              {getDate(firstPost.date, locale)}
-                            </span>
-                            <h5
-                              className="mt-4 text-gray desc-blog"
-                              dangerouslySetInnerHTML={{
-                                __html: firstPost.excerpt,
-                              }}
-                            ></h5>
-                          </div>
-                        </a>
-                      </Link>
-                    </div>
-                    <div className="mt-8 md:mt-0 col-span-12 tall-md:col-span-12 lg:col-span-5">
-                      <ul>
-                        {newsPosts.slice(1).map((post) => (
-                          <li key={post.id} className="mb-8 last:mb-0">
-                            <Link href={`/tin-tuc/${post.slug}`}>
-                              <a className="flex md:flex-row flex-col items-start">
-                                <div className="relative border border-gray/20 md:min-w-[150px] md:w-[150px] w-full h-[150px] md:h-[65px] lg:h-[80px] rounded-2xl md:rounded-lg">
-                                  <Image
-                                    src={post.featuredImage.node.mediaItemUrl}
-                                    alt=""
-                                    layout="fill"
-                                    objectFit="cover"
-                                    className="rounded-2xl md:rounded-lg"
-                                  />
-                                </div>
-                                <div className="mt-4 md:mt-0 md:ml-6">
-                                  <h4 className="text-lg tex-gray font-semibold">
-                                    {post.title}
-                                  </h4>
-                                  <span className="mt-2 block text-gray/80">
-                                    {getDate(post.date, locale)}
-                                  </span>
-                                </div>
-                              </a>
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                </div>
+          </div>
+        </section>
+        {/* features */}
+        <section className="w-full flex justify-center items-center">
+          <div className="px-5 py-20 md:px-8 lg:py-32 max-w-screen-xl w-full">
+            <h2 className="text-neutral text-center lg:text-4xl text-2xl font-bold">
+              Udata.ai phá vỡ giới hạn trong việc sử dụng dữ liệu của bạn
+            </h2>
+            <div className="lg:mt-20 mt-6 grid lg:grid-cols-2 gap-10">
+              <div>{renderSectionSolution(solutionsByObject)}</div>
+              <div>{renderSectionSolution(solutionsByFields)}</div>
+            </div>
+          </div>
+        </section>
+        {/* blog */}
+        <section className="w-full flex justify-center items-center bg-primary/5">
+          <div className="px-5 py-20 md:px-8 lg:py-32 max-w-screen-xl w-full">
+            <h2 className="text-neutral text-center lg:text-4xl text-2xl font-bold">
+              Tin tức
+            </h2>
+            <div className="mt-10 grid lg:grid-cols-2 gap-10">
+              <div className="w-full h-full">
+                {renderSectionBlog({
+                  title: "Case study",
+                  img: "/image/oee/document-highlight.png",
+                  blogs: oeePosts,
+                  link: ROUTER_CASE_STUDY,
+                })}
               </div>
-            )}
-            <div className="my-16 md:mt-32">
-              <div className="flex items-center justify-center">
-                <Title
-                  label={t("section.instruction.main")}
-                  className="mx-auto bg-primary"
-                />
-              </div>
-              <div className="mt-8 grid grid-cols-2 gap-10">
-                <div className="col-span-2 lg:col-span-1">
-                  <div className="p-6 md:p-8 w-full h-full flex flex-col items-center justify-between bg-white border border-tertiary rounded-3xl">
-                    <div className="w-full">
-                      <div className="flex items-center justify-center">
-                        <Image
-                          src="/image/oee/document-highlight.png"
-                          width="260"
-                          height="180"
-                          alt=""
-                        />
-                      </div>
-                      <h3 className="mt-6 text-2xl text-gray text-center font-semibold">
-                        {t("section.instruction.sub.first")}
-                      </h3>
-                      <ul className="mt-10">
-                        {oeePosts.map((post) => (
-                          <li key={post.id} className="mb-8 last:mb-0">
-                            <Link href={`/pambu-oee/${post.slug}`}>
-                              <a className="flex md:flex-row flex-col items-start">
-                                <div className="w-full h-[150px] md:min-w-[150px] md:w-[150px] md:h-[80px] lg:min-w-[100px] lg:w-[100px] lg:h-[50px] relative">
-                                  <Image
-                                    src={post.featuredImage.node.mediaItemUrl}
-                                    alt=""
-                                    layout="fill"
-                                    objectFit="cover"
-                                    className="rounded-2xl md:rounded-lg"
-                                  />
-                                </div>
-                                <div className="mt-4 md:mt-0 md:ml-4">
-                                  <h5 className="text-lg text-gray font-semibold">
-                                    {post.title}
-                                  </h5>
-                                  <span className="mt-2 text-gray/60">
-                                    {getDate(post.date, locale)}
-                                  </span>
-                                </div>
-                              </a>
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div className="mt-8 flex items-center justify-center">
-                      <Link href="/pambu-oee">
-                        <a className="block px-10 py-3 bg-white hover:bg-primary text-primary hover:text-white border border-primary duration-200 rounded-md font-semibold">
-                          {t("button.full")}
-                        </a>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-span-2 lg:col-span-1">
-                  <div className="p-6 md:p-8 w-full h-full flex flex-col items-center justify-between bg-white border border-tertiary rounded-3xl">
-                    <div className="w-full">
-                      <div className="flex items-center justify-center">
-                        <Image
-                          src="/image/pms/document-highlight.png"
-                          width="250"
-                          height="180"
-                          alt=""
-                        />
-                      </div>
-                      <h3 className="mt-6 text-2xl text-gray text-center font-semibold">
-                        {t("section.instruction.sub.second")}
-                      </h3>
-                      <ul className="mt-10">
-                        {pmsPosts.map((post) => (
-                          <li key={post.id} className="mb-8 last:mb-0">
-                            <Link href={`/pambu-pms/${post.slug}`}>
-                              <a className="flex md:flex-row flex-col items-start">
-                                <div className="w-full h-[150px] md:w-[150px] md:h-[80px] lg:min-w-[100px] lg:w-[100px] lg:h-[50px] relative">
-                                  <Image
-                                    src={post.featuredImage.node.mediaItemUrl}
-                                    alt=""
-                                    layout="fill"
-                                    objectFit="cover"
-                                    className="rounded-2xl md:rounded-md"
-                                  />
-                                </div>
-                                <div className="mt-4 md:mt-0 md:ml-4">
-                                  <h5 className="text-lg text-gray font-semibold">
-                                    {post.title}
-                                  </h5>
-                                  <span className="mt-2 text-gray/60">
-                                    {getDate(post.date, locale)}
-                                  </span>
-                                </div>
-                              </a>
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <div className="mt-8 flex items-center justify-center">
-                      <Link href="/pambu-pms">
-                        <a className="block px-10 py-3 bg-white hover:bg-primary text-primary hover:text-white border border-primary duration-200 rounded-md font-semibold">
-                          {t("button.full")}
-                        </a>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
+              <div className="w-full h-full">
+                {renderSectionBlog({
+                  title: "Blog",
+                  img: "/image/pms/document-highlight.png",
+                  blogs: pmsPosts,
+                  link: ROUTER_BLOG,
+                })}
               </div>
             </div>
           </div>
-        </div>
+        </section>
+        {/* about-us */}
+        <section className="w-full flex justify-center items-center">
+          <div className="px-5 py-20 md:px-8 lg:py-32 max-w-screen-xl w-full grid lg:grid-cols-2 gap-10">
+            <div>
+              <div>
+                <h4 className="text-infor lg:text-2xl text-xl font-semibold uppercase">
+                  Về chúng tôi
+                </h4>
+                <h2 className="mt-4 text-neutral lg:text-5xl text-4xl font-semibold">
+                  Udata: Unlock your Data
+                </h2>
+              </div>
+              <div className="lg:mt-14 mt-8 flex flex-col gap-1 text-gray lg:text-lg text-justify">
+                <p>
+                  Được phát triển từ năm 2022. Năm 2024, Udata được đầu tư bởi
+                  DHG.
+                </p>
+                <p>
+                  Udata hướng tới mục tiêu trở thành nền tảng phần mềm{" "}
+                  <span className="font-semibold">
+                    hàng đầu Việt Nam và Đông Nam Á
+                  </span>{" "}
+                  trong lĩnh vực quản trị năng lượng, phân tích dữ liệu IoT trên
+                  nền tảng dữ liệu đám mây (SaaS), chúng tôi cung cấp giải pháp
+                  toàn diện cho các doanh nghiệp, tổ chức giúp phân tích và tối
+                  ưu hóa tiêu thụ năng lượng, các thông số hoạt động IoT từ máy
+                  móc, môi trường, thiết bị,... Từ đó giúp giảm chi phí, tăng
+                  năng suất, và góp phần đạt được mục tiêu phát triển bền vững.
+                </p>
+              </div>
+            </div>
+            <div className="flex flex-col items-center gap-4">
+              <div className="relative w-full lg:h-1/2 h-[200px]">
+                <Image
+                  src="/image/about-us/dhg.png"
+                  width={0}
+                  height={0}
+                  layout="fill"
+                  objectFit="contain"
+                  alt=""
+                />
+              </div>
+              <div className="relative w-full lg:h-1/2 h-[300px]">
+                <Image
+                  src="/image/about-us/about-us-2.png"
+                  width={0}
+                  height={0}
+                  layout="fill"
+                  objectFit="cover"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </>
   );

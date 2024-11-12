@@ -8,7 +8,7 @@ import Button from "../common/Button";
 import FormGroup from "../common/FormGroup";
 import { useTranslations } from "next-intl";
 
-function InfoClientForm({ isPMSPage, productType }) {
+function InfoClientForm({ isModal, productType }) {
   const t = useTranslations("Product");
 
   const schema = yup.object().shape({
@@ -42,18 +42,18 @@ function InfoClientForm({ isPMSPage, productType }) {
       });
   };
 
-  // const inputRef = useRef(null);
-
-  // useEffect(() => {
-  //   inputRef.current && inputRef.current.focus()
-  // }, [])
-
   return (
-    <div className="p-6 md:p-8 w-full bg-white rounded-lg">
-      <h3 className="text-2xl text-gray text-center font-bold">
-        {t("form.title")}
-      </h3>
-      <form action="" className="mt-8 w-full" onSubmit={handleSubmit(onSubmit)}>
+    <div className={`${isModal ? "" : "p-6 md:p-8"}  bg-white rounded-lg `}>
+      {!isModal ? (
+        <h3 className="text-2xl text-gray text-center font-bold">
+          {t("form.title")}
+        </h3>
+      ) : null}
+      <form
+        action=""
+        className={`${isModal ? "" : "mt-8"} w-full`}
+        onSubmit={handleSubmit(onSubmit)}
+      >
         <div>
           <FormGroup
             register={register}
@@ -65,7 +65,7 @@ function InfoClientForm({ isPMSPage, productType }) {
             className={errors?.name ? "border-red" : ""}
           />
           {errors.name && (
-            <p className="mt-2 text-xs text-red font-medium">
+            <p className="mt-2 text-xs text-error font-medium">
               {errors.name.message}
             </p>
           )}
@@ -80,7 +80,7 @@ function InfoClientForm({ isPMSPage, productType }) {
             className={errors?.companyName ? "border-red" : ""}
           />
           {errors.companyName && (
-            <p className="mt-2 text-xs text-red font-medium">
+            <p className="mt-2 text-xs text-error font-medium">
               {errors.companyName.message}
             </p>
           )}
@@ -95,7 +95,7 @@ function InfoClientForm({ isPMSPage, productType }) {
             className={errors?.phoneNumber ? "border-red" : ""}
           />
           {errors.phoneNumber && (
-            <p className="mt-2 text-xs text-red font-medium">
+            <p className="mt-2 text-xs text-error font-medium">
               {errors.phoneNumber.message}
             </p>
           )}
@@ -110,7 +110,7 @@ function InfoClientForm({ isPMSPage, productType }) {
             className={errors?.email ? "border-red" : ""}
           />
           {errors.email && (
-            <p className="mt-2 text-xs text-red font-medium">
+            <p className="mt-2 text-xs text-error font-medium">
               {errors.email.message}
             </p>
           )}
@@ -125,17 +125,14 @@ function InfoClientForm({ isPMSPage, productType }) {
             className={errors?.address ? "border-red" : ""}
           />
           {errors.address && (
-            <p className="mt-2 text-xs text-red font-medium">
+            <p className="mt-2 text-xs text-error font-medium">
               {errors.address.message}
             </p>
           )}
         </div>
         <div className="mt-10">
           <Button
-            className={`${
-              (isPMSPage && "bg-orange-primary hover:bg-orange-secondary") ||
-              "bg-primary hover:bg-secondary"
-            } px-6 py-3 w-full text-white font-semibold duration-200`}
+            className={`bg-primary px-6 py-3 w-full text-white font-semibold duration-200`}
           >
             {t("form.button")}
           </Button>

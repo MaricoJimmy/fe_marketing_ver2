@@ -96,7 +96,7 @@ const OEEDetailPost = ({ post, relatedPosts }) => {
   const metaTagData = {
     title: `${post.title} | pambu.org`,
     desc: post.excerpt.replace(/<[^>]+>/g, ""),
-    img: post.featuredImage.node.mediaItemUrl,
+    img: post?.featuredImage?.node?.mediaItemUrl,
   };
 
   return (
@@ -125,7 +125,7 @@ const OEEDetailPost = ({ post, relatedPosts }) => {
 
               <div className="mt-10">
                 <Image
-                  src={post.featuredImage.node.mediaItemUrl}
+                  src={post?.featuredImage?.node?.mediaItemUrl}
                   width="1000"
                   height="600"
                   alt=""

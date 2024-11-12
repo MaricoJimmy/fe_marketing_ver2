@@ -12,7 +12,7 @@ function BlogRelated({ data, category }) {
         <a className="">
           <div className="relative border border-gray/20 w-full h-[200px] lg:h-[150px] rounded-2xl">
             <Image
-              src={data.featuredImage.node.mediaItemUrl}
+              src={data?.featuredImage?.node?.mediaItemUrl}
               layout="fill"
               objectFit="cover"
               alt=""
