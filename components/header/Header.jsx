@@ -333,6 +333,13 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
       subMenu: null,
       multiMenu: false,
     },
+    {
+      id: "career",
+      menu: t("career"),
+      href: ROUTER_CAREER,
+      subMenu: null,
+      multiMenu: false,
+    },
   ];
 
   return (
