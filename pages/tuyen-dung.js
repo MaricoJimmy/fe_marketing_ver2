@@ -72,7 +72,7 @@ const AboutUsPage = () => {
       <div className="w-full h-full flex items-center justify-center bg-infor/5">
         <div className="lg:px-20 md:px-10 px-4 py-8 w-full max-w-screen-xl">
           <Title label={t("title")} />
-          <div className="mt-8 w-full grid grid-cols-2 gap-8">
+          <div className="mt-8 w-full grid lg:grid-cols-2 lg:gap-8 gap-4">
             {t.raw("careers").map((career, idx) => (
               <div key={idx}>{renderCareer(career)}</div>
             ))}
