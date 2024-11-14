@@ -22,11 +22,11 @@ function HeroSectionV2({ data, page }) {
       )}`}
     >
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-neutral/80 to-neutral/40"></div>
-      <div className="relative z-10 lg:px-24 px-4 py-6 lg:w-3/4">
+      <div className="relative z-10 lg:pl-24 px-4 py-6">
         <h1 className="lg:text-5xl text-3xl text-white font-bold">
           {data.heading}
         </h1>
-        <h5 className="mt-4 lg:text-lg text-sm text-justify text-white font-medium">
+        <h5 className="mt-4 lg:w-3/4 lg:text-lg text-sm text-justify text-white font-medium">
           {data.excerpt}
         </h5>
         <div className="mt-10 flex items-center">

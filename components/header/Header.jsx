@@ -94,14 +94,14 @@ function HeaderDesktop({ stickyHeader, locale }) {
                         {/* <MenuItem title="Udata PMS" href={ROUTER_PMS}>
                           {t("products.subMenus.pms")}
                         </MenuItem> */}
+                        <MenuItem title="Nền tảng SaaS" href={ROUTER_SAAS}>
+                          Nền tảng dịch vụ phần mềm trên SaaS
+                        </MenuItem>
                         <MenuItem
                           title="Tích hợp dữ liệu"
                           href={ROUTER_INTERGRATE}
                         >
                           Mở khóa dữ liệu của bạn với Udata
-                        </MenuItem>
-                        <MenuItem title="Nền tảng SaaS" href={ROUTER_SAAS}>
-                          Nền tảng dịch vụ phần mềm trên SaaS
                         </MenuItem>
                       </ul>
                     </NavigationMenuContent>
@@ -120,18 +120,21 @@ function HeaderDesktop({ stickyHeader, locale }) {
                             <MenuItem
                               title="Chủ đầu tư - Quản lý cấp cao"
                               href={ROUTER_INVESTORS}
+                              isDivideSection
                             >
                               Giải pháp cho Chủ đầu tư - Quản lý cấp cao
                             </MenuItem>
                             <MenuItem
                               title="Cấp quản lý"
                               href={ROUTER_MANAGERS}
+                              isDivideSection
                             >
                               Giải pháp cho Cấp quản lý
                             </MenuItem>
                             <MenuItem
                               title="Cấp vận hành"
                               href={ROUTER_OPERATORS}
+                              isDivideSection
                             >
                               Giải pháp cho Cấp vận hành
                             </MenuItem>
@@ -142,14 +145,26 @@ function HeaderDesktop({ stickyHeader, locale }) {
                             Theo lĩnh vực
                           </h3>
                           <ul className="mt-2 min-w-[380px] border-none list-none">
-                            <MenuItem title="Solar Rooftop" href={ROUTER_SOLAR}>
+                            <MenuItem
+                              title="Solar Rooftop"
+                              href={ROUTER_SOLAR}
+                              isDivideSection
+                            >
                               {/* {t("solutions.subMenus.solar")} */}
                               Giải pháp quản lý vận hành điện mặt trời áp mái
                             </MenuItem>
-                            <MenuItem title="Nhà máy" href={"/"}>
+                            <MenuItem
+                              title="Nhà máy"
+                              href={"/"}
+                              isDivideSection
+                            >
                               Giải pháp cho nhà máy công nghiệp
                             </MenuItem>
-                            <MenuItem title="Thủy sản" href={ROUTER_FISHERIES}>
+                            <MenuItem
+                              title="Thủy sản"
+                              href={ROUTER_FISHERIES}
+                              isDivideSection
+                            >
                               Giải pháp cho nuôi trồng thủy sản
                             </MenuItem>
                           </ul>
@@ -190,19 +205,19 @@ function HeaderDesktop({ stickyHeader, locale }) {
                       </NavigationMenuLink>
                     </Link>
                   </NavigationMenuItem>
-                  {/* <NavigationMenuItem>
+                  <NavigationMenuItem>
                     <Link href={ROUTER_CAREER} legacyBehavior passHref>
                       <NavigationMenuLink className="px-4 py-2 bg-transparent hover:bg-neutral/5 hover:text-primary text-base font-medium rounded-md">
                         {t("career")}
                       </NavigationMenuLink>
                     </Link>
-                  </NavigationMenuItem> */}
+                  </NavigationMenuItem>
                 </NavigationMenuList>
               </NavigationMenu>
             </div>
           </div>
           <div className="flex items-center gap-4">
-            {/* <LanguageButton /> */}
+            <LanguageButton />
             <div>
               <Link href={ROUTER_CONTACT}>
                 <a
@@ -238,12 +253,12 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
         //   href: ROUTER_PMS,
         // },
         {
-          title: "Tích hợp dữ liệu",
-          href: ROUTER_INTERGRATE,
-        },
-        {
           title: "Nền tảng SaaS",
           href: ROUTER_SAAS,
+        },
+        {
+          title: "Tích hợp dữ liệu",
+          href: ROUTER_INTERGRATE,
         },
       ],
       multiMenu: false,
@@ -385,7 +400,7 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
         >
           <div className="w-full h-full">
             <div className="flex items-center justify-between">
-              {/* <LanguageButton /> */}
+              <LanguageButton />
               <div>
                 <Button
                   onClick={() => setOpenMenu(!openMenu)}

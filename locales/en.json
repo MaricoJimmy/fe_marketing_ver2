@@ -1,23 +1,54 @@
 {
   "Index": {
-    "titleSocial": "Udata - Solutions for Managing, Monitoring of Energy and Machine Performance",
-    "title": {
-      "desktop": "Udata - Solutions for Managing, Monitoring of <br /> <span class='text-primary'>Energy</span> and Machine <span class='text-primary'>Performance</span>",
-      "mobile": "Udata - Solutions for Managing, Monitoring of <span class='text-primary'>Energy</span> and Machine <span class='text-primary'>Performance</span>"
-    },
-    "desc": "The key that opens the door to digitizing factory data. Pioneer in Cloud technology",
-    "oee": "Machine maintenance and performance management solutions",
-    "pms": "Power monitoring solution",
-    "section": {
-      "news": "Featured news",
-      "instruction": {
-        "main": "Instruction Manual",
-        "sub": {
-          "first": "Pambu OEE documents",
-          "second": "Pambu PMS documents"
-        }
+    "titleSocial": "Data collection, monitoring and analysis platform",
+    "solutions": {
+      "title": "Udata.ai breaks the limits on your data usage",
+      "byObject": {
+        "title": "Solutions by object",
+        "solutions": [
+          {
+            "title": "Solutions for Investors - Senior Managers",
+            "link": "/giai-phap/nha-dau-tu",
+            "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke=' currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' className='lucide lucide-user'> <path d='M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2 ' /> <circle cx='12' cy='7' r='4' /> </svg>"
+          },
+          {
+            "title": "Solutions for Management",
+            "link": "/giai-phap/nha-quan-ly-cap-cao",
+            "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke=' currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'> <path stroke='none' d='M0 0h24v24H0z' fill='none' /> <path d='M12 7m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0' /> <path d='M17 16m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0' /> <path d='M7 16m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0' /></svg>"
+          },
+          {
+            "title": "Solutions for the Operational Level",
+            "link": "/giai-phap/nha-quan-ly-van-hanh",
+            "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke=' currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'> <path d='M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z' /> <circle cx='12' cy='12' r='4' /> svg>"
+          }
+        ]
+      },
+      "byFields": {
+        "title": "Solutions by each field",
+        "solutions": [
+          {
+            "title": "Rooftop solar",
+            "link": "/giai-phap/solar-rooftop",
+            "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke=' currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'> <circle cx='12' cy='12' r='4' /> <path d='M12 2v2' /> <path d ='M12 20v2' /> <path d='m4.93 4.93 1.41 1.41' /> <path d='m17.66 17.66 1.41 1.41' /> <path d='M2 12h2' /> <path d=' M20 12h2' /> <path d='m6.34 17.66-1.41 1.41' /> <path d='m19.07 4.93-1.41 1.41' /> </svg>"
+          },
+          {
+            "title": "Industrial factory",
+            "link": "/",
+            "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke=' currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'> <path d='M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2 -2H4a2 2 0 0 0-2 2Z' /> <path d='M17 18h1' /> <path d='M12 18h1' /> <path d='M7 18h1' /> </svg>"
+          },
+          {
+            "title": "Aquaculture",
+            "link": "/giai-phap/thuy-san",
+            "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke=' currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'> <path d='M2 16s9-15 20-4C11 23 2 8 2 8' /></svg>"
+          }
+        ]
       }
     },
+    "about-us": {
+      "title": "About us",
+      "content": "<p>Developed since 2022. In 2024, Udata is invested by DHG. </p> <p>Udata aims to become a software platform <span class='font- semibold'>leading in Vietnam and Southeast Asia</span> in the field of energy management, IoT data analysis on cloud data platform (SaaS), we provide comprehensive solutions for businesses. Businesses and organizations help analyze and optimize energy consumption and IoT operational parameters from machines, environments, equipment, etc. Thereby helping to reduce costs, increase productivity, and contribute to achieving achieve the goal of sustainable development.</p>"
+    },
+    "news": "Featured news",
     "button": {
       "details": "See details",
       "full": "See all"
@@ -308,9 +339,9 @@
   },
   "Solar": {
     "heroSection": {
-      "title": "Taking Control of Your Energy Efficiency",
+      "title": "Optimize Your Energy Efficiency",
       "subTitle": "Rooftop solar power operation management solution",
-      "desc": "With a rooftop solar power monitoring and management system, you can have comprehensive control over your system anytime, anywhere. Our platform provides real-time monitoring features real-time alerts when errors are detected, and performance analysis tools to optimize energy flow and increase operational efficiency This solution helps you not only monitor but also proactively manage , maintain and optimize your energy system, ensuring that you always get the most from your renewable energy investments.",
+      "desc": "With a smart monitoring system, you can manage your rooftop solar power system proactively and effectively. Thanks to real-time monitoring, early warning and data analysis capabilities details, you will always grasp the operating status of the system, thereby optimizing power output and saving costs.",
       "contact": "Contact"
     },
     "allFeatures": {
@@ -905,7 +936,7 @@
   "SaaS": {
     "heroSection": {
       "heading": "SaaS",
-      "excerpt": "Udata is a cloud software-as-a-service (SaaS) platform for data analysis and management.",
+      "excerpt": "Udata is a cloud-based software service (SaaS) for data analysis and management",
       "color": "blue",
       "contact": "Get Started",
       "img": "/image/pms/mockup-pms.png"
@@ -966,7 +997,7 @@
       }
     },
     "whyChooseUs": {
-      "title": "Why should you choose <span class='text-primary'>Udata.Cloud</span>",
+      "title": "Why should you choose <span class='text-primary'>Udata.ai</span>",
       "subTitle": "Achieve your goals effectively",
       "contents": [
         {
@@ -1088,5 +1119,65 @@
       "content": "Udata provides professional data integration and migration services, helping you upgrade your current energy management system. We support data migration from different systems to the platform Udata, ensures data integrity and security. In addition, we provide integrated solutions to connect Udata with other systems in your business.",
       "button": "Get advice from our experts"
     }
+  },
+  "Career": {
+    "title": "All jobs",
+    "excerpt": "Open jobs",
+    "careers": [
+      {
+        "title": "Agency Development Manager (Software & IOT Solutions)",
+        "location": {
+          "main": "Headquarters Hanoi",
+          "sub": "Ho Chi Minh City Office"
+        },
+        "exp": "5 years of experience",
+        "link": "https://drive.google.com/file/d/1IQKq_RrS2IuHF7KuuWej9nNQztP1pivZ/view?usp=sharing"
+      },
+      {
+        "title": "Agency Developer (Software & IOT Solutions)",
+        "location": {
+          "main": "Headquarters Hanoi",
+          "sub": "Ho Chi Minh City Office"
+        },
+        "exp": "2-5 years of experience",
+        "link": "https://drive.google.com/file/d/1TwxFEszGJVukSX9tcF5s0uoU_RtGBxoU/view?usp=sharing"
+      },
+      {
+        "title": "Sales Manager (Software & IOT Solutions)",
+        "location": {
+          "main": "Headquarters Hanoi",
+          "sub": "Ho Chi Minh City Office"
+        },
+        "exp": "5 years of experience",
+        "link": "https://drive.google.com/file/d/10bABxCDEMMlUukCBek5sQNOgMP1tF1Pr/view?usp=sharing"
+      },
+      {
+        "title": "Sales Officer (Software & IOT Solutions)",
+        "location": {
+          "main": "Nationwide",
+          "sub": ""
+        },
+        "exp": "2-5 years of experience",
+        "link": "https://drive.google.com/file/d/1e6Q8VctnVtgLmx6AMk-c8GPsNPTLkojx/view?usp=sharing"
+      },
+      {
+        "title": "Sales Admin",
+        "location": {
+          "main": "Headquarters Hanoi",
+          "sub": ""
+        },
+        "exp": "No experience required",
+        "link": "https://drive.google.com/file/d/16OY-3N9kFR7qA2mDcQq08v_35zqCaOas/view?usp=sharing"
+      },
+      {
+        "title": "Collaborator (business)",
+        "location": {
+          "main": "Nationwide",
+          "sub": ""
+        },
+        "exp": "3 years of experience",
+        "link": "https://drive.google.com/file/d/11SxPWdPppt3hTMC1UBolk_ZVunmfVSBz/view?usp=sharing"
+      }
+    ]
   }
 }

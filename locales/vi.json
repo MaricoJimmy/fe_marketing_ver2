@@ -1,23 +1,54 @@
 {
   "Index": {
-    "titleSocial": "Udata - Phần Mềm Quản Lý, Giám Sát Năng Lượng Và Hiệu Suất Máy",
-    "title": {
-      "desktop": "Udata - Phần Mềm Quản Lý, Giám Sát <br /><span class='text-primary'>Năng Lượng</span> Và <span class='text-primary'>Hiệu Suất</span> Máy",
-      "mobile": "Udata - Phần Mềm Quản Lý, Giám Sát <span class='text-primary'>Năng Lượng</span> Và <span class='text-primary'>Hiệu Suất</span> Máy"
-    },
-    "desc": "Chìa khóa mở ra cánh cửa số hóa dữ liệu nhà máy. Tiên phong trong công nghệ Cloud",
-    "oee": "Phần mềm quản lý hiệu suất và bảo dưỡng máy",
-    "pms": "Phần mềm giám sát năng lượng",
-    "section": {
-      "news": "Tin tức nổi bật",
-      "instruction": {
-        "main": "Cẩm nang hướng dẫn",
-        "sub": {
-          "first": "Tài liệu Pambu OEE",
-          "second": "Tài liệu Pambu PMS"
-        }
+    "titleSocial": " Nền tảng thu thập, giám sát và phân tích dữ liệu",
+    "solutions": {
+      "title": "Udata.ai phá vỡ giới hạn trong việc sử dụng dữ liệu của bạn",
+      "byObject": {
+        "title": "Giải pháp theo đối tượng",
+        "solutions": [
+          {
+            "title": "Giải pháp cho Chủ đầu tư - Quản lý cấp cao",
+            "link": "/giai-phap/nha-dau-tu",
+            "icon": "<svg  xmlns='http://www.w3.org/2000/svg'  width='24'  height='24'  viewBox='0 0 24 24'  fill='none'  stroke='currentColor'  strokeWidth='2'  strokeLinecap='round'  strokeLinejoin='round'  className='lucide lucide-user'>  <path d='M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2' />  <circle cx='12' cy='7' r='4' /></svg>"
+          },
+          {
+            "title": "Giải pháp cho Cấp quản lý",
+            "link": "/giai-phap/nha-quan-ly-cap-cao",
+            "icon": "<svg  xmlns='http://www.w3.org/2000/svg'  width='24'  height='24'  viewBox='0 0 24 24'  fill='none'  stroke='currentColor'  strokeWidth='2'  strokeLinecap='round'  strokeLinejoin='round'>  <path stroke='none' d='M0 0h24v24H0z' fill='none' />  <path d='M12 7m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0' />  <path d='M17 16m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0' />  <path d='M7 16m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0' /></svg>"
+          },
+          {
+            "title": "Giải pháp cho Cấp vận hành",
+            "link": "/giai-phap/nha-quan-ly-van-hanh",
+            "icon": "<svg  xmlns='http://www.w3.org/2000/svg'  width='24'  height='24'  viewBox='0 0 24 24'  fill='none'  stroke='currentColor'  strokeWidth='2'  strokeLinecap='round'  strokeLinejoin='round'>  <path d='M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z' />  <circle cx='12' cy='12' r='4' /></svg>"
+          }
+        ]
+      },
+      "byFields": {
+        "title": "Giải pháp theo từng lĩnh vực",
+        "solutions": [
+          {
+            "title": "Năng lượng mặt trời áp mái",
+            "link": "/giai-phap/solar-rooftop",
+            "icon": "<svg  xmlns='http://www.w3.org/2000/svg'  width='24'  height='24'  viewBox='0 0 24 24'  fill='none'  stroke='currentColor'  strokeWidth='2'  strokeLinecap='round'  strokeLinejoin='round'>  <circle cx='12' cy='12' r='4' />  <path d='M12 2v2' />  <path d='M12 20v2' />  <path d='m4.93 4.93 1.41 1.41' />  <path d='m17.66 17.66 1.41 1.41' />  <path d='M2 12h2' />  <path d='M20 12h2' />  <path d='m6.34 17.66-1.41 1.41' />  <path d='m19.07 4.93-1.41 1.41' /></svg>"
+          },
+          {
+            "title": "Nhà máy công nghiệp",
+            "link": "/",
+            "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'  fill='none'  stroke='currentColor'  strokeWidth='2'  strokeLinecap='round'  strokeLinejoin='round'>  <path d='M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z' />  <path d='M17 18h1' />  <path d='M12 18h1' />  <path d='M7 18h1' /></svg>"
+          },
+          {
+            "title": "Nuôi trồng thủy sản",
+            "link": "/giai-phap/thuy-san",
+            "icon": "<svg  xmlns='http://www.w3.org/2000/svg'  width='24'  height='24'  viewBox='0 0 24 24'  fill='none'  stroke='currentColor'  strokeWidth='2'  strokeLinecap='round'  strokeLinejoin='round'>  <path d='M2 16s9-15 20-4C11 23 2 8 2 8' /></svg>"
+          }
+        ]
       }
     },
+    "about-us": {
+      "title": "Về chúng tôi",
+      "content": "<p>Được phát triển từ năm 2022. Năm 2024, Udata được đầu tư bởi DHG. </p> <p>Udata hướng tới mục tiêu trở thành nền tảng phần mềm <span class='font-semibold'>hàng đầu Việt Nam và Đông Nam Á</span> trong lĩnh vực quản trị năng lượng, phân tích dữ liệu IoT trên nền tảng dữ liệu đám mây (SaaS), chúng tôi cung cấp giải pháp toàn diện cho các doanh nghiệp, tổ chức giúp phân tích và tối ưu hóa tiêu thụ năng lượng, các thông số hoạt động IoT từ máy móc, môi trường, thiết bị,... Từ đó giúp giảm chi phí, tăng năng suất, và góp phần đạt được mục tiêu phát triển bền vững.</p>"
+    },
+    "news": "Tin tức nổi bật",
     "button": {
       "details": "Xem chi tiết",
       "full": "Xem tất cả"
@@ -314,9 +345,9 @@
   },
   "Solar": {
     "heroSection": {
-      "title": "Kiểm soát Hiệu suất Năng lượng của Bạn",
+      "title": "Tối ưu hóa Hiệu suất năng lượng của bạn",
       "subTitle": "Giải pháp quản lý vận hành điện mặt trời áp mái",
-      "desc": "Với hệ thống giám sát và quản lý điện mặt trời áp mái, bạn có thể kiểm soát toàn diện hệ thống của mình ở mọi lúc mọi nơi. Nền tảng của chúng tôi cung cấp các tính năng giám sát theo thời gian thực, cảnh báo tức thì khi phát hiện lỗi, và các công cụ phân tích hiệu suất để tối ưu hóa dòng năng lượng và tăng cường hiệu quả hoạt động. Giải pháp này giúp bạn không chỉ theo dõi mà còn chủ động quản lý, bảo trì và tối ưu hóa hệ thống năng lượng của mình, đảm bảo rằng bạn luôn khai thác tối đa từ các khoản đầu tư vào năng lượng tái tạo.",
+      "desc": "Với hệ thống giám sát thông minh, bạn có thể quản lý hệ thống điện mặt trời áp mái một cách chủ động và hiệu quả. Nhờ khả năng theo dõi thời gian thực, cảnh báo sớm và phân tích dữ liệu chi tiết, bạn sẽ luôn nắm bắt được tình trạng hoạt động của hệ thống, từ đó tối ưu hóa sản lượng điện và tiết kiệm chi phí.",
       "contact": "Liên hệ"
     },
     "allFeatures": {
@@ -911,7 +942,7 @@
   "SaaS": {
     "heroSection": {
       "heading": "SaaS",
-      "excerpt": "Udata là nền tảng dịch vụ phần mềm trên nền tảng đám mây (SaaS) để phân tích và quản lý dữ liệu.",
+      "excerpt": "Udata là dịch vụ phần mềm trên nền tảng đám mây (SaaS) để phân tích và quản lý dữ liệu",
       "color": "blue",
       "contact": "Bắt đầu",
       "img": "/image/pms/mockup-pms.png"
@@ -972,7 +1003,7 @@
       }
     },
     "whyChooseUs": {
-      "title": "Vì sao nên chọn <span class='text-primary'>Udata.Cloud</span>",
+      "title": "Vì sao nên chọn <span class='text-primary'>Udata.ai</span>",
       "subTitle": "Đạt được mục tiêu của bạn một cách hiệu quả",
       "contents": [
         {
@@ -998,8 +1029,8 @@
   },
   "Intergration": {
     "heroSection": {
-      "heading": "Mở khóa dữ liệu của bạn với Udata",
-      "excerpt": "Để quản lý năng lượng dựa trên dữ liệu hiệu quả, việc có dữ liệu tập trung và có cấu trúc là điều quan trọng. Chúng tôi cam kết giúp bạn thu thập và tích hợp dữ liệu một cách nhanh chóng và dễ dàng, đảm bảo rằng bạn không bao giờ bị chậm trễ hoặc gặp trở ngại trong quá trình này.",
+      "heading": "Thấu hiểu dữ liệu của bạn với Udata",
+      "excerpt": "Udata là một nền tảng tích hợp dữ liệu mạnh mẽ cho phép thu thập theo thời gian thực dữ liệu từ các thiết bị IoT, cảm biến, máy móc,… giúp bạn khai thác tối đa, hiệu quả dữ liệu từ hệ thống.",
       "color": "green",
       "contact": "Bắt đầu",
       "img": "/image/pms/mockup-pms.png"
@@ -1094,5 +1125,65 @@
       "content": "Udata cung cấp dịch vụ di chuyển và tích hợp dữ liệu chuyên nghiệp, giúp bạn nâng cấp hệ thống quản lý năng lượng hiện tại. Chúng tôi hỗ trợ di chuyển dữ liệu từ các hệ thống khác nhau sang nền tảng Udata, đảm bảo tính toàn vẹn và bảo mật của dữ liệu. Ngoài ra, chúng tôi còn cung cấp các giải pháp tích hợp để kết nối Udata với các hệ thống khác trong doanh nghiệp của bạn.",
       "button": "Nhận tư vấn từ chuyên gia của chúng tôi"
     }
+  },
+  "Career": {
+    "title": "Tất cả công việc",
+    "excerpt": "Các công việc đang được tuyển dụng",
+    "careers": [
+      {
+        "title": "Trưởng phòng phát triển đại lý (Phần mềm & giải pháp IOT)",
+        "location": {
+          "main": "Trụ sở chính Hà Nội",
+          "sub": "Văn phòng TP. Hồ Chí Minh"
+        },
+        "exp": "5 năm kinh nghiệm",
+        "link": "https://drive.google.com/file/d/1IQKq_RrS2IuHF7KuuWej9nNQztP1pivZ/view?usp=sharing"
+      },
+      {
+        "title": "Nhân viên phát triển đại lý (Phần mềm & giải pháp IOT)",
+        "location": {
+          "main": "Trụ sở chính Hà Nội",
+          "sub": "Văn phòng TP. Hồ Chí Minh"
+        },
+        "exp": "2-5 năm kinh nghiệm",
+        "link": "https://drive.google.com/file/d/1TwxFEszGJVukSX9tcF5s0uoU_RtGBxoU/view?usp=sharing"
+      },
+      {
+        "title": "Trưởng phòng kinh doanh (Phần mềm & giải pháp IOT)",
+        "location": {
+          "main": "Trụ sở chính Hà Nội",
+          "sub": "Văn phòng TP. Hồ Chí Minh"
+        },
+        "exp": "5 năm kinh nghiệm",
+        "link": "https://drive.google.com/file/d/10bABxCDEMMlUukCBek5sQNOgMP1tF1Pr/view?usp=sharing"
+      },
+      {
+        "title": "Nhân viên kinh doanh (Phần mềm & giải pháp IOT)",
+        "location": {
+          "main": "Toàn quốc",
+          "sub": ""
+        },
+        "exp": "2-5 năm kinh nghiệm",
+        "link": "https://drive.google.com/file/d/1e6Q8VctnVtgLmx6AMk-c8GPsNPTLkojx/view?usp=sharing"
+      },
+      {
+        "title": "Nhân viên Sales Admin",
+        "location": {
+          "main": "Trụ sở chính Hà Nội",
+          "sub": ""
+        },
+        "exp": "Không yêu cầu kinh nghiệm",
+        "link": "https://drive.google.com/file/d/16OY-3N9kFR7qA2mDcQq08v_35zqCaOas/view?usp=sharing"
+      },
+      {
+        "title": "Cộng tác viên (kinh doanh)",
+        "location": {
+          "main": "Toàn quốc",
+          "sub": ""
+        },
+        "exp": "3 năm kinh nghiệm",
+        "link": "https://drive.google.com/file/d/11SxPWdPppt3hTMC1UBolk_ZVunmfVSBz/view?usp=sharing"
+      }
+    ]
   }
 }
