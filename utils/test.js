@@ -1,1 +1,56 @@
-<svg xmlns='http://www.w3.org/2000/svg' width='50a' height='50a' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-clock'><circle cx='12' cy='12' r='10'/><polyline points='12 6 12 12 16 14'/></svg>
+const listCareers = [
+  {
+    "title": "Trưởng phòng phát triển đại lý (Phần mềm & giải pháp IOT)",
+    "location": {
+      "main": "Trụ sở chính Hà Nội",
+      "sub": "Văn phòng TP. Hồ Chí Minh"
+    },
+    "exp": "5 năm kinh nghiệm",
+    "link": "https://drive.google.com/file/d/1IQKq_RrS2IuHF7KuuWej9nNQztP1pivZ/view?usp=sharing"
+  },
+  {
+    "title": "Nhân viên phát triển đại lý (Phần mềm & giải pháp IOT)",
+    "location": {
+      "main": "Trụ sở chính Hà Nội",
+      "sub": "Văn phòng TP. Hồ Chí Minh"
+    },
+    "exp": "2-5 năm kinh nghiệm",
+    "link": "https://drive.google.com/file/d/1TwxFEszGJVukSX9tcF5s0uoU_RtGBxoU/view?usp=sharing"
+  },
+  {
+    "title": "Trưởng phòng kinh doanh (Phần mềm & giải pháp IOT)",
+    "location": {
+      "main": "Trụ sở chính Hà Nội",
+      "sub": "Văn phòng TP. Hồ Chí Minh"
+    },
+    "exp": "5 năm kinh nghiệm",
+    "link": "https://drive.google.com/file/d/10bABxCDEMMlUukCBek5sQNOgMP1tF1Pr/view?usp=sharing"
+  },
+  {
+    "title": "Nhân viên kinh doanh (Phần mềm & giải pháp IOT)",
+    "location": {
+      "main": "Toàn quốc",
+      "sub": ""
+    },
+    "exp": "2-5 năm kinh nghiệm",
+    "link": "https://drive.google.com/file/d/1e6Q8VctnVtgLmx6AMk-c8GPsNPTLkojx/view?usp=sharing"
+  },
+  {
+    "title": "Nhân viên Sales Admin",
+    "location": {
+      "main": "Trụ sở chính Hà Nội",
+      "sub": ""
+    },
+    "exp": "Không yêu cầu kinh nghiệm",
+    "link": "https://drive.google.com/file/d/16OY-3N9kFR7qA2mDcQq08v_35zqCaOas/view?usp=sharing"
+  },
+  {
+    "title": "Cộng tác viên (kinh doanh)",
+    "location": {
+      "main": "Toàn quốc",
+      "sub": ""
+    },
+    "exp": "3 năm kinh nghiệm",
+    "link": "https://drive.google.com/file/d/11SxPWdPppt3hTMC1UBolk_ZVunmfVSBz/view?usp=sharing"
+  }
+];

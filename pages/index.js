@@ -1,16 +1,20 @@
+import { Button } from "@/components/ui/button";
+import { getDate } from "@/utils";
+import {
+  ROUTER_BLOG,
+  ROUTER_CASE_STUDY,
+  ROUTER_CONTACT,
+} from "@/utils/constant";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import PageSeoHead from "../components/common/PageSeoHead";
 import { getApolloClient } from "../libs/apollo-client";
-import { Button } from "@/components/ui/button";
-import { useTranslations } from "next-intl";
-import { useRouter } from "next/router";
 import {
   NewsPostsQuery,
   OEEPostsQuery,
   PMSPostsQuery,
 } from "../queries/homePageQueries";
-import { getDate } from "@/utils";
-import { ROUTER_BLOG, ROUTER_CASE_STUDY } from "@/utils/constant";
 
 export async function getStaticProps({ locale }) {
   const client = getApolloClient();
@@ -74,143 +78,6 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
     img: "/image/hero/home-pv.png",
   };
 
-  const solutionsByObject = {
-    title: "Giải pháp theo đối tượng",
-    solutions: [
-      {
-        title: "Giải pháp cho Chủ đầu tư - Quản lý cấp cao",
-        icon: (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            className="lucide lucide-user"
-          >
-            <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
-            <circle cx="12" cy="7" r="4" />
-          </svg>
-        ),
-      },
-      {
-        title: "Giải pháp cho Cấp quản lý",
-        icon: (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-            <path d="M12 7m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-            <path d="M17 16m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-            <path d="M7 16m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
-          </svg>
-        ),
-      },
-      {
-        title: "Giải pháp cho Cấp vận hành",
-        icon: (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-            <circle cx="12" cy="12" r="4" />
-          </svg>
-        ),
-      },
-    ],
-  };
-
-  const solutionsByFields = {
-    title: "Giải pháp theo từng lĩnh vực",
-    solutions: [
-      {
-        title: "Năng lượng mặt trời áp mái",
-        icon: (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <circle cx="12" cy="12" r="4" />
-            <path d="M12 2v2" />
-            <path d="M12 20v2" />
-            <path d="m4.93 4.93 1.41 1.41" />
-            <path d="m17.66 17.66 1.41 1.41" />
-            <path d="M2 12h2" />
-            <path d="M20 12h2" />
-            <path d="m6.34 17.66-1.41 1.41" />
-            <path d="m19.07 4.93-1.41 1.41" />
-          </svg>
-        ),
-      },
-      {
-        title: "Nhà máy công nghiệp",
-        icon: (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z" />
-            <path d="M17 18h1" />
-            <path d="M12 18h1" />
-            <path d="M7 18h1" />
-          </svg>
-        ),
-      },
-      {
-        title: "Nuôi trồng thủy sản",
-        icon: (
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M2 16s9-15 20-4C11 23 2 8 2 8" />
-          </svg>
-        ),
-      },
-    ],
-  };
-
   const renderSectionSolution = ({ title, solutions }) => {
     return (
       <>
@@ -221,9 +88,13 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
           {solutions.map((solution) => (
             <li
               key={solution.title}
-              className="px-10 py-8 bg-infor/10 flex items-center gap-2 rounded-lg shadow-md"
+              onClick={() => router.push(solution.link)}
+              className="px-10 py-8 bg-infor/10 flex items-center gap-2 rounded-lg shadow-md hover:shadow-lg transition-all cursor-pointer"
             >
-              <div className="shrink-0 text-primary">{solution.icon}</div>
+              <div
+                className="shrink-0 text-primary"
+                dangerouslySetInnerHTML={{ __html: solution.icon }}
+              ></div>
               <h5 className="flex-1 lg:text-lg text-sm text-center font-medium">
                 {solution.title}
               </h5>
@@ -290,7 +161,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
         </div>
         <div>
           <Button variant="outline" onClick={() => router.push(link)}>
-            Xem thêm
+            {t("button.full")}
           </Button>
         </div>
       </div>
@@ -310,10 +181,12 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
               Iot Platform
             </h4>
             <h3 className="mt-10 text-white lg:text-3xl text-2xl font-semibold">
-              Nền tảng quản lý và giám sát năng lượng
+              {t("titleSocial")}
             </h3>
             <div className="mt-4">
-              <Button size="lg">Bắt đầu</Button>
+              <Button size="lg" onClick={() => router.push(ROUTER_CONTACT)}>
+                Bắt đầu
+              </Button>
             </div>
           </div>
         </section>
@@ -324,8 +197,8 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
               Udata.ai phá vỡ giới hạn trong việc sử dụng dữ liệu của bạn
             </h2>
             <div className="lg:mt-20 mt-6 grid lg:grid-cols-2 gap-10">
-              <div>{renderSectionSolution(solutionsByObject)}</div>
-              <div>{renderSectionSolution(solutionsByFields)}</div>
+              <div>{renderSectionSolution(t.raw("solutions.byObject"))}</div>
+              <div>{renderSectionSolution(t.raw("solutions.byFields"))}</div>
             </div>
           </div>
         </section>
@@ -333,7 +206,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
         <section className="w-full flex justify-center items-center bg-primary/5">
           <div className="px-5 py-20 md:px-8 lg:py-32 max-w-screen-xl w-full">
             <h2 className="text-neutral text-center lg:text-4xl text-2xl font-bold">
-              Tin tức
+              {t("news")}
             </h2>
             <div className="mt-10 grid lg:grid-cols-2 gap-10">
               <div className="w-full h-full">
@@ -361,43 +234,19 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
             <div>
               <div>
                 <h4 className="text-infor lg:text-2xl text-xl font-semibold uppercase">
-                  Về chúng tôi
+                  {t("about-us.title")}
                 </h4>
                 <h2 className="mt-4 text-neutral lg:text-5xl text-4xl font-semibold">
                   Udata: Unlock your Data
                 </h2>
               </div>
-              <div className="lg:mt-14 mt-8 flex flex-col gap-1 text-gray lg:text-lg text-justify">
-                <p>
-                  Được phát triển từ năm 2022. Năm 2024, Udata được đầu tư bởi
-                  DHG.
-                </p>
-                <p>
-                  Udata hướng tới mục tiêu trở thành nền tảng phần mềm{" "}
-                  <span className="font-semibold">
-                    hàng đầu Việt Nam và Đông Nam Á
-                  </span>{" "}
-                  trong lĩnh vực quản trị năng lượng, phân tích dữ liệu IoT trên
-                  nền tảng dữ liệu đám mây (SaaS), chúng tôi cung cấp giải pháp
-                  toàn diện cho các doanh nghiệp, tổ chức giúp phân tích và tối
-                  ưu hóa tiêu thụ năng lượng, các thông số hoạt động IoT từ máy
-                  móc, môi trường, thiết bị,... Từ đó giúp giảm chi phí, tăng
-                  năng suất, và góp phần đạt được mục tiêu phát triển bền vững.
-                </p>
-              </div>
+              <div
+                className="lg:mt-14 mt-8 flex flex-col gap-1 text-gray lg:text-lg text-justify"
+                dangerouslySetInnerHTML={{ __html: t.raw("about-us.content") }}
+              ></div>
             </div>
-            <div className="flex flex-col items-center gap-4">
-              <div className="relative w-full lg:h-1/2 h-[200px]">
-                <Image
-                  src="/image/about-us/dhg.png"
-                  width={0}
-                  height={0}
-                  layout="fill"
-                  objectFit="contain"
-                  alt=""
-                />
-              </div>
-              <div className="relative w-full lg:h-1/2 h-[300px]">
+            <div className="flex flex-col items-center">
+              <div className="relative w-full lg:h-full h-[300px]">
                 <Image
                   src="/image/about-us/about-us-2.png"
                   width={0}
@@ -405,6 +254,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
                   layout="fill"
                   objectFit="cover"
                   alt=""
+                  className="rounded"
                 />
               </div>
             </div>

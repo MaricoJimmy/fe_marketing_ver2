@@ -2,20 +2,17 @@ import {
   ROUTER_ABOUT_US,
   ROUTER_BLOG,
   ROUTER_CASE_STUDY,
-  ROUTER_CONTACT,
   ROUTER_FISHERIES,
   ROUTER_INTERGRATE,
   ROUTER_INVESTORS,
   ROUTER_MANAGERS,
   ROUTER_OPERATORS,
-  ROUTER_PMS,
   ROUTER_SAAS,
   ROUTER_SOLAR,
 } from "@/utils/constant";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 function Footer() {
   const t = useTranslations("Footer");
@@ -87,11 +84,11 @@ function Footer() {
       menus: [
         {
           title: "Nền tảng SaaS",
-          href: ROUTER_INTERGRATE,
+          href: ROUTER_SAAS,
         },
         {
           title: "Tích hợp dữ liệu",
-          href: ROUTER_SAAS,
+          href: ROUTER_INTERGRATE,
         },
       ],
     },
@@ -231,6 +228,28 @@ function FooterDesktop({ sectionLinks }) {
                     support@udata.ai
                   </a>
                 </li>
+                <li className="flex items-center justify-center">
+                  <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      fillRule="evenodd"
+                      clipRule="evenodd"
+                      d="M3.87868 5.87868C3 6.75736 3 8.17157 3 11V13C3 15.8284 3 17.2426 3.87868 18.1213C4.75736 19 6.17157 19 9 19H15C17.8284 19 19.2426 19 20.1213 18.1213C21 17.2426 21 15.8284 21 13V11C21 8.17157 21 6.75736 20.1213 5.87868C19.2426 5 17.8284 5 15 5H9C6.17157 5 4.75736 5 3.87868 5.87868ZM6.5547 8.16795C6.09517 7.8616 5.4743 7.98577 5.16795 8.4453C4.8616 8.90483 4.98577 9.5257 5.4453 9.83205L10.8906 13.4622C11.5624 13.9101 12.4376 13.9101 13.1094 13.4622L18.5547 9.83205C19.0142 9.5257 19.1384 8.90483 18.8321 8.4453C18.5257 7.98577 17.9048 7.8616 17.4453 8.16795L12 11.7982L6.5547 8.16795Z"
+                      fill="#0069FF"
+                    />
+                  </svg>
+                  <a
+                    href="mailto:sales@udata.ai"
+                    className="ml-2 text-gray/80 font-semibold"
+                  >
+                    sales@udata.ai
+                  </a>
+                </li>
                 <li className="flex items-start justify-center">
                   <div>
                     <svg
@@ -250,12 +269,12 @@ function FooterDesktop({ sectionLinks }) {
                   </div>
                   <div className="flex flex-col gap-2">
                     <span className="ml-2 text-gray/80 font-semibold">
-                      Văn phòng Hà Nội: Tòa nhà Thiên Niên Kỷ, Tầng 9, Số 4
-                      Quang Trung, P. Yết Kiêu, Q. Hà Đông, Hà Nội.
+                      Văn phòng Hà Nội: <br /> Tòa nhà Thiên Niên Kỷ, Tầng 9, Số
+                      4 Quang Trung, P. Yết Kiêu, Q. Hà Đông, Hà Nội.
                     </span>
                     <span className="ml-2 text-gray/80 font-semibold">
-                      Văn phòng Hồ Chí Minh: Tầng 6, Tòa nhà DHG, Số 31-33,
-                      Đường 18, Phường 8, Quận Gò Vấp, TP. Hồ Chí Minh
+                      Văn phòng Hồ Chí Minh: <br /> Tầng 6, Tòa nhà DHG, Số
+                      31-33, Đường 18, Phường 8, Quận Gò Vấp, TP. Hồ Chí Minh
                     </span>
                   </div>
                 </li>
@@ -384,6 +403,28 @@ function FooterMobile({ sectionLinks }) {
                       support@udata.ai
                     </a>
                   </li>
+                  <li className="mt-6 flex items-center justify-start">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M3.87868 5.87868C3 6.75736 3 8.17157 3 11V13C3 15.8284 3 17.2426 3.87868 18.1213C4.75736 19 6.17157 19 9 19H15C17.8284 19 19.2426 19 20.1213 18.1213C21 17.2426 21 15.8284 21 13V11C21 8.17157 21 6.75736 20.1213 5.87868C19.2426 5 17.8284 5 15 5H9C6.17157 5 4.75736 5 3.87868 5.87868ZM6.5547 8.16795C6.09517 7.8616 5.4743 7.98577 5.16795 8.4453C4.8616 8.90483 4.98577 9.5257 5.4453 9.83205L10.8906 13.4622C11.5624 13.9101 12.4376 13.9101 13.1094 13.4622L18.5547 9.83205C19.0142 9.5257 19.1384 8.90483 18.8321 8.4453C18.5257 7.98577 17.9048 7.8616 17.4453 8.16795L12 11.7982L6.5547 8.16795Z"
+                        fill="#0069FF"
+                      />
+                    </svg>
+                    <a
+                      href="mailto:sales@udata.ai"
+                      className=" ml-2 text-gray/80 font-semibold"
+                    >
+                      sales@udata.ai
+                    </a>
+                  </li>
                   <li className="mt-6 flex items-start justify-start">
                     <div>
                       <svg
@@ -403,12 +444,12 @@ function FooterMobile({ sectionLinks }) {
                     </div>
                     <div className="flex flex-col gap-2">
                       <span className="ml-2 text-gray/80 font-semibold">
-                        Văn phòng Hà Nội: Tòa nhà Thiên Niên Kỷ, Tầng 9, Số 4
-                        Quang Trung, P. Yết Kiêu, Q. Hà Đông, Hà Nội.
+                        Văn phòng Hà Nội: <br /> Tòa nhà Thiên Niên Kỷ, Tầng 9,
+                        Số 4 Quang Trung, P. Yết Kiêu, Q. Hà Đông, Hà Nội.
                       </span>
                       <span className="ml-2 text-gray/80 font-semibold">
-                        Văn phòng Hồ Chí Minh: Tầng 6, Tòa nhà DHG, Số 31-33,
-                        Đường 18, Phường 8, Quận Gò Vấp, TP. Hồ Chí Minh
+                        Văn phòng Hồ Chí Minh: <br /> Tầng 6, Tòa nhà DHG, Số
+                        31-33, Đường 18, Phường 8, Quận Gò Vấp, TP. Hồ Chí Minh
                       </span>
                     </div>
                   </li>

@@ -1,15 +1,26 @@
 import FormGroup from "@/components/common/FormGroup";
 import { Button } from "@/components/ui/button";
+import { Checkbox } from "@/components/ui/checkbox";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import { useTranslations } from "next-intl";
 import { useState } from "react";
-import { useForm } from "react-hook-form";
+import { Controller, useForm } from "react-hook-form";
 import { toast, Toaster } from "react-hot-toast";
 import * as yup from "yup";
 import PageSeoHead from "../components/common/PageSeoHead";
 import Title from "../components/common/Title";
+
+const phoneRegExp =
+  /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
 
 const ContactPage = () => {
   const t = useTranslations("Contact");
@@ -19,13 +30,22 @@ const ContactPage = () => {
   const schema = yup.object().shape({
     name: yup.string().required(t("form.error.name")),
     companyName: yup.string().required(t("form.error.company")),
+    phone: yup
+      .string()
+      .required(t("form.error.phone.blank"))
+      .matches(phoneRegExp, t("form.error.phone.valid")),
     email: yup.string().email().required(t("form.error.email")),
+    fields: yup.string().required(t("form.error.fields")),
+    requests: yup.string().required(t("form.error.requests")),
+    sure: yup.boolean().oneOf([true], t("form.error.sure")),
   });
 
   const {
     register,
     handleSubmit,
-    formState: { errors, isValid },
+    formState: { errors },
+    control,
+    reset,
   } = useForm({ resolver: yupResolver(schema) });
 
   const onSubmit = (formData, e) => {
@@ -40,6 +60,7 @@ const ContactPage = () => {
       .then((r) => {
         toast.success(t("noti.success"));
         e.target.reset();
+        reset();
       })
       .catch((r) => {
         toast.error(t("noti.error"));
@@ -88,7 +109,7 @@ const ContactPage = () => {
                       </div>
                       <div className="flex flex-col gap-1">
                         <h4 className="text-xl text-neutral font-semibold">
-                          Hot line
+                          Hotline
                         </h4>
                         <a
                           href="tel:1800255698"
@@ -127,6 +148,35 @@ const ContactPage = () => {
                         </a>
                       </div>
                     </div>
+                    <div className="flex items-start gap-4">
+                      <div className="p-1 w-10 h-10 flex items-center justify-center rounded-full border border-gray/10">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            clipRule="evenodd"
+                            d="M3.87868 5.87868C3 6.75736 3 8.17157 3 11V13C3 15.8284 3 17.2426 3.87868 18.1213C4.75736 19 6.17157 19 9 19H15C17.8284 19 19.2426 19 20.1213 18.1213C21 17.2426 21 15.8284 21 13V11C21 8.17157 21 6.75736 20.1213 5.87868C19.2426 5 17.8284 5 15 5H9C6.17157 5 4.75736 5 3.87868 5.87868ZM6.5547 8.16795C6.09517 7.8616 5.4743 7.98577 5.16795 8.4453C4.8616 8.90483 4.98577 9.5257 5.4453 9.83205L10.8906 13.4622C11.5624 13.9101 12.4376 13.9101 13.1094 13.4622L18.5547 9.83205C19.0142 9.5257 19.1384 8.90483 18.8321 8.4453C18.5257 7.98577 17.9048 7.8616 17.4453 8.16795L12 11.7982L6.5547 8.16795Z"
+                            fill="#0069FF"
+                          />
+                        </svg>
+                      </div>
+                      <div className="flex flex-col gap-1">
+                        <h4 className="text-xl text-neutral font-semibold">
+                          Sales
+                        </h4>
+                        <a
+                          href="mailto:sales@udata.ai"
+                          className="text-neutral font-medium"
+                        >
+                          sales@udata.ai
+                        </a>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -147,7 +197,7 @@ const ContactPage = () => {
                         name="name"
                         label={t("form.name.label")}
                         placeholder={t("form.name.phd")}
-                        className={errors?.name ? "border-error" : ""}
+                        className={errors?.name ? "!border-error" : ""}
                       />
                       {errors.name && (
                         <p className="mt-2 text-xs text-error font-medium">
@@ -162,7 +212,7 @@ const ContactPage = () => {
                         name="companyName"
                         label={t("form.company.label")}
                         placeholder={t("form.company.phd")}
-                        className={errors?.companyName ? "border-error" : ""}
+                        className={errors?.companyName ? "!border-error" : ""}
                       />
                       {errors.companyName && (
                         <p className="mt-2 text-xs text-error font-medium">
@@ -173,17 +223,104 @@ const ContactPage = () => {
                     <div className="">
                       <FormGroup
                         register={register}
+                        type="number"
+                        name="phone"
+                        label={t("form.phone.label")}
+                        placeholder={t("form.phone.phd")}
+                        className={errors?.phone ? "!border-error" : ""}
+                      />
+                      {errors.phone && (
+                        <p className="mt-2 text-xs text-error font-medium">
+                          {errors.phone.message}
+                        </p>
+                      )}
+                    </div>
+                    <div className="">
+                      <FormGroup
+                        register={register}
                         type="email"
                         name="email"
                         label={t("form.email.label")}
                         placeholder={t("form.email.phd")}
-                        className={errors?.email ? "border-error" : ""}
+                        className={errors?.email ? "!border-error" : ""}
                       />
                       {errors.email && (
                         <p className="mt-2 text-xs text-error font-medium">
                           {errors.email.message}
                         </p>
                       )}
+                    </div>
+                    <div>
+                      <label htmlFor="" className="text-base font-medium">
+                        {t("form.fields.label")}
+                      </label>
+                      <div className="mt-2">
+                        <Controller
+                          control={control}
+                          name="fields"
+                          render={({ field }) => (
+                            <Select {...field} onValueChange={field.onChange}>
+                              <SelectTrigger
+                                className={`${
+                                  errors?.fields ? "!border-error" : ""
+                                } h-12 w-full !bg-white`}
+                              >
+                                <SelectValue
+                                  placeholder={t("form.fields.label")}
+                                />
+                              </SelectTrigger>
+                              <SelectContent className={`!bg-white`}>
+                                {t.raw("form.fields.lists").map((item) => (
+                                  <SelectItem key={item} value={item}>
+                                    {item}
+                                  </SelectItem>
+                                ))}
+                              </SelectContent>
+                            </Select>
+                          )}
+                        />
+                        {errors.fields && (
+                          <p className="mt-2 text-xs text-error font-medium">
+                            {errors.fields.message}
+                          </p>
+                        )}
+                      </div>
+                    </div>
+                    <div>
+                      <label htmlFor="" className="text-base font-medium">
+                        {t("form.requests.label")}
+                      </label>
+                      <div className="mt-2">
+                        <Controller
+                          control={control}
+                          name="requests"
+                          render={({ field }) => (
+                            <Select {...field} onValueChange={field.onChange}>
+                              <SelectTrigger
+                                className={`${
+                                  errors?.requests ? "!border-error" : ""
+                                } h-12 w-full !bg-white`}
+                              >
+                                <SelectValue
+                                  placeholder={t("form.requests.label")}
+                                />
+                              </SelectTrigger>
+                              <SelectContent className="!bg-white">
+                                {t.raw("form.requests.lists").map((item) => (
+                                  <SelectItem key={item} value={item}>
+                                    {item}
+                                  </SelectItem>
+                                ))}
+                              </SelectContent>
+                            </Select>
+                          )}
+                        />
+                        {errors.requests && (
+                          <p className="mt-2 text-xs text-error font-medium">
+                            {errors.requests.message}
+                          </p>
+                        )}
+                      </div>
                     </div>
                     <div className="">
                       <label htmlFor="" className="text-base font-medium">
@@ -222,6 +359,38 @@ const ContactPage = () => {
                         placeholder={t("form.message.phd")}
                         className="!h-[120px]"
                       />
+                    </div>
+                    <div>
+                      <Controller
+                        control={control}
+                        name="sure"
+                        render={({ field }) => (
+                          <div className="flex items-start space-x-2">
+                            <Checkbox
+                              id="sure"
+                              {...field}
+                              checked={field.value}
+                              className={`${
+                                errors?.sure ? "!border-error" : ""
+                              }`}
+                              onCheckedChange={() => {
+                                field.onChange(!field.value);
+                              }}
+                            />
+                            <label
+                              htmlFor="sure"
+                              className="leading-tight font-medium"
+                            >
+                              {t("form.checkboxSure")}
+                            </label>
+                          </div>
+                        )}
+                      />
+                      {errors.sure && (
+                        <p className="mt-2 text-xs text-error font-medium">
+                          {errors.sure.message}
+                        </p>
+                      )}
                     </div>
                     <div className="mt-4 flex justify-end">
                       <Button
