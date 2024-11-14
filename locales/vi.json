@@ -282,21 +282,56 @@
         "label": "Email",
         "phd": "Nhập email"
       },
+      "phone": {
+        "label": "Số điện thoại",
+        "phd": "Nhập số điện thoại"
+      },
+      "fields": {
+        "label": "Ngành nghề",
+        "lists": [
+          "Năng lượng mặt trời áp mái",
+          "Công nghiệp",
+          "Thủy sản",
+          "Nông nghiệp",
+          "Y tế",
+          "Quan trắc môi trường",
+          "Ngân hàng - Bán lẻ",
+          "Viễn thông",
+          "Xăng dầu",
+          "Khác"
+        ]
+      },
+      "requests": {
+        "label": "Nội dung yêu cầu thông tin",
+        "lists": [
+          "Hỗ trợ thanh toán/tài khoản",
+          "Yêu cầu thông tin về tuân thủ",
+          "Hỗ trợ bán hàng",
+          "Hỗ trợ kỹ thuật"
+        ]
+      },
       "target": {
-        "label": "Mục đích liên hệ",
-        "for-self": "Sử dụng phần mềm cho bản thân",
-        "for-customer": "Sử dụng phần mềm cho khách hàng"
+        "label": "Tôi đang hoàn thành biểu mẫu này liên quan đến",
+        "for-self": "Lợi ích cá nhân",
+        "for-customer": "Lợi ích kinh doanh"
       },
       "message": {
         "label": "Nội dung",
         "phd": "Nhập nội dung"
       },
+      "checkboxSure": "Có, tôi muốn Udata chia sẻ cho tôi các tin tức mới nhất về dịch vụ Udata và các chương trình khuyến mãi có liên quan qua email hoặc điện thoại.",
       "button": "Gửi",
       "error": {
         "name": "Họ và tên không được để trống!",
         "company": "Tên công ty không được để trống!",
-        "phone": "Số điện thoại không được để trống!",
-        "email": "Email không được để trống!"
+        "phone": {
+          "blank": "Số điện thoại không được để trống!",
+          "valid": "Số điện thoại không hợp lệ!"
+        },
+        "email": "Email không được để trống!",
+        "fields": "Ngành nghề không được để trống!",
+        "requests": "Ngành nghề không được để trống!",
+        "sure": "Vui lòng chấp nhận điều khoản"
       }
     },
     "noti": {

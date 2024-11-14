@@ -252,21 +252,56 @@
         "label": "Email",
         "phd": "Enter email"
       },
+      "phone": {
+        "label": "Phone number",
+        "phd": "Enter phone number"
+      },
+      "fields": {
+        "label": "Industry",
+        "lists": [
+          "Rooftop solar energy",
+          "Industrial",
+          "Aquaculture",
+          "Agriculture",
+          "Medical",
+          "Environmental monitoring",
+          "Banking - Retail",
+          "Telecommunications",
+          "Petroleum",
+          "Other"
+        ]
+      },
+      "requests": {
+        "label": "Information request content",
+        "lists": [
+          "Payment/account support",
+          "Request for compliance information",
+          "Sales Support",
+          "Technical support"
+        ]
+      },
       "target": {
-        "label": "Contact purpose",
-        "for-self": "Use the software for yourself",
-        "for-customer": "Use the software for customers"
+        "label": "I am completing this form regarding",
+        "for-self": "Personal benefit",
+        "for-customer": "Business benefits"
       },
       "message": {
         "label": "Message",
         "phd": "Enter messsage"
       },
+      "checkboxSure": "Yes, I want Udata to share with me the latest news about Udata services and related promotions via email or phone.",
       "button": "Send",
       "error": {
         "name": "Full name cannot be blank!",
         "company": "Company name cannot be empty!",
-        "phone": "Phone number cannot be empty!",
-        "email": "Email cannot be empty!"
+        "phone": {
+          "blank": "Phone number cannot be blank!",
+          "valid": "Invalid phone number!"
+        },
+        "email": "Email cannot be empty!",
+        "fields": "Professions cannot be left blank!",
+        "requests": "Professions cannot be left blank!",
+        "sure": "Please accept the terms"
       }
     },
     "noti": {
@@ -308,7 +343,8 @@
     },
     "contact": "Contact",
     "about-us": "About the company",
-    "bookDemo": "Book a demo"
+    "bookDemo": "Book a demo",
+    "career": "Career"
   },
   "Footer": {
     "section": {
