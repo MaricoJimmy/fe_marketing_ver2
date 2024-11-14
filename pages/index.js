@@ -10,7 +10,11 @@ import {
   PMSPostsQuery,
 } from "../queries/homePageQueries";
 import { getDate } from "@/utils";
-import { ROUTER_BLOG, ROUTER_CASE_STUDY } from "@/utils/constant";
+import {
+  ROUTER_BLOG,
+  ROUTER_CASE_STUDY,
+  ROUTER_CONTACT,
+} from "@/utils/constant";
 
 export async function getStaticProps({ locale }) {
   const client = getApolloClient();
@@ -313,7 +317,9 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
               Nền tảng quản lý và giám sát năng lượng
             </h3>
             <div className="mt-4">
-              <Button size="lg">Bắt đầu</Button>
+              <Button size="lg" onClick={() => router.push(ROUTER_CONTACT)}>
+                Bắt đầu
+              </Button>
             </div>
           </div>
         </section>
