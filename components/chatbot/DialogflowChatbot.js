@@ -29,7 +29,7 @@ const DialogflowChatbot = () => {
             "--df-messenger-message-bot-background": "#fff",
           }}
         >
-          <df-messenger-chat-bubble chat-title="Albert Einstein">
+          <df-messenger-chat-bubble chat-title="Udata chatbot">
             {" "}
           </df-messenger-chat-bubble>
         </df-messenger>
