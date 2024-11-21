@@ -9,6 +9,10 @@ const DialogflowChatbot = () => {
         rel="stylesheet"
         href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css"
       />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet"
+      />
 
       <div className="fixed bottom-4 right-4 z-[999] shadow-md rounded-full">
         <df-messenger
@@ -19,13 +23,13 @@ const DialogflowChatbot = () => {
           max-query-length="-1"
           style={{
             "--df-messenger-font-color": "#000",
-            "--df-messenger-font-family": "Google Sans",
+            "--df-messenger-font-family": "Inter",
             "--df-messenger-chat-background": "#f3f6fc",
-            "--df-messenger-message-user-background": "#d3e3fd",
+            "--df-messenger-message-user-background": "#C6DAFC",
             "--df-messenger-message-bot-background": "#fff",
           }}
         >
-          <df-messenger-chat-bubble chat-title="aichatbot-agent">
+          <df-messenger-chat-bubble chat-title="Albert Einstein">
             {" "}
           </df-messenger-chat-bubble>
         </df-messenger>
