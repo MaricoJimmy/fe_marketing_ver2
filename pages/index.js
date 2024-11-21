@@ -15,6 +15,7 @@ import {
   OEEPostsQuery,
   PMSPostsQuery,
 } from "../queries/homePageQueries";
+import ScrollToTop from "@/components/common/ScrollToTop";
 
 export async function getStaticProps({ locale }) {
   const client = getApolloClient();
@@ -260,6 +261,10 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
             </div>
           </div>
         </section>
+
+        <div className="fixed bottom-24 right-7 z-10">
+          <ScrollToTop />
+        </div>
       </div>
     </>
   );

@@ -42,7 +42,7 @@ const SolarRooftopLandingPage = () => {
         {/* call to action */}
         <CallToAction data={t.raw("callToAction")} />
         {/* scroll to top button */}
-        <div className="fixed bottom-5 right-5 z-10">
+        <div className="fixed bottom-24 right-7 z-10">
           <ScrollToTop />
         </div>
       </div>
