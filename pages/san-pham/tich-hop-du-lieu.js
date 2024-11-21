@@ -11,7 +11,7 @@ const PMSLandingPage = () => {
   const t = useTranslations("Intergration");
 
   const metaTagData = {
-    title: t("heroSection.heading"),
+    title: `${t("heroSection.heading")} | Udata.ai`,
     desc: t("heroSection.excerpt"),
     img: "/image/hero/intergration-pv.png",
   };

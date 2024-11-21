@@ -7,7 +7,7 @@ const AboutUsPage = () => {
   const t = useTranslations("AboutUs");
 
   const metaTagData = {
-    title: t("title"),
+    title: `${t("title")} | Udata.ai`,
     desc: t("excerpt"),
     img: "/image/hero/home-pv.png",
   };

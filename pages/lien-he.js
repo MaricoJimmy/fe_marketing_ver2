@@ -68,7 +68,7 @@ const ContactPage = () => {
   };
 
   const metaTagData = {
-    title: `${t("title")} | pambu.org`,
+    title: `${t("title")} | Udata.ai`,
     desc: t("subTitle"),
     img: "/image/hero/home-pv.png",
   };

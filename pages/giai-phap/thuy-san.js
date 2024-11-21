@@ -10,7 +10,7 @@ const SolarRooftopLandingPage = () => {
   const t = useTranslations("Fisheries");
 
   const metaTagData = {
-    title: t("heroSection.title"),
+    title: `${t("heroSection.title")} | Udata.ai`,
     desc: t("heroSection.desc"),
     img: "/image/hero/fisheries-pv.png",
   };

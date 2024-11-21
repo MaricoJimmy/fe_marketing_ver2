@@ -68,13 +68,11 @@ export async function getStaticProps({ locale }) {
   };
 }
 
-const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
+const HomePage = ({ oeePosts, pmsPosts }) => {
   const router = useRouter();
   const t = useTranslations("Index");
-  const firstPost = newsPosts[0];
-
   const metaTagData = {
-    title: `${t("titleSocial")} | udata.ai`,
+    title: `${t("titleSocial")} | Udata.ai`,
     desc: t("desc"),
     img: "/image/hero/home-pv.png",
   };

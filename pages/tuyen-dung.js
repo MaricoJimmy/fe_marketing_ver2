@@ -8,7 +8,7 @@ const AboutUsPage = () => {
   const t = useTranslations("Career");
 
   const metaTagData = {
-    title: t("title"),
+    title: `${t("title")} | Udata.ai`,
     desc: t("excerpt"),
     img: "/image/hero/home-pv.png",
   };
