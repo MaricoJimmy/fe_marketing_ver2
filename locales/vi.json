@@ -240,20 +240,31 @@
   },
   "Header": {
     "news": {
-      "title": "Tin tức",
-      "subMenus": {
-        "case-study": "Các ví dụ thực tế về hiệu quả giải pháp",
-        "blog": "Tin tức và chia sẻ về quản lý năng lượng"
-      }
+      "title": "Tin tức"
     },
     "products": {
       "title": "Sản phẩm",
+      "menus": {
+        "saas": "Nền tảng SaaS",
+        "integrate": "Tích hợp dữ liệu"
+      },
       "subMenus": {
         "pms": "Tối ưu năng lượng, tiết kiệm chi phí"
       }
     },
     "solutions": {
       "title": "Giải pháp",
+      "menusByObject": {
+        "title": "Theo đối tượng",
+        "investors": "Chủ đầu tư - quản lý cấp cao",
+        "managers": "Cấp quản lý",
+        "operators": "Cấp vận hành"
+      },
+      "menusByField": {
+        "title": "Theo lĩnh vực",
+        "factory": "Nhà máy",
+        "fishing": "Thủy sản"
+      },
       "subMenus": {
         "solar": "Giải pháp giám sát điện mặt trời áp mái"
       }
@@ -357,16 +368,34 @@
       "first": {
         "title": "Đường dẫn nhanh",
         "links": {
-          "news": "Tin tức",
-          "oee": "Tài liệu Pambu OEE",
-          "pms": "Tài liệu Pambu PMS",
-          "contact": "Liên hệ",
-          "about-us": "Về công ty"
+          "company": "Công ty",
+          "solutions": {
+            "title": "Giải pháp",
+            "investors": "Chủ đầu tư - quản lý cấp cao",
+            "managers": "Cấp quản lý",
+            "operators": "Cấp vận hành",
+            "saas": "Năng lượng mặt trời áp mái",
+            "factory": "Nhà máy",
+            "fishing": "Thủy sản"
+          },
+          "products": {
+            "title": "Sản phẩm",
+            "saas": "Nền tảng SaaS",
+            "integrate": "Tích hợp dữ liệu"
+          },
+          "blog": "Tin tức"
         }
       },
       "second": {
         "title": "Thông tin liên hệ",
-        "address": "Ô số 24, lô V5A – Khu nhà ở thấp tầng, khu đô thị mới Văn Phú , Phường Phú La, Quận Hà Đông, Thành phố Hà Nội, Việt Nam"
+        "addressHN": {
+          "title": "Văn phòng Hà Nội",
+          "address": "Tòa nhà Thiên Niên Kỷ, Tầng 9, Số 4 Quang Trung, P. Yết Kiêu, Q. Hà Đông, Hà Nội."
+        },
+        "addressHCM": {
+          "title": "Văn phòng Hồ Chí Minh",
+          "address": "Tầng 6, Tòa nhà DHG, Số 31-33, Đường 18, Phường 8, Quận Gò Vấp, TP. Hồ Chí Minh."
+        }
       },
       "third": {
         "title": "Giờ làm việc",
@@ -1221,5 +1250,95 @@
         "link": "https://drive.google.com/file/d/11SxPWdPppt3hTMC1UBolk_ZVunmfVSBz/view?usp=sharing"
       }
     ]
+  },
+  "Factory": {
+    "heroSection": {
+      "title": "Tối ưu hóa quy trình và hiệu quả sản xuất để tăng khả năng cạnh tranh trong ngành công nghiệp",
+      "subTitle": "Giải pháp toàn diện cho các nhà máy công nghiệp",
+      "desc": "Udata cung cấp các công nghệ tiên tiến giúp tối ưu hóa quá trình sản xuất, giảm tiêu thụ năng lượng và chi phí vận hành. Các giải pháp của chúng tôi bao gồm nâng cấp hệ thống giám sát năng lượng, giám sát hoạt động của máy, giám sát hệ thống kho lạnh, giám sát hệ thống phòng sạch và phòng thí nghiệm, giám sát trạm quan trắc môi trường, giám sát hệ thống nước sạch và nước thải.",
+      "contact": "Liên hệ"
+    },
+    "allFeatures": {
+      "title": "Các tính năng chính",
+      "lists": [
+        {
+          "id": "1",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-power'><path d='M12 2v10'/><path d='M18.4 6.6a9 9 0 1 1-12.77.04'/></svg>",
+          "title": "Giám sát hệ thống năng lượng",
+          "content": "Giám sát thông số U, I, P, Q, Hz,…; Phân tích tiêu thụ năng lượng giờ cao điểm, thấp điểm; Phân tích khí phát thải Scope 1, Scope 2"
+        },
+        {
+          "id": "2",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-activity'><path d='M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2'/></svg>",
+          "title": "Giám sát hoạt động của máy",
+          "content": "Giám sát hiệu suất thiết bị: Nhiệt độ vận hành (°C), Áp suất vận hành (bar), Tiếng ồn (dB), độ rung. Giám sát hiệu quả sản xuất: Tốc độ sản xuất (sản phẩm/phút), Thời gian dừng máy (phút), Tỷ lệ phế phẩm (%)."
+        },
+        {
+          "id": "3",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-snowflake'><line x1='2' x2='22' y1='12' y2='12'/><line x1='12' x2='12' y1='2' y2='22'/><path d='m20 16-4-4 4-4'/><path d='m4 8 4 4-4 4'/><path d='m16 4-4 4-4-4'/><path d='m8 20 4-4 4 4'/></svg>",
+          "title": "Giám sát hệ thống kho lạnh",
+          "content": "Giám sát thông số U, I, P; Giám sát nhiệt độ, độ ẩm, áp suất; Giám sát trạng thái máy nén, quạt; Phân tích tiêu thụ năng lượng giờ cao điểm, thấp điểm"
+        },
+        {
+          "id": "4",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-beaker'><path d='M4.5 3h15'/><path d='M6 3v16a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V3'/><path d='M6 14h12'/></svg>",
+          "title": "Giám sát hệ thống phòng sạch, phòng thí nghiệm",
+          "content": "Giám sát các thông số môi trường như nhiệt độ, độ ẩm, áp suất, độ bụi"
+        },
+        {
+          "id": "5",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-cloud'><path d='M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z'/></svg>",
+          "title": "Giám sát trạm quan trắc môi trường",
+          "content": "Giám sát các yếu tố môi trường như chất lượng không khí, nước thải, tiếng ồn"
+        },
+        {
+          "id": "6",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-droplet'><path d='M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z'/></svg>",
+          "title": "Giám sát hệ thống nước sạch, nước thải",
+          "content": "Lưu lượng nước thải, pH, Nồng độ kim loại nặng, độ đục"
+        }
+      ]
+    },
+    "singleFeature": {
+      "first": {
+        "title": "Giám sát hiệu suất theo thời gian thực",
+        "subTitle": "Một phần tập trung vào cách dữ liệu theo thời gian thực và phân tích hiệu suất cung cấp sự minh bạch về hiệu suất hệ thống.",
+        "desc": "Nền tảng của chúng tôi cung cấp các biểu đồ thống kê phân tích về các thông số của nhà máy. Sử dụng dữ liệu hiệu suất trong quá khứ để xác định những điểm kém hiệu quả và đưa ra các quyết định dựa trên dữ liệu để tối ưu hóa việc sử dụng năng lượng.",
+        "img": "/image/solutions/factory/factory-feature-1.png"
+      },
+      "second": {
+        "title": "Cảnh báo tự động và bảo trì chủ động",
+        "subTitle": "Giải thích cách hệ thống gửi thông báo khi vượt qua các ngưỡng hiệu suất, giúp thực hiện hành động nhanh chóng đối với các lỗi hệ thống.",
+        "desc": "Tránh thời gian chết với hệ thống cảnh báo thông minh của chúng tôi. Nhận thông báo theo thời gian thực về mọi vấn đề ảnh hưởng đến sản lượng hệ thống nhà máy của bạn, đảm bảo hệ thống của bạn hoạt động ở hiệu suất cao nhất.",
+        "img": "/image/solutions/factory/factory-feature-2.png"
+      },
+      "third": {
+        "title": "Báo cáo điểm bất thường",
+        "subTitle": "Tập trung vào khả năng tổng hợp thông tin từ điểm bất thường đưa ra cảnh báo về sự thất thoát doanh thu.",
+        "desc": "Chúng tôi cung cấp cho bạn các báo cáo bất thường theo ngày, tuần, tháng. Với các con số cụ thể và trực quan, nắm bắt được ngay lập tức vấn đề đang xảy ra trong hệ thống, giúp bạn đưa ra quyết định ngay lập tức.",
+        "img": "/image/solutions/factory/factory-feature-3.jpg"
+      },
+      "four": {
+        "title": "Quản lý đa địa điểm, đa thiết bị",
+        "subTitle": "Tập trung vào khả năng quản lý đồng bộ nhiều địa điểm, nhiều thiết bị từ các nhà sản xuất khác nhau trên cùng một nền tảng.",
+        "desc": "Udata tương thích với nhiều nền tảng khác nhau như máy tính để bàn, máy tính bảng và điện thoại di động, giúp người dùng truy cập hệ thống mọi lúc, mọi nơi. Điều này đặc biệt hữu ích cho các doanh nghiệp có chi nhánh trải rộng trên nhiều quốc gia.",
+        "img": "/image/solutions/factory/factory-feature-4.jpg"
+      }
+    },
+    "callToAction": {
+      "title": "Sẵn sàng làm việc theo cách tập trung, đơn giản và hiệu quả?",
+      "content": "Hãy trao đổi với một trong những chuyên gia của chúng tôi để xác định giải pháp phù hợp với nhu cầu của bạn",
+      "actions": [
+        {
+          "title": "Xác định giải pháp lý tưởng của bạn",
+          "desc": "Bạn đang tìm kiếm giải pháp phù hợp nhất? Chúng tôi sẽ đồng hành cùng bạn. Các chuyên gia của chúng tôi sẽ lắng nghe nhu cầu của bạn và đưa ra những gợi ý phù hợp, giúp bạn tìm ra giải pháp tối ưu."
+        },
+        {
+          "title": "Thiết lập ban đầu của giải pháp tùy chỉnh",
+          "desc": "Chúng tôi sẽ triển khai giải pháp một cách chuyên nghiệp. Các chuyên gia của chúng tôi sẽ cấu hình và tùy chỉnh hệ thống để đáp ứng yêu cầu cụ thể của bạn."
+        }
+      ],
+      "button": "Đặt lịch demo"
+    }
   }
 }

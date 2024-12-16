@@ -8,6 +8,7 @@ export const ROUTER_SAAS = "/san-pham/nen-tang-saas";
 // solutions
 export const ROUTER_SOLAR = "/giai-phap/solar-rooftop";
 export const ROUTER_FISHERIES = "/giai-phap/thuy-san";
+export const ROUTER_FACTORY = "/giai-phap/nha-may";
 export const ROUTER_INVESTORS = "/giai-phap/nha-dau-tu";
 export const ROUTER_MANAGERS = "/giai-phap/nha-quan-ly-cap-cao";
 export const ROUTER_OPERATORS = "/giai-phap/nha-quan-ly-van-hanh";

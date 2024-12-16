@@ -171,7 +171,7 @@ const HomePage = ({ oeePosts, pmsPosts }) => {
       <PageSeoHead data={metaTagData} />
       <div>
         {/* hero section */}
-        <section className="w-full h-[500px] flex md:items-center bg-[url('/image/bg/bg-home.png')] bg-center bg-cover bg-no-repeat">
+        <section className="w-full h-[600px] flex items-center bg-[url('/image/bg/bg-home.png')] bg-center bg-cover bg-no-repeat">
           <div className="lg:p-14 p-8 lg:w-full md:w-[70%]">
             <h1 className="lg:text-7xl text-4xl text-white font-semibold">
               Udata

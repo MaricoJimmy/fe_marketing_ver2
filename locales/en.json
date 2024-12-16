@@ -25,7 +25,7 @@
         ]
       },
       "byFields": {
-        "title": "Solutions by each field",
+        "title": "Solutions by field",
         "solutions": [
           {
             "title": "Rooftop solar",
@@ -331,13 +331,28 @@
       }
     },
     "products": {
-      "title": "Products",
+      "title": "Product",
+      "menus": {
+        "saas": "SaaS Platform",
+        "integrate": "Data integration"
+      },
       "subMenus": {
         "pms": "Optimize energy, save costs"
       }
     },
     "solutions": {
       "title": "Solution",
+      "menusByObject": {
+        "title": "By object",
+        "investors": "Investors - senior managers",
+        "managers": "Management level",
+        "operators": "Operator level"
+      },
+      "menusByField": {
+        "title": "By field",
+        "factory": "Factory",
+        "fishing": "Fisheries"
+      },
       "subMenus": {
         "solar": "Rooftop solar power monitoring solution"
       }
@@ -350,18 +365,36 @@
   "Footer": {
     "section": {
       "first": {
-        "title": "Quick link",
+        "title": "Quick Link",
         "links": {
-          "news": "News",
-          "oee": "Pambu OEE documents",
-          "pms": "Pambu PMS documents",
-          "contact": "Contact",
-          "about-us": "About the company"
+          "company": "Company",
+          "solutions": {
+            "title": "Solution",
+            "investors": "Investors - senior managers",
+            "managers": "Managers",
+            "operators": "Operators",
+            "saas": "Rooftop solar",
+            "factory": "Factory",
+            "fishing": "Fisheries"
+          },
+          "products": {
+            "title": "Product",
+            "saas": "SaaS Platform",
+            "integrate": "Data integration"
+          },
+          "blog": "News"
         }
       },
       "second": {
-        "title": "Contact Info",
-        "address": "Block 24, Lot V5A – Low-rise housing area, Van Phu new urban area, Phu La Ward, Ha Dong District, Hanoi City, Vietnam"
+        "title": "Contact information",
+        "addressHN": {
+          "title": "Hanoi Office",
+          "address": "Thien Nien Ky Building, 9th Floor, No. 4 Quang Trung, Yet Kieu Ward, Ha Dong District, Hanoi."
+        },
+        "addressHCM": {
+          "title": "Ho Chi Minh Office",
+          "address": "6th Floor, DHG Building, No. 31-33, Street 18, Ward 8, Go Vap District, Ho Chi Minh City."
+        }
       },
       "third": {
         "title": "Work time",
@@ -1216,5 +1249,95 @@
         "link": "https://drive.google.com/file/d/11SxPWdPppt3hTMC1UBolk_ZVunmfVSBz/view?usp=sharing"
       }
     ]
+  },
+  "Factory": {
+    "heroSection": {
+      "title": "Optimize production and boost competitiveness",
+      "subTitle": "Comprehensive solutions for industrial plants",
+      "desc": "Udata provides advanced technologies that help optimize production processes, reduce energy consumption and operating costs. Our solutions include upgrading energy monitoring systems, Monitor machine operations, monitor cold storage systems, monitor clean room and laboratory systems, monitor environmental monitoring stations, monitor clean water and wastewater systems.",
+      "contact": "Contact"
+    },
+    "allFeatures": {
+      "title": "Main features",
+      "lists": [
+        {
+          "id": "1",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-power'><path d='M12 2v10'/><path d='M18.4 6.6a9 9 0 1 1-12.77.04'/></svg>",
+          "title": "Energy system monitoring",
+          "content": "Monitor parameters U, I, P, Q, Hz,...; Analyze energy consumption during peak and off-peak hours; Analyze emissions Scope 1, Scope 2"
+        },
+        {
+          "id": "2",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-activity'><path d='M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2'/></svg>",
+          "title": "Monitoring machine operations",
+          "content": "Monitor equipment performance: Operating temperature (°C), Operating pressure (bar), Noise (dB), vibration. Monitor production efficiency: Production speed ( products/minute), Machine downtime (minutes), Waste rate (%)."
+        },
+        {
+          "id": "3",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-snowflake'><line x1='2' x2='22' y1='12' y2='12'/><line x1='12' x2='12' y1='2' y2='22'/><path d='m20 4-16 -4 4-4'/><path d='m4 8 4 4-4 4'/><path d='m16 4-4 4-4-4'/><path d='m8 20 4-4 4 4'/></svg>",
+          "title": "Monitoring the cold storage system",
+          "content": "Monitor U, I, P parameters; Monitor temperature, humidity, pressure; Monitor compressor and fan status; Analyze peak and off-peak energy consumption"
+        },
+        {
+          "id": "4",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-beaker'><path d='M4.5 3h15'/><path d='M6 3v16a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V3'/><path d='M6 14h12'/></svg>",
+          "title": "Monitoring clean room and laboratory systems",
+          "content": "Monitor environmental parameters such as temperature, humidity, pressure, dust"
+        },
+        {
+          "id": "5",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-cloud'><path d='M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z'/></svg>",
+          "title": "Monitoring environmental monitoring station",
+          "content": "Monitor environmental factors such as air quality, wastewater, noise"
+        },
+        {
+          "id": "6",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-droplet'><path d='M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z '/></svg>",
+          "title": "Monitoring clean water and wastewater systems",
+          "content": "Wastewater flow, pH, Heavy metal concentration, turbidity"
+        }
+      ]
+    },
+    "singleFeature": {
+      "first": {
+        "title": "Real-time performance monitoring",
+        "subTitle": "A section focusing on how real-time data and performance analytics provide transparency into system performance.",
+        "desc": "Our platform provides statistical analysis of plant parameters. Use historical performance data to identify inefficiencies and inform decisions based on data to optimize energy use.",
+        "img": "/image/solutions/factory/factory-feature-1.png"
+      },
+      "second": {
+        "title": "Automatic alerts and proactive maintenance",
+        "subTitle": "Explains how the system sends notifications when performance thresholds are crossed, helping to take quick action on system errors.",
+        "desc": "Avoid downtime with our smart alert system. Receive real-time notifications of any issues affecting your factory system output, ensuring your system is up and running operating at peak performance.",
+        "img": "/image/solutions/factory/factory-feature-2.png"
+      },
+      "third": {
+        "title": "Report an anomaly",
+        "subTitle": "Focuses on the ability to synthesize information from anomalies that give warnings about revenue loss.",
+        "desc": "We provide you with abnormal reports by day, week, and month. With specific and intuitive numbers, you can immediately grasp the problem occurring in the system, helping you make a decision immediately.",
+        "img": "/image/solutions/factory/factory-feature-3.jpg"
+      },
+      "four": {
+        "title": "Multi-location, multi-device management",
+        "subTitle": "Focuses on the ability to synchronously manage multiple locations, multiple devices from different manufacturers on the same platform.",
+        "desc": "Udata is compatible with many different platforms such as desktop computers, tablets and mobile phones, helping users access the system anytime, anywhere. This is especially useful for businesses. The business has branches spread across many countries.",
+        "img": "/image/solutions/factory/factory-feature-4.jpg"
+      }
+    },
+    "callToAction": {
+      "title": "Ready to work in a focused, simple and effective way?",
+      "content": "Talk to one of our experts to determine the right solution for your needs",
+      "actions": [
+        {
+          "title": "Determine your ideal solution",
+          "desc": "Are you looking for the most suitable solution? We will accompany you. Our experts will listen to your needs and provide suitable suggestions, helping you find a optimal solution."
+        },
+        {
+          "title": "Initial setup of custom solution",
+          "desc": "We will professionally deploy the solution. Our experts will configure and customize the system to meet your specific requirements."
+        }
+      ],
+      "button": "Schedule demo"
+    }
   }
 }

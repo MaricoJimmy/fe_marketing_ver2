@@ -45,31 +45,31 @@ function Footer() {
 
   const listMenu = [
     {
-      section: "Công ty",
+      section: t("section.first.links.company"),
       href: ROUTER_ABOUT_US,
     },
     {
-      section: "Giải pháp",
+      section: t("section.first.links.solutions.title"),
       menus: [
         {
-          title: "Chủ đầu tư - Quản lý cấp cao",
+          title: t("section.first.links.solutions.investors"),
           href: ROUTER_INVESTORS,
         },
         {
-          title: "Cấp quản lý",
+          title: t("section.first.links.solutions.managers"),
           href: ROUTER_MANAGERS,
         },
         {
-          title: "Cấp vận hành",
+          title: t("section.first.links.solutions.operators"),
           href: ROUTER_OPERATORS,
         },
         {
-          title: "Năng lượng mặt trời áp mái",
+          title: t("section.first.links.solutions.saas"),
           href: ROUTER_SOLAR,
         },
         // "Nhà máy công nghiệp",
         {
-          title: "Thủy sản",
+          title: t("section.first.links.solutions.fishing"),
           href: ROUTER_FISHERIES,
         },
         // "Nông nghiệp",
@@ -80,20 +80,20 @@ function Footer() {
       ],
     },
     {
-      section: "Sản phẩm",
+      section: t("section.first.links.products.title"),
       menus: [
         {
-          title: "Nền tảng SaaS",
+          title: t("section.first.links.products.saas"),
           href: ROUTER_SAAS,
         },
         {
-          title: "Tích hợp dữ liệu",
+          title: t("section.first.links.products.integrate"),
           href: ROUTER_INTERGRATE,
         },
       ],
     },
     {
-      section: "Tin tức",
+      section: t("section.first.links.blog"),
       menus: [
         {
           title: "Case study",
@@ -269,12 +269,12 @@ function FooterDesktop({ sectionLinks }) {
                   </div>
                   <div className="flex flex-col gap-2">
                     <span className="ml-2 text-gray/80 font-semibold">
-                      Văn phòng Hà Nội: <br /> Tòa nhà Thiên Niên Kỷ, Tầng 9, Số
-                      4 Quang Trung, P. Yết Kiêu, Q. Hà Đông, Hà Nội.
+                      {t("section.second.addressHN.title")}: <br />{" "}
+                      {t("section.second.addressHN.address")}
                     </span>
                     <span className="ml-2 text-gray/80 font-semibold">
-                      Văn phòng Hồ Chí Minh: <br /> Tầng 6, Tòa nhà DHG, Số
-                      31-33, Đường 18, Phường 8, Quận Gò Vấp, TP. Hồ Chí Minh
+                      {t("section.second.addressHCM.title")}: <br />{" "}
+                      {t("section.second.addressHCM.address")}
                     </span>
                   </div>
                 </li>
@@ -444,12 +444,12 @@ function FooterMobile({ sectionLinks }) {
                     </div>
                     <div className="flex flex-col gap-2">
                       <span className="ml-2 text-gray/80 font-semibold">
-                        Văn phòng Hà Nội: <br /> Tòa nhà Thiên Niên Kỷ, Tầng 9,
-                        Số 4 Quang Trung, P. Yết Kiêu, Q. Hà Đông, Hà Nội.
+                        {t("section.second.addressHN.title")}: <br />{" "}
+                        {t("section.second.addressHN.address")}
                       </span>
                       <span className="ml-2 text-gray/80 font-semibold">
-                        Văn phòng Hồ Chí Minh: <br /> Tầng 6, Tòa nhà DHG, Số
-                        31-33, Đường 18, Phường 8, Quận Gò Vấp, TP. Hồ Chí Minh
+                        {t("section.second.addressHCM.title")}: <br />{" "}
+                        {t("section.second.addressHCM.address")}
                       </span>
                     </div>
                   </li>
