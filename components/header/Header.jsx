@@ -20,6 +20,7 @@ import {
   ROUTER_CAREER,
   ROUTER_CASE_STUDY,
   ROUTER_CONTACT,
+  ROUTER_FACTORY,
   ROUTER_FISHERIES,
   ROUTER_INTERGRATE,
   ROUTER_INVESTORS,
@@ -94,11 +95,14 @@ function HeaderDesktop({ stickyHeader, locale }) {
                         {/* <MenuItem title="Udata PMS" href={ROUTER_PMS}>
                           {t("products.subMenus.pms")}
                         </MenuItem> */}
-                        <MenuItem title="Nền tảng SaaS" href={ROUTER_SAAS}>
+                        <MenuItem
+                          title={t("products.menus.saas")}
+                          href={ROUTER_SAAS}
+                        >
                           Nền tảng dịch vụ phần mềm trên SaaS
                         </MenuItem>
                         <MenuItem
-                          title="Tích hợp dữ liệu"
+                          title={t("products.menus.integrate")}
                           href={ROUTER_INTERGRATE}
                         >
                           Mở khóa dữ liệu của bạn với Udata
@@ -114,25 +118,25 @@ function HeaderDesktop({ stickyHeader, locale }) {
                       <div className="flex items-start">
                         <div className="p-4">
                           <h3 className="text-neutral text-base font-semibold">
-                            Theo đối tượng
+                            {t("solutions.menusByObject.title")}
                           </h3>
                           <ul className="mt-2 min-w-[340px] border-none list-none">
                             <MenuItem
-                              title="Chủ đầu tư - Quản lý cấp cao"
+                              title={t("solutions.menusByObject.investors")}
                               href={ROUTER_INVESTORS}
                               isDivideSection
                             >
                               Giải pháp cho Chủ đầu tư - Quản lý cấp cao
                             </MenuItem>
                             <MenuItem
-                              title="Cấp quản lý"
+                              title={t("solutions.menusByObject.managers")}
                               href={ROUTER_MANAGERS}
                               isDivideSection
                             >
                               Giải pháp cho Cấp quản lý
                             </MenuItem>
                             <MenuItem
-                              title="Cấp vận hành"
+                              title={t("solutions.menusByObject.operators")}
                               href={ROUTER_OPERATORS}
                               isDivideSection
                             >
@@ -142,7 +146,7 @@ function HeaderDesktop({ stickyHeader, locale }) {
                         </div>
                         <div className="p-4">
                           <h3 className="text-neutral text-base font-semibold">
-                            Theo lĩnh vực
+                            {t("solutions.menusByField.title")}
                           </h3>
                           <ul className="mt-2 min-w-[380px] border-none list-none">
                             <MenuItem
@@ -154,14 +158,14 @@ function HeaderDesktop({ stickyHeader, locale }) {
                               Giải pháp quản lý vận hành điện mặt trời áp mái
                             </MenuItem>
                             <MenuItem
-                              title="Nhà máy"
-                              href={"/"}
+                              title={t("solutions.menusByField.factory")}
+                              href={ROUTER_FACTORY}
                               isDivideSection
                             >
                               Giải pháp cho nhà máy công nghiệp
                             </MenuItem>
                             <MenuItem
-                              title="Thủy sản"
+                              title={t("solutions.menusByField.fishing")}
                               href={ROUTER_FISHERIES}
                               isDivideSection
                             >
@@ -253,11 +257,11 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
         //   href: ROUTER_PMS,
         // },
         {
-          title: "Nền tảng SaaS",
+          title: t("products.menus.saas"),
           href: ROUTER_SAAS,
         },
         {
-          title: "Tích hợp dữ liệu",
+          title: t("products.menus.integrate"),
           href: ROUTER_INTERGRATE,
         },
       ],
@@ -268,35 +272,35 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
       menu: t("solutions.title"),
       subMenu: [
         {
-          title: "Theo đối tượng",
+          title: t("solutions.menusByObject.title"),
           menus: [
             {
-              title: "Chủ đầu tư - Quản lý cấp cao",
+              title: t("solutions.menusByObject.investors"),
               href: ROUTER_INVESTORS,
             },
             {
-              title: "Cấp quản lý",
+              title: t("solutions.menusByObject.managers"),
               href: ROUTER_MANAGERS,
             },
             {
-              title: "Cấp vận hành",
+              title: t("solutions.menusByObject.operators"),
               href: ROUTER_OPERATORS,
             },
           ],
         },
         {
-          title: "Theo lĩnh vực",
+          title: t("solutions.menusByField.title"),
           menus: [
             {
               title: "Solar rooftop",
               href: ROUTER_SOLAR,
             },
             {
-              title: "Nhà máy",
-              href: "/",
+              title: t("solutions.menusByField.factory"),
+              href: ROUTER_FACTORY,
             },
             {
-              title: "Thủy sản",
+              title: t("solutions.menusByField.fishing"),
               href: ROUTER_FISHERIES,
             },
           ],

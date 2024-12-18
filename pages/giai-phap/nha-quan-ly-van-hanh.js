@@ -10,7 +10,7 @@ const SolarRooftopLandingPage = () => {
   const t = useTranslations("Operators");
 
   const metaTagData = {
-    title: t("heroSection.title"),
+    title: `${t("heroSection.title")} | Udata.ai`,
     desc: t("heroSection.desc"),
     img: "/image/hero/operators-pv.png",
   };
@@ -47,7 +47,7 @@ const SolarRooftopLandingPage = () => {
         {/* call to action */}
         <CallToActionV2 data={t.raw("callToAction")} />
         {/* scroll to top button */}
-        <div className="fixed bottom-5 right-5 z-10">
+        <div className="fixed bottom-24 right-7 z-10">
           <ScrollToTop />
         </div>
       </div>

@@ -1,9 +1,9 @@
-import Script from "next/script";
-import DefaultLayout from "../components/layout/DefaultLayout";
-import "../styles/globals.css";
 import { IntlProvider } from "next-intl";
 import { useRouter } from "next/router";
+import Script from "next/script";
+import DefaultLayout from "../components/layout/DefaultLayout";
 import MaintenanceLayout from "../components/layout/MaintenanceLayout";
+import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();

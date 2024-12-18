@@ -12,7 +12,7 @@ const PMSLandingPage = () => {
   const t = useTranslations("PMS");
 
   const metaTagData = {
-    title: t("heroSection.heading"),
+    title: `${t("heroSection.heading")} | Udata.ai`,
     desc: t("heroSection.excerpt"),
     img: "/image/pms/pms-page.png",
   };
@@ -67,7 +67,7 @@ const PMSLandingPage = () => {
         />
 
         {/* scroll to top button */}
-        <div className="fixed bottom-5 right-5">
+        <div className="fixed bottom-24 right-7 z-10">
           <ScrollToTop />
         </div>
       </div>

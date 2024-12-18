@@ -8,7 +8,7 @@ const AboutUsPage = () => {
   const t = useTranslations("Career");
 
   const metaTagData = {
-    title: t("title"),
+    title: `${t("title")} | Udata.ai`,
     desc: t("excerpt"),
     img: "/image/hero/home-pv.png",
   };
@@ -79,7 +79,7 @@ const AboutUsPage = () => {
           </div>
         </div>
 
-        <div className="fixed bottom-5 right-5 z-10">
+        <div className="fixed bottom-24 right-7 z-10">
           <ScrollToTop />
         </div>
       </div>

@@ -1,3 +1,4 @@
+import DialogflowChatbot from "../chatbot/DialogflowChatbot";
 import Footer from "../common/Footer";
 import Header from "../header/Header";
 
@@ -7,6 +8,8 @@ function DefaultLayout({ children }) {
       {/* <Hotline /> */}
       <Header />
       <div>{children}</div>
+      {/* chatbot */}
+      <DialogflowChatbot />
       <Footer />
     </div>
   );

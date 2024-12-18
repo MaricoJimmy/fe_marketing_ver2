@@ -15,6 +15,7 @@ import {
   OEEPostsQuery,
   PMSPostsQuery,
 } from "../queries/homePageQueries";
+import ScrollToTop from "@/components/common/ScrollToTop";
 
 export async function getStaticProps({ locale }) {
   const client = getApolloClient();
@@ -67,13 +68,11 @@ export async function getStaticProps({ locale }) {
   };
 }
 
-const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
+const HomePage = ({ oeePosts, pmsPosts }) => {
   const router = useRouter();
   const t = useTranslations("Index");
-  const firstPost = newsPosts[0];
-
   const metaTagData = {
-    title: `${t("titleSocial")} | udata.ai`,
+    title: `${t("titleSocial")} | Udata.ai`,
     desc: t("desc"),
     img: "/image/hero/home-pv.png",
   };
@@ -172,7 +171,7 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
       <PageSeoHead data={metaTagData} />
       <div>
         {/* hero section */}
-        <section className="w-full h-[500px] flex md:items-center bg-[url('/image/bg/bg-home.png')] bg-center bg-cover bg-no-repeat">
+        <section className="w-full h-[600px] flex items-center bg-[url('/image/bg/bg-home.png')] bg-center bg-cover bg-no-repeat">
           <div className="lg:p-14 p-8 lg:w-full md:w-[70%]">
             <h1 className="lg:text-7xl text-4xl text-white font-semibold">
               Udata
@@ -260,6 +259,10 @@ const HomePage = ({ oeePosts, pmsPosts, newsPosts }) => {
             </div>
           </div>
         </section>
+
+        <div className="fixed bottom-24 right-7 z-10">
+          <ScrollToTop />
+        </div>
       </div>
     </>
   );
