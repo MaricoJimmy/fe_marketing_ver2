@@ -184,7 +184,7 @@ const HomePage = ({ oeePosts, pmsPosts }) => {
             </h3>
             <div className="mt-4">
               <Button size="lg" onClick={() => router.push(ROUTER_CONTACT)}>
-                Bắt đầu
+                {t("button.start")}
               </Button>
             </div>
           </div>
