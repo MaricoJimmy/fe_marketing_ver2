@@ -15,7 +15,11 @@ const AboutUsPage = () => {
 
   const renderCareer = ({ title, location, exp, link }) => {
     return (
-      <Link href={link}>
+      <Link
+        href={
+          "https://docs.google.com/forms/d/e/1FAIpQLSdgC3dFvEQMnpoFlhWqiH369je7W2DdaFLSbwoEPCHg_qVblA/viewform"
+        }
+      >
         <a
           rel="noopener noreferrer"
           target="_blank"
