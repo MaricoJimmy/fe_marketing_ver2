@@ -235,11 +235,13 @@
     "demo": "With the goal of accompanying customers to modernize industrial production, Pambu will support customers to use a <span class='font-bold'>FREE</span> demo."
   },
   "Contact": {
-    "title": "Contact us",
+    "title": "Try the Udata platform for free for 15 days!",
     "subTitle": "Contact us if you need a demo",
     "titleSection": {
       "first": "Contact information",
-      "second": "Request demo"
+      "second": "Request demo",
+      "third": "Free trial of Udata platform for 15 days!",
+      "fourth": "Trial registration guide"
     },
     "form": {
       "name": {
@@ -309,6 +311,51 @@
     "noti": {
       "success": "Schedule successful!",
       "error": "An error occurred!"
+    },
+    "trial": [
+      {
+        "title": "Completely free",
+        "desc": "Experience all the features of the Udata platform without any cost."
+      },
+      {
+        "title": "Easy to use",
+        "desc": "Just a few minutes to register and start your journey to optimize energy and IoT operations."
+      },
+      {
+        "title": "Absolute security",
+        "desc": "All your personal information and registration data will be protected according to the highest security standards."
+      }
+    ],
+    "instruct": [
+      {
+        "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-clock'><circle cx='12' cy='12' r='10'/><polyline points='12 6 12 12 16 14'/></svg>",
+        "title": "Trial period",
+        "desc": "15 days from the date of account activation."
+      },
+      {
+        "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-mail'><rect width='20' height='16' x='2' y='4' rx='2'/><path d='m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7'/></svg>",
+        "title": "Online support",
+        "desc": "Our team will send trial accounts and instructions via registered email."
+      },
+      {
+        "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-laptop'><path d='M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16'/></svg>",
+        "title": "Register today to become part of a pioneering solution!",
+        "onlyTitle": true
+      },
+      {
+        "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-lightbulb'><path d='M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5'/><path d='M9 18h6'/><path d='M10 22h4'/></svg>",
+        "title": "Get started now",
+        "desc": "Register for a free trial",
+        "scroll": "#form-contact"
+      },
+      {
+        "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-sparkles'><path d='M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z'/><path d='M20 3v4'/><path d='M22 5h-4'/><path d='M4 17v2'/><path d='M5 18H3'/></svg>",
+        "title": "Udata – Accompanying businesses in the era of technology and sustainability",
+        "onlyTitle": true
+      }
+    ],
+    "button": {
+      "demo": "Request demo"
     }
   },
   "Common": {
