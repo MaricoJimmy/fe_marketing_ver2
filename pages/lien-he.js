@@ -80,7 +80,7 @@ const ContactPage = () => {
       <div className="flex flex-col">
         <div className="relative w-full lg:h-[600px] h-fit bg-[url('/image/bg/bg-contact.jpg')] bg-center bg-no-repeat bg-cover flex justify-center items-center">
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-neutral/40 to-neutral/80"></div>
-          <div className="z-10 px-5 md:px-8 py-16 max-w-screen-xl w-full h-full flex lg:flex-row flex-col lg:items-center lg:gap-10 gap-6">
+          <div className="z-10 px-5 md:px-8 py-16 max-w-screen-xl w-full h-full flex lg:flex-row flex-col lg:items-center gap-10">
             <div>
               <Title label={t("title")} className="text-white text-start" />
               <ul className="mt-6 w-full">
@@ -97,8 +97,17 @@ const ContactPage = () => {
                   </li>
                 ))}
               </ul>
-              <div className="mt-10">
-                <Button variant="white" className="font-medium" size="lg">
+              <div className="mt-10 flex lg:justify-start justify-center">
+                <Button
+                  variant="white"
+                  className="font-medium"
+                  size="lg"
+                  onClick={() => {
+                    document
+                      .querySelector("#form-contact")
+                      .scrollIntoView({ behavior: "smooth" });
+                  }}
+                >
                   {t("button.demo")}
                 </Button>
               </div>
