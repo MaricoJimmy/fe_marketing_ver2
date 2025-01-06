@@ -18,6 +18,7 @@ import { toast, Toaster } from "react-hot-toast";
 import * as yup from "yup";
 import PageSeoHead from "../components/common/PageSeoHead";
 import Title from "../components/common/Title";
+import { Check } from "lucide-react";
 
 const phoneRegExp =
   /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/;
@@ -83,7 +84,67 @@ const ContactPage = () => {
             <Title label={t("title")} className="text-white" />
           </div>
         </div>
-        <div className="lg:-mt-20 relative z-10 w-full flex justify-center items-center">
+        <div className="lg:mt-20 mt-10">
+          <h2 className="text-neutral lg:text-3xl text-2xl text-center font-semibold">
+            {t("titleSection.third")}
+          </h2>
+          <div className="mt-8 w-full flex justify-center items-center">
+            <ul className="px-5 max-w-screen-xl w-full">
+              {t.raw("trial").map((content) => (
+                <li
+                  key={content.title}
+                  className="mb-4 last:mb-0 flex lg:items-center items-start gap-4"
+                >
+                  <Check color="#0AA350" className="shrink-0" />
+                  <h5 className="text-lg">
+                    <span className="font-semibold">{content.title}</span>:{" "}
+                    {content.desc}
+                  </h5>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <div className="lg:mt-20 mt-10">
+          <h2 className="text-neutral lg:text-3xl text-2xl text-center font-semibold">
+            {t("titleSection.fourth")}
+          </h2>
+          <div className="mt-8 w-full flex justify-center items-center">
+            <ul className="px-5 max-w-screen-xl w-full">
+              {t.raw("instruct").map((content) => (
+                <li
+                  key={content.title}
+                  className="mb-4 last:mb-0 flex lg:items-center items-start gap-4"
+                >
+                  <div
+                    className="lg:mt-0 mt-2 text-primary"
+                    dangerouslySetInnerHTML={{ __html: content.icon }}
+                  ></div>
+                  <h5 className="text-lg">
+                    <span className="font-semibold">{content.title}</span>
+                    <span
+                      onClick={() => {
+                        if (content.scroll) {
+                          document
+                            .querySelector(content.scroll)
+                            .scrollIntoView({ behavior: "smooth" });
+                        }
+                      }}
+                      className={`${
+                        content.scroll
+                          ? "cursor-pointer hover:text-primary"
+                          : ""
+                      }`}
+                    >
+                      {content.desc ? `: ${content.desc}` : ""}
+                    </span>
+                  </h5>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+        <div className="lg:mt-20 mt-10 w-full flex justify-center items-center">
           <div className="lg:px-5 lg:py-8 max-w-screen-xl w-full">
             <div className="grid grid-cols-12 lg:shadow-xl">
               <div className="w-full h-full col-span-12 lg:col-span-5 bg-white lg:order-1 order-2">
@@ -180,7 +241,10 @@ const ContactPage = () => {
                   </div>
                 </div>
               </div>
-              <div className="w-full h-full col-span-12 lg:col-span-7 bg-[#eef1f7]  lg:order-2 order-1">
+              <div
+                id="form-contact"
+                className="w-full h-full col-span-12 lg:col-span-7 bg-[#eef1f7]  lg:order-2 order-1"
+              >
                 <div className="px-6 py-14">
                   <h2 className="text-neutral text-3xl font-semibold">
                     {t("titleSection.second")}
