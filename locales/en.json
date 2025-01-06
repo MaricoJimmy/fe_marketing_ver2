@@ -281,7 +281,8 @@
           "Payment/account support",
           "Request for compliance information",
           "Sales Support",
-          "Technical support"
+          "Technical support",
+          "Sign up for a trial"
         ]
       },
       "target": {
@@ -355,7 +356,7 @@
       }
     ],
     "button": {
-      "demo": "Request demo"
+      "demo": "Sign up for a trial"
     }
   },
   "Common": {
