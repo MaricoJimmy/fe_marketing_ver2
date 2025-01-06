@@ -78,31 +78,42 @@ const ContactPage = () => {
     <>
       <PageSeoHead data={metaTagData} />
       <div className="flex flex-col">
-        <div className="relative w-full lg:h-[300px] h-[200px] bg-[url('/image/bg/bg-contact.jpg')] bg-center bg-no-repeat bg-cover flex justify-center items-center">
+        <div className="relative w-full lg:h-[600px] h-fit bg-[url('/image/bg/bg-contact.jpg')] bg-center bg-no-repeat bg-cover flex justify-center items-center">
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-neutral/40 to-neutral/80"></div>
-          <div className="z-10 px-5 md:px-8 py-16 max-w-screen-xl w-full lg:h-3/4 h-full flex flex-col gap-2">
-            <Title label={t("title")} className="text-white" />
-          </div>
-        </div>
-        <div className="lg:mt-20 mt-10">
-          <h2 className="text-neutral lg:text-3xl text-2xl text-center font-semibold">
-            {t("titleSection.third")}
-          </h2>
-          <div className="mt-8 w-full flex justify-center items-center">
-            <ul className="px-5 max-w-screen-xl w-full">
-              {t.raw("trial").map((content) => (
-                <li
-                  key={content.title}
-                  className="mb-4 last:mb-0 flex lg:items-center items-start gap-4"
-                >
-                  <Check color="#0AA350" className="shrink-0" />
-                  <h5 className="text-lg">
-                    <span className="font-semibold">{content.title}</span>:{" "}
-                    {content.desc}
-                  </h5>
-                </li>
-              ))}
-            </ul>
+          <div className="z-10 px-5 md:px-8 py-16 max-w-screen-xl w-full h-full flex lg:flex-row flex-col lg:items-center lg:gap-10 gap-6">
+            <div>
+              <Title label={t("title")} className="text-white text-start" />
+              <ul className="mt-6 w-full">
+                {t.raw("trial").map((content) => (
+                  <li
+                    key={content.title}
+                    className="mb-4 last:mb-0 flex lg:items-center items-start gap-4"
+                  >
+                    <Check color="#0AA350" className="shrink-0" />
+                    <h5 className="text-lg text-white">
+                      <span className="font-semibold">{content.title}</span>:{" "}
+                      {content.desc}
+                    </h5>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-10">
+                <Button variant="white" className="font-medium" size="lg">
+                  {t("button.demo")}
+                </Button>
+              </div>
+            </div>
+            <div>
+              <video
+                width="800"
+                height="400"
+                controls="controls"
+                autoplay
+                className="rounded-md"
+              >
+                <source src="/videos/contact-video.mp4" type="video/mp4" />
+              </video>
+            </div>
           </div>
         </div>
         <div className="lg:mt-20 mt-10">

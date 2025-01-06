@@ -276,7 +276,7 @@
     "career": "Tuyển dụng"
   },
   "Contact": {
-    "title": "Liên hệ với chúng tôi",
+    "title": "Dùng thử miễn phí nền tảng Udata trong 15 ngày!",
     "subTitle": "Liên lạc với chúng tôi nếu có nhu cầu được demo",
     "titleSection": {
       "first": "Thông tin liên hệ",
@@ -394,7 +394,10 @@
         "title": "Udata – Đồng hành cùng doanh nghiệp trong kỷ nguyên công nghệ và bền vững",
         "onlyTitle": true
       }
-    ]
+    ],
+    "button": {
+      "demo": "Đăng ký dùng thử"
+    }
   },
   "Common": {
     "news": "Tin tức nổi bật",

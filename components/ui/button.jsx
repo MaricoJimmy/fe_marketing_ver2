@@ -19,6 +19,7 @@ const buttonVariants = cva(
         link: "text-primary underline-offset-4 hover:underline",
         calendar: "",
         noBg: "bg-none",
+        white: "bg-white text-primary",
       },
       size: {
         default: "px-4 py-2",

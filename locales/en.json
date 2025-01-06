@@ -235,7 +235,7 @@
     "demo": "With the goal of accompanying customers to modernize industrial production, Pambu will support customers to use a <span class='font-bold'>FREE</span> demo."
   },
   "Contact": {
-    "title": "Contact us",
+    "title": "Try the Udata platform for free for 15 days!",
     "subTitle": "Contact us if you need a demo",
     "titleSection": {
       "first": "Contact information",
@@ -353,7 +353,10 @@
         "title": "Udata – Accompanying businesses in the era of technology and sustainability",
         "onlyTitle": true
       }
-    ]
+    ],
+    "button": {
+      "demo": "Request demo"
+    }
   },
   "Common": {
     "news": "Featured news",
