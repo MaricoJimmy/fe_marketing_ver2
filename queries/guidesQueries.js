@@ -58,7 +58,10 @@ const AllNewsPosts = gql`
   query AllPosts {
     posts(
       first: 100
-      where: { categoryName: "tin-tuc", orderby: { field: DATE, order: DESC } }
+      where: {
+        categoryName: "pambu-oee"
+        orderby: { field: DATE, order: DESC }
+      }
     ) {
       nodes {
         id

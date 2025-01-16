@@ -5,7 +5,7 @@ import BlogRelated from "../../components/common/BlogRelated";
 import PageSeoHead from "../../components/common/PageSeoHead";
 import SocialShare from "../../components/common/SocialShare";
 import { getApolloClient } from "../../libs/apollo-client";
-import { AllNewsPosts, AllOEEPosts } from "../../queries/guidesQueries";
+import { AllOEEPosts } from "../../queries/guidesQueries";
 import {
   MoreRelatedPostsQueryInSameCategory,
   PostDetailsQuery,
@@ -31,61 +31,17 @@ export async function getStaticProps({ params, locale }) {
   } = await client.query({
     query: MoreRelatedPostsQueryInSameCategory,
     variables: {
-      category: "tin-tuc",
+      category: "pambu-oee",
     },
-  });
-
-  const {
-    data: {
-      posts: { nodes: allPosts },
-    },
-  } = await client.query({
-    query: AllNewsPosts,
   });
 
   const relatedPosts = items
     .filter((item) => item.slug !== params.postSlug)
-    .filter((post) => {
-      if (locale === "en") {
-        return post.title.startsWith("EN-");
-      } else if (locale === "vi") {
-        return post.title.startsWith("VN-");
-      }
-    })
     .slice(0, 5);
 
-  const viSlug = allPosts.find((item) => {
-    const postDate = item.title.substring(3, 11);
-    const targetDate = post.title.substring(3, 11);
-    return postDate === targetDate && item.title.includes("VN-");
-  })?.slug;
-
-  const enSlug = allPosts.find((item) => {
-    const postDate = item.title.substring(3, 11);
-    const targetDate = post.title.substring(3, 11);
-    return postDate === targetDate && item.title.includes("EN-");
-  })?.slug;
-
-  const currentPost = {
-    ...post,
-    title: post.title.includes("EN-")
-      ? post.title.replace(/EN-\d{8}-/, "")
-      : post.title.replace(/VN-\d{8}-/, ""),
-    viSlug: post.title.includes("VN-")
-      ? post.slug
-      : viSlug
-      ? viSlug
-      : post.slug,
-    enSlug: post.title.includes("EN-")
-      ? post.slug
-      : enSlug
-      ? enSlug
-      : post.slug,
-  };
   return {
     props: {
-      post: currentPost,
-      posts: allPosts,
+      post,
       relatedPosts,
     },
   };
