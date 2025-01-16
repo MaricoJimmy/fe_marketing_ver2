@@ -1,12 +1,10 @@
-import React from "react";
-import { useRouter } from "next/router";
-import { useTranslations } from "next-intl";
 import BlogCard from "@/components/common/BlogCard";
 import PageSeoHead from "@/components/common/PageSeoHead";
-import Breadcrumb from "@/components/common/Breadcrumb";
 import Title from "@/components/common/Title";
-import { AllOEEPosts } from "@/queries/guidesQueries";
 import { getApolloClient } from "@/libs/apollo-client";
+import { AllOEEPosts } from "@/queries/guidesQueries";
+import { useTranslations } from "next-intl";
+import { useRouter } from "next/router";
 
 export async function getStaticProps() {
   const client = getApolloClient();

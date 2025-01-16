@@ -117,7 +117,8 @@ const ContactPage = () => {
                 width="800"
                 height="400"
                 controls="controls"
-                autoplay
+                autoPlay="autoplay"
+                muted
                 className="rounded-md"
               >
                 <source src="/videos/contact-video.mp4" type="video/mp4" />
