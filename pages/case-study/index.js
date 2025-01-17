@@ -38,7 +38,7 @@ const CaseStudyPage = ({ posts }) => {
   ];
 
   const metaTagData = {
-    title: `${t("document.oee")} | udata.ai`,
+    title: `${t("document.oee")} | Udata.ai`,
     desc: t("document.descOEE"),
     img: "/image/pambu.png",
   };

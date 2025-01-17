@@ -40,7 +40,7 @@ const BlogPage = ({ posts }) => {
   ];
 
   const metaTagData = {
-    title: `${t("document.pms")} | udata.ai`,
+    title: `${t("document.pms")} | Udata.ai`,
     desc: t("document.descPMS"),
     img: "/image/pambu.png",
   };
