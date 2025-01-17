@@ -8,8 +8,6 @@ const BASE_API =
 
 const axiosInstance = Axios.create({
   baseURL: BASE_API,
-  // baseURL: "https://pambu.net/api/v1",
-  // baseURL: "http://localhost:5000/api/v1",
 });
 
 export default axiosInstance;

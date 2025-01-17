@@ -12,37 +12,43 @@ function generateSiteMap({ newsPosts, oeePosts, pmsPosts }) {
         <loc>https://www.udata.ai/</loc>
    </url>
    <url>
-        <loc>https://www.udata.ai/tin-tuc</loc>
+        <loc>https://www.udata.ai/san-pham/nen-tang-saas</loc>
    </url>
    <url>
-        <loc>https://www.udata.ai/san-pham/pambu-oee</loc>
+        <loc>https://www.udata.ai/san-pham/tich-hop-du-lieu</loc>
+   </url>
+    <url>
+        <loc>https://www.udata.ai/giai-phap/nha-dau-tu</loc>
+   </url>
+    <url>
+        <loc>https://www.udata.ai/giai-phap/nha-quan-ly-cap-cao</loc>
+   </url>
+    <url>
+        <loc>https://www.udata.ai/giai-phap/nha-quan-ly-van-hanh</loc>
+   </url>
+    <url>
+        <loc>https://www.udata.ai/giai-phap/solar-rooftop</loc>
+   </url>
+    <url>
+        <loc>https://www.udata.ai/giai-phap/nha-may</loc>
+   </url>
+    <url>
+        <loc>https://www.udata.ai/giai-phap/thuy-san</loc>
    </url>
    <url>
-        <loc>https://www.udata.ai/san-pham/pambu-pms</loc>
+        <loc>https://www.udata.ai/lien-he</loc>
    </url>
-   <url>
-        <loc>https://www.udata.ai/pambu-oee</loc>
+    <url>
+        <loc>https://www.udata.ai/tuyen-dung</loc>
    </url>
-   <url>
-        <loc>https://www.udata.ai/pambu-pms</loc>
+    <url>
+        <loc>https://www.udata.ai/ve-cong-ty</loc>
    </url>
-   <url>
-        <loc>https://www.udata.ai/dat-lich-demo</loc>
-   </url>
-     ${newsPosts
-       .map(({ slug }) => {
-         return `
-       <url>
-           <loc>${`https://www.udata.ai/tin-tuc/${slug}`}</loc>
-       </url>
-     `;
-       })
-       .join("")}
        ${oeePosts
          .map(({ slug }) => {
            return `
         <url>
-            <loc>${`https://www.udata.ai/pambu-oee/${slug}`}</loc>
+            <loc>${`https://www.udata.ai/case-study/${slug}`}</loc>
         </url>
       `;
          })
@@ -51,7 +57,7 @@ function generateSiteMap({ newsPosts, oeePosts, pmsPosts }) {
           .map(({ slug }) => {
             return `
             <url>
-                <loc>${`https://www.udata.ai/pambu-pms/${slug}`}</loc>
+                <loc>${`https://www.udata.ai/blog/${slug}`}</loc>
             </url>
           `;
           })
