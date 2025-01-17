@@ -10,35 +10,6 @@ const nextConfig = {
     defaultLocale: "vi",
     localeDetection: false,
   },
-  async rewrites() {
-    return [
-      {
-        source: "/pambu-oee/:path*",
-        destination: "/so-tay-huong-dan/pambu-oee/:path*",
-      },
-      {
-        source: "/pambu-pms/:path*",
-        destination: "/so-tay-huong-dan/pambu-pms/:path*",
-      },
-      {
-        source: "/news",
-        destination: "/tin-tuc",
-      },
-      {
-        source: "/news/:path*",
-        destination: "/tin-tuc/:path*",
-        // locale: false,
-      },
-      {
-        source: "/product/:path*",
-        destination: "/san-pham/:path*",
-      },
-      {
-        source: "/book-a-demo",
-        destination: "/dat-lich-demo",
-      },
-    ];
-  },
 };
 
 module.exports = nextConfig;

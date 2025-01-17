@@ -4,7 +4,7 @@ import React from "react";
 function SocialShare({ data }) {
   return (
     <a
-      href={`https://www.facebook.com/sharer.php?u=https://pambu.org/${data}`}
+      href={`https://www.facebook.com/sharer.php?u=https://udata.ai/${data}`}
       target="_blank"
       rel="noreferrer"
       className="p-2 block"

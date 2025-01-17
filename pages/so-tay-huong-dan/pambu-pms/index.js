@@ -40,7 +40,7 @@ const PMSGuidesPage = ({ posts }) => {
   ];
 
   const metaTagData = {
-    title: `${t("document.pms")} | pambu.org`,
+    title: `${t("document.pms")} | udata.ai`,
     desc: t("document.descPMS"),
     img: "/image/pambu.png",
   };

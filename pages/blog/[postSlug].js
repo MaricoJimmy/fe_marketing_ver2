@@ -98,19 +98,13 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
         slug: "/tin-tuc",
       },
       {
-        label: post.title.includes("EN-")
-          ? post.title.replace(/EN-\d{8}-/, "")
-          : post.title.replace(/VN-\d{8}-/, ""),
+        label: post.title,
       },
     ];
   }, [post, router.locale]);
 
   const metaTagData = {
-    title: `${
-      post.title.includes("EN-")
-        ? post.title.replace(/EN-\d{8}-/, "")
-        : post.title.replace(/VN-\d{8}-/, "")
-    } | pambu.org`,
+    title: `${post.title} | udata.ai`,
     desc: post.excerpt.replace(/<[^>]+>/g, ""),
     img: post?.featuredImage?.node?.mediaItemUrl,
   };
