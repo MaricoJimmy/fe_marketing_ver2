@@ -12,6 +12,7 @@ import {
   PostDetailsQuery,
 } from "../../queries/postQuery";
 import { getDate } from "../../utils";
+import Tags from "@/components/common/Tags";
 
 export async function getStaticProps({ params, locale }) {
   const client = getApolloClient();
@@ -109,6 +110,8 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
     img: post?.featuredImage?.node?.mediaItemUrl,
   };
 
+  const postTags = post.tags?.nodes.map((tag) => tag.name) || [];
+
   return (
     <>
       <PageSeoHead data={metaTagData} />
@@ -121,14 +124,21 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
                 <h1 className="font-bold text-4xl text-green-secondary mb-2">
                   {post.title}
                 </h1>
-                <div className="mt-3 flex items-center">
+                {postTags.length > 0 ? (
+                  <div className="mt-4">
+                    <Tags tags={postTags} />
+                  </div>
+                ) : (
+                  ""
+                )}
+                <div className="mt-6 flex items-center">
                   <p className="mr-6 text-gray/80 text-sm">
                     {t("date")}: {getDate(post.date, router.locale)}
                   </p>
                   <SocialShare data={router.asPath} />
                 </div>
                 <h3
-                  className="mt-4 text-lg text-gray font-medium text-justify"
+                  className="mt-2 text-lg text-gray font-medium text-justify"
                   dangerouslySetInnerHTML={{ __html: post.excerpt }}
                 ></h3>
               </div>
@@ -162,7 +172,7 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
                   <ul className="mt-6">
                     {relatedPosts.map((relatePost) => (
                       <li key={relatePost.id} className="mb-8 last:mb-0">
-                        <BlogRelated data={relatePost} category="tin-tuc" />
+                        <BlogRelated data={relatePost} category="blog" />
                       </li>
                     ))}
                   </ul>
