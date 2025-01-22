@@ -4,7 +4,10 @@ const AllPMSPosts = gql`
   query AllPosts {
     posts(
       first: 100
-      where: { categoryName: "pambu-pms", orderby: { field: DATE, order: ASC } }
+      where: {
+        categoryName: "pambu-pms"
+        orderby: { field: DATE, order: DESC }
+      }
     ) {
       nodes {
         id
@@ -31,7 +34,10 @@ const AllOEEPosts = gql`
   query AllPosts {
     posts(
       first: 100
-      where: { categoryName: "pambu-oee", orderby: { field: DATE, order: ASC } }
+      where: {
+        categoryName: "pambu-oee"
+        orderby: { field: DATE, order: DESC }
+      }
     ) {
       nodes {
         id
