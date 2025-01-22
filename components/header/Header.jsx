@@ -186,12 +186,11 @@ function HeaderDesktop({ stickyHeader, locale }) {
                           locale === "vi" ? "min-w-[340px]" : "min-w-[400px]"
                         }  p-2 border-none list-none`}
                       >
-                        <MenuItem title="Case study" href={ROUTER_CASE_STUDY}>
-                          {t("news.subMenus.case-study")}
-                        </MenuItem>
-                        <MenuItem title="Blog" href={ROUTER_BLOG}>
-                          {t("news.subMenus.blog")}
-                        </MenuItem>
+                        <MenuItem
+                          title="Case study"
+                          href={ROUTER_CASE_STUDY}
+                        ></MenuItem>
+                        <MenuItem title="Blog" href={ROUTER_BLOG}></MenuItem>
                       </ul>
                     </NavigationMenuContent>
                   </NavigationMenuItem>

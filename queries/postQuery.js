@@ -20,6 +20,11 @@ const PostDetailsQuery = gql`
           }
         }
       }
+      tags {
+        nodes {
+          name
+        }
+      }
     }
   }
 `;
