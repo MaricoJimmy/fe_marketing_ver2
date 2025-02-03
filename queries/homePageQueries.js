@@ -3,7 +3,7 @@ import { gql } from "@apollo/client";
 const OEEPostsQuery = gql`
   query PostsForPambuOEE {
     posts(
-      where: { categoryName: "pambu-oee", orderby: { field: DATE, order: ASC } }
+      where: { categoryName: "notification", orderby: { field: DATE, order: ASC } }
       first: 100
     ) {
       nodes {
@@ -31,7 +31,7 @@ const OEEPostsQuery = gql`
 const PMSPostsQuery = gql`
   query PostsForPambuPMS {
     posts(
-      where: { categoryName: "pambu-pms", orderby: { field: DATE, order: ASC } }
+      where: { categoryName: "blog", orderby: { field: DATE, order: ASC } }
       first: 100
     ) {
       nodes {

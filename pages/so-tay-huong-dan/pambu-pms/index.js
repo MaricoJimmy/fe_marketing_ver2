@@ -63,7 +63,7 @@ const PMSGuidesPage = ({ posts }) => {
                   >
                     <BlogCard
                       data={post}
-                      category="pambu-pms"
+                      category="blog"
                       locale={locale}
                     />
                   </li>

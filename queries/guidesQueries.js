@@ -5,7 +5,7 @@ const AllPMSPosts = gql`
     posts(
       first: 100
       where: {
-        categoryName: "pambu-pms"
+        categoryName: "blog"
         orderby: { field: DATE, order: DESC }
       }
     ) {
@@ -35,7 +35,7 @@ const AllOEEPosts = gql`
     posts(
       first: 100
       where: {
-        categoryName: "pambu-oee"
+        categoryName: "notification"
         orderby: { field: DATE, order: DESC }
       }
     ) {
@@ -65,7 +65,7 @@ const AllNewsPosts = gql`
     posts(
       first: 100
       where: {
-        categoryName: "pambu-oee"
+        categoryName: "notification"
         orderby: { field: DATE, order: DESC }
       }
     ) {

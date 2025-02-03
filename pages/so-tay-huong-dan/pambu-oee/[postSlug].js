@@ -32,7 +32,7 @@ export async function getStaticProps({ params }) {
   } = await client.query({
     query: MoreRelatedPostsQueryInSameCategory,
     variables: {
-      category: "pambu-oee",
+      category: "notification",
     },
   });
   const relatedPosts = items
@@ -85,7 +85,7 @@ const OEEDetailPost = ({ post, relatedPosts }) => {
       },
       {
         label: "Pambu OEE",
-        slug: "/pambu-oee",
+        slug: "/notification",
       },
       {
         label: post.title,
