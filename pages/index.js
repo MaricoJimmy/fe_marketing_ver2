@@ -1,9 +1,10 @@
+import ScrollToTop from "@/components/common/ScrollToTop";
 import { Button } from "@/components/ui/button";
 import { getDate } from "@/utils";
 import {
   ROUTER_BLOG,
-  ROUTER_CASE_STUDY,
   ROUTER_CONTACT,
+  ROUTER_NOTIFYCATION,
 } from "@/utils/constant";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -15,7 +16,6 @@ import {
   OEEPostsQuery,
   PMSPostsQuery,
 } from "../queries/homePageQueries";
-import ScrollToTop from "@/components/common/ScrollToTop";
 
 export async function getStaticProps({ locale }) {
   const client = getApolloClient();
@@ -122,9 +122,9 @@ const HomePage = ({ oeePosts, pmsPosts }) => {
           </h3>
           <ul className="flex-1 flex flex-col space-y-4">
             {blogs.length > 0 ? (
-              blogs.map((blog) => (
+              blogs.slice(0, 5).map((blog) => (
                 <li
-                  key={blog._id}
+                  key={blog.slug}
                   className="flex items-center gap-4 cursor-pointer"
                   onClick={() => router.push(`${link}/${blog.slug}`)}
                 >
@@ -179,12 +179,21 @@ const HomePage = ({ oeePosts, pmsPosts }) => {
             <h4 className="mt-2 text-white lg:text-2xl text-xl font-medium">
               Iot Platform
             </h4>
-            <h3 className="mt-10 text-white lg:text-3xl text-2xl font-semibold">
+            <h3 className="mt-10 text-white lg:text-3xl text-2xl font-semibold transition duration-300 ease-out group">
               {t("titleSocial")}
             </h3>
             <div className="mt-4">
-              <Button size="lg" onClick={() => router.push(ROUTER_CONTACT)}>
-                {t("button.start")}
+              {/* <Button size="lg" onClick={() => router.push(ROUTER_CONTACT)}>
+                <span>{t("button.start")}</span>
+              </Button> */}
+              <Button
+                size="lg"
+                className="relative rounded-md group overflow-hidden font-medium bg-white text-primary shadow-md"
+              >
+                <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-primary group-hover:h-full opacity-90"></span>
+                <span className="relative group-hover:text-white">
+                  {t("button.start")}
+                </span>
               </Button>
             </div>
           </div>
@@ -193,7 +202,7 @@ const HomePage = ({ oeePosts, pmsPosts }) => {
         <section className="w-full flex justify-center items-center">
           <div className="px-5 py-20 md:px-8 lg:py-32 max-w-screen-xl w-full">
             <h2 className="text-neutral text-center lg:text-4xl text-2xl font-bold">
-              Udata.ai phá vỡ giới hạn trong việc sử dụng dữ liệu của bạn
+              {t("solutions.title")}
             </h2>
             <div className="lg:mt-20 mt-6 grid lg:grid-cols-2 gap-10">
               <div>{renderSectionSolution(t.raw("solutions.byObject"))}</div>
@@ -213,7 +222,7 @@ const HomePage = ({ oeePosts, pmsPosts }) => {
                   title: "Case study",
                   img: "/image/oee/document-highlight.png",
                   blogs: oeePosts,
-                  link: ROUTER_CASE_STUDY,
+                  link: ROUTER_NOTIFYCATION,
                 })}
               </div>
               <div className="w-full h-full">

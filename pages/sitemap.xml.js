@@ -48,7 +48,7 @@ function generateSiteMap({ newsPosts, oeePosts, pmsPosts }) {
          .map(({ slug }) => {
            return `
         <url>
-            <loc>${`https://www.udata.ai/case-study/${slug}`}</loc>
+            <loc>${`https://www.udata.ai/thong-bao/${slug}`}</loc>
         </url>
       `;
          })

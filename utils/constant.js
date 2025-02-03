@@ -13,7 +13,7 @@ export const ROUTER_INVESTORS = "/giai-phap/nha-dau-tu";
 export const ROUTER_MANAGERS = "/giai-phap/nha-quan-ly-cap-cao";
 export const ROUTER_OPERATORS = "/giai-phap/nha-quan-ly-van-hanh";
 
-export const ROUTER_CASE_STUDY = "/case-study";
+export const ROUTER_NOTIFYCATION = "/thong-bao";
 export const ROUTER_BLOG = "/blog";
 export const ROUTER_CONTACT = "/lien-he";
 export const ROUTER_ABOUT_US = "/ve-cong-ty";

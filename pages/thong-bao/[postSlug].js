@@ -155,7 +155,7 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
                   <ul className="mt-6">
                     {relatedPosts.map((relatePost) => (
                       <li key={relatePost.id} className="mb-8 last:mb-0">
-                        <BlogRelated data={relatePost} category="case-study" />
+                        <BlogRelated data={relatePost} category="thong-bao" />
                       </li>
                     ))}
                   </ul>
