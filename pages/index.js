@@ -183,9 +183,6 @@ const HomePage = ({ oeePosts, pmsPosts }) => {
               {t("titleSocial")}
             </h3>
             <div className="mt-4">
-              {/* <Button size="lg" onClick={() => router.push(ROUTER_CONTACT)}>
-                <span>{t("button.start")}</span>
-              </Button> */}
               <Button
                 size="lg"
                 onClick={() => router.push(ROUTER_CONTACT)}
