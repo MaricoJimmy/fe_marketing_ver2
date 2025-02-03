@@ -1,11 +1,11 @@
 import {
   ROUTER_ABOUT_US,
   ROUTER_BLOG,
-  ROUTER_CASE_STUDY,
   ROUTER_FISHERIES,
   ROUTER_INTERGRATE,
   ROUTER_INVESTORS,
   ROUTER_MANAGERS,
+  ROUTER_NOTIFYCATION,
   ROUTER_OPERATORS,
   ROUTER_SAAS,
   ROUTER_SOLAR,
@@ -97,7 +97,7 @@ function Footer() {
       menus: [
         {
           title: "Case study",
-          href: ROUTER_CASE_STUDY,
+          href: ROUTER_NOTIFYCATION,
         },
         {
           title: "Blog",

@@ -21,6 +21,7 @@ const DialogflowChatbot = () => {
           agent-id="4012d315-3839-43cc-99cb-38101d5a2274"
           language-code="vi"
           max-query-length="-1"
+          storage-option="none"
           style={{
             "--df-messenger-font-color": "#000",
             "--df-messenger-font-family": "Inter",

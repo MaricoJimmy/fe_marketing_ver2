@@ -26,7 +26,7 @@ export async function getStaticProps() {
 
 const CaseStudyPage = ({ posts }) => {
   const { locale } = useRouter();
-  const t = useTranslations("Common");
+  const t = useTranslations("Notification");
   const breadcrumbs = [
     {
       label: locale === "vi" ? "Trang chủ" : "Home",
@@ -50,7 +50,7 @@ const CaseStudyPage = ({ posts }) => {
           <div className="px-5 md:px-8 py-16 max-w-screen-xl w-full">
             {/* <Breadcrumb data={breadcrumbs} /> */}
             <div className="mt-">
-              <Title label={"Case study"} />
+              <Title label={t("title")} />
             </div>
             <div className="mt-8">
               <ul className="grid grid-cols-12 gap-6 md:gap-8">
@@ -61,7 +61,7 @@ const CaseStudyPage = ({ posts }) => {
                   >
                     <BlogCard
                       data={post}
-                      category="case-study"
+                      category="thong-bao"
                       locale={locale}
                     />
                   </li>

@@ -1,10 +1,25 @@
+import {
+  ROUTER_ABOUT_US,
+  ROUTER_BLOG,
+  ROUTER_CAREER,
+  ROUTER_CONTACT,
+  ROUTER_FACTORY,
+  ROUTER_FISHERIES,
+  ROUTER_INTERGRATE,
+  ROUTER_INVESTORS,
+  ROUTER_MANAGERS,
+  ROUTER_NOTIFYCATION,
+  ROUTER_OPERATORS,
+  ROUTER_SAAS,
+  ROUTER_SOLAR,
+} from "@/utils/constant";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
-import React, { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 import Button from "../common/Button";
-import styles from "./Header.module.css";
 import LanguageButton from "../common/LanguageButton";
-import { useTranslations } from "next-intl";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -13,24 +28,8 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "../ui/navigation-menu";
+import styles from "./Header.module.css";
 import MenuItem from "./MenuItem";
-import {
-  ROUTER_ABOUT_US,
-  ROUTER_BLOG,
-  ROUTER_CAREER,
-  ROUTER_CASE_STUDY,
-  ROUTER_CONTACT,
-  ROUTER_FACTORY,
-  ROUTER_FISHERIES,
-  ROUTER_INTERGRATE,
-  ROUTER_INVESTORS,
-  ROUTER_MANAGERS,
-  ROUTER_OPERATORS,
-  ROUTER_PMS,
-  ROUTER_SAAS,
-  ROUTER_SOLAR,
-} from "@/utils/constant";
-import { useRouter } from "next/router";
 
 function Header({ isProductPage, isPMSPage }) {
   const { locale } = useRouter();
@@ -187,19 +186,12 @@ function HeaderDesktop({ stickyHeader, locale }) {
                         }  p-2 border-none list-none`}
                       >
                         <MenuItem
-                          title="Case study"
-                          href={ROUTER_CASE_STUDY}
+                          title={t("news.notification")}
+                          href={ROUTER_NOTIFYCATION}
                         ></MenuItem>
                         <MenuItem title="Blog" href={ROUTER_BLOG}></MenuItem>
                       </ul>
                     </NavigationMenuContent>
-                  </NavigationMenuItem>
-                  <NavigationMenuItem>
-                    <Link href={ROUTER_CONTACT} legacyBehavior passHref>
-                      <NavigationMenuLink className="px-4 py-2 bg-transparent hover:bg-neutral/5 hover:text-primary text-base font-medium rounded-md">
-                        {t("contact")}
-                      </NavigationMenuLink>
-                    </Link>
                   </NavigationMenuItem>
                   <NavigationMenuItem>
                     <Link href={ROUTER_ABOUT_US} legacyBehavior passHref>
@@ -208,6 +200,14 @@ function HeaderDesktop({ stickyHeader, locale }) {
                       </NavigationMenuLink>
                     </Link>
                   </NavigationMenuItem>
+                  <NavigationMenuItem>
+                    <Link href={ROUTER_CONTACT} legacyBehavior passHref>
+                      <NavigationMenuLink className="px-4 py-2 bg-transparent hover:bg-neutral/5 hover:text-primary text-base font-medium rounded-md">
+                        {t("contact")}
+                      </NavigationMenuLink>
+                    </Link>
+                  </NavigationMenuItem>
+
                   <NavigationMenuItem>
                     <Link href={ROUTER_CAREER} legacyBehavior passHref>
                       <NavigationMenuLink className="px-4 py-2 bg-transparent hover:bg-neutral/5 hover:text-primary text-base font-medium rounded-md">
@@ -224,9 +224,12 @@ function HeaderDesktop({ stickyHeader, locale }) {
             <div>
               <Link href={ROUTER_CONTACT}>
                 <a
-                  className={`py-3 px-6 w-full bg-white text-neutral border-2 border-primary font-medium rounded-md`}
+                  className={`py-2 px-6 w-full overflow-hidden block relative group bg-white border-2 border-primary font-medium rounded-md`}
                 >
-                  {t("bookDemo")}
+                  <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-primary top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
+                  <span className="relative transition duration-300 text-neutral group-hover:text-white ease">
+                    {t("bookDemo")}
+                  </span>
                 </a>
               </Link>
             </div>
@@ -312,8 +315,8 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
       menu: t("news.title"),
       subMenu: [
         {
-          title: "Case study",
-          href: ROUTER_CASE_STUDY,
+          title: t("news.notification"),
+          href: ROUTER_NOTIFYCATION,
         },
         {
           title: "Blog",
@@ -323,16 +326,16 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
       multiMenu: false,
     },
     {
-      id: "contact",
-      menu: t("contact"),
-      href: ROUTER_CONTACT,
+      id: "about-us",
+      menu: t("about-us"),
+      href: ROUTER_ABOUT_US,
       subMenu: null,
       multiMenu: false,
     },
     {
-      id: "about-us",
-      menu: t("about-us"),
-      href: ROUTER_ABOUT_US,
+      id: "contact",
+      menu: t("contact"),
+      href: ROUTER_CONTACT,
       subMenu: null,
       multiMenu: false,
     },
