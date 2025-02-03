@@ -1,3 +1,6 @@
+import Tags from "@/components/common/Tags";
+import { Button } from "@/components/ui/button";
+import { ROUTER_BLOG } from "@/utils/constant";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useRouter } from "next/router";
@@ -12,7 +15,6 @@ import {
   PostDetailsQuery,
 } from "../../queries/postQuery";
 import { getDate } from "../../utils";
-import Tags from "@/components/common/Tags";
 
 export async function getStaticProps({ params, locale }) {
   const client = getApolloClient();
@@ -117,8 +119,29 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
       <PageSeoHead data={metaTagData} />
       <div className="w-full flex justify-center items-center">
         <div className="px-5 md:px-8 py-10 max-w-screen-xl w-full">
-          {/* <Breadcrumb data={breadcrumbs} /> */}
-          <div className="mt-8 grid grid-cols-3 gap-10">
+          <Button
+            variant="noBg"
+            onClick={() => router.push(ROUTER_BLOG)}
+            className="px-0 flex items-center gap-2 text-neutral"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="lucide lucide-arrow-left"
+            >
+              <path d="m12 19-7-7 7-7" />
+              <path d="M19 12H5" />
+            </svg>
+            <span>Quay về</span>
+          </Button>
+          <div className="mt-4 grid grid-cols-3 gap-10">
             <div className="col-span-3 md:col-span-2">
               <div className="mb-6">
                 <h1 className="font-bold text-4xl text-green-secondary mb-2">
