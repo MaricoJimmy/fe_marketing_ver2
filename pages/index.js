@@ -4,7 +4,7 @@ import { getDate } from "@/utils";
 import {
   ROUTER_BLOG,
   ROUTER_CONTACT,
-  ROUTER_NOTIFYCATION,
+  ROUTER_NOTIFICATION,
 } from "@/utils/constant";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -166,7 +166,7 @@ const HomePage = ({ oeePosts, pmsPosts }) => {
       </div>
     );
   };
-  
+
   return (
     <>
       <PageSeoHead data={metaTagData} />
@@ -221,7 +221,7 @@ const HomePage = ({ oeePosts, pmsPosts }) => {
                   title: "Case study",
                   img: "/image/oee/document-highlight.png",
                   blogs: oeePosts,
-                  link: ROUTER_NOTIFYCATION,
+                  link: ROUTER_NOTIFICATION,
                 })}
               </div>
               <div className="w-full h-full">

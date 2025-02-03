@@ -5,6 +5,8 @@ import { getApolloClient } from "@/libs/apollo-client";
 import { AllOEEPosts } from "@/queries/guidesQueries";
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/router";
+import { useMemo, useState } from "react";
+import ReactPaginate from "react-paginate";
 
 export async function getStaticProps() {
   const client = getApolloClient();
@@ -24,23 +26,28 @@ export async function getStaticProps() {
   };
 }
 
-const CaseStudyPage = ({ posts }) => {
+const PAGE_SIZE = 6;
+
+const NotificationPage = ({ posts }) => {
   const { locale } = useRouter();
   const t = useTranslations("Notification");
-  const breadcrumbs = [
-    {
-      label: locale === "vi" ? "Trang chủ" : "Home",
-      slug: "/",
-    },
-    {
-      label: "Pambu OEE",
-    },
-  ];
 
   const metaTagData = {
-    title: `${t("document.oee")} | Udata.ai`,
-    desc: t("document.descOEE"),
+    title: `${t("title")} | Udata.ai`,
+    desc: t("title"),
     img: "/image/pambu.png",
+  };
+  // state
+  const [itemOffset, setItemOffset] = useState(0);
+
+  const currentPostsByPage = useMemo(() => {
+    const endOffset = itemOffset + PAGE_SIZE;
+    return posts.slice(itemOffset, endOffset);
+  }, [posts, itemOffset]);
+
+  const handlePageClick = (event) => {
+    const newOffset = (event.selected * PAGE_SIZE) % posts.length;
+    setItemOffset(newOffset);
   };
   return (
     <>
@@ -53,20 +60,45 @@ const CaseStudyPage = ({ posts }) => {
               <Title label={t("title")} />
             </div>
             <div className="mt-8">
-              <ul className="grid grid-cols-12 gap-6 md:gap-8">
-                {posts.map((post) => (
-                  <li
-                    key={post.id}
-                    className="col-span-12 md:col-span-6 lg:col-span-4 h-full"
-                  >
-                    <BlogCard
-                      data={post}
-                      category="thong-bao"
-                      locale={locale}
+              {currentPostsByPage.length > 0 ? (
+                <div>
+                  <ul className="grid grid-cols-12 gap-6 md:gap-8">
+                    {currentPostsByPage.map((post) => (
+                      <li
+                        key={post.id}
+                        className="col-span-12 md:col-span-6 lg:col-span-4 h-full"
+                      >
+                        <BlogCard
+                          data={post}
+                          category="thong-bao"
+                          locale={locale}
+                        />
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="mt-8">
+                    <ReactPaginate
+                      breakLabel="..."
+                      nextLabel=">"
+                      onPageChange={handlePageClick}
+                      pageRangeDisplayed={5}
+                      pageCount={Math.ceil(posts.length / PAGE_SIZE)}
+                      previousLabel="<"
+                      renderOnZeroPageCount={null}
+                      containerClassName="flex justify-center items-center gap-4"
+                      pageLinkClassName="flex justify-center items-center w-8 h-8 rounded-md bg-white border border-gray/20 font-medium"
+                      activeLinkClassName="bg-primary text-white"
+                      disabledClassName="opacity-50"
                     />
-                  </li>
-                ))}
-              </ul>
+                  </div>
+                </div>
+              ) : (
+                <div className="flex items-center justify-center w-full h-[50vh]">
+                  <h3 className="text-lg font-medium">
+                    Hiện không có tin tức nào!
+                  </h3>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -75,4 +107,4 @@ const CaseStudyPage = ({ posts }) => {
   );
 };
 
-export default CaseStudyPage;
+export default NotificationPage;

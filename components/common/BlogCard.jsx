@@ -18,7 +18,12 @@ function BlogCard({ data, category, locale }) {
             />
           </div>
           <div className="p-6 w-full">
-            <h4 className="text-xl text-gray font-semibold">{data.title}</h4>
+            <h4
+              title={data.title}
+              className="text-xl text-gray font-semibold truncate"
+            >
+              {data.title}
+            </h4>
             <h6 className="mt-2 text-sm text-gray/80">
               {getDate(data.date, locale)}
             </h6>

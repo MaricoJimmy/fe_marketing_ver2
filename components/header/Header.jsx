@@ -8,10 +8,10 @@ import {
   ROUTER_INTERGRATE,
   ROUTER_INVESTORS,
   ROUTER_MANAGERS,
-  ROUTER_NOTIFYCATION,
+  ROUTER_NOTIFICATION,
   ROUTER_OPERATORS,
   ROUTER_SAAS,
-  ROUTER_SOLAR,
+  ROUTER_SOLAR
 } from "@/utils/constant";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -187,7 +187,7 @@ function HeaderDesktop({ stickyHeader, locale }) {
                       >
                         <MenuItem
                           title={t("news.notification")}
-                          href={ROUTER_NOTIFYCATION}
+                          href={ROUTER_NOTIFICATION}
                         ></MenuItem>
                         <MenuItem title="Blog" href={ROUTER_BLOG}></MenuItem>
                       </ul>
@@ -316,7 +316,7 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
       subMenu: [
         {
           title: t("news.notification"),
-          href: ROUTER_NOTIFYCATION,
+          href: ROUTER_NOTIFICATION,
         },
         {
           title: "Blog",

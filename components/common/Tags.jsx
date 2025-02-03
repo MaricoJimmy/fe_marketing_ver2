@@ -2,7 +2,7 @@ import React from "react";
 
 function Tags({ tags }) {
   return (
-    <ul className="flex items-center gap-3">
+    <ul className="flex flex-wrap items-center gap-3">
       {tags.map((tag, index) => (
         <li
           key={index}
