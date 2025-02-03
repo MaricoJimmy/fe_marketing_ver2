@@ -183,11 +183,9 @@ const HomePage = ({ oeePosts, pmsPosts }) => {
               {t("titleSocial")}
             </h3>
             <div className="mt-4">
-              {/* <Button size="lg" onClick={() => router.push(ROUTER_CONTACT)}>
-                <span>{t("button.start")}</span>
-              </Button> */}
               <Button
                 size="lg"
+                onClick={() => router.push(ROUTER_CONTACT)}
                 className="relative rounded-md group overflow-hidden font-medium bg-white text-primary shadow-md"
               >
                 <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-primary group-hover:h-full opacity-90"></span>
