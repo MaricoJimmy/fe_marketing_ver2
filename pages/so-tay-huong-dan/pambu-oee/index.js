@@ -64,7 +64,7 @@ const OEEGuidesPage = ({ posts }) => {
                   >
                     <BlogCard
                       data={post}
-                      category="pambu-oee"
+                      category="notification"
                       locale={locale}
                     />
                   </li>

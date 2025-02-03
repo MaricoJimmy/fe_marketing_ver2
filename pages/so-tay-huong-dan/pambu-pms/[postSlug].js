@@ -33,7 +33,7 @@ export async function getStaticProps({ params }) {
   } = await client.query({
     query: MoreRelatedPostsQueryInSameCategory,
     variables: {
-      category: "pambu-pms",
+      category: "blog",
     },
   });
   const relatedPosts = items
@@ -85,7 +85,7 @@ const PMSDetailPost = ({ post, relatedPosts }) => {
       },
       {
         label: "Pambu PMS",
-        slug: "/pambu-pms",
+        slug: "/blog",
       },
       {
         label: post.title,
@@ -151,7 +151,7 @@ const PMSDetailPost = ({ post, relatedPosts }) => {
                 <ul className="mt-6">
                   {relatedPosts.map((relatePost) => (
                     <li key={relatePost.id} className="mb-8 last:mb-0">
-                      <BlogRelated data={relatePost} category="pambu-pms" />
+                      <BlogRelated data={relatePost} category="blog" />
                     </li>
                   ))}
                 </ul>

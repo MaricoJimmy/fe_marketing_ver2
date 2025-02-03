@@ -32,7 +32,7 @@ export async function getStaticProps({ params, locale }) {
   } = await client.query({
     query: MoreRelatedPostsQueryInSameCategory,
     variables: {
-      category: "pambu-oee",
+      category: "notification",
     },
   });
 
