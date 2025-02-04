@@ -36,7 +36,7 @@ function generateSiteMap({ newsPosts, oeePosts, pmsPosts }) {
         <loc>https://www.udata.ai/giai-phap/thuy-san</loc>
    </url>
    <url>
-        <loc>https://www.udata.ai/lien-he</loc>
+        <loc>https://www.udata.ai/dung-thu</loc>
    </url>
     <url>
         <loc>https://www.udata.ai/tuyen-dung</loc>
