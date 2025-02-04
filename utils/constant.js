@@ -15,6 +15,6 @@ export const ROUTER_OPERATORS = "/giai-phap/nha-quan-ly-van-hanh";
 
 export const ROUTER_NOTIFICATION = "/thong-bao";
 export const ROUTER_BLOG = "/blog";
-export const ROUTER_CONTACT = "/lien-he";
+export const ROUTER_CONTACT = "/dung-thu";
 export const ROUTER_ABOUT_US = "/ve-cong-ty";
 export const ROUTER_CAREER = "/tuyen-dung";

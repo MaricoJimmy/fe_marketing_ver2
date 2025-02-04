@@ -96,7 +96,7 @@ function Footer() {
       section: t("section.first.links.blog"),
       menus: [
         {
-          title: "Case study",
+          title: t("section.first.links.notification"),
           href: ROUTER_NOTIFICATION,
         },
         {

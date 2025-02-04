@@ -250,7 +250,8 @@
             "saas": "SaaS Platform",
             "integrate": "Data integration"
           },
-          "blog": "News"
+          "blog": "News",
+          "notification": "Notification"
         }
       },
       "second": {
