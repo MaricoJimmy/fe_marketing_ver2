@@ -43,9 +43,9 @@ const nextConfig = {
     //   },
     // ];
   },
-  experimental: {
-    esmExternals: false,
-  },
+  // experimental: {
+  //   esmExternals: false,
+  // },
 };
 
 module.exports = nextConfig;

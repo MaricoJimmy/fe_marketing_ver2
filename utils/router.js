@@ -1,4 +1,4 @@
-export const routeMaps = {
+const routeMaps = {
   vi: {
     "/en/free-trial": "/dung-thu",
     "/en/about-company": "/ve-cong-ty",
@@ -30,3 +30,5 @@ export const routeMaps = {
     "/blog": "/en/blog",
   },
 };
+
+module.exports = { routeMaps };
