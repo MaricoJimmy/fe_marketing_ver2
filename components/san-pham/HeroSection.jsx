@@ -1,6 +1,7 @@
 import { ROUTER_CONTACT } from "@/utils/constant";
 import { useRouter } from "next/router";
 import { Button } from "../ui/button";
+import { getLocalizedPath } from "@/utils";
 
 function HeroSection({ data, page }) {
   const router = useRouter();
@@ -30,7 +31,9 @@ function HeroSection({ data, page }) {
         </h5>
         <div className="mt-8 flex items-center justify-center">
           <Button
-            onClick={() => router.push(ROUTER_CONTACT)}
+            onClick={() =>
+              router.push(getLocalizedPath(ROUTER_CONTACT, router.locale))
+            }
             className="shadow-md hover:shadow-lg transition-all"
             size="lg"
           >

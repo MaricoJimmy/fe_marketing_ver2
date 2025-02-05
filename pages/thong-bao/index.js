@@ -2,7 +2,7 @@ import BlogCard from "@/components/common/BlogCard";
 import PageSeoHead from "@/components/common/PageSeoHead";
 import Title from "@/components/common/Title";
 import { getApolloClient } from "@/libs/apollo-client";
-import { AllOEEPosts } from "@/queries/guidesQueries";
+import { AllNotiPosts } from "@/queries/guidesQueries";
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/router";
 import { useMemo, useState } from "react";
@@ -16,7 +16,7 @@ export async function getStaticProps() {
       posts: { nodes: items },
     },
   } = await client.query({
-    query: AllOEEPosts,
+    query: AllNotiPosts,
   });
   return {
     props: {

@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "../ui/button";
 import { useRouter } from "next/router";
 import { ROUTER_CONTACT } from "@/utils/constant";
+import { getLocalizedPath } from "@/utils";
 
 function CallToAction({ data }) {
   const router = useRouter();
@@ -22,7 +23,9 @@ function CallToAction({ data }) {
           </div>
           <div className="mt-10">
             <Button
-              onClick={() => router.push(ROUTER_CONTACT)}
+              onClick={() =>
+                router.push(getLocalizedPath(ROUTER_CONTACT, router.locale))
+              }
               className="lg:px-4 lg:py-3 lg:text-base shadow-md hover:shadow-lg transition-all"
             >
               {data.button}

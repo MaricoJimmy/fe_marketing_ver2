@@ -26,7 +26,7 @@ const phoneRegExp =
 const ContactPage = () => {
   const t = useTranslations("Contact");
 
-  const [purpose, setPurpose] = useState("for-self");
+  // const [purpose, setPurpose] = useState("for-self");
 
   const schema = yup.object().shape({
     name: yup.string().required(t("form.error.name")),
@@ -55,7 +55,7 @@ const ContactPage = () => {
       url: `https://formspree.io/f/xbjejbpw`,
       data: {
         ...formData,
-        purpose,
+        // purpose,
       },
     })
       .then((r) => {
