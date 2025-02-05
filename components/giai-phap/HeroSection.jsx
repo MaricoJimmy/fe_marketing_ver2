@@ -1,8 +1,8 @@
-import React from "react";
-import { Button } from "../ui/button";
+import { getLocalizedPath } from "@/utils";
+import { ROUTER_CONTACT } from "@/utils/constant";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { ROUTER_CONTACT } from "@/utils/constant";
+import { Button } from "../ui/button";
 
 function HeroSection({ data, image = "", bgColor = "bg-infor" }) {
   const router = useRouter();
@@ -21,7 +21,9 @@ function HeroSection({ data, image = "", bgColor = "bg-infor" }) {
         <div className="mt-6 flex lg:justify-start justify-center">
           <Button
             size="lg"
-            onClick={() => router.push(ROUTER_CONTACT)}
+            onClick={() =>
+              router.push(getLocalizedPath(ROUTER_CONTACT, router.locale))
+            }
             className="shadow-md hover:shadow-lg transition-all"
           >
             {data.contact}

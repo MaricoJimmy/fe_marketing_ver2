@@ -1,6 +1,8 @@
+import { routeMaps } from "@/utils/router";
 import { IntlProvider } from "next-intl";
 import { useRouter } from "next/router";
 import Script from "next/script";
+import { useEffect } from "react";
 import DefaultLayout from "../components/layout/DefaultLayout";
 import MaintenanceLayout from "../components/layout/MaintenanceLayout";
 import "../styles/globals.css";
@@ -10,6 +12,16 @@ function MyApp({ Component, pageProps }) {
   const locale = router.locale || router.defaultLocale;
   const localeMessages = require(`../locales/${locale}.json`);
   const Layout = Component.Layout || DefaultLayout;
+
+  useEffect(() => {
+    // Tự động điều hướng khi thay đổi locale
+    const currentPath = router.pathname;
+    const translatedPath = routeMaps[locale]?.[currentPath];
+
+    if (translatedPath && translatedPath !== currentPath) {
+      router.push(translatedPath, undefined, { locale });
+    }
+  }, [locale, router.pathname]);
 
   return (
     <>

@@ -1,67 +1,51 @@
+import { routeMaps } from "@/utils/router";
 import { getApolloClient } from "../libs/apollo-client";
 import {
   AllNewsPosts,
-  AllOEEPosts,
-  AllPMSPosts,
+  AllNotiPosts,
+  AllBlogPosts,
 } from "../queries/guidesQueries";
 
-function generateSiteMap({ newsPosts, oeePosts, pmsPosts }) {
+function generateSiteMap({ oeePosts, pmsPosts }) {
+  const routes = Object.keys(routeMaps).reduce((acc, locale) => {
+    Object.values(routeMaps[locale]).forEach((route) => {
+      acc.push({ locale, route });
+    });
+    return acc;
+  }, []);
+
   return `<?xml version="1.0" encoding="UTF-8"?>
    <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-   <url>
+     <url>
         <loc>https://www.udata.ai/</loc>
-   </url>
-   <url>
-        <loc>https://www.udata.ai/san-pham/nen-tang-saas</loc>
-   </url>
-   <url>
-        <loc>https://www.udata.ai/san-pham/tich-hop-du-lieu</loc>
-   </url>
-    <url>
-        <loc>https://www.udata.ai/giai-phap/nha-dau-tu</loc>
-   </url>
-    <url>
-        <loc>https://www.udata.ai/giai-phap/nha-quan-ly-cap-cao</loc>
-   </url>
-    <url>
-        <loc>https://www.udata.ai/giai-phap/nha-quan-ly-van-hanh</loc>
-   </url>
-    <url>
-        <loc>https://www.udata.ai/giai-phap/solar-rooftop</loc>
-   </url>
-    <url>
-        <loc>https://www.udata.ai/giai-phap/nha-may</loc>
-   </url>
-    <url>
-        <loc>https://www.udata.ai/giai-phap/thuy-san</loc>
-   </url>
-   <url>
-        <loc>https://www.udata.ai/dung-thu</loc>
-   </url>
-    <url>
-        <loc>https://www.udata.ai/tuyen-dung</loc>
-   </url>
-    <url>
-        <loc>https://www.udata.ai/ve-cong-ty</loc>
-   </url>
-       ${oeePosts
-         .map(({ slug }) => {
-           return `
-        <url>
-            <loc>${`https://www.udata.ai/thong-bao/${slug}`}</loc>
-        </url>
-      `;
-         })
-         .join("")}
-        ${pmsPosts
-          .map(({ slug }) => {
-            return `
-            <url>
-                <loc>${`https://www.udata.ai/blog/${slug}`}</loc>
-            </url>
-          `;
-          })
-          .join("")}
+     </url>
+     ${routes
+       .map(({ locale, route }) => {
+         return `
+         <url>
+             <loc>${`https://www.udata.ai${route}`}</loc>
+         </url>
+       `;
+       })
+       .join("")}
+     ${oeePosts
+       .map(({ slug }) => {
+         return `
+         <url>
+             <loc>${`https://www.udata.ai/thong-bao/${slug}`}</loc>
+         </url>
+       `;
+       })
+       .join("")}
+     ${pmsPosts
+       .map(({ slug }) => {
+         return `
+         <url>
+             <loc>${`https://www.udata.ai/blog/${slug}`}</loc>
+         </url>
+       `;
+       })
+       .join("")}
    </urlset>
  `;
 }
@@ -86,7 +70,7 @@ export async function getServerSideProps({ res }) {
       posts: { nodes: oeePosts },
     },
   } = await client.query({
-    query: AllOEEPosts,
+    query: AllNotiPosts,
   });
 
   const {
@@ -94,7 +78,7 @@ export async function getServerSideProps({ res }) {
       posts: { nodes: pmsPosts },
     },
   } = await client.query({
-    query: AllPMSPosts,
+    query: AllBlogPosts,
   });
   // We make an API call to gather the URLs for our site
 

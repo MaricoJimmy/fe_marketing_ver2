@@ -1,3 +1,5 @@
+import { routeMaps } from "./router";
+
 export const getDate = (publishedAt, locale) => {
   return locale === "vi"
     ? new Date(publishedAt).toLocaleDateString("vi-VN", {
@@ -11,3 +13,7 @@ export const getDate = (publishedAt, locale) => {
         day: "numeric",
       });
 };
+
+export function getLocalizedPath(pathName, locale) {
+  return routeMaps[locale][pathName] || pathName;
+}

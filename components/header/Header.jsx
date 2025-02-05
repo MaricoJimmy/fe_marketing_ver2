@@ -11,7 +11,7 @@ import {
   ROUTER_NOTIFICATION,
   ROUTER_OPERATORS,
   ROUTER_SAAS,
-  ROUTER_SOLAR
+  ROUTER_SOLAR,
 } from "@/utils/constant";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -30,8 +30,9 @@ import {
 } from "../ui/navigation-menu";
 import styles from "./Header.module.css";
 import MenuItem from "./MenuItem";
+import { getLocalizedPath } from "@/utils";
 
-function Header({ isProductPage, isPMSPage }) {
+function Header() {
   const { locale } = useRouter();
   const [stickyHeader, setStickyHeader] = useState(null);
 
@@ -96,13 +97,13 @@ function HeaderDesktop({ stickyHeader, locale }) {
                         </MenuItem> */}
                         <MenuItem
                           title={t("products.menus.saas")}
-                          href={ROUTER_SAAS}
+                          href={getLocalizedPath(ROUTER_SAAS, locale)}
                         >
                           Nền tảng dịch vụ phần mềm trên SaaS
                         </MenuItem>
                         <MenuItem
                           title={t("products.menus.integrate")}
-                          href={ROUTER_INTERGRATE}
+                          href={getLocalizedPath(ROUTER_INTERGRATE, locale)}
                         >
                           Mở khóa dữ liệu của bạn với Udata
                         </MenuItem>
@@ -122,21 +123,21 @@ function HeaderDesktop({ stickyHeader, locale }) {
                           <ul className="mt-2 min-w-[340px] border-none list-none">
                             <MenuItem
                               title={t("solutions.menusByObject.investors")}
-                              href={ROUTER_INVESTORS}
+                              href={getLocalizedPath(ROUTER_INVESTORS, locale)}
                               isDivideSection
                             >
                               Giải pháp cho Chủ đầu tư - Quản lý cấp cao
                             </MenuItem>
                             <MenuItem
                               title={t("solutions.menusByObject.managers")}
-                              href={ROUTER_MANAGERS}
+                              href={getLocalizedPath(ROUTER_MANAGERS, locale)}
                               isDivideSection
                             >
                               Giải pháp cho Cấp quản lý
                             </MenuItem>
                             <MenuItem
                               title={t("solutions.menusByObject.operators")}
-                              href={ROUTER_OPERATORS}
+                              href={getLocalizedPath(ROUTER_OPERATORS, locale)}
                               isDivideSection
                             >
                               Giải pháp cho Cấp vận hành
@@ -150,7 +151,7 @@ function HeaderDesktop({ stickyHeader, locale }) {
                           <ul className="mt-2 min-w-[380px] border-none list-none">
                             <MenuItem
                               title="Solar Rooftop"
-                              href={ROUTER_SOLAR}
+                              href={getLocalizedPath(ROUTER_SOLAR, locale)}
                               isDivideSection
                             >
                               {/* {t("solutions.subMenus.solar")} */}
@@ -165,7 +166,7 @@ function HeaderDesktop({ stickyHeader, locale }) {
                             </MenuItem>
                             <MenuItem
                               title={t("solutions.menusByField.fishing")}
-                              href={ROUTER_FISHERIES}
+                              href={getLocalizedPath(ROUTER_FISHERIES, locale)}
                               isDivideSection
                             >
                               Giải pháp cho nuôi trồng thủy sản
@@ -187,21 +188,32 @@ function HeaderDesktop({ stickyHeader, locale }) {
                       >
                         <MenuItem
                           title={t("news.notification")}
-                          href={ROUTER_NOTIFICATION}
+                          href={getLocalizedPath(ROUTER_NOTIFICATION, locale)}
                         ></MenuItem>
-                        <MenuItem title="Blog" href={ROUTER_BLOG}></MenuItem>
+                        <MenuItem
+                          title="Blog"
+                          href={getLocalizedPath(ROUTER_BLOG, locale)}
+                        ></MenuItem>
                       </ul>
                     </NavigationMenuContent>
                   </NavigationMenuItem>
                   <NavigationMenuItem>
-                    <Link href={ROUTER_ABOUT_US} legacyBehavior passHref>
+                    <Link
+                      href={getLocalizedPath(ROUTER_ABOUT_US, locale)}
+                      legacyBehavior
+                      passHref
+                    >
                       <NavigationMenuLink className="px-4 py-2 bg-transparent hover:bg-neutral/5 hover:text-primary text-base font-medium rounded-md">
                         {t("about-us")}
                       </NavigationMenuLink>
                     </Link>
                   </NavigationMenuItem>
                   <NavigationMenuItem>
-                    <Link href={ROUTER_CONTACT} legacyBehavior passHref>
+                    <Link
+                      href={getLocalizedPath(ROUTER_CONTACT, locale)}
+                      legacyBehavior
+                      passHref
+                    >
                       <NavigationMenuLink className="px-4 py-2 bg-transparent hover:bg-neutral/5 hover:text-primary text-base font-medium rounded-md">
                         {t("contact")}
                       </NavigationMenuLink>
@@ -209,7 +221,11 @@ function HeaderDesktop({ stickyHeader, locale }) {
                   </NavigationMenuItem>
 
                   <NavigationMenuItem>
-                    <Link href={ROUTER_CAREER} legacyBehavior passHref>
+                    <Link
+                      href={getLocalizedPath(ROUTER_CAREER, locale)}
+                      legacyBehavior
+                      passHref
+                    >
                       <NavigationMenuLink className="px-4 py-2 bg-transparent hover:bg-neutral/5 hover:text-primary text-base font-medium rounded-md">
                         {t("career")}
                       </NavigationMenuLink>

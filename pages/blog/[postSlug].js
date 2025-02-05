@@ -9,12 +9,12 @@ import BlogRelated from "../../components/common/BlogRelated";
 import PageSeoHead from "../../components/common/PageSeoHead";
 import SocialShare from "../../components/common/SocialShare";
 import { getApolloClient } from "../../libs/apollo-client";
-import { AllPMSPosts } from "../../queries/guidesQueries";
+import { AllBlogPosts } from "../../queries/guidesQueries";
 import {
   MoreRelatedPostsQueryInSameCategory,
   PostDetailsQuery,
 } from "../../queries/postQuery";
-import { getDate } from "../../utils";
+import { getDate, getLocalizedPath } from "../../utils";
 
 export async function getStaticProps({ params, locale }) {
   const client = getApolloClient();
@@ -61,7 +61,7 @@ export async function getStaticPaths({ locales }) {
       posts: { nodes: items },
     },
   } = await client.query({
-    query: AllPMSPosts,
+    query: AllBlogPosts,
   });
 
   // items.forEach((post) => {
@@ -121,7 +121,9 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
         <div className="px-5 md:px-8 py-10 max-w-screen-xl w-full">
           <Button
             variant="noBg"
-            onClick={() => router.push(ROUTER_BLOG)}
+            onClick={() =>
+              router.push(getLocalizedPath(ROUTER_BLOG, router.locale))
+            }
             className="px-0 flex items-center gap-2 text-neutral"
           >
             <svg

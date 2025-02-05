@@ -1,12 +1,11 @@
-import React, { useMemo, useState } from "react";
-import { useRouter } from "next/router";
-import { useTranslations } from "next-intl";
-import { getApolloClient } from "@/libs/apollo-client";
-import { AllPMSPosts } from "@/queries/guidesQueries";
-import PageSeoHead from "@/components/common/PageSeoHead";
-import Breadcrumb from "@/components/common/Breadcrumb";
-import Title from "@/components/common/Title";
 import BlogCard from "@/components/common/BlogCard";
+import PageSeoHead from "@/components/common/PageSeoHead";
+import Title from "@/components/common/Title";
+import { getApolloClient } from "@/libs/apollo-client";
+import { AllBlogPosts } from "@/queries/guidesQueries";
+import { useTranslations } from "next-intl";
+import { useRouter } from "next/router";
+import { useMemo, useState } from "react";
 import ReactPaginate from "react-paginate";
 
 export async function getStaticProps() {
@@ -17,7 +16,7 @@ export async function getStaticProps() {
       posts: { nodes: items },
     },
   } = await client.query({
-    query: AllPMSPosts,
+    query: AllBlogPosts,
   });
   return {
     props: {

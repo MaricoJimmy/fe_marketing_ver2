@@ -1,6 +1,6 @@
 import { gql } from "@apollo/client";
 
-const AllPMSPosts = gql`
+const AllBlogPosts = gql`
   query AllPosts {
     posts(
       first: 100
@@ -30,7 +30,7 @@ const AllPMSPosts = gql`
     }
   }
 `;
-const AllOEEPosts = gql`
+const AllNotiPosts = gql`
   query AllPosts {
     posts(
       first: 100
@@ -91,4 +91,4 @@ const AllNewsPosts = gql`
   }
 `;
 
-export { AllPMSPosts, AllOEEPosts, AllNewsPosts };
+export { AllBlogPosts, AllNotiPosts, AllNewsPosts };

@@ -1,3 +1,4 @@
+import { getLocalizedPath } from "@/utils";
 import {
   ROUTER_ABOUT_US,
   ROUTER_BLOG,
@@ -13,8 +14,10 @@ import {
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 function Footer() {
+  const { locale } = useRouter();
   const t = useTranslations("Footer");
   // const listMenu = [
   //   {
@@ -46,31 +49,31 @@ function Footer() {
   const listMenu = [
     {
       section: t("section.first.links.company"),
-      href: ROUTER_ABOUT_US,
+      href: getLocalizedPath(ROUTER_ABOUT_US, locale),
     },
     {
       section: t("section.first.links.solutions.title"),
       menus: [
         {
           title: t("section.first.links.solutions.investors"),
-          href: ROUTER_INVESTORS,
+          href: getLocalizedPath(ROUTER_INVESTORS, locale),
         },
         {
           title: t("section.first.links.solutions.managers"),
-          href: ROUTER_MANAGERS,
+          href: getLocalizedPath(ROUTER_MANAGERS, locale),
         },
         {
           title: t("section.first.links.solutions.operators"),
-          href: ROUTER_OPERATORS,
+          href: getLocalizedPath(ROUTER_OPERATORS, locale),
         },
         {
           title: t("section.first.links.solutions.saas"),
-          href: ROUTER_SOLAR,
+          href: getLocalizedPath(ROUTER_SOLAR, locale),
         },
         // "Nhà máy công nghiệp",
         {
           title: t("section.first.links.solutions.fishing"),
-          href: ROUTER_FISHERIES,
+          href: getLocalizedPath(ROUTER_FISHERIES, locale),
         },
         // "Nông nghiệp",
         // "Viễn thông",
@@ -84,11 +87,11 @@ function Footer() {
       menus: [
         {
           title: t("section.first.links.products.saas"),
-          href: ROUTER_SAAS,
+          href: getLocalizedPath(ROUTER_SAAS, locale),
         },
         {
           title: t("section.first.links.products.integrate"),
-          href: ROUTER_INTERGRATE,
+          href: getLocalizedPath(ROUTER_INTERGRATE, locale),
         },
       ],
     },
@@ -97,11 +100,11 @@ function Footer() {
       menus: [
         {
           title: t("section.first.links.notification"),
-          href: ROUTER_NOTIFICATION,
+          href: getLocalizedPath(ROUTER_NOTIFICATION, locale),
         },
         {
           title: "Blog",
-          href: ROUTER_BLOG,
+          href: getLocalizedPath(ROUTER_BLOG, locale),
         },
       ],
     },
