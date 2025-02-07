@@ -100,7 +100,7 @@ const ContactPage = () => {
               <div className="mt-10 flex lg:justify-start justify-center">
                 <Button
                   variant="white"
-                  className="font-medium"
+                  className="font-medium hover:shadow-lg hover:scale-105 transition-all duration-300"
                   size="lg"
                   onClick={() => {
                     document

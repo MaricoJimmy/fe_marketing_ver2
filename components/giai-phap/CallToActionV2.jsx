@@ -16,7 +16,7 @@ function CallToActionV2({ data }) {
           <Button
             variant="secondary"
             size="lg"
-            className="mt-8 shadow-md hover:shadow-lg transition-all"
+            className="mt-8 shadow-md hover:shadow-xl transition-all"
             onClick={() =>
               router.push(getLocalizedPath(ROUTER_CONTACT, router.locale))
             }
