@@ -77,15 +77,21 @@ const HomePage = ({ oeePosts, pmsPosts }) => {
     img: "/image/hero/home-pv.png",
   };
 
-  const renderSectionSolution = ({ title, solutions }) => {
+  const renderSectionSolution = ({ title, solutions, direction = "right" }) => {
     return (
       <>
-        <h4 className="text-gray lg:text-2xl text-xl text-center font-semibold">
+        <h4
+          data-aos="fade-up"
+          data-aos-delay="100"
+          className="text-gray lg:text-2xl text-xl text-center font-semibold"
+        >
           {title}
         </h4>
         <ul className="mt-6 flex flex-col lg:space-y-8 space-y-4">
-          {solutions.map((solution) => (
+          {solutions.map((solution, index) => (
             <li
+              data-aos={`fade-${direction}`}
+              data-aos-delay={`${index * 100 + 200}`}
               key={solution.title}
               onClick={() => router.push(solution.link)}
               className="px-10 py-8 bg-infor/10 flex items-center gap-2 rounded-lg shadow-md hover:shadow-lg transition-all cursor-pointer"
@@ -104,9 +110,19 @@ const HomePage = ({ oeePosts, pmsPosts }) => {
     );
   };
 
-  const renderSectionBlog = ({ title, img, blogs, link }) => {
+  const renderSectionBlog = ({
+    title,
+    img,
+    blogs,
+    link,
+    direction = "right",
+  }) => {
     return (
-      <div className="px-6 py-8 w-full h-full flex flex-col items-center justify-between gap-10 bg-white rounded-xl shadow-md">
+      <div
+        data-aos={`fade-${direction}`}
+        data-aos-delay="200"
+        className="px-6 py-8 w-full h-full flex flex-col items-center justify-between gap-10 bg-white rounded-xl shadow-md"
+      >
         <div className="flex flex-col space-y-4">
           <div className="shrink-0 flex items-center justify-center">
             <Image
@@ -174,13 +190,24 @@ const HomePage = ({ oeePosts, pmsPosts }) => {
         {/* hero section */}
         <section className="w-full h-screen flex items-center bg-[url('/image/bg/bg-home.png')] bg-center bg-cover bg-no-repeat">
           <div className="lg:p-14 p-8 lg:w-full md:w-[70%]">
-            <h1 className="lg:text-7xl text-4xl text-white font-semibold">
+            <h1
+              data-aos="fade-up"
+              className="lg:text-7xl text-4xl text-white font-semibold"
+            >
               Udata
             </h1>
-            <h4 className="mt-2 text-white lg:text-2xl text-xl font-medium">
+            <h4
+              data-aos="fade-up"
+              data-aos-delay="100"
+              className="mt-2 text-white lg:text-2xl text-xl font-medium"
+            >
               Iot Platform
             </h4>
-            <h3 className="mt-10 text-white lg:text-3xl text-2xl font-semibold transition duration-300 ease-out group">
+            <h3
+              data-aos="fade-up"
+              data-aos-delay="200"
+              className="mt-10 text-white lg:text-3xl text-2xl font-semibold transition duration-300 ease-out group"
+            >
               {t("titleSocial")}
             </h3>
             <div className="mt-4">
@@ -189,6 +216,8 @@ const HomePage = ({ oeePosts, pmsPosts }) => {
                 onClick={() =>
                   router.push(getLocalizedPath(ROUTER_CONTACT, router.locale))
                 }
+                data-aos="fade-up"
+                data-aos-delay="300"
                 className="relative rounded-md group overflow-hidden font-medium bg-white text-primary shadow-md"
               >
                 <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-primary group-hover:h-full opacity-90"></span>
@@ -202,19 +231,35 @@ const HomePage = ({ oeePosts, pmsPosts }) => {
         {/* features */}
         <section className="w-full flex justify-center items-center">
           <div className="px-5 py-20 md:px-8 lg:py-32 max-w-screen-xl w-full">
-            <h2 className="text-neutral text-center lg:text-4xl text-2xl font-bold">
+            <h2
+              data-aos="fade-up"
+              className="text-neutral text-center lg:text-4xl text-2xl font-bold"
+            >
               {t("solutions.title")}
             </h2>
             <div className="lg:mt-20 mt-6 grid lg:grid-cols-2 gap-10">
-              <div>{renderSectionSolution(t.raw("solutions.byObject"))}</div>
-              <div>{renderSectionSolution(t.raw("solutions.byFields"))}</div>
+              <div>
+                {renderSectionSolution({
+                  ...t.raw("solutions.byObject"),
+                  direction: "right",
+                })}
+              </div>
+              <div>
+                {renderSectionSolution({
+                  ...t.raw("solutions.byFields"),
+                  direction: "left",
+                })}
+              </div>
             </div>
           </div>
         </section>
         {/* blog */}
         <section className="w-full flex justify-center items-center bg-primary/5">
           <div className="px-5 py-20 md:px-8 lg:py-32 max-w-screen-xl w-full">
-            <h2 className="text-neutral text-center lg:text-4xl text-2xl font-bold">
+            <h2
+              data-aos="fade-up"
+              className="text-neutral text-center lg:text-4xl text-2xl font-bold"
+            >
               {t("news")}
             </h2>
             <div className="mt-10 grid lg:grid-cols-2 gap-10">
@@ -224,6 +269,7 @@ const HomePage = ({ oeePosts, pmsPosts }) => {
                   img: "/image/oee/document-highlight.png",
                   blogs: oeePosts,
                   link: ROUTER_NOTIFICATION,
+                  direction: "right",
                 })}
               </div>
               <div className="w-full h-full">
@@ -232,6 +278,7 @@ const HomePage = ({ oeePosts, pmsPosts }) => {
                   img: "/image/pms/document-highlight.png",
                   blogs: pmsPosts,
                   link: ROUTER_BLOG,
+                  direction: "left",
                 })}
               </div>
             </div>
@@ -240,7 +287,7 @@ const HomePage = ({ oeePosts, pmsPosts }) => {
         {/* about-us */}
         <section className="w-full flex justify-center items-center">
           <div className="px-5 py-20 md:px-8 lg:py-32 max-w-screen-xl w-full grid lg:grid-cols-2 gap-10">
-            <div>
+            <div data-aos="fade-up">
               <div>
                 <h4 className="text-infor lg:text-2xl text-xl font-semibold uppercase">
                   {t("about-us.title")}
@@ -254,7 +301,7 @@ const HomePage = ({ oeePosts, pmsPosts }) => {
                 dangerouslySetInnerHTML={{ __html: t.raw("about-us.content") }}
               ></div>
             </div>
-            <div className="flex flex-col items-center">
+            <div data-aos="fade-left" className="flex flex-col items-center">
               <div className="relative w-full lg:h-full h-[300px]">
                 <Image
                   src="/image/about-us/about-us-2.png"

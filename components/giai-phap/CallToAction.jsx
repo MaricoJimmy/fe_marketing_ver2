@@ -8,17 +8,30 @@ function CallToAction({ data }) {
   const router = useRouter();
   return (
     <div className="w-full flex items-center justify-center">
-      <div className="lg:px-20 lg:py-24 md:px-10 md:py-14 px-4 py-8 w-full max-w-screen-xl">
+      <div
+        data-aos="fade-up"
+        className="lg:px-20 lg:py-24 md:px-10 md:py-14 px-4 py-8 w-full max-w-screen-xl"
+      >
         <div className="lg:px-14 lg:py-16 px-4 py-10 w-full h-fit flex flex-col items-center justify-center gap-4 bg-gradient-to-br from-infor/80 to-primary/80 rounded-lg shadow-xl">
-          <h2 className="text-center text-white text-3xl font-semibold">
+          <h2
+            data-aos="fade-up"
+            data-aos-delay="100"
+            className="text-center text-white text-3xl font-semibold"
+          >
             {data.title}
           </h2>
-          <h5 className="text-center text-white text-base font-medium">
+          <h5
+            data-aos="fade-up"
+            data-aos-delay="150"
+            className="text-center text-white text-base font-medium"
+          >
             {data.content}
           </h5>
           <Button
-            variant="secondary"
             size="lg"
+            variant="secondary"
+            data-aos="fade-up"
+            data-aos-delay="200"
             className="shadow-md hover:shadow-lg transition-all"
             onClick={() =>
               router.push(getLocalizedPath(ROUTER_CONTACT, router.locale))

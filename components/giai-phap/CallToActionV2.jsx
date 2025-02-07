@@ -10,12 +10,17 @@ function CallToActionV2({ data }) {
     <div className="w-full bg-infor">
       <div className="lg:px-48 lg:py-32 md:px-10 md:py-14 px-4 py-8 grid lg:grid-cols-2 gap-8">
         <div className="">
-          <h3 className="text-white lg:text-4xl text-2xl font-semibold">
+          <h3
+            data-aos="fade-up"
+            className="text-white lg:text-4xl text-2xl font-semibold"
+          >
             {data.title}
           </h3>
           <Button
-            variant="secondary"
             size="lg"
+            variant="secondary"
+            data-aos="fade-up"
+            data-aos-delay="100"
             className="mt-8 shadow-md hover:shadow-xl transition-all"
             onClick={() =>
               router.push(getLocalizedPath(ROUTER_CONTACT, router.locale))
@@ -23,7 +28,11 @@ function CallToActionV2({ data }) {
           >
             {data.button}
           </Button>
-          <h5 className="mt-4 text-white lg:text-lg font-medium">
+          <h5
+            data-aos="fade-up"
+            data-aos-delay="200"
+            className="mt-4 text-white lg:text-lg font-medium"
+          >
             {data.content}
           </h5>
         </div>
@@ -34,6 +43,8 @@ function CallToActionV2({ data }) {
               className={`${
                 idx % 2 === 0 ? "" : ""
               } p-4 w-fit flex items-start gap-4 bg-white rounded-lg shadow-lg`}
+              data-aos="fade-left"
+              data-aos-delay={idx * 100 + 50}
             >
               <div className="shrink-0 text-primary">
                 {idx === 0 ? (

@@ -82,11 +82,17 @@ const ContactPage = () => {
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-neutral/40 to-neutral/80"></div>
           <div className="z-10 px-5 md:px-8 py-16 max-w-screen-xl w-full h-full flex lg:flex-row flex-col lg:items-center gap-10">
             <div>
-              <Title label={t("title")} className="text-white text-start" />
+              <Title
+                label={t("title")}
+                className="text-white text-start"
+                data-aos="fade-up"
+              />
               <ul className="mt-6 w-full">
-                {t.raw("trial").map((content) => (
+                {t.raw("trial").map((content, index) => (
                   <li
                     key={content.title}
+                    data-aos="fade-up"
+                    data-aos-delay={index * 100 + 50}
                     className="mb-4 last:mb-0 flex lg:items-center items-start gap-4"
                   >
                     <Check color="#0AA350" className="shrink-0" />
@@ -100,6 +106,8 @@ const ContactPage = () => {
               <div className="mt-10 flex lg:justify-start justify-center">
                 <Button
                   variant="white"
+                  data-aos="fade-up"
+                  data-aos-delay="400"
                   className="font-medium hover:shadow-lg hover:scale-105 transition-all duration-300"
                   size="lg"
                   onClick={() => {
@@ -120,6 +128,7 @@ const ContactPage = () => {
                 autoPlay="autoplay"
                 muted
                 className="rounded-md"
+                data-aos="fade-left"
               >
                 <source src="/videos/contact-video.mp4" type="video/mp4" />
               </video>
@@ -132,7 +141,7 @@ const ContactPage = () => {
           </h2>
           <div className="mt-8 w-full flex justify-center items-center">
             <ul className="px-5 max-w-screen-xl w-full">
-              {t.raw("instruct").map((content) => (
+              {t.raw("instruct").map((content, index) => (
                 <li
                   key={content.title}
                   className="mb-4 last:mb-0 flex lg:items-center items-start gap-4"

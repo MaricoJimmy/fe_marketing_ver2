@@ -16,19 +16,37 @@ const AboutUsPage = () => {
       <PageSeoHead data={metaTagData} />
       <div className="w-full h-full flex items-center justify-center bg-infor/5">
         <div className="lg:px-20 md:px-10 px-4 py-8 w-full max-w-screen-xl flex flex-col gap-8">
-          <div className="p-4 h-full flex flex-col justify-between gap-10 bg-white shadow-md rounded-2xl">
+          <div
+            data-aos="fade-left"
+            className="p-4 h-full flex flex-col justify-between gap-10 bg-white shadow-md rounded-2xl"
+          >
             <div>
-              <h5 className="text-infor text-lg font-medium">{t("title")}</h5>
-              <h1 className="mt-2 text-neutral lg:text-4xl text-3xl font-bold leading-snug">
+              <h5
+                data-aos="fade-left"
+                data-aos-delay="100"
+                className="text-infor text-lg font-medium"
+              >
+                {t("title")}
+              </h5>
+              <h1
+                data-aos="fade-left"
+                data-aos-delay="150"
+                className="mt-2 text-neutral lg:text-4xl text-3xl font-bold leading-snug"
+              >
                 UDATA: Unlock your Data
               </h1>
             </div>
             <div
+              data-aos="fade-left"
+              data-aos-delay="200"
               className="flex flex-col gap-2 text-justify text-neutral text-base"
               dangerouslySetInnerHTML={{ __html: t.raw("content") }}
             ></div>
           </div>
-          <div className="w-full h-[400px] relative rounded-xl shadow-md">
+          <div
+            data-aos="fade-right"
+            className="w-full h-[400px] relative rounded-xl shadow-md"
+          >
             <Image
               src="/image/about-us/about-us.jpg"
               layout="fill"
