@@ -10,6 +10,7 @@ function SingleFeatureSection({
     <div className="w-full flex items-center justify-center">
       <div className="lg:px-20 lg:py-24 md:px-10 md:py-14 px-4 py-8 w-full grid lg:grid-cols-2 grid-cols-1 lg:gap-10 gap-8 max-w-screen-xl">
         <div
+          data-aos="fade-right"
           className={`${
             isReverse ? "order-2" : "lg:order-1 order-2"
           } lg:h-full h-[300px] relative`}
@@ -17,6 +18,7 @@ function SingleFeatureSection({
           <Image src={data.img} layout="fill" alt="" className="object-cover" />
         </div>
         <div
+          data-aos="fade-left"
           className={`${
             isReverse ? "order-1" : "lg:order-2 order-1"
           } flex flex-col gap-12`}

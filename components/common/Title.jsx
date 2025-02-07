@@ -1,10 +1,11 @@
 import React from "react";
 
-function Title({ label, className = "" }) {
+function Title({ label, className = "", ...props }) {
   return (
     <div className="w-fit">
       <h2
-        className={`${className} text-2xl md:text-4xl text-center text-neutal font-bold`}
+        {...props}
+        className={`${className} text-2xl md:text-4xl text-center text-neutral font-bold`}
       >
         {label}
       </h2>

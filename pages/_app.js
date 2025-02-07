@@ -1,4 +1,6 @@
 import { routeMaps } from "@/utils/router";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { IntlProvider } from "next-intl";
 import { useRouter } from "next/router";
 import Script from "next/script";
@@ -22,6 +24,14 @@ function MyApp({ Component, pageProps }) {
       router.push(translatedPath, undefined, { locale });
     }
   }, [locale, router.pathname]);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 800, // Thời gian animation (ms)
+      easing: "ease", // Hiệu ứng easing
+      once: true, // Animation chỉ chạy một lần
+    });
+  }, []);
 
   return (
     <>

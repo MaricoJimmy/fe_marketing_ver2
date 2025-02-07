@@ -515,7 +515,7 @@
     },
     "callToAction": {
       "title": "Ready to work in a focused, simple and effective way?",
-      "content": "Talk to one of our experts to determine the right solution for your needs,",
+      "content": "Talk to one of our experts to determine the right solution for your needs",
       "actions": [
         {
           "title": "Determine your ideal solution",
@@ -632,7 +632,7 @@
     },
     "callToAction": {
       "title": "Ready to work in a focused, simple and effective way?",
-      "content": "Talk to one of our experts to determine the right solution for your needs,",
+      "content": "Talk to one of our experts to determine the right solution for your needs",
       "actions": [
         {
           "title": "Determine your ideal solution",
@@ -749,7 +749,7 @@
     },
     "callToAction": {
       "title": "Ready to work in a focused, simple and effective way?",
-      "content": "Talk to one of our experts to determine the right solution for your needs,",
+      "content": "Talk to one of our experts to determine the right solution for your needs",
       "actions": [
         {
           "title": "Determine your ideal solution",
@@ -1215,6 +1215,6 @@
   "404": {
     "title": "Page not found",
     "content": "The page you are looking for does not exist or has been moved. Please check the URL and try again.",
-    "button": "Back to home"  
+    "button": "Back to home"
   }
 }
