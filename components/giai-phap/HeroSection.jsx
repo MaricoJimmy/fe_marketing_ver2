@@ -24,7 +24,7 @@ function HeroSection({ data, image = "", bgColor = "bg-infor" }) {
             onClick={() =>
               router.push(getLocalizedPath(ROUTER_CONTACT, router.locale))
             }
-            className="shadow-md hover:shadow-lg transition-all"
+            className="shadow-md hover:shadow-xl hover:scale-105 transition-all"
           >
             {data.contact}
           </Button>

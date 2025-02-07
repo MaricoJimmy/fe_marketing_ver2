@@ -35,7 +35,7 @@ function HeroSectionV2({ data, page }) {
             onClick={() =>
               router.push(getLocalizedPath(ROUTER_CONTACT, router.locale))
             }
-            className="shadow-md hover:shadow-lg transition-all"
+            className="shadow-md hover:shadow-xl hover:scale-105 transition-all"
             size="lg"
           >
             {data.contact}

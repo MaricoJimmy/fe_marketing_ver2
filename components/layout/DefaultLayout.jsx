@@ -4,10 +4,10 @@ import Header from "../header/Header";
 
 function DefaultLayout({ children }) {
   return (
-    <div className="w-full min-h-screen">
+    <div className="w-full min-h-screen scroll-wrapper">
       {/* <Hotline /> */}
       <Header />
-      <div>{children}</div>
+      <div className="scroll-content">{children}</div>
       {/* chatbot */}
       <DialogflowChatbot />
       <Footer />
