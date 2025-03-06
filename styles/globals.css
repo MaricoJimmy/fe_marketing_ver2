@@ -146,7 +146,8 @@ input[type="number"] {
   overflow: hidden;
 }
 
-.content-wrapper h2 {
+.content-wrapper h2,
+.content-wrapper h2 strong {
   color: var(--text-color);
   font-size: 30px;
   line-height: 1.4;
@@ -154,7 +155,8 @@ input[type="number"] {
   margin-bottom: 24px;
 }
 
-.content-wrapper h3 {
+.content-wrapper h3,
+.content-wrapper h3 strong {
   color: var(--text-color);
   line-height: 1.4;
   font-size: 24px;
@@ -162,7 +164,8 @@ input[type="number"] {
   margin-bottom: 24px;
 }
 
-.content-wrapper h4 {
+.content-wrapper h4,
+.content-wrapper h4 strong {
   color: var(--text-color);
   text-align: justify;
   line-height: 1.4;
@@ -171,7 +174,8 @@ input[type="number"] {
   margin-bottom: 16px;
 }
 
-.content-wrapper h5 {
+.content-wrapper h5,
+.content-wrapper h5 strong {
   color: var(--text-color);
   text-align: justify;
   line-height: 1.5;
@@ -179,7 +183,8 @@ input[type="number"] {
   margin-bottom: 16px;
 }
 
-.content-wrapper h6 {
+.content-wrapper h6,
+.content-wrapper h6 strong {
   color: var(--text-color);
   text-align: justify;
   line-height: 1.5;

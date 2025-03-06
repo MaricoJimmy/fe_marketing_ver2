@@ -49,6 +49,7 @@
       "title": "About us",
       "content": "<p>Developed since 2022. In 2024, Udata is invested by DHG. </p> <p>Udata aims to become a software platform <span class='font- semibold'>leading in Vietnam and Southeast Asia</span> in the field of energy management, IoT data analysis on cloud data platform (SaaS), we provide comprehensive solutions for businesses. Businesses and organizations help analyze and optimize energy consumption and IoT operational parameters from machines, environments, equipment, etc. Thereby helping to reduce costs, increase productivity, and contribute to achieving achieve the goal of sustainable development.</p>"
     },
+    "notification": "Notification",
     "news": "Featured news",
     "button": {
       "details": "See details",
