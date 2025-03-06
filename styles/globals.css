@@ -210,8 +210,9 @@ input[type="number"] {
 
 .content-wrapper em {
   color: var(--text-color);
-  text-decoration: underline;
-  font-weight: 700;
+  /* text-decoration: underline; */
+  font-size: 14px;
+  font-weight: 500;
   margin-bottom: 8px;
   margin-right: 4px;
 }
@@ -236,7 +237,7 @@ input[type="number"] {
 
 .content-wrapper img {
   width: 100%;
-  margin: 24px auto;
+  margin: 24px auto 8px auto;
   border-radius: 4px;
 }
 

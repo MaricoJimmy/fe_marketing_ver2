@@ -1,9 +1,12 @@
 import { gql } from "@apollo/client";
 
-const OEEPostsQuery = gql`
-  query PostsForPambuOEE {
+const NotificationPostsQuery = gql`
+  query PostsForNotification {
     posts(
-      where: { categoryName: "notification", orderby: { field: DATE, order: ASC } }
+      where: {
+        categoryName: "notification"
+        orderby: { field: DATE, order: DESC }
+      }
       first: 100
     ) {
       nodes {
@@ -29,9 +32,9 @@ const OEEPostsQuery = gql`
 `;
 
 const PMSPostsQuery = gql`
-  query PostsForPambuPMS {
+  query PostsForBlog {
     posts(
-      where: { categoryName: "blog", orderby: { field: DATE, order: ASC } }
+      where: { categoryName: "blog", orderby: { field: DATE, order: DESC } }
       first: 100
     ) {
       nodes {
@@ -56,10 +59,10 @@ const PMSPostsQuery = gql`
   }
 `;
 
-const NewsPostsQuery = gql`
-  query PostsForPambuPMS {
+const BlogPostsQuery = gql`
+  query PostsForBlog {
     posts(
-      where: { categoryName: "tin-tuc", orderby: { field: DATE, order: DESC } }
+      where: { categoryName: "blog", orderby: { field: DATE, order: DESC } }
       first: 100
     ) {
       nodes {
@@ -83,4 +86,4 @@ const NewsPostsQuery = gql`
     }
   }
 `;
-export { OEEPostsQuery, PMSPostsQuery, NewsPostsQuery };
+export { NotificationPostsQuery, PMSPostsQuery, BlogPostsQuery };

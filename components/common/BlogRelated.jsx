@@ -16,7 +16,7 @@ function BlogRelated({ data, category }) {
               layout="fill"
               objectFit="cover"
               alt=""
-              className="rounded-2xl"
+              className="rounded-md"
             />
           </div>
           <div className="mt-2 w-fit">

@@ -12,63 +12,38 @@ import { useRouter } from "next/router";
 import PageSeoHead from "../components/common/PageSeoHead";
 import { getApolloClient } from "../libs/apollo-client";
 import {
-  NewsPostsQuery,
-  OEEPostsQuery,
-  PMSPostsQuery,
+  BlogPostsQuery,
+  NotificationPostsQuery,
 } from "../queries/homePageQueries";
 
-export async function getStaticProps({ locale }) {
+export async function getStaticProps() {
   const client = getApolloClient();
 
   const {
     data: {
-      posts: { nodes: oeePosts },
+      posts: { nodes: notificationPosts },
     },
   } = await client.query({
-    query: OEEPostsQuery,
+    query: NotificationPostsQuery,
   });
   const {
     data: {
-      posts: { nodes: pmsPosts },
+      posts: { nodes: blogPosts },
     },
   } = await client.query({
-    query: PMSPostsQuery,
+    query: BlogPostsQuery,
   });
-  const {
-    data: {
-      posts: { nodes: newsPosts },
-    },
-  } = await client.query({
-    query: NewsPostsQuery,
-  });
-
-  const localeNewPosts = newsPosts
-    .map((post) => {
-      return {
-        ...post,
-      };
-    })
-    .slice(0, 5);
-
-  const localeOEEPosts = oeePosts
-    .map((post) => {
-      return {
-        ...post,
-      };
-    })
-    .slice(0, 5);
 
   return {
     props: {
-      oeePosts: localeOEEPosts,
-      pmsPosts,
-      newsPosts: localeNewPosts,
+      notificationPosts: notificationPosts.slice(0, 5),
+      blogPosts: blogPosts.slice(0, 5),
     },
     revalidate: 60,
   };
 }
 
-const HomePage = ({ oeePosts, pmsPosts }) => {
+const HomePage = ({ notificationPosts, blogPosts }) => {
   const router = useRouter();
   const t = useTranslations("Index");
   const metaTagData = {
@@ -113,7 +88,7 @@ const HomePage = ({ oeePosts, pmsPosts }) => {
   const renderSectionBlog = ({
     title,
     img,
-    blogs,
+    posts,
     link,
     direction = "right",
   }) => {
@@ -137,8 +112,8 @@ const HomePage = ({ oeePosts, pmsPosts }) => {
             {title}
           </h3>
           <ul className="flex-1 flex flex-col space-y-4">
-            {blogs.length > 0 ? (
-              blogs.slice(0, 5).map((blog) => (
+            {posts?.length > 0 ? (
+              posts.map((blog) => (
                 <li
                   key={blog.slug}
                   className="flex items-center gap-4 cursor-pointer"
@@ -152,7 +127,7 @@ const HomePage = ({ oeePosts, pmsPosts }) => {
                       layout="fill"
                       alt=""
                       objectFit="contain"
-                      className="rounded-md"
+                      className="rounded-md bg-gray/10"
                     />
                   </div>
                   <div>
@@ -267,7 +242,7 @@ const HomePage = ({ oeePosts, pmsPosts }) => {
                 {renderSectionBlog({
                   title: t("notification"),
                   img: "/image/oee/document-highlight.png",
-                  blogs: oeePosts,
+                  posts: notificationPosts,
                   link: ROUTER_NOTIFICATION,
                   direction: "right",
                 })}
@@ -276,7 +251,7 @@ const HomePage = ({ oeePosts, pmsPosts }) => {
                 {renderSectionBlog({
                   title: "Blog",
                   img: "/image/pms/document-highlight.png",
-                  blogs: pmsPosts,
+                  posts: blogPosts,
                   link: ROUTER_BLOG,
                   direction: "left",
                 })}
