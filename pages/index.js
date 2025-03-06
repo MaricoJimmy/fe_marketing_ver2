@@ -265,7 +265,7 @@ const HomePage = ({ oeePosts, pmsPosts }) => {
             <div className="mt-10 grid lg:grid-cols-2 gap-10">
               <div className="w-full h-full">
                 {renderSectionBlog({
-                  title: "Case study",
+                  title: t("notification"),
                   img: "/image/oee/document-highlight.png",
                   blogs: oeePosts,
                   link: ROUTER_NOTIFICATION,

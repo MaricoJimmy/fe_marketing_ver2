@@ -49,6 +49,7 @@
       "title": "Về chúng tôi",
       "content": "<p>Được phát triển từ năm 2022. Năm 2024, Udata được đầu tư bởi DHG. </p> <p>Udata hướng tới mục tiêu trở thành nền tảng phần mềm <span class='font-semibold'>hàng đầu Việt Nam và Đông Nam Á</span> trong lĩnh vực quản trị năng lượng, phân tích dữ liệu IoT trên nền tảng dữ liệu đám mây (SaaS), chúng tôi cung cấp giải pháp toàn diện cho các doanh nghiệp, tổ chức giúp phân tích và tối ưu hóa tiêu thụ năng lượng, các thông số hoạt động IoT từ máy móc, môi trường, thiết bị,... Từ đó giúp giảm chi phí, tăng năng suất, và góp phần đạt được mục tiêu phát triển bền vững.</p>"
     },
+    "notification": "Thông báo",
     "news": "Tin tức nổi bật",
     "button": {
       "details": "Xem chi tiết",
