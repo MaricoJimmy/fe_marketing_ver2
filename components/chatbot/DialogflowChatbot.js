@@ -1,18 +1,20 @@
 // components/DialogflowChatbot.js
+import Head from "next/head";
 import Script from "next/script";
-import React, { useEffect } from "react";
 
 const DialogflowChatbot = () => {
   return (
     <>
-      <link
-        rel="stylesheet"
-        href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css"
-      />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet"
-      />
+      <Head>
+        <link
+          rel="stylesheet"
+          href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+          rel="stylesheet"
+        />
+      </Head>
 
       <div className="fixed bottom-4 right-4 z-[999] shadow-md rounded-full">
         <df-messenger
