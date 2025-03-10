@@ -29,6 +29,7 @@ function LanguageButton() {
         <SelectTrigger
           className="border-none shadow-none focus:ring-0"
           isShowIcon={false}
+          title="Language button"
         >
           <SelectValue
             placeholder={
@@ -55,7 +56,7 @@ function LanguageButton() {
           />
         </SelectTrigger>
         <SelectContent className="w-fit bg-white">
-          <SelectItem value="vi">
+          <SelectItem value="vi" title="Vietnamese">
             <Image
               src="/image/vietnam-flag.png"
               width="24"
@@ -63,7 +64,7 @@ function LanguageButton() {
               alt=""
             />
           </SelectItem>
-          <SelectItem value="en">
+          <SelectItem value="en" title="English">
             <Image
               src="/image/england-flag.png"
               width="24"
