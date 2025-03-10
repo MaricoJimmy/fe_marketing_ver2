@@ -9,7 +9,7 @@ function Breadcrumb({ data }) {
         <li key={v4()}>
           {(idx !== data.length - 1 && (
             <Link href={item.slug}>
-              <a className="flex items-center">
+              <a title={item.label} className="flex items-center">
                 <span className="text-sm text-gray/80 font-semibold mr-2">
                   {item.label}
                 </span>

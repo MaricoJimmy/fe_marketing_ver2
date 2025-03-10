@@ -15,6 +15,7 @@ function MenuItem({
       <NavigationMenuLink asChild>
         <Link href={href} {...props}>
           <a
+            title={title}
             className={`${className} block select-none space-y-1 p-3 bg-transparent hover:bg-primary/5 no-underline outline-none transition-colors cursor-pointer rounded-md`}
           >
             <div

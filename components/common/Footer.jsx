@@ -197,6 +197,7 @@ function FooterDesktop({ sectionLinks }) {
               <ul className="mt-8 flex flex-col items-start gap-6 cursor-pointer">
                 <li className="flex items-center gap-2">
                   <a
+                  title="Hotline"
                     href="tel:1800255698"
                     className="p-1 w-[30px] h-[30px] flex items-center justify-center border border-gray/20 rounded-full"
                   >
@@ -214,6 +215,7 @@ function FooterDesktop({ sectionLinks }) {
                     </svg>
                   </a>
                   <a
+                  title="Email"
                     target="_blank"
                     rel="noreferrer"
                     href="https://www.facebook.com/profile.php?id=61566884154567"
@@ -227,6 +229,7 @@ function FooterDesktop({ sectionLinks }) {
                     />
                   </a>
                   <a
+                  title="Facebook"
                     target="_blank"
                     rel="noreferrer"
                     href="https://www.linkedin.com/company/udatadhg/"
@@ -240,6 +243,7 @@ function FooterDesktop({ sectionLinks }) {
                     />
                   </a>
                   <a
+                  title="Instagram"
                     target="_blank"
                     rel="noreferrer"
                     href="https://www.instagram.com/udata_jsc/"
@@ -267,6 +271,7 @@ function FooterDesktop({ sectionLinks }) {
                     />
                   </svg>
                   <a
+                  title="Hotline"
                     href="tel:1800255698"
                     className="ml-2 text-gray/80 font-semibold"
                   >
@@ -289,6 +294,7 @@ function FooterDesktop({ sectionLinks }) {
                     />
                   </svg>
                   <a
+                  title="Email"
                     href="mailto:support@udata.ai"
                     className="ml-2 text-gray/80 font-semibold"
                   >
@@ -311,6 +317,7 @@ function FooterDesktop({ sectionLinks }) {
                     />
                   </svg>
                   <a
+                  title="Email"
                     href="mailto:sales@udata.ai"
                     className="ml-2 text-gray/80 font-semibold"
                   >
@@ -431,6 +438,7 @@ function FooterMobile({ sectionLinks }) {
                 <ul className="mt-6 cursor-pointer">
                   <li className="flex items-center gap-2">
                     <a
+                      title="Hotline"
                       href="tel:1800255698"
                       className="p-1 w-[30px] h-[30px] flex items-center justify-center border border-gray/20 rounded-full"
                     >
@@ -448,6 +456,7 @@ function FooterMobile({ sectionLinks }) {
                       </svg>
                     </a>
                     <a
+                      title="Facebook"
                       target="_blank"
                       rel="noreferrer"
                       href="https://www.facebook.com/profile.php?id=61566884154567"
@@ -461,6 +470,7 @@ function FooterMobile({ sectionLinks }) {
                       />
                     </a>
                     <a
+                      title="Linkedin"
                       target="_blank"
                       rel="noreferrer"
                       href="https://www.linkedin.com/company/udatadhg/"
@@ -474,6 +484,7 @@ function FooterMobile({ sectionLinks }) {
                       />
                     </a>
                     <a
+                      title="Instagram"
                       target="_blank"
                       rel="noreferrer"
                       href="https://www.instagram.com/udata_jsc/"
@@ -501,6 +512,7 @@ function FooterMobile({ sectionLinks }) {
                       />
                     </svg>
                     <a
+                      title="Hotline"
                       href="tel:1800255698"
                       className=" ml-2 text-gray/80 font-semibold"
                     >
@@ -523,6 +535,7 @@ function FooterMobile({ sectionLinks }) {
                       />
                     </svg>
                     <a
+                      title="Email"
                       href="mailto:support@udata.ai"
                       className=" ml-2 text-gray/80 font-semibold"
                     >
@@ -545,6 +558,7 @@ function FooterMobile({ sectionLinks }) {
                       />
                     </svg>
                     <a
+                      title="Email"
                       href="mailto:sales@udata.ai"
                       className=" ml-2 text-gray/80 font-semibold"
                     >

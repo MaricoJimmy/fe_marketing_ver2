@@ -21,6 +21,7 @@ const AboutUsPage = () => {
         }
       >
         <a
+          title="Apply now"
           rel="noopener noreferrer"
           target="_blank"
           className="p-4 block w-full h-full lg:min-h-[180px] bg-white rounded-lg shadow-md"

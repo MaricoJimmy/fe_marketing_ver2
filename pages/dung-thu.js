@@ -204,6 +204,7 @@ const ContactPage = () => {
                           Hotline
                         </h4>
                         <a
+                        title="Hotline"
                           href="tel:1800255698"
                           className="text-neutral font-medium"
                         >
@@ -233,6 +234,7 @@ const ContactPage = () => {
                           Support
                         </h4>
                         <a
+                        title="Support"
                           href="mailto:support@udata.ai"
                           className="text-neutral font-medium"
                         >
@@ -262,6 +264,7 @@ const ContactPage = () => {
                           Sales
                         </h4>
                         <a
+                        title="Sales"
                           href="mailto:sales@udata.ai"
                           className="text-neutral font-medium"
                         >
@@ -290,6 +293,7 @@ const ContactPage = () => {
                           Facebook
                         </h4>
                         <a
+                        title="Facebook"
                           target="_blank"
                           rel="noreferrer"
                           href="https://www.facebook.com/profile.php?id=61566884154567"
@@ -330,6 +334,7 @@ const ContactPage = () => {
                           Instagram
                         </h4>
                         <a
+                        title="Instagram"
                           target="_blank"
                           rel="noreferrer"
                           href="https://www.instagram.com/udata_jsc/"
@@ -363,6 +368,7 @@ const ContactPage = () => {
                           Linkedin
                         </h4>
                         <a
+                        title="Linkedin"
                           target="_blank"
                           rel="noreferrer"
                           href="https://www.linkedin.com/company/udatadhg"

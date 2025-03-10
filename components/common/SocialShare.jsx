@@ -4,6 +4,7 @@ import React from "react";
 function SocialShare({ data }) {
   return (
     <a
+      title="Share on Facebook"
       href={`https://www.facebook.com/sharer.php?u=https://udata.ai/${data}`}
       target="_blank"
       rel="noreferrer"

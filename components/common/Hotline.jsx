@@ -8,6 +8,7 @@ function Hotline({ isPMSPage }) {
       <div className="w-full flex justify-center items-center">
         <div className="max-w-screen-xl w-full">
           <a
+          title="Hotline"
             href="tel:0387430957"
             className="py-4 px-8 h-full flex items-center justify-end"
           >

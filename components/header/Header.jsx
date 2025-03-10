@@ -240,6 +240,7 @@ function HeaderDesktop({ stickyHeader, locale }) {
             <div>
               <Link href={ROUTER_CONTACT}>
                 <a
+                  title="Free trial"
                   className={`py-2 px-6 w-full overflow-hidden block relative group bg-white border-2 border-primary font-medium rounded-md`}
                 >
                   <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-primary top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
@@ -565,6 +566,7 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
               <div className="mt-10">
                 {(isProductPage && (
                   <a
+                    title="Hotline"
                     onClick={() => setOpenMenu(!openMenu)}
                     href="tel:0387430957"
                     className={`${
@@ -592,6 +594,7 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
                 )) || (
                   <Link href={ROUTER_CONTACT}>
                     <a
+                      title="Free trial"
                       onClick={() => setOpenMenu(!openMenu)}
                       className={`py-3 px-6 block w-full bg-primary hover:bg-secondary text-white text-center font-bold rounded-md duration-200`}
                     >
