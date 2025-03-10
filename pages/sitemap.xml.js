@@ -6,7 +6,7 @@ import {
   AllBlogPosts,
 } from "../queries/guidesQueries";
 
-function generateSiteMap({ oeePosts, pmsPosts }) {
+function generateSiteMap({ notiPosts, blogPosts }) {
   const routes = Object.keys(routeMaps).reduce((acc, locale) => {
     Object.values(routeMaps[locale]).forEach((route) => {
       acc.push({ locale, route });
@@ -28,7 +28,7 @@ function generateSiteMap({ oeePosts, pmsPosts }) {
        `;
        })
        .join("")}
-     ${oeePosts
+     ${notiPosts
        .map(({ slug }) => {
          return `
          <url>
@@ -37,7 +37,7 @@ function generateSiteMap({ oeePosts, pmsPosts }) {
        `;
        })
        .join("")}
-     ${pmsPosts
+     ${blogPosts
        .map(({ slug }) => {
          return `
          <url>
@@ -67,7 +67,7 @@ export async function getServerSideProps({ res }) {
 
   const {
     data: {
-      posts: { nodes: oeePosts },
+      posts: { nodes: notiPosts },
     },
   } = await client.query({
     query: AllNotiPosts,
@@ -75,7 +75,7 @@ export async function getServerSideProps({ res }) {
 
   const {
     data: {
-      posts: { nodes: pmsPosts },
+      posts: { nodes: blogPosts },
     },
   } = await client.query({
     query: AllBlogPosts,
@@ -85,8 +85,8 @@ export async function getServerSideProps({ res }) {
   // We generate the XML sitemap with the posts data
   const sitemap = generateSiteMap({
     newsPosts,
-    oeePosts,
-    pmsPosts,
+    notiPosts,
+    blogPosts,
   });
 
   res.setHeader("Content-Type", "text/xml");

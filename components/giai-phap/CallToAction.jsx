@@ -29,6 +29,7 @@ function CallToAction({ data }) {
           </h5>
           <Button
             size="lg"
+            title={data.button}
             variant="secondary"
             data-aos="fade-up"
             data-aos-delay="200"

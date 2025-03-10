@@ -121,10 +121,11 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
         <div className="px-5 md:px-8 py-10 max-w-screen-xl w-full">
           <Button
             variant="noBg"
+            title={"Quay về"}
+            className="px-0 flex items-center gap-2 text-neutral"
             onClick={() =>
               router.push(getLocalizedPath(ROUTER_BLOG, router.locale))
             }
-            className="px-0 flex items-center gap-2 text-neutral"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

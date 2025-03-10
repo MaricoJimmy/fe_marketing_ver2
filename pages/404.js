@@ -30,7 +30,12 @@ function NotFound() {
             <p className="mb-4 text-lg font-light text-neutral">
               {t("content")}
             </p>
-            <Button size="lg" className="mt-8" onClick={() => router.push("/")}>
+            <Button
+              size="lg"
+              className="mt-8"
+              title={t("button")}
+              onClick={() => router.push("/")}
+            >
               {t("button")}
             </Button>
           </div>

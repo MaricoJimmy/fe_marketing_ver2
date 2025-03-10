@@ -150,7 +150,11 @@ const HomePage = ({ notificationPosts, blogPosts }) => {
           </ul>
         </div>
         <div>
-          <Button variant="outline" onClick={() => router.push(link)}>
+          <Button
+            variant="outline"
+            title={t("button.full")}
+            onClick={() => router.push(link)}
+          >
             {t("button.full")}
           </Button>
         </div>
@@ -171,13 +175,13 @@ const HomePage = ({ notificationPosts, blogPosts }) => {
             >
               Udata
             </h1>
-            <h4
+            <h3
               data-aos="fade-up"
               data-aos-delay="100"
               className="mt-2 text-white lg:text-2xl text-xl font-medium"
             >
               Iot Platform
-            </h4>
+            </h3>
             <h3
               data-aos="fade-up"
               data-aos-delay="200"
@@ -188,12 +192,13 @@ const HomePage = ({ notificationPosts, blogPosts }) => {
             <div className="mt-4">
               <Button
                 size="lg"
+                data-aos="fade-up"
+                data-aos-delay="300"
+                title={t("button.start")}
+                className="relative rounded-md group overflow-hidden font-medium bg-white text-primary shadow-md"
                 onClick={() =>
                   router.push(getLocalizedPath(ROUTER_CONTACT, router.locale))
                 }
-                data-aos="fade-up"
-                data-aos-delay="300"
-                className="relative rounded-md group overflow-hidden font-medium bg-white text-primary shadow-md"
               >
                 <span className="absolute top-0 left-0 flex w-full h-0 mb-0 transition-all duration-200 ease-out transform translate-y-0 bg-primary group-hover:h-full opacity-90"></span>
                 <span className="relative group-hover:text-white">

@@ -31,13 +31,14 @@ function HeroSection({ data, image = "", bgColor = "bg-infor" }) {
         </p>
         <div className="mt-6 flex lg:justify-start justify-center">
           <Button
-            onClick={() =>
-              router.push(getLocalizedPath(ROUTER_CONTACT, router.locale))
-            }
             size="lg"
             data-aos="fade-up"
             data-aos-delay="300"
+            title={data.contact}
             className="shadow-md hover:shadow-xl hover:!scale-105 transition-all"
+            onClick={() =>
+              router.push(getLocalizedPath(ROUTER_CONTACT, router.locale))
+            }
           >
             {data.contact}
           </Button>

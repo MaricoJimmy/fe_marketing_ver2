@@ -133,7 +133,7 @@ function FooterDesktop({ sectionLinks }) {
           <div className="grid grid-cols-4 gap-6">
             <div className="col-span-1 flex flex-col justify-between">
               <Link href="/">
-                <a aria-label="logo">
+                <a title="Logo" aria-label="logo">
                   <Image
                     src="/image/logo/logo_1.png"
                     width="180"
@@ -142,7 +142,7 @@ function FooterDesktop({ sectionLinks }) {
                   />
                 </a>
               </Link>
-              <span className="text-lg text-gray/60 font-semibold">
+              <span className="text-lg text-neutral font-semibold">
                 Copyright @ 2024 Udata.ai
               </span>
             </div>
@@ -164,7 +164,10 @@ function FooterDesktop({ sectionLinks }) {
                       </h3>
                     ) : (
                       <Link href={sectionLink.href}>
-                        <a className="text-neutral font-bold hover:text-primary duration-200">
+                        <a
+                          title={sectionLink.section}
+                          className="text-neutral font-bold hover:text-primary duration-200"
+                        >
                           {sectionLink.section}
                         </a>
                       </Link>
@@ -173,7 +176,10 @@ function FooterDesktop({ sectionLinks }) {
                       <ul className="mt-2 flex flex-col space-y-1">
                         {sectionLink.menus.map((menu) => (
                           <Link key={menu.title} href={menu.href}>
-                            <a className="text-gray/80 font-semibold">
+                            <a
+                              title={menu.title}
+                              className="text-gray/80 font-semibold"
+                            >
                               {menu.title}
                             </a>
                           </Link>
@@ -369,7 +375,7 @@ function FooterMobile({ sectionLinks }) {
             <div className="grid grid-cols-4 gap-6">
               <div className="col-span-4">
                 <Link href="/">
-                  <a aria-label="logo">
+                  <a title="Logo" aria-label="logo">
                     <Image
                       src="/image/logo/logo_1.png"
                       width="180"
@@ -380,24 +386,22 @@ function FooterMobile({ sectionLinks }) {
                 </Link>
               </div>
               <div className="col-span-4">
-                <h4 className="text-2xl text-gray font-semibold">
+                <h5 className="text-2xl text-gray font-semibold">
                   {t("section.first.title")}
-                </h4>
+                </h5>
                 <ul className="mt-6 flex flex-col items-start gap-6 cursor-pointer">
                   {sectionLinks.map((sectionLink) => (
                     <li key={sectionLink.section} className="w-full">
-                      {/* <Link href={menu.href}>
-                        <a className="block w-full" aria-label="Udata PMS">
-                          {menu.title}
-                        </a>
-                      </Link> */}
                       {sectionLink.menus ? (
                         <h3 className="text-neutral font-bold hover:text-primary duration-200">
                           {sectionLink.section}
                         </h3>
                       ) : (
                         <Link href={sectionLink.href}>
-                          <a className="text-neutral font-bold hover:text-primary duration-200">
+                          <a
+                            title={sectionLink.section}
+                            className="text-neutral font-bold hover:text-primary duration-200"
+                          >
                             {sectionLink.section}
                           </a>
                         </Link>
@@ -406,7 +410,10 @@ function FooterMobile({ sectionLinks }) {
                         <ul className="mt-2 flex flex-col space-y-1">
                           {sectionLink.menus.map((menu) => (
                             <Link key={menu.title} href={menu.href}>
-                              <a className="text-gray/80 font-semibold">
+                              <a
+                                title={menu.title}
+                                className="text-gray/80 font-semibold"
+                              >
                                 {menu.title}
                               </a>
                             </Link>
@@ -587,7 +594,7 @@ function FooterMobile({ sectionLinks }) {
               </div>
             </div>
             <div className="mt-6 flex items-center justify-center">
-              <span className="text-gray/60 font-semibold">
+              <span className="text-neutral font-semibold">
                 Copyright @ 2024 Udata.ai
               </span>
             </div>

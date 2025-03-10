@@ -132,6 +132,7 @@ function InfoClientForm({ isModal, productType }) {
         </div>
         <div className="mt-10">
           <Button
+            title={t("form.button")}
             className={`bg-primary px-6 py-3 w-full text-white font-semibold duration-200`}
           >
             {t("form.button")}

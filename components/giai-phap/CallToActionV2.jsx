@@ -17,6 +17,7 @@ function CallToActionV2({ data }) {
             {data.title}
           </h3>
           <Button
+            title={data.button}
             size="lg"
             variant="secondary"
             data-aos="fade-up"

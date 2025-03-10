@@ -108,6 +108,7 @@ const ContactPage = () => {
                   variant="white"
                   data-aos="fade-up"
                   data-aos-delay="400"
+                  title={t("button.demo")}
                   className="font-medium hover:shadow-lg hover:scale-105 transition-all duration-300"
                   size="lg"
                   onClick={() => {
@@ -592,6 +593,7 @@ const ContactPage = () => {
                     <div className="mt-4 flex justify-end">
                       <Button
                         type="submit"
+                        title={t("form.button")}
                         className="px-6 py-3 w-[100px] bg-primary hover:bg-secondary text-white font-semibold"
                       >
                         {t("form.button")}

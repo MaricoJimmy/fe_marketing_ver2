@@ -39,13 +39,14 @@ function HeroSectionV2({ data, page }) {
         </h5>
         <div className="mt-10 flex items-center">
           <Button
-            onClick={() =>
-              router.push(getLocalizedPath(ROUTER_CONTACT, router.locale))
-            }
-            className="shadow-md hover:shadow-xl hover:scale-105 transition-all"
             size="lg"
             data-aos="fade-up"
             data-aos-delay="200"
+            title={data.contact}
+            className="shadow-md hover:shadow-xl hover:scale-105 transition-all"
+            onClick={() =>
+              router.push(getLocalizedPath(ROUTER_CONTACT, router.locale))
+            }
           >
             {data.contact}
           </Button>

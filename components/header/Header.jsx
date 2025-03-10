@@ -74,7 +74,7 @@ function HeaderDesktop({ stickyHeader, locale }) {
         <div className={`py-3 px-8 w-full flex items-center justify-between`}>
           <div className="flex items-center gap-5">
             <Link href="/">
-              <a aria-label="logo" className="flex items-center">
+              <a aria-label="logo" title="Logo" className="flex items-center">
                 <Image
                   src="/image/logo/logo_1.png"
                   width="150"
@@ -374,7 +374,7 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
     >
       <div className="flex items-center justify-between">
         <Link href="/">
-          <a className="flex items-center">
+          <a title="Logo" className="flex items-center">
             <Image
               src="/image/logo/logo_1.png"
               width="110"
@@ -384,7 +384,11 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
           </a>
         </Link>
         <div>
-          <Button onClick={() => setOpenMenu(!openMenu)} className="pl-2">
+          <Button
+            title="Open menu"
+            onClick={() => setOpenMenu(!openMenu)}
+            className="pl-2"
+          >
             <svg
               width="30"
               height="30"
@@ -432,6 +436,7 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
               <LanguageButton />
               <div>
                 <Button
+                  title="Close menu"
                   onClick={() => setOpenMenu(!openMenu)}
                   className="w-full flex items-center justify-end"
                 >
@@ -498,7 +503,10 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
                         </>
                       ) : (
                         <Link href={menu.href}>
-                          <a className="block w-full font-semibold text-gray hover:text-primary duration-200">
+                          <a
+                            title={menu.menu}
+                            className="block w-full font-semibold text-gray hover:text-primary duration-200"
+                          >
                             {menu.menu}
                           </a>
                         </Link>
@@ -526,7 +534,10 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
                                   {subMenu.menus.map((item) => (
                                     <li key={item.title}>
                                       <Link href={item.href}>
-                                        <a className="block w-full text-gray font-semibold hover:text-primary duration-200">
+                                        <a
+                                          title={item.title}
+                                          className="block w-full text-gray font-semibold hover:text-primary duration-200"
+                                        >
                                           {item.title}
                                         </a>
                                       </Link>
@@ -536,7 +547,10 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
                               </div>
                             ) : (
                               <Link href={subMenu.href} className=" ">
-                                <a className="block w-full text-gray font-semibold hover:text-primary duration-200">
+                                <a
+                                  title={subMenu.title}
+                                  className="block w-full text-gray font-semibold hover:text-primary duration-200"
+                                >
                                   {subMenu.title}
                                 </a>
                               </Link>
