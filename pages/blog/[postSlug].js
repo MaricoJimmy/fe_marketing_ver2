@@ -1,10 +1,11 @@
+import ScrollToTop from "@/components/common/ScrollToTop";
+import TableOfContent from "@/components/common/TableOfContent";
 import Tags from "@/components/common/Tags";
 import { Button } from "@/components/ui/button";
 import { ROUTER_BLOG } from "@/utils/constant";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useRouter } from "next/router";
-import { useMemo } from "react";
 import BlogRelated from "../../components/common/BlogRelated";
 import PageSeoHead from "../../components/common/PageSeoHead";
 import SocialShare from "../../components/common/SocialShare";
@@ -14,7 +15,13 @@ import {
   MoreRelatedPostsQueryInSameCategory,
   PostDetailsQuery,
 } from "../../queries/postQuery";
-import { getDate, getLocalizedPath } from "../../utils";
+import {
+  addIdsToHeadings,
+  extractHeadings,
+  getDate,
+  getLocalizedPath,
+} from "../../utils";
+import { useMemo } from "react";
 
 export async function getStaticProps({ params, locale }) {
   const client = getApolloClient();
@@ -90,21 +97,6 @@ export async function getStaticPaths({ locales }) {
 const NewsPostDetailsPage = ({ post, relatedPosts }) => {
   const router = useRouter();
   const t = useTranslations("Common");
-  const breadcrumbs = useMemo(() => {
-    return [
-      {
-        label: router.locale === "vi" ? "Trang chủ" : "Home",
-        slug: "/",
-      },
-      {
-        label: router.locale === "vi" ? "Tin tức" : "News",
-        slug: "/tin-tuc",
-      },
-      {
-        label: post.title,
-      },
-    ];
-  }, [post, router.locale]);
 
   const metaTagData = {
     title: `${post.title} | Udata.ai`,
@@ -113,6 +105,15 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
   };
 
   const postTags = post.tags?.nodes.map((tag) => tag.name) || [];
+
+  // Add id to headings to create table of content
+  const updatedContent = useMemo(() => {
+    return post ? addIdsToHeadings(post.content) : post.content;
+  }, [post]);
+  // Extract headings from content to create table of content
+  const tableOfContents = useMemo(() => {
+    return updatedContent ? extractHeadings(updatedContent) : post.content;
+  }, [updatedContent]);
 
   return (
     <>
@@ -144,8 +145,8 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
             </svg>
             <span>Quay về</span>
           </Button>
-          <div className="mt-4 grid grid-cols-3 gap-10">
-            <div className="col-span-3 md:col-span-2">
+          <div className="mt-4 grid lg:grid-cols-3 grid-cols-1 gap-10">
+            <div className="lg:col-span-2 col-span-1">
               <div className="mb-6">
                 <h1 className="font-bold text-4xl text-green-secondary mb-2">
                   {post.title}
@@ -167,6 +168,11 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
                   className="mt-2 text-lg text-gray font-medium text-justify"
                   dangerouslySetInnerHTML={{ __html: post.excerpt }}
                 ></h3>
+                {tableOfContents && tableOfContents.length > 0 ? (
+                  <div className="mt-4">
+                    <TableOfContent headings={tableOfContents} />
+                  </div>
+                ) : null}
               </div>
 
               <div className="mt-8">
@@ -181,11 +187,11 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
 
               <div
                 className="content-wrapper mt-6"
-                dangerouslySetInnerHTML={{ __html: post.content }}
+                dangerouslySetInnerHTML={{ __html: updatedContent }}
               ></div>
             </div>
-            <div className="col-span-3 md:col-span-1">
-              <div className="w-full bg-white border border-gray/20 p-6 md:p-8 rounded-3xl">
+            <div className="lg:col-span-1 col-span-1">
+              <div className="w-full bg-white border border-gray/20 p-4 md:p-6 rounded-xl">
                 <div className="w-fit">
                   <h2 className="text-2xl text-center text-gray font-bold">
                     {t("relatedPost")}
@@ -195,9 +201,9 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
                   </div>
                 </div>
                 {relatedPosts.length > 0 && (
-                  <ul className="mt-6">
+                  <ul className="mt-6 lg:flex md:grid grid-cols-2 flex flex-col space-y-8 md:space-y-0 md:gap-8 gap-0">
                     {relatedPosts.map((relatePost) => (
-                      <li key={relatePost.id} className="mb-8 last:mb-0">
+                      <li key={relatePost.id} className="">
                         <BlogRelated data={relatePost} category="blog" />
                       </li>
                     ))}
@@ -207,6 +213,11 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* scroll to top button */}
+      <div className="fixed bottom-24 right-7 z-10">
+        <ScrollToTop />
       </div>
     </>
   );

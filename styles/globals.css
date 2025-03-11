@@ -11,6 +11,7 @@ body {
   margin: 0;
   font-family: "Inter", sans-serif;
   -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -145,6 +146,15 @@ input[type="number"] {
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+
+.content-wrapper h1,
+.content-wrapper h1 strong {
+  color: var(--text-color);
+  font-size: 34px;
+  line-height: 1.5;
+  font-weight: bold;
+  margin-bottom: 24px;
 }
 
 .content-wrapper h2,

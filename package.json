@@ -23,6 +23,7 @@
     "@radix-ui/react-slot": "^1.1.0",
     "aos": "^2.3.4",
     "axios": "^0.27.2",
+    "cheerio": "^1.0.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "framer-motion": "^7.6.4",
