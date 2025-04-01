@@ -318,25 +318,25 @@
         "title": "Giám Sát Hiệu Suất Theo Thời Gian Thực",
         "subTitle": "Một phần tập trung vào cách dữ liệu theo thời gian thực và phân tích hiệu suất cung cấp sự minh bạch về hiệu suất hệ thống.",
         "desc": "Nền tảng của chúng tôi cung cấp các thông tin chi tiết về sản lượng năng lượng mặt trời của bạn, cho phép bạn theo dõi các chỉ số chính như sản lượng, hiệu suất biến tần. Sử dụng dữ liệu hiệu suất trong quá khứ để xác định những điểm kém hiệu quả và đưa ra các quyết định dựa trên dữ liệu để tối ưu hóa việc sử dụng năng lượng.",
-        "img": "/image/solutions/solar/solar-feature-1.jpg"
+        "img": "/image/solutions/solar/solar-feature-1.webp"
       },
       "second": {
         "title": "Cảnh Báo Tự Động và Bảo Trì Chủ Động",
         "subTitle": "Giải thích cách hệ thống gửi thông báo khi vượt qua các ngưỡng hiệu suất, giúp thực hiện hành động nhanh chóng đối với các lỗi hệ thống.",
         "desc": "Tránh thời gian chết với hệ thống cảnh báo thông minh của chúng tôi. Nhận thông báo theo thời gian thực về mọi vấn đề ảnh hưởng đến sản lượng hệ thống điện mặt trời của bạn, đảm bảo hệ thống của bạn hoạt động ở hiệu suất cao nhất.",
-        "img": "/image/solutions/solar/solar-feature-2.jpg"
+        "img": "/image/solutions/solar/solar-feature-2.webp"
       },
       "third": {
         "title": "Báo cáo điểm bất thường",
         "subTitle": "Tập trung vào khả năng tổng hợp thông tin từ điểm bất thường đưa ra cảnh báo về sự thất thoát doanh thu.",
         "desc": "Chúng tôi cung cấp cho bạn các báo cáo bất thường theo ngày, tuần, tháng. Với các con số cụ thể và trực quan, nắm bắt được ngay lập tức vấn đề đang xảy ra trong hệ thống, giúp bạn đưa ra quyết định ngay lập tức.",
-        "img": "/image/solutions/solar/solar-feature-3.png"
+        "img": "/image/solutions/solar/solar-feature-3.webp"
       },
       "four": {
         "title": "Tích Hợp Liền Mạch với Hệ Thống Năng Lượng của Bạn",
         "subTitle": "Tập trung vào khả năng tích hợp với các hệ thống quản lý năng lượng hiện có.",
         "desc": "Giải pháp điện mặt trời áp mái của chúng tôi tích hợp liền mạch với hạ tầng năng lượng hiện có của bạn. Quản lý năng lượng mặt trời, năng lượng lưới và năng lượng lưu trữ tất cả từ một nền tảng, tối ưu hóa dòng năng lượng và giảm chi phí.",
-        "img": "/image/solutions/solar/solar-feature-4.png"
+        "img": "/image/solutions/solar/solar-feature-4.webp"
       }
     },
     "callToAction": {
@@ -386,25 +386,25 @@
         "title": "Giám sát chất lượng nước",
         "subTitle": "Hệ thống cho phép thu thập và tập trung dữ liệu thời gian thực từ nhiều nguồn khác nhau",
         "desc": "Udata là hệ thống giám sát chất lượng nước toàn diện, giúp bạn theo dõi liên tục các thông số quan trọng như pH, độ mặn, nhiệt độ, hàm lượng oxy hòa tan, v.v. với hệ thống cảm biến tiên tiến hoạt động ổn định và chính xác. Udata cung cấp giao diện trực quan, dễ sử dụng, cho phép bạn theo dõi thông số trực tiếp trên thiết bị di động hoặc máy tính. Bằng cách theo dõi liên tục các thông số chất lượng nước, Udata giúp bạn kiểm soát môi trường nuôi trồng hiệu quả, hạn chế rủi ro bệnh tật, ô nhiễm, và nâng cao hiệu quả sản xuất, là công cụ hữu ích cho các trang trại nuôi trồng thủy sản.",
-        "img": "/image/solutions/fisheries/fisheries-feature-1.png"
+        "img": "/image/solutions/fisheries/fisheries-feature-1.webp"
       },
       "second": {
         "title": "Giám sát mức độ sinh trưởng của con giống",
         "subTitle": "Udata thu thập dữ liệu về trọng lượng và kích thước của con giống, phân tích dữ liệu và hiển thị kết quả dưới dạng biểu đồ và báo cáo, giúp bạn dễ dàng theo dõi và đánh giá tốc độ tăng trưởng của con giống.",
         "desc": "Udata không chỉ giám sát chất lượng nước mà còn mở rộng chức năng để theo dõi và giám sát mức độ sinh trưởng của con giống. Hệ thống thu thập dữ liệu về cân nặng, tốc độ tăng trưởng, phân tích dữ liệu, phát hiện xu hướng bất thường.",
-        "img": "/image/solutions/fisheries/fisheries-feature-2.png"
+        "img": "/image/solutions/fisheries/fisheries-feature-2.webp"
       },
       "third": {
         "title": "Cảnh Báo thông minh và Thông báo tự động",
         "subTitle": "Hệ thống gửi thông báo khi số liệu vượt ngưỡng an toàn, giúp phát hiện và giải quyết vấn đề một cách nhanh chóng.",
         "desc": "Nhận thông báo theo thời gian thực về mọi vấn đề ảnh hưởng đến môi trường nuôi trồng và tốc độ sinh trưởng của con giống. Tùy chỉnh các ngưỡng cài đặt theo kinh nghiệm, mọi bất thường sẽ được ghi nhận và cảnh báo qua Email/SMS. Cảnh báo sớm sẽ giúp vật nuôi an toàn trước các tác nhân có hại từ môi trường.",
-        "img": "/image/solutions/fisheries/fisheries-feature-3.png"
+        "img": "/image/solutions/fisheries/fisheries-feature-3.webp"
       },
       "four": {
         "title": "Báo cáo điểm bất thường",
         "subTitle": "Tập trung vào khả năng tổng hợp thông tin từ điểm bất thường và đưa ra báo cáo tổng hợp.",
         "desc": "Chúng tôi cung cấp cho bạn các báo cáo bất thường theo ngày, tuần, tháng. Với các con số cụ thể và trực quan, nắm bắt được ngay lập tức vấn đề đang xảy ra trong hệ thống trang trại của bạn ngay lập tức.",
-        "img": "/image/solutions/fisheries/fisheries-feature-4.png"
+        "img": "/image/solutions/fisheries/fisheries-feature-4.webp"
       }
     },
     "callToAction": {
@@ -471,7 +471,7 @@
             "content": "Giúp sử dụng hiệu quả các nguồn lực như nhân lực, tài chính và thời gian."
           }
         ],
-        "img": "/image/solutions/investors/investors-feature-1.jpg"
+        "img": "/image/solutions/investors/investors-feature-1.webp"
       },
       "second": {
         "title": "Các tính năng nổi bật của giải pháp",
@@ -493,7 +493,7 @@
             "content": "Phù hợp với nhu cầu của khách hàng trên toàn cầu."
           }
         ],
-        "img": "/image/solutions/investors/investors-feature-2.jpg"
+        "img": "/image/solutions/investors/investors-feature-2.webp"
       },
       "third": {
         "title": "Phương thức triển khai và hỗ trợ khách hàng",
@@ -511,7 +511,7 @@
             "content": "Cung cấp dịch vụ hỗ trợ kỹ thuật 24/7 để giải đáp các thắc mắc và xử lý sự cố."
           }
         ],
-        "img": "/image/solutions/investors/investors-feature-3.jpg"
+        "img": "/image/solutions/investors/investors-feature-3.webp"
       }
     },
     "callToAction": {
@@ -588,7 +588,7 @@
             "content": "Giúp sử dụng hiệu quả các nguồn lực như nhân lực, tài chính và thời gian."
           }
         ],
-        "img": "/image/solutions/investors/investors-feature-1.jpg"
+        "img": "/image/solutions/investors/investors-feature-1.webp"
       },
       "second": {
         "title": "Các tính năng nổi bật của giải pháp",
@@ -610,7 +610,7 @@
             "content": "Phù hợp với nhu cầu của khách hàng trên toàn cầu."
           }
         ],
-        "img": "/image/solutions/investors/investors-feature-2.jpg"
+        "img": "/image/solutions/investors/investors-feature-2.webp"
       },
       "third": {
         "title": "Phương thức triển khai và hỗ trợ khách hàng",
@@ -628,7 +628,7 @@
             "content": "Cung cấp dịch vụ hỗ trợ kỹ thuật 24/7 để giải đáp các thắc mắc và xử lý sự cố."
           }
         ],
-        "img": "/image/solutions/investors/investors-feature-3.jpg"
+        "img": "/image/solutions/investors/investors-feature-3.webp"
       }
     },
     "callToAction": {
@@ -705,7 +705,7 @@
             "content": "Giúp sử dụng hiệu quả các nguồn lực như nhân lực, tài chính và thời gian."
           }
         ],
-        "img": "/image/solutions/investors/investors-feature-1.jpg"
+        "img": "/image/solutions/investors/investors-feature-1.webp"
       },
       "second": {
         "title": "Các tính năng nổi bật của giải pháp",
@@ -727,7 +727,7 @@
             "content": "Phù hợp với nhu cầu của khách hàng trên toàn cầu."
           }
         ],
-        "img": "/image/solutions/investors/investors-feature-2.jpg"
+        "img": "/image/solutions/investors/investors-feature-2.webp"
       },
       "third": {
         "title": "Phương thức triển khai và hỗ trợ khách hàng",
@@ -745,7 +745,7 @@
             "content": "Cung cấp dịch vụ hỗ trợ kỹ thuật 24/7 để giải đáp các thắc mắc và xử lý sự cố."
           }
         ],
-        "img": "/image/solutions/investors/investors-feature-3.jpg"
+        "img": "/image/solutions/investors/investors-feature-3.webp"
       }
     },
     "callToAction": {
@@ -921,19 +921,19 @@
         "title": "Ứng dụng cho phép quản lý đa địa điểm, đa thiết bị của nhiều nhà sản xuất khác nhau trên cùng một nền tảng",
         "subTitle": "",
         "desc": "Với mong muốn mang đến giải pháp quản lý hiệu quả và toàn diện, chúng tôi đã phát triển ứng dụng đầu tiên và cho phép quản lý đồng bộ nhiều địa điểm, nhiều thiết bị từ các nhà sản xuất khác nhau trên cùng một nền tảng. Điều này giúp doanh nghiệp tối ưu hóa quy trình quản lý, tiết kiệm thời gian và nâng cao hiệu quả hoạt động",
-        "img": "/image/products/saas/saas-feature-1.jpg"
+        "img": "/image/products/saas/saas-feature-1.webp"
       },
       "second": {
         "title": "Ứng dụng cho phép cảnh báo tự động tới khách hàng theo kịch bản được thiết lập bởi người dùng",
         "subTitle": "",
         "desc": "Ứng dụng của chúng tôi là giải pháp tiên phong tại Việt Nam, cung cấp tính năng cảnh báo tự động thông minh. Nhờ đó, khách hàng có thể chủ động thiết lập các kịch bản cảnh báo phù hợp với nhu cầu riêng, đảm bảo mọi sự cố được phát hiện và xử lý kịp thời, nâng cao hiệu quả quản lý và giảm thiểu rủi ro.",
-        "img": "/image/products/saas/saas-feature-2.jpg"
+        "img": "/image/products/saas/saas-feature-2.webp"
       },
       "third": {
         "title": "Ứng dụng cho phép tùy biến và gửi định kỳ các loại báo cáo: báo cáo tổn thất, báo cáo phân tích lỗi thường xuyên phát sinh,…",
         "subTitle": "",
         "desc": "Ứng dụng của chúng tôi là giải pháp hàng đầu, cho phép bạn tùy biến và tạo ra các báo cáo theo đúng yêu cầu cụ thể của doanh nghiệp. Từ báo cáo tổn thất chi tiết đến báo cáo phân tích lỗi thường gặp, mọi thông tin đều được tổng hợp và trình bày một cách rõ ràng, giúp bạn đưa ra quyết định chính xác và kịp thời.",
-        "img": "/image/products/saas/saas-feature-3.png"
+        "img": "/image/products/saas/saas-feature-3.webp"
       }
     },
     "whyChooseUs": {
@@ -1020,19 +1020,19 @@
         "title": "Ứng dụng cho phép quản lý đa địa điểm, đa thiết bị của nhiều nhà sản xuất khác nhau trên cùng một nền tảng.",
         "subTitle": "",
         "desc": "Với mong muốn mang đến giải pháp quản lý hiệu quả và toàn diện, chúng tôi đã phát triển ứng dụng đầu tiên và cho phép quản lý đồng bộ nhiều địa điểm, nhiều thiết bị từ các nhà sản xuất khác nhau trên cùng một nền tảng. Điều này giúp doanh nghiệp tối ưu hóa quy trình quản lý, tiết kiệm thời gian và nâng cao hiệu quả hoạt động",
-        "img": "/image/solutions/fisheries/fisheries-feature-1.png"
+        "img": "/image/solutions/fisheries/fisheries-feature-1.webp"
       },
       "second": {
         "title": "Ứng dụng cho phép cảnh báo tự động tới khách hàng theo kịch bản được thiết lập bởi người dùng.",
         "subTitle": "",
         "desc": "Ứng dụng của chúng tôi là giải pháp tiên phong tại Việt Nam, cung cấp tính năng cảnh báo tự động thông minh. Nhờ đó, khách hàng có thể chủ động thiết lập các kịch bản cảnh báo phù hợp với nhu cầu riêng, đảm bảo mọi sự cố được phát hiện và xử lý kịp thời, nâng cao hiệu quả quản lý và giảm thiểu rủi ro.",
-        "img": "/image/solutions/fisheries/fisheries-feature-2.png"
+        "img": "/image/solutions/fisheries/fisheries-feature-2.webp"
       },
       "third": {
         "title": "Ứng dụng cho phép tùy biến và gửi định kỳ các loại báo cáo: báo cáo tổn thất, báo cáo phân tích lỗi thường xuyên phát sinh,…",
         "subTitle": "",
         "desc": "Ứng dụng của chúng tôi là giải pháp hàng đầu, cho phép bạn tùy biến và tạo ra các báo cáo theo đúng yêu cầu cụ thể của doanh nghiệp. Từ báo cáo tổn thất chi tiết đến báo cáo phân tích lỗi thường gặp, mọi thông tin đều được tổng hợp và trình bày một cách rõ ràng, giúp bạn đưa ra quyết định chính xác và kịp thời.",
-        "img": "/image/solutions/fisheries/fisheries-feature-3.png"
+        "img": "/image/solutions/fisheries/fisheries-feature-3.webp"
       }
     },
     "questions": {
@@ -1173,25 +1173,25 @@
         "title": "Giám sát hiệu suất theo thời gian thực",
         "subTitle": "Một phần tập trung vào cách dữ liệu theo thời gian thực và phân tích hiệu suất cung cấp sự minh bạch về hiệu suất hệ thống.",
         "desc": "Nền tảng của chúng tôi cung cấp các biểu đồ thống kê phân tích về các thông số của nhà máy. Sử dụng dữ liệu hiệu suất trong quá khứ để xác định những điểm kém hiệu quả và đưa ra các quyết định dựa trên dữ liệu để tối ưu hóa việc sử dụng năng lượng.",
-        "img": "/image/solutions/factory/factory-feature-1.png"
+        "img": "/image/solutions/factory/factory-feature-1.webp"
       },
       "second": {
         "title": "Cảnh báo tự động và bảo trì chủ động",
         "subTitle": "Giải thích cách hệ thống gửi thông báo khi vượt qua các ngưỡng hiệu suất, giúp thực hiện hành động nhanh chóng đối với các lỗi hệ thống.",
         "desc": "Tránh thời gian chết với hệ thống cảnh báo thông minh của chúng tôi. Nhận thông báo theo thời gian thực về mọi vấn đề ảnh hưởng đến sản lượng hệ thống nhà máy của bạn, đảm bảo hệ thống của bạn hoạt động ở hiệu suất cao nhất.",
-        "img": "/image/solutions/factory/factory-feature-2.png"
+        "img": "/image/solutions/factory/factory-feature-2.webp"
       },
       "third": {
         "title": "Báo cáo điểm bất thường",
         "subTitle": "Tập trung vào khả năng tổng hợp thông tin từ điểm bất thường đưa ra cảnh báo về sự thất thoát doanh thu.",
         "desc": "Chúng tôi cung cấp cho bạn các báo cáo bất thường theo ngày, tuần, tháng. Với các con số cụ thể và trực quan, nắm bắt được ngay lập tức vấn đề đang xảy ra trong hệ thống, giúp bạn đưa ra quyết định ngay lập tức.",
-        "img": "/image/solutions/factory/factory-feature-3.jpg"
+        "img": "/image/solutions/factory/factory-feature-3.webp"
       },
       "four": {
         "title": "Quản lý đa địa điểm, đa thiết bị",
         "subTitle": "Tập trung vào khả năng quản lý đồng bộ nhiều địa điểm, nhiều thiết bị từ các nhà sản xuất khác nhau trên cùng một nền tảng.",
         "desc": "Udata tương thích với nhiều nền tảng khác nhau như máy tính để bàn, máy tính bảng và điện thoại di động, giúp người dùng truy cập hệ thống mọi lúc, mọi nơi. Điều này đặc biệt hữu ích cho các doanh nghiệp có chi nhánh trải rộng trên nhiều quốc gia.",
-        "img": "/image/solutions/factory/factory-feature-4.jpg"
+        "img": "/image/solutions/factory/factory-feature-4.webp"
       }
     },
     "callToAction": {

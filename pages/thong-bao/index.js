@@ -35,7 +35,7 @@ const NotificationPage = ({ posts }) => {
   const metaTagData = {
     title: `${t("title")} | Udata.ai`,
     desc: t("title"),
-    img: "/image/pambu.png",
+    img: "/image/blog-page.png",
   };
   // state
   const [itemOffset, setItemOffset] = useState(0);

@@ -167,7 +167,7 @@ const HomePage = ({ notificationPosts, blogPosts }) => {
       <PageSeoHead data={metaTagData} />
       <div>
         {/* hero section */}
-        <section className="w-full h-screen flex items-center bg-[url('/image/bg/bg-home.png')] bg-center bg-cover bg-no-repeat">
+        <section className="w-full h-screen flex items-center bg-[url('/image/bg/bg-home.webp')] bg-center bg-cover bg-no-repeat">
           <div className="lg:p-14 p-8 lg:w-full md:w-[70%]">
             <h1
               data-aos="fade-up"
@@ -284,7 +284,7 @@ const HomePage = ({ notificationPosts, blogPosts }) => {
             <div data-aos="fade-left" className="flex flex-col items-center">
               <div className="relative w-full lg:h-full h-[300px]">
                 <Image
-                  src="/image/about-us/about-us-2.png"
+                  src="/image/about-us/about-us-2.webp"
                   width={0}
                   height={0}
                   layout="fill"

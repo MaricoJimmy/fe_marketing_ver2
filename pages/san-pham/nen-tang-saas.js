@@ -7,13 +7,13 @@ import PageSeoHead from "../../components/common/PageSeoHead";
 import HeroSection from "../../components/san-pham/HeroSection";
 import HighLightFeature from "../../components/san-pham/HighLightFeature";
 
-const PMSLandingPage = () => {
+const SaasLandingPage = () => {
   const t = useTranslations("SaaS");
 
   const metaTagData = {
     title: `${t("heroSection.heading")} | Udata.ai`,
     desc: t("heroSection.excerpt"),
-    img: "/image/hero/saas-pv.png",
+    img: "/image/hero/saas-pv.webp",
   };
   return (
     <>
@@ -36,7 +36,7 @@ const PMSLandingPage = () => {
 
         {/* các tính năng chính */}
         <div className="relative mt-10 w-full flex justify-center items-center">
-          <div className="absolute top-0 left-0 w-full h-full bg-[url('/image/bg/bg-feature.jpg')] bg-center bg-no-repeat bg-cover opacity-25"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-[url('/image/bg/bg-feature.webp')] bg-center bg-no-repeat bg-cover opacity-25"></div>
           <div className="relative z-10 px-5 py-3 md:px-8 md:py-10 max-w-screen-xl w-full overflow-hidden md:overflow-visible">
             <HighLightFeature
               data={t.raw("features")}
@@ -71,4 +71,4 @@ const PMSLandingPage = () => {
   );
 };
 
-export default PMSLandingPage;
+export default SaasLandingPage;

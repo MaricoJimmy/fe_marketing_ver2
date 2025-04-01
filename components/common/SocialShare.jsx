@@ -10,7 +10,7 @@ function SocialShare({ data }) {
       rel="noreferrer"
       className="p-2 block"
     >
-      <Image src="/image/social/facebook.png" alt="" width="30" height="30" />
+      <Image src="/image/social/facebook.webp" alt="" width="30" height="30" />
     </a>
   );
 }

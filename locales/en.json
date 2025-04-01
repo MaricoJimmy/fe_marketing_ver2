@@ -318,25 +318,25 @@
         "title": "Real-Time Performance Monitoring",
         "subTitle": "A section focusing on how real-time data and performance analytics provide transparency into system performance.",
         "desc": "Our platform provides detailed information about your solar energy output, allowing you to track key metrics such as output, inverter performance. Use performance data historical performance to identify inefficiencies and make data-driven decisions to optimize energy use.",
-        "img": "/image/solutions/solar/solar-feature-1.png"
+        "img": "/image/solutions/solar/solar-feature-1.webp"
       },
       "second": {
         "title": "Automatic Alerts and Proactive Maintenance",
         "subTitle": "Explains how the system sends notifications when performance thresholds are crossed, helping to take quick action on system errors.",
         "desc": "Avoid downtime with our smart alert system. Receive real-time notifications of any issues affecting your solar power system output, ensuring your system operating at peak performance.",
-        "img": "/image/solutions/solar/solar-feature-2.png"
+        "img": "/image/solutions/solar/solar-feature-2.webp"
       },
       "third": {
         "title": "Report an anomaly",
         "subTitle": "Focuses on the ability to synthesize information from anomalies that give warnings about revenue loss.",
         "desc": "We provide you with abnormal reports by day, week, and month. With specific and intuitive numbers, you can immediately grasp the problem occurring in the system, helping you make a decision immediately.",
-        "img": "/image/solutions/solar/solar-feature-3.png"
+        "img": "/image/solutions/solar/solar-feature-3.webp"
       },
       "four": {
         "title": "Seamless Integration with Your Energy System",
         "subTitle": "Focuses on integration with existing energy management systems.",
         "desc": "Our rooftop solar solutions integrate seamlessly with your existing energy infrastructure. Manage solar, grid and storage all from one platform , optimize energy flow and reduce costs.",
-        "img": "/image/solutions/solar/solar-feature-4.png"
+        "img": "/image/solutions/solar/solar-feature-4.webp"
       }
     },
     "callToAction": {
@@ -386,25 +386,25 @@
         "title": "Water quality monitoring",
         "subTitle": "The system allows to collect and centralize real-time data from many different sources",
         "desc": "Udata is a comprehensive water quality monitoring system that helps you continuously monitor important parameters such as pH, salinity, temperature, dissolved oxygen content, etc. with an advanced sensor system Udata provides an intuitive, easy-to-use interface that allows you to monitor parameters directly on your mobile device or computer by continuously monitoring quality parameters water, Udata helps you control the farming environment effectively, limit the risk of disease and pollution, and improve production efficiency, making it a useful tool for aquaculture farms.",
-        "img": "/image/solutions/fisheries/fisheries-feature-1.png"
+        "img": "/image/solutions/fisheries/fisheries-feature-1.webp"
       },
       "second": {
         "title": "Monitoring the growth level of breeding animals",
         "subTitle": "Udata collects data on the weight and size of animals, analyzes the data and displays the results in graphs and reports, helping you easily monitor and evaluate growth rates of the breed.",
         "desc": "Udata not only monitors water quality but also expands functions to track and monitor the growth level of breeding animals. The system collects data on weight, growth rate, and analysis data, detect unusual trends.",
-        "img": "/image/solutions/fisheries/fisheries-feature-2.png"
+        "img": "/image/solutions/fisheries/fisheries-feature-2.webp"
       },
       "third": {
         "title": "Smart Alerts and Automatic Notifications",
         "subTitle": "The system sends notifications when data exceeds the safety threshold, helping to detect and resolve problems quickly.",
         "desc": "Receive real-time notifications about all issues affecting the farming environment and the growth rate of the breed. Customize the threshold settings according to experience, any abnormalities will be recorded and Warning via Email/SMS. Early warning will help keep pets safe from harmful environmental factors.",
-        "img": "/image/solutions/fisheries/fisheries-feature-3.png"
+        "img": "/image/solutions/fisheries/fisheries-feature-3.webp"
       },
       "four": {
         "title": "Report an anomaly",
         "subTitle": "Focuses on the ability to synthesize information from anomalies and produce a comprehensive report.",
         "desc": "We provide you with abnormal reports by day, week, and month. With specific and intuitive numbers, you can immediately grasp the problem that is happening in your farm system. you immediately.",
-        "img": "/image/solutions/fisheries/fisheries-feature-4.png"
+        "img": "/image/solutions/fisheries/fisheries-feature-4.webp"
       }
     },
     "callToAction": {
@@ -471,7 +471,7 @@
             "content": "Helps effectively use resources such as human resources, finance and time."
           }
         ],
-        "img": "/image/solutions/investors/investors-feature-1.jpg"
+        "img": "/image/solutions/investors/investors-feature-1.webp"
       },
       "second": {
         "title": "Outstanding features of the solution",
@@ -493,7 +493,7 @@
             "content": "Relevant to global customer needs."
           }
         ],
-        "img": "/image/solutions/investors/investors-feature-2.jpg"
+        "img": "/image/solutions/investors/investors-feature-2.webp"
       },
       "third": {
         "title": "Deployment methods and customer support",
@@ -511,7 +511,7 @@
             "content": "Provides 24/7 technical support to answer questions and troubleshoot problems."
           }
         ],
-        "img": "/image/solutions/investors/investors-feature-3.jpg"
+        "img": "/image/solutions/investors/investors-feature-3.webp"
       }
     },
     "callToAction": {
@@ -588,7 +588,7 @@
             "content": "Helps effectively use resources such as human resources, finance and time."
           }
         ],
-        "img": "/image/solutions/investors/investors-feature-1.jpg"
+        "img": "/image/solutions/investors/investors-feature-1.webp"
       },
       "second": {
         "title": "Outstanding features of the solution",
@@ -610,7 +610,7 @@
             "content": "Relevant to global customer needs."
           }
         ],
-        "img": "/image/solutions/investors/investors-feature-2.jpg"
+        "img": "/image/solutions/investors/investors-feature-2.webp"
       },
       "third": {
         "title": "Deployment methods and customer support",
@@ -628,7 +628,7 @@
             "content": "Provides 24/7 technical support to answer questions and troubleshoot problems."
           }
         ],
-        "img": "/image/solutions/investors/investors-feature-3.jpg"
+        "img": "/image/solutions/investors/investors-feature-3.webp"
       }
     },
     "callToAction": {
@@ -705,7 +705,7 @@
             "content": "Helps effectively use resources such as human resources, finance and time."
           }
         ],
-        "img": "/image/solutions/investors/investors-feature-1.jpg"
+        "img": "/image/solutions/investors/investors-feature-1.webp"
       },
       "second": {
         "title": "Outstanding features of the solution",
@@ -727,7 +727,7 @@
             "content": "Relevant to global customer needs."
           }
         ],
-        "img": "/image/solutions/investors/investors-feature-2.jpg"
+        "img": "/image/solutions/investors/investors-feature-2.webp"
       },
       "third": {
         "title": "Deployment methods and customer support",
@@ -745,7 +745,7 @@
             "content": "Provides 24/7 technical support to answer questions and troubleshoot problems."
           }
         ],
-        "img": "/image/solutions/investors/investors-feature-3.jpg"
+        "img": "/image/solutions/investors/investors-feature-3.webp"
       }
     },
     "callToAction": {
@@ -921,19 +921,19 @@
         "title": "The only application in Vietnam that allows multi-location, multi-device management of many different manufacturers on the same platform.",
         "subTitle": "",
         "desc": "With the desire to provide an effective and comprehensive management solution, we have developed the first and only application in Vietnam that allows synchronous management of multiple locations, multiple devices from different locations. different manufacturers on the same platform, this helps businesses optimize management processes, save time and improve operational efficiency.",
-        "img": "/image/solutions/fisheries/fisheries-feature-1.png"
+        "img": "/image/products/saas/saas-feature-1.webp"
       },
       "second": {
         "title": "The only application in Vietnam that allows automatic warnings to customers according to scenarios set by the user.",
         "subTitle": "",
         "desc": "Our application is a pioneering solution in Vietnam, providing smart automatic warning features. Thanks to that, customers can proactively set up warning scenarios to suit their needs. specific requirements, ensuring all incidents are detected and handled promptly, improving management efficiency and minimizing risks.",
-        "img": "/image/solutions/fisheries/fisheries-feature-2.png"
+        "img": "/image/products/saas/saas-feature-2.webp"
       },
       "third": {
         "title": "The only application that allows customization and periodic sending of various types of reports: loss reports, frequently occurring error analysis reports,...",
         "subTitle": "",
         "desc": "Our application is a leading solution, allowing you to customize and create reports according to the specific requirements of your business. From detailed loss reports to error analysis reports Usually, all information is synthesized and presented clearly, helping you make accurate and timely decisions.",
-        "img": "/image/solutions/fisheries/fisheries-feature-3.png"
+        "img": "/image/products/saas/saas-feature-3.webp"
       }
     },
     "whyChooseUs": {
@@ -1020,19 +1020,19 @@
         "title": "The only application in Vietnam that allows multi-location, multi-device management of many different manufacturers on the same platform.",
         "subTitle": "",
         "desc": "With the desire to provide an effective and comprehensive management solution, we have developed the first and only application in Vietnam that allows synchronous management of multiple locations, multiple devices from different locations. different manufacturers on the same platform, this helps businesses optimize management processes, save time and improve operational efficiency.",
-        "img": "/image/solutions/fisheries/fisheries-feature-1.png"
+        "img": "/image/solutions/fisheries/fisheries-feature-1.webp"
       },
       "second": {
         "title": "The only application in Vietnam that allows automatic warnings to customers according to scenarios set by the user.",
         "subTitle": "",
         "desc": "Our application is a pioneering solution in Vietnam, providing smart automatic warning features. Thanks to that, customers can proactively set up warning scenarios to suit their needs. specific requirements, ensuring all incidents are detected and handled promptly, improving management efficiency and minimizing risks.",
-        "img": "/image/solutions/fisheries/fisheries-feature-2.png"
+        "img": "/image/solutions/fisheries/fisheries-feature-2.webp"
       },
       "third": {
         "title": "The only application that allows customization and periodic sending of various types of reports: loss reports, frequently occurring error analysis reports,...",
         "subTitle": "",
         "desc": "Our application is a leading solution, allowing you to customize and create reports according to the specific requirements of your business. From detailed loss reports to error analysis reports Usually, all information is synthesized and presented clearly, helping you make accurate and timely decisions.",
-        "img": "/image/solutions/fisheries/fisheries-feature-3.png"
+        "img": "/image/solutions/fisheries/fisheries-feature-3.webp"
       }
     },
     "questions": {
@@ -1173,25 +1173,25 @@
         "title": "Real-time performance monitoring",
         "subTitle": "A section focusing on how real-time data and performance analytics provide transparency into system performance.",
         "desc": "Our platform provides statistical analysis of plant parameters. Use historical performance data to identify inefficiencies and inform decisions based on data to optimize energy use.",
-        "img": "/image/solutions/factory/factory-feature-1.png"
+        "img": "/image/solutions/factory/factory-feature-1.webp"
       },
       "second": {
         "title": "Automatic alerts and proactive maintenance",
         "subTitle": "Explains how the system sends notifications when performance thresholds are crossed, helping to take quick action on system errors.",
         "desc": "Avoid downtime with our smart alert system. Receive real-time notifications of any issues affecting your factory system output, ensuring your system is up and running operating at peak performance.",
-        "img": "/image/solutions/factory/factory-feature-2.png"
+        "img": "/image/solutions/factory/factory-feature-2.webp"
       },
       "third": {
         "title": "Report an anomaly",
         "subTitle": "Focuses on the ability to synthesize information from anomalies that give warnings about revenue loss.",
         "desc": "We provide you with abnormal reports by day, week, and month. With specific and intuitive numbers, you can immediately grasp the problem occurring in the system, helping you make a decision immediately.",
-        "img": "/image/solutions/factory/factory-feature-3.jpg"
+        "img": "/image/solutions/factory/factory-feature-3.webp"
       },
       "four": {
         "title": "Multi-location, multi-device management",
         "subTitle": "Focuses on the ability to synchronously manage multiple locations, multiple devices from different manufacturers on the same platform.",
         "desc": "Udata is compatible with many different platforms such as desktop computers, tablets and mobile phones, helping users access the system anytime, anywhere. This is especially useful for businesses. The business has branches spread across many countries.",
-        "img": "/image/solutions/factory/factory-feature-4.jpg"
+        "img": "/image/solutions/factory/factory-feature-4.webp"
       }
     },
     "callToAction": {

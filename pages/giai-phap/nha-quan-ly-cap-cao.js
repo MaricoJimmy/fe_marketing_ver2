@@ -6,13 +6,13 @@ import { useTranslations } from "next-intl";
 import PageSeoHead from "../../components/common/PageSeoHead";
 import HighLightFeature from "../../components/giai-phap/HighLightFeature";
 
-const SolarRooftopLandingPage = () => {
+const ManagersLandingPage = () => {
   const t = useTranslations("Managers");
 
   const metaTagData = {
     title: `${t("heroSection.title")} | Udata.ai`,
     desc: t("heroSection.desc"),
-    img: "/image/hero/managers-pv.png",
+    img: "/image/hero/managers-pv.webp",
   };
   return (
     <>
@@ -21,7 +21,7 @@ const SolarRooftopLandingPage = () => {
         {/* hero section */}
         <HeroSection
           data={t.raw("heroSection")}
-          image="/image/solutions/investors/managers.png"
+          image="/image/solutions/investors/managers.webp"
           bgColor="bg-infor"
         />
         {/* main features */}
@@ -55,4 +55,4 @@ const SolarRooftopLandingPage = () => {
   );
 };
 
-export default SolarRooftopLandingPage;
+export default ManagersLandingPage;

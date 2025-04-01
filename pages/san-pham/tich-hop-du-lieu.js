@@ -7,13 +7,13 @@ import Questions from "@/components/san-pham/Questions";
 import { useTranslations } from "next-intl";
 import PageSeoHead from "../../components/common/PageSeoHead";
 
-const PMSLandingPage = () => {
+const IntegrationLandingPage = () => {
   const t = useTranslations("Intergration");
 
   const metaTagData = {
     title: `${t("heroSection.heading")} | Udata.ai`,
     desc: t("heroSection.excerpt"),
-    img: "/image/hero/intergration-pv.png",
+    img: "/image/hero/intergration-pv.webp",
   };
   return (
     <>
@@ -56,4 +56,4 @@ const PMSLandingPage = () => {
   );
 };
 
-export default PMSLandingPage;
+export default IntegrationLandingPage;

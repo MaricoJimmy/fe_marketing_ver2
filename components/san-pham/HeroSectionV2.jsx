@@ -9,11 +9,11 @@ function HeroSectionV2({ data, page }) {
   const renderBg = (page) => {
     switch (page) {
       case "pms":
-        return "bg-[url('/image/hero/pms-bg.jpg')]";
+        return "bg-[url('/image/hero/pms-bg.webp')]";
       case "intergration":
-        return "bg-[url('/image/hero/intergrate-bg.jpg')]";
+        return "bg-[url('/image/hero/intergrate-bg.webp')]";
       case "saas":
-        return "bg-[url('/image/hero/saas-bg.jpg')]";
+        return "bg-[url('/image/hero/saas-bg.webp')]";
     }
   };
   return (

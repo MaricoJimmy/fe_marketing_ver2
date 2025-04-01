@@ -197,7 +197,7 @@ function FooterDesktop({ sectionLinks }) {
               <ul className="mt-8 flex flex-col items-start gap-6 cursor-pointer">
                 <li className="flex items-center gap-2">
                   <a
-                  title="Hotline"
+                    title="Hotline"
                     href="tel:1800255698"
                     className="p-1 w-[30px] h-[30px] flex items-center justify-center border border-gray/20 rounded-full"
                   >
@@ -215,42 +215,42 @@ function FooterDesktop({ sectionLinks }) {
                     </svg>
                   </a>
                   <a
-                  title="Email"
+                    title="Email"
                     target="_blank"
                     rel="noreferrer"
                     href="https://www.facebook.com/profile.php?id=61566884154567"
                     className="relative p-1 w-[30px] h-[30px] flex items-center justify-center border border-gray/20 rounded-full"
                   >
                     <Image
-                      src="/image/social/facebook.png"
+                      src="/image/social/facebook.webp"
                       layout="fill"
                       objectFit="cover"
                       alt=""
                     />
                   </a>
                   <a
-                  title="Facebook"
+                    title="Facebook"
                     target="_blank"
                     rel="noreferrer"
                     href="https://www.linkedin.com/company/udatadhg/"
                     className="relative p-1 w-[30px] h-[30px] overflow-hidden flex items-center justify-center border border-gray/20 rounded-full"
                   >
                     <Image
-                      src="/image/social/linkedin.png"
+                      src="/image/social/linkedin.webp"
                       layout="fill"
                       objectFit="cover"
                       alt=""
                     />
                   </a>
                   <a
-                  title="Instagram"
+                    title="Instagram"
                     target="_blank"
                     rel="noreferrer"
                     href="https://www.instagram.com/udata_jsc/"
                     className="relative p-1 w-[30px] h-[30px] overflow-hidden flex items-center justify-center border border-gray/20 rounded-full"
                   >
                     <Image
-                      src="/image/social/instagram.png"
+                      src="/image/social/instagram.webp"
                       layout="fill"
                       objectFit="cover"
                       alt=""
@@ -271,7 +271,7 @@ function FooterDesktop({ sectionLinks }) {
                     />
                   </svg>
                   <a
-                  title="Hotline"
+                    title="Hotline"
                     href="tel:1800255698"
                     className="ml-2 text-gray/80 font-semibold"
                   >
@@ -294,7 +294,7 @@ function FooterDesktop({ sectionLinks }) {
                     />
                   </svg>
                   <a
-                  title="Email"
+                    title="Email"
                     href="mailto:support@udata.ai"
                     className="ml-2 text-gray/80 font-semibold"
                   >
@@ -317,7 +317,7 @@ function FooterDesktop({ sectionLinks }) {
                     />
                   </svg>
                   <a
-                  title="Email"
+                    title="Email"
                     href="mailto:sales@udata.ai"
                     className="ml-2 text-gray/80 font-semibold"
                   >
@@ -463,7 +463,7 @@ function FooterMobile({ sectionLinks }) {
                       className="relative p-1 w-[30px] h-[30px] flex items-center justify-center border border-gray/20 rounded-full"
                     >
                       <Image
-                        src="/image/social/facebook.png"
+                        src="/image/social/facebook.webp"
                         layout="fill"
                         objectFit="cover"
                         alt=""
@@ -477,7 +477,7 @@ function FooterMobile({ sectionLinks }) {
                       className="relative p-1 w-[30px] h-[30px] overflow-hidden flex items-center justify-center border border-gray/20 rounded-full"
                     >
                       <Image
-                        src="/image/social/linkedin.png"
+                        src="/image/social/linkedin.webp"
                         layout="fill"
                         objectFit="cover"
                         alt=""
@@ -491,7 +491,7 @@ function FooterMobile({ sectionLinks }) {
                       className="relative p-1 w-[30px] h-[30px] overflow-hidden flex items-center justify-center border border-gray/20 rounded-full"
                     >
                       <Image
-                        src="/image/social/instagram.png"
+                        src="/image/social/instagram.webp"
                         layout="fill"
                         objectFit="cover"
                         alt=""

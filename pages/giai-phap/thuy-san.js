@@ -12,7 +12,7 @@ const SolarRooftopLandingPage = () => {
   const metaTagData = {
     title: `${t("heroSection.title")} | Udata.ai`,
     desc: t("heroSection.desc"),
-    img: "/image/hero/fisheries-pv.png",
+    img: "/image/hero/fisheries-pv.webp",
   };
   return (
     <>
@@ -21,7 +21,7 @@ const SolarRooftopLandingPage = () => {
         {/* hero section */}
         <HeroSection
           data={t.raw("heroSection")}
-          image="/image/solutions/fisheries/fisheries.png"
+          image="/image/solutions/fisheries/fisheries.webp"
           bgColor="bg-infor"
         />
         {/* main features */}

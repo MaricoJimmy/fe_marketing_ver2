@@ -71,14 +71,14 @@ const ContactPage = () => {
   const metaTagData = {
     title: `${t("title")} | Udata.ai`,
     desc: t("subTitle"),
-    img: "/image/hero/home-pv.png",
+    img: "/image/hero/home-pv.webp",
   };
 
   return (
     <>
       <PageSeoHead data={metaTagData} />
       <div className="flex flex-col">
-        <div className="relative w-full lg:h-[600px] h-fit bg-[url('/image/bg/bg-contact.jpg')] bg-center bg-no-repeat bg-cover flex justify-center items-center">
+        <div className="relative w-full lg:h-[600px] h-fit bg-[url('/image/bg/bg-contact.webp')] bg-center bg-no-repeat bg-cover flex justify-center items-center">
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-neutral/40 to-neutral/80"></div>
           <div className="z-10 px-5 md:px-8 py-16 max-w-screen-xl w-full h-full flex lg:flex-row flex-col lg:items-center gap-10">
             <div>
@@ -204,7 +204,7 @@ const ContactPage = () => {
                           Hotline
                         </h4>
                         <a
-                        title="Hotline"
+                          title="Hotline"
                           href="tel:1800255698"
                           className="text-neutral font-medium"
                         >
@@ -234,7 +234,7 @@ const ContactPage = () => {
                           Support
                         </h4>
                         <a
-                        title="Support"
+                          title="Support"
                           href="mailto:support@udata.ai"
                           className="text-neutral font-medium"
                         >
@@ -264,7 +264,7 @@ const ContactPage = () => {
                           Sales
                         </h4>
                         <a
-                        title="Sales"
+                          title="Sales"
                           href="mailto:sales@udata.ai"
                           className="text-neutral font-medium"
                         >
@@ -293,7 +293,7 @@ const ContactPage = () => {
                           Facebook
                         </h4>
                         <a
-                        title="Facebook"
+                          title="Facebook"
                           target="_blank"
                           rel="noreferrer"
                           href="https://www.facebook.com/profile.php?id=61566884154567"
@@ -334,7 +334,7 @@ const ContactPage = () => {
                           Instagram
                         </h4>
                         <a
-                        title="Instagram"
+                          title="Instagram"
                           target="_blank"
                           rel="noreferrer"
                           href="https://www.instagram.com/udata_jsc/"
@@ -368,7 +368,7 @@ const ContactPage = () => {
                           Linkedin
                         </h4>
                         <a
-                        title="Linkedin"
+                          title="Linkedin"
                           target="_blank"
                           rel="noreferrer"
                           href="https://www.linkedin.com/company/udatadhg"

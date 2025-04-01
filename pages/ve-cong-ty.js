@@ -9,7 +9,7 @@ const AboutUsPage = () => {
   const metaTagData = {
     title: `${t("title")} | Udata.ai`,
     desc: t("excerpt"),
-    img: "/image/hero/home-pv.png",
+    img: "/image/hero/home-pv.webp",
   };
   return (
     <>
@@ -48,7 +48,7 @@ const AboutUsPage = () => {
             className="w-full h-[400px] relative rounded-xl shadow-md"
           >
             <Image
-              src="/image/about-us/about-us.jpg"
+              src="/image/about-us/about-us.webp"
               layout="fill"
               alt=""
               className="object-cover rounded-xl"

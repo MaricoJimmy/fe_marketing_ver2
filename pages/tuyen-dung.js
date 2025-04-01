@@ -10,7 +10,7 @@ const AboutUsPage = () => {
   const metaTagData = {
     title: `${t("title")} | Udata.ai`,
     desc: t("excerpt"),
-    img: "/image/hero/home-pv.png",
+    img: "/image/hero/home-pv.webp",
   };
 
   const renderCareer = ({ title, location, exp }) => {
