@@ -23,14 +23,15 @@ const SaasLandingPage = () => {
         <div className="relative">
           <HeroSection data={t.raw("heroSection")} page="saas" />
 
-          <div className="lg:-mt-20 -mt-10 lg:w-[1000px] lg:h-[500px] md:w-[600px] md:h-[300px] w-[350px] h-[180px] bg-white relative left-1/2 -translate-x-1/2 z-20 shadow-2xl rounded-md">
-            <Image
-              src={"/image/hero/saas.gif"}
-              layout="fill"
-              alt=""
-              className="rounded-md overflow-hidden object-cover"
-              unoptimized={true}
-            />
+          <div className="lg:-mt-20 -mt-10 lg:w-[1000px] lg:h-[500px] md:w-[600px] md:h-[300px] w-[350px] h-[180px] bg-white relative left-1/2 -translate-x-1/2 z-20 shadow-2xl rounded-md overflow-hidden">
+            <video
+              src="/image/hero/saas.webm"
+              className="w-full h-full object-cover"
+              autoPlay
+              loop
+              muted
+              playsInline
+            ></video>
           </div>
         </div>
 
