@@ -8,9 +8,11 @@ import {
 
 function generateSiteMap({ notiPosts, blogPosts }) {
   const routes = Object.keys(routeMaps).reduce((acc, locale) => {
-    Object.values(routeMaps[locale]).forEach((route) => {
-      acc.push({ locale, route });
-    });
+    if (locale === "vi") {
+      Object.values(routeMaps[locale]).forEach((route) => {
+        acc.push({ locale, route });
+      });
+    }
     return acc;
   }, []);
 
