@@ -55,7 +55,8 @@
       "details": "Xem chi tiết",
       "full": "Xem tất cả",
       "start": "Bắt đầu"
-    }
+    },
+    "noData": "Hiện chưa có bài viết nào!"
   },
   "Header": {
     "news": {

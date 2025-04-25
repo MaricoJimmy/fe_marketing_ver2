@@ -16,7 +16,7 @@ import {
   NotificationPostsQuery,
 } from "../queries/homePageQueries";
 
-export async function getStaticProps() {
+export async function getStaticProps({ locale }) {
   const client = getApolloClient();
 
   const {
@@ -36,8 +36,12 @@ export async function getStaticProps() {
 
   return {
     props: {
-      notificationPosts: notificationPosts.slice(0, 5),
-      blogPosts: blogPosts.slice(0, 5),
+      notificationPosts: notificationPosts
+        .slice(0, 5)
+        .filter((post) => post.language.language === locale),
+      blogPosts: blogPosts
+        .slice(0, 5)
+        .filter((post) => post.language.language === locale),
     },
     revalidate: 60,
   };
@@ -111,9 +115,9 @@ const HomePage = ({ notificationPosts, blogPosts }) => {
           <h3 className="text-center text-neutral text-2xl font-semibold">
             {title}
           </h3>
-          <ul className="flex-1 flex flex-col space-y-4">
-            {posts?.length > 0 ? (
-              posts.map((blog) => (
+          {posts?.length > 0 ? (
+            <ul className="flex-1 flex flex-col space-y-4">
+              {posts.map((blog) => (
                 <li
                   key={blog.slug}
                   className="flex items-center gap-4 cursor-pointer"
@@ -139,15 +143,15 @@ const HomePage = ({ notificationPosts, blogPosts }) => {
                     </h6>
                   </div>
                 </li>
-              ))
-            ) : (
-              <div className="w-full h-full flex-1 flex items-center justify-center">
-                <h4 className="text-lg text-center text-gray font-semibold">
-                  Hiện chưa có bài viết nào!
-                </h4>
-              </div>
-            )}
-          </ul>
+              ))}
+            </ul>
+          ) : (
+            <div className="w-full h-[300px] flex items-center justify-center">
+              <h4 className="text-lg text-center text-gray font-semibold">
+                {t("noData")}
+              </h4>
+            </div>
+          )}
         </div>
         <div>
           <Button

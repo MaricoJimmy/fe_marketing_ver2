@@ -90,6 +90,10 @@ const BlogPostsQuery = gql`
             }
           }
         }
+        language {
+          language
+          key
+        }
       }
     }
   }

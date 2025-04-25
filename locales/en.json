@@ -55,7 +55,8 @@
       "details": "See details",
       "full": "See all",
       "start": "Get started"
-    }
+    },
+    "noData": "No posts available yet!"
   },
   "Contact": {
     "title": "Try the Udata platform for free for 30 days!",
