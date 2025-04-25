@@ -1,3 +1,4 @@
+import { getLocalizedPath } from "@/utils";
 import {
   ROUTER_ABOUT_US,
   ROUTER_BLOG,
@@ -30,7 +31,6 @@ import {
 } from "../ui/navigation-menu";
 import styles from "./Header.module.css";
 import MenuItem from "./MenuItem";
-import { getLocalizedPath } from "@/utils";
 
 function Header() {
   const { locale } = useRouter();

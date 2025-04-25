@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
 import { useMemo, useState } from "react";
 import ReactPaginate from "react-paginate";
 
-export async function getStaticProps() {
+export async function getStaticProps({ locale }) {
   const client = getApolloClient();
 
   const {
@@ -20,7 +20,7 @@ export async function getStaticProps() {
   });
   return {
     props: {
-      posts: items,
+      posts: items.filter((item) => item.language.language === locale),
     },
     revalidate: 60,
   };
@@ -94,9 +94,7 @@ const NotificationPage = ({ posts }) => {
                 </div>
               ) : (
                 <div className="flex items-center justify-center w-full h-[50vh]">
-                  <h3 className="text-lg font-medium">
-                    Hiện không có tin tức nào!
-                  </h3>
+                  <h3 className="text-lg font-medium">{t("noData.home")}</h3>
                 </div>
               )}
             </div>

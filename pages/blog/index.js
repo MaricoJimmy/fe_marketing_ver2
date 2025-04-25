@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
 import { useMemo, useState } from "react";
 import ReactPaginate from "react-paginate";
 
-export async function getStaticProps() {
+export async function getStaticProps({ locale }) {
   const client = getApolloClient();
 
   const {
@@ -20,7 +20,7 @@ export async function getStaticProps() {
   });
   return {
     props: {
-      posts: items,
+      posts: items.filter((item) => item.language.language === locale),
     },
     revalidate: 60,
   };
@@ -30,10 +30,10 @@ const PAGE_SIZE = 6;
 
 const BlogPage = ({ posts }) => {
   const { locale } = useRouter();
-  const t = useTranslations("Common");
+  const t = useTranslations("Notification");
   const metaTagData = {
-    title: `${t("document.pms")} | Udata.ai`,
-    desc: t("document.descPMS"),
+    title: `Blog | Udata.ai`,
+    desc: "Blog of Udata.ai",
     img: "/image/blog-page.png",
   };
 
@@ -43,7 +43,7 @@ const BlogPage = ({ posts }) => {
   const currentPostsByPage = useMemo(() => {
     const endOffset = itemOffset + PAGE_SIZE;
     return posts.slice(itemOffset, endOffset);
-  }, [posts, itemOffset]);
+  }, [posts, itemOffset, locale]);
 
   const handlePageClick = (event) => {
     const newOffset = (event.selected * PAGE_SIZE) % posts.length;
@@ -91,9 +91,7 @@ const BlogPage = ({ posts }) => {
                 </div>
               ) : (
                 <div className="flex items-center justify-center w-full h-[50vh]">
-                  <h3 className="text-lg font-medium">
-                    Hiện không có tin tức nào!
-                  </h3>
+                  {t("noData.home")}
                 </div>
               )}
             </div>

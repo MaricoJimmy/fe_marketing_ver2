@@ -20,8 +20,9 @@ import {
   getLocalizedPath,
 } from "../../utils";
 import ScrollToTop from "@/components/common/ScrollToTop";
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import TableOfContent from "@/components/common/TableOfContent";
+import { useApp } from "@/contexts/AppContext";
 
 export async function getStaticProps({ params, locale }) {
   const client = getApolloClient();
@@ -33,6 +34,14 @@ export async function getStaticProps({ params, locale }) {
     variables: {
       slug: params.postSlug,
     },
+  });
+
+  const {
+    data: {
+      posts: { nodes: allNotiItems },
+    },
+  } = await client.query({
+    query: AllNotiPosts,
   });
 
   const {
@@ -50,9 +59,19 @@ export async function getStaticProps({ params, locale }) {
     .filter((item) => item.slug !== params.postSlug)
     .slice(0, 5);
 
+  const localePost = allNotiItems.find((postItem) => {
+    return (
+      postItem.language.language !== locale &&
+      postItem.language.key === post.language.key
+    );
+  });
+
   return {
     props: {
-      post,
+      post: {
+        ...post,
+        localeSlug: localePost?.slug || "",
+      },
       relatedPosts,
     },
   };
@@ -96,7 +115,8 @@ export async function getStaticPaths({ locales }) {
 
 const NewsPostDetailsPage = ({ post, relatedPosts }) => {
   const router = useRouter();
-  const t = useTranslations("Common");
+  const t = useTranslations("Notification");
+  const { setPostDetail } = useApp();
 
   const metaTagData = {
     title: `${post.title} | Udata.ai`,
@@ -114,6 +134,12 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
   const tableOfContents = useMemo(() => {
     return updatedContent ? extractHeadings(updatedContent) : post.content;
   }, [updatedContent]);
+
+  useEffect(() => {
+    if (post) {
+      setPostDetail(post);
+    }
+  }, [post, router]);
 
   return (
     <>
@@ -143,7 +169,7 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
               <path d="m12 19-7-7 7-7" />
               <path d="M19 12H5" />
             </svg>
-            <span>Quay về</span>
+            <span>{t("button.back")}</span>
           </Button>
           <div className="mt-4 grid lg:grid-cols-3 grid-cols-1 gap-10">
             <div className="lg:col-span-2 col-span-1">
@@ -211,7 +237,7 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
                 ) : (
                   <div className="flex items-center justify-center w-full h-[50vh]">
                     <h3 className="text-lg font-medium">
-                      Hiện không có bài viết nào!
+                      {t("noData.related")}
                     </h3>
                   </div>
                 )}

@@ -4,10 +4,7 @@ const AllBlogPosts = gql`
   query AllPosts {
     posts(
       first: 100
-      where: {
-        categoryName: "blog"
-        orderby: { field: DATE, order: DESC }
-      }
+      where: { categoryName: "blog", orderby: { field: DATE, order: DESC } }
     ) {
       nodes {
         id
@@ -25,6 +22,10 @@ const AllBlogPosts = gql`
               width
             }
           }
+        }
+        language {
+          language
+          key
         }
       }
     }
@@ -56,6 +57,10 @@ const AllNotiPosts = gql`
             }
           }
         }
+        language {
+          language
+          key
+        }
       }
     }
   }
@@ -85,6 +90,10 @@ const AllNewsPosts = gql`
               width
             }
           }
+        }
+        language {
+          language
+          key
         }
       }
     }

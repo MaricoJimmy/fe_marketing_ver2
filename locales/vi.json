@@ -1211,7 +1211,17 @@
     }
   },
   "Notification": {
-    "title": "Thông báo từ Udata"
+    "title": "Thông báo từ Udata",
+    "button": {
+      "back": "Quay lại"
+    },
+    "noData": {
+      "home": "Không có bài viết nào!",
+      "related": "Không có bài viết nào liên quan!"
+    },
+    "news": "Tin tức nổi bật",
+    "relatedPost": "Bài viết liên quan",
+    "date": "Ngày xuất bản"
   },
   "404": {
     "title": "Không tìm thấy trang",

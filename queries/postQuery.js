@@ -25,6 +25,10 @@ const PostDetailsQuery = gql`
           name
         }
       }
+      language {
+        language
+        key
+      }
     }
   }
 `;
@@ -51,6 +55,10 @@ const MoreRelatedPostsQueryInSameCategory = gql`
               width
             }
           }
+        }
+        language {
+          language
+          key
         }
       }
     }

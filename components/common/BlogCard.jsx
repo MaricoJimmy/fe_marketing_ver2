@@ -27,11 +27,11 @@ function BlogCard({ data, category, locale }) {
             >
               {data.title}
             </h4>
-            <h6 className="mt-2 text-sm text-gray/80">
+            <h6 className="mt-1 text-sm text-gray/80">
               {getDate(data.date, locale)}
             </h6>
             <h5
-              className="mt-4 text-lg text-gray desc-blog"
+              className="mt-2 text-base text-gray desc-blog"
               dangerouslySetInnerHTML={{ __html: data.excerpt }}
             ></h5>
           </div>

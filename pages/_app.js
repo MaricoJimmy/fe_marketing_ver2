@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import DefaultLayout from "../components/layout/DefaultLayout";
 import MaintenanceLayout from "../components/layout/MaintenanceLayout";
 import "../styles/globals.css";
+import { AppProvider } from "@/contexts/AppContext";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -50,9 +51,11 @@ function MyApp({ Component, pageProps }) {
       </Script>
       <IntlProvider messages={localeMessages} locale={locale}>
         <MaintenanceLayout>
-          <Layout>
-            <Component {...pageProps} />
-          </Layout>
+          <AppProvider>
+            <Layout>
+              <Component {...pageProps} />
+            </Layout>
+          </AppProvider>
         </MaintenanceLayout>
       </IntlProvider>
     </>

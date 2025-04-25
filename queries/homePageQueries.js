@@ -26,6 +26,10 @@ const NotificationPostsQuery = gql`
             }
           }
         }
+        language {
+          language
+          key
+        }
       }
     }
   }
@@ -53,6 +57,10 @@ const PMSPostsQuery = gql`
               width
             }
           }
+        }
+        language {
+          language
+          key
         }
       }
     }

@@ -2,10 +2,12 @@ import ScrollToTop from "@/components/common/ScrollToTop";
 import TableOfContent from "@/components/common/TableOfContent";
 import Tags from "@/components/common/Tags";
 import { Button } from "@/components/ui/button";
+import { useApp } from "@/contexts/AppContext";
 import { ROUTER_BLOG } from "@/utils/constant";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { useEffect, useMemo } from "react";
 import BlogRelated from "../../components/common/BlogRelated";
 import PageSeoHead from "../../components/common/PageSeoHead";
 import SocialShare from "../../components/common/SocialShare";
@@ -21,7 +23,6 @@ import {
   getDate,
   getLocalizedPath,
 } from "../../utils";
-import { useMemo } from "react";
 
 export async function getStaticProps({ params, locale }) {
   const client = getApolloClient();
@@ -37,7 +38,15 @@ export async function getStaticProps({ params, locale }) {
 
   const {
     data: {
-      posts: { nodes: items },
+      posts: { nodes: allPostItems },
+    },
+  } = await client.query({
+    query: AllBlogPosts,
+  });
+
+  const {
+    data: {
+      posts: { nodes: relatedPostItems },
     },
   } = await client.query({
     query: MoreRelatedPostsQueryInSameCategory,
@@ -46,13 +55,26 @@ export async function getStaticProps({ params, locale }) {
     },
   });
 
-  const relatedPosts = items
-    .filter((item) => item.slug !== params.postSlug)
+  const relatedPosts = relatedPostItems
+    .filter(
+      (item) =>
+        item.slug !== params.postSlug && item.language.language === locale
+    )
     .slice(0, 5);
+
+  const localePost = allPostItems.find((postItem) => {
+    return (
+      postItem.language.language !== locale &&
+      postItem.language.key === post.language.key
+    );
+  });
 
   return {
     props: {
-      post,
+      post: {
+        ...post,
+        localeSlug: localePost?.slug || "",
+      },
       relatedPosts,
     },
   };
@@ -96,7 +118,8 @@ export async function getStaticPaths({ locales }) {
 
 const NewsPostDetailsPage = ({ post, relatedPosts }) => {
   const router = useRouter();
-  const t = useTranslations("Common");
+  const t = useTranslations("Notification");
+  const { setPostDetail } = useApp();
 
   const metaTagData = {
     title: `${post.title} | Udata.ai`,
@@ -114,6 +137,12 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
   const tableOfContents = useMemo(() => {
     return updatedContent ? extractHeadings(updatedContent) : post.content;
   }, [updatedContent]);
+
+  useEffect(() => {
+    if (post) {
+      setPostDetail(post);
+    }
+  }, [post, router]);
 
   return (
     <>
@@ -143,7 +172,7 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
               <path d="m12 19-7-7 7-7" />
               <path d="M19 12H5" />
             </svg>
-            <span>Quay về</span>
+            <span>{t("button.back")}</span>
           </Button>
           <div className="mt-4 grid lg:grid-cols-3 grid-cols-1 gap-10">
             <div className="lg:col-span-2 col-span-1">
@@ -200,7 +229,7 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
                     <div className={`mt-2 w-[100px] h-[3px] bg-primary`}></div>
                   </div>
                 </div>
-                {relatedPosts.length > 0 && (
+                {relatedPosts.length > 0 ? (
                   <ul className="mt-6 lg:flex md:grid grid-cols-2 flex flex-col space-y-8 md:space-y-0 md:gap-8 gap-0">
                     {relatedPosts.map((relatePost) => (
                       <li key={relatePost.id} className="">
@@ -208,6 +237,12 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
                       </li>
                     ))}
                   </ul>
+                ) : (
+                  <div className="flex items-center justify-center h-[300px]">
+                    <h5 className="text-center text-lg font-medium">
+                      {t("noData.related")}
+                    </h5>
+                  </div>
                 )}
               </div>
             </div>

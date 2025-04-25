@@ -1211,7 +1211,17 @@
     }
   },
   "Notification": {
-    "title": "Notification from Udata"
+    "title": "Notification from Udata",
+    "button": {
+      "back": "Back"
+    },
+    "noData": {
+      "home": "No posts available!",
+      "related": "No related posts available!"
+    },
+    "news": "Featured news",
+    "relatedPost": "Related posts",
+    "date": "Published date"
   },
   "404": {
     "title": "Page not found",
