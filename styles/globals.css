@@ -237,6 +237,7 @@ input[type="number"] {
 .content-wrapper figcaption {
   text-align: center;
   margin-bottom: 20px;
+  font-style: italic;
 }
 
 .content-wrapper ul {
