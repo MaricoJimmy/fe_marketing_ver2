@@ -17,7 +17,7 @@ const AboutUsPage = () => {
     return (
       <Link
         href={
-          "https://docs.google.com/forms/d/e/1FAIpQLSdgC3dFvEQMnpoFlhWqiH369je7W2DdaFLSbwoEPCHg_qVblA/viewform"
+          "https://docs.google.com/forms/d/e/1FAIpQLScVtfyqXj0Lz7y-Ve8qNSPJ9ztRQpIVXUUl2vUSF-OpMrM97A/viewform?usp=sharing&ouid=101703931519939730296"
         }
       >
         <a
@@ -75,7 +75,7 @@ const AboutUsPage = () => {
     <>
       <PageSeoHead data={metaTagData} />
       <div className="w-full h-full flex items-center justify-center bg-infor/5">
-        <div className="lg:px-20 md:px-10 px-4 py-8 w-full max-w-screen-xl">
+        <div className="lg:px-20 md:px-10 px-4 py-8 w-full min-h-[800px] max-w-screen-xl">
           <Title label={t("title")} data-aos="fade-up" />
           <div className="mt-8 w-full grid lg:grid-cols-2 lg:gap-8 gap-4">
             {t.raw("careers").map((career, idx) => (

@@ -1066,33 +1066,6 @@
     "excerpt": "Open jobs",
     "careers": [
       {
-        "title": "Agency Development Manager (Software & IOT Solutions)",
-        "location": {
-          "main": "Headquarters Hanoi",
-          "sub": "Ho Chi Minh City Office"
-        },
-        "exp": "5 years of experience",
-        "link": "https://drive.google.com/file/d/1IQKq_RrS2IuHF7KuuWej9nNQztP1pivZ/view?usp=sharing"
-      },
-      {
-        "title": "Agency Developer (Software & IOT Solutions)",
-        "location": {
-          "main": "Headquarters Hanoi",
-          "sub": "Ho Chi Minh City Office"
-        },
-        "exp": "2-5 years of experience",
-        "link": "https://drive.google.com/file/d/1TwxFEszGJVukSX9tcF5s0uoU_RtGBxoU/view?usp=sharing"
-      },
-      {
-        "title": "Sales Manager (Software & IOT Solutions)",
-        "location": {
-          "main": "Headquarters Hanoi",
-          "sub": "Ho Chi Minh City Office"
-        },
-        "exp": "5 years of experience",
-        "link": "https://drive.google.com/file/d/10bABxCDEMMlUukCBek5sQNOgMP1tF1Pr/view?usp=sharing"
-      },
-      {
         "title": "Sales Officer (Software & IOT Solutions)",
         "location": {
           "main": "Nationwide",
@@ -1100,24 +1073,6 @@
         },
         "exp": "2-5 years of experience",
         "link": "https://drive.google.com/file/d/1e6Q8VctnVtgLmx6AMk-c8GPsNPTLkojx/view?usp=sharing"
-      },
-      {
-        "title": "Sales Admin",
-        "location": {
-          "main": "Headquarters Hanoi",
-          "sub": ""
-        },
-        "exp": "No experience required",
-        "link": "https://drive.google.com/file/d/16OY-3N9kFR7qA2mDcQq08v_35zqCaOas/view?usp=sharing"
-      },
-      {
-        "title": "Collaborator (business)",
-        "location": {
-          "main": "Nationwide",
-          "sub": ""
-        },
-        "exp": "3 years of experience",
-        "link": "https://drive.google.com/file/d/11SxPWdPppt3hTMC1UBolk_ZVunmfVSBz/view?usp=sharing"
       }
     ]
   },

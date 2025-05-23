@@ -1,1 +1,113 @@
-<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-sparkles'><path d='M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z'/><path d='M20 3v4'/><path d='M22 5h-4'/><path d='M4 17v2'/><path d='M5 18H3'/></svg>
+[
+  {
+    title: "Trưởng phòng phát triển đại lý (Phần mềm & giải pháp IOT)",
+    location: {
+      main: "Trụ sở chính Hà Nội",
+      sub: "Văn phòng TP. Hồ Chí Minh",
+    },
+    exp: "5 năm kinh nghiệm",
+    link: "https://drive.google.com/file/d/1IQKq_RrS2IuHF7KuuWej9nNQztP1pivZ/view?usp=sharing",
+  },
+  {
+    title: "Nhân viên phát triển đại lý (Phần mềm & giải pháp IOT)",
+    location: {
+      main: "Trụ sở chính Hà Nội",
+      sub: "Văn phòng TP. Hồ Chí Minh",
+    },
+    exp: "2-5 năm kinh nghiệm",
+    link: "https://drive.google.com/file/d/1TwxFEszGJVukSX9tcF5s0uoU_RtGBxoU/view?usp=sharing",
+  },
+  {
+    title: "Trưởng phòng kinh doanh (Phần mềm & giải pháp IOT)",
+    location: {
+      main: "Trụ sở chính Hà Nội",
+      sub: "Văn phòng TP. Hồ Chí Minh",
+    },
+    exp: "5 năm kinh nghiệm",
+    link: "https://drive.google.com/file/d/10bABxCDEMMlUukCBek5sQNOgMP1tF1Pr/view?usp=sharing",
+  },
+  {
+    title: "Nhân viên kinh doanh (Phần mềm & giải pháp IOT)",
+    location: {
+      main: "Toàn quốc",
+      sub: "",
+    },
+    exp: "2-5 năm kinh nghiệm",
+    link: "https://drive.google.com/file/d/1e6Q8VctnVtgLmx6AMk-c8GPsNPTLkojx/view?usp=sharing",
+  },
+  {
+    title: "Nhân viên Sales Admin",
+    location: {
+      main: "Trụ sở chính Hà Nội",
+      sub: "",
+    },
+    exp: "Không yêu cầu kinh nghiệm",
+    link: "https://drive.google.com/file/d/16OY-3N9kFR7qA2mDcQq08v_35zqCaOas/view?usp=sharing",
+  },
+  {
+    title: "Cộng tác viên (kinh doanh)",
+    location: {
+      main: "Toàn quốc",
+      sub: "",
+    },
+    exp: "3 năm kinh nghiệm",
+    link: "https://drive.google.com/file/d/11SxPWdPppt3hTMC1UBolk_ZVunmfVSBz/view?usp=sharing",
+  },
+];
+
+[
+  {
+    title: "Agency Development Manager (Software & IOT Solutions)",
+    location: {
+      main: "Headquarters Hanoi",
+      sub: "Ho Chi Minh City Office",
+    },
+    exp: "5 years of experience",
+    link: "https://drive.google.com/file/d/1IQKq_RrS2IuHF7KuuWej9nNQztP1pivZ/view?usp=sharing",
+  },
+  {
+    title: "Agency Developer (Software & IOT Solutions)",
+    location: {
+      main: "Headquarters Hanoi",
+      sub: "Ho Chi Minh City Office",
+    },
+    exp: "2-5 years of experience",
+    link: "https://drive.google.com/file/d/1TwxFEszGJVukSX9tcF5s0uoU_RtGBxoU/view?usp=sharing",
+  },
+  {
+    title: "Sales Manager (Software & IOT Solutions)",
+    location: {
+      main: "Headquarters Hanoi",
+      sub: "Ho Chi Minh City Office",
+    },
+    exp: "5 years of experience",
+    link: "https://drive.google.com/file/d/10bABxCDEMMlUukCBek5sQNOgMP1tF1Pr/view?usp=sharing",
+  },
+  {
+    title: "Sales Officer (Software & IOT Solutions)",
+    location: {
+      main: "Nationwide",
+      sub: "",
+    },
+    exp: "2-5 years of experience",
+    link: "https://drive.google.com/file/d/1e6Q8VctnVtgLmx6AMk-c8GPsNPTLkojx/view?usp=sharing",
+  },
+  {
+    title: "Sales Admin",
+    location: {
+      main: "Headquarters Hanoi",
+      sub: "",
+    },
+    exp: "No experience required",
+    link: "https://drive.google.com/file/d/16OY-3N9kFR7qA2mDcQq08v_35zqCaOas/view?usp=sharing",
+  },
+  {
+    title: "Collaborator (business)",
+    location: {
+      main: "Nationwide",
+      sub: "",
+    },
+    exp: "3 years of experience",
+    link: "https://drive.google.com/file/d/11SxPWdPppt3hTMC1UBolk_ZVunmfVSBz/view?usp=sharing",
+  },
+];
