@@ -47,9 +47,9 @@
     },
     "about-us": {
       "title": "About us",
-      "content": "<p>Developed since 2022. In 2024, Udata is invested by DHG. </p> <p>Udata aims to become a software platform <span class='font- semibold'>leading in Vietnam and Southeast Asia</span> in the field of energy management, IoT data analysis on cloud data platform (SaaS), we provide comprehensive solutions for businesses. Businesses and organizations help analyze and optimize energy consumption and IoT operational parameters from machines, environments, equipment, etc. Thereby helping to reduce costs, increase productivity, and contribute to achieving achieve the goal of sustainable development.</p>"
+      "content": "<p>Developed since 2022. In 2024, Udata was invested in by DHG. In 2025, Udata was honored with the Sao Khue Award as recognition for its innovation efforts.</p> <p>Udata is a pioneering software platform in Vietnam in the field of IoT data collection, monitoring, and analysis, helping businesses operate smartly and develop sustainably. With core products such as Uboard, Umaintain, Uzero, Uvisual, and Ubot, Udata is accompanying factories, buildings, industrial zones, and manufacturing enterprises on their digital transformation and energy optimization journey according to ISO 50001, COP26, and COP28 standards.</p>"
     },
-    "notification": "Notification",
+    "notification": "Announcements",
     "news": "Featured news",
     "button": {
       "details": "See details",
@@ -198,38 +198,38 @@
   "Header": {
     "news": {
       "title": "News",
-      "notification": "Notification"
+      "notification": "Announcements"
     },
     "products": {
       "title": "Product",
       "menus": {
         "saas": "SaaS Platform",
-        "integrate": "Data integration"
+        "integrate": "Data Integration"
       },
       "subMenus": {
         "pms": "Optimize energy, save costs"
       }
     },
     "solutions": {
-      "title": "Solution",
+      "title": "Solutions",
       "menusByObject": {
-        "title": "By object",
-        "investors": "Investors - senior managers",
-        "managers": "Management level",
-        "operators": "Operator level"
+        "title": "By User",
+        "investors": "Investors",
+        "managers": "Managers",
+        "operators": "Operators"
       },
       "menusByField": {
-        "title": "By field",
+        "title": "By Sector",
         "factory": "Factory",
-        "fishing": "Fisheries"
+        "fishing": "Aquaculture"
       },
       "subMenus": {
         "solar": "Rooftop solar power monitoring solution"
       }
     },
     "contact": "Free trial",
-    "about-us": "About the company",
-    "bookDemo": "Request trial",
+    "about-us": "About us",
+    "bookDemo": "Free trial",
     "career": "Career"
   },
   "Footer": {
@@ -239,21 +239,21 @@
         "links": {
           "company": "Company",
           "solutions": {
-            "title": "Solution",
-            "investors": "Investors - senior managers",
+            "title": "Solutions",
+            "investors": "Investors",
             "managers": "Managers",
             "operators": "Operators",
             "saas": "Rooftop solar",
             "factory": "Factory",
-            "fishing": "Fisheries"
+            "fishing": "Aquaculture"
           },
           "products": {
             "title": "Product",
             "saas": "SaaS Platform",
-            "integrate": "Data integration"
+            "integrate": "Data Integration"
           },
           "blog": "News",
-          "notification": "Notification"
+          "notification": "Announcements"
         }
       },
       "second": {
@@ -275,8 +275,16 @@
   },
   "AboutUs": {
     "title": "About us",
-    "content": "<p>Developed since 2022. In 2024, Udata is invested by DHG.</p> <p>Udata aims to become a software platform <span class='font-semibold'> leading Vietnam and Southeast Asia </span> in the field of energy management, IoT data analysis on cloud data platform (SaaS), we provide <span class='font-semibold'> comprehensive solution </span> for businesses and organizations to help analyze and optimize energy consumption, IoT operating parameters from machines, environment, equipment, ... from That reduces costs, increases productivity, and contributes to achieving sustainable development goals.</p> <p>Udata brings together enthusiasm and creative intelligence in the fields of technology and management, together Hands on creating a green future. From the management team, partners, investors, to businesses using Udata, we all share a common vision: As a companion to businesses, optimize performance, reduce costs and create a more sustainable energy system. </p><p>Let's optimize your productivity with Udata today!</p>",
-    "excerpt": "Let's optimize your productivity with Udata today!"
+    "content": "<p>Developed since 2022. In 2024, Udata was invested in by DHG. In 2025, Udata was honored with the Sao Khue Award as recognition for its innovation efforts.</p> <p>Udata is a pioneering software platform in Vietnam in the field of IoT data collection, monitoring, and analysis, helping businesses operate smartly and develop sustainably. With core products such as Uboard, Umaintain, Uzero, Uvisual, and Ubot, Udata is accompanying factories, buildings, industrial zones, and manufacturing enterprises on their digital transformation and energy optimization journey according to ISO 50001, COP26, and COP28 standards.</p>",
+    "vision": {
+      "title": "Vision",
+      "content": "To become the leading software platform in Vietnam and Southeast Asia in IoT data collection, monitoring, and analysis using AI and cloud technology, serving industry, environment, and energy sectors."
+    },
+    "mission": {
+      "title": "Mission",
+      "content": "To help businesses digitize, monitor, and optimize operations through AI-powered solutions, thereby improving efficiency, reducing costs, and moving toward sustainable development."
+    },
+    "excerpt": "We don’t just build software – we unlock data potential for the future."
   },
   "Solar": {
     "heroSection": {
@@ -1167,7 +1175,7 @@
     }
   },
   "Notification": {
-    "title": "Notification from Udata",
+    "title": "Announcements from Udata",
     "button": {
       "back": "Back"
     },

@@ -47,7 +47,7 @@
     },
     "about-us": {
       "title": "Về chúng tôi",
-      "content": "<p>Được phát triển từ năm 2022. Năm 2024, Udata được đầu tư bởi DHG. </p> <p>Udata hướng tới mục tiêu trở thành nền tảng phần mềm <span class='font-semibold'>hàng đầu Việt Nam và Đông Nam Á</span> trong lĩnh vực quản trị năng lượng, phân tích dữ liệu IoT trên nền tảng dữ liệu đám mây (SaaS), chúng tôi cung cấp giải pháp toàn diện cho các doanh nghiệp, tổ chức giúp phân tích và tối ưu hóa tiêu thụ năng lượng, các thông số hoạt động IoT từ máy móc, môi trường, thiết bị,... Từ đó giúp giảm chi phí, tăng năng suất, và góp phần đạt được mục tiêu phát triển bền vững.</p>"
+      "content": "<p>Được phát triển từ năm 2022. Năm 2024, Udata được đầu tư bởi DHG. Năm 2025, Udata vinh dự nhận giải thưởng Sao Khuê như sự ghi nhận những nỗ lực đổi mới của Udata.</p> <p>Udata là nền tảng phần mềm tiên phong tại Việt Nam trong lĩnh vực thu thập, giám sát và phân tích dữ liệu IoT, giúp doanh nghiệp vận hành thông minh và phát triển bền vững. Với các sản phẩm chủ lực như Uboard, Umaintain, Uzero, Uvisual và Ubot, Udata đang đồng hành cùng các nhà máy, tòa nhà, khu công nghiệp, doanh nghiệp sản xuất trong hành trình chuyển đổi số và tối ưu hóa năng lượng theo tiêu chuẩn ISO 50001, COP26, COP28.</p>"
     },
     "notification": "Thông báo",
     "news": "Tin tức nổi bật",
@@ -275,8 +275,16 @@
   },
   "AboutUs": {
     "title": "Về chúng tôi",
-    "content": "<p>Được phát triển từ năm 2022. Năm 2024, Udata được đầu tư bởi DHG.</p> <p>Udata hướng tới mục tiêu trở thành nền tảng phần mềm <span class='font-semibold'> hàng đầu Việt Nam và Đông Nam Á </span> trong lĩnh vực quản trị năng lượng, phân tích dự liệu IoT trên nền tảng dữ liệu đám mây (SaaS), chúng tôi cung cấp <span class='font-semibold'> giải pháp toàn diện </span> cho các doanh nghiệp, tổ chức giúp phân tích và tối ưu hóa tiêu thụ năng lượng, các thông số hoạt động IoT từ máy móc, môi trường, thiết bị, ... từ đó giảm chi phí, tăng năng suất, và góp phần đạt được mục tiêu phát triển bền vững.</p> <p>Udata hội tụ những tâm huyết, trí tuệ sáng tạo trong lĩnh vực công nghệ, quản lý, cùng chung tay kiến tạo một tương lai xanh. Từ đội ngũ quản lý, đối tác, nhà đầu tư, đến những doanh nghiệp sử dụng Udata, tất cả chúng tôi đều chia sẻ một tầm nhìn chung: Là người bạn đồng hành cùng doanh nghiệp, tối ưu hóa hiệu suất, giảm thiểu chi phí và kiến tạo hệ thống năng lượng bền vững hơn. </p><p>Hãy cùng Udata tối ưu năng suất của bạn ngay hôm nay!</p>",
-    "excerpt": "Hãy cùng Udata tối ưu năng suất của bạn ngay hôm nay!"
+    "content": "<p>Được phát triển từ năm 2022. Năm 2024, Udata được đầu tư bởi DHG. Năm 2025, Udata vinh dự nhận giải thưởng Sao Khuê như sự ghi nhận những nỗ lực đổi mới của Udata.</p> <p>Udata là nền tảng phần mềm tiên phong tại Việt Nam trong lĩnh vực thu thập, giám sát và phân tích dữ liệu IoT, giúp doanh nghiệp vận hành thông minh và phát triển bền vững. Với các sản phẩm chủ lực như Uboard, Umaintain, Uzero, Uvisual và Ubot, Udata đang đồng hành cùng các nhà máy, tòa nhà, khu công nghiệp, doanh nghiệp sản xuất trong hành trình chuyển đổi số và tối ưu hóa năng lượng theo tiêu chuẩn ISO 50001, COP26, COP28.</p>",
+    "vision": {
+      "title": "Tầm nhìn",
+      "content": "Trở thành nền tảng phần mềm hàng đầu tại Việt Nam và Đông Nam Á trong lĩnh vực thu thập, giám sát và phân tích dữ liệu IoT bằng AI và công nghệ đám mây, phục vụ cho công nghiệp, môi trường và năng lượng."
+    },
+    "mission": {
+      "title": "Sứ mệnh",
+      "content": "Giúp doanh nghiệp số hóa, giám sát và tối ưu vận hành thông qua các giải pháp AI, từ đó nâng cao hiệu suất, tiết kiệm chi phí và hướng tới phát triển bền vững."
+    },
+    "excerpt": "Chúng tôi không chỉ xây dựng phần mềm – chúng tôi đang mở khóa tiềm năng dữ liệu cho tương lai."
   },
   "Solar": {
     "heroSection": {

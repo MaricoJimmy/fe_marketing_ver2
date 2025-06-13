@@ -341,16 +341,32 @@ function FooterDesktop({ sectionLinks }) {
                       />
                     </svg>
                   </div>
-                  <div className="flex flex-col gap-2">
-                    <span className="ml-2 text-gray/80 font-semibold">
-                      {t("section.second.addressHN.title")}: <br />{" "}
-                      {t("section.second.addressHN.address")}
-                    </span>
-                    <span className="ml-2 text-gray/80 font-semibold">
-                      {t("section.second.addressHCM.title")}: <br />{" "}
-                      {t("section.second.addressHCM.address")}
-                    </span>
+                  <span className="ml-2 text-gray/80 font-semibold">
+                    {t("section.second.addressHN.title")}: <br />{" "}
+                    {t("section.second.addressHN.address")}
+                  </span>
+                </li>
+                <li className="flex items-start justify-center">
+                  <div>
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M12.398 19.804C13.881 19.0348 19 16.0163 19 11C19 7.13401 15.866 4 12 4C8.13401 4 5 7.13401 5 11C5 16.0163 10.119 19.0348 11.602 19.804C11.8548 19.9351 12.1452 19.9351 12.398 19.804ZM12 14C13.6569 14 15 12.6569 15 11C15 9.34315 13.6569 8 12 8C10.3431 8 9 9.34315 9 11C9 12.6569 10.3431 14 12 14Z"
+                        fill="#0069FF"
+                      />
+                    </svg>
                   </div>
+                  <span className="ml-2 text-gray/80 font-semibold">
+                    {t("section.second.addressHCM.title")}: <br />{" "}
+                    {t("section.second.addressHCM.address")}
+                  </span>
                 </li>
               </ul>
             </div>
@@ -582,16 +598,32 @@ function FooterMobile({ sectionLinks }) {
                         />
                       </svg>
                     </div>
-                    <div className="flex flex-col gap-2">
-                      <span className="ml-2 text-gray/80 font-semibold">
-                        {t("section.second.addressHN.title")}: <br />{" "}
-                        {t("section.second.addressHN.address")}
-                      </span>
-                      <span className="ml-2 text-gray/80 font-semibold">
-                        {t("section.second.addressHCM.title")}: <br />{" "}
-                        {t("section.second.addressHCM.address")}
-                      </span>
+                    <span className="ml-2 text-gray/80 font-semibold">
+                      {t("section.second.addressHN.title")}: <br />{" "}
+                      {t("section.second.addressHN.address")}
+                    </span>
+                  </li>
+                  <li className="mt-6 flex items-start justify-start">
+                    <div>
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fillRule="evenodd"
+                          clipRule="evenodd"
+                          d="M12.398 19.804C13.881 19.0348 19 16.0163 19 11C19 7.13401 15.866 4 12 4C8.13401 4 5 7.13401 5 11C5 16.0163 10.119 19.0348 11.602 19.804C11.8548 19.9351 12.1452 19.9351 12.398 19.804ZM12 14C13.6569 14 15 12.6569 15 11C15 9.34315 13.6569 8 12 8C10.3431 8 9 9.34315 9 11C9 12.6569 10.3431 14 12 14Z"
+                          fill="#0069FF"
+                        />
+                      </svg>
                     </div>
+                    <span className="ml-2 text-gray/80 font-semibold">
+                      {t("section.second.addressHCM.title")}: <br />{" "}
+                      {t("section.second.addressHCM.address")}
+                    </span>
                   </li>
                 </ul>
               </div>
