@@ -61,7 +61,8 @@
   "Header": {
     "news": {
       "title": "Tin tức",
-      "notification": "Thông báo"
+      "notification": "Thông báo",
+      "blog": "Blog"
     },
     "products": {
       "title": "Sản phẩm",

@@ -15,7 +15,12 @@ function SingleFeatureSection({
             isReverse ? "order-2" : "lg:order-1 order-2"
           } lg:h-full h-[300px] relative`}
         >
-          <Image src={data.img} layout="fill" alt="" className="object-cover" />
+          <Image
+            src={data.img}
+            layout="fill"
+            alt=""
+            className="object-cover object-left"
+          />
         </div>
         <div
           data-aos="fade-left"

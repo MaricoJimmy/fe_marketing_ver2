@@ -103,7 +103,7 @@ function Footer() {
           href: getLocalizedPath(ROUTER_NOTIFICATION, locale),
         },
         {
-          title: "Blog",
+          title: t("section.first.links.blog"),
           href: getLocalizedPath(ROUTER_BLOG, locale),
         },
       ],

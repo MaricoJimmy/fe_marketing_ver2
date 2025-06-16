@@ -191,7 +191,7 @@ function HeaderDesktop({ stickyHeader, locale }) {
                           href={getLocalizedPath(ROUTER_NOTIFICATION, locale)}
                         ></MenuItem>
                         <MenuItem
-                          title="Blog"
+                          title={t("news.blog")}
                           href={getLocalizedPath(ROUTER_BLOG, locale)}
                         ></MenuItem>
                       </ul>
@@ -336,7 +336,7 @@ function HeaderMobile({ stickyHeader, isProductPage, isPMSPage }) {
           href: ROUTER_NOTIFICATION,
         },
         {
-          title: "Blog",
+          title: t("news.blog"),
           href: ROUTER_BLOG,
         },
       ],

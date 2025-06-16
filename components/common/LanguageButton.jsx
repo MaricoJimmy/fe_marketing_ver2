@@ -10,6 +10,21 @@ import {
 import { useApp } from "@/contexts/AppContext";
 import { getLocalizedPath } from "@/utils";
 import { ROUTER_BLOG } from "@/utils/constant";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "../ui/dropdown-menu";
+import { Button } from "../ui/button";
+
+// Danh sách ngôn ngữ và lá cờ
+const languageFlags = {
+  vi: "/image/flag/vietnamese.png",
+  en: "/image/flag/english.png",
+  jp: "/image/flag/japanese.png",
+  th: "/image/flag/thailand.png",
+};
 
 function LanguageButton() {
   const router = useRouter();
@@ -38,58 +53,43 @@ function LanguageButton() {
 
   return (
     <div className="relative w-fit">
-      <Select
-        value={router.locale}
-        onValueChange={(value) => handleChangeLanguage(value)}
-      >
-        <SelectTrigger
-          className="border-none shadow-none focus:ring-0"
-          isShowIcon={false}
-          title="Language button"
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <Button className="p-0 border border-gray/30 rounded-full bg-transparent hover:bg-transparent">
+            <Image
+              src={languageFlags[router.locale]}
+              width="25"
+              height="25"
+              alt=""
+              className="object-contain"
+            />
+          </Button>
+        </DropdownMenuTrigger>
+        <DropdownMenuContent
+          className="bg-white w-[80px]"
+          collisionPadding={20}
         >
-          <SelectValue
-            placeholder={
-              router.locale === "vi" ? (
-                <div className="h-full flex items-center">
-                  <Image
-                    src="/image/vietnam-flag.png"
-                    width="24"
-                    height="24"
-                    alt=""
-                  />
-                </div>
-              ) : (
-                <div className="h-full flex items-center">
-                  <Image
-                    src="/image/england-flag.png"
-                    width="24"
-                    height="24"
-                    alt=""
-                  />
-                </div>
-              )
-            }
-          />
-        </SelectTrigger>
-        <SelectContent className="w-fit bg-white">
-          <SelectItem value="vi" title="Vietnamese">
-            <Image
-              src="/image/vietnam-flag.png"
-              width="24"
-              height="24"
-              alt=""
-            />
-          </SelectItem>
-          <SelectItem value="en" title="English">
-            <Image
-              src="/image/england-flag.png"
-              width="24"
-              height="24"
-              alt=""
-            />
-          </SelectItem>
-        </SelectContent>
-      </Select>
+          {Object.entries(languageFlags).map(([locale, url]) => (
+            <DropdownMenuItem
+              key={locale}
+              onClick={() => handleChangeLanguage(locale)}
+              className={`${
+                router.locale === locale ? "" : "opacity-30"
+              } flex justify-center`}
+            >
+              <div className="border border-gray/30 h-[25px] w-[25px] rounded-full">
+                <Image
+                  src={languageFlags[locale] || url}
+                  width={25}
+                  height={25}
+                  alt={`${locale} Flag`}
+                  className="object-contain"
+                />
+              </div>
+            </DropdownMenuItem>
+          ))}
+        </DropdownMenuContent>
+      </DropdownMenu>
     </div>
   );
 }
