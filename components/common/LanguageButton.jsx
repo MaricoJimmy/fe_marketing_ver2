@@ -74,7 +74,7 @@ function LanguageButton() {
               key={locale}
               onClick={() => handleChangeLanguage(locale)}
               className={`${
-                router.locale === locale ? "" : "opacity-30"
+                router.locale === locale ? "" : "opacity-50"
               } flex justify-center hover:bg-infor/50 cursor-pointer`}
             >
               <div className="border border-gray/30 h-[25px] w-[25px] rounded-full">
