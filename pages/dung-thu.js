@@ -371,10 +371,10 @@ const ContactPage = () => {
                           title="Linkedin"
                           target="_blank"
                           rel="noreferrer"
-                          href="https://www.linkedin.com/company/udatadhg"
+                          href="https://www.linkedin.com/company/udatajsc/"
                           className="text-neutral font-medium"
                         >
-                          udata.jsc
+                          udata_jsc
                         </a>
                       </div>
                     </div>

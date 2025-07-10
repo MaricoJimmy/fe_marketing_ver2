@@ -215,7 +215,7 @@ function FooterDesktop({ sectionLinks }) {
                     </svg>
                   </a>
                   <a
-                    title="Email"
+                    title="Facebook"
                     target="_blank"
                     rel="noreferrer"
                     href="https://www.facebook.com/profile.php?id=61566884154567"
@@ -229,10 +229,10 @@ function FooterDesktop({ sectionLinks }) {
                     />
                   </a>
                   <a
-                    title="Facebook"
+                    title="Linkedin"
                     target="_blank"
                     rel="noreferrer"
-                    href="https://www.linkedin.com/company/udatadhg/"
+                    href="https://www.linkedin.com/company/udatajsc/"
                     className="relative p-1 w-[30px] h-[30px] overflow-hidden flex items-center justify-center border border-gray/20 rounded-full"
                   >
                     <Image
@@ -489,7 +489,7 @@ function FooterMobile({ sectionLinks }) {
                       title="Linkedin"
                       target="_blank"
                       rel="noreferrer"
-                      href="https://www.linkedin.com/company/udatadhg/"
+                      href="https://www.linkedin.com/company/udatajsc/"
                       className="relative p-1 w-[30px] h-[30px] overflow-hidden flex items-center justify-center border border-gray/20 rounded-full"
                     >
                       <Image
