@@ -374,7 +374,7 @@ const ContactPage = () => {
                           href="https://www.linkedin.com/company/udatadhg"
                           className="text-neutral font-medium"
                         >
-                          Udata.dhg
+                          udata.jsc
                         </a>
                       </div>
                     </div>
