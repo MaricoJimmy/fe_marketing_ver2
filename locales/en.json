@@ -261,11 +261,11 @@
         "title": "Contact information",
         "addressHN": {
           "title": "Hanoi Office",
-          "address": "Thien Nien Ky Building, 9th Floor, No. 4 Quang Trung, Yet Kieu Ward, Ha Dong District, Hanoi."
+          "address": "9th Floor, Thien Nien Ky Building, No. 4 Quang Trung, Ha Dong Ward, Hanoi."
         },
         "addressHCM": {
-          "title": "Ho Chi Minh Office",
-          "address": "6th Floor, DHG Building, No. 31-33, Street 18, Ward 8, Go Vap District, Ho Chi Minh City."
+          "title": "Ho Chi Minh City Office",
+          "address": "6th Floor, DHG Building, No. 31–33, Street 18, Thong Tay Hoi Ward, Ho Chi Minh City."
         }
       },
       "third": {

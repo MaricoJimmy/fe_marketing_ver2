@@ -261,11 +261,11 @@
         "title": "連絡先情報",
         "addressHN": {
           "title": "ハノイオフィス",
-          "address": "Thien Nien Kyビル9階、4 Quang Trung、Yet Kieu区、Ha Dong区、ハノイ市"
+          "address": "9階、Thien Nien Kyビル、4 Quang Trung、Ha Dong区、ハノイ市"
         },
         "addressHCM": {
           "title": "ホーチミンオフィス",
-          "address": "DHGビル6階、31-33番地、18通り、8区、Go Vap区、ホーチミン市"
+          "address": "6階、DHGビル、31–33、18番通り、Thong Tay Hoi区、ホーチミン市"
         }
       },
       "third": {
