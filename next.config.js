@@ -2,12 +2,6 @@
 
 const { routeMaps } = require("./utils/router");
 
-const withPWA = require("next-pwa")({
-  dest: "public",
-  register: true,
-  skipWaiting: true, // tự cập nhật app khi có bản mới
-});
-
 function generateRewrites() {
   const rewrites = [];
 
@@ -28,7 +22,7 @@ function generateRewrites() {
   return rewrites;
 }
 
-const nextConfig = withPWA({
+const nextConfig = {
   images: {
     domains: ["pambu-cms.org"],
   },
@@ -49,6 +43,6 @@ const nextConfig = withPWA({
     //   },
     // ];
   },
-});
+};
 
 module.exports = nextConfig;
