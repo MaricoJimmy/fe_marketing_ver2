@@ -2,6 +2,12 @@
 
 const { routeMaps } = require("./utils/router");
 
+const withPWA = require("next-pwa")({
+  dest: "public",
+  register: true,
+  skipWaiting: true, // tự cập nhật app khi có bản mới
+});
+
 function generateRewrites() {
   const rewrites = [];
 
@@ -22,11 +28,11 @@ function generateRewrites() {
   return rewrites;
 }
 
-const nextConfig = {
+const nextConfig = withPWA({
   images: {
     domains: ["pambu-cms.org"],
   },
-  reactStrictMode: false,
+  reactStrictMode: true,
   swcMinify: true,
   i18n: {
     locales: ["vi", "en", "jp", "th"],
@@ -43,9 +49,6 @@ const nextConfig = {
     //   },
     // ];
   },
-  // experimental: {
-  //   esmExternals: false,
-  // },
-};
+});
 
 module.exports = nextConfig;
