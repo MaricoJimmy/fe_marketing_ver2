@@ -25,6 +25,7 @@ function generateRewrites() {
 const nextConfig = {
   images: {
     domains: ["pambu-cms.org"],
+    unoptimized: true,
   },
   reactStrictMode: true,
   swcMinify: true,
