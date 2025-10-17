@@ -41,7 +41,7 @@ const UzeroLandingPage = () => {
           <div className="px-5 py-20 md:px-8 md:py-44 max-w-screen-xl w-full overflow-hidden md:overflow-visible">
             <WhyChooseUs
               data={t.raw("whyChooseUs")}
-              customCol="md:grid-cols-3 grid-cols-3 grid-cols-1"
+              customCol="md:grid-cols-3 grid-cols-1"
             />
           </div>
         </div>
