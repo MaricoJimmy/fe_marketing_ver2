@@ -1,5 +1,6 @@
 import PageSeoHead from "@/components/common/PageSeoHead";
 import ScrollToTop from "@/components/common/ScrollToTop";
+import WhyChooseUs from "@/components/san-pham/WhyChooseUs";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
@@ -15,7 +16,7 @@ const AboutUsPage = () => {
     <>
       <PageSeoHead data={metaTagData} />
       <div className="w-full h-full flex items-center justify-center bg-infor/5">
-        <div className="lg:px-20 md:px-10 px-4 py-8 w-full max-w-screen-xl flex flex-col gap-8">
+        <div className="lg:px-12 md:px-6 px-4 py-8 w-full max-w-screen-xl flex flex-col gap-8">
           <div
             data-aos="fade-left"
             className="p-4 h-full flex flex-col justify-between bg-white shadow-md rounded-2xl"
@@ -45,7 +46,7 @@ const AboutUsPage = () => {
                 className="flex flex-col gap-2"
                 dangerouslySetInnerHTML={{ __html: t.raw("content") }}
               ></div>
-              <p>{t("excerpt")}</p>
+              <div dangerouslySetInnerHTML={{ __html: t.raw("excerpt") }}></div>
             </div>
             <div
               data-aos="fade-left"
@@ -62,7 +63,46 @@ const AboutUsPage = () => {
               </p>
             </div>
           </div>
-          <div
+          <div className="px-4 py-8 bg-white shadow-md rounded-2xl">
+            <WhyChooseUs
+              data={t.raw("whyChooseUs")}
+              customCol="md:grid-cols-3 grid-cols-1 lg:mt-16 mt-8 lg:gap-6"
+            />
+          </div>
+          <div className="p-4 bg-white shadow-md rounded-2xl">
+            <h2
+              data-aos="fade-up"
+              className="text-4xl text-neutral text-start font-bold"
+            >
+              {t("awards.title")}
+            </h2>
+            <div
+              data-aos="fade-left"
+              data-aos-delay="100"
+              className="mt-6 flex flex-col gap-2 text-justify text-neutral text-base"
+              dangerouslySetInnerHTML={{ __html: t.raw("awards.content") }}
+            ></div>
+            <div className="mt-6 flex lg:flex-row flex-col items-center justify-center gap-8">
+              <Image
+                data-aos="fade-up"
+                data-aos-delay="100"
+                src="/image/about-us/award-cert.webp"
+                alt="Award 1"
+                width={400}
+                height={500}
+              />
+              <Image
+                data-aos="fade-up"
+                data-aos-delay="150"
+                src="/image/about-us/award-trophy.webp"
+                alt="Award 1"
+                width={650}
+                height={500}
+                objectFit={"cover"}
+              />
+            </div>
+          </div>
+          {/* <div
             data-aos="fade-right"
             className="w-full lg:h-[700px] h-[300px] bg-white relative rounded-xl shadow-md"
           >
@@ -72,7 +112,7 @@ const AboutUsPage = () => {
               alt=""
               className="object-cover rounded-xl"
             />
-          </div>
+          </div> */}
         </div>
 
         <div className="fixed bottom-24 right-7 z-10">

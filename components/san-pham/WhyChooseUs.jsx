@@ -13,7 +13,7 @@ function WhyChooseUs({
         <h5
           data-aos="fade-up"
           data-aos-delay="100"
-          className="mt-2 text-center text-base text-neutral/80 font-medium"
+          className="mt-2 text-center text-base text-neutral font-medium"
         >
           {data.subTitle}
         </h5>

@@ -68,7 +68,7 @@ const PMSPostsQuery = gql`
 `;
 
 const BlogPostsQuery = gql`
-  query PostsForBlog {
+  query PostsForNotification {
     posts(
       where: { categoryName: "blog", orderby: { field: DATE, order: DESC } }
       first: 100

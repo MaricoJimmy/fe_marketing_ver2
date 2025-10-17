@@ -13,7 +13,7 @@ function SingleFeatureSection({
           data-aos="fade-right"
           className={`${
             isReverse ? "order-2" : "lg:order-1 order-2"
-          } lg:h-full h-[300px] relative`}
+          } lg:h-[400px] h-[300px] relative`}
         >
           <Image
             src={data.img}

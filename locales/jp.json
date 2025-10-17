@@ -3,69 +3,66 @@
     "titleSocial": "データ収集・監視・分析プラットフォーム",
     "desc": "データ収集・監視・分析プラットフォーム",
     "solutions": {
-      "title": "Udata.aiはデータ活用の限界を打ち破ります",
-      "byObject": {
-        "title": "対象別ソリューション",
-        "solutions": [
-          {
-            "title": "投資家・上級管理者向けソリューション",
-            "link": "/giai-phap/nha-dau-tu",
-            "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke=' currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round' className='lucide lucide-user'> <path d='M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2 ' /> <circle cx='12' cy='7' r='4' /> </svg>"
-          },
-          {
-            "title": "管理者向けソリューション",
-            "link": "/giai-phap/nha-quan-ly-cap-cao",
-            "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke=' currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'> <path stroke='none' d='M0 0h24v24H0z' fill='none' /> <path d='M12 7m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0' /> <path d='M17 16m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0' /> <path d='M7 16m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0' /></svg>"
-          },
-          {
-            "title": "運用担当者向けソリューション",
-            "link": "/giai-phap/nha-quan-ly-van-hanh",
-            "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke=' currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'> <path d='M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z' /> <circle cx='12' cy='12' r='4' /> svg>"
-          }
-        ]
-      },
-      "byFields": {
-        "title": "分野別ソリューション",
-        "solutions": [
-          {
-            "title": "屋上太陽光発電",
-            "link": "/giai-phap/solar-rooftop",
-            "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke=' currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'> <circle cx='12' cy='12' r='4' /> <path d='M12 2v2' /> <path d ='M12 20v2' /> <path d='m4.93 4.93 1.41 1.41' /> <path d='m17.66 17.66 1.41 1.41' /> <path d='M2 12h2' /> <path d=' M20 12h2' /> <path d='m6.34 17.66-1.41 1.41' /> <path d='m19.07 4.93-1.41 1.41' /> </svg>"
-          },
-          {
-            "title": "工場",
-            "link": "/giai-phap/nha-may",
-            "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke=' currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'> <path d='M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2 -2H4a2 2 0 0 0-2 2Z' /> <path d='M17 18h1' /> <path d='M12 18h1' /> <path d='M7 18h1' /> </svg>"
-          },
-          {
-            "title": "水産養殖",
-            "link": "/giai-phap/thuy-san",
-            "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke=' currentColor' strokeWidth='2' strokeLinecap='round' strokeLinejoin='round'> <path d='M2 16s9-15 20-4C11 23 2 8 2 8' /></svg>"
-          }
-        ]
+      "title": "Udataのソリューション",
+      "list": {
+        "uboard": "データ監視・分析",
+        "ugate": "スマートAI技術サポート",
+        "uzero": "排出量計算"
       }
+    },
+    "fieldsOfApplication": {
+      "title": "適用分野",
+      "list": {
+        "solar": {
+          "title": "屋上太陽光発電",
+          "desc": "投資家や運用担当者が屋上太陽光発電システムを能動的かつ効果的に管理できます。"
+        },
+        "elevator": {
+          "title": "エレベーター",
+          "desc": "メーカーや保守担当者が異常を早期発見し、エレベーターの保守効率を最適化できます。"
+        },
+        "oee": {
+          "title": "生産効率・保守管理（OEE）",
+          "desc": "収集した生産データを分析し、レポートや警告を通じて工場が迅速かつ正確な意思決定を行えるよう支援します。"
+        },
+        "ems": {
+          "title": "エネルギー管理（EMS）",
+          "desc": "電気・ガス・熱・水などのエネルギー消費データを監視・分析・最適化し、企業のコスト削減・効率向上・持続可能な運用を支援します。"
+        },
+        "ghg": {
+          "title": "温室効果ガス排出管理",
+          "desc": "Scope 1、2、3に基づき温室効果ガス排出量を測定・可視化・管理し、ESG基準遵守と持続可能性向上を支援します。"
+        },
+        "ai": {
+          "title": "AIアシスタント",
+          "desc": "運用データを集約し、業務プロセスを標準化、ナレッジ管理で全チームの連携を強化。技術者・管理者・企業が即時ナレッジ検索、純正機器認証、CO/CQの透明性を確保し、リスク低減・効率向上を実現します。"
+        }
+      }
+    },
+    "customers": {
+      "title": "パートナー・顧客"
     },
     "about-us": {
       "title": "私たちについて",
-      "content": "<p>2022年より開発。2024年にUdataはDHGから出資を受け、2025年には革新努力が認められSao Khue賞を受賞しました。</p> <p>Udataは、IoTデータの収集・監視・分析分野において、ベトナムの先駆的なソフトウェアプラットフォームです。企業のスマートな運用と持続可能な発展を支援します。Uboard、Umaintain、Uzero、Uvisual、Ubotなどのコア製品を通じて、Udataは工場、ビル、工業団地、製造企業のデジタル変革とエネルギー最適化（ISO 50001、COP26、COP28基準）をサポートしています。</p>"
+      "content": "<p>2022年より開発。2024年にUdataはDHGから出資を受け、2025年には革新努力が認められSao Khue賞を受賞しました。</p> <p>Udataは、ベトナムの先駆的なIoTデータ収集・監視・分析ソフトウェアプラットフォームです。Uboard、Umaintain、Uzero、Uvisual、Ubotなどの主力製品を通じて、工場・ビル・工業団地・製造企業のデジタル化とエネルギー最適化（ISO 50001、COP26、COP28基準）を支援しています。</p>"
     },
     "notification": "お知らせ",
     "news": "注目ニュース",
     "button": {
       "details": "詳細を見る",
       "full": "すべて表示",
-      "start": "はじめる"
+      "start": "無料トライアル"
     },
-    "noData": "まだ投稿がありません！"
+    "noData": "現在投稿はありません！"
   },
   "Contact": {
-    "title": "Udataプラットフォームを30日間無料でお試しください！",
-    "subTitle": "デモが必要な場合はご連絡ください",
+    "title": "Udataプラットフォームを30分のデモで体験できます。",
+    "subTitle": "常に稼働。常に正確。<br/> Udata - 技術と持続可能性の時代に企業と共に歩みます。",
     "titleSection": {
       "first": "連絡先情報",
-      "second": "デモのリクエスト",
-      "third": "Udataプラットフォーム30日間無料トライアル！",
-      "fourth": "トライアル登録ガイド"
+      "second": "Udataの無料30日間トライアル・相談申込",
+      "third": "Udataプラットフォームを30日間無料でお試し！",
+      "fourth": "トライアル申込方法ガイド"
     },
     "form": {
       "name": {
@@ -95,7 +92,7 @@
           "環境モニタリング",
           "銀行・小売",
           "通信",
-          "石油",
+          "石油・ガス",
           "その他"
         ]
       },
@@ -103,84 +100,60 @@
         "label": "お問い合わせ内容",
         "lists": [
           "支払い/アカウントサポート",
-          "コンプライアンス情報のリクエスト",
+          "コンプライアンス情報のご要望",
           "営業サポート",
           "技術サポート",
-          "トライアル申し込み"
+          "無料トライアル申込"
         ]
       },
       "target": {
-        "label": "このフォームのご利用目的",
-        "for-self": "個人のため",
-        "for-customer": "ビジネスのため"
+        "label": "このフォームの目的",
+        "for-self": "個人の利益",
+        "for-customer": "ビジネスの利益"
       },
       "message": {
-        "label": "メッセージ",
-        "phd": "メッセージを入力してください"
+        "label": "内容",
+        "phd": "内容を入力してください"
       },
-      "checkboxSure": "はい、Udataのサービスや関連プロモーションの最新情報をメールまたは電話で受け取ることに同意します。",
+      "checkboxSure": "はい、Udataの最新サービス情報や関連キャンペーンをメールまたは電話で受け取りたいです。",
       "button": "送信",
       "error": {
         "name": "氏名は必須です！",
         "company": "会社名は必須です！",
         "phone": {
           "blank": "電話番号は必須です！",
-          "valid": "無効な電話番号です！"
+          "valid": "電話番号が無効です！"
         },
         "email": "メールアドレスは必須です！",
         "fields": "業種は必須です！",
         "requests": "お問い合わせ内容は必須です！",
-        "sure": "規約に同意してください"
+        "sure": "利用規約に同意してください"
       }
     },
     "noti": {
       "success": "予約が完了しました！",
       "error": "エラーが発生しました！"
     },
-    "trial": [
-      {
-        "title": "完全無料",
-        "desc": "Udataプラットフォームのすべての機能を無料で体験できます。"
-      },
-      {
-        "title": "簡単操作",
-        "desc": "数分で登録し、エネルギーとIoT運用最適化の旅を始めましょう。"
-      },
-      {
-        "title": "絶対的なセキュリティ",
-        "desc": "すべての個人情報と登録データは最高水準のセキュリティで保護されます。"
-      }
-    ],
-    "instruct": [
-      {
-        "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-clock'><circle cx='12' cy='12' r='10'/><polyline points='12 6 12 12 16 14'/></svg>",
-        "title": "トライアル期間",
-        "desc": "アカウント有効化日から30日間"
-      },
-      {
-        "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-mail'><rect width='20' height='16' x='2' y='4' rx='2'/><path d='m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7'/></svg>",
-        "title": "オンラインサポート",
-        "desc": "トライアルアカウントと手順を登録メールに送信します。"
-      },
-      {
-        "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-laptop'><path d='M20 16V7a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v9m16 0H4m16 0 1.28 2.55a1 1 0 0 1-.9 1.45H3.62a1 1 0 0 1-.9-1.45L4 16'/></svg>",
-        "title": "今すぐ登録して先進的なソリューションの一員になろう！",
-        "onlyTitle": true
-      },
-      {
-        "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-lightbulb'><path d='M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5'/><path d='M9 18h6'/><path d='M10 22h4'/></svg>",
-        "title": "今すぐ始めよう",
-        "desc": "無料トライアルに登録",
-        "scroll": "#form-contact"
-      },
-      {
-        "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-sparkles'><path d='M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z'/><path d='M20 3v4'/><path d='M22 5h-4'/><path d='M4 17v2'/><path d='M5 18H3'/></svg>",
-        "title": "Udata – テクノロジーと持続可能性の時代に企業と共に歩む",
-        "onlyTitle": true
-      }
-    ],
-    "button": {
-      "demo": "無料トライアルに申し込む"
+    "discoveries": {
+      "title": "30分のデモでご体験いただける内容：",
+      "list": [
+        {
+          "title": "コスト・効率の最適化",
+          "content": "Udataシステムによる電力削減、運用コスト低減、機器効率向上を実際にご覧いただけます。"
+        },
+        {
+          "title": "インタラクティブなデモ体験",
+          "content": "実際のダッシュボードでエネルギーデータ、警告、レポート自動化を体験できます。"
+        },
+        {
+          "title": "専門家による1対1相談",
+          "content": "貴社の具体的なニーズに合わせて、最適な運用モデルをご提案します。"
+        },
+        {
+          "title": "導入ガイド＆30日間無料トライアル",
+          "content": "詳細な導入ガイドとUdataプラットフォーム30日間無料アクセス権を進呈します。"
+        }
+      ]
     }
   },
   "Common": {
@@ -212,10 +185,10 @@
       }
     },
     "solutions": {
-      "title": "ソリューション",
+      "title": "適用分野",
       "menusByObject": {
-        "title": "ユーザー別",
-        "investors": "投資家",
+        "title": "対象別",
+        "investors": "投資家・経営層",
         "managers": "管理者",
         "operators": "運用担当者"
       },
@@ -224,13 +197,17 @@
         "factory": "工場",
         "fishing": "水産養殖"
       },
-      "subMenus": {
-        "solar": "屋上太陽光発電監視ソリューション"
-      }
+      "solar": "屋上太陽光発電",
+      "elevator": "エレベーター",
+      "oee": "OEE",
+      "ems": "EMS",
+      "ghg": "GHG",
+      "aiForBusiness": "企業向けAIアシスタント",
+      "aiForAssistant": "Q&A用AIアシスタント"
     },
     "contact": "無料トライアル",
-    "about-us": "私たちについて",
-    "bookDemo": "無料トライアル",
+    "about-us": "会社概要",
+    "bookDemo": "トライアル申込",
     "career": "採用情報"
   },
   "Footer": {
@@ -239,19 +216,20 @@
         "title": "クイックリンク",
         "links": {
           "company": "会社概要",
+          "trial": "無料トライアル",
+          "career": "採用情報",
           "solutions": {
-            "title": "ソリューション",
-            "investors": "投資家向け",
-            "managers": "管理者向け",
-            "operators": "運用担当者向け",
-            "saas": "屋上太陽光発電",
-            "factory": "工場",
-            "fishing": "水産養殖"
+            "title": "適用分野",
+            "solar": "屋上太陽光発電",
+            "elevator": "エレベーター",
+            "oee": "OEE",
+            "ems": "EMS",
+            "ghg": "GHG",
+            "aiForBusiness": "企業向けAIアシスタント",
+            "aiForAssistant": "Q&A用AIアシスタント"
           },
           "products": {
-            "title": "製品",
-            "saas": "SaaSプラットフォーム",
-            "integrate": "データ統合"
+            "title": "製品"
           },
           "blog": "ニュース",
           "notification": "お知らせ"
@@ -270,804 +248,822 @@
       },
       "third": {
         "title": "営業時間",
-        "time": "月曜～金曜：8:00～17:30 <br /> 土曜：8:00～12:00"
+        "time": "月曜～金曜: 8:00 - 17:30 <br /> 土曜: 8:00 - 12:00"
       }
     }
   },
   "AboutUs": {
     "title": "私たちについて",
-    "content": "<p>2022年より開発。2024年にUdataはDHGから出資を受け、2025年には革新努力が認められSao Khue賞を受賞しました。</p> <p>Udataは、IoTデータの収集・監視・分析分野において、ベトナムの先駆的なソフトウェアプラットフォームです。企業のスマートな運用と持続可能な発展を支援します。Uboard、Umaintain、Uzero、Uvisual、Ubotなどのコア製品を通じて、Udataは工場、ビル、工業団地、製造企業のデジタル変革とエネルギー最適化（ISO 50001、COP26、COP28基準）をサポートしています。</p>",
+    "content": "<p>2022年より開発。2024年にUdataはDHGから出資を受け、2025年には革新努力が認められSao Khue賞を受賞しました。</p> <p>Udataは、ベトナムの先駆的なAI・IoT統合ソフトウェアプラットフォームです。</p> <p>Uboard、Ugate、Uzeroなどの強力なデータ活用ツールを提供し、企業のパフォーマンス監視、最適化、ISO 50001、COP26、COP28などの環境基準への対応を支援します。</p>",
     "vision": {
       "title": "ビジョン",
-      "content": "AIとクラウド技術を活用したIoTデータの収集・監視・分析において、産業・環境・エネルギー分野を支えるベトナムおよび東南アジアのリーディングソフトウェアプラットフォームとなること。"
+      "content": "データを持続可能なインパクトに変え、ベトナムおよび東南アジアでAIoT分野のリーディングプラットフォームとなり、企業のスマート・グリーン・柔軟な運営を実現します。"
     },
     "mission": {
       "title": "ミッション",
-      "content": "AI搭載ソリューションを通じて企業のデジタル化、監視、運用最適化を支援し、効率向上・コスト削減・持続可能な発展を実現します。"
+      "content": "企業のデジタル化と最適化を支援し、効率向上・コスト削減・持続可能な発展を目指します。"
     },
-    "excerpt": "私たちは単なるソフトウェア開発ではなく、未来のためにデータの可能性を解き放ちます。"
-  },
-  "Solar": {
-    "heroSection": {
-      "title": "エネルギー効率を最適化",
-      "subTitle": "屋上太陽光発電運用管理ソリューション",
-      "desc": "スマート監視システムにより、屋上太陽光発電システムを能動的かつ効果的に管理できます。リアルタイム監視、早期警告、詳細なデータ分析機能により、常にシステムの運転状況を把握し、発電量の最適化とコスト削減を実現します。",
-      "contact": "お問い合わせ"
-    },
-    "allFeatures": {
-      "title": "主な機能",
-      "lists": [
-        {
-          "id": "1",
-          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-timer'><line x1='10' x2='14' y1='2' y2 ='2'/><line x1='12' x2='15' y1='14' y2='11'/><circle cx='12' cy='14' r='8'/>< /svg>",
-          "title": "リアルタイム監視",
-          "content": "リアルタイムデータで太陽光発電システムのパフォーマンスを監視します。直感的なダッシュボードで発電量や出力を確認できます。"
-        },
-        {
-          "id": "2",
-          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-bell'><path d='M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3 -2 3-9'/><path d='M10.3 21a1.94 1.94 0 0 0 3.4 0'/></svg>",
-          "title": "スマートアラートと自動通知",
-          "content": "システムエラーや低パフォーマンスを自動で通知します。しきい値をカスタマイズして、メールやSMSでアラートを受け取ることができます。"
-        },
-        {
-          "id": "3",
-          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'stroke-linecap='round'stroke-linejoin='round'class='lucide lucide-bug'><path d='m8 2 1.88 1.88' /><path d='M14.12 3.88 16 2' /><path d='M9 7.13v-1a3.003 3.003 0 1 1 6 0v1' /><path d='M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6' /><path d='M12 20v-9' /><path d='M6.53 9C4.6 8.8 3 7.1 3 5' /><path d='M6 13H2' /><path d='M3 21c0-2.1 1.7-3.9 3.8-4' /><path d='M20.97 5c0 2.1-1.6 3.8-3.5 4' /><path d='M22 13h-4' /><path d='M17.2 17c2.1.1 3.8 1.9 3.8 4' /></svg>",
-          "title": "異常レポート",
-          "content": "システム内の異常を集約し、出力や収益損失のリスクを日次・週次・月次レポートで提示します。"
-        },
-        {
-          "id": "4",
-          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><rect width='7' height='7' x='14' y ='3' rx='1'/><path d='M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3'/></svg>",
-          "title": "他システムとのシームレス連携",
-          "content": "既存のエネルギー管理システムと連携し、エネルギーフローの最適化とシステム効率の向上を実現します。"
-        }
-      ]
-    },
-    "singleFeature": {
-      "first": {
-        "title": "リアルタイムパフォーマンス監視",
-        "subTitle": "リアルタイムデータとパフォーマンス分析でシステムの透明性を提供します。",
-        "desc": "当社プラットフォームは太陽光発電量の詳細情報を提供し、出力やインバーターのパフォーマンスなど主要指標を追跡できます。過去のパフォーマンスデータを活用し、非効率を特定し、データに基づいた意思決定でエネルギー利用を最適化します。",
-        "img": "/image/solutions/solar/solar-feature-1.webp"
-      },
-      "second": {
-        "title": "自動アラートと予防保守",
-        "subTitle": "パフォーマンスしきい値を超えた際に通知し、迅速な対応を支援します。",
-        "desc": "スマートアラートシステムでダウンタイムを回避。太陽光発電システムの出力に影響する問題をリアルタイムで通知し、常に最適な運転を実現します。",
-        "img": "/image/solutions/solar/solar-feature-2.webp"
-      },
-      "third": {
-        "title": "異常レポート",
-        "subTitle": "異常情報を集約し、収益損失の警告を提供します。",
-        "desc": "日次・週次・月次で異常レポートを提供します。具体的かつ直感的な数値で、システムの問題を即座に把握し、迅速な意思決定をサポートします。",
-        "img": "/image/solutions/solar/solar-feature-3.webp"
-      },
-      "four": {
-        "title": "エネルギーシステムとのシームレス連携",
-        "subTitle": "既存のエネルギー管理システムとの連携に特化。",
-        "desc": "屋上太陽光ソリューションは既存のエネルギーインフラとシームレスに統合可能。太陽光・グリッド・蓄電池を一元管理し、エネルギーフローを最適化しコスト削減を実現します。",
-        "img": "/image/solutions/solar/solar-feature-4.webp"
-      }
-    },
-    "callToAction": {
-      "title": "屋上太陽光発電監視ソリューションを始めませんか？",
-      "content": "太陽光発電システムの最適化をご希望ですか？当社のソリューションが効率向上や収益増加などにどのように役立つか、ぜひご相談ください。",
-      "button": "お問い合わせ"
-    }
-  },
-  "Fisheries": {
-    "heroSection": {
-      "title": "環境管理と生産性向上",
-      "subTitle": "水産業向け最適ソリューション",
-      "desc": "Udataは水産業向けのスマート監視ソリューションで、養殖環境を効果的に管理し、生産性を最適化します。本システムは重要な水質パラメータを継続的に監視し、汚染リスクの早期警告や生体の成長監視を実現します。今すぐ体験してください。",
-      "contact": "お問い合わせ"
-    },
-    "allFeatures": {
-      "title": "主な機能",
-      "lists": [
-        {
-          "id": "1",
-          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-droplet'><path d='M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z ' /></svg>",
-          "title": "水質監視",
-          "content": "Udataは包括的な水質監視システムを提供し、pH、塩分、温度、溶存酸素量などの重要なパラメータを監視します。"
-        },
-        {
-          "id": "2",
-          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-worm'><path d='m19 12-1.5 3'/><path d='M19.63 18.81 22 20'/><path d='M6.47 8.23a1.68 1.68 0 0 1 2.44 1.93l-.64 2.08a6.76 6.76 0 0 0 10.16 7.67l.42-.27a1 1 0 1 0-2.73-4.21l-.42.27a1.76 1.76 0 0 1-2.63-1.99l.64-2.08A6.66 6.66 0 0 0 3.94 3.9l-.7.4a1 1 0 1 0 2.55 4.34z'/></svg>",
-          "title": "養殖生物の成長監視",
-          "content": "Udataは品種の成長データ（体重・サイズ等）を収集します。発育状況を詳細に監視し、異常傾向を早期に特定して迅速な対応を支援します。"
-        },
-        {
-          "id": "3",
-          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><rect width='7' height='7' x='14' y='3' rx='1'/><path d='M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3'/></svg>",
-          "title": "スマートアラートと自動通知",
-          "content": "システムエラーや汚染リスクについて自動でアラートを受信。しきい値をカスタマイズし、メールやSMSで通知を受け取れます。"
-        },
-        {
-          "id": "4",
-          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-bell'><path d='M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9'/><path d='M10.3 21a1.94 1.94 0 0 0 3.4 0'/></svg>",
-          "title": "異常レポート",
-          "content": "システムで収集されたデータの異常を集約。品種の異常な成長率を日次・週次・月次レポートで提示します。"
-        }
-      ]
-    },
-    "singleFeature": {
-      "first": {
-        "title": "水質監視",
-        "subTitle": "システムは多様なデータソースからリアルタイムでデータを収集・集中管理します",
-        "desc": "UdataはpH、塩分、温度、溶存酸素量などの重要なパラメータを継続的に監視する包括的な水質監視システムです。先進的なセンサーシステムと直感的なインターフェースで、スマートフォンやPCから直接パラメータを確認できます。水質を継続的に監視することで、養殖環境を効果的に管理し、疾病や汚染リスクを低減し、生産効率を向上させます。水産養殖場にとって有用なツールです。",
-        "img": "/image/solutions/fisheries/fisheries-feature-1.webp"
-      },
-      "second": {
-        "title": "養殖生物の成長監視",
-        "subTitle": "Udataは生物の体重やサイズなどのデータを収集・分析し、成長率をグラフやレポートで可視化します。",
-        "desc": "Udataは水質監視だけでなく、養殖生物の成長監視機能も拡張。体重や成長率などのデータを収集・分析し、異常傾向を検出します。",
-        "img": "/image/solutions/fisheries/fisheries-feature-2.webp"
-      },
-      "third": {
-        "title": "スマートアラートと自動通知",
-        "subTitle": "データが安全しきい値を超えた際に通知し、問題を迅速に検知・解決します。",
-        "desc": "養殖環境や生物の成長率に影響する全ての問題についてリアルタイムで通知。しきい値設定をカスタマイズでき、異常があればメールやSMSで警告。早期警告で生体を有害な環境要因から守ります。",
-        "img": "/image/solutions/fisheries/fisheries-feature-3.webp"
-      },
-      "four": {
-        "title": "異常レポート",
-        "subTitle": "異常情報を集約し、包括的なレポートを作成します。",
-        "desc": "日次・週次・月次で異常レポートを提供します。具体的かつ直感的な数値で、養殖システムで発生している問題を即座に把握できます。",
-        "img": "/image/solutions/fisheries/fisheries-feature-4.webp"
-      }
-    },
-    "callToAction": {
-      "title": "生産性向上を始めませんか？",
-      "content": "生産性向上の準備はできていますか？当社のソリューションが、飼育環境の監視や生物の成長率の追跡、収益向上などにどのように役立つか、ぜひご相談ください。",
-      "button": "お問い合わせ"
-    }
-  },
-  "Investors": {
-    "heroSection": {
-      "title": "リアルタイムの総合管理",
-      "subTitle": "投資家向けソリューション",
-      "desc": "Udataを使えば、さまざまな場所でのプロジェクト活動を全体から詳細まで管理できます。財務や技術効率の指標を俯瞰し、迅速に解決すべきホットスポットを特定できます。Udataが効率的な運用を促進し、投資効果の最適化をサポートします！",
-      "contact": "お問い合わせ"
-    },
-    "allFeatures": {
-      "title": "Udataの優れた機能は投資家のニーズに応えます",
-      "desc": "プロセスの自動化、トラブル対応時間の最小化、リソース活用の最適化により、Udataは大幅なコスト削減と運用効率・迅速な資本回収を実現します。",
-      "lists": [
-        {
-          "id": "1",
-          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-lock'><rect width='18' height='11' x='3' y='11' rx='2' ry='2'/><path d='M7 11V7a5 5 0 0 1 10 0v4'/></svg>",
-          "title": "",
-          "content": "Udataのクラウドプラットフォーム上でデータは常に完全に安全です。"
-        },
-        {
-          "id": "2",
-          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-clock-2'><circle cx='12' cy='12' r='10'/><polyline points='12 6 12 12 16 10'/></svg>",
-          "title": "",
-          "content": "財務損失を日・週・月・四半期・年単位で迅速に分析"
-        },
-        {
-          "id": "3",
-          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-square-activity'><rect width='18' height='18' x='3' y='3' rx='2'/><path d='M17 12h-2l-2 5-2-10-2 5H7'/></svg>",
-          "title": "",
-          "content": "O&Mチームのトラブル対応状況を監視"
-        },
-        {
-          "id": "4",
-          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-bell'><path d='M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9'/><path d='M10.3 21a1.94 1.94 0 0 0 3.4 0'/></svg>",
-          "title": "",
-          "content": "事前設定した目標に基づき、定期的にプロジェクト活動レポートを送信"
-        }
-      ]
-    },
-    "singleFeature": {
-      "first": {
-        "title": "このソリューションがもたらすメリット",
-        "listsContent": [
-          {
-            "title": "投資効率の向上",
-            "content": "投資家がプロジェクト全体の活動を俯瞰し、迅速かつ正確な意思決定を支援します。"
-          },
-          {
-            "title": "リスクの軽減",
-            "content": "潜在的な問題を迅速に検出・対応し、損害を最小限に抑えます。"
-          },
-          {
-            "title": "透明性の向上",
-            "content": "プロジェクトの状況について、すべての関係者に透明かつ正確な情報を提供します。"
-          },
-          {
-            "title": "リソースの最適化",
-            "content": "人材・資金・時間などのリソースを効果的に活用します。"
-          }
-        ],
-        "img": "/image/solutions/investors/investors-feature-1.webp"
-      },
-      "second": {
-        "title": "ソリューションの主な特長",
-        "listsContent": [
-          {
-            "title": "直感的で使いやすいインターフェース",
-            "content": "ユーザーが簡単にシステムに慣れ、利用できます。"
-          },
-          {
-            "title": "他システムとの連携",
-            "content": "既存の業務システムと簡単に接続可能です。"
-          },
-          {
-            "title": "高いセキュリティ",
-            "content": "顧客データを安全かつ確実に保護します。"
-          },
-          {
-            "title": "多言語・クロスプラットフォーム対応",
-            "content": "グローバルな顧客ニーズに対応します。"
-          }
-        ],
-        "img": "/image/solutions/investors/investors-feature-2.webp"
-      },
-      "third": {
-        "title": "導入方法とカスタマーサポート",
-        "listsContent": [
-          {
-            "title": "コンサルティングと導入支援",
-            "content": "専門的なコンサルティングとソリューション導入サービスを提供します。"
-          },
-          {
-            "title": "ユーザートレーニング",
-            "content": "ユーザーがシステムを効果的に活用できるよう研修を実施します。"
-          },
-          {
-            "title": "技術サポート",
-            "content": "24時間365日、技術サポートでご質問やトラブルに対応します。"
-          }
-        ],
-        "img": "/image/solutions/investors/investors-feature-3.webp"
-      }
-    },
-    "callToAction": {
-      "title": "集中・シンプル・効果的な働き方を始めませんか？",
-      "content": "お客様のニーズに最適なソリューションを見つけるため、専門家にご相談ください",
-      "actions": [
-        {
-          "title": "理想的なソリューションの決定",
-          "desc": "最適なソリューションをお探しですか？私たちがサポートします。専門家がご要望を伺い、最適な提案を行います。"
-        },
-        {
-          "title": "カスタムソリューションの初期設定",
-          "desc": "専門的にソリューションを導入します。ご要望に合わせてシステムを構成・カスタマイズします。"
-        }
-      ],
-      "button": "デモを予約"
-    }
-  },
-  "Managers": {
-    "heroSection": {
-      "title": "運用を最適化し、管理効率を向上",
-      "subTitle": "管理者向けソリューション",
-      "desc": "Udataはすべてのプロジェクトを一元管理できるプラットフォームを提供します。直感的で使いやすいインターフェースにより、進捗の把握、リソース配分、各プロジェクトの成果評価が簡単に行えます。",
-      "contact": "お問い合わせ"
-    },
-    "allFeatures": {
-      "title": "Udataの優れた機能は管理者のニーズに応えます",
-      "desc": "Udataはすべてのプロジェクトの運用を一元管理するソフトウェアプラットフォームです。",
-      "lists": [
-        {
-          "id": "1",
-          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-clock-2'><circle cx='12' cy='12' r='10 '/><polyline points='12 6 12 12 16 10'/></svg>",
-          "title": "",
-          "content": "ダウンタイムやシステム能力未満の運用を最小化"
-        },
-        {
-          "id": "2",
-          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-circle-alert'><circle cx='12' cy='12' r='10 '/><line x1='12' x2='12' y1='8' y2='12'/><line x1='12' x2='12.01' y1='16' y2='16'/ ></svg>",
-          "title": "",
-          "content": "潜在的なインシデントをメールでタイムリーに警告"
-        },
-        {
-          "id": "3",
-          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-square-activity'><rect width='18' height='18' x='3 ' y='3' rx='2'/><path d='M17 12h-2l-2 5-2-10-2 5H7'/></svg>",
-          "title": "",
-          "content": "実施した対策の効果を監視・評価"
-        },
-        {
-          "id": "4",
-          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-rss'><path d='M4 11a9 9 0 0 1 9 9'/><path d='M4 4a16 16 0 0 1 16 16'/><circle cx='5' cy='19' r='1'/></svg>",
-          "title": "",
-          "content": "管理者が重要なKPIを設定・追跡し、プロジェクトの成果を評価可能"
-        }
-      ]
-    },
-    "singleFeature": {
-      "first": {
-        "title": "このソリューションがもたらすメリット",
-        "listsContent": [
-          {
-            "title": "管理効率の向上",
-            "content": "管理者がプロジェクト全体の活動を俯瞰し、迅速かつ正確な意思決定を支援します。"
-          },
-          {
-            "title": "リスクの軽減",
-            "content": "潜在的な問題を迅速に検出・対応し、損害を最小限に抑えます。"
-          },
-          {
-            "title": "透明性の向上",
-            "content": "プロジェクトの状況について、すべての関係者に透明かつ正確な情報を提供します。"
-          },
-          {
-            "title": "リソースの最適化",
-            "content": "人材・資金・時間などのリソースを効果的に活用します。"
-          }
-        ],
-        "img": "/image/solutions/investors/investors-feature-1.webp"
-      },
-      "second": {
-        "title": "ソリューションの主な特長",
-        "listsContent": [
-          {
-            "title": "直感的で使いやすいインターフェース",
-            "content": "ユーザーが簡単にシステムに慣れ、利用できます。"
-          },
-          {
-            "title": "他システムとの連携",
-            "content": "既存の業務システムと簡単に接続可能です。"
-          },
-          {
-            "title": "高いセキュリティ",
-            "content": "顧客データを安全かつ確実に保護します。"
-          },
-          {
-            "title": "多言語・クロスプラットフォーム対応",
-            "content": "グローバルな顧客ニーズに対応します。"
-          }
-        ],
-        "img": "/image/solutions/investors/investors-feature-2.webp"
-      },
-      "third": {
-        "title": "導入方法とカスタマーサポート",
-        "listsContent": [
-          {
-            "title": "コンサルティングと導入支援",
-            "content": "専門的なコンサルティングとソリューション導入サービスを提供します。"
-          },
-          {
-            "title": "ユーザートレーニング",
-            "content": "ユーザーがシステムを効果的に活用できるよう研修を実施します。"
-          },
-          {
-            "title": "技術サポート",
-            "content": "24時間365日、技術サポートでご質問やトラブルに対応します。"
-          }
-        ],
-        "img": "/image/solutions/investors/investors-feature-3.webp"
-      }
-    },
-    "callToAction": {
-      "title": "集中・シンプル・効果的な働き方を始めませんか？",
-      "content": "お客様のニーズに最適なソリューションを見つけるため、専門家にご相談ください",
-      "actions": [
-        {
-          "title": "理想的なソリューションの決定",
-          "desc": "最適なソリューションをお探しですか？私たちがサポートします。専門家がご要望を伺い、最適な提案を行います。"
-        },
-        {
-          "title": "カスタムソリューションの初期設定",
-          "desc": "専門的にソリューションを導入します。ご要望に合わせてシステムを構成・カスタマイズします。"
-        }
-      ],
-      "button": "デモを予約"
-    }
-  },
-  "Operators": {
-    "heroSection": {
-      "title": "運用の一元管理",
-      "subTitle": "運用担当者向けソリューション（O&M）",
-      "desc": "Udataは、複雑かつ多様なプロジェクトやデバイスも効率的に管理できる一元プラットフォームを提供します。直感的で使いやすいインターフェースにより、すべての活動を簡単に監視・分析・制御できます。",
-      "contact": "お問い合わせ"
-    },
-    "allFeatures": {
-      "title": "Udataの優れた機能は運用担当者のニーズに応えます",
-      "desc": "Udataはすべてのプロジェクトの運用を一元管理するソフトウェアプラットフォームです。",
-      "lists": [
-        {
-          "id": "1",
-          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-clock-2'><circle cx='12' cy='12' r='10 '/><polyline points='12 6 12 12 16 10'/></svg>",
-          "title": "",
-          "content": "リアルタイムデータ同期で常に正確かつ最新の情報を提供します。"
-        },
-        {
-          "id": "2",
-          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-circle-alert'><circle cx='12' cy='12' r='10 '/><line x1='12' x2='12' y1='8' y2='12'/><line x1='12' x2='12.01' y1='16' y2='16'/ ></svg>",
-          "title": "",
-          "content": "インシデントやリスクを警告・分類し、運用画面を常時監視しなくても対応できます。"
-        },
-        {
-          "id": "3",
-          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-square-activity'><rect width='18' height='18' x='3 ' y='3' rx='2'/><path d='M17 12h-2l-2 5-2-10-2 5H7'/></svg>",
-          "title": "",
-          "content": "ネットワーク障害時でも最大30日間データを保存します。"
-        },
-        {
-          "id": "4",
-          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-bell'><path d='M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3 -2 3-9'/><path d='M10.3 21a1.94 1.94 0 0 0 3.4 0'/></svg>",
-          "title": "",
-          "content": "事前設定した目標に基づき、定期的にプロジェクト活動レポートを送信します。"
-        }
-      ]
-    },
-    "singleFeature": {
-      "first": {
-        "title": "このソリューションがもたらすメリット",
-        "listsContent": [
-          {
-            "title": "管理効率の向上",
-            "content": "運用担当者がすべての機器運用を俯瞰し、迅速かつ正確な意思決定を支援します。"
-          },
-          {
-            "title": "リスクの軽減",
-            "content": "潜在的な問題を迅速に検出・対応し、損害を最小限に抑えます。"
-          },
-          {
-            "title": "透明性の向上",
-            "content": "プロジェクトの状況について、すべての関係者に透明かつ正確な情報を提供します。"
-          },
-          {
-            "title": "リソースの最適化",
-            "content": "人材・資金・時間などのリソースを効果的に活用します。"
-          }
-        ],
-        "img": "/image/solutions/investors/investors-feature-1.webp"
-      },
-      "second": {
-        "title": "ソリューションの主な特長",
-        "listsContent": [
-          {
-            "title": "直感的で使いやすいインターフェース",
-            "content": "ユーザーが簡単にシステムに慣れ、利用できます。"
-          },
-          {
-            "title": "他システムとの連携",
-            "content": "既存の業務システムと簡単に接続可能です。"
-          },
-          {
-            "title": "高いセキュリティ",
-            "content": "顧客データを安全かつ確実に保護します。"
-          },
-          {
-            "title": "多言語・クロスプラットフォーム対応",
-            "content": "グローバルな顧客ニーズに対応します。"
-          }
-        ],
-        "img": "/image/solutions/investors/investors-feature-2.webp"
-      },
-      "third": {
-        "title": "導入方法とカスタマーサポート",
-        "listsContent": [
-          {
-            "title": "コンサルティングと導入支援",
-            "content": "専門的なコンサルティングとソリューション導入サービスを提供します。"
-          },
-          {
-            "title": "ユーザートレーニング",
-            "content": "ユーザーがシステムを効果的に活用できるよう研修を実施します。"
-          },
-          {
-            "title": "技術サポート",
-            "content": "24時間365日、技術サポートでご質問やトラブルに対応します。"
-          }
-        ],
-        "img": "/image/solutions/investors/investors-feature-3.webp"
-      }
-    },
-    "callToAction": {
-      "title": "集中・シンプル・効果的な働き方を始めませんか？",
-      "content": "お客様のニーズに最適なソリューションを見つけるため、専門家にご相談ください",
-      "actions": [
-        {
-          "title": "理想的なソリューションの決定",
-          "desc": "最適なソリューションをお探しですか？私たちがサポートします。専門家がご要望を伺い、最適な提案を行います。"
-        },
-        {
-          "title": "カスタムソリューションの初期設定",
-          "desc": "専門的にソリューションを導入します。ご要望に合わせてシステムを構成・カスタマイズします。"
-        }
-      ],
-      "button": "デモを予約"
-    }
-  },
-  "PMS": {
-    "heroSection": {
-      "heading": "Power Management Software",
-      "excerpt": "Energy management software that helps you monitor production and more.",
-      "color": "blue",
-      "contact": "Contact",
-      "img": "/image/pms/mockup-pms.png"
-    },
-    "features": {
-      "title": "Main features",
-      "lists": [
-        {
-          "img": "/image/pms/feature/feature-1.png",
-          "title": "Manage multiple locations simultaneously",
-          "desc": "Collect data in different locations, unlimited geographical distance, centralized management at a single platform."
-        },
-        {
-          "img": "/image/pms/feature/feature-2.png",
-          "title": "Preventing excessive energy use",
-          "desc": "Collect active power, reactive power and warn when threshold is exceeded. Quickly detect overload points."
-        },
-        {
-          "img": "/image/pms/feature/feature-3.png",
-          "title": "Optimization for the Solar industry",
-          "desc": "Collect data from inverters, sensors and data loggers. Evaluate effectiveness through visual graphs."
-        },
-        {
-          "img": "/image/pms/feature/feature-4.png",
-          "title": "Unlimited data",
-          "desc": "Collect data from a variety of different data sources: EVN electricity bills, clean water bills, data from sensors, meters, loggers and more."
-        },
-        {
-          "img": "/image/pms/feature/feature-6.png",
-          "title": "Measure, verify and act",
-          "desc": "Standard model from problem detection, information validation and troubleshooting. Timely detection and quick action are prerequisites to help you improve energy efficiency, increase High durability equipment."
-        },
-        {
-          "img": "/image/pms/feature/feature-5.png",
-          "title": "Runs on multiple devices and anytime, anywhere",
-          "desc": "Helps manage and operate the factory more effectively."
-        }
-      ]
-    },
-    "status": [
-      {
-        "icon": "<svg width='61' height='47' viewBox='0 0 61 47' fill='none' xmlns='http://www.w3.org/2000/svg'><path d='M54.4877 41.6135C54.311 41.6135 54.1382 41.6657 53.9913 41.7636C53.8443 41.8615 53.7298 42.0007 53.6622 42.1635C53.5945 42.3263 53.5768 42.5054 53.6113 42.6782C53.6458 42.8511 53.7309 43.0098 53.8559 43.1344C53.9808 43.259 54.14 43.3439 54.3134 43.3783C54.4867 43.4127 54.6664 43.395 54.8296 43.3276C54.9929 43.2601 55.1325 43.1459 55.2307 42.9994C55.3288 42.8529 55.3813 42.6806 55.3813 42.5044C55.3813 42.3874 55.3581 42.2716 55.3132 42.1635C55.2683 42.0554 55.2025 41.9571 55.1195 41.8744C55.0366 41.7917 54.9381 41.726 54.8297 41.6813C54.7212 41.6365 54.605 41.6135 54.4877 41.6135ZM58.3193 25.6862H57.544V18.9117C57.5431 18.0456 57.1976 17.2152 56.5834 16.6028C55.9691 15.9903 55.1363 15.6458 54.2677 15.6449H47.2283V6.09013C47.2273 5.224 46.8819 4.39361 46.2676 3.78116C45.6534 3.16871 44.8206 2.82421 43.952 2.82324H3.27637C2.40772 2.82421 1.57493 3.16871 0.960698 3.78116C0.346471 4.39361 0.000971256 5.224 0 6.09013L0 34.9752C0.000971256 35.8413 0.346471 36.6717 0.960698 37.2842C1.57493 37.8966 2.40772 38.2411 3.27637 38.2421H14.8525C15.0285 39.3427 14.8289 40.4703 14.2856 41.4443L12.7258 44.2227C12.5687 44.5025 12.4877 44.8184 12.4909 45.139C12.4941 45.4597 12.5813 45.7739 12.744 46.0506C12.9066 46.3272 13.139 46.5566 13.418 46.716C13.697 46.8754 14.013 46.9593 14.3346 46.9593H22.171C22.2109 46.959 22.2507 46.9561 22.2902 46.9505C22.3658 46.9557 22.4418 46.9593 22.5187 46.9593H58.3193C59.03 46.9585 59.7114 46.6766 60.214 46.1755C60.7165 45.6744 60.9992 44.995 61 44.2864V28.3592C60.9992 27.6505 60.7165 26.9711 60.214 26.47C59.7114 25.9689 59.03 25.6871 58.3193 25.6862ZM54.2677 17.4268C54.6625 17.4272 55.0411 17.5838 55.3203 17.8622C55.5994 18.1406 55.7565 18.518 55.7569 18.9117V25.6862H53.6948V20.374C53.6948 20.2569 53.6717 20.1411 53.6268 20.033C53.5819 19.9249 53.5161 19.8267 53.4331 19.7439C53.3501 19.6612 53.2516 19.5956 53.1432 19.5508C53.0348 19.506 52.9186 19.483 52.8012 19.483H26.0742C25.9569 19.483 25.8407 19.506 25.7323 19.5508C25.6239 19.5956 25.5254 19.6612 25.4424 19.7439C25.3594 19.8267 25.2936 19.9249 25.2487 20.033C25.2038 20.1411 25.1807 20.2569 25.1807 20.374V37.7864C25.1807 37.9034 25.2038 38.0192 25.2487 38.1273C25.2936 38.2354 25.3594 38.3337 25.4424 38.4164C25.5254 38.4991 25.6239 38.5648 25.7323 38.6095C25.8407 38.6543 25.9569 38.6774 26.0742 38.6773H47.9753V40.7335H23.1185V18.9117C23.119 18.518 23.276 18.1406 23.5552 17.8622C23.8344 17.5838 24.2129 17.4272 24.6078 17.4268L54.2677 17.4268ZM1.78711 6.09013C1.78755 5.69643 1.9446 5.31899 2.22379 5.0406C2.50299 4.76222 2.88153 4.60562 3.27637 4.60518H43.952C44.3468 4.60562 44.7253 4.76222 45.0045 5.0406C45.2837 5.31899 45.4408 5.69643 45.4412 6.09013V15.6449H24.6078C23.7391 15.6458 22.9063 15.9903 22.2921 16.6028C21.6779 17.2152 21.3324 18.0456 21.3314 18.9117V29.8275H1.78711V6.09013ZM3.27637 36.4601C2.88153 36.4597 2.50299 36.3031 2.22379 36.0247C1.9446 35.7463 1.78755 35.3689 1.78711 34.9752V31.6095H21.3314V36.4601H15.5775C15.5745 36.4601 15.5715 36.4601 15.5684 36.4601H3.27637ZM19.2423 41.9716V43.6924C19.242 44.2089 19.3652 44.718 19.6018 45.1774H14.3346C14.3247 45.1774 14.315 45.1748 14.3064 45.1699C14.2978 45.165 14.2907 45.1579 14.2857 45.1494C14.2807 45.1409 14.278 45.1312 14.2779 45.1213C14.2778 45.1115 14.2803 45.1017 14.2852 45.0931L15.845 42.3147C16.5363 41.0753 16.8197 39.6507 16.6551 38.2421H21.3314V40.7335H20.4841C20.1549 40.7339 19.8393 40.8644 19.6065 41.0965C19.3737 41.3286 19.2427 41.6434 19.2423 41.9716ZM22.5187 45.1774C22.1238 45.1769 21.7453 45.0203 21.4661 44.7419C21.1869 44.4636 21.0299 44.0861 21.0294 43.6924V42.5155H47.9753V44.2864C47.9752 44.59 48.0272 44.8913 48.129 45.1774H22.5187ZM47.9753 28.3592V36.8954H26.9678V21.2649H51.9077V25.6862H50.656C49.9453 25.6871 49.2639 25.9689 48.7614 26.47C48.2588 26.9711 47.9761 27.6505 47.9753 28.3592ZM59.2129 44.2864C59.2126 44.5226 59.1184 44.7491 58.9509 44.9161C58.7834 45.0832 58.5562 45.1771 58.3193 45.1774H50.656C50.4191 45.1771 50.192 45.0832 50.0244 44.9161C49.8569 44.7491 49.7627 44.5226 49.7624 44.2864V28.3592C49.7627 28.1229 49.8569 27.8965 50.0244 27.7294C50.192 27.5624 50.4191 27.4684 50.656 27.4682H52.7088C52.7703 27.4745 52.8322 27.4745 52.8936 27.4682H56.5581C56.6195 27.4745 56.6815 27.4745 56.7429 27.4682H58.3193C58.5562 27.4684 58.7834 27.5624 58.9509 27.7294C59.1184 27.8965 59.2126 28.1229 59.2129 28.3592V44.2864Z' fill='white' /></svg>",
-        "title": "1,000,000+",
-        "desc": "Devices connected at the same time"
-      },
-      {
-        "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-badge-check'><path d='M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z'/><path d='m9 12 2 2 4-4'/></svg>",
-        "title": "99,99%",
-        "desc": "Reliability"
-      },
-      {
-        "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='1' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-smile'><circle cx='12' cy='12' r='10'/><path d='M8 14s1.5 2 4 2 4-2 4-2'/><line x1='9' x2='9.01' y1='9' y2='9'/><line x1='15' x2='15.01' y1='9' y2='9'/></svg>",
-        "title": "99.99%",
-        "desc": "Handsome"
-      }
-    ],
-    "questions": {
-      "title": "Q&A",
-      "data": [
-        {
-          "ask": "Does Udata PMS have to be installed? What platform does it run on? Does it take up memory?",
-          "answer": "PMS runs on a web browser, so this software can run on many devices with web browsers: laptops, tablets, smartphones, etc. PMS does not need to be installed so it takes up very little memory ( trivial)."
-        },
-        {
-          "ask": "Where is the data stored? Is it safe?",
-          "answer": "Udata's data is stored on the world's leading Cloud Provider Digital Ocean and complies with ISO 27001 security standards."
-        },
-        {
-          "ask": "Udata can manage a maximum of how many devices?",
-          "answer": "Udata manages an unlimited number of connected devices."
-        }
-      ],
-      "img": "/image/pms/question.png"
-    },
+    "excerpt": "私たちは<strong>単なるソフトウェア開発ではなく、運用データの可能性を解き放つソリューション</strong>を構築します。",
     "whyChooseUs": {
-      "title": " Why choose <span class='text-primary'>Udata</span>",
-      "subTitle": "Achieve your goals effectively",
+      "title": "コアバリュー",
       "contents": [
         {
           "id": 1,
-          "title": "Easy to use",
-          "content": "Friendly interface, easy to operate for all users, including newbies.",
+          "title": "FIT",
+          "content": "多様な経済分野のユーザーニーズに柔軟に対応可能",
           "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-mouse-pointer-click'><path d='M14 4.1 12 6'/><path d='m5.1 8-2.9-.8'/><path d='m6 12-1.9 2'/><path d='M7.2 2.2 8 5.1'/><path d='M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z'/></svg>"
         },
         {
           "id": 2,
-          "title": "Highly customizable",
-          "content": "Allow easy adjustment to the unique needs of each business.",
+          "title": "FAST",
+          "content": "迅速な導入、スムーズな運用、要望への素早い対応",
           "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-lightbulb'><path d='M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5'/><path d='M9 18h6'/><path d='M10 22h4'/></svg>"
         },
         {
           "id": 3,
-          "title": "Flexible deployment",
-          "content": "Supports rapid deployment through many different forms, suitable for each environment.",
+          "title": "FLEXIBLE",
+          "content": "他システムとの連携や拡張が容易で、ユーザーニーズに応じて柔軟に調整可能",
           "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevrons-left-right'><path d='m9 7-5 5 5 5'/><path d='m15 7 5 5-5 5'/></svg>"
+        }
+      ]
+    },
+    "awards": {
+      "title": "受賞歴",
+      "content": "<p>2025年、Udataは<strong>「新製品・新ソリューション・新ソフトウェア・新サービス」</strong>部門で<strong>Sao Khue賞</strong>を受賞しました。</p> <p>Sao Khue賞は、ベトナムのソフトウェア・IT業界における<strong>最も権威ある認定</strong>であり、ベトナムソフトウェア・ITサービス協会（VINASA）が2003年から毎年主催しています。</p> <p>VINASAは<strong>国内最大のIT業界団体</strong>であり、500社以上の主要IT企業を代表し、イノベーション推進・業界標準化・国際協力を促進しています。VINASAによる認定は、Udataが信頼できるイノベーターであり、デジタル変革ソリューションのリーダーであることを証明しています。</p>"
+    }
+  },
+  "Solar": {
+    "heroSection": {
+      "title": "屋上太陽光発電監視ソリューション",
+      "subTitle": "屋上太陽光発電運用管理ソリューション",
+      "desc": "Udataのスマート監視システムにより、投資家や運用担当者は屋上太陽光発電システムを能動的かつ効果的に管理できます。",
+      "contact": "無料トライアル"
+    },
+    "problems": {
+      "title": "業界の課題",
+      "list": [
+        "インバーターの故障、接続切れ、発電量低下を即時に検知できない",
+        "データが分散し、警告不足で機器効率が低下しても気付かない",
+        "投資効果を正確に評価できない",
+        "投資家がEPCの報告や手動運用に依存している"
+      ]
+    },
+    "allFeatures": {
+      "title": "主な機能",
+      "lists": [
+        {
+          "id": "1",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-timer'><line x1='10' x2='14' y1='2' y2='2'/><line x1='12' x2='15' y1='14' y2='11'/><circle cx='12' cy='14' r='8'/></svg>",
+          "title": "リアルタイム性能監視",
+          "content": "各インバーターの発電量と効率を継続監視し、異常を早期発見します。"
         },
         {
-          "id": 4,
-          "title": "Focused Tracking",
-          "content": "Data from multiple sources is managed and tracked in a single and efficient dashboard.",
-          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-rss'><path d='M4 11a9 9 0 0 1 9 9'/><path d='M4 4a16 16 0 0 1 16 16'/><circle cx='5' cy='19' r='1'/></svg>"
+          "id": "2",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-bell'><path d='M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9'/><path d='M10.3 21a1.94 1.94 0 0 0 3.4 0'/></svg>",
+          "title": "機器エラー追跡",
+          "content": "自動でエラーを記録し、原因を特定、履歴を保存します。"
+        },
+        {
+          "id": "3",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'stroke-linecap='round'stroke-linejoin='round'class='lucide lucide-bug'><path d='m8 2 1.88 1.88' /><path d='M14.12 3.88 16 2' /><path d='M9 7.13v-1a3.003 3.003 0 1 1 6 0v1' /><path d='M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6' /><path d='M12 20v-9' /><path d='M6.53 9C4.6 8.8 3 7.1 3 5' /><path d='M6 13H2' /><path d='M3 21c0-2.1 1.7-3.9 3.8-4' /><path d='M20.97 5c0 2.1-1.6 3.8-3.5 4' /><path d='M22 13h-4' /><path d='M17.2 17c2.1.1 3.8 1.9 3.8 4' /></svg>",
+          "title": "スマート早期警告",
+          "content": "インバーターの過熱・接続切れ・発電量低下を即時に警告します。"
+        },
+        {
+          "id": "4",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><rect width='7' height='7' x='14' y='3' rx='1'/><path d='M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3'/></svg>",
+          "title": "エネルギー損失の定量化",
+          "content": "損失発電量を計算し、具体的なコストに換算します。"
+        },
+        {
+          "id": "5",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><rect width='7' height='7' x='14' y='3' rx='1'/><path d='M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3'/></svg>",
+          "title": "多層性能分析",
+          "content": "日・週・月ごとに比較し、インバーターごとに傾向を評価します。"
+        },
+        {
+          "id": "5",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><rect width='7' height='7' x='14' y='3' rx='1'/><path d='M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3'/></svg>",
+          "title": "いつでもどこでも監視",
+          "content": "すべてのデバイスで簡単にアクセス、即時データ更新。"
+        }
+      ]
+    },
+    "benefits": {
+      "title": "メリット",
+      "list": [
+        {
+          "content": "発電量2～5%向上",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-zap-icon lucide-zap\"><path d=\"M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z\"/></svg>"
+        },
+        {
+          "content": "保守コスト削減、隠れた損失の低減",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-diamond-minus-icon lucide-diamond-minus\"><path d=\"M2.7 10.3a2.41 2.41 0 0 0 0 3.41l7.59 7.59a2.41 2.41 0 0 0 3.41 0l7.59-7.59a2.41 2.41 0 0 0 0-3.41L13.7 2.71a2.41 2.41 0 0 0-3.41 0z\"/><path d=\"M8 12h8\"/></svg>"
+        },
+        {
+          "content": "EVN決定378/QĐ-EVNに対応",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-check-icon lucide-check\"><path d=\"M20 6 9 17l-5-5\"/></svg>"
         }
       ]
     }
   },
-  "SaaS": {
+  "Elevator": {
     "heroSection": {
-      "heading": "SaaS",
-      "excerpt": "Udataはデータ分析と管理のためのクラウドベースのソフトウェアサービス（SaaS）です",
-      "color": "blue",
-      "contact": "はじめる",
-      "img": "/image/pms/mockup-pms.png"
+      "title": "エレベーター運用監視ソリューション",
+      "subTitle": "屋上太陽光発電運用管理ソリューション",
+      "desc": "Udataのスマート監視システムにより、メーカーや保守担当者は異常を早期発見し、エレベーターの保守効率を最適化できます。",
+      "contact": "無料トライアル"
     },
-    "features": {
-      "title": "無制限の電力管理",
+    "problems": {
+      "title": "業界の課題",
+      "list": [
+        "省エネのための監視ツールが不足している",
+        "正確な生産コストを算出するためのデータがない",
+        "運用に影響するエラーの管理が難しい",
+        "パフォーマンスが低下している機器を特定できない"
+      ]
+    },
+    "allFeatures": {
+      "title": "主な機能",
       "lists": [
         {
-          "img": "/image/pms/feature/feature-1.png",
-          "title": "リアルタイムデータ収集と分析",
-          "desc": "当社のソリューションは、データを迅速かつ正確に収集・分析する能力に優れています。運用を継続的に監視することで、潜在的な問題を早期に検出し、タイムリーな解決策を提供します。"
+          "id": "1",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-timer'><path d=\"M5 21v-6\"/><path d=\"M12 21V3\"/><path d=\"M19 21V9\"/></svg>",
+          "title": "各機器の生産量統計",
+          "content": "各機器で生成された製品数を自動記録・集計します。"
         },
         {
-          "img": "/image/pms/feature/feature-2.png",
-          "title": "ISO 50001規格対応",
-          "desc": "ISO 50001エネルギー管理システムの導入を促進します。データを自動収集し、関連するエネルギー指標を追跡、基準シナリオを設定し、IPMVPガイドラインに従って省エネを測定します。"
+          "id": "2",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-bell'><path d='M16 14v2.2l1.6 1'/><path d='M16 4h2a2 2 0 0 1 2 2v.832'/><path d='M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h2'/><circle cx='16' cy='16' r='6'/><rect x='8' y='2' width='8' height='4' rx='1'/></svg>",
+          "title": "停止エラー記録",
+          "content": "停止エラーの分類・統計・原因分析でプロセス改善を支援します。"
         },
         {
-          "img": "/image/pms/feature/feature-3.png",
-          "title": "使いやすさ",
-          "desc": "Udataは運用管理者の作業を簡素化し、時間を節約します。1日のトレーニングでプラットフォームを習得し、完全に自律的にカスタマイズできます。"
+          "id": "3",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'stroke-linecap='round'stroke-linejoin='round'class='lucide lucide-bug'><rect width=\"16\" height=\"20\" x=\"4\" y=\"2\" rx=\"2\"/><line x1=\"8\" x2=\"16\" y1=\"6\" y2=\"6\"/><line x1=\"16\" x2=\"16\" y1=\"14\" y2=\"18\"/><path d=\"M16 10h.01\"/><path d=\"M12 10h.01\"/><path d=\"M8 10h.01\"/><path d=\"M12 14h.01\"/><path d=\"M8 14h.01\"/><path d=\"M12 18h.01\"/><path d=\"M8 18h.01\"/></svg>",
+          "title": "OEE指標の計算",
+          "content": "各機器の総合効率・稼働率・品質を評価します。"
         },
         {
-          "img": "/image/pms/feature/feature-4.png",
-          "title": "自動警告",
-          "desc": "これにより、組織は時間とリソースを節約し、潜在的な問題を早期に特定し、タイムリーに調整・最適化の対策を講じることができます。"
+          "id": "4",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><path d=\"M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0\"/><circle cx=\"12\" cy=\"12\" r=\"3\"/></svg>",
+          "title": "シフトごとの運用状況監視",
+          "content": "各シフトごとに機器の状態を監視し、異常を早期発見します。"
         },
         {
-          "img": "/image/pms/feature/feature-6.png",
-          "title": "ダッシュボードのカスタマイズ",
-          "desc": "ユーザーが特定のニーズに合わせてインターフェースや指標をカスタマイズできるため、情報管理と意思決定が最適化されます。"
+          "id": "5",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\"/><path d=\"M3 5V19A9 3 0 0 0 21 19V5\"/><path d=\"M3 12A9 3 0 0 0 21 12\"/></svg>",
+          "title": "運用・保守データの保存",
+          "content": "オペレーター、修理履歴、部品交換履歴を機器ごとに記録します。"
         },
         {
-          "img": "/image/pms/feature/feature-5.png",
-          "title": "役割・拠点・データ種別ごとの権限割り当て",
-          "desc": "柔軟な権限管理により、適切な権限を持つ人だけが必要なデータにアクセス・操作できるため、セキュリティと運用効率が向上します。"
+          "id": "6",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><circle cx=\"12\" cy=\"12\" r=\"10\"/><line x1=\"12\" x2=\"12\" y1=\"8\" y2=\"12\"/><line x1=\"12\" x2=\"12.01\" y1=\"16\" y2=\"16\"/></svg>",
+          "title": "保守・部品交換の警告",
+          "content": "保守予定や部品の有効期限を自動で通知し、突発的な停止を防ぎます。"
+        }
+      ]
+    },
+    "benefits": {
+      "title": "メリット",
+      "list": [
+        {
+          "content": "シフト・機器・製品ごとに正確な生産コスト算出",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-zap-icon lucide-zap\"><line x1=\"12\" x2=\"12\" y1=\"2\" y2=\"22\"/><path d=\"M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6\"/></svg>"
+        },
+        {
+          "content": "OEE（設備総合効率）を20～25%向上",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-diamond-minus-icon lucide-diamond-minus\"><path d=\"M9 13a1 1 0 0 0-1-1H5.061a1 1 0 0 1-.75-1.811l6.836-6.835a1.207 1.207 0 0 1 1.707 0l6.835 6.835a1 1 0 0 1-.75 1.811H16a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1z\"/></svg>"
+        },
+        {
+          "content": "生産・保守計画の最適化",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-check-icon lucide-check\"><path d=\"M16 7h6v6\"/><path d=\"m22 7-8.5 8.5-5-5L2 17\"/></svg>"
+        }
+      ]
+    }
+  },
+  "OEE": {
+    "heroSection": {
+      "title": "生産効率・保守管理（OEE）ソリューション",
+      "subTitle": "屋上太陽光発電運用管理ソリューション",
+      "desc": "収集した生産データを分析し、レポートや警告を通じて工場が迅速かつ正確な意思決定を行えるよう支援します。",
+      "contact": "無料トライアル"
+    },
+    "problems": {
+      "title": "業界の課題",
+      "list": [
+        "省エネのための監視ツールが不足している",
+        "正確な生産コストを算出するためのデータがない",
+        "運用に影響するエラーの管理が難しい",
+        "パフォーマンスが低下している機器を特定できない"
+      ]
+    },
+    "allFeatures": {
+      "title": "主な機能",
+      "lists": [
+        {
+          "id": "1",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-timer'><path d=\"M5 21v-6\"/><path d=\"M12 21V3\"/><path d=\"M19 21V9\"/></svg>",
+          "title": "機器ごとの生産量統計",
+          "content": "各機器で生産された製品数を自動収集・集計します。"
+        },
+        {
+          "id": "2",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-bell'><path d='M16 14v2.2l1.6 1'/><path d='M16 4h2a2 2 0 0 1 2 2v.832'/><path d='M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h2'/><circle cx='16' cy='16' r='6'/><rect x='8' y='2' width='8' height='4' rx='1'/></svg>",
+          "title": "停止エラー記録",
+          "content": "停止エラーの検出・分類・統計で運用プロセスを改善します。"
+        },
+        {
+          "id": "3",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'stroke-linecap='round'stroke-linejoin='round'class='lucide lucide-bug'><rect width=\"16\" height=\"20\" x=\"4\" y=\"2\" rx=\"2\"/><line x1=\"8\" x2=\"16\" y1=\"6\" y2=\"6\"/><line x1=\"16\" x2=\"16\" y1=\"14\" y2=\"18\"/><path d=\"M16 10h.01\"/><path d=\"M12 10h.01\"/><path d=\"M8 10h.01\"/><path d=\"M12 14h.01\"/><path d=\"M8 14h.01\"/><path d=\"M12 18h.01\"/><path d=\"M8 18h.01\"/></svg>",
+          "title": "OEE（総合効率）計算",
+          "content": "国際基準に基づき、機器の稼働率・効率・品質を測定・分析します。"
+        },
+        {
+          "id": "4",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><path d=\"M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0\"/><circle cx=\"12\" cy=\"12\" r=\"3\"/></svg>",
+          "title": "シフトごとの運用状況監視",
+          "content": "各シフトごとに機器の運用状況を継続的に更新します。"
+        },
+        {
+          "id": "5",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\"/><path d=\"M3 5V19A9 3 0 0 0 21 19V5\"/><path d=\"M3 12A9 3 0 0 0 21 12\"/></svg>",
+          "title": "運用・保守データ管理",
+          "content": "オペレーター、修理履歴、部品情報を機器ごとに保存します。"
+        },
+        {
+          "id": "6",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><circle cx=\"12\" cy=\"12\" r=\"10\"/><line x1=\"12\" x2=\"12\" y1=\"8\" y2=\"12\"/><line x1=\"12\" x2=\"12.01\" y1=\"16\" y2=\"16\"/></svg>",
+          "title": "保守・部品交換の警告",
+          "content": "部品の有効期限や保守予定を自動で通知し、故障を未然に防ぎます。"
+        }
+      ]
+    },
+    "benefits": {
+      "title": "メリット",
+      "list": [
+        {
+          "content": "シフト・機器・製品ごとに正確な生産コスト算出",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-zap-icon lucide-zap\"><line x1=\"12\" x2=\"12\" y1=\"2\" y2=\"22\"/><path d=\"M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6\"/></svg>"
+        },
+        {
+          "content": "OEE（設備総合効率）を20～25%向上",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-diamond-minus-icon lucide-diamond-minus\"><path d=\"M9 13a1 1 0 0 0-1-1H5.061a1 1 0 0 1-.75-1.811l6.836-6.835a1.207 1.207 0 0 1 1.707 0l6.835 6.835a1 1 0 0 1-.75 1.811H16a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1z\"/></svg>"
+        },
+        {
+          "content": "生産・保守計画の最適化",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-check-icon lucide-check\"><path d=\"M16 7h6v6\"/><path d=\"m22 7-8.5 8.5-5-5L2 17\"/></svg>"
+        }
+      ]
+    }
+  },
+  "EMS": {
+    "heroSection": {
+      "title": "スマートエネルギー管理（EMS）ソリューション",
+      "subTitle": "屋上太陽光発電運用管理ソリューション",
+      "desc": "電気・ガス・熱・水などのエネルギー消費データを監視・分析・最適化し、企業のコスト削減・効率向上・持続可能な運用を支援します。",
+      "contact": "無料トライアル"
+    },
+    "problems": {
+      "title": "業界の課題",
+      "list": [
+        "どこでどれだけエネルギーが使われているか分からない",
+        "エネルギーコスト削減の意思決定に必要なデータが不足している",
+        "消費超過や異常時の警告がない",
+        "経営層や監査機関への効果証明が困難"
+      ]
+    },
+    "allFeatures": {
+      "title": "主な機能",
+      "lists": [
+        {
+          "id": "1",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-timer'><path d=\"M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z\"/><path d=\"m14.5 12.5 2-2\"/><path d=\"m11.5 9.5 2-2\"/><path d=\"m8.5 6.5 2-2\"/><path d=\"m17.5 15.5 2-2\"/></svg>",
+          "title": "リアルタイムエネルギーデータ測定",
+          "content": "電気・水・圧縮空気などの消費を継続的に収集・分析し、即時の効率を把握します。"
+        },
+        {
+          "id": "2",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-bell'><path d=\"M5 21v-6\"/><path d=\"M12 21V3\"/><path d=\"M19 21V9\"/></svg>",
+          "title": "エリア・機器ごとの消費監視",
+          "content": "各機器・エリア・シフトごとに消費量と効率を詳細に統計します。"
+        },
+        {
+          "id": "3",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'stroke-linecap='round'stroke-linejoin='round'class='lucide lucide-bug'><circle cx=\"12\" cy=\"12\" r=\"10\"/><circle cx=\"12\" cy=\"12\" r=\"6\"/><circle cx=\"12\" cy=\"12\" r=\"2\"/></svg>",
+          "title": "KPI・省エネ目標の設定",
+          "content": "各機器やエリアごとに消費目標を設定し、効率を管理・最適化します。"
+        },
+        {
+          "id": "4",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><circle cx=\"12\" cy=\"12\" r=\"10\"/><line x1=\"12\" x2=\"12\" y1=\"8\" y2=\"12\"/><line x1=\"12\" x2=\"12.01\" y1=\"16\" y2=\"16\"/></svg>",
+          "title": "消費超過の早期警告",
+          "content": "異常や設定値超過を即時検知し、通知します。"
+        },
+        {
+          "id": "5",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\"/><path d=\"M3 5V19A9 3 0 0 0 21 19V5\"/><path d=\"M3 12A9 3 0 0 0 21 12\"/></svg>",
+          "title": "エネルギー消費比率分析",
+          "content": "消費比率の高い機器やエリアを特定し、改善を優先します。"
+        },
+        {
+          "id": "6",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><circle cx=\"12\" cy=\"12\" r=\"10\"/><line x1=\"12\" x2=\"12\" y1=\"8\" y2=\"12\"/><line x1=\"12\" x2=\"12.01\" y1=\"16\" y2=\"16\"/></svg>",
+          "title": "データ履歴の保存・検索",
+          "content": "すべての消費データを記録し、分析・保守・戦略的意思決定を支援します。"
+        }
+      ]
+    },
+    "benefits": {
+      "title": "メリット",
+      "list": [
+        {
+          "content": "初年度で4～15%のエネルギー削減",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-zap-icon lucide-zap\"><path d=\"M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z\"/></svg>"
+        },
+        {
+          "content": "設備ROI向上・寿命延長・システム障害減少",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-diamond-minus-icon lucide-diamond-minus\"><path d=\"M9 13a1 1 0 0 0-1-1H5.061a1 1 0 0 1-.75-1.811l6.836-6.835a1.207 1.207 0 0 1 1.707 0l6.835 6.835a1 1 0 0 1-.75 1.811H16a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1z\"/></svg>"
+        },
+        {
+          "content": "能動的なエネルギー管理",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-check-icon lucide-check\"><path d=\"M16 7h6v6\"/><path d=\"m22 7-8.5 8.5-5-5L2 17\"/></svg>"
+        }
+      ]
+    }
+  },
+  "GHG": {
+    "heroSection": {
+      "title": "温室効果ガス排出管理（GHG）",
+      "subTitle": "屋上太陽光発電運用管理ソリューション",
+      "desc": "Scope 1、2、3に基づき温室効果ガス排出量を測定・可視化・管理し、ESG基準遵守と持続可能性向上を支援します。",
+      "contact": "無料トライアル"
+    },
+    "problems": {
+      "title": "業界の課題",
+      "list": [
+        "集中管理プラットフォームがない",
+        "手作業による計算は時間がかかる",
+        "ESG開示要件への対応が困難",
+        "透明性が不足している"
+      ]
+    },
+    "allFeatures": {
+      "title": "主な機能",
+      "lists": [
+        {
+          "id": "1",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-timer'><path d=\"M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z\"/><path d=\"m14.5 12.5 2-2\"/><path d=\"m11.5 9.5 2-2\"/><path d=\"m8.5 6.5 2-2\"/><path d=\"m17.5 15.5 2-2\"/></svg>",
+          "title": "排出データの収集・集約",
+          "content": "多様なデータソースから自動で排出データを取得し、完全な排出プロファイルを作成します。"
+        },
+        {
+          "id": "2",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-bell'><rect width=\"16\" height=\"20\" x=\"4\" y=\"2\" rx=\"2\"/><line x1=\"8\" x2=\"16\" y1=\"6\" y2=\"6\"/><line x1=\"16\" x2=\"16\" y1=\"14\" y2=\"18\"/><path d=\"M16 10h.01\"/><path d=\"M12 10h.01\"/><path d=\"M8 10h.01\"/><path d=\"M12 14h.01\"/><path d=\"M8 14h.01\"/><path d=\"M12 18h.01\"/><path d=\"M8 18h.01\"/></svg>",
+          "title": "GHGプロトコルに基づく排出量計算",
+          "content": "Scope 1、2、3ごとに分類・計算し、国際基準に準拠します。"
+        },
+        {
+          "id": "3",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'stroke-linecap='round'stroke-linejoin='round'class='lucide lucide-bug'><circle cx=\"12\" cy=\"12\" r=\"10\"/><circle cx=\"12\" cy=\"12\" r=\"6\"/><circle cx=\"12\" cy=\"12\" r=\"2\"/></svg>",
+          "title": "リアルタイムダッシュボード",
+          "content": "ダッシュボードで排出傾向やホットスポットを可視化し、迅速な意思決定を支援します。"
+        },
+        {
+          "id": "4",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><path d=\"M15 12h-5\"/><path d=\"M15 8h-5\"/><path d=\"M19 17V5a2 2 0 0 0-2-2H4\"/><path d=\"M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3\"/></svg>",
+          "title": "国際基準に準拠したESGレポート作成",
+          "content": "ISO 14064-3や各種国際基準に準拠したレポートを出力します。"
+        },
+        {
+          "id": "5",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\"/><path d=\"M3 5V19A9 3 0 0 0 21 19V5\"/><path d=\"M3 12A9 3 0 0 0 21 12\"/></svg>",
+          "title": "排出削減シナリオのシミュレーション",
+          "content": "省エネ施策や再生可能エネルギー導入時の効果を評価します。"
+        },
+        {
+          "id": "6",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><path d=\"M10 22V7a1 1 0 0 0-1-1H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a1 1 0 0 0-1-1H2\"/><rect x=\"14\" y=\"2\" width=\"8\" height=\"8\" rx=\"1\"/></svg>",
+          "title": "グローバルパートナーとの連携",
+          "content": "Zeroboardなどのパートナーと連携し、データの透明性と国際Net Zero基準への準拠を実現します。"
+        }
+      ]
+    },
+    "benefits": {
+      "title": "メリット",
+      "list": [
+        {
+          "content": "ESG準拠の監査対応・レポート精度を確保",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-zap-icon lucide-zap\"><path d=\"M20 6 9 17l-5-5\"/></svg>"
+        },
+        {
+          "content": "手作業比で最大80%の時間削減",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-diamond-minus-icon lucide-diamond-minus\"><path d=\"M15 11a1 1 0 0 0 1 1h2.939a1 1 0 0 1 .75 1.811l-6.835 6.836a1.207 1.207 0 0 1-1.707 0L4.31 13.81a1 1 0 0 1 .75-1.811H8a1 1 0 0 0 1-1V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1z\"/></svg>"
+        },
+        {
+          "content": "主要排出源の特定による効果的な削減戦略策定",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-check-icon lucide-check\"><path d=\"M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z\"/></svg>"
+        }
+      ]
+    }
+  },
+  "AIForBusiness": {
+    "heroSection": {
+      "title": "運用・技術ナレッジ管理のためのAIアシスタント",
+      "subTitle": "屋上太陽光発電運用管理ソリューション",
+      "desc": "企業の運用データを集約し、業務プロセスを標準化、ナレッジ管理で全チームの連携を強化します。",
+      "contact": "無料トライアル"
+    },
+    "problems": {
+      "title": "業界の課題",
+      "list": [
+        "データやシステムが分散している",
+        "経験豊富な技術者が不足し、新人育成が困難",
+        "チケットの紛失や対応遅延",
+        "手作業によるデータ処理"
+      ]
+    },
+    "allFeatures": {
+      "title": "主な機能",
+      "lists": [
+        {
+          "id": "1",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-timer'><path d=\"M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z\"/><path d=\"m3.3 7 8.7 5 8.7-5\"/><path d=\"M12 22V12\"/></svg>",
+          "title": "リソースの一元管理",
+          "content": "機器、部品、サプライヤー、割り当てリストを1つのプラットフォームで管理します。"
+        },
+        {
+          "id": "2",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-bell'><path d=\"M10 22V7a1 1 0 0 0-1-1H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a1 1 0 0 0-1-1H2\"/><rect x=\"14\" y=\"2\" width=\"8\" height=\"8\" rx=\"1\"/></svg>",
+          "title": "企業システム連携",
+          "content": "ERP、HRMなどの社内システムとシームレスに連携し、データと業務を同期します。"
+        },
+        {
+          "id": "3",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'stroke-linecap='round'stroke-linejoin='round'class='lucide lucide-bug'><path d=\"M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z\"/><circle cx=\"7.5\" cy=\"7.5\" r=\".5\" fill=\"currentColor\"/></svg>",
+          "title": "チケット一元管理",
+          "content": "受付・割り当て・SLA管理・フィードバックまで一連の流れを統合管理します。"
+        },
+        {
+          "id": "4",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><path d=\"M18 6 7 17l-5-5\"/><path d=\"m22 10-7.5 7.5L13 16\"/></svg>",
+          "title": "チェックリスト・承認管理",
+          "content": "チェックリスト作成、作業承認、チームの生産性レポートを透明化します。"
+        },
+        {
+          "id": "5",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><path d=\"M12 21V7\"/><path d=\"m16 12 2 2 4-4\"/><path d=\"M22 6V4a1 1 0 0 0-1-1h-5a4 4 0 0 0-4 4 4 4 0 0 0-4-4H3a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6a1 1 0 0 0 1-1v-1.3\"/></svg>",
+          "title": "デジタル保守ナレッジベース",
+          "content": "SOP、エラーログ、運用ノウハウを保存し、機器タグで素早く検索・再利用します。"
+        },
+        {
+          "id": "6",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><path d=\"M12 6V2H8\"/><path d=\"M15 11v2\"/><path d=\"M2 12h2\"/><path d=\"M20 12h2\"/><path d=\"M20 16a2 2 0 0 1-2 2H8.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 4 20.286V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z\"/><path d=\"M9 11v2\"/></svg>",
+          "title": "AIチャットによる運用支援",
+          "content": "ナレッジベースや進行中のチケットと自然言語で対話し、即時に解決策を提案します。"
+        }
+      ]
+    },
+    "benefits": {
+      "title": "メリット",
+      "list": [
+        {
+          "content": "データと運用の集中管理",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-zap-icon lucide-zap\"><ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\"/><path d=\"M3 5V19A9 3 0 0 0 21 19V5\"/><path d=\"M3 12A9 3 0 0 0 21 12\"/></svg>"
+        },
+        {
+          "content": "対応時間を50%短縮",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-diamond-minus-icon lucide-diamond-minus\"><path d=\"M15 11a1 1 0 0 0 1 1h2.939a1 1 0 0 1 .75 1.811l-6.835 6.836a1.207 1.207 0 0 1-1.707 0L4.31 13.81a1 1 0 0 1 .75-1.811H8a1 1 0 0 0 1-1V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1z\"/></svg>"
+        },
+        {
+          "content": "ナレッジの保存と再利用",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-check-icon lucide-check\"><path d=\"M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8\"/><path d=\"M3 3v5h5\"/></svg>"
+        }
+      ]
+    }
+  },
+  "AIForAssistant": {
+    "heroSection": {
+      "title": "AIチャットアシスタント＆製品認証",
+      "subTitle": "屋上太陽光発電運用管理ソリューション",
+      "desc": "技術者・管理者・企業が即時ナレッジ検索、純正機器認証、CO/CQの透明性を確保し、リスク低減・効率向上を実現します。",
+      "contact": "無料トライアル"
+    },
+    "problems": {
+      "title": "業界の課題",
+      "list": [
+        "保守・メンテナンスデータが膨大",
+        "技術者が資料検索や専門家への問い合わせに時間を要する",
+        "CO/CQの透明性がなく、監査時の照合が困難",
+        "偽造品や粗悪品のリスク"
+      ]
+    },
+    "allFeatures": {
+      "title": "主な機能",
+      "lists": [
+        {
+          "id": "1",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-timer'><path d=\"M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z\"/><path d=\"m3.3 7 8.7 5 8.7-5\"/><path d=\"M12 22V12\"/></svg>",
+          "title": "AIによるエラー分析",
+          "content": "エラーコードや画像を入力すると、AIが原因を自動特定し、対処方法を案内します。"
+        },
+        {
+          "id": "2",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-bell'><path d=\"M10 22V7a1 1 0 0 0-1-1H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a1 1 0 0 0-1-1H2\"/><rect x=\"14\" y=\"2\" width=\"8\" height=\"8\" rx=\"1\"/></svg>",
+          "title": "純正部品認証",
+          "content": "バーコードやシリアル番号をスキャンし、メーカーDBと照合して偽造リスクを排除します。"
+        },
+        {
+          "id": "3",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'stroke-linecap='round'stroke-linejoin='round'class='lucide lucide-bug'><path d=\"M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z\"/><circle cx=\"7.5\" cy=\"7.5\" r=\".5\" fill=\"currentColor\"/></svg>",
+          "title": "自然言語による技術Q&A",
+          "content": "現場で直接質問でき、AIが即時に具体的なガイドを返答します。"
+        },
+        {
+          "id": "4",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><path d=\"M18 6 7 17l-5-5\"/><path d=\"m22 10-7.5 7.5L13 16\"/></svg>",
+          "title": "技術ナレッジベースの一元化",
+          "content": "SOP、障害ログ、現場ノウハウを保存し、効率的に検索・再利用します。"
+        },
+        {
+          "id": "5",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><path d=\"M12 21V7\"/><path d=\"m16 12 2 2 4-4\"/><path d=\"M22 6V4a1 1 0 0 0-1-1h-5a4 4 0 0 0-4 4 4 4 0 0 0-4-4H3a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6a1 1 0 0 0 1-1v-1.3\"/></svg>",
+          "title": "権限管理とアクセス制御",
+          "content": "役割や組織構造に応じてアクセス権を管理し、データの安全性を確保します。"
+        },
+        {
+          "id": "6",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><path d=\"M12 6V2H8\"/><path d=\"M15 11v2\"/><path d=\"M2 12h2\"/><path d=\"M20 12h2\"/><path d=\"M20 16a2 2 0 0 1-2 2H8.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 4 20.286V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z\"/><path d=\"M9 11v2\"/></svg>",
+          "title": "CO/CQ証明書の即時検索",
+          "content": "必要時に即座に証明書を検索し、機器の照合や監査に対応します。"
+        }
+      ]
+    },
+    "benefits": {
+      "title": "メリット",
+      "list": [
+        {
+          "content": "検索・認証時間を90%短縮",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-diamond-minus-icon lucide-diamond-minus\"><path d=\"M15 11a1 1 0 0 0 1 1h2.939a1 1 0 0 1 .75 1.811l-6.835 6.836a1.207 1.207 0 0 1-1.707 0L4.31 13.81a1 1 0 0 1 .75-1.811H8a1 1 0 0 0 1-1V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1z\"/></svg>"
+        },
+        {
+          "content": "純正機器保証・偽造リスク低減",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-diamond-minus-icon lucide-diamond-minus\"><path d=\"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z\"/><path d=\"m9 12 2 2 4-4\"/></svg>"
+        },
+        {
+          "content": "対応時間50%短縮・新人技術者の早期習得支援",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-check-icon lucide-check\"><path d=\"m7 6 5 5 5-5\"/><path d=\"m7 13 5 5 5-5\"/></svg>"
+        }
+      ]
+    }
+  },
+  "Uboard": {
+    "heroSection": {
+      "heading": "Uboard",
+      "excerpt": "データを一元監視 – 迅速な意思決定、標準的な運用",
+      "color": "blue",
+      "contact": "無料トライアル"
+    },
+    "features": {
+      "title": "主な機能",
+      "lists": [
+        {
+          "img": "/image/products/uboard/central-monitor.webp",
+          "title": "一元管理",
+          "desc": "Uboardはすべてのデバイスを、すべてのエリアで、1つのプラットフォーム上で管理でき、移動せずに簡単に管理できます。"
+        },
+        {
+          "img": "/image/products/uboard/report-features.webp",
+          "title": "AIレポート",
+          "desc": "定期的なPDF/Excelレポート出力、AIがレポートデータから課題をサポートします。"
+        },
+        {
+          "img": "/image/products/uboard/data-collect.webp",
+          "title": "リアルタイムデータ収集・分析",
+          "desc": "継続的な監視により、潜在的な問題を早期発見し、迅速な対応策を提案します。"
+        },
+        {
+          "img": "/image/products/uboard/authorization.webp",
+          "title": "役割ごとの権限管理",
+          "desc": "明確な役割分担、データ分離でセキュリティと厳格な管理を実現します。"
+        },
+        {
+          "img": "/image/products/uboard/smart-warning.webp",
+          "title": "KPIに基づくスマート警告",
+          "desc": "警告しきい値を設定し、異常を早期検知・即時警告します。"
+        },
+        {
+          "img": "/image/products/uboard/data-security.webp",
+          "title": "絶対的なセキュリティ",
+          "desc": "安定・安全なクラウド保存。どこからでもアクセス可能、専用クラウド対応、接続障害時も30日間保存。"
         }
       ]
     },
     "singleFeature": {
       "first": {
-        "title": "複数拠点・複数メーカーのデバイスを同一プラットフォームで一元管理できる国内唯一のアプリケーション",
+        "title": "屋上太陽光発電運用監視への応用",
         "subTitle": "",
-        "desc": "効果的かつ包括的な管理ソリューションを提供するため、複数拠点・複数メーカーのデバイスを同一プラットフォームで同期管理できる国内初・唯一のアプリケーションを開発しました。これにより、企業は管理プロセスを最適化し、時間を節約し、運用効率を向上させます。",
-        "img": "/image/products/saas/saas-feature-1.webp"
+        "desc": "Udataのスマート監視システムにより、投資家や運用担当者は屋上太陽光発電システムを能動的かつ効果的に管理できます。主なメリット：発電量2～5%向上、保守コスト削減、隠れた損失の低減。",
+        "img": "/image/products/uboard/Uboard-1.webp"
       },
       "second": {
-        "title": "ユーザーが設定したシナリオに基づき自動警告を送信できる国内唯一のアプリケーション",
+        "title": "エレベーター・機械運用監視への応用",
         "subTitle": "",
-        "desc": "当社のアプリケーションは、スマートな自動警告機能を備えた国内先駆けのソリューションです。お客様はニーズに合わせて警告シナリオを柔軟に設定でき、すべてのインシデントを迅速に検知・対応し、管理効率を高めリスクを最小化します。",
-        "img": "/image/products/saas/saas-feature-2.webp"
+        "desc": "Udataのスマート監視システムにより、メーカーや保守担当者は異常を早期発見し、エレベーターの保守効率を最適化できます。主なメリット：定期保守時間25%削減、技術者の効率向上、保守・人件費最適化。",
+        "img": "/image/products/uboard/Uboard-2.webp"
       },
       "third": {
-        "title": "損失レポートや頻発エラー分析レポートなど多様なレポートのカスタマイズ・定期送信が可能な唯一のアプリケーション",
+        "title": "OEEによる生産効率・保守管理への応用",
         "subTitle": "",
-        "desc": "当社のアプリケーションは、企業の要件に応じてレポートをカスタマイズ・作成できる先進的なソリューションです。詳細な損失レポートからエラー分析レポートまで、すべての情報を明確に集約・提示し、正確かつ迅速な意思決定を支援します。",
-        "img": "/image/products/saas/saas-feature-3.webp"
+        "desc": "収集した生産データを分析し、レポートや警告を通じて工場が迅速かつ正確な意思決定を行えるよう支援します。主なメリット：シフト/機械/製品ごとの正確な生産コスト算出、OEE20～25%向上、生産・保守計画最適化。",
+        "img": "/image/products/uboard/Uboard-3.webp"
+      },
+      "fourth": {
+        "title": "スマートエネルギー管理（EMS）への応用",
+        "subTitle": "",
+        "desc": "電気・ガス・熱・水などのエネルギー消費データを監視・分析・最適化し、企業のコスト削減・効率向上・持続可能な運用を支援します。主なメリット：初年度で4～15%エネルギー削減、設備ROI向上・寿命延長・システム障害減少、能動的なエネルギー管理。",
+        "img": "/image/products/uboard/Uboard-4.webp"
       }
     },
     "whyChooseUs": {
-      "title": "なぜ<span class='text-primary'>Udata.ai</span>を選ぶべきか",
-      "subTitle": "目標達成を効果的にサポート",
+      "title": "<span class='text-primary'>Uboard</span>を選ぶ理由",
+      "subTitle": "目標達成を効率的にサポート",
       "contents": [
         {
           "id": 1,
-          "title": "適合性（FIT）",
-          "content": "多様な経済分野のユーザーニーズに柔軟に対応可能",
-          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-mouse-pointer-click'><path d='M14 4.1 12 6'/><path d='m5.1 8-2.9-.8'/><path d='m6 12-1.9 2'/><path d='M7.2 2.2 8 5.1'/><path d='M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z'/ ></svg>"
+          "title": "より集中管理",
+          "content": "すべてのデバイスを、すべての場所で、1つのプラットフォームで管理。",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-mouse-pointer-click'><path d=\"M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z\"/></svg>"
         },
         {
           "id": 2,
-          "title": "高速性（FAST）",
-          "content": "迅速な導入、スムーズな運用、要望への素早い対応",
-          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-lightbulb'><path d='M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5'/><path d='M9 18h6'/><path d='M10 22h4' /></svg>"
+          "title": "より効率的",
+          "content": "リアルタイムデータでコスト削減・運用スピード向上。",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-lightbulb'><path d=\"M16 7h6v6\"/><path d=\"m22 7-8.5 8.5-5-5L2 17\"/></svg>"
         },
         {
           "id": 3,
-          "title": "柔軟性（FLEXIBLE）",
-          "content": "他システムとの連携や拡張が容易で、ユーザーニーズに応じて柔軟に調整可能",
-          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevrons-left-right'><path d='m9 7-5 5 5 5'/ ><path d='m15 7 5 5-5 5'/></svg>"
+          "title": "より安全",
+          "content": "安定したシステム、厳格な権限管理、最高レベルのセキュリティ。",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevrons-left-right'><path d=\"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z\"/><path d=\"m9 12 2 2 4-4\"/></svg>"
         }
       ]
     }
   },
-  "Intergration": {
+  "Ugate": {
     "heroSection": {
-      "heading": "Udataでデータを解放",
-      "excerpt": "効果的なデータ主導のエネルギー管理には、データの集中化と構造化が不可欠です。私たちは、迅速かつ簡単にデータを収集・統合できるようサポートし、遅延やトラブルが発生しないようにします。",
-      "color": "green",
-      "contact": "はじめる",
-      "img": "/image/pms/mockup-pms.png"
+      "heading": "Ugate",
+      "excerpt": "企業向けスマート技術・AIサポート",
+      "color": "blue",
+      "contact": "無料トライアル"
     },
     "features": {
+      "title": "主な機能",
       "lists": [
         {
-          "title": "データソースに依存しない",
-          "desc": "Udataは柔軟なソリューションであり、データロガー、グリッドオペレーター、IoTセンサーなど、さまざまなソースからのデータ接続と処理をサポートします。どのようなフォーマットやプロトコルでも、効果的に統合・活用できます。"
+          "img": "/image/products/ugate/AI-chat.webp",
+          "title": "AIによるQ&A",
+          "desc": "機器の故障写真を撮影し、AIがエラーコードを読み取り、標準化されたトラブル対応手順を提供します。"
         },
         {
-          "title": "オフラインデータ保存",
-          "desc": "ネットワーク障害時でも最大30日間データを保存します。データは常に最新かつ正確に保たれます。"
+          "img": "/image/products/ugate/knowledge.webp",
+          "title": "共通ナレッジベース",
+          "desc": "組織のナレッジ管理：トラブル対応経験を保存し、会社全体の「共通ナレッジベース」として活用します。"
         },
         {
-          "title": "データ移行と統合",
-          "desc": "プロフェッショナルなデータ移行サービスで、従来のエネルギー管理ソフトからUdataプラットフォームへのスムーズな移行をサポートします。さらに、Udataは多様なシステムとの連携が可能で、企業独自のニーズに合わせた包括的なエネルギー管理ソリューションを構築できます。"
-        }
-      ]
-    },
-    "dependDatas": {
-      "title": "Udataはデータソースに依存せず、以下からデータ収集が可能：",
-      "subTitle": "複数のソースからデータ収集が必要ですか？",
-      "lists": [
-        {
-          "title": "データロガー／ゲートウェイ",
-          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-between-horizontal-end'><rect width='13' height='7' x='3' y='3' rx='1'/><path d='m22 3-15-3 3-3'/><rect width='13 'height='7' x='3' y='14' rx='1'/></svg>"
+          "img": "/image/products/ugate/qr.webp",
+          "title": "バーコード/シリアル番号のスキャン",
+          "desc": "AIがバーコードをスキャンして照合し、純正部品を保証し、偽造品リスクを低減します。"
         },
         {
-          "title": "エネルギーメーター・多機能メーター",
-          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-clock'><circle cx='12' cy='12' r='10'/><polyline points='12 6 12 12 16 14'/></svg>"
+          "img": "/image/products/ugate/authorization.webp",
+          "title": "役割ごとの権限管理",
+          "desc": "明確な役割分担、データ分離でセキュリティと厳格な管理を実現します。"
         },
         {
-          "title": "IoT接続",
-          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-arrow-down-up'><path d='m3 16 4 4 4-4'/><path d='M7 20V4'/><path d='m21 8-4-4-4 4'/><path d='M17 4v16'/></svg> "
+          "img": "/image/products/ugate/fixing.webp",
+          "title": "修理・保守計画の立案",
+          "desc": "機器データを自動分析し、最適な保守スケジュールを提案。故障を減らし、運用寿命を延長します。"
         },
         {
-          "title": "Excelファイル",
-          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-sheet'><rect width='18' height='18' x='3' y='3' rx='2' ry='2'/><line x1='3' x2='21' y1='9' y2='9'/ ><line x1='3' x2='21' y1='15' y2='15'/><line x1='9' x2='9' y1='9' y2='21'/>< line x1='15' x2='15' y1='9' y2='21'/></svg>"
-        },
-        {
-          "title": "計測センサー",
-          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-aperture'><circle cx='12' cy='12' r='10'/><path d='m14.31 8 5.74 9.94'/><path d='M9.69 8h11.48'/><path d='m7.38 12 5.74 -9.94'/><path d='M9.69 16 3.95 6.06'/><path d='M14.31 16H2.83'/><path d='m16.62 12-5.74 9.94'/></svg>"
-        },
-        {
-          "title": "気象データ",
-          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 24 24' fill='none' stroke=' currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-cloudy'><path d='M17.5 21H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z'/><path d='M22 10a3 3 0 0 0-3-3h-2.207a5.502 5.502 0 0 0-10.702.5' /></svg>"
+          "img": "/image/products/ugate/resources-management.webp",
+          "title": "リソース管理",
+          "desc": "機器、部品、サプライヤー、割り当てリストを一元管理します。"
         }
       ]
     },
     "singleFeature": {
       "first": {
-        "title": "国内唯一、複数拠点・複数メーカーのデバイスを同一プラットフォームで一元管理できるアプリケーション",
+        "title": "運用支援AI・技術ナレッジ管理への応用",
         "subTitle": "",
-        "desc": "効果的かつ包括的な管理ソリューションを提供するため、複数拠点・複数メーカーのデバイスを同一プラットフォームで同期管理できる国内初・唯一のアプリケーションを開発しました。これにより、企業は管理プロセスを最適化し、時間を節約し、運用効率を向上させます。",
-        "img": "/image/solutions/fisheries/fisheries-feature-1.webp"
+        "desc": "運用データを集約し、業務プロセスを標準化、ナレッジ管理で全チームの連携を強化。主なメリット：データ・運用の集中管理、対応時間50%短縮、ナレッジの保存・再利用。",
+        "img": "/image/products/ugate/Ugate-1.webp"
       },
       "second": {
-        "title": "ユーザーが設定したシナリオに基づき自動警告を送信できる国内唯一のアプリケーション",
+        "title": "AIチャット・製品認証への応用",
         "subTitle": "",
-        "desc": "当社のアプリケーションは、スマートな自動警告機能を備えた国内先駆けのソリューションです。お客様はニーズに合わせて警告シナリオを柔軟に設定でき、すべてのインシデントを迅速に検知・対応し、管理効率を高めリスクを最小化します。",
-        "img": "/image/solutions/fisheries/fisheries-feature-2.webp"
-      },
-      "third": {
-        "title": "損失レポートや頻発エラー分析レポートなど多様なレポートのカスタマイズ・定期送信が可能な唯一のアプリケーション",
-        "subTitle": "",
-        "desc": "当社のアプリケーションは、企業の要件に応じてレポートをカスタマイズ・作成できる先進的なソリューションです。詳細な損失レポートからエラー分析レポートまで、すべての情報を明確に集約・提示し、正確かつ迅速な意思決定を支援します。",
-        "img": "/image/solutions/fisheries/fisheries-feature-3.webp"
+        "desc": "技術者・管理者・企業が即時ナレッジ検索、純正機器認証、CO/CQの透明性を確保し、リスク低減・効率向上。主なメリット：検索・認証時間90%短縮、純正機器保証・偽造リスク低減、トラブル対応時間50%短縮・新人技術者の早期習得支援。",
+        "img": "/image/products/ugate/Ugate-2.webp"
       }
     },
-    "questions": {
-      "title": "よくある質問",
-      "data": [
+    "whyChooseUs": {
+      "title": "<span class='text-primary'>Ugate</span>を選ぶ理由",
+      "subTitle": "目標達成を効率的にサポート",
+      "contents": [
         {
-          "ask": "Udata上のデータは安全ですか？",
-          "answer": "Udataをご利用の場合、データは完全に安全です。すべての情報はサーバーに保存され、毎日バックアップされます。当社システムはISO 27001セキュリティ基準に準拠し、データの安全性を確保しています。"
+          "id": 1,
+          "title": "スマートAIサポート",
+          "content": "技術Q&Aと企業アシスタントを同一プラットフォームで提供。",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-mouse-pointer-click'><path d=\"M12 6V2H8\"/><path d=\"M15 11v2\"/><path d=\"M2 12h2\"/><path d=\"M20 12h2\"/><path d=\"M20 16a2 2 0 0 1-2 2H8.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 4 20.286V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z\"/><path d=\"M9 11v2\"/></svg>"
         },
         {
-          "ask": "Udataは私がプラットフォームに入力したデータの所有権を持ちますか？",
-          "answer": "いいえ。データの所有者はお客様ご自身です。当社は分析や価値提供のために保存するのみです。"
+          "id": 2,
+          "title": "運用自動化",
+          "content": "迅速な問題解決で技術チームの負担を軽減。",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-lightbulb'><circle cx=\"18\" cy=\"18\" r=\"3\"/><circle cx=\"6\" cy=\"6\" r=\"3\"/><path d=\"M13 6h3a2 2 0 0 1 2 2v7\"/><path d=\"M11 18H8a2 2 0 0 1-2-2V9\"/></svg>"
         },
         {
-          "ask": "Udataはデータ品質の向上をサポートしますか？",
-          "answer": "Udataにはデータ品質向上を支援する多くの機能があります。デバイスからデータが送信されなくなった場合はアラートが発生し、常にデータの可用性を計算します。また、ルールに基づいて誤ったデータを修正することも可能です。"
+          "id": 3,
+          "title": "柔軟なカスタマイズ",
+          "content": "AIを組織ごとのデータ・ニーズに合わせてトレーニング可能。",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevrons-left-right'><path d=\"M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z\"/></svg>"
         }
-      ],
-      "img": "/image/pms/question.png"
+      ]
+    }
+  },
+  "Uzero": {
+    "heroSection": {
+      "heading": "Uzero",
+      "excerpt": "排出量計算 – 企業のNet Zero 2050を目指して",
+      "color": "blue",
+      "contact": "無料トライアル"
     },
-    "callToAction": {
-      "title": "データ移行・統合サービス",
-      "subTitle": "既存システムからUdataへの移行をご検討ですか？",
-      "content": "Udataはプロフェッショナルなデータ統合・移行サービスを提供し、現在のエネルギー管理システムのアップグレードをサポートします。さまざまなシステムからUdataプラットフォームへのデータ移行を支援し、データの完全性とセキュリティを確保します。また、Udataと他システムを連携する統合ソリューションもご用意しています。",
-      "button": "専門家に相談する"
+    "features": {
+      "title": "主な機能",
+      "lists": [
+        {
+          "img": "/image/products/uzero/auto-calculate.webp",
+          "title": "自動計算",
+          "desc": "電力メーターのデータを自動取得し、間接排出量（Scope 2）を計算"
+        },
+        {
+          "img": "/image/products/uzero/auto-report.webp",
+          "title": "自動レポート",
+          "desc": "ISO 14064、GHGプロトコル、CDP、CBAMに準拠したレポートを自動出力"
+        },
+        {
+          "img": "/image/products/uzero/data-collect.webp",
+          "title": "多様なデータ収集",
+          "desc": "直接入力、Excelファイルアップロード、APIなど多様な方法でデータを収集"
+        },
+        {
+          "img": "/image/products/uzero/summary.webp",
+          "title": "排出量サマリー",
+          "desc": "製品、単位、実際の生産量ごとに排出量を比較・計算"
+        },
+        {
+          "img": "/image/products/uzero/calculate-all-sites.webp",
+          "title": "全拠点の排出量計算",
+          "desc": "企業の全拠点の排出量を計算・管理"
+        },
+        {
+          "img": "/image/products/uzero/param-display.webp",
+          "title": "直感的なパラメータ表示",
+          "desc": "排出量データをグラフやダッシュボードで分かりやすく表示"
+        }
+      ]
+    },
+    "singleFeature": {
+      "first": {
+        "title": "温室効果ガス（GHG）排出管理への応用",
+        "subTitle": "",
+        "desc": "Scope 1、2、3に基づき温室効果ガス排出量を測定・可視化・管理し、ESG基準遵守と持続可能性向上を支援。主なメリット：報告精度と監査対応力向上、手作業比で最大80%の時間削減、主要排出源の特定による効果的な削減戦略策定",
+        "img": "/image/products/uzero/Uzero.webp"
+      }
+    },
+    "whyChooseUs": {
+      "title": "<span class='text-primary'>Uzero</span>を選ぶ理由",
+      "subTitle": "目標達成を効率的にサポート",
+      "contents": [
+        {
+          "id": 1,
+          "title": "正確な排出量測定",
+          "content": "温室効果ガスデータをクラウド上で計算・表示",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-mouse-pointer-click'><rect width=\"16\" height=\"20\" x=\"4\" y=\"2\" rx=\"2\"/><line x1=\"8\" x2=\"16\" y1=\"6\" y2=\"6\"/><line x1=\"16\" x2=\"16\" y1=\"14\" y2=\"18\"/><path d=\"M16 10h.01\"/><path d=\"M12 10h.01\"/><path d=\"M8 10h.01\"/><path d=\"M12 14h.01\"/><path d=\"M8 14h.01\"/><path d=\"M12 18h.01\"/><path d=\"M8 18h.01\"/></svg>"
+        },
+        {
+          "id": 2,
+          "title": "スマート分析",
+          "content": "排出削減の提案でESG目標達成をサポート",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-lightbulb'><path d=\"M3 3v16a2 2 0 0 0 2 2h16\"/><path d=\"m19 9-5 5-4-4-3 3\"/></svg>"
+        },
+        {
+          "id": 3,
+          "title": "安全・拡張性",
+          "content": "高いセキュリティと企業成長に合わせた柔軟な拡張性",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevrons-left-right'><path d=\"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z\"/></svg>"
+        }
+      ]
     }
   },
   "Career": {

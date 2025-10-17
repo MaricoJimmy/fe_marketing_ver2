@@ -53,3 +53,10 @@ export const extractHeadings = (htmlContent) => {
 
   return headings;
 };
+
+export const normalizePath = (p) => {
+  if (!p) return "/";
+  // bỏ query/hash + bỏ slash cuối
+  const url = p.split("#")[0].split("?")[0];
+  return url !== "/" && url.endsWith("/") ? url.slice(0, -1) : url;
+};

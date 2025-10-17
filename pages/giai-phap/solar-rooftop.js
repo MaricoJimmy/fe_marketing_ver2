@@ -1,10 +1,10 @@
 import ScrollToTop from "@/components/common/ScrollToTop";
-import CallToAction from "@/components/giai-phap/CallToAction";
 import HeroSection from "@/components/giai-phap/HeroSection";
-import SingleFeatureSection from "@/components/giai-phap/SingleFeatureSection";
 import { useTranslations } from "next-intl";
 import PageSeoHead from "../../components/common/PageSeoHead";
 import HighLightFeature from "../../components/giai-phap/HighLightFeature";
+import Problems from "@/components/giai-phap/Problems";
+import Benefits from "@/components/giai-phap/Benefits";
 
 const SolarRooftopLandingPage = () => {
   const t = useTranslations("Solar");
@@ -24,6 +24,14 @@ const SolarRooftopLandingPage = () => {
           image="/image/solutions/solar/solar.webp"
           bgColor="bg-infor"
         />
+
+        {/* problems of solar rooftop */}
+        <Problems
+          title={t("problems.title")}
+          leftData={t.raw("problems.list").slice(0, 2)}
+          rightData={t.raw("problems.list").slice(2)}
+        />
+
         {/* main features */}
         <HighLightFeature
           data={{
@@ -31,16 +39,9 @@ const SolarRooftopLandingPage = () => {
             lists: t.raw("allFeatures.lists"),
           }}
         />
-        {/* Giám sát hiệu suất */}
-        <SingleFeatureSection data={t.raw("singleFeature.first")} />
-        {/* Cảnh báo tự động và phát hiện lỗi */}
-        <SingleFeatureSection isReverse data={t.raw("singleFeature.second")} />
-        {/* Báo cáo điểm bất thường */}
-        <SingleFeatureSection data={t.raw("singleFeature.third")} />
-        {/* Tích hợp với hệ thống năng lượng */}
-        <SingleFeatureSection isReverse data={t.raw("singleFeature.four")} />
-        {/* call to action */}
-        <CallToAction data={t.raw("callToAction")} />
+
+        {/* benefits */}
+        <Benefits title={t("benefits.title")} data={t.raw("benefits.list")} />
         {/* scroll to top button */}
         <div className="fixed bottom-24 right-7 z-10">
           <ScrollToTop />

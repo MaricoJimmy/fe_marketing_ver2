@@ -8,19 +8,20 @@ function MenuItem({
   children,
   href,
   isDivideSection = false,
+  isActive = false,
   ...props
 }) {
   return (
     <li className="w-full ">
       <NavigationMenuLink asChild>
-        <Link href={href} {...props}>
+        <Link href={href} {...props} legacyBehavior>
           <a
             title={title}
-            className={`${className} block select-none space-y-1 p-3 bg-transparent hover:bg-primary/5 no-underline outline-none transition-colors cursor-pointer rounded-md`}
+            className={`${className}  block select-none space-y-1 p-3 bg-transparent hover:bg-primary/5 no-underline outline-none transition-colors cursor-pointer rounded-md`}
           >
             <div
-              className={`${
-                isDivideSection ? "text-gray/80" : "text-gray"
+              className={`${isDivideSection ? "text-gray/80" : "text-gray"} ${
+                isActive ? "!text-primary" : ""
               } text-base text-nowrap font-semibold leading-none`}
             >
               {title}

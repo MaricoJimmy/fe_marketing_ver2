@@ -1,15 +1,20 @@
 import { getLocalizedPath } from "@/utils";
 import {
   ROUTER_ABOUT_US,
+  ROUTER_AI_ASSISTANT,
+  ROUTER_AI_BUSINESS,
   ROUTER_BLOG,
-  ROUTER_FISHERIES,
-  ROUTER_INTERGRATE,
-  ROUTER_INVESTORS,
-  ROUTER_MANAGERS,
+  ROUTER_CAREER,
+  ROUTER_CONTACT,
+  ROUTER_ELEVATOR,
+  ROUTER_EMS,
+  ROUTER_GHG,
   ROUTER_NOTIFICATION,
-  ROUTER_OPERATORS,
-  ROUTER_SAAS,
+  ROUTER_OEE,
   ROUTER_SOLAR,
+  ROUTER_UBOARD,
+  ROUTER_UGATE,
+  ROUTER_UZERO,
 } from "@/utils/constant";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -19,79 +24,55 @@ import { useRouter } from "next/router";
 function Footer() {
   const { locale } = useRouter();
   const t = useTranslations("Footer");
-  // const listMenu = [
-  //   {
-  //     title: "Udata PMS",
-  //     href: ROUTER_PMS,
-  //   },
-  //   {
-  //     title: "Solar rooftop",
-  //     href: ROUTER_SOLAR,
-  //   },
-  //   {
-  //     title: "Case study",
-  //     href: ROUTER_CASE_STUDY,
-  //   },
-  //   {
-  //     title: "Blog",
-  //     href: ROUTER_BLOG,
-  //   },
-  //   {
-  //     title: t("section.first.links.contact"),
-  //     href: ROUTER_CONTACT,
-  //   },
-  //   {
-  //     title: t("section.first.links.about-us"),
-  //     href: ROUTER_ABOUT_US,
-  //   },
-  // ];
 
   const listMenu = [
     {
-      section: t("section.first.links.company"),
-      href: getLocalizedPath(ROUTER_ABOUT_US, locale),
+      section: t("section.first.links.products.title"),
+      menus: [
+        {
+          title: "Uboard",
+          href: getLocalizedPath(ROUTER_UBOARD, locale),
+        },
+        {
+          title: "Ugate",
+          href: getLocalizedPath(ROUTER_UGATE, locale),
+        },
+        {
+          title: "Uzero",
+          href: getLocalizedPath(ROUTER_UZERO, locale),
+        },
+      ],
     },
     {
       section: t("section.first.links.solutions.title"),
       menus: [
         {
-          title: t("section.first.links.solutions.investors"),
-          href: getLocalizedPath(ROUTER_INVESTORS, locale),
-        },
-        {
-          title: t("section.first.links.solutions.managers"),
-          href: getLocalizedPath(ROUTER_MANAGERS, locale),
-        },
-        {
-          title: t("section.first.links.solutions.operators"),
-          href: getLocalizedPath(ROUTER_OPERATORS, locale),
-        },
-        {
-          title: t("section.first.links.solutions.saas"),
+          title: t("section.first.links.solutions.solar"),
           href: getLocalizedPath(ROUTER_SOLAR, locale),
         },
-        // "Nhà máy công nghiệp",
         {
-          title: t("section.first.links.solutions.fishing"),
-          href: getLocalizedPath(ROUTER_FISHERIES, locale),
-        },
-        // "Nông nghiệp",
-        // "Viễn thông",
-        // "Y tế",
-        // "Bán lẻ - Ngân hàng",
-        // "Xăng dầu",
-      ],
-    },
-    {
-      section: t("section.first.links.products.title"),
-      menus: [
-        {
-          title: t("section.first.links.products.saas"),
-          href: getLocalizedPath(ROUTER_SAAS, locale),
+          title: t("section.first.links.solutions.elevator"),
+          href: getLocalizedPath(ROUTER_ELEVATOR, locale),
         },
         {
-          title: t("section.first.links.products.integrate"),
-          href: getLocalizedPath(ROUTER_INTERGRATE, locale),
+          title: t("section.first.links.solutions.oee"),
+          href: getLocalizedPath(ROUTER_OEE, locale),
+        },
+        {
+          title: t("section.first.links.solutions.ems"),
+          href: getLocalizedPath(ROUTER_EMS, locale),
+        },
+        {
+          title: t("section.first.links.solutions.ghg"),
+          href: getLocalizedPath(ROUTER_GHG, locale),
+        },
+        {
+          title: t("section.first.links.solutions.aiForBusiness"),
+          href: getLocalizedPath(ROUTER_AI_BUSINESS, locale),
+        },
+        {
+          title: t("section.first.links.solutions.aiForAssistant"),
+          href: getLocalizedPath(ROUTER_AI_ASSISTANT, locale),
         },
       ],
     },
@@ -108,9 +89,18 @@ function Footer() {
         },
       ],
     },
-    // {
-    //   section: "Tuyển dụng",
-    // },
+    {
+      section: t("section.first.links.company"),
+      href: getLocalizedPath(ROUTER_ABOUT_US, locale),
+    },
+    {
+      section: t("section.first.links.trial"),
+      href: getLocalizedPath(ROUTER_CONTACT, locale),
+    },
+    {
+      section: t("section.first.links.career"),
+      href: getLocalizedPath(ROUTER_CAREER, locale),
+    },
   ];
   return (
     <>
