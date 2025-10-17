@@ -12,7 +12,7 @@ const AIForBusinessPage = () => {
   const metaTagData = {
     title: `${t("heroSection.title")} | Udata.ai`,
     desc: t("heroSection.desc"),
-    img: "/image/hero/solar-pv.webp",
+    img: "/image/hero/ai-business-pv.webp",
   };
   return (
     <>
