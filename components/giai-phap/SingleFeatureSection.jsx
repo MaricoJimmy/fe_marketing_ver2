@@ -19,7 +19,7 @@ function SingleFeatureSection({
             src={data.img}
             layout="fill"
             alt=""
-            className="object-cover object-left"
+            className="object-cover object-left rounded-sm"
           />
         </div>
         <div
