@@ -10,6 +10,8 @@ function HeroSection({ video = "", labelBtn = "" }) {
         autoPlay
         loop
         muted
+        playsInline
+        popover="false"
       >
         <source src={video} type="video/mp4" />
       </video>

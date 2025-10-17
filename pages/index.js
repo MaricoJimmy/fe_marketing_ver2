@@ -81,7 +81,7 @@ const HomePage = () => {
             </div>
           </div>
         </section>
-        {/* features */}
+        {/* list products */}
         <section className="w-full flex justify-center items-center">
           <div className="px-5 py-20 md:px-8 lg:py-36 max-w-screen-xl w-full">
             <h2
@@ -90,7 +90,7 @@ const HomePage = () => {
             >
               {t("solutions.title")}
             </h2>
-            <ul className="mt-6 flex items-center gap-6">
+            <ul className="mt-6 flex md:flex-row flex-col items-center gap-6">
               {Object.entries(t.raw("solutions.list"))
                 .map(([key, value]) => ({
                   key: key,
