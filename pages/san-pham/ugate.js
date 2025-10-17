@@ -24,8 +24,8 @@ const UgateLandingPage = () => {
       <div className="pb-14">
         {/* hero section */}
         <HeroSection
-          video="/videos/ugate.mp4"
-          labelBtn={t("heroSection.contact")}
+          logo="/image/products/ugate/ugate-logo.webp"
+          data={t.raw("heroSection")}
         />
 
         {/* các tính năng chính */}

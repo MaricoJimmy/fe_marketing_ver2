@@ -22,7 +22,7 @@ function HighLightFeature({ data, isCustom = false, custom }) {
           data-aos-delay="200"
           className="p-6 flex justify-center bg-white border-t-2 border-primary rounded-lg shadow-lg"
         >
-          <div className="w-fit grid md:grid-cols-3 lg:gap-10 gap-4">
+          <div className="w-fit grid lg:grid-cols-3 md:grid-cols-2 lg:gap-10 gap-4">
             {data.lists.map((content, index) => (
               <div
                 key={content.id}

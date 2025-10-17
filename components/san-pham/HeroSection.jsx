@@ -1,28 +1,28 @@
 import { useRouter } from "next/router";
 import { Button } from "../ui/button";
+import Image from "next/image";
 
-function HeroSection({ video = "", labelBtn = "" }) {
+function HeroSection({ logo = "", data = {} }) {
+  console.log("🚀 ~ HeroSection ~ data:", data);
   const router = useRouter();
   return (
-    <div className="relative">
-      <video
-        className="w-full h-auto aspect-video object-contain"
-        autoPlay
-        loop
-        muted
-        playsInline
-        popover="false"
-      >
-        <source src={video} type="video/mp4" />
-      </video>
-      <Button
-        className="absolute md:bottom-1/3 bottom-10 lg:left-[80px] left-[25px] lg:w-[180px] md:w-[140px] lg:h-[50px] bg-[#66FDFF] md:text-lg text-neutral rounded-full font-semibold shadow-lg"
-        data-aos="fade-right"
-        data-aos-delay="300"
-        onClick={() => router.push("/dung-thu")}
-      >
-        {labelBtn}
-      </Button>
+    <div className="lg:px-10 px-4 lg:py-32 md:py-24 py-10 h-screen w-full bg-[url('/image/hero/bg-product.webp')] bg-center bg-cover bg-no-repeat flex items-center justify-center">
+      <div className="flex flex-col items-center">
+        <Image src={logo} alt="Logo" width={200} height={120} />
+        <h1 className="mt-4 text-4xl text-center text-transparent bg-gradient-to-r from-[#009CFA] to-[#081682] bg-clip-text font-semibold">
+          {data.heading}
+        </h1>
+        <h3 className="mt-4 text-lg text-center text-[#081682] font-medium">
+          {data.excerpt}
+        </h3>
+        <Button
+          size="lg"
+          className="mt-6 shadow-md"
+          onClick={() => router.push("/dung-thu")}
+        >
+          {data.contact}
+        </Button>
+      </div>
     </div>
   );
 }

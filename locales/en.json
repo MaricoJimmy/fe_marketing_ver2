@@ -819,7 +819,7 @@
   },
   "Uboard": {
     "heroSection": {
-      "heading": "Uboard",
+      "heading": "Welcome to Uboard",
       "excerpt": "Centralized data monitoring – Quick decisions, standard operations",
       "color": "blue",
       "contact": "Try now"
@@ -929,7 +929,7 @@
   },
   "Ugate": {
     "heroSection": {
-      "heading": "Ugate",
+      "heading": "Welcome to Ugate",
       "excerpt": "Smart technical support & AI for businesses",
       "color": "blue",
       "contact": "Try now"
@@ -1023,7 +1023,7 @@
   },
   "Uzero": {
     "heroSection": {
-      "heading": "Uzero",
+      "heading": "Welcome to Uzero",
       "excerpt": "Emission calculation – Towards Net Zero 2050 enterprises",
       "color": "blue",
       "contact": "Try now"
@@ -1098,18 +1098,18 @@
     "questions": {
       "title": "Frequently Asked Questions",
       "list": [
-      {
-        "question": "How can Uzero help Vietnamese businesses comply with international regulations and the upcoming CBAM mechanism?",
-        "answer": "Uzero is launched in collaboration with Zeroboard (Japan's leading environmental technology company), supporting businesses to calculate, visualize, and manage greenhouse gas (GHG) emissions by Scope 1, 2, and 3. The platform automatically exports reports according to international standards and compliance requirements such as ISO 14064, ESG, CDP, and CBAM."
-      },
-      {
-        "question": "Is Scope 2 emission calculation automated?",
-        "answer": "Yes, Uzero is a greenhouse gas management platform with automated emission calculation features."
-      },
-      {
-        "question": "How are emission data managed and analyzed to move towards Net Zero?",
-        "answer": "Uzero provides emission data analysis (towards Net Zero), helping businesses incorporate emission data into their sustainability roadmap and achieve ESG goals."
-      }
+        {
+          "question": "How can Uzero help Vietnamese businesses comply with international regulations and the upcoming CBAM mechanism?",
+          "answer": "Uzero is launched in collaboration with Zeroboard (Japan's leading environmental technology company), supporting businesses to calculate, visualize, and manage greenhouse gas (GHG) emissions by Scope 1, 2, and 3. The platform automatically exports reports according to international standards and compliance requirements such as ISO 14064, ESG, CDP, and CBAM."
+        },
+        {
+          "question": "Is Scope 2 emission calculation automated?",
+          "answer": "Yes, Uzero is a greenhouse gas management platform with automated emission calculation features."
+        },
+        {
+          "question": "How are emission data managed and analyzed to move towards Net Zero?",
+          "answer": "Uzero provides emission data analysis (towards Net Zero), helping businesses incorporate emission data into their sustainability roadmap and achieve ESG goals."
+        }
       ]
     }
   },

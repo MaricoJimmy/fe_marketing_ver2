@@ -406,7 +406,7 @@ function HeaderMobile({ stickyHeader, locale }) {
         (stickyHeader === "is-sticky" &&
           "fixed top-0 drop-shadow-md bg-white") ||
         "relative"
-      } py-3 px-5 w-full bg-quaternary`}
+      } py-3 px-5 w-full bg-quaternary border-b border-gray/10 `}
     >
       <div className="flex items-center justify-between">
         <Link href="/">

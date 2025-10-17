@@ -82,19 +82,31 @@ const ContactPage = () => {
           <div className="px-5 py-8 max-w-screen-xl w-full">
             <div className="grid grid-cols-12 lg:gap-16 md:gap-14 gap-8">
               <div className="w-full h-full col-span-12 lg:col-span-6 bg-white">
-                <Title label={t("title")} className="text-start" />
+                <Title
+                  label={t("title")}
+                  className="text-start"
+                  data-aos="fade-right"
+                />
                 <h4
                   className="mt-4 text-neutral text-lg font-medium"
+                  data-aos="fade-right"
+                  data-aos-delay="100"
                   dangerouslySetInnerHTML={{ __html: t.raw("subTitle") }}
                 ></h4>
                 <div className="mt-4">
-                  <h4 className="text-neutral text-lg font-bold">
+                  <h4
+                    className="text-neutral text-lg font-bold"
+                    data-aos="fade-right"
+                    data-aos-delay="150"
+                  >
                     {t("discoveries.title")}
                   </h4>
                   <ul className="mt-4 grid md:grid-cols-2 gap-4">
-                    {t.raw("discoveries.list").map((item) => (
+                    {t.raw("discoveries.list").map((item, index) => (
                       <li
                         key={item.title}
+                        data-aos="fade-up"
+                        data-aos-delay={`${100 + index * 50}`}
                         className="flex-1 p-4 flex flex-col gap-4 bg-gray/5 rounded-lg"
                       >
                         {/* <div>
@@ -113,6 +125,8 @@ const ContactPage = () => {
               </div>
               <div
                 id="form-contact"
+                data-aos="fade-up"
+                data-aos-delay="100"
                 className="w-full h-full col-span-12 lg:col-span-6 border border-gray/20 rounded-lg"
               >
                 <div className="p-6">

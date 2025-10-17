@@ -22,8 +22,8 @@ const UzeroLandingPage = () => {
       <div className="pb-14">
         {/* hero section */}
         <HeroSection
-          video="/videos/uzero.mp4"
-          labelBtn={t("heroSection.contact")}
+          logo="/image/products/uzero/uzero-logo.webp"
+          data={t.raw("heroSection")}
         />
 
         {/* các tính năng chính */}

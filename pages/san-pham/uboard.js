@@ -21,8 +21,8 @@ const UboardLandingPage = () => {
       <div className="pb-14">
         {/* hero section */}
         <HeroSection
-          video="/videos/uboard.mp4"
-          labelBtn={t("heroSection.contact")}
+          logo="/image/products/uboard/uboard-logo.webp"
+          data={t.raw("heroSection")}
         />
 
         {/* các tính năng chính */}
