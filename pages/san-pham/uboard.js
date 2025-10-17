@@ -5,6 +5,7 @@ import WhyChooseUs from "@/components/san-pham/WhyChooseUs";
 import { useTranslations } from "next-intl";
 import PageSeoHead from "../../components/common/PageSeoHead";
 import HighLightFeature from "../../components/san-pham/HighLightFeature";
+import Questions from "@/components/san-pham/Questions";
 
 const UboardLandingPage = () => {
   const t = useTranslations("Uboard");
@@ -53,6 +54,13 @@ const UboardLandingPage = () => {
         <SingleFeatureSection data={t.raw("singleFeature.third")} />
         {/* fourth feature */}
         <SingleFeatureSection isReverse data={t.raw("singleFeature.fourth")} />
+
+        {/* questions */}
+        <Questions
+          title={t("questions.title")}
+          data={t.raw("questions.list")}
+          img="/image/Q&A.webp"
+        />
 
         {/* scroll to top button */}
         <div className="fixed bottom-24 right-7 z-10">

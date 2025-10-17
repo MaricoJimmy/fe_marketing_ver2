@@ -26,11 +26,14 @@ function Questions({ data, img, title }) {
             <div className="col-span-7">
               <Accordion type="single" collapsible>
                 {data.map((item, index) => (
-                  <AccordionItem key={item.ask} value={`item-${index + 1}`}>
-                    <AccordionTrigger className="font-semibold">
-                      {item.ask}
+                  <AccordionItem
+                    key={item.question}
+                    value={`item-${index + 1}`}
+                  >
+                    <AccordionTrigger className="font-semibold text-neutral">
+                      {item.question}
                     </AccordionTrigger>
-                    <AccordionContent className="font-medium text-justify">
+                    <AccordionContent className="text-justify text-neutral">
                       {item.answer}
                     </AccordionContent>
                   </AccordionItem>

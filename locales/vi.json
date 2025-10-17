@@ -908,6 +908,23 @@
           "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevrons-left-right'><path d=\"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z\"/><path d=\"m9 12 2 2 4-4\"/></svg>"
         }
       ]
+    },
+    "questions": {
+      "title": "Câu hỏi thường gặp",
+      "list": [
+        {
+          "question": "Uboard có thể kết nối với những loại thiết bị và hệ thống nào của doanh nghiệp?",
+          "answer": "Uboard tích hợp linh hoạt, hỗ trợ kết nối với nhiều nguồn dữ liệu như đồng hồ đo điện/nước, Data Logger/bộ lưu trữ dữ liệu, PLC/bộ điều khiển, Sensors/cảm biến, VFDs/biến tần, và cả hệ thống ERP/HRM. Nền tảng hỗ trợ các giao thức chuẩn như Modbus RTU/TCP, OPC UA, Open API, và kết nối với SCADA, BMS, IoT."
+        },
+        {
+          "question": "Tính năng cảnh báo thông minh của Uboard hoạt động như thế nào?",
+          "answer": "Uboard cung cấp Cảnh báo thông minh bằng cách phát hiện bất thường , dự đoán sự cố, và cảnh báo bảo trì qua SMS/Email/Ứng dụng."
+        },
+        {
+          "question": "Uboard đảm bảo dữ liệu không bị mất khi có sự cố mất kết nối mạng (Internet, 4G/5G) tại nhà máy không?",
+          "answer": "Có, thông qua Udata Gateway, dữ liệu vẫn được lưu trữ khi mất kết nối mạng nhờ chức năng Đệm dữ liệu (Data Buffering). Uboard cũng lưu trữ dữ liệu trong 30 ngày khi mất kết nối"
+        }
+      ]
     }
   },
   "Ugate": {
@@ -989,6 +1006,19 @@
           "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevrons-left-right'><path d=\"M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z\"/></svg>"
         }
       ]
+    },
+    "questions": {
+      "title": "Câu hỏi thường gặp",
+      "list": [
+        {
+          "question": "Các chức năng AI trong Ugate cụ thể là gì và mang lại lợi ích gì cho việc vận hành?",
+          "answer": "Hệ thống AI trong Udata (bao gồm Ugate) bao gồm: Trợ lý AI Phân tích dữ liệu (Phát hiện bất thường và cảnh báo sớm), Trợ lý AI Dự đoán (Dự báo giá trị dữ liệu trong ngắn hạn hoặc dài hạn), và Trợ lý AI Báo cáo (Tối ưu hóa vận hành và hỗ trợ ra quyết định)."
+        },
+        {
+          "question": "Ugate hỗ trợ quy trình kỹ thuật và vận hành như thế nào?",
+          "answer": "Ugate là Trợ lý AI kỹ thuật và vận hành, có các tính năng cốt lõi là Truy vấn AI, Ticket và Tri thức kỹ thuật"
+        }
+      ]
     }
   },
   "Uzero": {
@@ -1062,6 +1092,23 @@
           "title": "An toàn, dễ mở rộng",
           "content": "Bảo mật cao, linh hoạt khi doanh nghiệp phát triển.",
           "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevrons-left-right'><path d=\"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z\"/></svg>"
+        }
+      ]
+    },
+    "questions": {
+      "title": "Câu hỏi thường gặp",
+      "list": [
+        {
+          "question": "Uzero có thể giúp doanh nghiệp Việt Nam tuân thủ các quy định quốc tế và Cơ chế CBAM sắp tới như thế nào?",
+          "answer": "Uzero được ra mắt thông qua hợp tác với Zeroboard (công ty công nghệ môi trường hàng đầu Nhật Bản), hỗ trợ các doanh nghiệp tính toán, trực quan hóa và quản lý phát thải khí nhà kính (GHG) theo Phạm vi 1, 2 và 3. Nền tảng hỗ trợ tự động xuất báo cáo theo các tiêu chuẩn quốc tế và yêu cầu tuân thủ như ISO 14064, ESG, CDP và CBAM."
+        },
+        {
+          "question": "Việc tính toán phát thải Scope 2 có được tự động hóa không?",
+          "answer": "Có, Uzero là một nền tảng quản lý phát thải khí nhà kính có tính năng tự động tính toán phát thải."
+        },
+        {
+          "question": "Dữ liệu phát thải được quản lý và phân tích như thế nào để tiến tới Net Zero?",
+          "answer": "Uzero có chức năng Phân tích số liệu phát thải (tiến tới Net Zero) , giúp doanh nghiệp đưa dữ liệu phát thải vào lộ trình bền vững và đạt mục tiêu ESG."
         }
       ]
     }

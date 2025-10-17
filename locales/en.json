@@ -908,6 +908,23 @@
           "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevrons-left-right'><path d=\"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z\"/><path d=\"m9 12 2 2 4-4\"/></svg>"
         }
       ]
+    },
+    "questions": {
+      "title": "Frequently Asked Questions",
+      "list": [
+        {
+          "question": "What types of devices and systems can Uboard connect to in an enterprise?",
+          "answer": "Uboard offers flexible integration, supporting connections to various data sources such as electricity/water meters, Data Loggers, PLC/controllers, sensors, VFDs, and even ERP/HRM systems. The platform supports standard protocols like Modbus RTU/TCP, OPC UA, Open API, and connects with SCADA, BMS, IoT."
+        },
+        {
+          "question": "How does Uboard's smart alert feature work?",
+          "answer": "Uboard provides smart alerts by detecting anomalies, predicting failures, and sending maintenance notifications via SMS/Email/App."
+        },
+        {
+          "question": "Does Uboard ensure data is not lost during network outages (Internet, 4G/5G) at the factory?",
+          "answer": "Yes, through Udata Gateway, data is still stored during network outages thanks to Data Buffering. Uboard also stores data for 30 days when disconnected."
+        }
+      ]
     }
   },
   "Ugate": {
@@ -989,6 +1006,19 @@
           "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevrons-left-right'><path d=\"M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z\"/></svg>"
         }
       ]
+    },
+    "questions": {
+      "title": "Frequently Asked Questions",
+      "list": [
+        {
+          "question": "What specific AI features does Ugate offer and how do they benefit operations?",
+          "answer": "The AI system in Udata (including Ugate) includes: AI Data Analysis Assistant (detects anomalies and provides early warnings), AI Prediction Assistant (forecasts data values in the short or long term), and AI Reporting Assistant (optimizes operations and supports decision-making)."
+        },
+        {
+          "question": "How does Ugate support technical and operational workflows?",
+          "answer": "Ugate is an AI assistant for technical and operational tasks, with core features including AI Query, Ticket Management, and Technical Knowledge Base."
+        }
+      ]
     }
   },
   "Uzero": {
@@ -1063,6 +1093,23 @@
           "content": "High security, flexible as your business grows.",
           "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevrons-left-right'><path d=\"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z\"/></svg>"
         }
+      ]
+    },
+    "questions": {
+      "title": "Frequently Asked Questions",
+      "list": [
+      {
+        "question": "How can Uzero help Vietnamese businesses comply with international regulations and the upcoming CBAM mechanism?",
+        "answer": "Uzero is launched in collaboration with Zeroboard (Japan's leading environmental technology company), supporting businesses to calculate, visualize, and manage greenhouse gas (GHG) emissions by Scope 1, 2, and 3. The platform automatically exports reports according to international standards and compliance requirements such as ISO 14064, ESG, CDP, and CBAM."
+      },
+      {
+        "question": "Is Scope 2 emission calculation automated?",
+        "answer": "Yes, Uzero is a greenhouse gas management platform with automated emission calculation features."
+      },
+      {
+        "question": "How are emission data managed and analyzed to move towards Net Zero?",
+        "answer": "Uzero provides emission data analysis (towards Net Zero), helping businesses incorporate emission data into their sustainability roadmap and achieve ESG goals."
+      }
       ]
     }
   },

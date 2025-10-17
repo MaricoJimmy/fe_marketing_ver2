@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import PageSeoHead from "../../components/common/PageSeoHead";
 import HighLightFeature from "../../components/san-pham/HighLightFeature";
 import HeroSection from "@/components/san-pham/HeroSection";
+import Questions from "@/components/san-pham/Questions";
 
 const UgateLandingPage = () => {
   const t = useTranslations("Ugate");
@@ -52,6 +53,13 @@ const UgateLandingPage = () => {
         <SingleFeatureSection data={t.raw("singleFeature.first")} />
         {/* second feature */}
         <SingleFeatureSection isReverse data={t.raw("singleFeature.second")} />
+
+        {/* questions */}
+        <Questions
+          title={t("questions.title")}
+          data={t.raw("questions.list")}
+          img="/image/Q&A.webp"
+        />
 
         {/* scroll to top button */}
         <div className="fixed bottom-24 right-7 z-10">

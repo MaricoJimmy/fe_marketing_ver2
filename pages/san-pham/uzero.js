@@ -6,6 +6,7 @@ import PageSeoHead from "../../components/common/PageSeoHead";
 import HighLightFeature from "../../components/san-pham/HighLightFeature";
 import HeroSection from "@/components/san-pham/HeroSection";
 import { Button } from "@/components/ui/button";
+import Questions from "@/components/san-pham/Questions";
 
 const UzeroLandingPage = () => {
   const t = useTranslations("Uzero");
@@ -48,6 +49,13 @@ const UzeroLandingPage = () => {
 
         {/* first feature */}
         <SingleFeatureSection data={t.raw("singleFeature.first")} />
+
+        {/* questions */}
+        <Questions
+          title={t("questions.title")}
+          data={t.raw("questions.list")}
+          img="/image/Q&A.webp"
+        />
 
         {/* scroll to top button */}
         <div className="fixed bottom-24 right-7 z-10">

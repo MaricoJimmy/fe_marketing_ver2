@@ -908,6 +908,23 @@
           "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevrons-left-right'><path d=\"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z\"/><path d=\"m9 12 2 2 4-4\"/></svg>"
         }
       ]
+    },
+    "questions": {
+      "title": "よくある質問",
+      "list": [
+        {
+          "question": "Uboardは企業のどのような機器やシステムと接続できますか？",
+          "answer": "Uboardは柔軟に統合でき、電力・水道メーター、データロガー、PLC（制御装置）、センサー、VFD（インバーター）、ERP/HRMシステムなど多様なデータソースと接続可能です。Modbus RTU/TCP、OPC UA、Open APIなどの標準プロトコルやSCADA、BMS、IoTとも連携できます。"
+        },
+        {
+          "question": "Uboardのスマート警告機能はどのように動作しますか？",
+          "answer": "Uboardは異常検知、故障予測、保守警告をSMS・メール・アプリ通知で提供するスマート警告機能を備えています。"
+        },
+        {
+          "question": "Uboardは工場でインターネットや4G/5G接続が途切れた場合でもデータ損失を防げますか？",
+          "answer": "はい。Udata Gatewayのデータバッファ機能により、ネットワーク障害時もデータを保存します。Uboardは接続が途切れても30日間データを保持します。"
+        }
+      ]
     }
   },
   "Ugate": {
@@ -989,6 +1006,19 @@
           "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevrons-left-right'><path d=\"M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z\"/></svg>"
         }
       ]
+    },
+    "questions": {
+      "title": "よくある質問",
+      "list": [
+        {
+          "question": "UgateのAI機能にはどのようなものがあり、運用にどんなメリットがありますか？",
+          "answer": "Udata（Ugateを含む）のAIシステムには、AIアシスタントによるデータ分析（異常検知・早期警告）、AIアシスタントによる予測（短期・長期データ予測）、AIアシスタントによるレポート（運用最適化・意思決定支援）などがあります。"
+        },
+        {
+          "question": "Ugateは技術・運用プロセスをどのようにサポートしますか？",
+          "answer": "Ugateは技術・運用向けAIアシスタントであり、主な機能はAIクエリ、チケット管理、技術ナレッジ管理です。"
+        }
+      ]
     }
   },
   "Uzero": {
@@ -1062,6 +1092,23 @@
           "title": "安全・拡張性",
           "content": "高いセキュリティと企業成長に合わせた柔軟な拡張性",
           "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevrons-left-right'><path d=\"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z\"/></svg>"
+        }
+      ]
+    },
+    "questions": {
+      "title": "よくある質問",
+      "list": [
+        {
+          "question": "Uzeroはベトナム企業が国際規制や今後のCBAMメカニズムにどのように対応するのに役立ちますか？",
+          "answer": "Uzeroは日本の環境テクノロジー大手Zeroboardとの協業で提供され、企業がScope 1、2、3に基づき温室効果ガス（GHG）排出量を計算・可視化・管理できます。プラットフォームはISO 14064、ESG、CDP、CBAMなど国際基準・コンプライアンス要件に準拠した自動レポート出力をサポートします。"
+        },
+        {
+          "question": "Scope 2排出量の計算は自動化されていますか？",
+          "answer": "はい、Uzeroは温室効果ガス排出管理プラットフォームとして自動計算機能を備えています。"
+        },
+        {
+          "question": "排出データはNet Zero達成に向けてどのように管理・分析されますか？",
+          "answer": "Uzeroは排出データ分析機能（Net Zero達成支援）を提供し、企業が排出データを持続可能なロードマップに組み込み、ESG目標達成を支援します。"
         }
       ]
     }
