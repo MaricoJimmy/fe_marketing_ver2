@@ -56,11 +56,6 @@ const UzeroLandingPage = () => {
           data={t.raw("questions.list")}
           img="/image/Q&A.webp"
         />
-
-        {/* scroll to top button */}
-        <div className="fixed bottom-24 right-7 z-10">
-          <ScrollToTop />
-        </div>
       </div>
     </>
   );
