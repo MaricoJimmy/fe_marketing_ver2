@@ -19,17 +19,6 @@
   # (khuyến nghị) bỏ devDependencies khi cài trong CI để build nhẹ hơn
   NPM_FLAGS = "--omit=dev"
 
-[[plugins]]
-  # Plugin Next.js chính thức của Netlify
-  package = "@netlify/plugin-nextjs"
-
-
-# (tuỳ chọn) Cấu hình khi chạy `netlify dev`
-[dev]
-  command = "npm run dev"
-  port = 8888
-  targetPort = 3000
-  framework = "next"
 
 # ====== Tuỳ CHỌN nếu muốn tắt tối ưu ảnh runtime (giảm rủi ro lỗi _ipx) ======
 # Bật 1 trong 2 cách sau (khuyên dùng thêm biến môi trường NEXT_DISABLE_IPX=1 trong Netlify UI)
