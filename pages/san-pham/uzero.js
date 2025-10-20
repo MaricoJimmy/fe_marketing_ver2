@@ -1,12 +1,10 @@
-import ScrollToTop from "@/components/common/ScrollToTop";
 import SingleFeatureSection from "@/components/giai-phap/SingleFeatureSection";
+import HeroSection from "@/components/san-pham/HeroSection";
+import Questions from "@/components/san-pham/Questions";
 import WhyChooseUs from "@/components/san-pham/WhyChooseUs";
 import { useTranslations } from "next-intl";
 import PageSeoHead from "../../components/common/PageSeoHead";
 import HighLightFeature from "../../components/san-pham/HighLightFeature";
-import HeroSection from "@/components/san-pham/HeroSection";
-import { Button } from "@/components/ui/button";
-import Questions from "@/components/san-pham/Questions";
 
 const UzeroLandingPage = () => {
   const t = useTranslations("Uzero");

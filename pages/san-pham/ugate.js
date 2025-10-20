@@ -1,13 +1,11 @@
-import ScrollToTop from "@/components/common/ScrollToTop";
 import SingleFeatureSection from "@/components/giai-phap/SingleFeatureSection";
+import HeroSection from "@/components/san-pham/HeroSection";
+import Questions from "@/components/san-pham/Questions";
 import WhyChooseUs from "@/components/san-pham/WhyChooseUs";
-import { Button } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/router";
 import PageSeoHead from "../../components/common/PageSeoHead";
 import HighLightFeature from "../../components/san-pham/HighLightFeature";
-import HeroSection from "@/components/san-pham/HeroSection";
-import Questions from "@/components/san-pham/Questions";
 
 const UgateLandingPage = () => {
   const t = useTranslations("Ugate");

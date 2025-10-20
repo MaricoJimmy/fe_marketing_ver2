@@ -1,0 +1,37 @@
+# netlify.toml — đặt ở thư mục gốc dự án
+
+[build]
+  # Đổi lệnh theo package manager bạn dùng:
+  # npm:    "npm run build"
+  # yarn:   "yarn build"
+  # pnpm:   "pnpm build"
+  command = "npm run build"
+
+  # Thư mục output do Next.js tạo, để plugin xử lý deploy
+  publish = ".next"
+
+  # (tuỳ chọn) Nơi đặt Netlify Functions nếu bạn có functions tự viết
+  functions = "netlify/functions"
+
+[build.environment]
+  # Buộc Netlify dùng Node 18 cho build
+  NODE_VERSION = "18"
+  # (khuyến nghị) bỏ devDependencies khi cài trong CI để build nhẹ hơn
+  NPM_FLAGS = "--omit=dev"
+
+[[plugins]]
+  # Plugin Next.js chính thức của Netlify
+  package = "@netlify/plugin-nextjs"
+
+
+# (tuỳ chọn) Cấu hình khi chạy `netlify dev`
+[dev]
+  command = "npm run dev"
+  port = 8888
+  targetPort = 3000
+  framework = "next"
+
+# ====== Tuỳ CHỌN nếu muốn tắt tối ưu ảnh runtime (giảm rủi ro lỗi _ipx) ======
+# Bật 1 trong 2 cách sau (khuyên dùng thêm biến môi trường NEXT_DISABLE_IPX=1 trong Netlify UI)
+# [template.environment]
+#   NEXT_DISABLE_IPX = "1"

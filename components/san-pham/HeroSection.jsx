@@ -3,7 +3,6 @@ import { Button } from "../ui/button";
 import Image from "next/image";
 
 function HeroSection({ logo = "", data = {} }) {
-  console.log("🚀 ~ HeroSection ~ data:", data);
   const router = useRouter();
   return (
     <div className="lg:px-10 px-4 lg:py-32 md:py-24 py-10 h-screen w-full bg-[url('/image/hero/bg-product.webp')] bg-center bg-cover bg-no-repeat flex items-center justify-center">
