@@ -21,7 +21,7 @@ function Social() {
     },
   ];
   return (
-    <div className="fixed bottom-24 right-4 z-[900] flex flex-col gap-2">
+    <div className="fixed bottom-4 right-4 z-[900] flex flex-col gap-2">
       {socials.map((social, index) => (
         <Link key={index} href={social.url} className="">
           <a
