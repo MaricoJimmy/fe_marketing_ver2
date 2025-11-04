@@ -1,6 +1,5 @@
-import ScrollToTop from "@/components/common/ScrollToTop";
 import { Button } from "@/components/ui/button";
-import { getDate, getLocalizedPath } from "@/utils";
+import { getLocalizedPath } from "@/utils";
 import { ROUTER_CONTACT } from "@/utils/constant";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -183,10 +182,6 @@ const HomePage = () => {
             </ul>
           </div>
         </section>
-
-        <div className="fixed bottom-24 right-7 z-10">
-          <ScrollToTop />
-        </div>
       </div>
     </>
   );
