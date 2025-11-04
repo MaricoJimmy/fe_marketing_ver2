@@ -1,23 +1,48 @@
 import Image from "next/image";
 import Link from "next/link";
-import React, { useState, useRef, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
+
+const useIsMobile = (breakpoint = 768) => {
+  // Khởi tạo state, mặc định là false (desktop)
+  // Sẽ được cập nhật chính xác khi component mount phía client
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Hàm này chỉ chạy ở client (nơi có 'window')
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < breakpoint);
+    };
+
+    // Kiểm tra ngay khi component mount
+    checkScreenSize();
+
+    // Thêm event listener để theo dõi khi thay đổi kích thước cửa sổ
+    window.addEventListener("resize", checkScreenSize);
+
+    // Dọn dẹp event listener khi component unmount
+    return () => window.removeEventListener("resize", checkScreenSize);
+  }, [breakpoint]); // Chỉ chạy lại effect nếu breakpoint thay đổi
+
+  return isMobile;
+};
+// --- END: Hook ---
 
 // --- START: Cấu hình các số điện thoại bạn muốn ---
 const phoneContacts = [
   {
-    name: "Sale 1", // Tên hiển thị
-    phone: "0903909431", // SĐT
-    position: "bottom-[5.5rem] right-[0.5rem] rotate-[75deg]", // 88px bottom, 8px right
+    name: "0903 909 431", // Tên hiển thị
+    phone: "0903909431", // SĐT (không có dấu cách)
+    position: "bottom-[6.5rem] right-[0.5rem] rotate-[75deg]",
   },
   {
-    name: "Sale 2",
+    name: "0335 754 033",
     phone: "0335754033",
-    position: "bottom-[3.5rem] right-[3.5rem] rotate-[45deg]", // 56px bottom, 56px right
+    position: "bottom-[4.5rem] right-[3.5rem] rotate-[45deg]",
   },
   {
-    name: "Sale 3",
+    name: "0903 344 470",
     phone: "0903344470",
-    position: "bottom-[0.5rem] right-[5.5rem]", // 8px bottom, 88px right
+    position: "bottom-[0.5rem] right-[5.5rem]",
   },
 ];
 // --- END: Cấu hình ---
@@ -46,6 +71,9 @@ function Social() {
   const [isPhoneMenuOpen, setIsPhoneMenuOpen] = useState(false);
   const phoneMenuRef = useRef(null);
 
+  // 👇 SỬ DỤNG HOOK MỚI
+  const isMobile = useIsMobile();
+
   // Hook xử lý "click outside"
   useEffect(() => {
     function handleClickOutside(event) {
@@ -70,6 +98,14 @@ function Social() {
   // Style cho hiệu ứng transition
   const transitionBaseStyle = "transition-all duration-300 ease-in-out";
 
+  // 👇 HÀM MỚI: Xử lý copy SĐT cho desktop
+  const handleDesktopPhoneClick = (e, phone, name) => {
+    e.stopPropagation(); // Ngăn menu đóng lại
+    navigator.clipboard.writeText(phone);
+    // Tùy chọn: Bạn có thể dùng toast (thông báo) ở đây thay vì alert
+    alert(`Đã sao chép SĐT: ${name} (${phone})`);
+  };
+
   return (
     <div className="fixed bottom-4 right-4 z-[900] flex flex-col gap-2 items-end">
       {/* Render các nút social (FB, Zalo) */}
@@ -92,13 +128,9 @@ function Social() {
         </Link>
       ))}
 
-      {/* Phần Phone Menu mới 
-        - div cha là 'relative' để các con 'absolute'
-        - w-[56px] h-[56px] bằng kích thước nút phone
-      */}
+      {/* Phần Phone Menu mới */}
       <div className="relative w-[56px] h-[56px]" ref={phoneMenuRef}>
         {/* Nút Phone (dùng <button> để toggle) */}
-        {/* Nút này phải là 'absolute' để các nút con có thể bung ra từ cùng 1 vị trí */}
         <button
           type="button"
           onClick={() => setIsPhoneMenuOpen((prev) => !prev)}
@@ -112,27 +144,45 @@ function Social() {
           />
         </button>
 
-        {/* Các nút SĐT (chỉ hiện khi isPhoneMenuOpen=true) */}
-        {phoneContacts.map((contact) => (
-          <Link key={contact.name} href={`tel:${contact.phone}`}>
-            <a
-              className={`
-                ${contactLinkBaseStyle} 
-                ${transitionBaseStyle}
-                absolute z-10
-                ${
-                  isPhoneMenuOpen
-                    ? `opacity-100 ${contact.position}` // Bung ra vị trí đã định
-                    : "opacity-0 bottom-0 right-0" // Ẩn đi và thu về gốc
-                }
-              `}
-              // Ngăn click vào nút con làm đóng menu (do event bubbling)
-              onClick={(e) => e.stopPropagation()}
+        {/* 👇 SỬA ĐỔI CHỖ NÀY: Render có điều kiện */}
+        {phoneContacts.map((contact) => {
+          // Gom các class CSS chung lại
+          const contactClasses = `
+            ${contactLinkBaseStyle} 
+            ${transitionBaseStyle}
+            absolute z-10
+            ${
+              isPhoneMenuOpen
+                ? `opacity-100 ${contact.position}` // Bung ra vị trí đã định
+                : "opacity-0 bottom-0 right-0" // Ẩn đi và thu về gốc
+            }
+          `;
+
+          // Kiểm tra isMobile để render thẻ
+          return isMobile ? (
+            // === PHIÊN BẢN DI ĐỘNG (Bấm để gọi) ===
+            <Link key={contact.name} href={`tel:${contact.phone}`} passHref>
+              <a
+                className={contactClasses}
+                onClick={(e) => e.stopPropagation()}
+              >
+                {contact.name}
+              </a>
+            </Link>
+          ) : (
+            // === PHIÊN BẢN DESKTOP (Bấm để copy) ===
+            <span
+              key={contact.name}
+              className={`${contactClasses} cursor-pointer`} // Thêm cursor-pointer
+              title={`Bấm để sao chép SĐT: ${contact.phone}`} // Tooltip
+              // onClick={(e) =>
+              //   handleDesktopPhoneClick(e, contact.phone, contact.name)
+              // }
             >
               {contact.name}
-            </a>
-          </Link>
-        ))}
+            </span>
+          );
+        })}
       </div>
     </div>
   );
