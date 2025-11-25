@@ -204,7 +204,7 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
                 ) : null}
               </div>
 
-              {/* <div className="mt-8">
+              <div className="mt-8">
                 <Image
                   src={post?.featuredImage?.node?.mediaItemUrl}
                   width={1000}
@@ -212,7 +212,7 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
                   alt=""
                   className="rounded object-cover"
                 />
-              </div> */}
+              </div>
 
               <div
                 className="content-wrapper mt-6"
