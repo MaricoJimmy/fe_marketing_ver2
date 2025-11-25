@@ -193,12 +193,12 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
                   </p>
                   <SocialShare data={router.asPath} />
                 </div>
-                <h3
+                {/* <h3
                   className="mt-2 text-lg text-gray font-medium text-justify"
                   dangerouslySetInnerHTML={{ __html: post.excerpt }}
-                ></h3>
+                ></h3> */}
                 {tableOfContents && tableOfContents.length > 0 ? (
-                  <div className="mt-4">
+                  <div className="mt-2">
                     <TableOfContent headings={tableOfContents} />
                   </div>
                 ) : null}
