@@ -56,7 +56,10 @@ export async function getStaticProps({ params, locale }) {
   });
 
   const relatedPosts = items
-    .filter((item) => item.slug !== params.postSlug)
+    .filter(
+      (item) =>
+        item.slug !== params.postSlug && item.language.language === locale
+    )
     .slice(0, 5);
 
   const localePost = allNotiItems.find((postItem) => {
