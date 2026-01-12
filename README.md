@@ -1,34 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Project Overview: Udata.ai Marketing Website
 
-## Getting Started
+This is a modern marketing website for Udata.ai, built with Next.js and Tailwind CSS. The site is designed to introduce and promote AI & IoT solutions, products, and services, targeting a wide range of industries and customers.
 
-First, run the development server:
+## Main Pages & Structure
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+- **Homepage** (`/`):
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+  - Hero section with background image and call-to-action.
+  - List of main products/solutions with logos and links.
+  - Fields of application (industries, use cases).
+  - Customer showcase with logos.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- **About Us** (`/ve-cong-ty`):
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+  - Company introduction, mission, vision, and values.
+  - Team, achievements, and company images.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+- **Careers** (`/tuyen-dung`):
 
-## Learn More
+  - List of open positions, job descriptions, and application links.
 
-To learn more about Next.js, take a look at the following resources:
+- **Try Now / Contact** (`/dung-thu`):
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+  - Contact form for demo requests or inquiries.
+  - Collects user/company info, requirements, and interests.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- **Products** (`/san-pham/[product]`):
 
-## Deploy on Vercel
+  - Dedicated landing pages for each product (Uboard, Ugate, Uzero).
+  - Each page includes hero section, main features, benefits, and FAQs.
+  - Product images and feature highlights.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Solutions** (`/giai-phap/[solution]`):
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+  - Solution pages for AI Assistant, AI Business, EMS, GHG, OEE, Solar Rooftop, Elevator, etc.
+  - Each page covers problems, benefits, and main features with illustrations.
+
+- **Blog** (`/blog`):
+
+  - List of blog posts, articles, and news.
+  - Each post has its own detail page.
+
+- **Notifications** (`/thong-bao`):
+  - Announcements and updates for users.
+
+## Information & Images
+
+- Uses a variety of images for backgrounds, product logos, customer logos, and solution illustrations (see `public/image/`).
+- SEO optimized with meta tags for each page.
+- Multilingual support (EN, VI, JP, TH) via `locales/`.
+- Responsive design for desktop and mobile.
+
+## User Flow
+
+1. User lands on the homepage, learns about Udata.ai and its offerings.
+2. Navigates to product or solution pages for more details.
+3. Can view company info, blog, or announcements.
+4. Interested users can contact or request a demo via the Try Now page.
+5. Job seekers can view and apply for open positions.
+
+## Note on Viettel Network Blocking
+
+Due to access restrictions by the Viettel network when using Vercel or Netlify hosting, users in Vietnam may experience issues accessing the website. To resolve this, a reverse proxy is deployed on DigitalOcean (DO) to redirect requests, ensuring stable access for all users.
