@@ -5,39 +5,32 @@ This is a modern marketing website for Udata.ai, built with Next.js and Tailwind
 ## Main Pages & Structure
 
 - **Homepage** (`/`):
-
   - Hero section with background image and call-to-action.
   - List of main products/solutions with logos and links.
   - Fields of application (industries, use cases).
   - Customer showcase with logos.
 
 - **About Us** (`/ve-cong-ty`):
-
   - Company introduction, mission, vision, and values.
   - Team, achievements, and company images.
 
 - **Careers** (`/tuyen-dung`):
-
   - List of open positions, job descriptions, and application links.
 
 - **Try Now / Contact** (`/dung-thu`):
-
   - Contact form for demo requests or inquiries.
   - Collects user/company info, requirements, and interests.
 
 - **Products** (`/san-pham/[product]`):
-
   - Dedicated landing pages for each product (Uboard, Ugate, Uzero).
   - Each page includes hero section, main features, benefits, and FAQs.
   - Product images and feature highlights.
 
 - **Solutions** (`/giai-phap/[solution]`):
-
   - Solution pages for AI Assistant, AI Business, EMS, GHG, OEE, Solar Rooftop, Elevator, etc.
   - Each page covers problems, benefits, and main features with illustrations.
 
 - **Blog** (`/blog`):
-
   - List of blog posts, articles, and news.
   - Each post has its own detail page.
 
@@ -60,5 +53,60 @@ This is a modern marketing website for Udata.ai, built with Next.js and Tailwind
 5. Job seekers can view and apply for open positions.
 
 ## Note on Viettel Network Blocking
+
+## Getting Started
+
+### Prerequisites
+
+- [Node.js](https://nodejs.org/) (v16 or later recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+
+### Install dependencies
+
+```
+npm install
+# or
+yarn install
+```
+
+### Run the development server
+
+```
+npm run dev
+# or
+yarn dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view the site in your browser.
+
+### Build for production
+
+```
+npm run build
+# or
+yarn build
+```
+
+### Start the production server
+
+```
+npm start
+# or
+yarn start
+```
+
+### Lint the code
+
+```
+npm run lint
+# or
+yarn lint
+```
+
+### Deployment
+
+You can deploy this project to any platform that supports Node.js, such as Vercel, Netlify, or your own server. For best results, follow the platform's official Next.js deployment guide.
+
+---
 
 Due to access restrictions by the Viettel network when using Vercel or Netlify hosting, users in Vietnam may experience issues accessing the website. To resolve this, a reverse proxy is deployed on DigitalOcean (DO) to redirect requests, ensuring stable access for all users.
