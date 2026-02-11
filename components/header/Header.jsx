@@ -302,6 +302,13 @@ function HeaderMobile({ stickyHeader, locale }) {
 
   const currentPath = normalizePath(asPath);
 
+  useEffect(() => {
+    document.body.classList.toggle("mobile-menu-open", openMenu);
+    return () => {
+      document.body.classList.remove("mobile-menu-open");
+    };
+  }, [openMenu]);
+
   const isActiveLink = (href) => {
     const target = normalizePath(getLocalizedPath(href, locale));
     return currentPath === target || currentPath.startsWith(target + "/");

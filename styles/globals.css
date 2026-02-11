@@ -496,46 +496,84 @@ input[type="number"] {
   color: #0b32ef;
 }
 
-/* Keep external chat widget compact and pinned to bottom-right */
+/* Responsive chat widget layout (mobile/tablet/laptop/desktop) */
+:root {
+  --chat-widget-right: 12px;
+  --chat-widget-bottom: 12px;
+  --chat-widget-width: 420px;
+  --chat-widget-max-height: min(80vh, 620px);
+}
+
+@media (max-width: 639px) {
+  :root {
+    --chat-widget-right: 8px;
+    --chat-widget-bottom: 8px;
+    --chat-widget-width: calc(100vw - 16px);
+    --chat-widget-max-height: min(72vh, 520px);
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1023px) {
+  :root {
+    --chat-widget-right: 10px;
+    --chat-widget-bottom: 10px;
+    --chat-widget-width: min(88vw, 400px);
+    --chat-widget-max-height: min(76vh, 560px);
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+  :root {
+    --chat-widget-right: 12px;
+    --chat-widget-bottom: 12px;
+    --chat-widget-width: 420px;
+    --chat-widget-max-height: min(80vh, 620px);
+  }
+}
+
+@media (min-width: 1440px) {
+  :root {
+    --chat-widget-right: 16px;
+    --chat-widget-bottom: 16px;
+    --chat-widget-width: 460px;
+    --chat-widget-max-height: min(82vh, 680px);
+  }
+}
+
 #chat-widget-container,
-.chat-widget-container,
-div[id*="chat-widget"] {
+.chat-widget-container {
   position: fixed !important;
   left: auto !important;
   top: auto !important;
-  right: 12px !important;
-  bottom: 12px !important;
-  width: min(92vw, 420px) !important;
-  max-width: min(92vw, 420px) !important;
+  right: var(--chat-widget-right) !important;
+  bottom: var(--chat-widget-bottom) !important;
   z-index: 900 !important;
-  transform-origin: bottom right !important;
+  max-width: calc(100vw - (var(--chat-widget-right) * 2)) !important;
+  pointer-events: none !important;
+  touch-action: manipulation !important;
 }
 
 iframe[src*="mini.ugate.ai"] {
   position: fixed !important;
   left: auto !important;
   top: auto !important;
-  right: 12px !important;
-  bottom: 12px !important;
-  width: min(92vw, 420px) !important;
+  right: var(--chat-widget-right) !important;
+  bottom: var(--chat-widget-bottom) !important;
   z-index: 900 !important;
-  max-width: min(92vw, 420px) !important;
-  max-height: min(78vh, 560px) !important;
-}
-
-@media (min-width: 1024px) {
-  #chat-widget-container,
-  .chat-widget-container,
-  div[id*="chat-widget"] {
-    transform: scale(0.92) !important;
-  }
+  width: var(--chat-widget-width) !important;
+  max-width: calc(100vw - (var(--chat-widget-right) * 2)) !important;
+  max-height: var(--chat-widget-max-height) !important;
+  pointer-events: auto !important;
+  touch-action: manipulation !important;
 }
 
 @media (max-width: 1023px) {
-  #chat-widget-container,
-  .chat-widget-container,
-  div[id*="chat-widget"] {
-    transform: scale(0.82) !important;
+  body.mobile-menu-open #chat-widget-container,
+  body.mobile-menu-open .chat-widget-container,
+  body.mobile-menu-open iframe[src*="mini.ugate.ai"] {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
   }
 }
 
