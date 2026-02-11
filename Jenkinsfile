@@ -27,14 +27,14 @@ def loadEnvironmentVariables(String path) {
 def chooseEnvironmentForBranch(String branch) {
   switch(branch) {
     case 'staging':
-      return [environmentFile: 'deployment/udata/backend/environment/staging.yaml', baselineBranch: branch]
+      return [environmentFile: 'deployment/udata/frontend/environment/staging.yaml', baselineBranch: branch]
     case 'testing':
-      return [environmentFile: 'deployment/udata/backend/environment/testing.yaml', baselineBranch: branch]
+      return [environmentFile: 'deployment/udata/frontend/environment/testing.yaml', baselineBranch: branch]
     case 'production':
-      return [environmentFile: 'deployment/udata/backend/environment/production.yaml', baselineBranch: branch]
+      return [environmentFile: 'deployment/udata/frontend/environment/production.yaml', baselineBranch: branch]
     default:
       // default to develop and baseline main for feature branches
-      return [environmentFile: 'deployment/udata/backend/environment/develop.yaml', baselineBranch: 'main']
+      return [environmentFile: 'deployment/udata/frontend/environment/develop.yaml', baselineBranch: 'main']
   }
 }
 
