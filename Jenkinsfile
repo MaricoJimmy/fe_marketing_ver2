@@ -9,47 +9,46 @@ import adp.util.Util
 // Kubernetes kubernetes = new Kubernetes(this)
 Util util = new Util(this)
 
-// container/environment vars we load from the deployment YAML
-def clusterEnvs = [:]
+def clusterEnvs = []
 
-// Helper: load environment YAML and always return a Map (empty map if missing)
-def loadEnvironmentVariables(String path) {
+// Will be replaced by the environment-path of the current deployment
+String environmentFile = ''
+// What branch should be used as a baseline (i.e. for checks)?
+String baselineBranch
+// The name to use for tagging the image we build, prevents overwriting images of other branches
+String tagName = util.getSanitizedBranchName(env.BRANCH_NAME).toLowerCase().take(127) // Max tag length is 127 chars
+
+def loadEnvironmentVariables(path) {
   if (path) {
     echo "Loading clusterEnvs from path: ${path}"
-    def yaml = readYaml file: path
-    return yaml instanceof Map ? yaml : [:]
-  }
-  echo 'Not loading any env file due to empty file path.'
-  return [:]
-}
-
-// Helper: pick environment file and baseline branch for a given branch name
-def chooseEnvironmentForBranch(String branch) {
-  switch(branch) {
-    case 'staging':
-      return [environmentFile: 'deployment/udata/frontend/environment/staging.yaml', baselineBranch: branch]
-    case 'testing':
-      return [environmentFile: 'deployment/udata/frontend/environment/testing.yaml', baselineBranch: branch]
-    case 'production':
-      return [environmentFile: 'deployment/udata/frontend/environment/production.yaml', baselineBranch: branch]
-    default:
-      // default to develop and baseline main for feature branches
-      return [environmentFile: 'deployment/udata/frontend/environment/develop.yaml', baselineBranch: 'main']
+    readYaml file: path
+  } else {
+    echo 'Not loading any env file due to empty file path.'
   }
 }
 
-// sanitized tagName helper (keeps semantics but centralizes the logic)
-def computeTagName() {
-  def name = util.getSanitizedBranchName(env.BRANCH_NAME)
-  // keep previous behavior: lowercase and truncated to 127 chars for registry tag safety
-  return name.toLowerCase().take(127)
-}
+def isValidDeploymentBranch = env.BRANCH_NAME == 'main' || env.BRANCH_NAME == 'staging' || env.BRANCH_NAME == 'production' || env.BRANCH_NAME == 'testing'
 
-// Compute the environment selection and tag at script initialization so stages can use them
-def envInfo = chooseEnvironmentForBranch(env.BRANCH_NAME)
-def environmentFile = envInfo.environmentFile
-def baselineBranch = envInfo.baselineBranch
-def tagName = computeTagName()
+
+// Initialize deployment environment variables depending on the branch
+if (env.BRANCH_NAME == 'testing') {
+  environmentFile = 'deployment/udata/frontend/environment/testing.yaml'
+  baselineBranch = env.BRANCH_NAME
+} else if (env.BRANCH_NAME == 'staging') {
+  environmentFile = 'deployment/udata/frontend/environment/staging.yaml'
+  baselineBranch = env.BRANCH_NAME
+} else if (env.BRANCH_NAME == 'production') {
+  environmentFile = 'deployment/udata/frontend/environment/production.yaml'
+  baselineBranch = env.BRANCH_NAME
+// } else if (util.isPullRequest()) {
+//   environmentFile = './environment/privsc-d-001-hwd.yaml'
+//   baselineBranch = env.CHANGE_TARGET
+} else {
+  // Default to main for develope
+  environmentFile = 'deployment/udata/frontend/environment/develop.yaml'
+  baselineBranch = 'main'
+  tagName = util.getSanitizedBranchName(env.BRANCH_NAME)
+}
 
 pipeline {
   agent {
@@ -71,7 +70,7 @@ pipeline {
     skipDefaultCheckout() // Use custom Checkout SCM
   }
     triggers {
-        pollSCM('H/2 * * * *')
+        pollSCM('H/5 * * * *')
     }
   environment {
     GIT_DEPLOYMENT_CREDENTIAL_ID    = 'devops'
@@ -111,7 +110,7 @@ pipeline {
             imageName = "${clusterEnvs.container_registry}/${clusterEnvs.container_registry_repository}:${imageTag}".toLowerCase()
           }
           sh """
-          rsync -rtv ${clusterEnvs.rsyn_source} ${clusterEnvs.rsyn_destination}
+          rsync -rtv deployment/udata/frontend/overwrite/ source/
           """
         }
     }
@@ -141,16 +140,17 @@ pipeline {
                   sh """
                   helm upgrade -i ${clusterEnvs.helm_release}  ${clusterEnvs.helm_context} \
                     --set-string deployment.image.tag=${imageTag} \
-                    --set-string deployment.initContainers.prestart.image=${imageName} \
                     -f  ${clusterEnvs.helm_values} \
                     -n ${clusterEnvs.namespace} \
-                    --wait --timeout 3m0s 
+                    --wait --timeout 5m0s 
                   """
                 }
             }
         }
     }
+
   }
+
   post {
       always {
           echo 'Ok'
@@ -162,7 +162,7 @@ pipeline {
           echo 'I am unstable :/'
       }
       failure {
-          discordSend description: "**_NOTE:_** 🔥 Jenkins Pipeline failure", footer: "Jenkins", link: env.BUILD_URL, result: currentBuild.currentResult, title: env.JOB_NAME, webhookURL: env.DISCORD_WEBHOOK_URL
+          discordSend description: "**_NOTE:_** 🔥 Jenkins Pipeline failure", link: env.BUILD_URL, result: currentBuild.currentResult, title: env.JOB_NAME, webhookURL: env.DISCORD_WEBHOOK_URL
       }
       changed {
           echo 'Things were different before...'
