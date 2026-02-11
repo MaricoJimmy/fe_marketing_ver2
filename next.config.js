@@ -29,6 +29,7 @@ const nextConfig = {
   },
   reactStrictMode: true,
   swcMinify: true,
+  output: 'standalone',
   i18n: {
     locales: ["vi", "en", "jp", "th"],
     defaultLocale: "vi",
