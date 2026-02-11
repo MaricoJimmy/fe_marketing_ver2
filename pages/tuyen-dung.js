@@ -1,5 +1,4 @@
 import PageSeoHead from "@/components/common/PageSeoHead";
-import ScrollToTop from "@/components/common/ScrollToTop";
 import Title from "@/components/common/Title";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
@@ -90,9 +89,6 @@ const AboutUsPage = () => {
           </div>
         </div>
 
-        <div className="fixed bottom-24 right-7 z-10">
-          <ScrollToTop />
-        </div>
       </div>
     </>
   );

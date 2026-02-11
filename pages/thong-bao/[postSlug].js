@@ -19,7 +19,6 @@ import {
   getDate,
   getLocalizedPath,
 } from "../../utils";
-import ScrollToTop from "@/components/common/ScrollToTop";
 import { useEffect, useMemo } from "react";
 import TableOfContent from "@/components/common/TableOfContent";
 import { useApp } from "@/contexts/AppContext";
@@ -248,11 +247,6 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* scroll to top button */}
-      <div className="fixed bottom-24 right-7 z-10">
-        <ScrollToTop />
       </div>
     </>
   );

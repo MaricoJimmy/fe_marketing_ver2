@@ -15,6 +15,16 @@ function MyApp({ Component, pageProps }) {
   const locale = router.locale || router.defaultLocale;
   const localeMessages = require(`../locales/${locale}.json`);
   const Layout = Component.Layout || DefaultLayout;
+  const chatWidgetApiUrl =
+    process.env.NEXT_PUBLIC_CHAT_WIDGET_API_URL || "https://mini.ugate.ai";
+  const chatWidgetColor =
+    process.env.NEXT_PUBLIC_CHAT_WIDGET_COLOR || "#1890ff";
+  const chatWidgetOrigin =
+    process.env.NEXT_PUBLIC_CHAT_WIDGET_ORIGIN || "https://mini.ugate.ai";
+  const chatWidgetToken = process.env.NEXT_PUBLIC_CHAT_WIDGET_TOKEN || "";
+  const chatWidgetScriptSrc =
+    process.env.NEXT_PUBLIC_CHAT_WIDGET_SCRIPT_SRC ||
+    `${chatWidgetOrigin}/chat-widget.js`;
 
   useEffect(() => {
     // Tự động điều hướng khi thay đổi locale
@@ -47,6 +57,36 @@ function MyApp({ Component, pageProps }) {
           gtag('js', new Date());
 
           gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
+        `}
+      </Script>
+      <Script id="chat-widget" strategy="afterInteractive">
+        {`
+          (function() {
+            var CHAT_WIDGET_API_URL = ${JSON.stringify(chatWidgetApiUrl)};
+            var CHAT_WIDGET_COLOR = ${JSON.stringify(chatWidgetColor)};
+            var CHAT_WIDGET_ORIGIN = ${JSON.stringify(chatWidgetOrigin)};
+            var CHAT_WIDGET_TOKEN = ${JSON.stringify(chatWidgetToken)};
+            var CHAT_WIDGET_SCRIPT_SRC = ${JSON.stringify(chatWidgetScriptSrc)};
+
+            if (!CHAT_WIDGET_API_URL || !CHAT_WIDGET_ORIGIN || !CHAT_WIDGET_TOKEN || !CHAT_WIDGET_SCRIPT_SRC) return;
+            if (window.__UGATE_CHAT_WIDGET_LOADED__) return;
+
+            if (document.querySelector('script[src="' + CHAT_WIDGET_SCRIPT_SRC + '"]')) {
+              window.__UGATE_CHAT_WIDGET_LOADED__ = true;
+              return;
+            }
+
+            window.__UGATE_CHAT_WIDGET_LOADED__ = true;
+            window.CHAT_WIDGET_API_URL = CHAT_WIDGET_API_URL;
+            window.CHAT_WIDGET_COLOR = CHAT_WIDGET_COLOR;
+            window.CHAT_WIDGET_ORIGIN = CHAT_WIDGET_ORIGIN;
+            window.CHAT_WIDGET_TOKEN = CHAT_WIDGET_TOKEN;
+
+            var script = document.createElement('script');
+            script.src = CHAT_WIDGET_SCRIPT_SRC;
+            script.async = true;
+            document.head.appendChild(script);
+          })();
         `}
       </Script>
       <IntlProvider messages={localeMessages} locale={locale}>

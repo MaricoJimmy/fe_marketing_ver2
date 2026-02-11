@@ -14,7 +14,7 @@ function DefaultLayout({ children }) {
       <Social />
       <Footer />
       {/* scroll to top button */}
-      <div className="fixed bottom-52 right-6 z-[900]">
+      <div className="fixed bottom-56 left-6 z-[1300]">
         <ScrollToTop />
       </div>
     </div>

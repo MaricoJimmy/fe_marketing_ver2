@@ -1,4 +1,3 @@
-import ScrollToTop from "@/components/common/ScrollToTop";
 import TableOfContent from "@/components/common/TableOfContent";
 import Tags from "@/components/common/Tags";
 import { Button } from "@/components/ui/button";
@@ -248,11 +247,6 @@ const NewsPostDetailsPage = ({ post, relatedPosts }) => {
             </div>
           </div>
         </div>
-      </div>
-
-      {/* scroll to top button */}
-      <div className="fixed bottom-24 right-7 z-10">
-        <ScrollToTop />
       </div>
     </>
   );

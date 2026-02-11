@@ -79,6 +79,18 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) to view the site in your browser.
 
+### Environment variables
+
+Create `.env.local` and define:
+
+```
+NEXT_PUBLIC_CHAT_WIDGET_API_URL=https://mini.ugate.ai
+NEXT_PUBLIC_CHAT_WIDGET_ORIGIN=https://mini.ugate.ai
+NEXT_PUBLIC_CHAT_WIDGET_COLOR=#1890ff
+NEXT_PUBLIC_CHAT_WIDGET_TOKEN=your-widget-token
+NEXT_PUBLIC_CHAT_WIDGET_SCRIPT_SRC=https://mini.ugate.ai/chat-widget.js
+```
+
 ### Build for production
 
 ```

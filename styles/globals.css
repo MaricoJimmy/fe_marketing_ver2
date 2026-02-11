@@ -496,6 +496,17 @@ input[type="number"] {
   color: #0b32ef;
 }
 
+/* Keep the external chat widget under the social dock */
+iframe[src*="mini.ugate.ai"],
+#chat-widget,
+#chat-widget-container,
+.chat-widget,
+.chat-widget-container,
+div[id*="chat-widget"],
+div[class*="chat-widget"] {
+  z-index: 900 !important;
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
