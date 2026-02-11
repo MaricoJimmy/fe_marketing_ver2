@@ -496,15 +496,47 @@ input[type="number"] {
   color: #0b32ef;
 }
 
-/* Keep the external chat widget under the social dock */
-iframe[src*="mini.ugate.ai"],
-#chat-widget,
+/* Keep external chat widget compact and pinned to bottom-right */
 #chat-widget-container,
-.chat-widget,
 .chat-widget-container,
-div[id*="chat-widget"],
-div[class*="chat-widget"] {
+div[id*="chat-widget"] {
+  position: fixed !important;
+  left: auto !important;
+  top: auto !important;
+  right: 12px !important;
+  bottom: 12px !important;
+  width: min(92vw, 420px) !important;
+  max-width: min(92vw, 420px) !important;
   z-index: 900 !important;
+  transform-origin: bottom right !important;
+}
+
+iframe[src*="mini.ugate.ai"] {
+  position: fixed !important;
+  left: auto !important;
+  top: auto !important;
+  right: 12px !important;
+  bottom: 12px !important;
+  width: min(92vw, 420px) !important;
+  z-index: 900 !important;
+  max-width: min(92vw, 420px) !important;
+  max-height: min(78vh, 560px) !important;
+}
+
+@media (min-width: 1024px) {
+  #chat-widget-container,
+  .chat-widget-container,
+  div[id*="chat-widget"] {
+    transform: scale(0.92) !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  #chat-widget-container,
+  .chat-widget-container,
+  div[id*="chat-widget"] {
+    transform: scale(0.82) !important;
+  }
 }
 
 @layer base {
