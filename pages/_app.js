@@ -59,7 +59,7 @@ function MyApp({ Component, pageProps }) {
           gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}');
         `}
       </Script>
-      {/* <Script id="chat-widget" strategy="afterInteractive">
+      <Script id="chat-widget" strategy="afterInteractive">
         {`
           (function() {
             var CHAT_WIDGET_API_URL = ${JSON.stringify(chatWidgetApiUrl)};
@@ -88,7 +88,7 @@ function MyApp({ Component, pageProps }) {
             document.head.appendChild(script);
           })();
         `}
-      </Script> */}
+      </Script>
       <IntlProvider messages={localeMessages} locale={locale}>
         <MaintenanceLayout>
           <AppProvider>
