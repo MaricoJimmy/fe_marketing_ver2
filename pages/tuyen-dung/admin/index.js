@@ -511,4 +511,9 @@ AdminJDPage.getLayout = function getLayout(page) {
   return page;
 };
 
+// Force SSR to avoid Firebase init during static build
+export async function getServerSideProps() {
+  return { props: {} };
+}
+
 export default AdminJDPage;
