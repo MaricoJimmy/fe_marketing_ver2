@@ -14,7 +14,10 @@ function MyApp({ Component, pageProps }) {
   const router = useRouter();
   const locale = router.locale || router.defaultLocale;
   const localeMessages = require(`../locales/${locale}.json`);
-  const Layout = Component.Layout || DefaultLayout;
+  // Support custom layout: Component.getLayout for pages that manage their own layout (e.g., admin)
+  // or Component.Layout for pages that use a different wrapper layout
+  const getLayout = Component.getLayout;
+  const Layout = getLayout ? null : (Component.Layout || DefaultLayout);
   const chatWidgetApiUrl =
     process.env.NEXT_PUBLIC_CHAT_WIDGET_API_URL || "https://mini.ugate.ai";
   const chatWidgetColor =
@@ -92,9 +95,13 @@ function MyApp({ Component, pageProps }) {
       <IntlProvider messages={localeMessages} locale={locale}>
         <MaintenanceLayout>
           <AppProvider>
-            <Layout>
-              <Component {...pageProps} />
-            </Layout>
+            {getLayout ? (
+              getLayout(<Component {...pageProps} />)
+            ) : (
+              <Layout>
+                <Component {...pageProps} />
+              </Layout>
+            )}
           </AppProvider>
         </MaintenanceLayout>
       </IntlProvider>

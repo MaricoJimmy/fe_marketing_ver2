@@ -628,6 +628,55 @@ iframe[src*="mini.ugate.ai"] {
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
     --chart-3: 30 80% 55%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
     --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
   }
@@ -637,4 +686,146 @@ iframe[src*="mini.ugate.ai"] {
 html body[data-scroll-locked] {
   overflow: visible !important;
   margin-right: 0 !important;
+}
+
+/* ============================================
+   Recruitment Pages (tuyen-dung) Styles
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+.recruitment-page {
+  /* Core backgrounds */
+  --td-background: 210 50% 99%;
+  --td-foreground: 215 25% 15%;
+
+  /* Card surfaces */
+  --td-card: 0 0% 100%;
+  --td-card-foreground: 215 25% 15%;
+
+  /* Popover */
+  --td-popover: 0 0% 100%;
+  --td-popover-foreground: 215 25% 15%;
+
+  /* Primary - Udata Blue #1677FF */
+  --td-primary: 215 100% 54%;
+  --td-primary-foreground: 0 0% 100%;
+
+  /* Secondary */
+  --td-secondary: 210 100% 96%;
+  --td-secondary-foreground: 215 25% 15%;
+
+  /* Muted */
+  --td-muted: 210 40% 96%;
+  --td-muted-foreground: 215 15% 45%;
+
+  /* Accent */
+  --td-accent: 215 100% 54%;
+  --td-accent-foreground: 0 0% 100%;
+
+  /* Success */
+  --td-success: 160 84% 39%;
+  --td-success-foreground: 0 0% 100%;
+
+  /* Destructive */
+  --td-destructive: 0 84% 60%;
+  --td-destructive-foreground: 0 0% 100%;
+
+  /* Borders & inputs */
+  --td-border: 210 30% 90%;
+  --td-input: 210 30% 90%;
+  --td-ring: 215 100% 54%;
+
+  --td-radius: 0.75rem;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, hsl(215, 100%, 54%) 0%, hsl(200, 100%, 50%) 100%);
+  --gradient-hero: linear-gradient(135deg, hsl(210, 100%, 97%) 0%, hsl(200, 100%, 95%) 50%, hsl(215, 100%, 98%) 100%);
+  --gradient-accent: linear-gradient(135deg, hsl(215, 100%, 54%) 0%, hsl(195, 100%, 50%) 100%);
+  --gradient-card: linear-gradient(145deg, hsl(0, 0%, 100%) 0%, hsl(210, 50%, 98%) 100%);
+
+  /* Shadows */
+  --shadow-card: 0 4px 20px hsla(215, 25%, 15%, 0.08);
+  --shadow-glow: 0 0 40px hsla(215, 100%, 54%, 0.25);
+
+  /* Override CSS variables for shadcn-style */
+  --background: var(--td-background);
+  --foreground: var(--td-foreground);
+  --card: var(--td-card);
+  --card-foreground: var(--td-card-foreground);
+  --popover: var(--td-popover);
+  --popover-foreground: var(--td-popover-foreground);
+  --primary: var(--td-primary);
+  --primary-foreground: var(--td-primary-foreground);
+  --secondary: var(--td-secondary);
+  --secondary-foreground: var(--td-secondary-foreground);
+  --muted: var(--td-muted);
+  --muted-foreground: var(--td-muted-foreground);
+  --accent: var(--td-accent);
+  --accent-foreground: var(--td-accent-foreground);
+  --destructive: var(--td-destructive);
+  --destructive-foreground: var(--td-destructive-foreground);
+  --border: var(--td-border);
+  --input: var(--td-input);
+  --ring: var(--td-ring);
+  --radius: var(--td-radius);
+}
+
+.recruitment-page .font-display {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+.recruitment-page .text-gradient-primary {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: var(--gradient-primary);
+}
+
+.recruitment-page .text-gradient-accent {
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: var(--gradient-accent);
+}
+
+.recruitment-page .bg-gradient-hero {
+  background-image: var(--gradient-hero);
+}
+
+.recruitment-page .bg-gradient-primary {
+  background-image: var(--gradient-primary);
+}
+
+.recruitment-page .shadow-card {
+  box-shadow: var(--shadow-card);
+}
+
+.recruitment-page .shadow-glow {
+  box-shadow: var(--shadow-glow);
+}
+
+.recruitment-page .bg-hero-pattern {
+  background-image: radial-gradient(circle at 25% 25%, hsla(215, 100%, 54%, 0.05) 0%, transparent 50%),
+                     radial-gradient(circle at 75% 75%, hsla(200, 100%, 50%, 0.05) 0%, transparent 50%);
+}
+
+.recruitment-page .text-success {
+  color: hsl(160, 84%, 39%);
+}
+
+.recruitment-page .bg-success {
+  background-color: hsl(160, 84%, 39%);
+}
+
+.recruitment-page .bg-success\/10 {
+  background-color: hsla(160, 84%, 39%, 0.1);
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.recruitment-page .animate-pulse-slow {
+  animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
