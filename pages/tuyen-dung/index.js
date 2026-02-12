@@ -26,7 +26,7 @@ const RecruitmentPage = () => {
 
   return (
     <div className="recruitment-page">
-      <PageSeoHead metaTagData={metaTagData} />
+      <PageSeoHead data={metaTagData} />
       <Toaster position="top-center" richColors />
       <RecruitmentHero />
       <AboutSection />
