@@ -1,4 +1,4 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"); */
+﻿/* @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"); */
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 @tailwind base;
@@ -829,3 +829,473 @@ html body[data-scroll-locked] {
 .recruitment-page .animate-pulse-slow {
   animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
+
+/* ============================================
+   MiniUgate Landing Styles (scoped)
+   ============================================ */
+.mini-ugate-page {
+  --mu-background: 210 50% 99%;
+  --mu-foreground: 214 84% 10%;
+  --mu-card: 0 0% 100%;
+  --mu-card-foreground: 214 84% 10%;
+  --mu-popover: 0 0% 100%;
+  --mu-popover-foreground: 214 84% 10%;
+  --mu-primary: 214 100% 54%;
+  --mu-primary-foreground: 0 0% 100%;
+  --mu-secondary: 200 90% 94%;
+  --mu-secondary-foreground: 214 100% 40%;
+  --mu-muted: 210 40% 96%;
+  --mu-muted-foreground: 214 20% 46%;
+  --mu-accent: 195 100% 50%;
+  --mu-accent-foreground: 214 84% 10%;
+  --mu-border: 214 30% 91%;
+  --mu-input: 214 30% 91%;
+  --mu-ring: 214 100% 54%;
+  --mu-radius: 0.75rem;
+
+  --mu-gradient-hero: linear-gradient(135deg, hsl(210 100% 97%) 0%, hsl(210 100% 94%) 50%, hsl(0 0% 100%) 100%);
+  --mu-gradient-primary: linear-gradient(135deg, hsl(214 100% 54%) 0%, hsl(195 100% 50%) 100%);
+  --mu-gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 50% 99%) 100%);
+
+  --mu-shadow-sm: 0 1px 2px 0 hsl(214 30% 20% / 0.05);
+  --mu-shadow-card: 0 4px 6px -1px hsl(214 30% 20% / 0.1), 0 2px 4px -2px hsl(214 30% 20% / 0.1);
+  --mu-shadow-lg: 0 10px 15px -3px hsl(214 30% 20% / 0.1), 0 4px 6px -4px hsl(214 30% 20% / 0.1);
+  --mu-shadow-xl: 0 20px 25px -5px hsl(214 30% 20% / 0.1), 0 8px 10px -6px hsl(214 30% 20% / 0.1);
+  --mu-shadow-glow: 0 0 40px -10px hsl(214 100% 54% / 0.4);
+
+  background-color: hsl(var(--mu-background));
+  color: hsl(var(--mu-foreground));
+  font-family: "Inter", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.mini-ugate-page * {
+  box-sizing: border-box;
+}
+
+.mini-ugate-page .container {
+  width: 100%;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media (max-width: 640px) {
+  .mini-ugate-page .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+.mini-ugate-page .text-display {
+  font-size: 4rem;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+.mini-ugate-page .text-display-sm {
+  font-size: 3rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 700;
+}
+
+.mini-ugate-page .text-heading {
+  font-size: 2rem;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .mini-ugate-page .text-display {
+    font-size: 3rem;
+  }
+
+  .mini-ugate-page .text-display-sm {
+    font-size: 2.25rem;
+  }
+
+  .mini-ugate-page .text-heading {
+    font-size: 1.75rem;
+  }
+}
+
+.mini-ugate-page .bg-hero-gradient {
+  background: var(--mu-gradient-hero);
+}
+
+.mini-ugate-page .bg-card-gradient {
+  background: var(--mu-gradient-card);
+}
+
+.mini-ugate-page .bg-primary-gradient {
+  background: var(--mu-gradient-primary);
+}
+
+.mini-ugate-page .glass {
+  background: hsl(0 0% 100% / 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid hsl(var(--mu-border) / 0.5);
+}
+
+.mini-ugate-page .text-gradient {
+  background: var(--mu-gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.mini-ugate-page .shadow-glow {
+  box-shadow: var(--mu-shadow-glow);
+}
+
+.mini-ugate-page .shadow-card {
+  box-shadow: var(--mu-shadow-card);
+}
+
+.mini-ugate-page .hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mini-ugate-page .hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--mu-shadow-xl);
+}
+
+/* Color utility overrides for 1:1 visual match */
+.mini-ugate-page .bg-background {
+  background-color: hsl(var(--mu-background)) !important;
+}
+
+.mini-ugate-page .bg-background\/50 {
+  background-color: hsl(var(--mu-background) / 0.5) !important;
+}
+
+.mini-ugate-page .bg-card {
+  background-color: hsl(var(--mu-card)) !important;
+}
+
+.mini-ugate-page .bg-muted {
+  background-color: hsl(var(--mu-muted)) !important;
+}
+
+.mini-ugate-page .bg-muted\/30 {
+  background-color: hsl(var(--mu-muted) / 0.3) !important;
+}
+
+.mini-ugate-page .bg-muted\/80 {
+  background-color: hsl(var(--mu-muted) / 0.8) !important;
+}
+
+.mini-ugate-page .bg-primary {
+  background-color: hsl(var(--mu-primary)) !important;
+}
+
+.mini-ugate-page .bg-primary\/5 {
+  background-color: hsl(var(--mu-primary) / 0.05) !important;
+}
+
+.mini-ugate-page .bg-primary\/10 {
+  background-color: hsl(var(--mu-primary) / 0.1) !important;
+}
+
+.mini-ugate-page .bg-primary\/20 {
+  background-color: hsl(var(--mu-primary) / 0.2) !important;
+}
+
+.mini-ugate-page .bg-primary\/30 {
+  background-color: hsl(var(--mu-primary) / 0.3) !important;
+}
+
+.mini-ugate-page .bg-primary\/60 {
+  background-color: hsl(var(--mu-primary) / 0.6) !important;
+}
+
+.mini-ugate-page .bg-primary\/90 {
+  background-color: hsl(var(--mu-primary) / 0.9) !important;
+}
+
+.mini-ugate-page .bg-primary-foreground\/10 {
+  background-color: hsl(var(--mu-primary-foreground) / 0.1) !important;
+}
+
+.mini-ugate-page .bg-primary-foreground\/20 {
+  background-color: hsl(var(--mu-primary-foreground) / 0.2) !important;
+}
+
+.mini-ugate-page .bg-primary-foreground\/80 {
+  background-color: hsl(var(--mu-primary-foreground) / 0.8) !important;
+}
+
+.mini-ugate-page .bg-foreground {
+  background-color: hsl(var(--mu-foreground)) !important;
+}
+
+.mini-ugate-page .bg-accent\/5 {
+  background-color: hsl(var(--mu-accent) / 0.05) !important;
+}
+
+.mini-ugate-page .text-foreground {
+  color: hsl(var(--mu-foreground)) !important;
+}
+
+.mini-ugate-page .text-muted-foreground {
+  color: hsl(var(--mu-muted-foreground)) !important;
+}
+
+.mini-ugate-page .text-primary {
+  color: hsl(var(--mu-primary)) !important;
+}
+
+.mini-ugate-page .text-primary-foreground {
+  color: hsl(var(--mu-primary-foreground)) !important;
+}
+
+.mini-ugate-page .text-primary-foreground\/50 {
+  color: hsl(var(--mu-primary-foreground) / 0.5) !important;
+}
+
+.mini-ugate-page .text-primary-foreground\/70 {
+  color: hsl(var(--mu-primary-foreground) / 0.7) !important;
+}
+
+.mini-ugate-page .text-accent-foreground {
+  color: hsl(var(--mu-accent-foreground)) !important;
+}
+
+.mini-ugate-page .border-border {
+  border-color: hsl(var(--mu-border)) !important;
+}
+
+.mini-ugate-page .border-primary\/20 {
+  border-color: hsl(var(--mu-primary) / 0.2) !important;
+}
+
+.mini-ugate-page .border-primary\/30 {
+  border-color: hsl(var(--mu-primary) / 0.3) !important;
+}
+
+.mini-ugate-page .border-input {
+  border-color: hsl(var(--mu-input)) !important;
+}
+
+.mini-ugate-page .hover\:text-foreground:hover {
+  color: hsl(var(--mu-foreground)) !important;
+}
+
+.mini-ugate-page .hover\:text-primary-foreground:hover {
+  color: hsl(var(--mu-primary-foreground)) !important;
+}
+
+.mini-ugate-page .hover\:bg-accent:hover {
+  background-color: hsl(var(--mu-accent) / 0.1) !important;
+}
+
+.mini-ugate-page .hover\:text-accent-foreground:hover {
+  color: hsl(var(--mu-accent-foreground)) !important;
+}
+
+.mini-ugate-page .hover\:bg-primary\/5:hover {
+  background-color: hsl(var(--mu-primary) / 0.05) !important;
+}
+
+.mini-ugate-page .hover\:bg-primary\/90:hover {
+  background-color: hsl(var(--mu-primary) / 0.9) !important;
+}
+
+.mini-ugate-page .hover\:bg-muted\/80:hover {
+  background-color: hsl(var(--mu-muted) / 0.8) !important;
+}
+
+.mini-ugate-page .hover\:border-primary\/30:hover {
+  border-color: hsl(var(--mu-primary) / 0.3) !important;
+}
+
+/* Custom animations */
+@keyframes mu-float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(3deg);
+  }
+}
+
+@keyframes mu-float-delayed {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(-2deg);
+  }
+}
+
+@keyframes mu-float-slow {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes mu-bubble-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes mu-bubble-pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes mu-fade-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes mu-fade-in-scale {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes mu-pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 hsl(var(--mu-primary) / 0.4);
+  }
+  50% {
+    box-shadow: 0 0 20px 5px hsl(var(--mu-primary) / 0.2);
+  }
+}
+
+@keyframes mu-orbit {
+  0% {
+    transform: rotate(0deg) translateX(10px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(10px) rotate(-360deg);
+  }
+}
+
+@keyframes mu-typing {
+  0%,
+  60%,
+  100% {
+    opacity: 0.3;
+    transform: translateY(0);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes mu-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes mu-flow-arrow {
+  0%,
+  100% {
+    transform: translateX(0);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateX(5px);
+    opacity: 1;
+  }
+}
+
+.mini-ugate-page .animate-float {
+  animation: mu-float 6s ease-in-out infinite;
+}
+
+.mini-ugate-page .animate-float-delayed {
+  animation: mu-float-delayed 7s ease-in-out infinite;
+}
+
+.mini-ugate-page .animate-float-slow {
+  animation: mu-float-slow 8s ease-in-out infinite;
+}
+
+.mini-ugate-page .animate-bubble-in {
+  animation: mu-bubble-in 0.5s ease-out forwards;
+}
+
+.mini-ugate-page .animate-bubble-pulse {
+  animation: mu-bubble-pulse 2s ease-in-out infinite;
+}
+
+.mini-ugate-page .animate-fade-up {
+  animation: mu-fade-up 0.6s ease-out forwards;
+}
+
+.mini-ugate-page .animate-fade-in-scale {
+  animation: mu-fade-in-scale 0.4s ease-out forwards;
+}
+
+.mini-ugate-page .animate-pulse-glow {
+  animation: mu-pulse-glow 2s ease-in-out infinite;
+}
+
+.mini-ugate-page .animate-orbit {
+  animation: mu-orbit 20s linear infinite;
+}
+
+.mini-ugate-page .animate-typing {
+  animation: mu-typing 1.4s ease-in-out infinite;
+}
+
+.mini-ugate-page .animate-shimmer {
+  background: linear-gradient(90deg, transparent, hsl(var(--mu-primary) / 0.1), transparent);
+  background-size: 200% 100%;
+  animation: mu-shimmer 2s linear infinite;
+}
+
+.mini-ugate-page .animate-flow-arrow {
+  animation: mu-flow-arrow 1.5s ease-in-out infinite;
+}
+
+
+
+.mini-ugate-page .bg-muted-foreground\/50 {
+  background-color: hsl(var(--mu-muted-foreground) / 0.5) !important;
+}
+

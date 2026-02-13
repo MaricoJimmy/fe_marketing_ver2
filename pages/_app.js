@@ -1,3 +1,4 @@
+﻿import { AppProvider } from "@/contexts/AppContext";
 import { routeMaps } from "@/utils/router";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -8,7 +9,6 @@ import { useEffect } from "react";
 import DefaultLayout from "../components/layout/DefaultLayout";
 import MaintenanceLayout from "../components/layout/MaintenanceLayout";
 import "../styles/globals.css";
-import { AppProvider } from "@/contexts/AppContext";
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter();
@@ -17,17 +17,14 @@ function MyApp({ Component, pageProps }) {
   // Support custom layout: Component.getLayout for pages that manage their own layout (e.g., admin)
   // or Component.Layout for pages that use a different wrapper layout
   const getLayout = Component.getLayout;
-  const Layout = getLayout ? null : (Component.Layout || DefaultLayout);
-  const chatWidgetApiUrl =
-    process.env.NEXT_PUBLIC_CHAT_WIDGET_API_URL || "https://mini.ugate.ai";
-  const chatWidgetColor =
-    process.env.NEXT_PUBLIC_CHAT_WIDGET_COLOR || "#1890ff";
-  const chatWidgetOrigin =
-    process.env.NEXT_PUBLIC_CHAT_WIDGET_ORIGIN || "https://mini.ugate.ai";
+  const Layout = getLayout ? null : Component.Layout || DefaultLayout;
+
+  const chatWidgetApiUrl = process.env.NEXT_PUBLIC_CHAT_WIDGET_API_URL || "https://mini.ugate.ai";
+  const chatWidgetColor = process.env.NEXT_PUBLIC_CHAT_WIDGET_COLOR || "#1890ff";
+  const chatWidgetOrigin = process.env.NEXT_PUBLIC_CHAT_WIDGET_ORIGIN || "https://mini.ugate.ai";
   const chatWidgetToken = process.env.NEXT_PUBLIC_CHAT_WIDGET_TOKEN || "";
   const chatWidgetScriptSrc =
-    process.env.NEXT_PUBLIC_CHAT_WIDGET_SCRIPT_SRC ||
-    `${chatWidgetOrigin}/chat-widget.js`;
+    process.env.NEXT_PUBLIC_CHAT_WIDGET_SCRIPT_SRC || `${chatWidgetOrigin}/chat-widget.js`;
 
   useEffect(() => {
     // Tự động điều hướng khi thay đổi locale
@@ -37,7 +34,7 @@ function MyApp({ Component, pageProps }) {
     if (translatedPath && translatedPath !== currentPath) {
       router.push(translatedPath, undefined, { locale });
     }
-  }, [locale, router.pathname]);
+  }, [locale, router.pathname, router]);
 
   useEffect(() => {
     AOS.init({
@@ -95,13 +92,7 @@ function MyApp({ Component, pageProps }) {
       <IntlProvider messages={localeMessages} locale={locale}>
         <MaintenanceLayout>
           <AppProvider>
-            {getLayout ? (
-              getLayout(<Component {...pageProps} />)
-            ) : (
-              <Layout>
-                <Component {...pageProps} />
-              </Layout>
-            )}
+            {getLayout ? getLayout(<Component {...pageProps} />) : <Layout><Component {...pageProps} /></Layout>}
           </AppProvider>
         </MaintenanceLayout>
       </IntlProvider>

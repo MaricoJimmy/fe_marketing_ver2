@@ -7,6 +7,7 @@ export const ROUTER_SAAS = "/san-pham/nen-tang-saas";
 export const ROUTER_UBOARD = "/san-pham/uboard";
 export const ROUTER_UGATE = "/san-pham/ugate";
 export const ROUTER_UZERO = "/san-pham/uzero";
+export const ROUTER_MINI_UGATE = "/san-pham/mini-ugate";
 
 // solutions
 export const ROUTER_SOLAR = "/giai-phap/solar-rooftop";

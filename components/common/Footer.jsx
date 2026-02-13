@@ -15,6 +15,7 @@ import {
   ROUTER_UBOARD,
   ROUTER_UGATE,
   ROUTER_UZERO,
+  ROUTER_MINI_UGATE,
 } from "@/utils/constant";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -40,6 +41,10 @@ function Footer() {
         {
           title: "Uzero",
           href: getLocalizedPath(ROUTER_UZERO, locale),
+        },
+        {
+          title: "MiniUgate",
+          href: getLocalizedPath(ROUTER_MINI_UGATE, locale),
         },
       ],
     },

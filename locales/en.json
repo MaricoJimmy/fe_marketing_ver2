@@ -1145,5 +1145,129 @@
     "title": "Page not found",
     "content": "The page you are looking for does not exist or has been moved. Please check the URL and try again.",
     "button": "Back to home"
+  },
+  "MiniUgate": {
+    "heroSection": {
+      "heading": "MiniUgate – AI Chatbot for Website",
+      "excerpt": "Create a smart AI chatbot for your website in just a few minutes. No code needed. No IT required. Part of the Ugate – Udata ecosystem.",
+      "color": "blue",
+      "contact": "Try for free"
+    },
+    "features": {
+      "title": "Key Features",
+      "lists": [
+        {
+          "title": "No-code AI Chatbot",
+          "desc": "Anyone can create a chatbot. No technical knowledge, no developer needed."
+        },
+        {
+          "title": "Train from Website, Documents & FAQs",
+          "desc": "Chatbot accurately understands your business content. Automatically learns from your data."
+        },
+        {
+          "title": "Chat Sessions",
+          "desc": "View & analyze customer conversations. Understand insights and continuously optimize."
+        },
+        {
+          "title": "Support Tickets",
+          "desc": "AI + humans handle important requests. Never miss a potential customer."
+        },
+        {
+          "title": "Customize chatbot interface",
+          "desc": "Colors, tone, branding. Chatbot carries your business identity."
+        }
+      ]
+    },
+    "singleFeature": {
+      "first": {
+        "title": "Your website has traffic, but...",
+        "subTitle": "These are challenges most businesses face",
+        "desc": "<ul><li><strong>65–75%</strong> of visitors leave when not supported immediately</li><li><strong>15–60 minutes</strong> is the average customer support response time</li><li><strong>40–50%</strong> of support questions are repeated daily</li><li><strong>2–3%</strong> average website conversion rate</li></ul>",
+        "img": "/image/products/mini-ugate/MiniUgate-1.webp"
+      },
+      "second": {
+        "title": "MiniUgate changes everything",
+        "subTitle": "Real results when deploying AI Chatbot for your website",
+        "desc": "<ul><li><strong>AI Chatbot effectiveness:</strong> 45–65% of queries handled automatically, under 5 seconds response time, 24/7 – 100% uptime</li><li><strong>Engagement & conversion:</strong> 50–70% of visitors start chatting, +20–30% time-on-site, +15–30% conversion rate</li><li><strong>Resource optimization:</strong> 40–60% reduced support workload, 30–50% lower operational costs</li></ul>",
+        "img": "/image/products/mini-ugate/MiniUgate-2.webp"
+      }
+    },
+    "whyChooseUs": {
+      "title": "Suitable for <span class='text-primary'>multiple industries</span>",
+      "subTitle": "MiniUgate supports diverse business sectors",
+      "contents": [
+        {
+          "id": 1,
+          "title": "E-commerce websites",
+          "content": "AI chatbot automatically recommends products, answers purchase questions, supports orders 24/7.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='8' cy='21' r='1'/><circle cx='19' cy='21' r='1'/><path d='M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12'/></svg>"
+        },
+        {
+          "id": 2,
+          "title": "Service businesses",
+          "content": "Help customers book appointments, answer service inquiries, reduce support team workload.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16'/><rect width='20' height='14' x='2' y='6' rx='2'/></svg>"
+        },
+        {
+          "id": 3,
+          "title": "Education & training",
+          "content": "Answer admission questions, recommend courses, support students automatically.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z'/><path d='M22 10v6'/><path d='M6 12.5V16a6 3 0 0 0 12 0v-3.5'/></svg>"
+        },
+        {
+          "id": 4,
+          "title": "Real estate",
+          "content": "Introduce projects, consult pricing, schedule property viewings automatically via chatbot.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect width='16' height='20' x='4' y='2' rx='2' ry='2'/><path d='M9 22v-4h6v4'/><path d='M8 6h.01'/><path d='M16 6h.01'/><path d='M12 6h.01'/><path d='M12 10h.01'/><path d='M12 14h.01'/><path d='M16 10h.01'/><path d='M16 14h.01'/><path d='M8 10h.01'/><path d='M8 14h.01'/></svg>"
+        },
+        {
+          "id": 5,
+          "title": "B2B enterprises",
+          "content": "Technical support, solution consulting, automated ticketing for request handling.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2'/><circle cx='9' cy='7' r='4'/><path d='M22 21v-2a4 4 0 0 0-3-3.87'/><path d='M16 3.13a4 4 0 0 1 0 7.75'/></svg>"
+        }
+      ]
+    },
+    "questions": {
+      "title": "Frequently Asked Questions",
+      "list": [
+        {
+          "question": "What is MiniUgate?",
+          "answer": "MiniUgate is a no-code AI Chatbot platform for websites, helping you create smart chatbots in just a few minutes. No code, no IT needed – anyone can use it!"
+        },
+        {
+          "question": "How long does it take to create a chatbot?",
+          "answer": "You can create an AI chatbot for your website in just a few minutes with 3 simple steps: (1) Paste your website link, (2) Set up prompt/tone, (3) Copy embed code and add to your website."
+        },
+        {
+          "question": "Where does MiniUgate learn data from?",
+          "answer": "MiniUgate chatbot learns from multiple sources: Your website, Documents, and FAQs that you provide. The chatbot will accurately understand the content and context of your business."
+        },
+        {
+          "question": "Is coding required?",
+          "answer": "No coding needed! MiniUgate is a no-code platform, meaning anyone can create and manage chatbots without technical knowledge or IT skills."
+        },
+        {
+          "question": "How to embed chatbot on website?",
+          "answer": "Very simple! After setting up the chatbot, just copy the embed code and paste it into your website. The chatbot will work immediately."
+        },
+        {
+          "question": "Does MiniUgate have support tickets?",
+          "answer": "Yes! MiniUgate has a Support Tickets feature where AI + humans collaborate to handle important requests. When the chatbot cannot answer, requests are converted into tickets."
+        },
+        {
+          "question": "What benefits does MiniUgate provide?",
+          "answer": "MiniUgate helps: Reduce customer support & sales workload, increase time-on-site by 20-30%, increase conversion rate by 15-30%, save 30-50% operational costs, and operate 24/7."
+        },
+        {
+          "question": "Is MiniUgate free?",
+          "answer": "You can try MiniUgate for free! Visit mini.ugate.ai to sign up and start creating an AI chatbot for your website today."
+        },
+        {
+          "question": "How does MiniUgate work?",
+          "answer": "Just 3 simple steps: Step 1 – Your website: Content is scanned & trained. Step 2 – MiniUgate AI: Processes & understands context. Step 3 – Live Chat: Responds to customers instantly. Completed in minutes."
+        }
+      ]
+    }
   }
 }

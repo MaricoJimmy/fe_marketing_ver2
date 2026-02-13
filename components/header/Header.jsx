@@ -15,6 +15,7 @@ import {
   ROUTER_UBOARD,
   ROUTER_UGATE,
   ROUTER_UZERO,
+  ROUTER_MINI_UGATE,
 } from "@/utils/constant";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
@@ -95,6 +96,7 @@ function HeaderDesktop({ stickyHeader, locale }) {
       { title: "Uboard", href: ROUTER_UBOARD },
       { title: "Ugate", href: ROUTER_UGATE },
       { title: "Uzero", href: ROUTER_UZERO },
+      { title: "MiniUgate", href: ROUTER_MINI_UGATE },
     ],
     solutions: [
       { title: t("solutions.solar"), href: ROUTER_SOLAR },
@@ -112,10 +114,9 @@ function HeaderDesktop({ stickyHeader, locale }) {
   };
   return (
     <div
-      className={`${
-        (stickyHeader === "is-sticky" && "fixed top-0 drop-shadow-md") ||
+      className={`${(stickyHeader === "is-sticky" && "fixed top-0 drop-shadow-md") ||
         "relative"
-      } flex justify-center items-center w-full bg-white border-b border-gray/10 `}
+        } flex justify-center items-center w-full bg-white border-b border-gray/10 `}
     >
       <div className="w-full">
         <div className={`py-3 px-8 w-full flex items-center justify-between`}>
@@ -135,9 +136,8 @@ function HeaderDesktop({ stickyHeader, locale }) {
                 <NavigationMenuList>
                   <NavigationMenuItem className="hover:bg-neutral/5 hover:text-primary rounded-md">
                     <NavigationMenuTrigger
-                      className={`${triggerBase} ${
-                        isGroupActive(listMenus.products) ? triggerActive : ""
-                      }`}
+                      className={`${triggerBase} ${isGroupActive(listMenus.products) ? triggerActive : ""
+                        }`}
                       aria-current={
                         isGroupActive(listMenus.products) ? "page" : undefined
                       }
@@ -159,9 +159,8 @@ function HeaderDesktop({ stickyHeader, locale }) {
                   </NavigationMenuItem>
                   <NavigationMenuItem className="hover:bg-neutral/5 hover:text-primary rounded-md">
                     <NavigationMenuTrigger
-                      className={`${triggerBase} ${
-                        isGroupActive(listMenus.solutions) ? triggerActive : ""
-                      }`}
+                      className={`${triggerBase} ${isGroupActive(listMenus.solutions) ? triggerActive : ""
+                        }`}
                       aria-current={
                         isGroupActive(listMenus.solutions) ? "page" : undefined
                       }
@@ -183,9 +182,8 @@ function HeaderDesktop({ stickyHeader, locale }) {
                   </NavigationMenuItem>
                   <NavigationMenuItem className="hover:bg-neutral/5 hover:text-primary rounded-md">
                     <NavigationMenuTrigger
-                      className={`${triggerBase} ${
-                        isGroupActive(listMenus.news) ? triggerActive : ""
-                      }`}
+                      className={`${triggerBase} ${isGroupActive(listMenus.news) ? triggerActive : ""
+                        }`}
                       aria-current={
                         isGroupActive(listMenus.news) ? "page" : undefined
                       }
@@ -194,9 +192,8 @@ function HeaderDesktop({ stickyHeader, locale }) {
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
                       <ul
-                        className={`${
-                          locale === "vi" ? "min-w-[340px]" : "min-w-[400px]"
-                        }  p-2 border-none list-none`}
+                        className={`${locale === "vi" ? "min-w-[340px]" : "min-w-[400px]"
+                          }  p-2 border-none list-none`}
                       >
                         {listMenus.news.map((menu) => (
                           <MenuItem
@@ -216,9 +213,8 @@ function HeaderDesktop({ stickyHeader, locale }) {
                       passHref
                     >
                       <NavigationMenuLink
-                        className={`${linkBase} ${
-                          isActiveLink(ROUTER_ABOUT_US) ? linkActive : ""
-                        }`}
+                        className={`${linkBase} ${isActiveLink(ROUTER_ABOUT_US) ? linkActive : ""
+                          }`}
                         aria-current={
                           isActiveLink(ROUTER_ABOUT_US) ? "page" : undefined
                         }
@@ -234,9 +230,8 @@ function HeaderDesktop({ stickyHeader, locale }) {
                       passHref
                     >
                       <NavigationMenuLink
-                        className={`${linkBase} ${
-                          isActiveLink(ROUTER_CONTACT) ? linkActive : ""
-                        }`}
+                        className={`${linkBase} ${isActiveLink(ROUTER_CONTACT) ? linkActive : ""
+                          }`}
                         aria-current={
                           isActiveLink(ROUTER_CONTACT) ? "page" : undefined
                         }
@@ -253,9 +248,8 @@ function HeaderDesktop({ stickyHeader, locale }) {
                       passHref
                     >
                       <NavigationMenuLink
-                        className={`${linkBase} ${
-                          isActiveLink(ROUTER_CAREER) ? linkActive : ""
-                        }`}
+                        className={`${linkBase} ${isActiveLink(ROUTER_CAREER) ? linkActive : ""
+                          }`}
                         aria-current={
                           isActiveLink(ROUTER_CAREER) ? "page" : undefined
                         }
@@ -330,6 +324,10 @@ function HeaderMobile({ stickyHeader, locale }) {
         {
           title: "Uzero",
           href: ROUTER_UZERO,
+        },
+        {
+          title: "MiniUgate",
+          href: ROUTER_MINI_UGATE,
         },
       ],
       multiMenu: false,
@@ -409,11 +407,10 @@ function HeaderMobile({ stickyHeader, locale }) {
 
   return (
     <div
-      className={`${
-        (stickyHeader === "is-sticky" &&
-          "fixed top-0 drop-shadow-md bg-white") ||
+      className={`${(stickyHeader === "is-sticky" &&
+        "fixed top-0 drop-shadow-md bg-white") ||
         "relative"
-      } py-3 px-5 w-full bg-quaternary border-b border-gray/10 `}
+        } py-3 px-5 w-full bg-quaternary border-b border-gray/10 `}
     >
       <div className="flex items-center justify-between">
         <Link href="/">
@@ -463,16 +460,14 @@ function HeaderMobile({ stickyHeader, locale }) {
       </div>
       <>
         <div
-          className={`${styles.overlay} ${!openMenu && styles.overlayHidden} ${
-            openMenu && styles.overlayOpen
-          }`}
+          className={`${styles.overlay} ${!openMenu && styles.overlayHidden} ${openMenu && styles.overlayOpen
+            }`}
           onClick={() => setOpenMenu(false)}
           aria-hidden="true"
         />
         <div
-          className={`${styles.drawer} ${openMenu && styles.animate} ${
-            !openMenu && styles.hidden
-          }`}
+          className={`${styles.drawer} ${openMenu && styles.animate} ${!openMenu && styles.hidden
+            }`}
         >
           <div className="w-full h-full">
             <div className="flex items-center justify-between">
@@ -533,7 +528,7 @@ function HeaderMobile({ stickyHeader, locale }) {
                               menu.subMenu.some((sm) => isActiveLink(sm.href))
                                 ? "text-primary"
                                 : "text-gray"
-                            }`}
+                              }`}
                           >
                             {menu.menu}
                           </span>
@@ -557,11 +552,10 @@ function HeaderMobile({ stickyHeader, locale }) {
                         <Link href={menu.href}>
                           <a
                             title={menu.menu}
-                            className={`block w-full font-semibold duration-200 ${
-                              isActiveLink(menu.href)
-                                ? "text-primary"
-                                : "text-gray hover:text-primary"
-                            }`}
+                            className={`block w-full font-semibold duration-200 ${isActiveLink(menu.href)
+                              ? "text-primary"
+                              : "text-gray hover:text-primary"
+                              }`}
                             aria-current={
                               isActiveLink(menu.href) ? "page" : undefined
                             }
@@ -573,10 +567,9 @@ function HeaderMobile({ stickyHeader, locale }) {
                     </div>
                     {menu.subMenu ? (
                       <div
-                        className={`${
-                          (openSubMenu[menu.id] && "translate-y-0 block") ||
+                        className={`${(openSubMenu[menu.id] && "translate-y-0 block") ||
                           "-translate-y-1/4 hidden"
-                        } duration-200 ml-4 mt-6`}
+                          } duration-200 ml-4 mt-6`}
                       >
                         {menu.subMenu.map((subMenu) => (
                           <div
@@ -600,11 +593,10 @@ function HeaderMobile({ stickyHeader, locale }) {
                                       >
                                         <a
                                           title={subMenu.title}
-                                          className={`block w-full font-semibold duration-200 ${
-                                            isActiveLink(subMenu.href)
-                                              ? "text-primary"
-                                              : "text-gray hover:text-primary"
-                                          }`}
+                                          className={`block w-full font-semibold duration-200 ${isActiveLink(subMenu.href)
+                                            ? "text-primary"
+                                            : "text-gray hover:text-primary"
+                                            }`}
                                           aria-current={
                                             isActiveLink(subMenu.href)
                                               ? "page"
@@ -624,11 +616,10 @@ function HeaderMobile({ stickyHeader, locale }) {
                               >
                                 <a
                                   title={subMenu.title}
-                                  className={`block w-full font-semibold duration-200 ${
-                                    isActiveLink(subMenu.href)
-                                      ? "text-primary"
-                                      : "text-gray hover:text-primary"
-                                  }`}
+                                  className={`block w-full font-semibold duration-200 ${isActiveLink(subMenu.href)
+                                    ? "text-primary"
+                                    : "text-gray hover:text-primary"
+                                    }`}
                                   aria-current={
                                     isActiveLink(subMenu.href)
                                       ? "page"

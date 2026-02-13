@@ -1235,5 +1235,129 @@
     "title": "Không tìm thấy trang",
     "content": "Trang bạn đang tìm kiếm không tồn tại hoặc đã bị xóa.",
     "button": "Trở về trang chủ"
+  },
+  "MiniUgate": {
+    "heroSection": {
+      "heading": "MiniUgate – AI Chatbot cho Website",
+      "excerpt": "Tạo chatbot AI thông minh cho website chỉ trong vài phút. Không cần code. Không cần IT. Thuộc hệ sinh thái Ugate – Udata.",
+      "color": "blue",
+      "contact": "Dùng thử miễn phí"
+    },
+    "features": {
+      "title": "Tính năng nổi bật",
+      "lists": [
+        {
+          "title": "No-code AI Chatbot",
+          "desc": "Ai cũng tạo được chatbot. Không cần kiến thức kỹ thuật, không cần developer."
+        },
+        {
+          "title": "Train từ Website, Documents & FAQs",
+          "desc": "Chatbot hiểu đúng nội dung doanh nghiệp. Tự động học từ dữ liệu của bạn."
+        },
+        {
+          "title": "Chat Sessions",
+          "desc": "Xem & phân tích hội thoại khách hàng. Hiểu insight và tối ưu liên tục."
+        },
+        {
+          "title": "Support Tickets",
+          "desc": "AI + con người xử lý yêu cầu quan trọng. Không bỏ sót khách hàng tiềm năng."
+        },
+        {
+          "title": "Tuỳ chỉnh giao diện chatbot",
+          "desc": "Màu sắc, giọng điệu, thương hiệu. Chatbot mang đậm dấu ấn doanh nghiệp."
+        }
+      ]
+    },
+    "singleFeature": {
+      "first": {
+        "title": "Website có traffic, nhưng…",
+        "subTitle": "Đây là những thách thức mà hầu hết doanh nghiệp đang gặp phải",
+        "desc": "<ul><li><strong>65–75%</strong> khách rời website khi không được hỗ trợ ngay</li><li><strong>15–60 phút</strong> là thời gian phản hồi CSKH phổ biến</li><li><strong>40–50%</strong> câu hỏi CSKH bị lặp lại mỗi ngày</li><li><strong>2–3%</strong> conversion rate website trung bình</li></ul>",
+        "img": "/image/products/mini-ugate/MiniUgate-1.webp"
+      },
+      "second": {
+        "title": "MiniUgate giúp thay đổi điều đó",
+        "subTitle": "Kết quả thực tế khi triển khai AI Chatbot cho website của bạn",
+        "desc": "<ul><li><strong>Hiệu quả AI Chatbot:</strong> 45–65% câu hỏi được AI xử lý tự động, < 5 giây thời gian phản hồi, 24/7 – 100% hoạt động liên tục</li><li><strong>Tương tác & chuyển đổi:</strong> 50–70% khách bắt đầu chat, +20–30% time-on-site, +15–30% conversion rate</li><li><strong>Tối ưu nguồn lực:</strong> 40–60% giảm workload CSKH, 30–50% giảm chi phí vận hành</li></ul>",
+        "img": "/image/products/mini-ugate/MiniUgate-2.webp"
+      }
+    },
+    "whyChooseUs": {
+      "title": "Phù hợp với <span class='text-primary'>nhiều ngành nghề</span>",
+      "subTitle": "MiniUgate hỗ trợ đa dạng lĩnh vực kinh doanh",
+      "contents": [
+        {
+          "id": 1,
+          "title": "Website bán hàng",
+          "content": "Chatbot AI tự động tư vấn sản phẩm, trả lời câu hỏi mua hàng, hỗ trợ đơn hàng 24/7.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='8' cy='21' r='1'/><circle cx='19' cy='21' r='1'/><path d='M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12'/></svg>"
+        },
+        {
+          "id": 2,
+          "title": "Doanh nghiệp dịch vụ",
+          "content": "Hỗ trợ khách hàng đặt lịch hẹn, giải đáp thắc mắc dịch vụ, giảm tải đội ngũ CSKH.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16'/><rect width='20' height='14' x='2' y='6' rx='2'/></svg>"
+        },
+        {
+          "id": 3,
+          "title": "Giáo dục – đào tạo",
+          "content": "Trả lời câu hỏi tuyển sinh, tư vấn khoá học, hỗ trợ học viên tự động.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z'/><path d='M22 10v6'/><path d='M6 12.5V16a6 3 0 0 0 12 0v-3.5'/></svg>"
+        },
+        {
+          "id": 4,
+          "title": "Bất động sản",
+          "content": "Giới thiệu dự án, tư vấn giá, đặt lịch xem nhà tự động qua chatbot.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect width='16' height='20' x='4' y='2' rx='2' ry='2'/><path d='M9 22v-4h6v4'/><path d='M8 6h.01'/><path d='M16 6h.01'/><path d='M12 6h.01'/><path d='M12 10h.01'/><path d='M12 14h.01'/><path d='M16 10h.01'/><path d='M16 14h.01'/><path d='M8 10h.01'/><path d='M8 14h.01'/></svg>"
+        },
+        {
+          "id": 5,
+          "title": "Doanh nghiệp B2B",
+          "content": "Hỗ trợ kỹ thuật, tư vấn giải pháp, xử lý yêu cầu ticketing tự động.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2'/><circle cx='9' cy='7' r='4'/><path d='M22 21v-2a4 4 0 0 0-3-3.87'/><path d='M16 3.13a4 4 0 0 1 0 7.75'/></svg>"
+        }
+      ]
+    },
+    "questions": {
+      "title": "Câu hỏi thường gặp",
+      "list": [
+        {
+          "question": "MiniUgate là gì?",
+          "answer": "MiniUgate là nền tảng AI Chatbot no-code cho website, giúp bạn tạo chatbot thông minh chỉ trong vài phút. Không cần code, không cần IT – ai cũng có thể sử dụng!"
+        },
+        {
+          "question": "Tạo chatbot mất bao lâu?",
+          "answer": "Bạn có thể tạo chatbot AI cho website chỉ trong vài phút với 3 bước đơn giản: (1) Dán link website, (2) Setup prompt/giọng điệu, (3) Copy embed code và nhúng vào website."
+        },
+        {
+          "question": "MiniUgate học dữ liệu từ đâu?",
+          "answer": "Chatbot MiniUgate học từ nhiều nguồn: Website của bạn, Documents (tài liệu), và FAQs mà bạn cung cấp. Chatbot sẽ hiểu đúng nội dung và ngữ cảnh của doanh nghiệp bạn."
+        },
+        {
+          "question": "Có cần lập trình không?",
+          "answer": "Không cần lập trình! MiniUgate là nền tảng no-code, nghĩa là bất kỳ ai cũng có thể tạo và quản lý chatbot mà không cần kiến thức kỹ thuật hay IT."
+        },
+        {
+          "question": "Cách nhúng chatbot vào website?",
+          "answer": "Rất đơn giản! Sau khi setup chatbot, bạn chỉ cần copy đoạn embed code và dán vào website của mình. Chatbot sẽ hoạt động ngay lập tức."
+        },
+        {
+          "question": "MiniUgate có ticket hỗ trợ không?",
+          "answer": "Có! MiniUgate có tính năng Support Tickets giúp AI + con người phối hợp xử lý các yêu cầu quan trọng. Khi chatbot không thể trả lời, yêu cầu sẽ được chuyển thành ticket."
+        },
+        {
+          "question": "MiniUgate mang lại lợi ích gì?",
+          "answer": "MiniUgate giúp: Giảm tải CSKH & Sales, tăng time-on-site 20-30%, tăng conversion rate 15-30%, tiết kiệm chi phí vận hành 30-50%, và hoạt động 24/7."
+        },
+        {
+          "question": "MiniUgate có miễn phí không?",
+          "answer": "Bạn có thể dùng thử MiniUgate miễn phí! Truy cập mini.ugate.ai để đăng ký và bắt đầu tạo chatbot AI cho website ngay hôm nay."
+        },
+        {
+          "question": "Cách MiniUgate hoạt động?",
+          "answer": "Chỉ 3 bước đơn giản: Bước 1 – Website của bạn: Nội dung được quét & huấn luyện. Bước 2 – MiniUgate AI: Xử lý & hiểu ngữ cảnh. Bước 3 – Live Chat: Trả lời khách hàng tức thì. Hoàn thành trong vài phút."
+        }
+      ]
+    }
   }
 }
