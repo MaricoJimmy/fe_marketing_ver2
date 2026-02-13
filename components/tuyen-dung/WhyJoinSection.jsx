@@ -36,7 +36,7 @@ const WhyJoinSection = () => {
     ];
 
     return (
-        <section className="py-20 md:py-32">
+        <section className="py-20 md:py-32 bg-gradient-to-br from-blue-50 to-indigo-50/30">
             <div className="container mx-auto px-4">
                 <div className="max-w-6xl mx-auto">
                     {/* Section Header */}

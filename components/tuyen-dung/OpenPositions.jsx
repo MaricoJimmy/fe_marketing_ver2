@@ -70,8 +70,7 @@ const OpenPositions = ({ onSelectPosition }) => {
         const jobsRef = collection(db, "jobs");
         const q = query(
             jobsRef,
-            where("isActive", "==", true),
-            orderBy("order", "asc")
+            where("isActive", "==", true)
         );
 
         const unsubscribe = onSnapshot(
@@ -84,6 +83,8 @@ const OpenPositions = ({ onSelectPosition }) => {
                         id: doc.id,
                         ...doc.data(),
                     }));
+                    // Sort by order on client side to avoid composite index requirement
+                    jobsData.sort((a, b) => (a.order || 0) - (b.order || 0));
                     setJobs(jobsData);
                 }
                 setLoading(false);
@@ -109,7 +110,7 @@ const OpenPositions = ({ onSelectPosition }) => {
 
     return (
         <>
-            <section id="positions" className="py-20 md:py-32 bg-gray-50/50">
+            <section id="positions" className="py-20 md:py-32 bg-white">
                 <div className="container mx-auto px-4">
                     <div className="max-w-6xl mx-auto">
                         {/* Section Header */}

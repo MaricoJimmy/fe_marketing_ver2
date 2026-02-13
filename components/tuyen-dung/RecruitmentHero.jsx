@@ -8,7 +8,7 @@ const RecruitmentHero = () => {
     };
 
     return (
-        <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-gradient-hero bg-hero-pattern">
+        <section className="relative min-h-[85vh] flex items-center overflow-hidden bg-[url('/image/hero/bg-product.webp')] bg-center bg-cover bg-no-repeat">
             {/* Floating Elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <motion.div
@@ -103,9 +103,9 @@ const RecruitmentHero = () => {
                         className="flex items-center justify-center gap-8 md:gap-16 mt-16"
                     >
                         {[
-                            { value: "50+", label: "Thành viên" },
-                            { value: "20+", label: "Dự án triển khai" },
-                            { value: "3+", label: "Năm hoạt động" },
+                            { value: "30+", label: "Thành viên" },
+                            { value: "50+", label: "Dự án triển khai" },
+                            { value: "2", label: "Năm hoạt động" },
                         ].map((stat, i) => (
                             <div key={i} className="text-center">
                                 <div className="text-2xl md:text-3xl font-bold text-blue-600 font-display">

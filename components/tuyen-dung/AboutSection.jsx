@@ -34,7 +34,7 @@ const AboutSection = () => {
     ];
 
     return (
-        <section className="py-20 md:py-32">
+        <section className="py-20 md:py-32 bg-gradient-to-b from-white to-blue-50/50">
             <div className="container mx-auto px-4">
                 <div className="max-w-6xl mx-auto">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
