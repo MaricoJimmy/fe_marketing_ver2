@@ -100,7 +100,6 @@ function HeaderDesktop({ stickyHeader, locale }) {
     ],
     solutions: [
       { title: t("solutions.solar"), href: ROUTER_SOLAR },
-      { title: t("solutions.elevator"), href: ROUTER_ELEVATOR },
       { title: t("solutions.oee"), href: ROUTER_OEE },
       { title: t("solutions.ems"), href: ROUTER_EMS },
       { title: t("solutions.ghg"), href: ROUTER_GHG },
@@ -223,23 +222,6 @@ function HeaderDesktop({ stickyHeader, locale }) {
                       </NavigationMenuLink>
                     </Link>
                   </NavigationMenuItem>
-                  <NavigationMenuItem>
-                    <Link
-                      href={getLocalizedPath(ROUTER_CONTACT, locale)}
-                      legacyBehavior
-                      passHref
-                    >
-                      <NavigationMenuLink
-                        className={`${linkBase} ${isActiveLink(ROUTER_CONTACT) ? linkActive : ""
-                          }`}
-                        aria-current={
-                          isActiveLink(ROUTER_CONTACT) ? "page" : undefined
-                        }
-                      >
-                        {t("contact")}
-                      </NavigationMenuLink>
-                    </Link>
-                  </NavigationMenuItem>
 
                   <NavigationMenuItem>
                     <Link
@@ -268,10 +250,10 @@ function HeaderDesktop({ stickyHeader, locale }) {
               <Link href={ROUTER_CONTACT}>
                 <a
                   title="Free trial"
-                  className={`py-2 px-6 w-full overflow-hidden block relative group bg-white border-2 border-primary font-medium rounded-md`}
+                  className={`py-1.5 px-4 text-sm w-full overflow-hidden block relative group bg-white border-2 border-primary font-medium rounded-md`}
                 >
                   <span className="absolute w-64 h-0 transition-all duration-300 origin-center rotate-45 -translate-x-20 bg-primary top-1/2 group-hover:h-64 group-hover:-translate-y-32 ease"></span>
-                  <span className="relative transition duration-300 text-neutral group-hover:text-white ease">
+                  <span className="relative transition duration-300 text-neutral group-hover:text-white ease whitespace-nowrap">
                     {t("bookDemo")}
                   </span>
                 </a>
@@ -389,13 +371,7 @@ function HeaderMobile({ stickyHeader, locale }) {
       subMenu: null,
       multiMenu: false,
     },
-    {
-      id: "contact",
-      menu: t("contact"),
-      href: ROUTER_CONTACT,
-      subMenu: null,
-      multiMenu: false,
-    },
+
     {
       id: "career",
       menu: t("career"),
@@ -642,7 +618,7 @@ function HeaderMobile({ stickyHeader, locale }) {
                   <a
                     title="Free trial"
                     onClick={() => setOpenMenu(!openMenu)}
-                    className={`py-3 px-6 block w-full bg-primary hover:bg-secondary text-white text-center font-bold rounded-md duration-200`}
+                    className={`py-2 px-4 block w-full bg-primary hover:bg-secondary text-white text-center font-medium rounded-md duration-200`}
                   >
                     {t("bookDemo")}
                   </a>

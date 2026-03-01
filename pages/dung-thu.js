@@ -52,7 +52,7 @@ const ContactPage = () => {
   const onSubmit = (formData, e) => {
     axios({
       method: "post",
-      url: `https://formspree.io/f/xbjejbpw`,
+      url: `https://formspree.io/f/xqednqbz`,
       data: {
         ...formData,
         // purpose,
@@ -340,7 +340,7 @@ const ContactPage = () => {
                         </p>
                       )}
                     </div>
-                    <div className="mt-4 flex justify-end">
+                    <div className="mt-4 flex justify-start">
                       <Button
                         type="submit"
                         title={t("form.button")}
