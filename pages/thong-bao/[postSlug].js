@@ -23,96 +23,69 @@ import { useEffect, useMemo } from "react";
 import TableOfContent from "@/components/common/TableOfContent";
 import { useApp } from "@/contexts/AppContext";
 
-export async function getStaticProps({ params, locale }) {
-  const client = getApolloClient();
+export async function getServerSideProps({ params, locale }) {
+  try {
+    const client = getApolloClient();
 
-  const {
-    data: { post },
-  } = await client.query({
-    query: PostDetailsQuery,
-    variables: {
-      slug: params.postSlug,
-    },
-  });
-
-  const {
-    data: {
-      posts: { nodes: allNotiItems },
-    },
-  } = await client.query({
-    query: AllNotiPosts,
-  });
-
-  const {
-    data: {
-      posts: { nodes: items },
-    },
-  } = await client.query({
-    query: MoreRelatedPostsQueryInSameCategory,
-    variables: {
-      category: "notification",
-    },
-  });
-
-  const relatedPosts = items
-    .filter(
-      (item) =>
-        item.slug !== params.postSlug && item.language.language === locale
-    )
-    .slice(0, 5);
-
-  const localePost = allNotiItems.find((postItem) => {
-    return (
-      postItem.language.language !== locale &&
-      postItem.language.key === post.language.key
-    );
-  });
-
-  return {
-    props: {
-      post: {
-        ...post,
-        localeSlug: localePost?.slug || "",
+    const {
+      data: { post },
+    } = await client.query({
+      query: PostDetailsQuery,
+      variables: {
+        slug: params.postSlug,
       },
-      relatedPosts,
-    },
-  };
-}
+    });
 
-export async function getStaticPaths({ locales }) {
-  let paths = [];
+    if (!post) {
+      return { notFound: true };
+    }
 
-  const client = getApolloClient();
-
-  const {
-    data: {
-      posts: { nodes: items },
-    },
-  } = await client.query({
-    query: AllNotiPosts,
-  });
-
-  // items.forEach((post) => {
-  //   paths.push({
-  //     params: {
-  //       postSlug: post.slug,
-  //     },
-  //   });
-  // });
-
-  paths = items.flatMap((post) => {
-    return locales.map((locale) => ({
-      params: {
-        postSlug: post.slug,
+    const {
+      data: {
+        posts: { nodes: allNotiItems },
       },
-      locale,
-    }));
-  });
+    } = await client.query({
+      query: AllNotiPosts,
+    });
 
-  return {
-    paths,
-    fallback: false,
-  };
+    const {
+      data: {
+        posts: { nodes: items },
+      },
+    } = await client.query({
+      query: MoreRelatedPostsQueryInSameCategory,
+      variables: {
+        category: "notification",
+      },
+    });
+
+    const relatedPosts = items
+      .filter(
+        (item) =>
+          item.slug !== params.postSlug && item.language.language === locale
+      )
+      .slice(0, 5);
+
+    const localePost = allNotiItems.find((postItem) => {
+      return (
+        postItem.language.language !== locale &&
+        postItem.language.key === post.language.key
+      );
+    });
+
+    return {
+      props: {
+        post: {
+          ...post,
+          localeSlug: localePost?.slug || "",
+        },
+        relatedPosts,
+      },
+    };
+  } catch (error) {
+    console.error("Notification fetch error:", error.message);
+    return { notFound: true };
+  }
 }
 
 const NewsPostDetailsPage = ({ post, relatedPosts }) => {
