@@ -830,7 +830,111 @@ html body[data-scroll-locked] {
   animation: pulse-slow 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
-/* ============================================
+/* Animated gradient background */
+@keyframes gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.recruitment-page .animated-gradient-bg {
+  background: linear-gradient(-45deg,
+    hsl(210, 100%, 97%),
+    hsl(200, 100%, 95%),
+    hsl(220, 100%, 97%),
+    hsl(195, 100%, 96%));
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+/* Glassmorphism card */
+.recruitment-page .glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Glow button */
+.recruitment-page .glow-button {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, hsl(215, 100%, 54%) 0%, hsl(200, 100%, 50%) 100%);
+  box-shadow: 0 4px 15px hsla(215, 100%, 54%, 0.35);
+  transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+.recruitment-page .glow-button:hover {
+  box-shadow: 0 6px 25px hsla(215, 100%, 54%, 0.5);
+  transform: translateY(-1px);
+}
+
+/* Gradient left border for cards */
+.recruitment-page .gradient-left-border {
+  border-left: 3px solid transparent;
+  border-image: linear-gradient(to bottom, hsl(215, 100%, 54%), hsl(200, 100%, 50%)) 1;
+}
+
+/* Gradient top border for cards */
+.recruitment-page .gradient-top-border {
+  position: relative;
+}
+.recruitment-page .gradient-top-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, hsl(215, 100%, 54%), hsl(195, 100%, 50%), hsl(170, 80%, 45%));
+  border-radius: 12px 12px 0 0;
+}
+
+/* Connecting line for process steps */
+.recruitment-page .step-connector {
+  position: relative;
+}
+.recruitment-page .step-connector::after {
+  content: '';
+  position: absolute;
+  left: 15px;
+  top: 36px;
+  bottom: -8px;
+  width: 2px;
+  background: linear-gradient(to bottom, hsl(215, 100%, 80%), hsl(215, 100%, 92%));
+}
+.recruitment-page .step-connector:last-child::after {
+  display: none;
+}
+
+/* Floating dot pulse */
+@keyframes ping-slow {
+  0% { transform: scale(1); opacity: 1; }
+  75%, 100% { transform: scale(2); opacity: 0; }
+}
+.recruitment-page .ping-dot {
+  position: relative;
+}
+.recruitment-page .ping-dot::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background: hsl(160, 84%, 39%);
+  border-radius: 50%;
+  animation: ping-slow 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Card hover lift */
+.recruitment-page .card-hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.recruitment-page .card-hover-lift:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px hsla(215, 25%, 15%, 0.12);
+}/* ============================================
    MiniUgate Landing Styles (scoped)
    ============================================ */
 .mini-ugate-page {

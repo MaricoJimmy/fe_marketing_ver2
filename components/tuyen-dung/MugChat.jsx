@@ -1,0 +1,317 @@
+import { useState, useRef, useEffect } from "react";
+import { Send, Bot, User } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+
+const ROUND1_QUESTIONS = [
+    "Thu nhập cao nhất từng đạt là bao nhiêu? Trong bao lâu bạn duy trì mức thu nhập đó?",
+    "KPI cao nhất từng đạt là gì? Hãy cho biết con số cụ thể.",
+    "Tháng tệ nhất bạn từng trải qua là gì? Vì sao lại tệ như vậy?",
+    "Nếu yêu cầu đạt 200 khách hàng/tháng với đội 40 người, bạn nghĩ có khả thi không? Vì sao? (Hãy đưa ra tính toán/logic cụ thể)",
+    "Mục tiêu thu nhập của bạn trong 12 tháng tới là bao nhiêu?",
+];
+
+const HARD_REJECT_KEYWORDS = [
+    "ít áp lực", "cân bằng", "ổn định", "không áp lực", "nhẹ nhàng",
+    "thoải mái", "không cần cao", "vừa phải", "bình thường",
+];
+
+const MugChat = ({ candidateInfo, onComplete }) => {
+    const [messages, setMessages] = useState([]);
+    const [input, setInput] = useState("");
+    const [currentQ, setCurrentQ] = useState(0);
+    const [answers, setAnswers] = useState({});
+    const [followUpCount, setFollowUpCount] = useState(0);
+    const [isTyping, setIsTyping] = useState(false);
+    const [done, setDone] = useState(false);
+    const messagesContainerRef = useRef(null);
+
+    useEffect(() => {
+        if (messagesContainerRef.current) {
+            messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
+        }
+    }, [messages, isTyping]);
+
+    // Start conversation
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            addMugMessage(
+                `Xin chào ${candidateInfo.full_name}! 👋\n\nTôi là MUG — trợ lý tuyển dụng AI của Udata. Bạn đang ứng tuyển vị trí **${candidateInfo.role_applied}**.\n\nTôi sẽ hỏi bạn 5 câu hỏi ngắn để tìm hiểu về kinh nghiệm và mục tiêu của bạn. Vòng này mất khoảng 10-15 phút.\n\nSẵn sàng chưa? Hãy bắt đầu nhé! 🚀`
+            );
+            setTimeout(() => {
+                addMugMessage(`📋 **Câu 1/5:**\n\n${ROUND1_QUESTIONS[0]}`);
+            }, 1500);
+        }, 800);
+        return () => clearTimeout(timer);
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
+
+    function addMugMessage(content) {
+        setMessages((prev) => [
+            ...prev,
+            { role: "mug", content, timestamp: new Date().toISOString() },
+        ]);
+    }
+
+    function hasNumbers(text) {
+        return /\d/.test(text);
+    }
+
+    function checkHardReject(text) {
+        const lower = text.toLowerCase();
+        for (const kw of HARD_REJECT_KEYWORDS) {
+            if (lower.includes(kw)) return kw;
+        }
+        return null;
+    }
+
+    function handleSend() {
+        if (!input.trim() || done) return;
+        const text = input.trim();
+        setInput("");
+
+        const userMsg = { role: "user", content: text, timestamp: new Date().toISOString() };
+        setMessages((prev) => [...prev, userMsg]);
+        setIsTyping(true);
+
+        setTimeout(() => {
+            setIsTyping(false);
+            processAnswer(text);
+        }, 800 + Math.random() * 800);
+    }
+
+    function processAnswer(text) {
+        const needsNumbers = [0, 1, 4].includes(currentQ);
+
+        // Check if answer is too vague (needs numbers but has none)
+        if (needsNumbers && !hasNumbers(text) && followUpCount < 2) {
+            setFollowUpCount((c) => c + 1);
+            addMugMessage(
+                `Cảm ơn bạn, nhưng tôi cần một con số cụ thể hơn. Ví dụ: "25 triệu/tháng trong 6 tháng" hoặc "đạt 150% KPI".\n\nBạn có thể chia sẻ lại với số liệu cụ thể không?`
+            );
+            return;
+        }
+
+        const answerKey = `q${currentQ + 1}`;
+        setAnswers((prev) => ({ ...prev, [answerKey]: text }));
+        setFollowUpCount(0);
+
+        const nextQ = currentQ + 1;
+        if (nextQ < ROUND1_QUESTIONS.length) {
+            setCurrentQ(nextQ);
+            addMugMessage(
+                `Cảm ơn bạn! ✅\n\n📋 **Câu ${nextQ + 1}/5:**\n\n${ROUND1_QUESTIONS[nextQ]}`
+            );
+        } else {
+            // All questions answered
+            finishInterview({ ...answers, [answerKey]: text });
+        }
+    }
+
+    function finishInterview(finalAnswers) {
+        setDone(true);
+        addMugMessage("Cảm ơn bạn đã hoàn thành phỏng vấn! ✨\n\nTôi đang đánh giá câu trả lời của bạn...");
+
+        setTimeout(() => {
+            const result = scoreCandidate(finalAnswers);
+            onComplete(result);
+        }, 2000);
+    }
+
+    function scoreCandidate(finalAnswers) {
+        let hardRejectReason = null;
+
+        // Check hard reject
+        for (const ans of Object.values(finalAnswers)) {
+            const rejected = checkHardReject(ans);
+            if (rejected) {
+                hardRejectReason = `Ứng viên thể hiện xu hướng ưu tiên "${rejected}" — không phù hợp với môi trường áp lực cao.`;
+                break;
+            }
+        }
+
+        // Check if no numbers at all after follow-ups
+        const numbersCount = Object.values(finalAnswers).filter((a) => hasNumbers(a)).length;
+        if (numbersCount === 0) {
+            hardRejectReason = "Ứng viên không cung cấp bất kỳ con số cụ thể nào sau nhiều lần yêu cầu.";
+        }
+
+        // Score: numeric specificity
+        let numeric = 0;
+        const numericQs = [finalAnswers.q1, finalAnswers.q2, finalAnswers.q5];
+        numericQs.forEach((a) => {
+            if (a && hasNumbers(a)) numeric += 6;
+            if (a && /triệu|tỷ|%|VND|usd/i.test(a)) numeric += 2;
+        });
+        numeric = Math.min(25, Math.max(0, numeric + (numbersCount >= 3 ? 5 : 0)));
+
+        // Score: ambition
+        let ambition = 10;
+        const q5 = finalAnswers.q5 || "";
+        if (hasNumbers(q5)) {
+            const nums = q5.match(/\d+/g)?.map(Number) || [];
+            const maxNum = Math.max(...nums);
+            if (maxNum >= 30) ambition += 10;
+            else if (maxNum >= 15) ambition += 5;
+            ambition = Math.min(25, ambition + 5);
+        }
+
+        // Score: reasoning (Q4)
+        let reasoning = 8;
+        const q4 = finalAnswers.q4 || "";
+        if (q4.length > 100) reasoning += 5;
+        if (hasNumbers(q4)) reasoning += 5;
+        if (/tính|chia|mỗi|trung bình|200|40|5|ngày/i.test(q4)) reasoning += 7;
+        reasoning = Math.min(25, reasoning);
+
+        // Score: accountability (Q3)
+        let accountability = 10;
+        const q3 = finalAnswers.q3 || "";
+        if (/học|rút kinh nghiệm|bài học|cải thiện|thay đổi/i.test(q3)) accountability += 8;
+        if (!/đổ lỗi|tại|do người khác|công ty tệ/i.test(q3)) accountability += 4;
+        if (q3.length > 80) accountability += 3;
+        accountability = Math.min(25, accountability);
+
+        const scores = { numeric, ambition, reasoning, accountability };
+        const total = numeric + ambition + reasoning + accountability;
+
+        let status;
+        if (hardRejectReason) {
+            status = "Reject";
+        } else if (total >= 70) {
+            status = "Pass";
+        } else if (total >= 55) {
+            status = "Pending";
+        } else {
+            status = "Reject";
+        }
+
+        const feedback = [];
+        if (numeric >= 18) feedback.push("Cung cấp số liệu cụ thể và rõ ràng.");
+        else feedback.push("Cần bổ sung thêm số liệu cụ thể trong câu trả lời.");
+        if (ambition >= 18) feedback.push("Thể hiện mục tiêu tham vọng và rõ ràng.");
+        else feedback.push("Mục tiêu cá nhân cần tham vọng và cụ thể hơn.");
+        if (reasoning >= 18) feedback.push("Tư duy logic và phân tích tốt.");
+        else feedback.push("Cần cải thiện khả năng phân tích và lập luận logic.");
+        if (accountability >= 18) feedback.push("Tinh thần trách nhiệm và học hỏi cao.");
+        else feedback.push("Nên thể hiện rõ hơn tinh thần tự chịu trách nhiệm.");
+
+        return {
+            full_name: candidateInfo.full_name,
+            email: candidateInfo.email,
+            role_applied: candidateInfo.role_applied,
+            answers: finalAnswers,
+            scores,
+            total,
+            status,
+            hard_reject_reason: hardRejectReason,
+            feedback,
+        };
+    }
+
+    return (
+        <div className="flex flex-col rounded-2xl border border-gray-200 bg-white overflow-hidden" style={{ height: "600px" }}>
+            {/* Header */}
+            <div className="px-6 py-4 flex items-center gap-3" style={{ background: "linear-gradient(135deg, #2563eb, #1d4ed8)" }}>
+                <div className="flex h-10 w-10 items-center justify-center rounded-full" style={{ background: "rgba(255,255,255,0.2)" }}>
+                    <Bot className="h-5 w-5 text-white" />
+                </div>
+                <div>
+                    <h3 className="font-bold text-white">MUG — AI Interviewer</h3>
+                    <p className="text-xs" style={{ color: "rgba(255,255,255,0.7)" }}>
+                        Vòng 1: Mindset & Ambition • Câu {Math.min(currentQ + 1, 5)}/5
+                    </p>
+                </div>
+                <div className="ml-auto">
+                    <div className="h-2 w-32 rounded-full" style={{ background: "rgba(255,255,255,0.2)" }}>
+                        <div
+                            className="h-2 rounded-full transition-all duration-500"
+                            style={{
+                                width: `${((currentQ + (done ? 1 : 0)) / 5) * 100}%`,
+                                background: "rgba(255,255,255,0.8)",
+                            }}
+                        />
+                    </div>
+                </div>
+            </div>
+
+            {/* Messages */}
+            <div ref={messagesContainerRef} className="flex-1 overflow-y-auto p-4 space-y-3">
+                <AnimatePresence>
+                    {messages.map((msg, i) => (
+                        <motion.div
+                            key={i}
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className={`flex gap-2 ${msg.role === "user" ? "justify-end" : "justify-start"}`}
+                        >
+                            {msg.role === "mug" && (
+                                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-50">
+                                    <Bot className="h-4 w-4 text-blue-600" />
+                                </div>
+                            )}
+                            <div
+                                className={`max-w-[75%] rounded-2xl px-4 py-3 text-sm leading-relaxed whitespace-pre-wrap ${msg.role === "user"
+                                    ? "bg-blue-600 text-white rounded-br-md"
+                                    : "bg-gray-100 text-gray-900 rounded-bl-md"
+                                    }`}
+                            >
+                                {msg.content.split(/(\*\*.*?\*\*)/g).map((part, j) =>
+                                    part.startsWith("**") && part.endsWith("**") ? (
+                                        <strong key={j}>{part.slice(2, -2)}</strong>
+                                    ) : (
+                                        <span key={j}>{part}</span>
+                                    )
+                                )}
+                            </div>
+                            {msg.role === "user" && (
+                                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-emerald-50">
+                                    <User className="h-4 w-4 text-emerald-600" />
+                                </div>
+                            )}
+                        </motion.div>
+                    ))}
+                </AnimatePresence>
+
+                {isTyping && (
+                    <div className="flex gap-2">
+                        <div className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-50">
+                            <Bot className="h-4 w-4 text-blue-600" />
+                        </div>
+                        <div className="rounded-2xl bg-gray-100 px-4 py-3 rounded-bl-md">
+                            <div className="flex gap-1">
+                                <span className="h-2 w-2 rounded-full bg-gray-400 animate-bounce" style={{ animationDelay: "0s" }} />
+                                <span className="h-2 w-2 rounded-full bg-gray-400 animate-bounce" style={{ animationDelay: "0.2s" }} />
+                                <span className="h-2 w-2 rounded-full bg-gray-400 animate-bounce" style={{ animationDelay: "0.4s" }} />
+                            </div>
+                        </div>
+                    </div>
+                )}
+
+            </div>
+
+            {/* Input */}
+            <div className="border-t border-gray-200 p-4">
+                <div className="flex gap-2">
+                    <input
+                        type="text"
+                        value={input}
+                        onChange={(e) => setInput(e.target.value)}
+                        onKeyDown={(e) => e.key === "Enter" && handleSend()}
+                        placeholder={done ? "Phỏng vấn đã kết thúc" : "Nhập câu trả lời..."}
+                        disabled={done}
+                        className="flex-1 rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50"
+                    />
+                    <button
+                        onClick={handleSend}
+                        disabled={!input.trim() || done}
+                        className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-600 text-white transition-colors hover:bg-blue-700 disabled:opacity-50"
+                    >
+                        <Send className="h-4 w-4" />
+                    </button>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default MugChat;

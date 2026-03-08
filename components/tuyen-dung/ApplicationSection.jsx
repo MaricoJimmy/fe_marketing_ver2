@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import { motion } from "framer-motion";
-import { Send, Link as LinkIcon, CheckCircle, Loader2 } from "lucide-react";
+import { Send, Link as LinkIcon, CheckCircle, Loader2, Bot, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -12,51 +13,50 @@ import {
     SelectValue,
 } from "@/components/ui/select";
 import { db } from "@/lib/firebase";
-import { collection, addDoc, query, where, orderBy, onSnapshot } from "firebase/firestore";
+import { collection, addDoc, query, where, getDocs } from "firebase/firestore";
 import { toast } from "sonner";
+import MugChat from "./MugChat";
+
+const processSteps = [
+    { step: "Vòng 1", title: "MUG Interview", desc: "Phỏng vấn AI — đánh giá tư duy, tham vọng", tag: "AI tự động" },
+    { step: "Vòng 2", title: "Case Study", desc: "Bài tập thực hành — năng lực chuyên môn", tag: "Online" },
+    { step: "Vòng 3", title: "Final Interview", desc: "Phỏng vấn trực tiếp với quản lý", tag: "Trực tiếp" },
+];
+
+const benefits = [
+    { text: "Phỏng vấn AI 10-15 phút, kết quả ngay" },
+    { text: "Quy trình tuyển dụng 3 vòng minh bạch" },
+    { text: "Đội ngũ HR thân thiện và hỗ trợ" },
+];
 
 const ApplicationSection = ({ selectedPosition }) => {
+    const router = useRouter();
+    const [step, setStep] = useState("info"); // "info" | "interview" | "submitted"
     const [formData, setFormData] = useState({
         name: "",
         email: "",
+        phone: "",
         position: "",
         cvUrl: "",
     });
     const [positions, setPositions] = useState([]);
-    const [isSubmitted, setIsSubmitted] = useState(false);
     const [isSubmitting, setIsSubmitting] = useState(false);
 
     // Fetch active job titles for the dropdown
     useEffect(() => {
-        const jobsRef = collection(db, "jobs");
-        const q = query(jobsRef, where("isActive", "==", true), orderBy("order", "asc"));
-
-        const unsubscribe = onSnapshot(
-            q,
-            (snapshot) => {
-                const titles = snapshot.docs.map((doc) => doc.data().title);
-                if (titles.length > 0) {
-                    setPositions(titles);
-                } else {
-                    setPositions([
-                        "Business Development Manager",
-                        "Business Development Staff",
-                        "Head of Marketing",
-                        "Junior/Mid AI Engineer",
-                        "Junior/Middle Full Stack Developer",
-                        "Thực tập sinh Marketing",
-                    ]);
-                }
-            },
-            () => {
-                setPositions([
-                    "Business Development Manager",
-                    "Business Development Staff",
-                ]);
+        const fetchPositions = async () => {
+            try {
+                const jobsRef = collection(db, "jobs");
+                const q = query(jobsRef, where("isActive", "==", true));
+                const snapshot = await getDocs(q);
+                const titles = snapshot.docs.map((doc) => doc.data().title).filter(Boolean);
+                setPositions(titles);
+            } catch (error) {
+                console.error("Error fetching positions:", error);
+                setPositions([]);
             }
-        );
-
-        return () => unsubscribe();
+        };
+        fetchPositions();
     }, []);
 
     // Update position when selected from job detail modal
@@ -73,54 +73,87 @@ const ApplicationSection = ({ selectedPosition }) => {
         return utc7Time.toISOString().replace("Z", "+07:00");
     };
 
-    const handleSubmit = async (e) => {
+    const handleStartInterview = (e) => {
         e.preventDefault();
-        setIsSubmitting(true);
+        if (!formData.name || !formData.email || !formData.phone || !formData.position || !formData.cvUrl) {
+            toast.error("Vui lòng điền đầy đủ thông tin bắt buộc, bao gồm link CV.");
+            return;
+        }
+        setStep("interview");
+    };
 
+    const handleInterviewComplete = async (result) => {
+        setIsSubmitting(true);
         try {
-            await addDoc(collection(db, "applications"), {
-                name: formData.name,
+            const docRef = await addDoc(collection(db, "applications"), {
+                name: result.full_name,
                 email: formData.email,
-                position: formData.position,
+                phone: formData.phone,
+                position: result.role_applied,
                 cvUrl: formData.cvUrl || null,
                 submittedAt: getUTC7Timestamp(),
                 status: "new",
+                // Round 1 data
+                round1_answers: result.answers,
+                round1_score_total: result.total,
+                round1_score_breakdown: result.scores,
+                round1_status: result.status,
+                round1_feedback: result.feedback,
+                round1_hard_reject_reason: result.hard_reject_reason || null,
             });
 
-            setIsSubmitted(true);
-            toast.success("Đơn ứng tuyển đã được gửi thành công!");
+            // Redirect to result page
+            router.push(`/tuyen-dung/ket-qua/${docRef.id}`);
         } catch (error) {
             console.error("Error submitting application:", error);
             toast.error("Có lỗi xảy ra. Vui lòng thử lại sau.");
-        } finally {
             setIsSubmitting(false);
         }
     };
 
-    if (isSubmitted) {
+    // Step: Interview (MUG Chat)
+    if (step === "interview") {
         return (
             <section id="apply" className="py-20 md:py-32 bg-gray-50/50">
                 <div className="container mx-auto px-4">
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.95 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        className="max-w-lg mx-auto text-center"
-                    >
-                        <div className="w-20 h-20 bg-emerald-50 rounded-full flex items-center justify-center mx-auto mb-6">
-                            <CheckCircle className="w-10 h-10 text-emerald-600" />
-                        </div>
-                        <h2 className="font-display text-3xl font-bold text-gray-900 mb-4">
-                            Cảm ơn bạn đã ứng tuyển!
-                        </h2>
-                        <p className="text-gray-500 mb-6">
-                            Chúng tôi sẽ xem xét hồ sơ và liên hệ với bạn trong thời gian sớm nhất.
-                        </p>
-                    </motion.div>
+                    <div className="max-w-2xl mx-auto">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                        >
+                            <div className="text-center mb-8">
+                                <h2 className="font-display text-2xl md:text-3xl font-bold text-gray-900 mb-2">
+                                    Phỏng vấn với{" "}
+                                    <span className="text-gradient-primary">MUG</span>
+                                </h2>
+                                <p className="text-gray-500">
+                                    Trả lời 5 câu hỏi để MUG đánh giá tư duy và tiềm năng của bạn
+                                </p>
+                            </div>
+                            <MugChat
+                                candidateInfo={{
+                                    full_name: formData.name,
+                                    email: formData.email,
+                                    phone: formData.phone,
+                                    role_applied: formData.position,
+                                    cv_link: formData.cvUrl,
+                                }}
+                                onComplete={handleInterviewComplete}
+                            />
+                            {isSubmitting ? (
+                                <div className="flex items-center justify-center gap-2 mt-4 text-blue-600">
+                                    <Loader2 className="w-5 h-5 animate-spin" />
+                                    <span className="text-sm">Đang lưu kết quả...</span>
+                                </div>
+                            ) : null}
+                        </motion.div>
+                    </div>
                 </div>
             </section>
         );
     }
 
+    // Step: Info Form
     return (
         <section id="apply" className="py-20 md:py-32 bg-gray-50/50">
             <div className="container mx-auto px-4">
@@ -135,25 +168,42 @@ const ApplicationSection = ({ selectedPosition }) => {
                         >
                             <h2 className="font-display text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                                 Sẵn sàng{" "}
-                                <span className="text-blue-600">ứng tuyển?</span>
+                                <span className="text-gradient-primary">ứng tuyển?</span>
                             </h2>
                             <p className="text-lg text-gray-500 mb-8">
-                                Điền form bên cạnh để ứng tuyển vị trí phù hợp với bạn.
+                                Điền thông tin để bắt đầu phỏng vấn với MUG — trợ lý AI tuyển dụng của Udata.
                             </p>
 
                             <div className="space-y-4 mb-8">
-                                {[
-                                    "Phản hồi nhanh trong 48 giờ",
-                                    "Quy trình tuyển dụng 2-3 vòng",
-                                    "Đội ngũ HR thân thiện và hỗ trợ",
-                                ].map((item, index) => (
+                                {benefits.map((item, index) => (
                                     <div key={index} className="flex items-center gap-3">
-                                        <div className="w-6 h-6 bg-emerald-50 rounded-full flex items-center justify-center">
+                                        <div className="w-6 h-6 bg-emerald-50 rounded-full flex items-center justify-center flex-shrink-0">
                                             <CheckCircle className="w-4 h-4 text-emerald-600" />
                                         </div>
-                                        <span className="text-gray-900">{item}</span>
+                                        <span className="text-gray-900">{item.text}</span>
                                     </div>
                                 ))}
+                            </div>
+
+                            {/* Process steps */}
+                            <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-card">
+                                <h3 className="font-semibold text-gray-900 mb-4">Quy trình 3 vòng:</h3>
+                                <div className="space-y-4">
+                                    {processSteps.map((item, index) => (
+                                        <div key={index} className="flex items-start gap-3 step-connector">
+                                            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm">
+                                                <span className="text-xs font-bold text-white">{index + 1}</span>
+                                            </div>
+                                            <div>
+                                                <div className="flex items-center gap-2">
+                                                    <span className="font-medium text-gray-900 text-sm">{item.step}: {item.title}</span>
+                                                    <span className="text-xs bg-gray-100 text-gray-500 px-2 py-0.5 rounded-full">{item.tag}</span>
+                                                </div>
+                                                <p className="text-xs text-gray-500 mt-0.5">{item.desc}</p>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
                             </div>
                         </motion.div>
 
@@ -165,12 +215,20 @@ const ApplicationSection = ({ selectedPosition }) => {
                             transition={{ duration: 0.5 }}
                         >
                             <form
-                                onSubmit={handleSubmit}
-                                className="bg-white rounded-3xl p-8 shadow-card"
+                                onSubmit={handleStartInterview}
+                                className="bg-white rounded-3xl p-8 shadow-card gradient-top-border overflow-hidden"
                             >
-                                <h3 className="font-display text-xl font-bold text-gray-900 mb-6">
-                                    Ứng tuyển ngay
-                                </h3>
+                                <div className="flex items-center gap-3 mb-6">
+                                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-sm">
+                                        <Bot className="w-5 h-5 text-white" />
+                                    </div>
+                                    <div>
+                                        <h3 className="font-display text-xl font-bold text-gray-900">
+                                            Ứng tuyển ngay
+                                        </h3>
+                                        <p className="text-xs text-gray-500">Điền thông tin để bắt đầu phỏng vấn với MUG</p>
+                                    </div>
+                                </div>
 
                                 <div className="space-y-5">
                                     <div>
@@ -203,6 +261,26 @@ const ApplicationSection = ({ selectedPosition }) => {
                                     </div>
 
                                     <div>
+                                        <Label htmlFor="phone" className="text-gray-900 mb-2 block">
+                                            Số điện thoại <span className="text-red-500">*</span>
+                                        </Label>
+                                        <div className="relative">
+                                            <div className="absolute left-4 top-1/2 -translate-y-1/2">
+                                                <Phone className="w-4 h-4 text-gray-400" />
+                                            </div>
+                                            <Input
+                                                id="phone"
+                                                type="tel"
+                                                placeholder="0901234567"
+                                                value={formData.phone}
+                                                onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                                                required
+                                                className="h-12 pl-12"
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <div>
                                         <Label htmlFor="position" className="text-gray-900 mb-2 block">
                                             Vị trí quan tâm <span className="text-red-500">*</span>
                                         </Label>
@@ -214,9 +292,9 @@ const ApplicationSection = ({ selectedPosition }) => {
                                             <SelectTrigger className="h-12">
                                                 <SelectValue placeholder="Chọn vị trí" />
                                             </SelectTrigger>
-                                            <SelectContent>
+                                            <SelectContent className="bg-white border border-gray-200 shadow-lg z-[9999]">
                                                 {positions.map((position) => (
-                                                    <SelectItem key={position} value={position}>
+                                                    <SelectItem key={position} value={position} className="text-gray-900 cursor-pointer hover:bg-blue-50">
                                                         {position}
                                                     </SelectItem>
                                                 ))}
@@ -250,21 +328,14 @@ const ApplicationSection = ({ selectedPosition }) => {
                                     <Button
                                         type="submit"
                                         size="lg"
-                                        className="w-full gap-2 bg-emerald-600 hover:bg-emerald-700 text-white"
-                                        disabled={isSubmitting}
+                                        className="w-full gap-2 glow-button text-white border-0"
                                     >
-                                        {isSubmitting ? (
-                                            <>
-                                                <Loader2 className="w-5 h-5 animate-spin" />
-                                                Đang gửi...
-                                            </>
-                                        ) : (
-                                            <>
-                                                <Send className="w-5 h-5" />
-                                                Gửi đơn ứng tuyển
-                                            </>
-                                        )}
+                                        <Bot className="w-5 h-5" />
+                                        Bắt đầu phỏng vấn với MUG 🤖
                                     </Button>
+                                    <p className="text-center text-xs text-gray-400">
+                                        Phỏng vấn vòng 1 mất khoảng 10-15 phút. Kết quả ngay lập tức.
+                                    </p>
                                 </div>
                             </form>
                         </motion.div>
