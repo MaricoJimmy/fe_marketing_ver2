@@ -2,7 +2,8 @@
 import { Button } from "@/components/ui/button";
 import { FloatingAvatar } from "./FloatingAvatar";
 import { ChatBubble, TypingIndicator } from "./ChatBubble";
-import { Play, Sparkles } from "lucide-react";
+import { Play, Sparkles, Users } from "lucide-react";
+import Link from "next/link";
 
 export const HeroSection = () => {
   return (
@@ -74,6 +75,22 @@ export const HeroSection = () => {
                 <Play className="w-4 h-4" />
                 Xem MiniUgate hoạt động
               </Button>
+            </motion.div>
+
+            {/* Affiliate CTA */}
+            <motion.div
+              className="flex justify-center lg:justify-start mt-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.7 }}
+            >
+              <Link href="/san-pham/mini-ugate/affiliate" legacyBehavior>
+                <a className="inline-flex items-center gap-2 px-6 py-3 rounded-full border-2 border-primary/40 text-primary hover:bg-primary/5 hover:border-primary/60 transition-all duration-300 font-medium text-sm group">
+                  <Users className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                  🤝 Đăng Kí Affiliate — Kiếm 2.000.000đ/deal
+                  <span className="inline-block w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+                </a>
+              </Link>
             </motion.div>
           </motion.div>
 
