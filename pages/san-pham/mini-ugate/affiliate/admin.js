@@ -353,6 +353,26 @@ function AdminContent() {
   const router = useRouter();
   const { user, state, isMounted, logout, approveAffiliate, rejectAffiliate, deactivateAffiliate, verifyOrder, approveCommission, markPayoutPaid, generatePayout } = useAffiliate();
 
+  // Memoized stats calculation for performance (avoid rerender tax)
+  const stats = useMemo(() => {
+    return {
+      totalAffiliates: state?.affiliates?.length || 0,
+      activeAffiliates: state?.affiliates?.filter(a => a.status === 'Đã duyệt').length || 0,
+      paidCustomers: state?.customers?.filter(c => c.pipelineStatus === 'Đã thanh toán').length || 0,
+      totalCommissions: state?.commissions?.reduce((s, c) => s + c.amount, 0) || 0,
+      pendingOrdersCount: state?.orders?.filter(o => o.verificationStatus === 'Chờ duyệt').length || 0
+    };
+  }, [state?.affiliates, state?.customers, state?.commissions, state?.orders]);
+
+  const fraudFlags = useMemo(() => {
+    if (!state?.orders) return [];
+    const duplicateInvoices = state?.orders?.reduce((acc, o) => {
+      acc[o.invoiceCode] = (acc[o.invoiceCode] || 0) + 1;
+      return acc;
+    }, {});
+    return Object.entries(duplicateInvoices).filter(([, count]) => count > 1);
+  }, [state?.orders]);
+
   // Prevent hydration mismatch
   if (!isMounted) return null;
 
@@ -378,25 +398,6 @@ function AdminContent() {
       </div>
     );
   }
-
-  // Memoized stats calculation for performance (avoid rerender tax)
-  const stats = useMemo(() => {
-    return {
-      totalAffiliates: state.affiliates.length,
-      activeAffiliates: state.affiliates.filter(a => a.status === 'Đã duyệt').length,
-      paidCustomers: state.customers.filter(c => c.pipelineStatus === 'Đã thanh toán').length,
-      totalCommissions: state.commissions.reduce((s, c) => s + c.amount, 0),
-      pendingOrdersCount: state.orders.filter(o => o.verificationStatus === 'Chờ duyệt').length
-    };
-  }, [state.affiliates, state.customers, state.commissions, state.orders]);
-
-  const fraudFlags = useMemo(() => {
-    const duplicateInvoices = state.orders.reduce((acc, o) => {
-      acc[o.invoiceCode] = (acc[o.invoiceCode] || 0) + 1;
-      return acc;
-    }, {});
-    return Object.entries(duplicateInvoices).filter(([, count]) => count > 1);
-  }, [state.orders]);
 
   const handleLogout = () => { logout(); router.push('/san-pham/mini-ugate/affiliate/login'); };
 
