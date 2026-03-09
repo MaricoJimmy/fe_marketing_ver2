@@ -15,6 +15,9 @@ import {
   CheckCircle,
   Clock,
   XCircle,
+  ThumbsUp,
+  ThumbsDown,
+  Phone,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { db } from "@/lib/firebase";
@@ -23,8 +26,10 @@ import {
   onSnapshot,
   query,
   orderBy,
+  doc,
+  updateDoc,
 } from "firebase/firestore";
-import { Toaster } from "sonner";
+import { Toaster, toast } from "sonner";
 import AdminLayout from "@/components/tuyen-dung/AdminLayout";
 
 const formatDate = (dateStr) => {
@@ -42,14 +47,30 @@ const formatDate = (dateStr) => {
   }
 };
 
-const statusConfig = {
+const cvStatusConfig = {
+  pending: { bg: "bg-amber-50", text: "text-amber-700", border: "border-amber-200", label: "Chờ duyệt", dot: "bg-amber-500" },
+  approved: { bg: "bg-emerald-50", text: "text-emerald-700", border: "border-emerald-200", label: "Đã duyệt", dot: "bg-emerald-500" },
+  rejected: { bg: "bg-red-50", text: "text-red-600", border: "border-red-200", label: "Từ chối", dot: "bg-red-500" },
+};
+
+const testStatusConfig = {
   Pass: { bg: "bg-emerald-50", text: "text-emerald-700", border: "border-emerald-200", label: "Đạt", dot: "bg-emerald-500" },
   Pending: { bg: "bg-amber-50", text: "text-amber-700", border: "border-amber-200", label: "Chờ", dot: "bg-amber-500" },
   Reject: { bg: "bg-red-50", text: "text-red-600", border: "border-red-200", label: "Loại", dot: "bg-red-500" },
 };
 
-const getStatusBadge = (status) => {
-  const c = statusConfig[status] || statusConfig.Pending;
+const getCVStatusBadge = (status) => {
+  const c = cvStatusConfig[status] || cvStatusConfig.pending;
+  return (
+    <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-semibold ${c.bg} ${c.text} border ${c.border}`}>
+      <span className={`w-1.5 h-1.5 rounded-full ${c.dot}`} />
+      CV: {c.label}
+    </span>
+  );
+};
+
+const getTestStatusBadge = (status) => {
+  const c = testStatusConfig[status] || testStatusConfig.Pending;
   return (
     <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-semibold ${c.bg} ${c.text} border ${c.border}`}>
       <span className={`w-1.5 h-1.5 rounded-full ${c.dot}`} />
@@ -58,12 +79,20 @@ const getStatusBadge = (status) => {
   );
 };
 
+const getUTC7Timestamp = () => {
+  const now = new Date();
+  const utc7Offset = 7 * 60 * 60 * 1000;
+  const utc7Time = new Date(now.getTime() + utc7Offset);
+  return utc7Time.toISOString().replace("Z", "+07:00");
+};
+
 const AdminCVPage = () => {
   const router = useRouter();
   const [applications, setApplications] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedApp, setSelectedApp] = useState(null);
   const [filterPosition, setFilterPosition] = useState("all");
+  const [filterCVStatus, setFilterCVStatus] = useState("all");
   const [positions, setPositions] = useState([]);
 
   useEffect(() => {
@@ -71,9 +100,9 @@ const AdminCVPage = () => {
     const q = query(appsRef, orderBy("submittedAt", "desc"));
 
     const unsubscribe = onSnapshot(q, (snapshot) => {
-      const appsData = snapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
+      const appsData = snapshot.docs.map((d) => ({
+        id: d.id,
+        ...d.data(),
       }));
       setApplications(appsData);
       const uniquePositions = [...new Set(appsData.map((app) => app.position).filter(Boolean))];
@@ -90,10 +119,51 @@ const AdminCVPage = () => {
     }
   }, [router.query]);
 
-  const filteredApps =
-    filterPosition === "all"
-      ? applications
-      : applications.filter((app) => app.position === filterPosition);
+  const handleApproveCV = async (appId, e) => {
+    if (e) e.stopPropagation();
+    try {
+      await updateDoc(doc(db, "applications", appId), {
+        cv_status: "approved",
+        cv_reviewed_at: getUTC7Timestamp(),
+      });
+      toast.success("Đã duyệt CV thành công!");
+      // Update selected app if viewing detail
+      if (selectedApp?.id === appId) {
+        setSelectedApp((prev) => ({ ...prev, cv_status: "approved", cv_reviewed_at: getUTC7Timestamp() }));
+      }
+    } catch (error) {
+      console.error("Error approving CV:", error);
+      toast.error("Có lỗi xảy ra khi duyệt CV.");
+    }
+  };
+
+  const handleRejectCV = async (appId, e) => {
+    if (e) e.stopPropagation();
+    try {
+      await updateDoc(doc(db, "applications", appId), {
+        cv_status: "rejected",
+        cv_reviewed_at: getUTC7Timestamp(),
+      });
+      toast.success("Đã từ chối CV.");
+      if (selectedApp?.id === appId) {
+        setSelectedApp((prev) => ({ ...prev, cv_status: "rejected", cv_reviewed_at: getUTC7Timestamp() }));
+      }
+    } catch (error) {
+      console.error("Error rejecting CV:", error);
+      toast.error("Có lỗi xảy ra.");
+    }
+  };
+
+  const filteredApps = applications.filter((app) => {
+    const posMatch = filterPosition === "all" || app.position === filterPosition;
+    const cvMatch = filterCVStatus === "all" || (app.cv_status || "pending") === filterCVStatus;
+    return posMatch && cvMatch;
+  });
+
+  // Stats
+  const pendingCount = applications.filter((a) => (a.cv_status || "pending") === "pending").length;
+  const approvedCount = applications.filter((a) => a.cv_status === "approved").length;
+  const rejectedCount = applications.filter((a) => a.cv_status === "rejected").length;
 
   return (
     <AdminLayout>
@@ -102,14 +172,21 @@ const AdminCVPage = () => {
         {/* Header */}
         <div className="flex items-center justify-between mb-8">
           <div>
-            <h1 className="text-xl font-bold text-gray-900">Quản lý CV ứng tuyển</h1>
+            <h1 className="text-xl font-bold text-gray-900">Quản lý hồ sơ ứng tuyển</h1>
             <p className="text-sm text-gray-500 mt-1">
-              {filteredApps.length} đơn ứng tuyển
+              {filteredApps.length} hồ sơ
               {filterPosition !== "all" ? ` cho ${filterPosition}` : ""}
+              {filterCVStatus !== "all" ? ` — ${cvStatusConfig[filterCVStatus]?.label}` : ""}
             </p>
           </div>
           <div className="flex items-center gap-3">
-            <div className="flex items-center gap-2 bg-white rounded-xl border border-gray-200/60 px-4 py-2.5 shadow-sm">
+            {/* Stat badges */}
+            <div className="flex items-center gap-2 bg-amber-50 rounded-xl border border-amber-200 px-3 py-2">
+              <Clock className="w-4 h-4 text-amber-600" />
+              <span className="text-sm font-bold text-amber-700">{pendingCount}</span>
+              <span className="text-xs text-amber-600">chờ duyệt</span>
+            </div>
+            <div className="flex items-center gap-2 bg-white rounded-xl border border-gray-200/60 px-3 py-2 shadow-sm">
               <Inbox className="w-4 h-4 text-blue-600" />
               <span className="text-sm font-bold text-gray-900">{applications.length}</span>
               <span className="text-xs text-gray-500">tổng</span>
@@ -117,17 +194,39 @@ const AdminCVPage = () => {
           </div>
         </div>
 
-        {/* Filter Pills */}
+        {/* CV Status Filter */}
+        <div className="flex gap-2 mb-4 flex-wrap">
+          {[
+            { value: "all", label: `Tất cả (${applications.length})` },
+            { value: "pending", label: `Chờ duyệt (${pendingCount})` },
+            { value: "approved", label: `Đã duyệt (${approvedCount})` },
+            { value: "rejected", label: `Từ chối (${rejectedCount})` },
+          ].map((f) => (
+            <button
+              key={f.value}
+              onClick={() => setFilterCVStatus(f.value)}
+              className={`px-4 py-2 rounded-lg text-xs font-semibold transition-all ${
+                filterCVStatus === f.value
+                  ? "bg-slate-900 text-white shadow-md"
+                  : "bg-white text-gray-600 border border-gray-200 hover:bg-gray-50"
+              }`}
+            >
+              {f.label}
+            </button>
+          ))}
+        </div>
+
+        {/* Position Filter */}
         <div className="flex gap-2 mb-6 flex-wrap">
           <button
             onClick={() => setFilterPosition("all")}
-            className={`px-4 py-2 rounded-lg text-xs font-semibold transition-all ${
+            className={`px-3 py-1.5 rounded-lg text-[11px] font-medium transition-all ${
               filterPosition === "all"
-                ? "bg-slate-900 text-white shadow-md"
-                : "bg-white text-gray-600 border border-gray-200 hover:bg-gray-50"
+                ? "bg-blue-100 text-blue-700 border border-blue-200"
+                : "bg-gray-50 text-gray-500 border border-gray-100 hover:bg-gray-100"
             }`}
           >
-            Tất cả ({applications.length})
+            Tất cả vị trí
           </button>
           {positions.map((pos) => {
             const count = applications.filter((a) => a.position === pos).length;
@@ -135,10 +234,10 @@ const AdminCVPage = () => {
               <button
                 key={pos}
                 onClick={() => setFilterPosition(pos)}
-                className={`px-4 py-2 rounded-lg text-xs font-semibold transition-all ${
+                className={`px-3 py-1.5 rounded-lg text-[11px] font-medium transition-all ${
                   filterPosition === pos
-                    ? "bg-slate-900 text-white shadow-md"
-                    : "bg-white text-gray-600 border border-gray-200 hover:bg-gray-50"
+                    ? "bg-blue-100 text-blue-700 border border-blue-200"
+                    : "bg-gray-50 text-gray-500 border border-gray-100 hover:bg-gray-100"
                 }`}
               >
                 {pos} ({count})
@@ -155,81 +254,110 @@ const AdminCVPage = () => {
         ) : filteredApps.length === 0 ? (
           <div className="text-center py-20 bg-white rounded-2xl border border-gray-200/60">
             <FileText className="w-12 h-12 text-gray-300 mx-auto mb-4" />
-            <p className="text-gray-500 mb-1">Chưa có đơn ứng tuyển nào</p>
-            <p className="text-sm text-gray-400">Đơn ứng tuyển sẽ hiển thị ở đây</p>
+            <p className="text-gray-500 mb-1">Chưa có hồ sơ nào</p>
+            <p className="text-sm text-gray-400">Hồ sơ ứng tuyển sẽ hiển thị ở đây</p>
           </div>
         ) : (
           <div className="space-y-3">
-            {filteredApps.map((app, index) => (
-              <motion.div
-                key={app.id}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.03 }}
-                className="group bg-white rounded-2xl p-5 border border-gray-200/60 hover:border-gray-300/60 hover:shadow-md transition-all duration-300 cursor-pointer shadow-sm"
-                onClick={() => setSelectedApp(app)}
-              >
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center gap-4 flex-1 min-w-0">
-                    {/* Avatar */}
-                    <div className="w-11 h-11 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center flex-shrink-0 shadow-md">
-                      <span className="text-white text-sm font-bold">{(app.name || "?").charAt(0).toUpperCase()}</span>
-                    </div>
-
-                    <div className="min-w-0 flex-1">
-                      <h3 className="font-semibold text-gray-900 text-sm truncate">{app.name}</h3>
-                      <div className="flex items-center gap-3 text-xs text-gray-500 mt-1 flex-wrap">
-                        <span className="flex items-center gap-1.5">
-                          <Mail className="w-3 h-3" />
-                          {app.email}
-                        </span>
-                        <span className="flex items-center gap-1.5">
-                          <Briefcase className="w-3 h-3" />
-                          <span className="text-blue-600 font-medium">{app.position}</span>
-                        </span>
-                        <span className="flex items-center gap-1.5">
-                          <Calendar className="w-3 h-3" />
-                          {formatDate(app.submittedAt)}
-                        </span>
+            {filteredApps.map((app, index) => {
+              const appCVStatus = app.cv_status || (app.round1_score_total !== undefined ? "approved" : "pending");
+              return (
+                <motion.div
+                  key={app.id}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.03 }}
+                  className="group bg-white rounded-2xl p-5 border border-gray-200/60 hover:border-gray-300/60 hover:shadow-md transition-all duration-300 cursor-pointer shadow-sm"
+                  onClick={() => setSelectedApp(app)}
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-4 flex-1 min-w-0">
+                      {/* Avatar */}
+                      <div className="w-11 h-11 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center flex-shrink-0 shadow-md">
+                        <span className="text-white text-sm font-bold">{(app.name || "?").charAt(0).toUpperCase()}</span>
                       </div>
-                    </div>
 
-                    {/* Test Status Badges */}
-                    {app.round1_score_total !== undefined ? (
-                      <div className="flex items-center gap-2 mt-2 ml-[60px]">
-                        <span className="text-[10px] text-gray-400">V1:</span>
-                        <span className="text-xs font-bold text-gray-700">{app.round1_score_total}</span>
-                        {getStatusBadge(app.round1_status)}
-                        {app.round2_score_total !== undefined && app.round2_score_total !== null ? (
-                          <>
-                            <span className="text-gray-300">|</span>
-                            <span className="text-[10px] text-gray-400">V2:</span>
-                            <span className="text-xs font-bold text-gray-700">{app.round2_score_total}</span>
-                            {getStatusBadge(app.round2_status)}
-                          </>
+                      <div className="min-w-0 flex-1">
+                        <div className="flex items-center gap-2">
+                          <h3 className="font-semibold text-gray-900 text-sm truncate">{app.name}</h3>
+                          {getCVStatusBadge(appCVStatus)}
+                        </div>
+                        <div className="flex items-center gap-3 text-xs text-gray-500 mt-1 flex-wrap">
+                          <span className="flex items-center gap-1.5">
+                            <Mail className="w-3 h-3" />
+                            {app.email}
+                          </span>
+                          <span className="flex items-center gap-1.5">
+                            <Briefcase className="w-3 h-3" />
+                            <span className="text-blue-600 font-medium">{app.position}</span>
+                          </span>
+                          <span className="flex items-center gap-1.5">
+                            <Calendar className="w-3 h-3" />
+                            {formatDate(app.submittedAt)}
+                          </span>
+                        </div>
+
+                        {/* Test Status Badges */}
+                        {app.round1_score_total !== undefined ? (
+                          <div className="flex items-center gap-2 mt-2">
+                            <span className="text-[10px] text-gray-400">V1:</span>
+                            <span className="text-xs font-bold text-gray-700">{app.round1_score_total}</span>
+                            {getTestStatusBadge(app.round1_status)}
+                            {app.round2_score_total !== undefined && app.round2_score_total !== null ? (
+                              <>
+                                <span className="text-gray-300">|</span>
+                                <span className="text-[10px] text-gray-400">V2:</span>
+                                <span className="text-xs font-bold text-gray-700">{app.round2_score_total}</span>
+                                {getTestStatusBadge(app.round2_status)}
+                              </>
+                            ) : null}
+                          </div>
                         ) : null}
                       </div>
-                    ) : null}
-                  </div>
+                    </div>
 
-                  <div className="flex items-center gap-2 flex-shrink-0 ml-4">
-                    {app.cvUrl ? (
-                      <a
-                        href={app.cvUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        <Button variant="outline" size="sm" className="gap-1.5 text-xs shadow-sm">
-                          <ExternalLink className="w-3.5 h-3.5" />
-                          CV
-                        </Button>
-                      </a>
-                    ) : null}
+                    <div className="flex items-center gap-2 flex-shrink-0 ml-4">
+                      {/* CV Review Buttons — only for pending */}
+                      {appCVStatus === "pending" && (
+                        <>
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={(e) => handleApproveCV(app.id, e)}
+                            className="gap-1.5 text-xs shadow-sm text-emerald-700 border-emerald-200 hover:bg-emerald-50"
+                          >
+                            <ThumbsUp className="w-3.5 h-3.5" />
+                            Duyệt
+                          </Button>
+                          <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={(e) => handleRejectCV(app.id, e)}
+                            className="gap-1.5 text-xs shadow-sm text-red-600 border-red-200 hover:bg-red-50"
+                          >
+                            <ThumbsDown className="w-3.5 h-3.5" />
+                            Từ chối
+                          </Button>
+                        </>
+                      )}
+                      {app.cvUrl ? (
+                        <a
+                          href={app.cvUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <Button variant="outline" size="sm" className="gap-1.5 text-xs shadow-sm">
+                            <ExternalLink className="w-3.5 h-3.5" />
+                            CV
+                          </Button>
+                        </a>
+                      ) : null}
+                    </div>
                   </div>
-                </div>
-              </motion.div>
-            ))}
+                </motion.div>
+              );
+            })}
           </div>
         )}
       </div>
@@ -260,7 +388,10 @@ const AdminCVPage = () => {
                     </div>
                     <div>
                       <h2 className="text-lg font-bold text-gray-900">{selectedApp.name}</h2>
-                      <p className="text-sm text-gray-500">{selectedApp.position}</p>
+                      <div className="flex items-center gap-2">
+                        <p className="text-sm text-gray-500">{selectedApp.position}</p>
+                        {getCVStatusBadge(selectedApp.cv_status || "pending")}
+                      </div>
                     </div>
                   </div>
                   <button onClick={() => setSelectedApp(null)} className="p-2 hover:bg-gray-100 rounded-xl transition-colors">
@@ -275,8 +406,10 @@ const AdminCVPage = () => {
                     {[
                       { icon: User, label: "Họ tên", value: selectedApp.name },
                       { icon: Mail, label: "Email", value: selectedApp.email },
+                      { icon: Phone, label: "SĐT", value: selectedApp.phone || "—" },
                       { icon: Briefcase, label: "Vị trí", value: selectedApp.position },
                       { icon: Calendar, label: "Ngày gửi", value: formatDate(selectedApp.submittedAt) },
+                      { icon: Calendar, label: "Ngày duyệt", value: selectedApp.cv_reviewed_at ? formatDate(selectedApp.cv_reviewed_at) : "Chưa duyệt" },
                     ].map((item) => (
                       <div key={item.label} className="bg-gray-50 rounded-xl p-3">
                         <p className="text-[10px] text-gray-500 uppercase tracking-wider mb-1">{item.label}</p>
@@ -302,6 +435,35 @@ const AdminCVPage = () => {
                     </a>
                   ) : null}
 
+                  {/* CV Review Actions */}
+                  {(selectedApp.cv_status || "pending") === "pending" && (
+                    <div className="flex gap-3 p-4 bg-amber-50 rounded-xl border border-amber-200">
+                      <div className="flex-1">
+                        <p className="text-sm font-semibold text-gray-900 mb-1">⏳ CV đang chờ duyệt</p>
+                        <p className="text-xs text-gray-500">Xem CV và quyết định cho ứng viên này</p>
+                      </div>
+                      <div className="flex gap-2">
+                        <Button
+                          size="sm"
+                          onClick={() => handleApproveCV(selectedApp.id)}
+                          className="gap-1.5 bg-emerald-600 hover:bg-emerald-700 text-white"
+                        >
+                          <ThumbsUp className="w-3.5 h-3.5" />
+                          Duyệt CV
+                        </Button>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          onClick={() => handleRejectCV(selectedApp.id)}
+                          className="gap-1.5 text-red-600 border-red-200 hover:bg-red-50"
+                        >
+                          <ThumbsDown className="w-3.5 h-3.5" />
+                          Từ chối
+                        </Button>
+                      </div>
+                    </div>
+                  )}
+
                   {/* Round 1 */}
                   {selectedApp.round1_score_total !== undefined ? (
                     <div className="border border-gray-200 rounded-2xl overflow-hidden">
@@ -309,7 +471,7 @@ const AdminCVPage = () => {
                         <h3 className="font-semibold text-gray-900 text-sm">Vòng 1 — MUG Interview</h3>
                         <div className="flex items-center gap-2">
                           <span className="text-lg font-bold text-gray-900">{selectedApp.round1_score_total}</span>
-                          {getStatusBadge(selectedApp.round1_status)}
+                          {getTestStatusBadge(selectedApp.round1_status)}
                         </div>
                       </div>
                       <div className="p-5">
@@ -367,7 +529,7 @@ const AdminCVPage = () => {
                         <h3 className="font-semibold text-gray-900 text-sm">Vòng 2 — Case Study</h3>
                         <div className="flex items-center gap-2">
                           <span className="text-lg font-bold text-gray-900">{selectedApp.round2_score_total}</span>
-                          {getStatusBadge(selectedApp.round2_status)}
+                          {getTestStatusBadge(selectedApp.round2_status)}
                         </div>
                       </div>
                       <div className="p-5">

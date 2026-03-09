@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import { motion } from "framer-motion";
-import { Send, Link as LinkIcon, CheckCircle, Loader2, Bot, Phone } from "lucide-react";
+import { Send, Link as LinkIcon, CheckCircle, Loader2, FileText, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -15,23 +15,23 @@ import {
 import { db } from "@/lib/firebase";
 import { collection, addDoc, query, where, getDocs } from "firebase/firestore";
 import { toast } from "sonner";
-import MugChat from "./MugChat";
 
 const processSteps = [
-    { step: "Vòng 1", title: "MUG Interview", desc: "Phỏng vấn AI — đánh giá tư duy, tham vọng", tag: "AI tự động" },
-    { step: "Vòng 2", title: "Case Study", desc: "Bài tập thực hành — năng lực chuyên môn", tag: "Online" },
-    { step: "Vòng 3", title: "Final Interview", desc: "Phỏng vấn trực tiếp với quản lý", tag: "Trực tiếp" },
+    { step: "Bước 1", title: "Nộp hồ sơ", desc: "Gửi CV & thông tin cá nhân", tag: "Online" },
+    { step: "Bước 2", title: "Duyệt CV", desc: "HR xem xét hồ sơ (1-3 ngày)", tag: "Admin" },
+    { step: "Bước 3", title: "MUG Interview", desc: "Phỏng vấn AI — đánh giá tư duy, tham vọng", tag: "AI tự động" },
+    { step: "Bước 4", title: "Case Study", desc: "Bài tập thực hành — năng lực chuyên môn", tag: "Online" },
+    { step: "Bước 5", title: "Final Interview", desc: "Phỏng vấn trực tiếp với quản lý", tag: "Trực tiếp" },
 ];
 
 const benefits = [
+    { text: "Nộp CV nhanh, HR phản hồi trong 1-3 ngày" },
     { text: "Phỏng vấn AI 10-15 phút, kết quả ngay" },
-    { text: "Quy trình tuyển dụng 3 vòng minh bạch" },
-    { text: "Đội ngũ HR thân thiện và hỗ trợ" },
+    { text: "Quy trình tuyển dụng minh bạch, chuyên nghiệp" },
 ];
 
 const ApplicationSection = ({ selectedPosition }) => {
     const router = useRouter();
-    const [step, setStep] = useState("info"); // "info" | "interview" | "submitted"
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -73,87 +73,48 @@ const ApplicationSection = ({ selectedPosition }) => {
         return utc7Time.toISOString().replace("Z", "+07:00");
     };
 
-    const handleStartInterview = (e) => {
+    const handleSubmitCV = async (e) => {
         e.preventDefault();
         if (!formData.name || !formData.email || !formData.phone || !formData.position || !formData.cvUrl) {
             toast.error("Vui lòng điền đầy đủ thông tin bắt buộc, bao gồm link CV.");
             return;
         }
-        setStep("interview");
-    };
 
-    const handleInterviewComplete = async (result) => {
         setIsSubmitting(true);
         try {
+            // Check if email already submitted
+            const existingQuery = query(
+                collection(db, "applications"),
+                where("email", "==", formData.email),
+                where("position", "==", formData.position)
+            );
+            const existingDocs = await getDocs(existingQuery);
+            if (!existingDocs.empty) {
+                const existingDoc = existingDocs.docs[0];
+                toast.info("Bạn đã nộp hồ sơ cho vị trí này rồi. Đang chuyển đến trang theo dõi...");
+                router.push(`/tuyen-dung/da-nop/${existingDoc.id}`);
+                return;
+            }
+
             const docRef = await addDoc(collection(db, "applications"), {
-                name: result.full_name,
+                name: formData.name,
                 email: formData.email,
                 phone: formData.phone,
-                position: result.role_applied,
-                cvUrl: formData.cvUrl || null,
+                position: formData.position,
+                cvUrl: formData.cvUrl,
                 submittedAt: getUTC7Timestamp(),
                 status: "new",
-                // Round 1 data
-                round1_answers: result.answers,
-                round1_score_total: result.total,
-                round1_score_breakdown: result.scores,
-                round1_status: result.status,
-                round1_feedback: result.feedback,
-                round1_hard_reject_reason: result.hard_reject_reason || null,
+                cv_status: "pending",
             });
 
-            // Redirect to result page
-            router.push(`/tuyen-dung/ket-qua/${docRef.id}`);
+            router.push(`/tuyen-dung/da-nop/${docRef.id}`);
         } catch (error) {
-            console.error("Error submitting application:", error);
+            console.error("Error submitting CV:", error);
             toast.error("Có lỗi xảy ra. Vui lòng thử lại sau.");
             setIsSubmitting(false);
         }
     };
 
-    // Step: Interview (MUG Chat)
-    if (step === "interview") {
-        return (
-            <section id="apply" className="py-20 md:py-32 bg-gray-50/50">
-                <div className="container mx-auto px-4">
-                    <div className="max-w-2xl mx-auto">
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            animate={{ opacity: 1, y: 0 }}
-                        >
-                            <div className="text-center mb-8">
-                                <h2 className="font-display text-2xl md:text-3xl font-bold text-gray-900 mb-2">
-                                    Phỏng vấn với{" "}
-                                    <span className="text-gradient-primary">MUG</span>
-                                </h2>
-                                <p className="text-gray-500">
-                                    Trả lời 5 câu hỏi để MUG đánh giá tư duy và tiềm năng của bạn
-                                </p>
-                            </div>
-                            <MugChat
-                                candidateInfo={{
-                                    full_name: formData.name,
-                                    email: formData.email,
-                                    phone: formData.phone,
-                                    role_applied: formData.position,
-                                    cv_link: formData.cvUrl,
-                                }}
-                                onComplete={handleInterviewComplete}
-                            />
-                            {isSubmitting ? (
-                                <div className="flex items-center justify-center gap-2 mt-4 text-blue-600">
-                                    <Loader2 className="w-5 h-5 animate-spin" />
-                                    <span className="text-sm">Đang lưu kết quả...</span>
-                                </div>
-                            ) : null}
-                        </motion.div>
-                    </div>
-                </div>
-            </section>
-        );
-    }
-
-    // Step: Info Form
     return (
         <section id="apply" className="py-20 md:py-32 bg-gray-50/50">
             <div className="container mx-auto px-4">
@@ -171,7 +132,7 @@ const ApplicationSection = ({ selectedPosition }) => {
                                 <span className="text-gradient-primary">ứng tuyển?</span>
                             </h2>
                             <p className="text-lg text-gray-500 mb-8">
-                                Điền thông tin để bắt đầu phỏng vấn với MUG — trợ lý AI tuyển dụng của Udata.
+                                Gửi CV để bắt đầu hành trình cùng Udata. HR sẽ xem xét và phản hồi trong 1-3 ngày làm việc.
                             </p>
 
                             <div className="space-y-4 mb-8">
@@ -187,11 +148,14 @@ const ApplicationSection = ({ selectedPosition }) => {
 
                             {/* Process steps */}
                             <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-card">
-                                <h3 className="font-semibold text-gray-900 mb-4">Quy trình 3 vòng:</h3>
+                                <h3 className="font-semibold text-gray-900 mb-4">Quy trình tuyển dụng:</h3>
                                 <div className="space-y-4">
                                     {processSteps.map((item, index) => (
                                         <div key={index} className="flex items-start gap-3 step-connector">
-                                            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm">
+                                            <div className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 mt-0.5 shadow-sm ${index === 0
+                                                    ? "bg-gradient-to-br from-blue-500 to-blue-600"
+                                                    : "bg-gradient-to-br from-gray-400 to-gray-500"
+                                                }`}>
                                                 <span className="text-xs font-bold text-white">{index + 1}</span>
                                             </div>
                                             <div>
@@ -215,18 +179,18 @@ const ApplicationSection = ({ selectedPosition }) => {
                             transition={{ duration: 0.5 }}
                         >
                             <form
-                                onSubmit={handleStartInterview}
+                                onSubmit={handleSubmitCV}
                                 className="bg-white rounded-3xl p-8 shadow-card gradient-top-border overflow-hidden"
                             >
                                 <div className="flex items-center gap-3 mb-6">
                                     <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center shadow-sm">
-                                        <Bot className="w-5 h-5 text-white" />
+                                        <FileText className="w-5 h-5 text-white" />
                                     </div>
                                     <div>
                                         <h3 className="font-display text-xl font-bold text-gray-900">
-                                            Ứng tuyển ngay
+                                            Nộp hồ sơ ứng tuyển
                                         </h3>
-                                        <p className="text-xs text-gray-500">Điền thông tin để bắt đầu phỏng vấn với MUG</p>
+                                        <p className="text-xs text-gray-500">Điền thông tin và gửi CV để bắt đầu</p>
                                     </div>
                                 </div>
 
@@ -329,12 +293,22 @@ const ApplicationSection = ({ selectedPosition }) => {
                                         type="submit"
                                         size="lg"
                                         className="w-full gap-2 glow-button text-white border-0"
+                                        disabled={isSubmitting}
                                     >
-                                        <Bot className="w-5 h-5" />
-                                        Bắt đầu phỏng vấn với MUG 🤖
+                                        {isSubmitting ? (
+                                            <>
+                                                <Loader2 className="w-5 h-5 animate-spin" />
+                                                Đang gửi...
+                                            </>
+                                        ) : (
+                                            <>
+                                                <Send className="w-5 h-5" />
+                                                Nộp hồ sơ ứng tuyển
+                                            </>
+                                        )}
                                     </Button>
                                     <p className="text-center text-xs text-gray-400">
-                                        Phỏng vấn vòng 1 mất khoảng 10-15 phút. Kết quả ngay lập tức.
+                                        HR sẽ xem xét CV và phản hồi trong 1-3 ngày làm việc qua email.
                                     </p>
                                 </div>
                             </form>

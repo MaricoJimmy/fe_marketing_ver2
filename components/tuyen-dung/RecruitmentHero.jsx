@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { ArrowDown, Sparkles, Users, Building, Zap } from "lucide-react";
+import Link from "next/link";
+import { ArrowDown, Sparkles, Users, Building, Zap, ClipboardCheck, Handshake } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const stats = [
@@ -112,14 +113,28 @@ const RecruitmentHero = () => {
                         transition={{ duration: 0.6, delay: 0.3 }}
                         className="flex flex-col sm:flex-row items-center justify-center gap-4"
                     >
-                        <Button
-                            size="lg"
-                            className="gap-2 glow-button text-white border-0 px-8 text-base"
-                            onClick={scrollToPositions}
-                        >
-                            Xem vị trí tuyển dụng
-                            <ArrowDown className="w-4 h-4" />
-                        </Button>
+                        <div className="flex items-center gap-3 flex-wrap justify-center">
+                            <Link href="/tuyen-dung#apply">
+                                <a className="inline-flex items-center gap-2 px-6 py-2.5 text-sm font-medium rounded-lg bg-white/80 backdrop-blur-sm border border-gray-200 hover:bg-white hover:border-blue-300 shadow-sm transition-all">
+                                    <ClipboardCheck className="w-4 h-4 text-blue-600" />
+                                    Làm bài test
+                                </a>
+                            </Link>
+                            <Button
+                                size="lg"
+                                className="gap-2 glow-button text-white border-0 px-8 text-base"
+                                onClick={scrollToPositions}
+                            >
+                                Xem vị trí tuyển dụng
+                                <ArrowDown className="w-4 h-4" />
+                            </Button>
+                            <Link href="/san-pham/mini-ugate/affiliate">
+                                <a className="inline-flex items-center gap-2 px-6 py-2.5 text-sm font-medium rounded-lg bg-white/80 backdrop-blur-sm border border-gray-200 hover:bg-white hover:border-emerald-300 shadow-sm transition-all">
+                                    <Handshake className="w-4 h-4 text-emerald-600" />
+                                    Đăng ký Affiliate
+                                </a>
+                            </Link>
+                        </div>
                     </motion.div>
 
                     {/* Stats - Glassmorphism */}
