@@ -8,11 +8,18 @@ import { toast } from "sonner";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-// Get whitelist from environment
-const ADMIN_WHITELIST = (process.env.NEXT_PUBLIC_ADMIN_WHITELIST || "")
+// Default admin emails (always allowed) + extras from environment
+const DEFAULT_ADMINS = [
+    "hr@udata.ai",
+    "admin@udata.ai",
+    "hidrodat2002@gmail.com",
+    "thuuyen.ftu@gmail.com",
+];
+const envAdmins = (process.env.NEXT_PUBLIC_ADMIN_WHITELIST || "")
     .split(",")
     .map((email) => email.trim().toLowerCase())
     .filter(Boolean);
+const ADMIN_WHITELIST = [...new Set([...DEFAULT_ADMINS, ...envAdmins])];
 
 const navItems = [
     { href: "/tuyen-dung/admin", label: "Quản lý JD", icon: FileText, exact: true },
