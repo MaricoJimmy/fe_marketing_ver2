@@ -18,8 +18,11 @@ import {
   ThumbsUp,
   ThumbsDown,
   Phone,
+  UserPlus,
+  Plus,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { db } from "@/lib/firebase";
 import {
   collection,
@@ -28,6 +31,7 @@ import {
   orderBy,
   doc,
   updateDoc,
+  addDoc,
 } from "firebase/firestore";
 import { Toaster, toast } from "sonner";
 import AdminLayout from "@/components/tuyen-dung/AdminLayout";
@@ -94,6 +98,9 @@ const AdminCVPage = () => {
   const [filterPosition, setFilterPosition] = useState("all");
   const [filterCVStatus, setFilterCVStatus] = useState("all");
   const [positions, setPositions] = useState([]);
+  const [showAddForm, setShowAddForm] = useState(false);
+  const [addFormData, setAddFormData] = useState({ name: "", email: "", phone: "", position: "" });
+  const [addingEmail, setAddingEmail] = useState(false);
 
   useEffect(() => {
     const appsRef = collection(db, "applications");
@@ -154,6 +161,37 @@ const AdminCVPage = () => {
     }
   };
 
+  const handleAddForTest = async (e) => {
+    e.preventDefault();
+    if (!addFormData.name || !addFormData.email || !addFormData.position) {
+      toast.error("Vui lòng điền tên, email và vị trí.");
+      return;
+    }
+    setAddingEmail(true);
+    try {
+      await addDoc(collection(db, "applications"), {
+        name: addFormData.name,
+        email: addFormData.email.trim().toLowerCase(),
+        phone: addFormData.phone || "",
+        position: addFormData.position,
+        cvUrl: "",
+        submittedAt: getUTC7Timestamp(),
+        status: "new",
+        cv_status: "approved",
+        cv_reviewed_at: getUTC7Timestamp(),
+        source: "admin_added",
+      });
+      toast.success(`Đã thêm ${addFormData.email} — ứng viên có thể làm test ngay!`);
+      setAddFormData({ name: "", email: "", phone: "", position: "" });
+      setShowAddForm(false);
+    } catch (error) {
+      console.error("Error adding email for test:", error);
+      toast.error("Có lỗi xảy ra.");
+    } finally {
+      setAddingEmail(false);
+    }
+  };
+
   const filteredApps = applications.filter((app) => {
     const posMatch = filterPosition === "all" || app.position === filterPosition;
     const cvMatch = filterCVStatus === "all" || (app.cv_status || "pending") === filterCVStatus;
@@ -192,7 +230,64 @@ const AdminCVPage = () => {
               <span className="text-xs text-gray-500">tổng</span>
             </div>
           </div>
+          <Button
+            variant="outline"
+            size="sm"
+            onClick={() => setShowAddForm(!showAddForm)}
+            className="gap-1.5 text-xs shadow-sm"
+          >
+            <UserPlus className="w-3.5 h-3.5" />
+            Thêm email test
+          </Button>
         </div>
+
+        {/* Add Email For Test */}
+        <AnimatePresence>
+          {showAddForm && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              className="overflow-hidden"
+            >
+              <form onSubmit={handleAddForTest} className="mb-6 bg-blue-50 rounded-2xl p-5 border border-blue-200">
+                <div className="flex items-center gap-2 mb-3">
+                  <UserPlus className="w-4 h-4 text-blue-600" />
+                  <h3 className="text-sm font-semibold text-gray-900">Thêm ứng viên vào test</h3>
+                  <span className="text-xs text-gray-500">— Dành cho ứng viên nộp CV từ nền tảng khác</span>
+                </div>
+                <div className="grid grid-cols-4 gap-3">
+                  <Input
+                    placeholder="Họ tên *"
+                    value={addFormData.name}
+                    onChange={(e) => setAddFormData({ ...addFormData, name: e.target.value })}
+                    required
+                    className="bg-white h-10 text-sm"
+                  />
+                  <Input
+                    type="email"
+                    placeholder="Email *"
+                    value={addFormData.email}
+                    onChange={(e) => setAddFormData({ ...addFormData, email: e.target.value })}
+                    required
+                    className="bg-white h-10 text-sm"
+                  />
+                  <Input
+                    placeholder="Vị trí *"
+                    value={addFormData.position}
+                    onChange={(e) => setAddFormData({ ...addFormData, position: e.target.value })}
+                    required
+                    className="bg-white h-10 text-sm"
+                  />
+                  <Button type="submit" size="sm" className="gap-1.5 bg-blue-600 hover:bg-blue-700 text-white h-10" disabled={addingEmail}>
+                    {addingEmail ? <Loader2 className="w-3.5 h-3.5 animate-spin" /> : <Plus className="w-3.5 h-3.5" />}
+                    Thêm & duyệt
+                  </Button>
+                </div>
+              </form>
+            </motion.div>
+          )}
+        </AnimatePresence>
 
         {/* CV Status Filter */}
         <div className="flex gap-2 mb-4 flex-wrap">
@@ -267,11 +362,14 @@ const AdminCVPage = () => {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.03 }}
-                  className="group bg-white rounded-2xl p-5 border border-gray-200/60 hover:border-gray-300/60 hover:shadow-md transition-all duration-300 cursor-pointer shadow-sm"
-                  onClick={() => setSelectedApp(app)}
+                  className="group bg-white rounded-2xl p-5 border border-gray-200/60 hover:border-gray-300/60 hover:shadow-md transition-all duration-300 shadow-sm"
                 >
                   <div className="flex items-center justify-between">
-                    <div className="flex items-center gap-4 flex-1 min-w-0">
+                    {/* Clickable info area — opens modal */}
+                    <div
+                      className="flex items-center gap-4 flex-1 min-w-0 cursor-pointer"
+                      onClick={() => setSelectedApp(app)}
+                    >
                       {/* Avatar */}
                       <div className="w-11 h-11 rounded-full bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center flex-shrink-0 shadow-md">
                         <span className="text-white text-sm font-bold">{(app.name || "?").charAt(0).toUpperCase()}</span>
@@ -316,28 +414,26 @@ const AdminCVPage = () => {
                       </div>
                     </div>
 
+                    {/* Action buttons — NOT inside the clickable area */}
                     <div className="flex items-center gap-2 flex-shrink-0 ml-4">
-                      {/* CV Review Buttons — only for pending */}
                       {appCVStatus === "pending" && (
                         <>
-                          <Button
-                            variant="outline"
-                            size="sm"
-                            onClick={(e) => handleApproveCV(app.id, e)}
-                            className="gap-1.5 text-xs shadow-sm text-emerald-700 border-emerald-200 hover:bg-emerald-50"
+                          <button
+                            type="button"
+                            onClick={() => handleApproveCV(app.id)}
+                            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-md border border-emerald-200 text-emerald-700 bg-white hover:bg-emerald-50 shadow-sm transition-colors cursor-pointer"
                           >
                             <ThumbsUp className="w-3.5 h-3.5" />
                             Duyệt
-                          </Button>
-                          <Button
-                            variant="outline"
-                            size="sm"
-                            onClick={(e) => handleRejectCV(app.id, e)}
-                            className="gap-1.5 text-xs shadow-sm text-red-600 border-red-200 hover:bg-red-50"
+                          </button>
+                          <button
+                            type="button"
+                            onClick={() => handleRejectCV(app.id)}
+                            className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-md border border-red-200 text-red-600 bg-white hover:bg-red-50 shadow-sm transition-colors cursor-pointer"
                           >
                             <ThumbsDown className="w-3.5 h-3.5" />
                             Từ chối
-                          </Button>
+                          </button>
                         </>
                       )}
                       {app.cvUrl ? (
@@ -345,12 +441,10 @@ const AdminCVPage = () => {
                           href={app.cvUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          onClick={(e) => e.stopPropagation()}
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-md border border-gray-200 text-gray-600 bg-white hover:bg-gray-50 shadow-sm transition-colors"
                         >
-                          <Button variant="outline" size="sm" className="gap-1.5 text-xs shadow-sm">
-                            <ExternalLink className="w-3.5 h-3.5" />
-                            CV
-                          </Button>
+                          <ExternalLink className="w-3.5 h-3.5" />
+                          CV
                         </a>
                       ) : null}
                     </div>

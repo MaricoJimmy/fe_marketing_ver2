@@ -567,6 +567,18 @@ iframe[src*="mini.ugate.ai"] {
   touch-action: manipulation !important;
 }
 
+/* Hide chat widget on admin pages */
+body.admin-page #chat-widget-container,
+body.admin-page .chat-widget-container,
+body.admin-page #ugate-chat-widget,
+body.admin-page iframe[src*="mini.ugate.ai"],
+body.admin-page [id*="chat-widget"],
+body.admin-page [class*="chat-widget"] {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
 @media (max-width: 1023px) {
   body.mobile-menu-open #chat-widget-container,
   body.mobile-menu-open .chat-widget-container,

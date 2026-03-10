@@ -49,6 +49,12 @@ const AdminLayout = ({ children }) => {
         return () => unsubscribe();
     }, []);
 
+    // Hide chat widget on admin pages by adding body class
+    useEffect(() => {
+        document.body.classList.add("admin-page");
+        return () => document.body.classList.remove("admin-page");
+    }, []);
+
     const handleLogin = async () => {
         try {
             const provider = new GoogleAuthProvider();
