@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Header from '@/components/header/Header';
@@ -352,6 +352,12 @@ function FraudTab({ fraudFlags }) {
 function AdminContent() {
   const router = useRouter();
   const { user, state, isMounted, logout, approveAffiliate, rejectAffiliate, deactivateAffiliate, verifyOrder, approveCommission, markPayoutPaid, generatePayout } = useAffiliate();
+
+  // Hide chat widget on admin pages
+  useEffect(() => {
+    document.body.classList.add("admin-page");
+    return () => document.body.classList.remove("admin-page");
+  }, []);
 
   // Memoized stats calculation for performance (avoid rerender tax)
   const stats = useMemo(() => {
