@@ -114,7 +114,7 @@ const RecruitmentHero = () => {
                         className="flex flex-col sm:flex-row items-center justify-center gap-4"
                     >
                         <div className="flex items-center gap-3 flex-wrap justify-center">
-                            <Link href="/tuyen-dung#apply">
+                            <Link href="/tuyen-dung/lam-bai-test">
                                 <a className="inline-flex items-center gap-2 px-6 py-2.5 text-sm font-medium rounded-lg bg-white/80 backdrop-blur-sm border border-gray-200 hover:bg-white hover:border-blue-300 shadow-sm transition-all">
                                     <ClipboardCheck className="w-4 h-4 text-blue-600" />
                                     Làm bài test
