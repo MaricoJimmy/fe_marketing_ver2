@@ -51,11 +51,6 @@ function LoginContent() {
               <div><Label>Mật khẩu</Label><Input type="password" value={password} onChange={e => setPassword(e.target.value)} placeholder="Nhập mật khẩu" /></div>
               <Button type="submit" className="w-full" size="lg">Đăng nhập</Button>
             </form>
-            <div className="mt-6 p-4 bg-gray-50 rounded-lg text-xs text-gray-500 space-y-1">
-              <p className="font-medium text-gray-900">Demo accounts:</p>
-              <p>Affiliate: an.nguyen@email.com / demo123</p>
-              <p>Admin: admin@udata.ai / admin123</p>
-            </div>
           </div>
         </div>
       </div>

@@ -139,6 +139,9 @@ const Result2Page = () => {
                                     <p className="text-sm text-gray-600">
                                         Đội ngũ HR sẽ liên hệ bạn qua email <strong>{candidate.email}</strong> để sắp xếp lịch phỏng vấn trực tiếp với quản lý.
                                     </p>
+                                    <p className="text-sm text-gray-600">
+                                        Nếu có thắc mắc, vui lòng liên hệ HR qua email: <a href="mailto:udata.infor@gmail.com" className="text-blue-600 font-medium hover:underline">udata.infor@gmail.com</a>
+                                    </p>
                                     <div className="rounded-xl bg-gray-50 p-4">
                                         <h4 className="font-semibold text-gray-900 mb-2">📋 Vòng 3 bao gồm:</h4>
                                         <ul className="space-y-1 text-sm text-gray-500">
@@ -160,6 +163,9 @@ const Result2Page = () => {
                                     <p className="text-sm text-gray-600">
                                         ⏳ Bài làm của bạn đang được xem xét thêm. Chúng tôi sẽ phản hồi trong vòng 3–5 ngày qua email.
                                     </p>
+                                    <p className="text-sm text-gray-600">
+                                        Nếu có thắc mắc, vui lòng liên hệ HR qua email: <a href="mailto:udata.infor@gmail.com" className="text-blue-600 font-medium hover:underline">udata.infor@gmail.com</a>
+                                    </p>
                                     <Link href="/">
                                         <a className="inline-block rounded-lg border border-gray-200 px-6 py-2.5 text-sm font-semibold text-gray-700 hover:bg-gray-100 transition-colors">
                                             ← Về trang chủ
@@ -174,6 +180,9 @@ const Result2Page = () => {
                                     </p>
                                     <p className="text-sm text-gray-600">
                                         Hãy tiếp tục phát triển kỹ năng và theo dõi Udata cho các cơ hội tương lai! 💪
+                                    </p>
+                                    <p className="text-sm text-gray-600">
+                                        Nếu có thắc mắc, vui lòng liên hệ HR qua email: <a href="mailto:udata.infor@gmail.com" className="text-blue-600 font-medium hover:underline">udata.infor@gmail.com</a>
                                     </p>
                                     <div className="flex gap-3">
                                         <Link href="/tuyen-dung">
