@@ -20,7 +20,16 @@ const ROUND2_CASES = [
     },
 ];
 
-const MugRound2Chat = ({ candidateName, onComplete }) => {
+const MugRound2Chat = ({ candidateName, onComplete, questions = [] }) => {
+    const round2Cases =
+        questions.length > 0
+            ? questions.map((question, index) => ({
+                  id: `case${index + 1}`,
+                  title: `Case ${index + 1}`,
+                  question,
+              }))
+            : ROUND2_CASES;
+    const totalCases = round2Cases.length;
     const [messages, setMessages] = useState([]);
     const [input, setInput] = useState("");
     const [currentCase, setCurrentCase] = useState(0);
@@ -43,7 +52,7 @@ const MugRound2Chat = ({ candidateName, onComplete }) => {
                 `Chào mừng ${candidateName} đến Vòng 2! 🎯\n\nĐây là vòng **Practical Test** — bạn sẽ trả lời 3 bài case study.\n\nMUG sẽ tự động chấm điểm dựa trên 4 tiêu chí:\n• Tư duy chiến lược (30đ)\n• Tư duy số liệu (30đ)\n• Khả năng ra quyết định (20đ)\n• Leadership (20đ)\n\nHãy trả lời **chi tiết, có số liệu và logic rõ ràng**. Sẵn sàng chưa? 🚀`
             );
             setTimeout(() => {
-                addMugMessage(`📋 **${ROUND2_CASES[0].title}:**\n\n${ROUND2_CASES[0].question}`);
+                addMugMessage(`📋 **${round2Cases[0].title}:**\n\n${round2Cases[0].question}`);
             }, 1500);
         }, 800);
         return () => clearTimeout(t1);
@@ -63,14 +72,14 @@ const MugRound2Chat = ({ candidateName, onComplete }) => {
 
         setTimeout(() => {
             setIsTyping(false);
-            const key = ROUND2_CASES[currentCase].id;
+            const key = round2Cases[currentCase].id;
             const newAnswers = { ...answers, [key]: text };
             setAnswers(newAnswers);
 
             const next = currentCase + 1;
-            if (next < ROUND2_CASES.length) {
+            if (next < totalCases) {
                 setCurrentCase(next);
-                addMugMessage(`Tuyệt vời! ✅\n\n📋 **${ROUND2_CASES[next].title}:**\n\n${ROUND2_CASES[next].question}`);
+                addMugMessage(`Tuyệt vời! ✅\n\n📋 **${round2Cases[next].title}:**\n\n${round2Cases[next].question}`);
             } else {
                 setDone(true);
                 addMugMessage("Cảm ơn bạn đã hoàn thành cả 3 case! ✨\n\nMUG đang đánh giá bài làm...");
@@ -151,7 +160,7 @@ const MugRound2Chat = ({ candidateName, onComplete }) => {
                 <div>
                     <h3 className="font-bold text-white">MUG — Vòng 2: Practical Test</h3>
                     <p className="text-xs" style={{ color: "rgba(255,255,255,0.7)" }}>
-                        Case Study {Math.min(currentCase + 1, 3)}/3
+                        Case Study {Math.min(currentCase + 1, totalCases)}/{totalCases}
                     </p>
                 </div>
                 <div className="ml-auto">
@@ -159,7 +168,7 @@ const MugRound2Chat = ({ candidateName, onComplete }) => {
                         <div
                             className="h-2 rounded-full transition-all duration-500"
                             style={{
-                                width: `${((currentCase + (done ? 1 : 0)) / 3) * 100}%`,
+                                width: `${((currentCase + (done ? 1 : 0)) / totalCases) * 100}%`,
                                 background: "rgba(255,255,255,0.8)",
                             }}
                         />

@@ -15,6 +15,7 @@ import {
   MapPin,
   ArrowLeft,
   X,
+  Sparkles,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -27,17 +28,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { db } from "@/lib/firebase";
-import {
-  collection,
-  addDoc,
-  updateDoc,
-  deleteDoc,
-  doc,
-  onSnapshot,
-  query,
-  orderBy,
-} from "firebase/firestore";
+import { recruitmentApi } from "@/lib/recruitmentApi";
 import { toast, Toaster } from "sonner";
 import AdminLayout from "@/components/tuyen-dung/AdminLayout";
 import Link from "next/link";
@@ -51,31 +42,40 @@ const emptyJob = {
   description: "",
   requirements: [""],
   benefits: [""],
+  round1_questions: [],
+  round2_questions: [],
   isActive: true,
   order: 0,
 };
 
 const AdminJDPage = () => {
   const [jobs, setJobs] = useState([]);
+  const [tests, setTests] = useState([]);
   const [loading, setLoading] = useState(true);
   const [editingJob, setEditingJob] = useState(null);
   const [isCreating, setIsCreating] = useState(false);
   const [saving, setSaving] = useState(false);
+  const [generatingTestForJob, setGeneratingTestForJob] = useState(null);
+
+  const fetchData = async () => {
+    try {
+      setLoading(true);
+      const [jobsData, testsData] = await Promise.all([
+        recruitmentApi.listJobs(false),
+        recruitmentApi.listQuestionnaires()
+      ]);
+      setJobs(jobsData || []);
+      setTests(testsData || []);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+      toast.error("Không thể tải dữ liệu.");
+    } finally {
+      setLoading(false);
+    }
+  };
 
   useEffect(() => {
-    const jobsRef = collection(db, "jobs");
-    const q = query(jobsRef, orderBy("order", "asc"));
-
-    const unsubscribe = onSnapshot(q, (snapshot) => {
-      const jobsData = snapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
-      setJobs(jobsData);
-      setLoading(false);
-    });
-
-    return () => unsubscribe();
+    fetchData();
   }, []);
 
   const handleSave = async () => {
@@ -92,16 +92,29 @@ const AdminJDPage = () => {
         benefits: editingJob.benefits?.filter((b) => b.trim()) || [],
       };
 
+      const payload = {
+        title: jobData.title,
+        location: jobData.location,
+        experience: jobData.experience,
+        salary: jobData.salary,
+        type: jobData.type,
+        description: jobData.description,
+        requirements: jobData.requirements,
+        benefits: jobData.benefits,
+        questionnaire_id: jobData.questionnaire_id || null,
+        is_active: Boolean(jobData.isActive),
+        order: Number(jobData.order || 0),
+      };
+
       if (isCreating) {
-        delete jobData.id;
-        await addDoc(collection(db, "jobs"), jobData);
+        await recruitmentApi.createJob(payload);
         toast.success("Tạo JD thành công!");
       } else {
-        const { id, ...updateData } = jobData;
-        await updateDoc(doc(db, "jobs", id), updateData);
+        await recruitmentApi.updateJob(jobData.id, payload);
         toast.success("Cập nhật JD thành công!");
       }
 
+      await fetchData();
       setEditingJob(null);
       setIsCreating(false);
     } catch (error) {
@@ -115,7 +128,8 @@ const AdminJDPage = () => {
   const handleDelete = async (jobId) => {
     if (!confirm("Bạn có chắc muốn xóa JD này?")) return;
     try {
-      await deleteDoc(doc(db, "jobs", jobId));
+      await recruitmentApi.deleteJob(jobId);
+      await fetchData();
       toast.success("Đã xóa JD.");
     } catch (error) {
       console.error("Error deleting job:", error);
@@ -125,10 +139,31 @@ const AdminJDPage = () => {
 
   const toggleActive = async (job) => {
     try {
-      await updateDoc(doc(db, "jobs", job.id), { isActive: !job.isActive });
+      await recruitmentApi.toggleJob(job.id);
+      await fetchData();
       toast.success(job.isActive ? "Đã ẩn JD" : "Đã hiện JD");
     } catch (error) {
       console.error("Error toggling job:", error);
+    }
+  };
+
+  const handleGenerateTest = async (jobId) => {
+    setGeneratingTestForJob(jobId);
+    try {
+      const updated = await recruitmentApi.generateJobTest(jobId);
+      await fetchData();
+      if (editingJob?.id === jobId) {
+        setEditingJob((prev) => ({
+          ...prev,
+          questionnaire_id: updated.questionnaire_id || null,
+        }));
+      }
+      toast.success("Đã tạo bộ câu hỏi test theo JD.");
+    } catch (error) {
+      console.error("Error generating test from JD:", error);
+      toast.error("Không thể tạo bộ câu hỏi test. Vui lòng thử lại.");
+    } finally {
+      setGeneratingTestForJob(null);
     }
   };
 
@@ -286,10 +321,29 @@ const AdminJDPage = () => {
 
                 {/* Section: Description */}
                 <div>
-                  <h3 className="text-sm font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                    <FileText className="w-4 h-4 text-blue-600" />
-                    Mô tả chi tiết
-                  </h3>
+                  <div className="flex items-center justify-between mb-4">
+                    <h3 className="text-sm font-semibold text-gray-900 flex items-center gap-2">
+                      <FileText className="w-4 h-4 text-blue-600" />
+                      Mô tả chi tiết
+                    </h3>
+                    {!isCreating && editingJob?.id ? (
+                      <Button
+                        type="button"
+                        variant="outline"
+                        size="sm"
+                        className="gap-2"
+                        onClick={() => handleGenerateTest(editingJob.id)}
+                        disabled={generatingTestForJob === editingJob.id}
+                      >
+                        {generatingTestForJob === editingJob.id ? (
+                          <Loader2 className="w-4 h-4 animate-spin" />
+                        ) : (
+                          <Sparkles className="w-4 h-4" />
+                        )}
+                        Tạo bài test từ JD
+                      </Button>
+                    ) : null}
+                  </div>
                   <Textarea
                     value={editingJob.description}
                     onChange={(e) => setEditingJob({ ...editingJob, description: e.target.value })}
@@ -297,6 +351,37 @@ const AdminJDPage = () => {
                     rows={5}
                     className="resize-none"
                   />
+                </div>
+
+                {/* Settings Section (Bài Test) */}
+                <div className="rounded-xl border border-gray-200 bg-indigo-50/30 p-5 space-y-4">
+                  <div className="flex items-center gap-2 mb-2">
+                    <FileText className="w-4 h-4 text-indigo-600" />
+                    <h3 className="text-sm font-semibold text-gray-900">Thiết lập Bài Test</h3>
+                  </div>
+                  <div>
+                    <Label className="mb-2 block text-xs font-medium text-gray-600">Bài Test (Questionnaire)</Label>
+                    <Select
+                      value={editingJob.questionnaire_id || "none"}
+                      onValueChange={(value) => setEditingJob({ ...editingJob, questionnaire_id: value === "none" ? null : value })}
+                    >
+                      <SelectTrigger className="h-11 bg-white">
+                        <SelectValue placeholder="Chọn Bài Test cho JD này" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="none" className="text-gray-500 italic">-- Không gắn Test --</SelectItem>
+                        {tests.map(test => (
+                          <SelectItem key={test.id} value={test.id}>
+                            {test.title} ({(test.round1_questions || []).length} CR1, {(test.round2_questions || []).length} CR2)
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                    <p className="text-[11px] text-gray-500 mt-2">
+                      Ứng viên apply vị trí này sẽ làm bài test được chọn ở đây.
+                      Bạn có thể quản lý danh sách này tại trang <Link href="/tuyen-dung/admin/tests" className="text-indigo-600 hover:underline inline-flex items-center gap-0.5">Quản lý Bài Test</Link>.
+                    </p>
+                  </div>
                 </div>
 
                 {/* Divider */}
@@ -503,11 +588,30 @@ const AdminJDPage = () => {
                     {job.isActive ? "Ẩn" : "Hiện"}
                   </button>
                   <button
-                    onClick={() => { setEditingJob({ ...job }); setIsCreating(false); }}
+                    onClick={() => {
+                      setEditingJob({
+                        ...job,
+                        round1_questions: job.round1_questions || [],
+                        round2_questions: job.round2_questions || [],
+                      });
+                      setIsCreating(false);
+                    }}
                     className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-blue-600 hover:bg-blue-50 transition-colors"
                   >
                     <Edit className="w-3.5 h-3.5" />
                     Sửa
+                  </button>
+                  <button
+                    onClick={() => handleGenerateTest(job.id)}
+                    className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-indigo-600 hover:bg-indigo-50 transition-colors"
+                    disabled={generatingTestForJob === job.id}
+                  >
+                    {generatingTestForJob === job.id ? (
+                      <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                    ) : (
+                      <Sparkles className="w-3.5 h-3.5" />
+                    )}
+                    Tạo test
                   </button>
                   <button
                     onClick={() => handleDelete(job.id)}

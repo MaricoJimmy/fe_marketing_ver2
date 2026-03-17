@@ -3,26 +3,25 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowLeft, Loader2, ShieldAlert } from "lucide-react";
-import { db } from "@/lib/firebase";
-import { doc, getDoc, updateDoc } from "firebase/firestore";
+import { recruitmentApi } from "@/lib/recruitmentApi";
 import MugChat from "@/components/tuyen-dung/MugChat";
 
 const Round1Page = () => {
     const router = useRouter();
     const { id } = router.query;
     const [candidate, setCandidate] = useState(null);
+    const [questions, setQuestions] = useState([]);
     const [loading, setLoading] = useState(true);
     const [saving, setSaving] = useState(false);
 
     useEffect(() => {
-        if (!id || !db) return;
+        if (!id) return;
         const fetchCandidate = async () => {
             try {
-                const docRef = doc(db, "applications", id);
-                const docSnap = await getDoc(docRef);
-                if (docSnap.exists()) {
-                    setCandidate({ id: docSnap.id, ...docSnap.data() });
-                }
+                const app = await recruitmentApi.getApplication(id);
+                setCandidate(app);
+                const questionPayload = await recruitmentApi.getTestQuestions(1, id);
+                setQuestions(questionPayload?.questions || []);
             } catch (error) {
                 console.error("Error fetching candidate:", error);
             } finally {
@@ -79,29 +78,17 @@ const Round1Page = () => {
         );
     }
 
-    const getUTC7Timestamp = () => {
-        const now = new Date();
-        const utc7Offset = 7 * 60 * 60 * 1000;
-        const utc7Time = new Date(now.getTime() + utc7Offset);
-        return utc7Time.toISOString().replace("Z", "+07:00");
-    };
-
     const handleComplete = async (result) => {
         setSaving(true);
         try {
-            const docRef = doc(db, "applications", candidate.id);
-            await updateDoc(docRef, {
-                round1_answers: result.answers,
-                round1_score_total: result.total,
-                round1_score_breakdown: result.scores,
-                round1_status: result.status,
-                round1_feedback: result.feedback,
-                round1_hard_reject_reason: result.hard_reject_reason || null,
-                round1_completed_at: getUTC7Timestamp(),
+            await recruitmentApi.submitTest({
+                application_id: candidate.id,
+                round: 1,
+                answers: result.answers,
             });
             router.push(`/tuyen-dung/ket-qua/${candidate.id}`);
         } catch (error) {
-            console.error("Error saving round 1:", error);
+            console.error("Error submitting round 1:", error);
             alert("Có lỗi xảy ra khi lưu kết quả. Vui lòng thử lại.");
             setSaving(false);
         }
@@ -132,8 +119,9 @@ const Round1Page = () => {
                                 email: candidate.email,
                                 phone: candidate.phone,
                                 role_applied: candidate.position,
-                                cv_link: candidate.cvUrl,
+                                cv_link: candidate.cvUrl || candidate.cv_url,
                             }}
+                            questions={questions}
                             onComplete={handleComplete}
                         />
                         {saving && (

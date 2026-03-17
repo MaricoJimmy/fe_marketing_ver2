@@ -3,8 +3,7 @@ import { motion } from "framer-motion";
 import { Loader2 } from "lucide-react";
 import JobCard from "./JobCard";
 import JobDetailModal from "./JobDetailModal";
-import { db } from "@/lib/firebase";
-import { collection, query, where, orderBy, onSnapshot } from "firebase/firestore";
+import { recruitmentApi } from "@/lib/recruitmentApi";
 
 const fallbackJobs = [
     {
@@ -67,36 +66,23 @@ const OpenPositions = ({ onSelectPosition }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     useEffect(() => {
-        const jobsRef = collection(db, "jobs");
-        const q = query(
-            jobsRef,
-            where("isActive", "==", true)
-        );
-
-        const unsubscribe = onSnapshot(
-            q,
-            (snapshot) => {
-                if (snapshot.empty) {
+        const fetchJobs = async () => {
+            try {
+                const jobsData = await recruitmentApi.getPublicJobs();
+                if (!jobsData || jobsData.length === 0) {
                     setJobs(fallbackJobs);
                 } else {
-                    const jobsData = snapshot.docs.map((doc) => ({
-                        id: doc.id,
-                        ...doc.data(),
-                    }));
-                    // Sort by order on client side to avoid composite index requirement
-                    jobsData.sort((a, b) => (a.order || 0) - (b.order || 0));
                     setJobs(jobsData);
                 }
-                setLoading(false);
-            },
-            (error) => {
+            } catch (error) {
                 console.error("Error fetching jobs:", error);
                 setJobs(fallbackJobs);
+            } finally {
                 setLoading(false);
             }
-        );
+        };
 
-        return () => unsubscribe();
+        fetchJobs();
     }, []);
 
     const handleViewDetail = (job) => {

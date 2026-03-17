@@ -5,8 +5,7 @@ import { motion } from "framer-motion";
 import {
     CheckCircle, Clock, XCircle, ArrowLeft, FileText, Loader2, ArrowRight, Mail, Phone, Briefcase
 } from "lucide-react";
-import { db } from "@/lib/firebase";
-import { doc, onSnapshot } from "firebase/firestore";
+import { recruitmentApi } from "@/lib/recruitmentApi";
 import { Button } from "@/components/ui/button";
 
 const cvStatusConfig = {
@@ -43,17 +42,31 @@ const CVConfirmationPage = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        if (!id || !db) return;
+        if (!id) return;
 
-        // Use onSnapshot for real-time updates (admin approves → user sees instantly)
-        const unsubscribe = onSnapshot(doc(db, "applications", id), (docSnap) => {
-            if (docSnap.exists()) {
-                setApplication({ id: docSnap.id, ...docSnap.data() });
+        let isMounted = true;
+        const fetchApplication = async () => {
+            try {
+                const app = await recruitmentApi.getApplication(id);
+                if (isMounted) {
+                    setApplication(app);
+                }
+            } catch (error) {
+                console.error("Error fetching application:", error);
+            } finally {
+                if (isMounted) {
+                    setLoading(false);
+                }
             }
-            setLoading(false);
-        });
+        };
 
-        return () => unsubscribe();
+        fetchApplication();
+        const intervalId = setInterval(fetchApplication, 8000);
+
+        return () => {
+            isMounted = false;
+            clearInterval(intervalId);
+        };
     }, [id]);
 
     if (loading) {
@@ -133,7 +146,7 @@ const CVConfirmationPage = () => {
                                     { icon: Mail, label: "Email", value: application.email },
                                     { icon: Phone, label: "Số điện thoại", value: application.phone },
                                     { icon: Briefcase, label: "Vị trí ứng tuyển", value: application.position },
-                                    { icon: Clock, label: "Ngày nộp", value: application.submittedAt ? new Date(application.submittedAt).toLocaleDateString("vi-VN") : "—" },
+                                    { icon: Clock, label: "Ngày nộp", value: (application.submittedAt || application.submitted_at) ? new Date(application.submittedAt || application.submitted_at).toLocaleDateString("vi-VN") : "—" },
                                 ].map((item) => (
                                     <div key={item.label} className="bg-gray-50 rounded-xl p-3">
                                         <div className="flex items-center gap-1.5 mb-1">
@@ -144,9 +157,9 @@ const CVConfirmationPage = () => {
                                     </div>
                                 ))}
                             </div>
-                            {application.cvUrl && (
+                            {(application.cvUrl || application.cv_url) && (
                                 <a
-                                    href={application.cvUrl}
+                                    href={application.cvUrl || application.cv_url}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="mt-3 flex items-center gap-2 text-sm text-blue-600 hover:text-blue-800 font-medium"

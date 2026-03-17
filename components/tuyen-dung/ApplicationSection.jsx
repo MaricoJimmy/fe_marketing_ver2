@@ -12,8 +12,7 @@ import {
     SelectTrigger,
     SelectValue,
 } from "@/components/ui/select";
-import { db } from "@/lib/firebase";
-import { collection, addDoc, query, where, getDocs } from "firebase/firestore";
+import { recruitmentApi } from "@/lib/recruitmentApi";
 import { toast } from "sonner";
 
 const processSteps = [
@@ -46,10 +45,8 @@ const ApplicationSection = ({ selectedPosition }) => {
     useEffect(() => {
         const fetchPositions = async () => {
             try {
-                const jobsRef = collection(db, "jobs");
-                const q = query(jobsRef, where("isActive", "==", true));
-                const snapshot = await getDocs(q);
-                const titles = snapshot.docs.map((doc) => doc.data().title).filter(Boolean);
+                const jobs = await recruitmentApi.getPublicJobs();
+                const titles = (jobs || []).map((job) => job.title).filter(Boolean);
                 setPositions(titles);
             } catch (error) {
                 console.error("Error fetching positions:", error);
@@ -66,13 +63,6 @@ const ApplicationSection = ({ selectedPosition }) => {
         }
     }, [selectedPosition]);
 
-    const getUTC7Timestamp = () => {
-        const now = new Date();
-        const utc7Offset = 7 * 60 * 60 * 1000;
-        const utc7Time = new Date(now.getTime() + utc7Offset);
-        return utc7Time.toISOString().replace("Z", "+07:00");
-    };
-
     const handleSubmitCV = async (e) => {
         e.preventDefault();
         if (!formData.name || !formData.email || !formData.phone || !formData.position || !formData.cvUrl) {
@@ -82,32 +72,24 @@ const ApplicationSection = ({ selectedPosition }) => {
 
         setIsSubmitting(true);
         try {
-            // Check if email already submitted
-            const existingQuery = query(
-                collection(db, "applications"),
-                where("email", "==", formData.email),
-                where("position", "==", formData.position)
-            );
-            const existingDocs = await getDocs(existingQuery);
-            if (!existingDocs.empty) {
-                const existingDoc = existingDocs.docs[0];
+            const existingApps = await recruitmentApi.getApplicationsByEmail(formData.email.trim().toLowerCase());
+            const existingApp = (existingApps || []).find((app) => app.position === formData.position);
+            if (existingApp) {
                 toast.info("Bạn đã nộp hồ sơ cho vị trí này rồi. Đang chuyển đến trang theo dõi...");
-                router.push(`/tuyen-dung/da-nop/${existingDoc.id}`);
+                router.push(`/tuyen-dung/da-nop/${existingApp.id}`);
                 return;
             }
 
-            const docRef = await addDoc(collection(db, "applications"), {
-                name: formData.name,
-                email: formData.email,
-                phone: formData.phone,
-                position: formData.position,
-                cvUrl: formData.cvUrl,
-                submittedAt: getUTC7Timestamp(),
-                status: "new",
-                cv_status: "pending",
-            });
+            const payload = new FormData();
+            payload.append("name", formData.name);
+            payload.append("email", formData.email.trim().toLowerCase());
+            payload.append("phone", formData.phone);
+            payload.append("position", formData.position);
+            payload.append("source", "website");
+            payload.append("cv_url", formData.cvUrl);
 
-            router.push(`/tuyen-dung/da-nop/${docRef.id}`);
+            const created = await recruitmentApi.submitApplication(payload);
+            router.push(`/tuyen-dung/da-nop/${created.id}`);
         } catch (error) {
             console.error("Error submitting CV:", error);
             toast.error("Có lỗi xảy ra. Vui lòng thử lại sau.");

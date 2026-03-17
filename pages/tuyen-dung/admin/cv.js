@@ -23,16 +23,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { db } from "@/lib/firebase";
-import {
-  collection,
-  onSnapshot,
-  query,
-  orderBy,
-  doc,
-  updateDoc,
-  addDoc,
-} from "firebase/firestore";
+import { recruitmentApi } from "@/lib/recruitmentApi";
 import { Toaster, toast } from "sonner";
 import AdminLayout from "@/components/tuyen-dung/AdminLayout";
 
@@ -102,22 +93,22 @@ const AdminCVPage = () => {
   const [addFormData, setAddFormData] = useState({ name: "", email: "", phone: "", position: "" });
   const [addingEmail, setAddingEmail] = useState(false);
 
-  useEffect(() => {
-    const appsRef = collection(db, "applications");
-    const q = query(appsRef, orderBy("submittedAt", "desc"));
-
-    const unsubscribe = onSnapshot(q, (snapshot) => {
-      const appsData = snapshot.docs.map((d) => ({
-        id: d.id,
-        ...d.data(),
-      }));
-      setApplications(appsData);
-      const uniquePositions = [...new Set(appsData.map((app) => app.position).filter(Boolean))];
+  const fetchApplications = async () => {
+    try {
+      const appsData = await recruitmentApi.listApplications();
+      setApplications(appsData || []);
+      const uniquePositions = [...new Set((appsData || []).map((app) => app.position).filter(Boolean))];
       setPositions(uniquePositions);
+    } catch (error) {
+      console.error("Error fetching applications:", error);
+      toast.error("Không tải được danh sách hồ sơ.");
+    } finally {
       setLoading(false);
-    });
+    }
+  };
 
-    return () => unsubscribe();
+  useEffect(() => {
+    fetchApplications();
   }, []);
 
   useEffect(() => {
@@ -129,14 +120,11 @@ const AdminCVPage = () => {
   const handleApproveCV = async (appId, e) => {
     if (e) e.stopPropagation();
     try {
-      await updateDoc(doc(db, "applications", appId), {
-        cv_status: "approved",
-        cv_reviewed_at: getUTC7Timestamp(),
-      });
+      const updated = await recruitmentApi.updateCvStatus(appId, "approved");
+      await fetchApplications();
       toast.success("Đã duyệt CV thành công!");
-      // Update selected app if viewing detail
       if (selectedApp?.id === appId) {
-        setSelectedApp((prev) => ({ ...prev, cv_status: "approved", cv_reviewed_at: getUTC7Timestamp() }));
+        setSelectedApp((prev) => ({ ...prev, ...updated }));
       }
     } catch (error) {
       console.error("Error approving CV:", error);
@@ -147,13 +135,11 @@ const AdminCVPage = () => {
   const handleRejectCV = async (appId, e) => {
     if (e) e.stopPropagation();
     try {
-      await updateDoc(doc(db, "applications", appId), {
-        cv_status: "rejected",
-        cv_reviewed_at: getUTC7Timestamp(),
-      });
+      const updated = await recruitmentApi.updateCvStatus(appId, "rejected");
+      await fetchApplications();
       toast.success("Đã từ chối CV.");
       if (selectedApp?.id === appId) {
-        setSelectedApp((prev) => ({ ...prev, cv_status: "rejected", cv_reviewed_at: getUTC7Timestamp() }));
+        setSelectedApp((prev) => ({ ...prev, ...updated }));
       }
     } catch (error) {
       console.error("Error rejecting CV:", error);
@@ -169,18 +155,13 @@ const AdminCVPage = () => {
     }
     setAddingEmail(true);
     try {
-      await addDoc(collection(db, "applications"), {
+      await recruitmentApi.addApplicationForTest({
         name: addFormData.name,
         email: addFormData.email.trim().toLowerCase(),
         phone: addFormData.phone || "",
         position: addFormData.position,
-        cvUrl: "",
-        submittedAt: getUTC7Timestamp(),
-        status: "new",
-        cv_status: "approved",
-        cv_reviewed_at: getUTC7Timestamp(),
-        source: "admin_added",
       });
+      await fetchApplications();
       toast.success(`Đã thêm ${addFormData.email} — ứng viên có thể làm test ngay!`);
       setAddFormData({ name: "", email: "", phone: "", position: "" });
       setShowAddForm(false);
@@ -391,7 +372,7 @@ const AdminCVPage = () => {
                           </span>
                           <span className="flex items-center gap-1.5">
                             <Calendar className="w-3 h-3" />
-                            {formatDate(app.submittedAt)}
+                            {formatDate(app.submittedAt || app.submitted_at)}
                           </span>
                         </div>
 
@@ -436,9 +417,9 @@ const AdminCVPage = () => {
                           </button>
                         </>
                       )}
-                      {app.cvUrl ? (
+                      {(app.cvUrl || app.cv_url) ? (
                         <a
-                          href={app.cvUrl}
+                          href={app.cvUrl || app.cv_url}
                           target="_blank"
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-md border border-gray-200 text-gray-600 bg-white hover:bg-gray-50 shadow-sm transition-colors"
@@ -513,9 +494,9 @@ const AdminCVPage = () => {
                   </div>
 
                   {/* CV Link */}
-                  {selectedApp.cvUrl ? (
+                  {(selectedApp.cvUrl || selectedApp.cv_url) ? (
                     <a
-                      href={selectedApp.cvUrl}
+                      href={selectedApp.cvUrl || selectedApp.cv_url}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center gap-3 p-3.5 bg-blue-50 rounded-xl hover:bg-blue-100 transition-colors group"
@@ -523,7 +504,7 @@ const AdminCVPage = () => {
                       <Download className="w-5 h-5 text-blue-600" />
                       <div className="min-w-0 flex-1">
                         <p className="text-[10px] text-blue-500 uppercase tracking-wider">Link CV</p>
-                        <p className="font-medium text-sm text-blue-700 truncate">{selectedApp.cvUrl}</p>
+                        <p className="font-medium text-sm text-blue-700 truncate">{selectedApp.cvUrl || selectedApp.cv_url}</p>
                       </div>
                       <ExternalLink className="w-4 h-4 text-blue-500 flex-shrink-0" />
                     </a>

@@ -26,6 +26,7 @@ const navItems = [
     { href: "/tuyen-dung/admin", label: "Quản lý JD", icon: FileText, exact: true },
     { href: "/tuyen-dung/admin/cv", label: "Quản lý CV", icon: FolderOpen },
     { href: "/tuyen-dung/admin/candidates", label: "Ứng viên Test", icon: Users },
+    { href: "/tuyen-dung/admin/tests", label: "Quản lý Bài Test", icon: FileText },
 ];
 
 const AdminLayout = ({ children }) => {

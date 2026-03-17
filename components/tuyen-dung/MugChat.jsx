@@ -15,7 +15,9 @@ const HARD_REJECT_KEYWORDS = [
     "thoải mái", "không cần cao", "vừa phải", "bình thường",
 ];
 
-const MugChat = ({ candidateInfo, onComplete }) => {
+const MugChat = ({ candidateInfo, onComplete, questions = [] }) => {
+    const roundQuestions = questions.length > 0 ? questions : ROUND1_QUESTIONS;
+    const totalQuestions = roundQuestions.length;
     const [messages, setMessages] = useState([]);
     const [input, setInput] = useState("");
     const [currentQ, setCurrentQ] = useState(0);
@@ -38,7 +40,7 @@ const MugChat = ({ candidateInfo, onComplete }) => {
                 `Xin chào ${candidateInfo.full_name}! 👋\n\nTôi là MUG — trợ lý tuyển dụng AI của Udata. Bạn đang ứng tuyển vị trí **${candidateInfo.role_applied}**.\n\nTôi sẽ hỏi bạn 5 câu hỏi ngắn để tìm hiểu về kinh nghiệm và mục tiêu của bạn. Vòng này mất khoảng 10-15 phút.\n\nSẵn sàng chưa? Hãy bắt đầu nhé! 🚀`
             );
             setTimeout(() => {
-                addMugMessage(`📋 **Câu 1/5:**\n\n${ROUND1_QUESTIONS[0]}`);
+                addMugMessage(`📋 **Câu 1/${totalQuestions}:**\n\n${roundQuestions[0]}`);
             }, 1500);
         }, 800);
         return () => clearTimeout(timer);
@@ -80,7 +82,7 @@ const MugChat = ({ candidateInfo, onComplete }) => {
     }
 
     function processAnswer(text) {
-        const needsNumbers = [0, 1, 4].includes(currentQ);
+        const needsNumbers = [0, 1, totalQuestions - 1].includes(currentQ);
 
         // Check if answer is too vague (needs numbers but has none)
         if (needsNumbers && !hasNumbers(text) && followUpCount < 2) {
@@ -96,10 +98,10 @@ const MugChat = ({ candidateInfo, onComplete }) => {
         setFollowUpCount(0);
 
         const nextQ = currentQ + 1;
-        if (nextQ < ROUND1_QUESTIONS.length) {
+        if (nextQ < totalQuestions) {
             setCurrentQ(nextQ);
             addMugMessage(
-                `Cảm ơn bạn! ✅\n\n📋 **Câu ${nextQ + 1}/5:**\n\n${ROUND1_QUESTIONS[nextQ]}`
+                `Cảm ơn bạn! ✅\n\n📋 **Câu ${nextQ + 1}/${totalQuestions}:**\n\n${roundQuestions[nextQ]}`
             );
         } else {
             // All questions answered
@@ -218,7 +220,7 @@ const MugChat = ({ candidateInfo, onComplete }) => {
                 <div>
                     <h3 className="font-bold text-white">MUG — AI Interviewer</h3>
                     <p className="text-xs" style={{ color: "rgba(255,255,255,0.7)" }}>
-                        Vòng 1: Mindset & Ambition • Câu {Math.min(currentQ + 1, 5)}/5
+                        Vòng 1: Mindset & Ambition • Câu {Math.min(currentQ + 1, totalQuestions)}/{totalQuestions}
                     </p>
                 </div>
                 <div className="ml-auto">
@@ -226,7 +228,7 @@ const MugChat = ({ candidateInfo, onComplete }) => {
                         <div
                             className="h-2 rounded-full transition-all duration-500"
                             style={{
-                                width: `${((currentQ + (done ? 1 : 0)) / 5) * 100}%`,
+                                width: `${((currentQ + (done ? 1 : 0)) / totalQuestions) * 100}%`,
                                 background: "rgba(255,255,255,0.8)",
                             }}
                         />

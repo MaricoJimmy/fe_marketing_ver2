@@ -5,8 +5,7 @@ import { motion } from "framer-motion";
 import { Search, ArrowLeft, Loader2, Mail, ArrowRight, FileText, AlertCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { db } from "@/lib/firebase";
-import { collection, query, where, getDocs } from "firebase/firestore";
+import { recruitmentApi } from "@/lib/recruitmentApi";
 import { toast, Toaster } from "sonner";
 
 const LamBaiTestPage = () => {
@@ -25,15 +24,8 @@ const LamBaiTestPage = () => {
         setLoading(true);
         setResults(null);
         try {
-            const q = query(collection(db, "applications"), where("email", "==", email.trim().toLowerCase()));
-            const snapshot = await getDocs(q);
-
-            if (snapshot.empty) {
-                setResults([]);
-            } else {
-                const apps = snapshot.docs.map((d) => ({ id: d.id, ...d.data() }));
-                setResults(apps);
-            }
+            const apps = await recruitmentApi.getApplicationsByEmail(email.trim().toLowerCase());
+            setResults(apps || []);
         } catch (error) {
             console.error("Error searching:", error);
             toast.error("Có lỗi xảy ra. Vui lòng thử lại.");

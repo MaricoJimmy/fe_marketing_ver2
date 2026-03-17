@@ -3,8 +3,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { CheckCircle, XCircle, Clock, ArrowLeft, Trophy, Brain, Target, Shield, Loader2 } from "lucide-react";
-import { db } from "@/lib/firebase";
-import { doc, getDoc } from "firebase/firestore";
+import { recruitmentApi } from "@/lib/recruitmentApi";
 
 const ResultPage = () => {
     const router = useRouter();
@@ -13,14 +12,11 @@ const ResultPage = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        if (!id || !db) return;
+        if (!id) return;
         const fetchCandidate = async () => {
             try {
-                const docRef = doc(db, "applications", id);
-                const docSnap = await getDoc(docRef);
-                if (docSnap.exists()) {
-                    setCandidate({ id: docSnap.id, ...docSnap.data() });
-                }
+                const app = await recruitmentApi.getApplication(id);
+                setCandidate(app);
             } catch (error) {
                 console.error("Error fetching candidate:", error);
             } finally {

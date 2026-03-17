@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import AdminLayout from "@/components/tuyen-dung/AdminLayout";
-import { db } from "@/lib/firebase";
-import { collection, onSnapshot, doc, updateDoc, query, orderBy } from "firebase/firestore";
+import { recruitmentApi } from "@/lib/recruitmentApi";
 import { Search, Download, X, Users, CheckCircle, Clock, XCircle, MessageSquare, ExternalLink, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -58,16 +57,21 @@ const CandidatesAdmin = () => {
     const [selectedCandidate, setSelectedCandidate] = useState(null);
     const [notes, setNotes] = useState("");
 
-    useEffect(() => {
-        const q = query(collection(db, "applications"), orderBy("submittedAt", "desc"));
-        const unsubscribe = onSnapshot(q, (snapshot) => {
-            const data = snapshot.docs
-                .map((d) => ({ id: d.id, ...d.data() }))
-                .filter((c) => c.round1_score_total !== undefined);
+    const fetchCandidates = async () => {
+        try {
+            const apps = await recruitmentApi.listApplications();
+            const data = (apps || []).filter((c) => c.round1_score_total !== undefined && c.round1_score_total !== null);
             setCandidates(data);
+        } catch (error) {
+            console.error("Error fetching candidates:", error);
+            toast.error("Khong tai duoc danh sach ung vien.");
+        } finally {
             setLoading(false);
-        });
-        return () => unsubscribe();
+        }
+    };
+
+    useEffect(() => {
+        fetchCandidates();
     }, []);
 
     const filtered = candidates.filter((c) => {
@@ -88,7 +92,8 @@ const CandidatesAdmin = () => {
     const handleSaveNotes = async () => {
         if (!selectedCandidate) return;
         try {
-            await updateDoc(doc(db, "applications", selectedCandidate.id), { notes });
+            await recruitmentApi.updateNotes(selectedCandidate.id, notes);
+            await fetchCandidates();
             toast.success("Đã lưu ghi chú");
             setSelectedCandidate((prev) => ({ ...prev, notes }));
         } catch (error) {
@@ -102,7 +107,7 @@ const CandidatesAdmin = () => {
             c.name, c.email, c.phone || "", c.position,
             c.round1_score_total, c.round1_status,
             c.round2_score_total ?? "", c.round2_status ?? "",
-            c.submittedAt ? new Date(c.submittedAt).toLocaleDateString("vi-VN") : "",
+            (c.submittedAt || c.submitted_at) ? new Date(c.submittedAt || c.submitted_at).toLocaleDateString("vi-VN") : "",
         ]);
         const csv = [headers.join(","), ...rows.map((r) => r.map((v) => `"${v}"`).join(","))].join("\n");
         const blob = new Blob(["\uFEFF" + csv], { type: "text/csv;charset=utf-8;" });
@@ -250,7 +255,7 @@ const CandidatesAdmin = () => {
                                                 )}
                                             </td>
                                             <td className="px-5 py-4 text-sm text-gray-500">
-                                                {c.submittedAt ? new Date(c.submittedAt).toLocaleDateString("vi-VN") : "—"}
+                                                {(c.submittedAt || c.submitted_at) ? new Date(c.submittedAt || c.submitted_at).toLocaleDateString("vi-VN") : "—"}
                                             </td>
                                             <td className="px-3 py-4">
                                                 <ChevronRight className="w-4 h-4 text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -303,8 +308,8 @@ const CandidatesAdmin = () => {
                                     {[
                                         { label: "Email", value: selectedCandidate.email },
                                         { label: "SĐT", value: selectedCandidate.phone || "—" },
-                                        { label: "Ngày ứng tuyển", value: selectedCandidate.submittedAt ? new Date(selectedCandidate.submittedAt).toLocaleString("vi-VN") : "—" },
-                                        { label: "Link CV", value: selectedCandidate.cvUrl, isLink: true },
+                                        { label: "Ngày ứng tuyển", value: (selectedCandidate.submittedAt || selectedCandidate.submitted_at) ? new Date(selectedCandidate.submittedAt || selectedCandidate.submitted_at).toLocaleString("vi-VN") : "—" },
+                                        { label: "Link CV", value: selectedCandidate.cvUrl || selectedCandidate.cv_url, isLink: true },
                                     ].map((item) => (
                                         <div key={item.label} className="bg-gray-50 rounded-xl p-3">
                                             <p className="text-[10px] text-gray-500 uppercase tracking-wider mb-1">{item.label}</p>
