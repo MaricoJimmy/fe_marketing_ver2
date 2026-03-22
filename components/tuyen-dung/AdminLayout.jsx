@@ -15,6 +15,7 @@ const DEFAULT_ADMINS = [
     "hidrodat2002@gmail.com",
     "thuuyen.ftu@gmail.com",
     "udata.infor@gmail.com",
+    "nguyenqueanh12k@gmail.com"
 ];
 const envAdmins = (process.env.NEXT_PUBLIC_ADMIN_WHITELIST || "")
     .split(",")
