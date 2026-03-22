@@ -21,13 +21,29 @@ const ROUND2_CASES = [
 ];
 
 const MugRound2Chat = ({ candidateName, onComplete, questions = [] }) => {
+    // Support both string arrays (legacy) and rich question objects
     const round2Cases =
         questions.length > 0
-            ? questions.map((question, index) => ({
-                  id: `case${index + 1}`,
-                  title: `Case ${index + 1}`,
-                  question,
-              }))
+            ? questions.map((question, index) => {
+                // If it's a string, convert to legacy format
+                if (typeof question === "string") {
+                    return {
+                        id: `case${index + 1}`,
+                        title: `Case ${index + 1}`,
+                        question,
+                        type: "essay",
+                        options: null,
+                    };
+                }
+                // If it's a rich question object, use as-is
+                return {
+                    id: question.id || `case${index + 1}`,
+                    title: question.content?.substring(0, 50) || `Case ${index + 1}`,
+                    question: question.content,
+                    type: question.type || "essay",
+                    options: question.options || null,
+                };
+            })
             : ROUND2_CASES;
     const totalCases = round2Cases.length;
     const [messages, setMessages] = useState([]);
@@ -36,6 +52,7 @@ const MugRound2Chat = ({ candidateName, onComplete, questions = [] }) => {
     const [answers, setAnswers] = useState({});
     const [isTyping, setIsTyping] = useState(false);
     const [done, setDone] = useState(false);
+    const [selectedMcOption, setSelectedMcOption] = useState(null);
     const bottomRef = useRef(null);
     const messagesContainerRef = useRef(null);
 
@@ -49,10 +66,15 @@ const MugRound2Chat = ({ candidateName, onComplete, questions = [] }) => {
     useEffect(() => {
         const t1 = setTimeout(() => {
             addMugMessage(
-                `Chào mừng ${candidateName} đến Vòng 2! 🎯\n\nĐây là vòng **Practical Test** — bạn sẽ trả lời 3 bài case study.\n\nMUG sẽ tự động chấm điểm dựa trên 4 tiêu chí:\n• Tư duy chiến lược (30đ)\n• Tư duy số liệu (30đ)\n• Khả năng ra quyết định (20đ)\n• Leadership (20đ)\n\nHãy trả lời **chi tiết, có số liệu và logic rõ ràng**. Sẵn sàng chưa? 🚀`
+                `Chào mừng ${candidateName} đến Vòng 2! 🎯\n\nĐây là vòng **Practical Test** — bạn sẽ trả lời ${totalCases} câu hỏi.\n\nMUG sẽ tự động chấm điểm dựa trên các tiêu chí:\n• Tư duy chiến lược (30đ)\n• Tư duy số liệu (30đ)\n• Khả năng ra quyết định (20đ)\n• Leadership (20đ)\n\nHãy trả lời **chi tiết, có số liệu và logic rõ ràng**. Sẵn sàng chưa? 🚀`
             );
             setTimeout(() => {
-                addMugMessage(`📋 **${round2Cases[0].title}:**\n\n${round2Cases[0].question}`);
+                const firstCase = round2Cases[0];
+                if (firstCase.type === "multiple_choice") {
+                    addMugMessage(`📋 **${firstCase.title}:**\n\n${firstCase.question}\n\n_Vui lòng chọn một đáp án bên dưới._`);
+                } else {
+                    addMugMessage(`📋 **${firstCase.title}:**\n\n${firstCase.question}`);
+                }
             }, 1500);
         }, 800);
         return () => clearTimeout(t1);
@@ -79,22 +101,81 @@ const MugRound2Chat = ({ candidateName, onComplete, questions = [] }) => {
             const next = currentCase + 1;
             if (next < totalCases) {
                 setCurrentCase(next);
-                addMugMessage(`Tuyệt vời! ✅\n\n📋 **${round2Cases[next].title}:**\n\n${round2Cases[next].question}`);
+                const nextCase = round2Cases[next];
+                if (nextCase.type === "multiple_choice") {
+                    addMugMessage(`✅ Tuyệt vời!\n\n📋 **${nextCase.title}:**\n\n${nextCase.question}\n\n_Vui lòng chọn một đáp án bên dưới._`);
+                } else {
+                    addMugMessage(`Tuyệt vời! ✅\n\n📋 **${nextCase.title}:**\n\n${nextCase.question}`);
+                }
             } else {
-                setDone(true);
-                addMugMessage("Cảm ơn bạn đã hoàn thành cả 3 case! ✨\n\nMUG đang đánh giá bài làm...");
-                setTimeout(() => {
-                    const result = scoreRound2(newAnswers);
-                    onComplete(result);
-                }, 2000);
+                finishRound(newAnswers);
             }
         }, 800 + Math.random() * 800);
     }
 
+    function handleMcSelect(optionId, optionText) {
+        if (done) return;
+        setSelectedMcOption(optionId);
+        
+        setMessages((prev) => [...prev, { role: "user", content: `☑️ ${optionText}`, timestamp: new Date().toISOString() }]);
+        setIsTyping(true);
+
+        setTimeout(() => {
+            setIsTyping(false);
+            const key = round2Cases[currentCase].id;
+            const newAnswers = { ...answers, [key]: optionId };
+            setAnswers(newAnswers);
+            setSelectedMcOption(null);
+
+            const next = currentCase + 1;
+            if (next < totalCases) {
+                setCurrentCase(next);
+                const nextCase = round2Cases[next];
+                if (nextCase.type === "multiple_choice") {
+                    addMugMessage(`✅ Tuyệt vời!\n\n📋 **${nextCase.title}:**\n\n${nextCase.question}\n\n_Vui lòng chọn một đáp án bên dưới._`);
+                } else {
+                    addMugMessage(`✅ Tuyệt vời!\n\n📋 **${nextCase.title}:**\n\n${nextCase.question}`);
+                }
+            } else {
+                finishRound(newAnswers);
+            }
+        }, 500 + Math.random() * 500);
+    }
+
+    function finishRound(finalAnswers) {
+        setDone(true);
+        addMugMessage("Cảm ơn bạn đã hoàn thành! ✨\n\nMUG đang đánh giá bài làm...");
+        setTimeout(() => {
+            const result = scoreRound2(finalAnswers);
+            onComplete(result);
+        }, 2000);
+    }
+
     function scoreRound2(allAnswers) {
-        const c1 = (allAnswers.case1 || "").toLowerCase();
-        const c2 = (allAnswers.case2 || "").toLowerCase();
-        const c3 = (allAnswers.case3 || "").toLowerCase();
+        // Separate MC and essay answers for scoring
+        let mcCorrectCount = 0;
+        let mcTotalCount = 0;
+        let essayAnswers = {};
+
+        // Analyze each answer
+        for (const [key, ans] of Object.entries(allAnswers)) {
+            const caseIndex = round2Cases.findIndex(c => c.id === key);
+            const caseItem = round2Cases[caseIndex];
+            
+            if (caseItem?.type === "multiple_choice") {
+                mcTotalCount++;
+                const selectedOption = caseItem.options?.find(opt => opt.id === ans);
+                if (selectedOption?.isCorrect) {
+                    mcCorrectCount++;
+                }
+            } else {
+                essayAnswers[key] = ans;
+            }
+        }
+
+        const c1 = (essayAnswers.case1 || "").toLowerCase();
+        const c2 = (essayAnswers.case2 || "").toLowerCase();
+        const c3 = (essayAnswers.case3 || "").toLowerCase();
 
         // Strategy (max 30) — from case1
         let strategy = 5;
@@ -129,8 +210,14 @@ const MugRound2Chat = ({ candidateName, onComplete, questions = [] }) => {
         if (c2.length > 150) leadership += 3;
         leadership = Math.min(20, leadership);
 
-        const scores = { strategy, numeric, decision, leadership };
-        const total = strategy + numeric + decision + leadership;
+        // MC score component
+        let mcScore = 0;
+        if (mcTotalCount > 0) {
+            mcScore = Math.round((mcCorrectCount / mcTotalCount) * 25);
+        }
+
+        const scores = { strategy, numeric, decision, leadership, mcScore };
+        const total = strategy + numeric + decision + leadership + mcScore;
 
         let status;
         if (total > 80) status = "Pass";
@@ -138,14 +225,21 @@ const MugRound2Chat = ({ candidateName, onComplete, questions = [] }) => {
         else status = "Reject";
 
         const feedback = [];
+        
+        // MC feedback
+        if (mcTotalCount > 0) {
+            feedback.push(`Trắc nghiệm: ${mcCorrectCount}/${mcTotalCount} câu đúng.`);
+        }
+        
+        // Essay feedback
         if (strategy >= 20) feedback.push("Tư duy chiến lược mạnh, có kế hoạch rõ ràng.");
-        else feedback.push("Cần xây dựng chiến lược chi tiết hơn với các bước cụ thể.");
+        else if (Object.keys(essayAnswers).length > 0) feedback.push("Cần xây dựng chiến lược chi tiết hơn với các bước cụ thể.");
         if (numeric >= 20) feedback.push("Phân tích số liệu tốt, tính toán chính xác.");
-        else feedback.push("Cần cải thiện khả năng tính toán và phân tích dữ liệu.");
+        else if (Object.keys(essayAnswers).length > 0) feedback.push("Cần cải thiện khả năng tính toán và phân tích dữ liệu.");
         if (decision >= 14) feedback.push("Ra quyết định dứt khoát, không ngại xử lý nhân sự yếu.");
-        else feedback.push("Cần thể hiện quyết đoán hơn trong việc xử lý nhân sự không đạt.");
+        else if (Object.keys(essayAnswers).length > 0) feedback.push("Cần thể hiện quyết đoán hơn trong việc xử lý nhân sự không đạt.");
         if (leadership >= 14) feedback.push("Tố chất lãnh đạo tốt, biết quản lý và hỗ trợ đội nhóm.");
-        else feedback.push("Cần thể hiện rõ hơn năng lực quản lý và dẫn dắt đội nhóm.");
+        else if (Object.keys(essayAnswers).length > 0) feedback.push("Cần thể hiện rõ hơn năng lực quản lý và dẫn dắt đội nhóm.");
 
         return { answers: allAnswers, scores, total, status, feedback };
     }
@@ -233,31 +327,60 @@ const MugRound2Chat = ({ candidateName, onComplete, questions = [] }) => {
                 <div ref={bottomRef} />
             </div>
 
-            {/* Input */}
+            {/* Input / MC Options */}
             <div className="border-t border-gray-200 p-4">
-                <div className="flex gap-2">
-                    <textarea
-                        value={input}
-                        onChange={(e) => setInput(e.target.value)}
-                        onKeyDown={(e) => {
-                            if (e.key === "Enter" && !e.shiftKey) {
-                                e.preventDefault();
-                                handleSend();
-                            }
-                        }}
-                        placeholder={done ? "Bài làm đã hoàn tất" : "Nhập câu trả lời chi tiết... (Shift+Enter để xuống dòng)"}
-                        disabled={done}
-                        rows={3}
-                        className="flex-1 rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50 resize-none"
-                    />
-                    <button
-                        onClick={handleSend}
-                        disabled={!input.trim() || done}
-                        className="flex w-12 items-center justify-center rounded-lg bg-blue-600 text-white transition-colors hover:bg-blue-700 disabled:opacity-50"
-                    >
-                        <Send className="h-4 w-4" />
-                    </button>
-                </div>
+                {!done && round2Cases[currentCase]?.type === "multiple_choice" && round2Cases[currentCase]?.options ? (
+                    /* MC Question: Show radio buttons */
+                    <div className="space-y-2">
+                        <p className="text-xs text-gray-500 mb-2">Chọn một đáp án:</p>
+                        {round2Cases[currentCase].options.map((option) => (
+                            <button
+                                key={option.id}
+                                onClick={() => handleMcSelect(option.id, option.text)}
+                                disabled={done || isTyping}
+                                className={`w-full text-left rounded-lg border px-4 py-3 text-sm transition-all ${
+                                    selectedMcOption === option.id
+                                        ? "border-blue-500 bg-blue-50 text-blue-700"
+                                        : "border-gray-200 bg-white hover:border-blue-300 hover:bg-gray-50 disabled:opacity-50"
+                                }`}
+                            >
+                                <span className="inline-flex items-center gap-2">
+                                    <span className={`flex h-5 w-5 items-center justify-center rounded-full border text-xs ${
+                                        selectedMcOption === option.id ? "border-blue-500 bg-blue-500 text-white" : "border-gray-300"
+                                    }`}>
+                                        {selectedMcOption === option.id ? "✓" : ""}
+                                    </span>
+                                    {option.text}
+                                </span>
+                            </button>
+                        ))}
+                    </div>
+                ) : (
+                    /* Essay Question: Show textarea */
+                    <div className="flex gap-2">
+                        <textarea
+                            value={input}
+                            onChange={(e) => setInput(e.target.value)}
+                            onKeyDown={(e) => {
+                                if (e.key === "Enter" && !e.shiftKey) {
+                                    e.preventDefault();
+                                    handleSend();
+                                }
+                            }}
+                            placeholder={done ? "Bài làm đã hoàn tất" : "Nhập câu trả lời chi tiết... (Shift+Enter để xuống dòng)"}
+                            disabled={done}
+                            rows={3}
+                            className="flex-1 rounded-lg border border-gray-200 bg-white px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50 resize-none"
+                        />
+                        <button
+                            onClick={handleSend}
+                            disabled={!input.trim() || done}
+                            className="flex w-12 items-center justify-center rounded-lg bg-blue-600 text-white transition-colors hover:bg-blue-700 disabled:opacity-50"
+                        >
+                            <Send className="h-4 w-4" />
+                        </button>
+                    </div>
+                )}
             </div>
         </div>
     );

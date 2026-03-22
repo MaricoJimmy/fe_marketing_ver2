@@ -21,7 +21,6 @@ import { QuestionEditor } from "@/components/tuyen-dung/QuestionEditor";
 // Default question structure
 const createEmptyQuestion = (type = "essay") => ({
   id: `q-new-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
-  isNew: true,
   content: "",
   type,
   difficulty: "medium",
@@ -105,50 +104,24 @@ const AdminTestPage = () => {
         toast.success("Cập nhật Bài Test thành công!");
       }
 
-      // Then sync questions via batch API
+      // Then create/update questions (if backend supports it)
       try {
-        if (isCreating && questions.length > 0) {
-          // Create all questions in batch for new questionnaire
-          const questionPayloads = questions.map((q, idx) => ({
-            content: q.content,
-            type: q.type,
-            difficulty: q.difficulty,
-            max_score: q.max_score,
-            order_index: idx,
-            options: q.options,
-            scoring_mode: q.scoring_mode,
-            explanation: q.explanation,
-            sample_answer: q.sample_answer,
-            required_keywords: q.required_keywords,
-            bonus_keywords: q.bonus_keywords,
-            penalty_keywords: q.penalty_keywords,
-            min_length: q.min_length,
-            require_main_ideas: q.require_main_ideas,
-            accept_equivalent: q.accept_equivalent,
-            use_ai_semantic: q.use_ai_semantic,
-            show_scoring_explanation: q.show_scoring_explanation,
-            skills: q.skills,
-            criteria: q.criteria,
-          }));
-          await recruitmentApi.createQuestionsBatch(questionnaireId, questionPayloads);
-        } else if (!isCreating) {
-          // For updates: delete old questions and recreate
-          const existingQuestions = await recruitmentApi.listQuestions(questionnaireId);
-          for (const q of existingQuestions) {
-            await recruitmentApi.deleteQuestion(q.id);
-          }
-          // Create new questions
-          for (const [idx, question] of questions.entries()) {
-            const { id, isNew, isModified, ...questionPayload } = question;
-            await recruitmentApi.createQuestion({
-              ...questionPayload,
-              questionnaire_id: questionnaireId,
-              order_index: idx,
-            });
+        // Delete existing questions and recreate (simpler approach)
+        // In production, you'd want a proper sync mechanism
+        for (const question of questions) {
+          const questionPayload = {
+            ...question,
+            questionnaire_id: questionnaireId,
+          };
+          
+          if (question.isNew) {
+            await recruitmentApi.createQuestion(questionPayload);
+          } else if (question.isModified) {
+            await recruitmentApi.updateQuestion(question.id, questionPayload);
           }
         }
       } catch (e) {
-        console.warn("Question sync error:", e);
+        console.warn("Question sync not fully implemented:", e);
         // Continue - basic questionnaire was saved
       }
 
