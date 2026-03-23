@@ -45,11 +45,19 @@ const CVConfirmationPage = () => {
         if (!id) return;
 
         let isMounted = true;
+        let intervalId = null;
+
         const fetchApplication = async () => {
             try {
                 const app = await recruitmentApi.getApplication(id);
                 if (isMounted) {
                     setApplication(app);
+                    
+                    // If status is not pending, stop polling
+                    if (app.cv_status !== 'pending' && intervalId) {
+                        clearInterval(intervalId);
+                        intervalId = null;
+                    }
                 }
             } catch (error) {
                 console.error("Error fetching application:", error);
@@ -61,11 +69,15 @@ const CVConfirmationPage = () => {
         };
 
         fetchApplication();
-        const intervalId = setInterval(fetchApplication, 8000);
+        
+        // Only poll if cv_status is pending
+        intervalId = setInterval(fetchApplication, 15000);
 
         return () => {
             isMounted = false;
-            clearInterval(intervalId);
+            if (intervalId) {
+                clearInterval(intervalId);
+            }
         };
     }, [id]);
 

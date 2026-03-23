@@ -284,7 +284,7 @@ const AdminTestPage = () => {
                     <div className="bg-gray-50 rounded-xl border border-gray-200 p-12 text-center">
                       <FileText className="w-12 h-12 text-gray-300 mx-auto mb-4" />
                       <p className="text-gray-500 text-sm">
-                        Chưa có câu hỏi nào. Nhấn "Thêm câu hỏi" để bắt đầu.
+                        Chưa có câu hỏi nào. Nhấn &quot;Thêm câu hỏi&quot; để bắt đầu.
                       </p>
                     </div>
                   )}

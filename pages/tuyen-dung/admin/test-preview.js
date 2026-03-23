@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import { motion } from "framer-motion";
 import {
   Clock,
@@ -63,7 +63,7 @@ const TestPreview = () => {
     }, 1000);
 
     return () => clearInterval(timerRef.current);
-  }, [test, submitted]);
+  }, [test, submitted, handleSubmit]);
 
   const handleMCAnswer = (questionId, optionId) => {
     setAnswers((prev) => ({
@@ -165,12 +165,12 @@ const TestPreview = () => {
     };
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = useCallback(() => {
     clearInterval(timerRef.current);
     const result = calculateScore();
     setResults(result);
     setSubmitted(true);
-  };
+  }, [calculateScore]);
 
   if (!test) {
     return (
