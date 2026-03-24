@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import AdminLayout from "@/components/tuyen-dung/AdminLayout";
 import { recruitmentApi } from "@/lib/recruitmentApi";
-import { Search, Download, X, Users, CheckCircle, Clock, XCircle, MessageSquare, ExternalLink, ChevronRight } from "lucide-react";
+import { Search, Download, X, Users, CheckCircle, Clock, XCircle, MessageSquare, ExternalLink, ChevronRight, ThumbsUp, ThumbsDown, Loader2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { toast, Toaster } from "sonner";
@@ -56,6 +56,7 @@ const CandidatesAdmin = () => {
     const [filterStatus, setFilterStatus] = useState("all");
     const [selectedCandidate, setSelectedCandidate] = useState(null);
     const [notes, setNotes] = useState("");
+    const [reviewingAction, setReviewingAction] = useState(null);
 
     const fetchCandidates = async () => {
         try {
@@ -98,6 +99,28 @@ const CandidatesAdmin = () => {
             setSelectedCandidate((prev) => ({ ...prev, notes }));
         } catch (error) {
             toast.error("Lỗi khi lưu ghi chú");
+        }
+    };
+
+    const handleReviewPendingResult = async (round, decision) => {
+        if (!selectedCandidate) return;
+
+        const actionKey = `${selectedCandidate.id}-${round}-${decision}`;
+        setReviewingAction(actionKey);
+        try {
+            const updated = await recruitmentApi.updateTestStatus(selectedCandidate.id, round, decision);
+            setCandidates((prev) => prev.map((candidate) => (candidate.id === updated.id ? updated : candidate)));
+            setSelectedCandidate(updated);
+            toast.success(
+                decision === "Pass"
+                    ? `Đã duyệt kết quả vòng ${round}. Email đã được gửi cho ứng viên.`
+                    : `Đã từ chối kết quả vòng ${round}. Email đã được gửi cho ứng viên.`
+            );
+        } catch (error) {
+            console.error("Error reviewing pending result:", error);
+            toast.error(error?.message || "Không thể cập nhật trạng thái kết quả test.");
+        } finally {
+            setReviewingAction(null);
         }
     };
 
@@ -364,6 +387,42 @@ const CandidatesAdmin = () => {
                                                 ⚠️ {selectedCandidate.round1_hard_reject_reason}
                                             </p>
                                         ) : null}
+                                        {selectedCandidate.round1_status === "Pending" ? (
+                                            <div className="mt-4 rounded-xl border border-amber-200 bg-amber-50/70 p-3">
+                                                <p className="text-xs text-amber-700 mb-2 font-medium">
+                                                    Ứng viên đang ở ngưỡng điểm chờ duyệt. Chọn quyết định để gửi email thông báo.
+                                                </p>
+                                                <div className="flex items-center gap-2">
+                                                    <Button
+                                                        size="sm"
+                                                        className="gap-1.5 bg-emerald-600 hover:bg-emerald-700"
+                                                        onClick={() => handleReviewPendingResult(1, "Pass")}
+                                                        disabled={Boolean(reviewingAction)}
+                                                    >
+                                                        {reviewingAction === `${selectedCandidate.id}-1-Pass` ? (
+                                                            <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                                                        ) : (
+                                                            <ThumbsUp className="w-3.5 h-3.5" />
+                                                        )}
+                                                        Duyệt
+                                                    </Button>
+                                                    <Button
+                                                        size="sm"
+                                                        variant="outline"
+                                                        className="gap-1.5 text-red-600 border-red-200 hover:bg-red-50"
+                                                        onClick={() => handleReviewPendingResult(1, "Reject")}
+                                                        disabled={Boolean(reviewingAction)}
+                                                    >
+                                                        {reviewingAction === `${selectedCandidate.id}-1-Reject` ? (
+                                                            <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                                                        ) : (
+                                                            <ThumbsDown className="w-3.5 h-3.5" />
+                                                        )}
+                                                        Từ chối
+                                                    </Button>
+                                                </div>
+                                            </div>
+                                        ) : null}
                                         {selectedCandidate.round1_answers ? (
                                             <details className="mt-4">
                                                 <summary className="text-xs text-blue-600 cursor-pointer hover:text-blue-800 font-medium">
@@ -417,6 +476,42 @@ const CandidatesAdmin = () => {
                                                         </li>
                                                     ))}
                                                 </ul>
+                                            ) : null}
+                                            {selectedCandidate.round2_status === "Pending" ? (
+                                                <div className="mt-4 rounded-xl border border-amber-200 bg-amber-50/70 p-3">
+                                                    <p className="text-xs text-amber-700 mb-2 font-medium">
+                                                        Ứng viên đang ở ngưỡng điểm chờ duyệt. Chọn quyết định để gửi email thông báo.
+                                                    </p>
+                                                    <div className="flex items-center gap-2">
+                                                        <Button
+                                                            size="sm"
+                                                            className="gap-1.5 bg-emerald-600 hover:bg-emerald-700"
+                                                            onClick={() => handleReviewPendingResult(2, "Pass")}
+                                                            disabled={Boolean(reviewingAction)}
+                                                        >
+                                                            {reviewingAction === `${selectedCandidate.id}-2-Pass` ? (
+                                                                <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                                                            ) : (
+                                                                <ThumbsUp className="w-3.5 h-3.5" />
+                                                            )}
+                                                            Duyệt
+                                                        </Button>
+                                                        <Button
+                                                            size="sm"
+                                                            variant="outline"
+                                                            className="gap-1.5 text-red-600 border-red-200 hover:bg-red-50"
+                                                            onClick={() => handleReviewPendingResult(2, "Reject")}
+                                                            disabled={Boolean(reviewingAction)}
+                                                        >
+                                                            {reviewingAction === `${selectedCandidate.id}-2-Reject` ? (
+                                                                <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                                                            ) : (
+                                                                <ThumbsDown className="w-3.5 h-3.5" />
+                                                            )}
+                                                            Từ chối
+                                                        </Button>
+                                                    </div>
+                                                </div>
                                             ) : null}
                                             {selectedCandidate.round2_answers ? (
                                                 <details className="mt-4">

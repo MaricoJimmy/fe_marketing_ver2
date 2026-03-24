@@ -49,6 +49,40 @@ const createEmptyQuestion = (type = "essay") => ({
   criteria: type === "essay" ? [] : undefined,
 });
 
+const normalizeQuestionnaireQuestions = (test) => {
+  const richQuestions = Array.isArray(test?.questions) ? test.questions : [];
+  if (richQuestions.length > 0) {
+    return { ...test, questions: richQuestions };
+  }
+
+  const round1 = Array.isArray(test?.round1_questions) ? test.round1_questions : [];
+  const round2 = Array.isArray(test?.round2_questions) ? test.round2_questions : [];
+
+  const legacyQuestions = [
+    ...round1.map((content, index) => ({
+      id: `legacy-r1-${test.id}-${index}`,
+      content,
+      type: "essay",
+      difficulty: "medium",
+      max_score: 10,
+      order_index: index,
+    })),
+    ...round2.map((content, index) => ({
+      id: `legacy-r2-${test.id}-${index}`,
+      content,
+      type: "essay",
+      difficulty: "medium",
+      max_score: 10,
+      order_index: round1.length + index,
+    })),
+  ];
+
+  return {
+    ...test,
+    questions: legacyQuestions,
+  };
+};
+
 const AdminTestPage = () => {
   const [tests, setTests] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -59,7 +93,7 @@ const AdminTestPage = () => {
   const fetchTests = async () => {
     try {
       const data = await recruitmentApi.listQuestionnaires();
-      setTests(data || []);
+      setTests((data || []).map(normalizeQuestionnaireQuestions));
     } catch (error) {
       console.error("Error fetching tests:", error);
       toast.error("Không tải được danh sách bài Test.");
