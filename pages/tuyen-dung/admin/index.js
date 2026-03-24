@@ -44,7 +44,7 @@ const emptyJob = {
   benefits: [""],
   round1_questions: [],
   round2_questions: [],
-  isActive: true,
+  is_active: true,
   order: 0,
 };
 
@@ -102,7 +102,7 @@ const AdminJDPage = () => {
         requirements: jobData.requirements,
         benefits: jobData.benefits,
         questionnaire_id: jobData.questionnaire_id || null,
-        is_active: Boolean(jobData.isActive),
+        is_active: Boolean(jobData.is_active),
         order: Number(jobData.order || 0),
       };
 
@@ -141,7 +141,7 @@ const AdminJDPage = () => {
     try {
       await recruitmentApi.toggleJob(job.id);
       await fetchData();
-      toast.success(job.isActive ? "Đã ẩn JD" : "Đã hiện JD");
+      toast.success(job.is_active ? "Đã ẩn JD" : "Đã hiện JD");
     } catch (error) {
       console.error("Error toggling job:", error);
     }
@@ -186,7 +186,7 @@ const AdminJDPage = () => {
     setEditingJob({ ...editingJob, [field]: updated });
   };
 
-  const activeJobs = jobs.filter((j) => j.isActive).length;
+  const activeJobs = jobs.filter((j) => j.is_active).length;
   const hiddenJobs = jobs.length - activeJobs;
 
   // Edit Form
@@ -302,14 +302,14 @@ const AdminJDPage = () => {
                       </div>
                       <div className="flex items-end">
                         <button
-                          onClick={() => setEditingJob({ ...editingJob, isActive: !editingJob.isActive })}
+                          onClick={() => setEditingJob({ ...editingJob, is_active: !editingJob.is_active })}
                           className={`h-11 px-4 rounded-xl text-sm font-medium flex items-center gap-2 transition-all ${
-                            editingJob.isActive
+                            editingJob.is_active
                               ? "bg-emerald-50 text-emerald-700 border border-emerald-200"
                               : "bg-gray-100 text-gray-500 border border-gray-200"
                           }`}
                         >
-                          {editingJob.isActive ? ( <><Eye className="w-4 h-4" /> Đang hiển thị</> ) : ( <><EyeOff className="w-4 h-4" /> Đang ẩn</> )}
+                          {editingJob.is_active ? ( <><Eye className="w-4 h-4" /> Đang hiển thị</> ) : ( <><EyeOff className="w-4 h-4" /> Đang ẩn</> )}
                         </button>
                       </div>
                     </div>
@@ -554,12 +554,12 @@ const AdminJDPage = () => {
                       <h3 className="font-semibold text-gray-900 truncate">{job.title}</h3>
                       <span
                         className={`inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] font-semibold flex-shrink-0 ${
-                          job.isActive
+                          job.is_active
                             ? "bg-emerald-50 text-emerald-700 border border-emerald-200"
                             : "bg-gray-100 text-gray-500 border border-gray-200"
                         }`}
                       >
-                        {job.isActive ? (<><span className="w-1.5 h-1.5 rounded-full bg-emerald-500" /> Active</>) : "Hidden"}
+                        {job.is_active ? (<><span className="w-1.5 h-1.5 rounded-full bg-emerald-500" /> Active</>) : "Hidden"}
                       </span>
                     </div>
                     <div className="flex items-center gap-3 text-xs text-gray-500">
@@ -582,10 +582,10 @@ const AdminJDPage = () => {
                   <button
                     onClick={() => toggleActive(job)}
                     className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-gray-500 hover:bg-gray-100 transition-colors"
-                    title={job.isActive ? "Ẩn" : "Hiện"}
+                    title={job.is_active ? "Ẩn" : "Hiện"}
                   >
-                    {job.isActive ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
-                    {job.isActive ? "Ẩn" : "Hiện"}
+                    {job.is_active ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
+                    {job.is_active ? "Ẩn" : "Hiện"}
                   </button>
                   <button
                     onClick={() => {
