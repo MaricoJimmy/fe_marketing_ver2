@@ -47,24 +47,6 @@ const TestPreview = () => {
     }
   }, []);
 
-  // Timer
-  useEffect(() => {
-    if (!test || submitted) return;
-
-    timerRef.current = setInterval(() => {
-      setTimeLeft((prev) => {
-        if (prev <= 0) {
-          clearInterval(timerRef.current);
-          handleSubmit();
-          return 0;
-        }
-        return prev - 1;
-      });
-    }, 1000);
-
-    return () => clearInterval(timerRef.current);
-  }, [test, submitted, handleSubmit]);
-
   const handleMCAnswer = (questionId, optionId) => {
     setAnswers((prev) => ({
       ...prev,
@@ -79,7 +61,7 @@ const TestPreview = () => {
     }));
   };
 
-  const calculateScore = () => {
+  const calculateScore = useCallback(() => {
     if (!test?.questions) return { total: 0, maxScore: 0, breakdown: [] };
 
     let totalScore = 0;
@@ -163,7 +145,7 @@ const TestPreview = () => {
       percentage: Math.round((totalScore / maxScore) * 100),
       breakdown,
     };
-  };
+  }, [answers, test]);
 
   const handleSubmit = useCallback(() => {
     clearInterval(timerRef.current);
@@ -171,6 +153,24 @@ const TestPreview = () => {
     setResults(result);
     setSubmitted(true);
   }, [calculateScore]);
+
+  // Timer
+  useEffect(() => {
+    if (!test || submitted) return;
+
+    timerRef.current = setInterval(() => {
+      setTimeLeft((prev) => {
+        if (prev <= 0) {
+          clearInterval(timerRef.current);
+          handleSubmit();
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(timerRef.current);
+  }, [test, submitted, handleSubmit]);
 
   if (!test) {
     return (
