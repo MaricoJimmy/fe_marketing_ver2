@@ -102,15 +102,18 @@ const CandidatesAdmin = () => {
         }
     };
 
-    const handleReviewPendingResult = async (round, decision) => {
-        if (!selectedCandidate) return;
+    const handleReviewPendingResult = async (round, decision, candidateOverride = null) => {
+        const target = candidateOverride || selectedCandidate;
+        if (!target) return;
 
-        const actionKey = `${selectedCandidate.id}-${round}-${decision}`;
+        const actionKey = `${target.id}-${round}-${decision}`;
         setReviewingAction(actionKey);
         try {
-            const updated = await recruitmentApi.updateTestStatus(selectedCandidate.id, round, decision);
+            const updated = await recruitmentApi.updateTestStatus(target.id, round, decision);
             setCandidates((prev) => prev.map((candidate) => (candidate.id === updated.id ? updated : candidate)));
-            setSelectedCandidate(updated);
+            if (selectedCandidate?.id === updated.id) {
+                setSelectedCandidate(updated);
+            }
             toast.success(
                 decision === "Pass"
                     ? `Đã duyệt kết quả vòng ${round}. Email đã được gửi cho ứng viên.`
@@ -237,7 +240,7 @@ const CandidatesAdmin = () => {
                                         <th className="text-left px-5 py-4 text-[10px] font-semibold text-gray-500 uppercase tracking-wider w-36">Vòng 1</th>
                                         <th className="text-left px-5 py-4 text-[10px] font-semibold text-gray-500 uppercase tracking-wider w-36">Vòng 2</th>
                                         <th className="text-left px-5 py-4 text-[10px] font-semibold text-gray-500 uppercase tracking-wider">Ngày</th>
-                                        <th className="w-10"></th>
+                                        <th className="w-auto px-3 py-4 text-[10px] font-semibold text-gray-500 uppercase tracking-wider">Thao tác</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -281,7 +284,53 @@ const CandidatesAdmin = () => {
                                                 {(c.submittedAt || c.submitted_at) ? new Date(c.submittedAt || c.submitted_at).toLocaleDateString("vi-VN") : "—"}
                                             </td>
                                             <td className="px-3 py-4">
-                                                <ChevronRight className="w-4 h-4 text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                                <div className="flex items-center gap-1.5">
+                                                    {c.round1_status === "Pending" ? (
+                                                        <>
+                                                            <button
+                                                                type="button"
+                                                                onClick={(e) => { e.stopPropagation(); handleReviewPendingResult(1, "Pass", c); }}
+                                                                disabled={reviewingAction === `${c.id}-1-Pass`}
+                                                                className="inline-flex items-center gap-1 px-2.5 py-1 text-[11px] font-semibold rounded-md border border-emerald-200 text-emerald-700 bg-white hover:bg-emerald-50 shadow-sm transition-colors cursor-pointer disabled:opacity-60"
+                                                            >
+                                                                {reviewingAction === `${c.id}-1-Pass` ? <Loader2 className="w-3 h-3 animate-spin" /> : <ThumbsUp className="w-3 h-3" />}
+                                                                Duyệt
+                                                            </button>
+                                                            <button
+                                                                type="button"
+                                                                onClick={(e) => { e.stopPropagation(); handleReviewPendingResult(1, "Reject", c); }}
+                                                                disabled={reviewingAction === `${c.id}-1-Reject`}
+                                                                className="inline-flex items-center gap-1 px-2.5 py-1 text-[11px] font-semibold rounded-md border border-red-200 text-red-600 bg-white hover:bg-red-50 shadow-sm transition-colors cursor-pointer disabled:opacity-60"
+                                                            >
+                                                                {reviewingAction === `${c.id}-1-Reject` ? <Loader2 className="w-3 h-3 animate-spin" /> : <ThumbsDown className="w-3 h-3" />}
+                                                                Từ chối
+                                                            </button>
+                                                        </>
+                                                    ) : null}
+                                                    {c.round2_status === "Pending" ? (
+                                                        <>
+                                                            <button
+                                                                type="button"
+                                                                onClick={(e) => { e.stopPropagation(); handleReviewPendingResult(2, "Pass", c); }}
+                                                                disabled={reviewingAction === `${c.id}-2-Pass`}
+                                                                className="inline-flex items-center gap-1 px-2.5 py-1 text-[11px] font-semibold rounded-md border border-emerald-200 text-emerald-700 bg-white hover:bg-emerald-50 shadow-sm transition-colors cursor-pointer disabled:opacity-60"
+                                                            >
+                                                                {reviewingAction === `${c.id}-2-Pass` ? <Loader2 className="w-3 h-3 animate-spin" /> : <ThumbsUp className="w-3 h-3" />}
+                                                                V2 Duyệt
+                                                            </button>
+                                                            <button
+                                                                type="button"
+                                                                onClick={(e) => { e.stopPropagation(); handleReviewPendingResult(2, "Reject", c); }}
+                                                                disabled={reviewingAction === `${c.id}-2-Reject`}
+                                                                className="inline-flex items-center gap-1 px-2.5 py-1 text-[11px] font-semibold rounded-md border border-red-200 text-red-600 bg-white hover:bg-red-50 shadow-sm transition-colors cursor-pointer disabled:opacity-60"
+                                                            >
+                                                                {reviewingAction === `${c.id}-2-Reject` ? <Loader2 className="w-3 h-3 animate-spin" /> : <ThumbsDown className="w-3 h-3" />}
+                                                                V2 Từ chối
+                                                            </button>
+                                                        </>
+                                                    ) : null}
+                                                    <ChevronRight className="w-4 h-4 text-gray-400 opacity-0 group-hover:opacity-100 transition-opacity" />
+                                                </div>
                                             </td>
                                         </tr>
                                     ))}
