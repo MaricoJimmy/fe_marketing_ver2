@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }) {
   const chatWidgetApiUrl = process.env.NEXT_PUBLIC_CHAT_WIDGET_API_URL || "https://mini.ugate.ai";
   const chatWidgetColor = process.env.NEXT_PUBLIC_CHAT_WIDGET_COLOR || "#1890ff";
   const chatWidgetOrigin = process.env.NEXT_PUBLIC_CHAT_WIDGET_ORIGIN || "https://mini.ugate.ai";
-  const chatWidgetToken = "500c75eb-af20-408a-8714-72593060d76b"
+  const chatWidgetToken = process.env.NEXT_PUBLIC_CHAT_WIDGET_TOKEN || "500c75eb-af20-408a-8714-72593060d76b"
   const chatWidgetScriptSrc =
     process.env.NEXT_PUBLIC_CHAT_WIDGET_SCRIPT_SRC || `${chatWidgetOrigin}/chat-widget.js`;
 
