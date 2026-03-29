@@ -3,12 +3,14 @@ import WhyChooseUs from "@/components/san-pham/WhyChooseUs";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 
+const stripHtml = (value = "") => value.replace(/<[^>]*>/g, " ").replace(/\s+/g, " ").trim();
+
 const AboutUsPage = () => {
   const t = useTranslations("AboutUs");
 
   const metaTagData = {
     title: `${t("title")} | Udata.ai`,
-    desc: t("excerpt"),
+    desc: stripHtml(t.raw("excerpt")),
     img: "/image/hero/home-pv.webp",
   };
   return (

@@ -1,38 +1,42 @@
 import { motion } from "framer-motion";
 import { Target, Lightbulb, Cpu, Shield } from "lucide-react";
 
-const AboutSection = () => {
-    const features = [
-        {
-            icon: Target,
-            title: "Sứ mệnh",
-            description: "Giúp doanh nghiệp vận hành thông minh và phát triển bền vững với AI & IoT",
-            color: "text-blue-600",
-            bgColor: "bg-blue-50",
-        },
-        {
-            icon: Lightbulb,
-            title: "Sáng tạo",
-            description: "Luôn đổi mới và tiên phong trong các giải pháp công nghệ cho doanh nghiệp",
-            color: "text-orange-600",
-            bgColor: "bg-orange-50",
-        },
-        {
-            icon: Cpu,
-            title: "Công nghệ",
-            description: "Phát triển nền tảng AI & IoT hàng đầu tại Việt Nam cho doanh nghiệp",
-            color: "text-purple-600",
-            bgColor: "bg-purple-50",
-        },
-        {
-            icon: Shield,
-            title: "Tin cậy",
-            description: "Đối tác tin cậy của hàng trăm doanh nghiệp, nhà máy và khu công nghiệp",
-            color: "text-emerald-600",
-            bgColor: "bg-emerald-50",
-        },
-    ];
+const features = [
+    {
+        icon: Target,
+        title: "Sứ mệnh",
+        description: "Giúp doanh nghiệp vận hành thông minh và phát triển bền vững với AI & IoT",
+        color: "text-blue-600",
+        bgColor: "bg-blue-50",
+        hoverBg: "group-hover:bg-blue-100",
+    },
+    {
+        icon: Lightbulb,
+        title: "Sáng tạo",
+        description: "Luôn đổi mới và tiên phong trong các giải pháp công nghệ cho doanh nghiệp",
+        color: "text-orange-600",
+        bgColor: "bg-orange-50",
+        hoverBg: "group-hover:bg-orange-100",
+    },
+    {
+        icon: Cpu,
+        title: "Công nghệ",
+        description: "Phát triển nền tảng AI & IoT hàng đầu tại Việt Nam cho doanh nghiệp",
+        color: "text-purple-600",
+        bgColor: "bg-purple-50",
+        hoverBg: "group-hover:bg-purple-100",
+    },
+    {
+        icon: Shield,
+        title: "Tin cậy",
+        description: "Đối tác tin cậy của hàng trăm doanh nghiệp, nhà máy và khu công nghiệp",
+        color: "text-emerald-600",
+        bgColor: "bg-emerald-50",
+        hoverBg: "group-hover:bg-emerald-100",
+    },
+];
 
+const AboutSection = () => {
     return (
         <section className="py-20 md:py-32 bg-gradient-to-b from-white to-blue-50/50">
             <div className="container mx-auto px-4">
@@ -70,9 +74,9 @@ const AboutSection = () => {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.5, delay: 0.1 * index }}
-                                    className="bg-white rounded-2xl p-5 shadow-card border border-gray-50 hover:shadow-lg transition-shadow"
+                                    className="group bg-white rounded-2xl p-5 shadow-card border border-gray-50 card-hover-lift cursor-default"
                                 >
-                                    <div className={`w-12 h-12 ${feature.bgColor} rounded-xl flex items-center justify-center mb-4`}>
+                                    <div className={`w-12 h-12 ${feature.bgColor} ${feature.hoverBg} rounded-xl flex items-center justify-center mb-4 transition-colors`}>
                                         <feature.icon className={`w-6 h-6 ${feature.color}`} />
                                     </div>
                                     <h3 className="font-display font-semibold text-gray-900 mb-2">{feature.title}</h3>
