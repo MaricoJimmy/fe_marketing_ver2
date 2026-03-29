@@ -1,11 +1,15 @@
-﻿import { motion } from "framer-motion";
+﻿import { useState } from "react";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogTrigger, DialogTitle } from "@/components/ui/dialog";
 import { FloatingAvatar } from "./FloatingAvatar";
 import { ChatBubble, TypingIndicator } from "./ChatBubble";
 import { Play, Sparkles, Users } from "lucide-react";
 import Link from "next/link";
 
 export const HeroSection = () => {
+  const [videoOpen, setVideoOpen] = useState(false);
+
   return (
     <section className="relative min-h-screen bg-hero-gradient overflow-hidden">
       {/* Decorative background elements */}
@@ -71,10 +75,28 @@ export const HeroSection = () => {
                   Dùng thử miễn phí
                 </a>
               </Button>
-              <Button size="lg" variant="outline" className="gap-2 border-primary/30 text-primary hover:bg-primary/5">
-                <Play className="w-4 h-4" />
-                Xem MiniUgate hoạt động
-              </Button>
+              <Dialog open={videoOpen} onOpenChange={setVideoOpen}>
+                <DialogTrigger asChild>
+                  <Button size="lg" variant="outline" className="gap-2 border-primary/30 text-primary hover:bg-primary/5">
+                    <Play className="w-4 h-4" />
+                    Xem MiniUgate hoạt động
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="max-w-4xl p-0 overflow-hidden bg-black border-none">
+                  <DialogTitle className="sr-only">MiniUgate Demo Video</DialogTitle>
+                  {videoOpen && (
+                    <div className="w-full aspect-video">
+                      <iframe
+                        src={process.env.NEXT_PUBLIC_MINIUGATE_DEMO_VIDEO_URL || "https://drive.google.com/file/d/1Pw-bCkkUvulhDdR4qlO9q9tBdtHteqaW/preview"}
+                        className="w-full h-full"
+                        allow="autoplay"
+                        allowFullScreen
+                        title="MiniUgate Demo Video"
+                      />
+                    </div>
+                  )}
+                </DialogContent>
+              </Dialog>
             </motion.div>
 
             {/* Affiliate CTA */}
