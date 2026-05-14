@@ -111,6 +111,9 @@ pipeline {
           }
           sh """
           rsync -rtv deployment/udata/frontend/overwrite/ source/
+          echo "🔐 Fetching ECR login token..."
+          aws ecr get-login-password --region \${AWS_REGION} > \${TOKEN_FILE}
+          echo "✅ Token saved to \${TOKEN_FILE}"
           """
         }
     }
@@ -118,16 +121,29 @@ pipeline {
     stage('Build Image') {
         steps {
             dir("${env.WORKSPACE}/source") {
-                container(name: 'kaniko', shell: '/busybox/sh') {
-                  sh """
-                  /kaniko/executor \
-                  --context=${clusterEnvs.build_context} \
-                  --dockerfile=${clusterEnvs.build_context}/${clusterEnvs.build_dockerfile} \
-                  --destination=${imageName} \
-                  --verbosity=info \
-                  --cache-dir=/cache --cache=true \
-                  --build-arg=branch=${baselineBranch} --force
-                  """
+                container(name: 'buildah', shell: '/bin/sh') {
+                    sh '''
+                        set -eux
+                        echo "🚀 Login ECR..."
+                        cat ${TOKEN_FILE} | buildah login -u AWS --password-stdin ${ECR_REGISTRY}
+                    '''
+                    sh """
+                        set -eux
+
+                        buildah bud \
+                        --layers \
+                        --format docker \
+                        --pull=missing \
+                        --jobs=2 \
+                        --log-level=error \
+                        -t ${imageName} \
+                        -f ${clusterEnvs.build_context}/${clusterEnvs.build_dockerfile} \
+                        ${clusterEnvs.build_context}
+
+                        buildah push \
+                        ${imageName} \
+                        docker://${imageName}
+                    """
                 }
             }
         }
