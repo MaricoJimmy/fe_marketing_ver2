@@ -75,7 +75,7 @@ export default function CoreInsight() {
           <div
             className="relative h-full min-h-[400px] rounded-xl overflow-hidden border border-surface-border transition-all duration-[900ms] ease-out flex items-center justify-center"
             style={{
-              transform: isVisible ? 'translateX(0) scale(0.85)' : 'translateX(80px) scale(0.85)',
+              transform: isVisible ? 'translateX(0) scale(1)' : 'translateX(80px) scale(0.95)',
               opacity: isVisible ? 1 : 0,
               transitionDelay: '150ms',
             }}

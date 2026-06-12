@@ -9,6 +9,7 @@ import NeuralPatternsBG from '@/components/backgrounds/NeuralPatternsBG';
 import GridSystemBG from '@/components/backgrounds/GridSystemBG';
 import MacbookScroll from '@/components/MacbookScroll';
 import HeroSection from '@/components/HeroSection';
+import TrustedBy from '@/components/TrustedBy';
 
 const PRODUCT_DATA = {
   VI: {
@@ -362,6 +363,7 @@ const PRODUCT_DATA = {
 const UseCaseBlock = ({ useCase }) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
+  const { lang } = useLanguage();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -414,6 +416,12 @@ const UseCaseBlock = ({ useCase }) => {
         <p className="text-on-surface-variant font-body-md text-lg lg:text-xl leading-relaxed">
           {useCase.description}
         </p>
+        
+        {/* Learn More Button */}
+        <button className="flex items-center gap-2 text-electric-cyan font-bold text-lg hover:text-[#10F0CB] transition-colors group pt-2">
+          {lang === 'EN' ? 'Learn more' : 'Tìm hiểu thêm'}
+          <span className="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
+        </button>
       </div>
     </div>
   );
@@ -604,6 +612,10 @@ export default function ProductPage() {
               </div>
             </>
           )}
+          
+          <div className="w-[100vw] relative left-1/2 -translate-x-1/2 -mt-12 mb-12">
+            <TrustedBy />
+          </div>
 
         {/* Features Section */}
         {product.features && product.features.length > 0 && (
@@ -653,16 +665,18 @@ export default function ProductPage() {
           const content = ctaContent[id?.toLowerCase()];
 
           return (
-            <div className="mt-16 mb-24 max-w-[1000px] mx-auto text-center space-y-6 md:space-y-8 bg-gradient-to-b from-white/5 to-transparent py-10 px-5 sm:p-12 md:p-16 rounded-2xl md:rounded-3xl border border-white/10 relative overflow-hidden mx-4 md:mx-auto">
-              <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-electric-cyan/20 blur-[120px] rounded-full pointer-events-none"></div>
+            <div className="mt-20 mb-32 max-w-[1280px] w-full mx-auto text-center space-y-8 bg-[#0C1017] py-16 px-6 sm:p-16 md:p-24 rounded-[40px] border border-white/10 relative overflow-hidden">
+              <div className="absolute inset-0 bg-[url('/images/tech_dashboard_bg.png')] bg-cover bg-center opacity-30 mix-blend-screen"></div>
+              <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A] via-transparent to-[#0A0A0A] opacity-80"></div>
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[800px] h-[400px] bg-electric-cyan/20 blur-[120px] rounded-full pointer-events-none"></div>
               
-              <h2 className="relative z-10 text-2xl sm:text-3xl md:text-5xl font-display-md font-bold text-white leading-tight">
+              <h2 className="relative z-10 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display-md font-bold text-white leading-tight max-w-4xl mx-auto drop-shadow-lg">
                 {content.heading}
               </h2>
-              <p className="relative z-10 text-on-surface-variant font-body-md text-base md:text-xl max-w-3xl mx-auto leading-relaxed mt-4 md:mt-6">
+              <p className="relative z-10 text-on-surface-variant font-body-md text-lg md:text-2xl max-w-4xl mx-auto leading-relaxed mt-6">
                 {content.desc}
               </p>
-              <div className="relative z-10 flex flex-wrap justify-center items-center gap-4 pt-8 md:pt-10">
+              <div className="relative z-10 flex flex-wrap justify-center items-center gap-6 pt-10">
                 <HoverFillButton 
                   onClick={() => { 
                     if (id?.toLowerCase() === 'ugate') {
@@ -671,10 +685,19 @@ export default function ProductPage() {
                       router.push('/dung-thu');
                     }
                   }}
-                  className="bg-gradient-to-r from-[#22D3EE] to-[#10F0CB] text-[#06101F] px-8 py-3.5 rounded-xl font-bold text-base shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all flex items-center gap-2"
+                  className="bg-gradient-to-r from-[#22D3EE] to-[#10F0CB] text-[#06101F] px-10 py-4 rounded-xl font-bold text-lg shadow-[0_0_30px_rgba(34,211,238,0.3)] transition-all flex items-center gap-2 hover:scale-105"
                 >
                   {lang === 'EN' ? "Get A Demo" : "Nhận Demo"}
-                  <span className="material-symbols-outlined text-sm font-bold">arrow_outward</span>
+                  <span className="material-symbols-outlined text-xl font-bold">arrow_outward</span>
+                </HoverFillButton>
+                
+                <HoverFillButton 
+                  onClick={() => setShowVideo(true)}
+                  rippleColor="bg-[#22D3EE]" 
+                  className="border border-white/20 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all backdrop-blur-sm flex items-center gap-2 hover:scale-105 bg-black/40"
+                >
+                  <span className="material-symbols-outlined text-xl">play_arrow</span>
+                  {lang === 'EN' ? "Explore Solutions" : "Khám phá giải pháp"}
                 </HoverFillButton>
               </div>
             </div>

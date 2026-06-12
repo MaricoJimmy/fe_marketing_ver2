@@ -201,15 +201,17 @@ export default function BentoGrid() {
             className="hidden lg:block lg:col-span-7 xl:col-span-8 relative rounded-xl overflow-hidden shadow-2xl min-h-[500px] h-full bg-black/40 transition-all duration-[900ms] ease-out border border-white/5"
             style={{ transform: isVisible ? 'translateX(0)' : 'translateX(80px)', opacity: isVisible ? 1 : 0, transitionDelay: '250ms' }}
           >
-            {items.map((item, index) => (
+            {items.map((item, index) => {
+              const isActiveDesktop = activeIndex === index || (activeIndex === -1 && index === 0);
+              return (
               <div
                 key={item.id}
                 className="absolute inset-0 transition-opacity duration-500"
-                style={{ opacity: activeIndex === index ? 1 : 0, pointerEvents: activeIndex === index ? 'auto' : 'none' }}
+                style={{ opacity: isActiveDesktop ? 1 : 0, pointerEvents: isActiveDesktop ? 'auto' : 'none' }}
               >
                 {item.hasVideo ? (
                   <div className="w-full h-full relative">
-                    <VideoPlayer src={item.video} isActive={activeIndex === index && isVisible} />
+                    <VideoPlayer src={item.video} isActive={isActiveDesktop && isVisible} />
                     <div className="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-20 pointer-events-none">
                       <p className="text-white text-xl md:text-2xl font-semibold tracking-wide drop-shadow-md border-l-4 border-[#22D3EE] pl-4">{t(item.visualTextKey)}</p>
                     </div>
@@ -226,7 +228,7 @@ export default function BentoGrid() {
                   </div>
                 )}
               </div>
-            ))}
+            )})}
           </div>
         </div>
       </div>
