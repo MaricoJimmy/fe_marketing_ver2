@@ -2,14 +2,30 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
-// Parse a stat string like "500+", "99.9%", "50M+" into { number, suffix }
 function parseStat(value) {
+  // Try to match a simple number followed by a suffix
   const match = value.match(/^([\d.]+)([^\d.]*)$/);
-  if (!match) return { number: 0, suffix: value, isDecimal: false };
+  // Also try to match a range like "60-80" followed by a suffix
+  const rangeMatch = value.match(/^([\d]+-[\d.]+)([^\d.]*)$/);
+  
+  if (rangeMatch) {
+    // For ranges, we can extract the last number to count up to, and keep the first part as prefix
+    const parts = rangeMatch[1].split('-');
+    return { 
+      number: parseFloat(parts[1]), 
+      prefix: parts[0] + '-',
+      suffix: rangeMatch[2], 
+      isDecimal: parts[1].includes('.') 
+    };
+  }
+  
+  if (!match) return { number: 0, suffix: value, isDecimal: false, prefix: '' };
+  
   return {
     number: parseFloat(match[1]),
     suffix: match[2],
     isDecimal: match[1].includes('.'),
+    prefix: ''
   };
 }
 
@@ -40,9 +56,9 @@ function useCountUp(target, isDecimal, duration = 1800, active = false) {
   return count;
 }
 
-function StatItem({ value, labelKey, idx, active }) {
+function StatItem({ value, labelKey, label, idx, active }) {
   const { t } = useLanguage();
-  const { number, suffix, isDecimal } = parseStat(value);
+  const { number, suffix, prefix, isDecimal } = parseStat(value);
   const count = useCountUp(number, isDecimal, 1800, active);
 
   return (
@@ -53,17 +69,17 @@ function StatItem({ value, labelKey, idx, active }) {
       `}
     >
       <h3 className="font-display-lg text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-2">
-        {isDecimal ? count.toFixed(1) : count}
+        {prefix}{isDecimal ? count.toFixed(1) : count}
         <span className="text-[#22D3EE]">{suffix}</span>
       </h3>
       <p className="text-xs md:text-sm font-semibold uppercase tracking-widest text-white/50">
-        {t(labelKey)}
+        {label || t(labelKey)}
       </p>
     </div>
   );
 }
 
-export default function TrustedBy() {
+export default function TrustedBy({ customStats }) {
   const { t } = useLanguage();
   const statsRef = useRef(null);
   const [statsVisible, setStatsVisible] = useState(false);
@@ -93,12 +109,14 @@ export default function TrustedBy() {
     { name: "Zeroboard",   src: "/customers/zeroboard.webp" },
   ];
 
-  const stats = [
+  const defaultStats = [
     { value: "500+",  labelKey: "trusted.stat1.label" },
     { value: "50M+",  labelKey: "trusted.stat2.label" },
     { value: "35%",   labelKey: "trusted.stat3.label" },
     { value: "99.9%", labelKey: "trusted.stat4.label" },
   ];
+
+  const stats = customStats || defaultStats;
 
   return (
     <section className="border-y border-surface-border bg-[#06101F]/80 relative overflow-hidden flex flex-col items-center pt-8">
@@ -117,8 +135,8 @@ export default function TrustedBy() {
         }
       `}</style>
 
-      <div className="w-full text-center mb-6">
-        <p className="font-label-sm text-[10px] md:text-xs uppercase tracking-[0.2em] text-white/60 font-semibold">
+      <div className="w-full text-center mb-8 px-4">
+        <p className="font-display-md text-sm md:text-base lg:text-lg uppercase tracking-[0.2em] md:tracking-[0.3em] font-bold bg-gradient-to-r from-[#10F0CB] via-[#22D3EE] to-[#10F0CB] bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(34,211,238,0.4)]">
           {t('trusted.title')}
         </p>
       </div>
@@ -152,12 +170,13 @@ export default function TrustedBy() {
       <div ref={statsRef} className="w-full border-t border-white/10">
         <div className="max-w-[1440px] mx-auto w-full grid grid-cols-2 lg:grid-cols-4">
           {stats.map((stat, idx) => (
-            <StatItem
-              key={idx}
-              idx={idx}
-              value={stat.value}
-              labelKey={stat.labelKey}
-              active={statsVisible}
+            <StatItem 
+              key={idx} 
+              value={stat.value} 
+              labelKey={stat.labelKey} 
+              label={stat.label}
+              idx={idx} 
+              active={statsVisible} 
             />
           ))}
         </div>

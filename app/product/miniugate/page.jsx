@@ -286,82 +286,7 @@ export default function MiniUgatePage() {
         </div>
       </section>
 
-      {/* ── Workflow Section ───────────────────────────────────────── */}
-      <section className="relative w-full max-w-[1000px] mx-auto px-8 md:px-20 pb-28 z-10">
-        <div className="text-center space-y-4 mb-16">
-          <div className="inline-flex items-center justify-center bg-[#4AA0F0]/10 border border-[#4AA0F0]/20 text-[#4AA0F0] px-4 py-1.5 rounded-full text-sm font-medium mb-2">
-            {lang === 'EN' ? "Simple process" : "Quy trình đơn giản"}
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-white">
-            {lang === 'EN' ? "How MiniUgate works" : "Cách MiniUgate hoạt động"}
-          </h2>
-          <p className="text-lg text-white/60">
-            {lang === 'EN' ? "Just 3 steps to turn your website into an interactive AI channel" : "Chỉ 3 bước để biến website thành kênh AI tương tác"}
-          </p>
-        </div>
 
-        <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-8 md:gap-0 relative w-full">
-          {/* Step 1 */}
-          <div className="flex flex-col items-center text-center z-10 w-full md:flex-1 px-4">
-            <div className="w-24 h-24 bg-white/5 border border-white/10 rounded-3xl flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(74,160,240,0.1)]">
-              <span className="material-symbols-outlined text-5xl text-[#4AA0F0]">language</span>
-            </div>
-            <h3 className="text-xl font-bold text-white mb-2">{lang === 'EN' ? "Your Website" : "Website của bạn"}</h3>
-            <p className="text-white/60 text-sm whitespace-pre-line">{lang === 'EN' ? "Content is scanned\n& trained" : "Nội dung được quét\n& huấn luyện"}</p>
-          </div>
-
-          {/* Arrow 1 */}
-          <div className="hidden md:flex absolute top-12 left-[20%] right-[50%] items-center justify-center z-0 -translate-y-1/2">
-             <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-[#4AA0F0]/50 to-transparent relative mx-12">
-                <span className="material-symbols-outlined absolute right-0 top-1/2 -translate-y-1/2 text-[#4AA0F0] text-sm translate-x-1/2 bg-[#0A0A0A]">arrow_forward</span>
-             </div>
-          </div>
-          {/* Mobile Arrow 1 */}
-          <div className="flex md:hidden justify-center w-full z-0 py-2">
-             <div className="h-10 w-[1px] bg-gradient-to-b from-[#4AA0F0]/10 via-[#4AA0F0]/50 to-[#4AA0F0]/10 relative">
-                <span className="material-symbols-outlined absolute bottom-0 left-1/2 -translate-x-1/2 text-[#4AA0F0] text-sm translate-y-1/2 bg-[#0A0A0A]">arrow_downward</span>
-             </div>
-          </div>
-
-          {/* Step 2 */}
-          <div className="flex flex-col items-center text-center z-10 w-full md:flex-1 px-4">
-            <div className="w-24 h-24 bg-gradient-to-br from-[#4AA0F0] to-[#76C0F8] rounded-3xl flex items-center justify-center mb-6 shadow-[0_0_40px_rgba(74,160,240,0.3)] transform hover:scale-105 transition-transform duration-300">
-              <span className="material-symbols-outlined text-5xl text-[#06101F]">psychology</span>
-            </div>
-            <h3 className="text-xl font-bold text-white mb-2">MiniUgate AI</h3>
-            <p className="text-white/60 text-sm whitespace-pre-line">{lang === 'EN' ? "Processing &\ncontext understanding" : "Xử lý &\nhiểu ngữ cảnh"}</p>
-          </div>
-
-          {/* Arrow 2 */}
-          <div className="hidden md:flex absolute top-12 left-[50%] right-[20%] items-center justify-center z-0 -translate-y-1/2">
-             <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-[#4AA0F0]/50 to-transparent relative mx-12">
-                <span className="material-symbols-outlined absolute right-0 top-1/2 -translate-y-1/2 text-[#4AA0F0] text-sm translate-x-1/2 bg-[#0A0A0A]">arrow_forward</span>
-             </div>
-          </div>
-          {/* Mobile Arrow 2 */}
-          <div className="flex md:hidden justify-center w-full z-0 py-2">
-             <div className="h-10 w-[1px] bg-gradient-to-b from-[#4AA0F0]/10 via-[#4AA0F0]/50 to-[#4AA0F0]/10 relative">
-                <span className="material-symbols-outlined absolute bottom-0 left-1/2 -translate-x-1/2 text-[#4AA0F0] text-sm translate-y-1/2 bg-[#0A0A0A]">arrow_downward</span>
-             </div>
-          </div>
-
-          {/* Step 3 */}
-          <div className="flex flex-col items-center text-center z-10 w-full md:flex-1 px-4">
-            <div className="w-24 h-24 bg-white/5 border border-white/10 rounded-3xl flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(74,160,240,0.1)]">
-              <span className="material-symbols-outlined text-5xl text-[#4AA0F0]">chat_bubble</span>
-            </div>
-            <h3 className="text-xl font-bold text-white mb-2">Live Chat</h3>
-            <p className="text-white/60 text-sm whitespace-pre-line">{lang === 'EN' ? "Instant replies\nto customers" : "Trả lời khách hàng\ntức thì"}</p>
-          </div>
-        </div>
-
-        <div className="flex justify-center mt-12">
-          <div className="inline-flex items-center gap-2 bg-[#4AA0F0]/10 border border-[#4AA0F0]/20 text-[#4AA0F0] px-5 py-2 rounded-full text-sm font-medium">
-             <span className="material-symbols-outlined text-base text-yellow-400" style={{ fontVariationSettings: '"FILL" 1' }}>bolt</span>
-             {lang === 'EN' ? "Done in minutes" : "Hoàn thành trong vài phút"}
-          </div>
-        </div>
-      </section>
 
       {/* ── Challenges Section ───────────────────────────────────────── */}
       <section 
@@ -667,6 +592,83 @@ export default function MiniUgatePage() {
           }}
         >
           {lang === 'EN' ? "* Estimated results, depending on traffic & website content" : "* Kết quả ước tính, phụ thuộc traffic & nội dung website"}
+        </div>
+      </section>
+
+      {/* ── Workflow Section ───────────────────────────────────────── */}
+      <section className="relative w-full max-w-[1000px] mx-auto px-8 md:px-20 pb-28 z-10">
+        <div className="text-center space-y-4 mb-16">
+          <div className="inline-flex items-center justify-center bg-[#4AA0F0]/10 border border-[#4AA0F0]/20 text-[#4AA0F0] px-4 py-1.5 rounded-full text-sm font-medium mb-2">
+            {lang === 'EN' ? "Simple process" : "Quy trình đơn giản"}
+          </div>
+          <h2 className="text-4xl md:text-5xl font-bold text-white">
+            {lang === 'EN' ? "How MiniUgate works" : "Cách MiniUgate hoạt động"}
+          </h2>
+          <p className="text-lg text-white/60">
+            {lang === 'EN' ? "Just 3 steps to turn your website into an interactive AI channel" : "Chỉ 3 bước để biến website thành kênh AI tương tác"}
+          </p>
+        </div>
+
+        <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-8 md:gap-0 relative w-full">
+          {/* Step 1 */}
+          <div className="flex flex-col items-center text-center z-10 w-full md:flex-1 px-4">
+            <div className="w-24 h-24 bg-white/5 border border-white/10 rounded-3xl flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(74,160,240,0.1)]">
+              <span className="material-symbols-outlined text-5xl text-[#4AA0F0]">language</span>
+            </div>
+            <h3 className="text-xl font-bold text-white mb-2">{lang === 'EN' ? "Your Website" : "Website của bạn"}</h3>
+            <p className="text-white/60 text-sm whitespace-pre-line">{lang === 'EN' ? "Content is scanned\n& trained" : "Nội dung được quét\n& huấn luyện"}</p>
+          </div>
+
+          {/* Arrow 1 */}
+          <div className="hidden md:flex absolute top-[48px] left-[calc(16.666%+64px)] right-[calc(50%+64px)] items-center z-0 -translate-y-1/2">
+             <div className="w-full h-[2px] bg-gradient-to-r from-transparent via-[#4AA0F0]/50 to-[#4AA0F0] relative rounded-full">
+                <div className="absolute -right-[1px] top-1/2 -translate-y-1/2 w-0 h-0 border-t-[5px] border-t-transparent border-b-[5px] border-b-transparent border-l-[6px] border-l-[#4AA0F0]"></div>
+             </div>
+          </div>
+          {/* Mobile Arrow 1 */}
+          <div className="flex md:hidden justify-center w-full z-0 py-3">
+             <div className="h-8 w-[2px] bg-gradient-to-b from-transparent via-[#4AA0F0]/50 to-[#4AA0F0] relative rounded-full">
+                <div className="absolute -bottom-[1px] left-1/2 -translate-x-1/2 w-0 h-0 border-l-[5px] border-l-transparent border-r-[5px] border-r-transparent border-t-[6px] border-t-[#4AA0F0]"></div>
+             </div>
+          </div>
+
+          {/* Step 2 */}
+          <div className="flex flex-col items-center text-center z-10 w-full md:flex-1 px-4">
+            <div className="w-24 h-24 bg-gradient-to-br from-[#4AA0F0] to-[#76C0F8] rounded-3xl flex items-center justify-center mb-6 shadow-[0_0_40px_rgba(74,160,240,0.3)] transform hover:scale-105 transition-transform duration-300">
+              <span className="material-symbols-outlined text-5xl text-[#06101F]">psychology</span>
+            </div>
+            <h3 className="text-xl font-bold text-white mb-2">MiniUgate AI</h3>
+            <p className="text-white/60 text-sm whitespace-pre-line">{lang === 'EN' ? "Processing &\ncontext understanding" : "Xử lý &\nhiểu ngữ cảnh"}</p>
+          </div>
+
+          {/* Arrow 2 */}
+          <div className="hidden md:flex absolute top-[48px] left-[calc(50%+64px)] right-[calc(16.666%+64px)] items-center z-0 -translate-y-1/2">
+             <div className="w-full h-[2px] bg-gradient-to-r from-transparent via-[#4AA0F0]/50 to-[#4AA0F0] relative rounded-full">
+                <div className="absolute -right-[1px] top-1/2 -translate-y-1/2 w-0 h-0 border-t-[5px] border-t-transparent border-b-[5px] border-b-transparent border-l-[6px] border-l-[#4AA0F0]"></div>
+             </div>
+          </div>
+          {/* Mobile Arrow 2 */}
+          <div className="flex md:hidden justify-center w-full z-0 py-3">
+             <div className="h-8 w-[2px] bg-gradient-to-b from-transparent via-[#4AA0F0]/50 to-[#4AA0F0] relative rounded-full">
+                <div className="absolute -bottom-[1px] left-1/2 -translate-x-1/2 w-0 h-0 border-l-[5px] border-l-transparent border-r-[5px] border-r-transparent border-t-[6px] border-t-[#4AA0F0]"></div>
+             </div>
+          </div>
+
+          {/* Step 3 */}
+          <div className="flex flex-col items-center text-center z-10 w-full md:flex-1 px-4">
+            <div className="w-24 h-24 bg-white/5 border border-white/10 rounded-3xl flex items-center justify-center mb-6 shadow-[0_0_30px_rgba(74,160,240,0.1)]">
+              <span className="material-symbols-outlined text-5xl text-[#4AA0F0]">chat_bubble</span>
+            </div>
+            <h3 className="text-xl font-bold text-white mb-2">Live Chat</h3>
+            <p className="text-white/60 text-sm whitespace-pre-line">{lang === 'EN' ? "Instant replies\nto customers" : "Trả lời khách hàng\ntức thì"}</p>
+          </div>
+        </div>
+
+        <div className="flex justify-center mt-12">
+          <div className="inline-flex items-center gap-2 bg-[#4AA0F0]/10 border border-[#4AA0F0]/20 text-[#4AA0F0] px-5 py-2 rounded-full text-sm font-medium">
+             <span className="material-symbols-outlined text-base text-yellow-400" style={{ fontVariationSettings: '"FILL" 1' }}>bolt</span>
+             {lang === 'EN' ? "Done in minutes" : "Hoàn thành trong vài phút"}
+          </div>
         </div>
       </section>
 

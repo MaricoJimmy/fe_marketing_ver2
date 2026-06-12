@@ -4,21 +4,7 @@ import { useRouter } from 'next/navigation';
 import { useLanguage } from '@/contexts/LanguageContext';
 import UseCaseModal from './UseCaseModal';
 
-export default function UseCaseGrid() {
-  const { t, lang } = useLanguage();
-  const router = useRouter();
-  const [activeFilter, setActiveFilter] = useState('All');
-  const [selectedCase, setSelectedCase] = useState(null);
-
-  const filters = [
-    { id: 'All', vi: 'Tất cả', en: 'All' },
-    { id: 'Uboard', vi: 'Uboard', en: 'Uboard' },
-    { id: 'Ugate', vi: 'Ugate', en: 'Ugate' },
-    { id: 'Uzero', vi: 'Uzero', en: 'Uzero' },
-    { id: 'MiniUgate', vi: 'MiniUgate', en: 'MiniUgate' }
-  ];
-
-  const cases = [
+export const USE_CASES_DATA = [
     {
       category: { vi: 'Sản xuất', en: 'Manufacturing' },
       icon: 'factory',
@@ -481,7 +467,7 @@ export default function UseCaseGrid() {
       enTitle: 'Automate internal knowledge and customer interaction with AI',
       viDesc: 'Xây dựng trợ lý AI nội bộ, tự động trả lời câu hỏi, tra cứu tri thức và tương tác khách hàng 24/7 đa kênh.',
       enDesc: 'Build an internal AI assistant to automate Q&A, knowledge retrieval, and omnichannel 24/7 customer interaction.',
-      tags: ['MiniUgate', 'Uzero'],
+      tags: ['Ugate', 'MiniUgate'],
       viDetails: {
         ctaText: 'Trao đổi về bài toán tri thức AI',
         sections: [
@@ -551,9 +537,23 @@ export default function UseCaseGrid() {
     }
   ];
 
+export default function UseCaseGrid() {
+  const { t, lang } = useLanguage();
+  const router = useRouter();
+  const [activeFilter, setActiveFilter] = useState('All');
+  const [selectedCase, setSelectedCase] = useState(null);
+
+  const filters = [
+    { id: 'All', vi: 'Tất cả', en: 'All' },
+    { id: 'Uboard', vi: 'Uboard', en: 'Uboard' },
+    { id: 'Ugate', vi: 'Ugate', en: 'Ugate' },
+    { id: 'Uzero', vi: 'Uzero', en: 'Uzero' },
+    { id: 'MiniUgate', vi: 'MiniUgate', en: 'MiniUgate' }
+  ];
+
   const filteredCases = activeFilter === 'All' 
-    ? cases 
-    : cases.filter(c => c.tags.includes(activeFilter));
+    ? USE_CASES_DATA 
+    : USE_CASES_DATA.filter(c => c.tags.includes(activeFilter));
 
   return (
     <section id="usecase-grid" className="py-20 md:py-28 px-6 md:px-12 relative z-10 bg-[#080B10]">

@@ -54,11 +54,13 @@ function NavItem({ item, depth = 0, onClose }) {
 
   const displayLabel = t(item.labelKey);
 
+  const isActive = item.path === pathname || (item.children && item.children.some(child => child.path === pathname));
+
   return (
     <div>
       <div
         className={`flex items-center justify-between cursor-pointer group transition-colors rounded-lg px-3 py-2.5
-          ${depth === 0 ? 'text-white hover:bg-white/5' : 'text-on-surface-variant hover:text-white hover:bg-white/5'}
+          ${depth === 0 ? (isActive ? 'text-[#4AA0F0] bg-white/5' : 'text-white hover:bg-white/5') : (isActive ? 'text-[#4AA0F0] bg-white/5' : 'text-on-surface-variant hover:text-white hover:bg-white/5')}
           ${depth > 0 ? 'ml-4 text-sm' : 'text-base font-medium'}
         `}
         onClick={handleClick}
@@ -98,10 +100,12 @@ function NavItem({ item, depth = 0, onClose }) {
 function DesktopNavItem({ item }) {
   const [open, setOpen] = useState(false);
   const router = useRouter();
+  const pathname = usePathname();
   const { t } = useLanguage();
   const hasChildren = item.children && item.children.length > 0;
 
   const displayLabel = t(item.labelKey);
+  const isActive = item.path === pathname || (item.children && item.children.some(child => child.path === pathname));
 
   return (
     <div 
@@ -110,7 +114,7 @@ function DesktopNavItem({ item }) {
       onMouseLeave={() => hasChildren && setOpen(false)}
     >
       <div 
-        className="flex items-center gap-1 px-3 py-2 text-sm font-medium text-white/80 hover:text-white cursor-pointer transition-colors rounded-lg hover:bg-white/5"
+        className={`flex items-center gap-1 px-3 py-2 text-sm font-medium cursor-pointer transition-colors rounded-lg hover:bg-white/5 ${isActive ? 'text-[#4AA0F0]' : 'text-white/80 hover:text-white'}`}
         onClick={() => {
            if (item.path) {
              router.push(item.path);
@@ -133,7 +137,7 @@ function DesktopNavItem({ item }) {
             {item.children.map((child, i) => (
               <div 
                 key={i}
-                className="px-4 py-2.5 text-sm font-medium text-white/70 hover:text-white hover:bg-white/10 rounded-lg cursor-pointer transition-colors"
+                className={`px-4 py-2.5 text-sm font-medium rounded-lg cursor-pointer transition-colors ${child.path === pathname ? 'text-[#4AA0F0] bg-[#4AA0F0]/10' : 'text-white/70 hover:text-white hover:bg-white/10'}`}
                 onClick={() => {
                   router.push(child.path);
                   setOpen(false);

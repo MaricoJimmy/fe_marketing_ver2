@@ -78,7 +78,17 @@ const PRODUCT_DATA = {
           icon: "energy_savings_leaf",
           reverse: false
         }
-      ]
+      ],
+      comparison: {
+        title: "Sự khác biệt mang tên Uboard",
+        subtitle: "Đơn giản hóa dữ liệu vận hành. Tối ưu hóa hiệu suất.",
+        items: [
+          { old: "Hệ thống rời rạc, khó đồng bộ", new: "Nền tảng quản trị hợp nhất" },
+          { old: "Cảnh báo bị động, phản hồi chậm", new: "Phân tích dự đoán & cảnh báo sớm" },
+          { old: "Lập báo cáo thủ công, mất thời gian", new: "Báo cáo tự động & cập nhật thời gian thực" },
+          { old: "Dữ liệu phân mảnh (Silo data)", new: "Trung tâm dữ liệu đồng nhất (Unified Data Hub)" }
+        ]
+      }
     },
     ugate: {
       title: '<span class="bg-gradient-to-r from-[#22D3EE] to-[#10F0CB] bg-clip-text text-transparent">Lớp AI trung tâm</span> kết nối và phân tích dữ liệu vận hành doanh nghiệp',
@@ -251,7 +261,17 @@ const PRODUCT_DATA = {
           icon: "energy_savings_leaf",
           reverse: false
         }
-      ]
+      ],
+      comparison: {
+        title: "The Uboard Difference",
+        subtitle: "Simplify operational data. Optimize performance.",
+        items: [
+          { old: "Multiple systems", new: "Single platform" },
+          { old: "Reactive alerts", new: "Predictive insights" },
+          { old: "Manual reporting", new: "Automated analytics" },
+          { old: "Data silos", new: "Unified data hub" }
+        ]
+      }
     },
     ugate: {
       title: '<span class="bg-gradient-to-r from-[#22D3EE] to-[#10F0CB] bg-clip-text text-transparent">Central AI Layer</span> for Connecting & Analyzing Enterprise Operational Data',
@@ -364,6 +384,7 @@ const UseCaseBlock = ({ useCase }) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
   const { lang } = useLanguage();
+  const router = useRouter();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -418,7 +439,20 @@ const UseCaseBlock = ({ useCase }) => {
         </p>
         
         {/* Learn More Button */}
-        <button className="flex items-center gap-2 text-electric-cyan font-bold text-lg hover:text-[#10F0CB] transition-colors group pt-2">
+        <button 
+          onClick={() => {
+            if (useCase.title.includes('OEE')) {
+               router.push('/blog/oee-use-case');
+            } else if (useCase.title.includes('EMS')) {
+               router.push('/blog/ems-use-case');
+            } else if (useCase.title.includes('điện mặt trời')) {
+               router.push('/blog/solar-use-case');
+            } else if (useCase.title.includes('thang máy')) {
+               router.push('/blog/elevator-use-case');
+            }
+          }}
+          className="flex items-center gap-2 text-electric-cyan font-bold text-lg hover:text-[#10F0CB] transition-colors group pt-2"
+        >
           {lang === 'EN' ? 'Learn more' : 'Tìm hiểu thêm'}
           <span className="material-symbols-outlined transition-transform group-hover:translate-x-1">arrow_forward</span>
         </button>
@@ -614,7 +648,12 @@ export default function ProductPage() {
           )}
           
           <div className="w-[100vw] relative left-1/2 -translate-x-1/2 -mt-12 mb-12">
-            <TrustedBy />
+            <TrustedBy customStats={id?.toLowerCase() === 'ugate' ? [
+              { value: "500+", labelKey: "trusted.stat1.label" },
+              { value: "60-80%", label: lang === 'EN' ? "Less Manual Reporting" : "Giảm báo cáo thủ công" },
+              { value: "3x", label: lang === 'EN' ? "Faster Operational Response" : "Phản hồi vận hành nhanh hơn" },
+              { value: "6 weeks", label: lang === 'EN' ? "Quick Deploy + Full Integration" : "Triển khai nhanh + Tích hợp toàn diện" }
+            ] : null} />
           </div>
 
         {/* Features Section */}
@@ -630,6 +669,49 @@ export default function ProductPage() {
             {product.useCases.map((useCase, idx) => (
               <UseCaseBlock key={idx} useCase={useCase} />
             ))}
+          </div>
+        )}
+
+        {/* Comparison Section */}
+        {product.comparison && (
+          <div className="max-w-[1000px] mx-auto text-center mt-12 mb-32 px-4">
+            <h2 className="text-3xl md:text-5xl font-display-md font-bold text-white mb-4">
+              {product.comparison.title}
+            </h2>
+            <p className="text-on-surface-variant font-body-md text-lg md:text-xl mb-12">
+              {product.comparison.subtitle}
+            </p>
+            
+            <div className="bg-[#161618] border border-white/10 rounded-3xl overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.5)] relative">
+              <div className="absolute inset-0 bg-gradient-to-b from-electric-cyan/5 to-transparent pointer-events-none"></div>
+              <table className="w-full text-left border-collapse relative z-10">
+                <thead>
+                  <tr className="border-b border-white/10">
+                    <th className="py-8 px-6 md:px-12 w-1/2 text-white/50 font-display-md text-xl font-medium">
+                      {lang === 'EN' ? 'Traditional Monitoring' : 'Giám sát truyền thống'}
+                    </th>
+                    <th className="py-8 px-6 md:px-12 w-1/2 text-electric-cyan font-display-md text-2xl font-bold bg-[#1C2128]">
+                      Uboard
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {product.comparison.items.map((item, idx) => (
+                    <tr key={idx} className="border-b border-white/5 last:border-0 hover:bg-white/5 transition-colors group">
+                      <td className="py-6 px-6 md:px-12 text-white/70 font-body-md text-base md:text-lg">
+                        {item.old}
+                      </td>
+                      <td className="py-6 px-6 md:px-12 text-white font-body-md text-base md:text-lg font-medium bg-[#1C2128]/50 group-hover:bg-electric-cyan/10 transition-colors">
+                        <span className="flex items-center gap-3">
+                          <span className="material-symbols-outlined text-electric-cyan text-base">check_circle</span>
+                          {item.new}
+                        </span>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           </div>
         )}
 

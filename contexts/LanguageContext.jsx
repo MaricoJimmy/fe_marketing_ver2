@@ -95,7 +95,7 @@ const translations = {
     'workflow.step4.desc': 'Monitor results, fine-tune analytical models, and expand solutions to new areas, factories, or processes.',
     'workflow.cta.title': 'Want to know which Udata solution fits your business?',
     'workflow.cta.desc': 'The Udata team will work with you to identify use cases, required data connections, and a suitable deployment roadmap.',
-    'workflow.cta.btn': 'Talk to an expert',
+    'workflow.cta.btn': 'Book a demo',
 
     // CaseStudies
     'case.badge': 'SUCCESS STORIES',
@@ -407,7 +407,7 @@ const translations = {
     'workflow.step4.desc': 'Theo dõi kết quả, tinh chỉnh mô hình phân tích và mở rộng giải pháp sang các khu vực, nhà máy hoặc quy trình mới.',
     'workflow.cta.title': 'Bạn muốn biết Udata phù hợp với bài toán nào của doanh nghiệp?',
     'workflow.cta.desc': 'Đội ngũ Udata sẽ cùng bạn xác định use case, dữ liệu cần kết nối và lộ trình triển khai phù hợp.',
-    'workflow.cta.btn': 'Trao đổi với chuyên gia',
+    'workflow.cta.btn': 'Đặt lịch demo',
 
     // CaseStudies
     'case.badge': 'CÂU CHUYỆN THÀNH CÔNG',

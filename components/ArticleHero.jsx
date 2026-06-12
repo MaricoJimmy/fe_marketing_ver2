@@ -4,9 +4,9 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { ARTICLE_DETAIL_DATA } from '@/data/articleDetailData';
 import { FEATURED_ARTICLES } from '@/data/blogData';
 
-export default function ArticleHero() {
+export default function ArticleHero({ customArticle }) {
   const { lang } = useLanguage();
-  const article = FEATURED_ARTICLES[0];
+  const article = customArticle || FEATURED_ARTICLES[0];
   const t = ARTICLE_DETAIL_DATA;
 
   return (

@@ -14,9 +14,10 @@ const TOC_ITEMS = [
   { id: 'section-8', title: { VI: '8. Kết luận', EN: '8. Conclusion' } }
 ];
 
-export default function ArticleSidebar() {
+export default function ArticleSidebar({ customTOC, customCTA }) {
   const { lang } = useLanguage();
   const t = ARTICLE_DETAIL_DATA.sidebar;
+  const tocItems = customTOC || TOC_ITEMS;
 
   const scrollToSection = (e, id) => {
     e.preventDefault();
@@ -38,7 +39,7 @@ export default function ArticleSidebar() {
           {t.tocTitle[lang]}
         </h3>
         <nav className="flex flex-col space-y-3">
-          {TOC_ITEMS.map((item) => (
+          {tocItems.map((item) => (
             <a 
               key={item.id} 
               href={`#${item.id}`}
@@ -73,9 +74,9 @@ export default function ArticleSidebar() {
         
         <button 
           onClick={() => window.location.href = '/demo'}
-          className="w-full bg-[#22D3EE] text-[#06101F] font-bold py-3 rounded-xl flex justify-center items-center gap-2 hover:scale-105 transition-transform shadow-[0_0_15px_rgba(34,211,238,0.2)] relative z-10"
+          className="w-full bg-[#22D3EE] text-[#06101F] font-bold py-3 rounded-xl flex justify-center items-center gap-2 hover:scale-105 transition-transform shadow-[0_0_15px_rgba(34,211,238,0.2)] relative z-10 text-[15px]"
         >
-          {t.expertBtn[lang]}
+          {customCTA || t.expertBtn[lang]}
           <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
         </button>
       </div>
