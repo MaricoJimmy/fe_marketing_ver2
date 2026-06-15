@@ -3,6 +3,8 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import AnimatedBackground from '@/components/AnimatedBackground';
 import { useLanguage } from '@/contexts/LanguageContext';
+import TrustedBy from '@/components/TrustedBy';
+import SecurityCompliance from '@/components/SecurityCompliance';
 
 export default function AboutUs() {
   const { t, lang } = useLanguage();
@@ -78,6 +80,11 @@ export default function AboutUs() {
             }}
             dangerouslySetInnerHTML={{ __html: t('about.hero.subtitle') }}
           />
+        </section>
+
+        {/* Trusted By Section (Full Width) */}
+        <section className="relative w-[100vw] left-[50%] right-[50%] -ml-[50vw] -mr-[50vw] mt-16 mb-24 overflow-hidden">
+          <TrustedBy />
         </section>
 
         {/* Content Block */}
@@ -271,6 +278,11 @@ export default function AboutUs() {
               <img src="/image/about_us/award-trophy.webp" alt="Lễ trao giải Sao Khuê" className="w-full h-full object-cover object-center min-h-[300px] md:min-h-0" />
             </div>
           </div>
+        </section>
+
+        {/* Security & Compliance Section */}
+        <section className="relative transition-all duration-[900ms] ease-out mt-8 mb-8">
+          <SecurityCompliance />
         </section>
 
         {/* Call To Action Section */}

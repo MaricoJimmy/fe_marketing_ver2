@@ -598,7 +598,7 @@ export default function ProductPage() {
                   className="border border-white/20 text-white px-8 py-3.5 rounded-xl font-bold text-base hover:bg-white/5 transition-all backdrop-blur-sm flex items-center gap-2"
                 >
                   <span className="material-symbols-outlined text-base" style={{ fontVariationSettings: '"FILL" 1' }}>play_arrow</span>
-                  {lang === 'EN' ? 'Explore Solutions' : 'Khám phá giải pháp'}
+                  {lang === 'EN' ? 'Watch Demo' : 'Xem Demo'}
                 </HoverFillButton>
               </div>
             </div>
