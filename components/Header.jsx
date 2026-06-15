@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
+import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
 import HoverFillButton from './ui/HoverFillButton';
 
@@ -113,20 +114,27 @@ function DesktopNavItem({ item }) {
       onMouseEnter={() => hasChildren && setOpen(true)}
       onMouseLeave={() => hasChildren && setOpen(false)}
     >
-      <div 
-        className={`flex items-center gap-1 px-3 py-2 text-sm font-medium cursor-pointer transition-colors rounded-lg hover:bg-white/5 ${isActive ? 'text-[#4AA0F0]' : 'text-white/80 hover:text-white'}`}
-        onClick={() => {
-           if (item.path) {
-             router.push(item.path);
-             window.scrollTo(0, 0);
-           }
-        }}
-      >
-        {displayLabel}
-        {hasChildren && (
-          <span className="material-symbols-outlined text-[16px]" style={{ transform: open ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }}>keyboard_arrow_down</span>
-        )}
-      </div>
+      {item.path ? (
+        <Link 
+          href={item.path}
+          className={`flex items-center gap-1 px-3 py-2 text-sm font-medium transition-colors rounded-lg hover:bg-white/5 ${isActive ? 'text-[#4AA0F0]' : 'text-white/80 hover:text-white'}`}
+          onClick={() => window.scrollTo(0, 0)}
+        >
+          {displayLabel}
+          {hasChildren && (
+            <span className="material-symbols-outlined text-[16px]" style={{ transform: open ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }}>keyboard_arrow_down</span>
+          )}
+        </Link>
+      ) : (
+        <div 
+          className={`flex items-center gap-1 px-3 py-2 text-sm font-medium cursor-pointer transition-colors rounded-lg hover:bg-white/5 ${isActive ? 'text-[#4AA0F0]' : 'text-white/80 hover:text-white'}`}
+        >
+          {displayLabel}
+          {hasChildren && (
+            <span className="material-symbols-outlined text-[16px]" style={{ transform: open ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }}>keyboard_arrow_down</span>
+          )}
+        </div>
+      )}
       
       {/* Dropdown Menu */}
       {hasChildren && (
@@ -135,17 +143,17 @@ function DesktopNavItem({ item }) {
         >
           <div className="bg-[#06101F]/95 backdrop-blur-xl border border-white/10 rounded-xl shadow-2xl p-2">
             {item.children.map((child, i) => (
-              <div 
+              <Link 
                 key={i}
-                className={`px-4 py-2.5 text-sm font-medium rounded-lg cursor-pointer transition-colors ${child.path === pathname ? 'text-[#4AA0F0] bg-[#4AA0F0]/10' : 'text-white/70 hover:text-white hover:bg-white/10'}`}
+                href={child.path}
+                className={`block px-4 py-2.5 text-sm font-medium rounded-lg transition-colors ${child.path === pathname ? 'text-[#4AA0F0] bg-[#4AA0F0]/10' : 'text-white/70 hover:text-white hover:bg-white/10'}`}
                 onClick={() => {
-                  router.push(child.path);
                   setOpen(false);
                   window.scrollTo(0, 0);
                 }}
               >
                 {t(child.labelKey)}
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -194,16 +202,17 @@ export default function Header() {
         <div className="flex justify-between items-center px-4 py-1.5 md:px-6 md:py-2 lg:px-8 lg:py-2">
           {/* Logo */}
           <div className="flex items-center gap-md">
-            <div 
-              onClick={() => router.push('/')}
-              className="px-2 py-1 hover:scale-105 transition-transform cursor-pointer"
+            <Link 
+              href="/"
+              className="px-2 py-1 hover:scale-105 transition-transform cursor-pointer block"
+              onClick={() => window.scrollTo(0, 0)}
             >
               <img
                 alt="Udata Logo"
                 className="h-6 md:h-7 lg:h-8 w-auto"
                 src="/product/logo_2_backup.png"
               />
-            </div>
+            </Link>
           </div>
 
           {/* Desktop Inline Navigation */}
@@ -305,4 +314,5 @@ export default function Header() {
     </>
   );
 }
+
 
