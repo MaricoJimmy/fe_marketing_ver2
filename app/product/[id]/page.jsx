@@ -1,5 +1,6 @@
 "use client";
 import React, { useEffect, useState, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import { useRouter, useParams } from 'next/navigation';
 import { useLanguage } from '@/contexts/LanguageContext';
 import HoverFillButton from '@/components/ui/HoverFillButton';
@@ -445,10 +446,18 @@ const UseCaseBlock = ({ useCase }) => {
                router.push('/blog/oee-use-case');
             } else if (useCase.title.includes('EMS')) {
                router.push('/blog/ems-use-case');
-            } else if (useCase.title.includes('điện mặt trời')) {
+            } else if (useCase.title.includes('điện mặt trời') || useCase.title.includes('Solar')) {
                router.push('/blog/solar-use-case');
-            } else if (useCase.title.includes('thang máy')) {
+            } else if (useCase.title.includes('thang máy') || useCase.title.includes('Elevator')) {
                router.push('/blog/elevator-use-case');
+            } else if (useCase.title.includes('tri thức') || useCase.title.includes('Knowledge')) {
+               router.push('/blog/ugate-ai-knowledge-use-case');
+            } else if (useCase.title.includes('xác minh') || useCase.title.includes('Verification')) {
+               router.push('/blog/ugate-ai-verification-use-case');
+            } else if (useCase.title.includes('GHG') || useCase.title.includes('phát thải')) {
+               router.push('/blog/uzero-ghg-use-case');
+            } else {
+               router.push('/use-case#usecase-grid');
             }
           }}
           className="flex items-center gap-2 text-electric-cyan font-bold text-lg hover:text-[#10F0CB] transition-colors group pt-2"
@@ -526,6 +535,16 @@ export default function ProductPage() {
               playsInline
               className="absolute w-[85%] h-[95%] rounded-3xl object-cover opacity-70 shadow-2xl blur-sm"
             />
+            {/* Watermark hider overlay for Uzero */}
+            {id?.toLowerCase() === 'uzero' && (
+              <div 
+                className="absolute w-[85%] h-[95%] rounded-3xl pointer-events-none z-[5]" 
+                style={{
+                  background: 'radial-gradient(ellipse at center, transparent 40%, rgba(6, 16, 31, 1) 100%)',
+                  boxShadow: 'inset 0 0 120px 60px rgba(6, 16, 31, 1)'
+                }}
+              />
+            )}
             <div className="absolute inset-0 bg-background/30 z-10" />
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-primary/10 blur-[120px] rounded-full opacity-50 z-20"></div>
           </div>
@@ -569,7 +588,7 @@ export default function ProductPage() {
                   }}
                   className="bg-gradient-to-r from-[#22D3EE] to-[#10F0CB] text-[#06101F] px-8 py-3.5 rounded-xl font-bold text-base shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all flex items-center gap-2"
                 >
-                  {lang === 'EN' ? 'Get A Demo' : 'Nhận bản Demo'}
+                  {lang === 'EN' ? `Get Demo ${id?.toLowerCase() === 'miniugate' ? 'MiniUgate' : id?.charAt(0).toUpperCase() + id?.slice(1).toLowerCase()}` : `Nhận Demo ${id?.toLowerCase() === 'miniugate' ? 'MiniUgate' : id?.charAt(0).toUpperCase() + id?.slice(1).toLowerCase()}`}
                   <span className="material-symbols-outlined text-sm font-bold">arrow_outward</span>
                 </HoverFillButton>
 
@@ -769,7 +788,7 @@ export default function ProductPage() {
                   }}
                   className="bg-gradient-to-r from-[#22D3EE] to-[#10F0CB] text-[#06101F] px-10 py-4 rounded-xl font-bold text-lg shadow-[0_0_30px_rgba(34,211,238,0.3)] transition-all flex items-center gap-2 hover:scale-105"
                 >
-                  {lang === 'EN' ? "Get A Demo" : "Nhận Demo"}
+                  {lang === 'EN' ? `Get Demo ${id?.toLowerCase() === 'miniugate' ? 'MiniUgate' : id?.charAt(0).toUpperCase() + id?.slice(1).toLowerCase()}` : `Nhận Demo ${id?.toLowerCase() === 'miniugate' ? 'MiniUgate' : id?.charAt(0).toUpperCase() + id?.slice(1).toLowerCase()}`}
                   <span className="material-symbols-outlined text-xl font-bold">arrow_outward</span>
                 </HoverFillButton>
                 
@@ -789,9 +808,9 @@ export default function ProductPage() {
     </div>
 
     {/* ── Video Modal ─────────────────────────────────────── */}
-    {showVideo && (
+    {showVideo && typeof document !== 'undefined' && createPortal(
       <div
-        className="fixed inset-0 z-[200] flex items-center justify-center p-4 md:p-8"
+        className="fixed inset-0 z-[9999] flex items-center justify-center p-4 md:p-8"
         style={{ background: 'rgba(0,0,0,0.85)', backdropFilter: 'blur(12px)' }}
         onClick={() => setShowVideo(false)}
       >
@@ -807,13 +826,16 @@ export default function ProductPage() {
             <span className="material-symbols-outlined text-xl">close</span>
           </button>
           <iframe
-            src="https://drive.google.com/file/d/1JizagW76cMPBPTwKy4VvylVqiBlWxkiR/preview"
+            src={id?.toLowerCase() === 'ugate' 
+              ? "https://drive.google.com/file/d/1vaVtwZWJjp573ZTL2lbMKiyKamRNkWmm/preview" 
+              : "https://drive.google.com/file/d/1JizagW76cMPBPTwKy4VvylVqiBlWxkiR/preview"}
             className="w-full h-full"
             allow="autoplay"
             allowFullScreen
           />
         </div>
-      </div>
+      </div>,
+      document.body
     )}
     </>
   );

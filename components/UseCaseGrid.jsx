@@ -537,6 +537,16 @@ export const USE_CASES_DATA = [
     }
   ];
 
+const caseImages = [
+  "/images/cases/case1.png",
+  "/images/cases/case2.png",
+  "/images/cases/case3.png",
+  "/images/cases/case4.png",
+  "/images/cases/case5.png",
+  "/images/cases/case6.png",
+  "/images/cases/case7.png"
+];
+
 export default function UseCaseGrid() {
   const { t, lang } = useLanguage();
   const router = useRouter();
@@ -570,66 +580,121 @@ export default function UseCaseGrid() {
 
         {/* Filter Bar */}
         <div className="flex flex-wrap justify-center gap-3 mb-16">
-          {filters.map(filter => (
-            <button
-              key={filter.id}
-              onClick={() => setActiveFilter(filter.id)}
-              className={`px-6 py-2.5 rounded-full font-medium text-sm transition-all duration-300 ${
-                activeFilter === filter.id
-                  ? 'bg-[#22D3EE] text-[#06101F] shadow-[0_0_15px_rgba(34,211,238,0.3)]'
-                  : 'bg-[#0C1017] border border-white/10 text-white hover:border-[#22D3EE]/50 hover:text-[#22D3EE]'
-              }`}
-            >
-              {lang === 'EN' ? filter.en : filter.vi}
-            </button>
-          ))}
+          {filters.map(filter => {
+            let activeColorClass = "";
+            let hoverColorClass = "";
+            switch (filter.id) {
+              case 'Ugate':
+              case 'MiniUgate':
+                activeColorClass = 'bg-[#3B82F6] text-white shadow-[0_0_15px_rgba(59,130,246,0.3)]';
+                hoverColorClass = 'hover:border-[#3B82F6]/50 hover:text-[#3B82F6]';
+                break;
+              case 'Uzero':
+                activeColorClass = 'bg-[#10B981] text-[#06101F] shadow-[0_0_15px_rgba(16,185,129,0.3)]';
+                hoverColorClass = 'hover:border-[#10B981]/50 hover:text-[#10B981]';
+                break;
+              case 'Uboard':
+              case 'All':
+              default:
+                activeColorClass = 'bg-[#22D3EE] text-[#06101F] shadow-[0_0_15px_rgba(34,211,238,0.3)]';
+                hoverColorClass = 'hover:border-[#22D3EE]/50 hover:text-[#22D3EE]';
+                break;
+            }
+            return (
+              <button
+                key={filter.id}
+                onClick={() => setActiveFilter(filter.id)}
+                className={`px-6 py-2.5 rounded-full font-medium text-sm transition-all duration-300 ${
+                  activeFilter === filter.id
+                    ? activeColorClass
+                    : `bg-[#0C1017] border border-white/10 text-white ${hoverColorClass}`
+                }`}
+              >
+                {lang === 'EN' ? filter.en : filter.vi}
+              </button>
+            );
+          })}
         </div>
 
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredCases.map((c, i) => (
-            <div 
-              key={i} 
-              className="bg-[#0C1017] border border-white/5 rounded-2xl p-8 flex flex-col h-full hover:border-[#22D3EE]/30 hover:shadow-[0_0_30px_rgba(34,211,238,0.05)] transition-all duration-300 group"
-            >
-              <div className="flex items-center gap-2 mb-6">
-                <span className="material-symbols-outlined text-[#22D3EE] text-xl">{c.icon}</span>
-                <span className="text-xs font-bold text-white/50 uppercase tracking-widest">
-                  {lang === 'EN' ? c.category.en : c.category.vi}
-                </span>
-              </div>
-              
-              <h3 className="text-xl font-bold text-white mb-4 group-hover:text-[#22D3EE] transition-colors">
-                {lang === 'EN' ? c.enTitle : c.viTitle}
-              </h3>
-              
-              <p className="text-[#9CA3AF] text-sm leading-relaxed mb-8 flex-1">
-                {lang === 'EN' ? c.enDesc : c.viDesc}
-              </p>
+          {filteredCases.map((c, i) => {
+            const imageSrc = caseImages[i % caseImages.length];
+            return (
+              <div 
+                key={i} 
+                onClick={() => setSelectedCase(c)}
+                className="group relative min-h-[400px] md:min-h-[450px] rounded-2xl overflow-hidden glass-card transition-all duration-700 hover:-translate-y-2 cursor-pointer border border-white/5 hover:border-[#22D3EE]/50 shadow-lg"
+              >
+                <img alt={lang === 'EN' ? c.enTitle : c.viTitle} className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-20 group-hover:scale-110 transition-all duration-700" src={imageSrc} />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#06101F]/95 via-[#06101F]/70 to-transparent group-hover:from-[#06101F] group-hover:via-[#06101F]/90 transition-all duration-500"></div>
 
-              <div className="mt-auto space-y-6">
-                <div className="flex flex-wrap gap-2">
-                  {c.tags.map(tag => (
-                    <span 
-                      key={tag}
-                      className="px-3 py-1 rounded-md border border-[#22D3EE]/40 bg-[#22D3EE]/10 text-xs font-bold text-[#22D3EE] tracking-wider shadow-[0_0_15px_rgba(34,211,238,0.15)] relative overflow-hidden"
-                    >
-                      <div className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-[#22D3EE]/30 to-transparent group-hover:animate-[shimmer_2s_infinite]"></div>
-                      <span className="relative z-10">{tag}</span>
+                <div className="absolute inset-0 p-8 flex flex-col justify-end z-20">
+                  <div className="flex items-center gap-2 mb-4">
+                    <span className="material-symbols-outlined text-[#22D3EE] text-xl">{c.icon}</span>
+                    <span className="text-[10px] font-bold text-white/50 uppercase tracking-widest">
+                      {lang === 'EN' ? c.category.en : c.category.vi}
                     </span>
-                  ))}
+                  </div>
+                  
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2 group-hover:text-[#22D3EE] transition-colors duration-300 leading-tight">
+                    {lang === 'EN' ? c.enTitle : c.viTitle}
+                  </h3>
+                  
+                  <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]">
+                    <div className="overflow-hidden flex flex-col">
+                      <p className="text-[#9CA3AF] text-sm mt-3 mb-6 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 flex-1">
+                        {lang === 'EN' ? c.enDesc : c.viDesc}
+                      </p>
+
+                      <div className="flex flex-col gap-5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200">
+                        <div className="flex flex-wrap gap-2">
+                          {c.tags.map(tag => {
+                            let colorClass = "";
+                            let shimmerClass = "";
+                            switch (tag.toLowerCase()) {
+                              case 'uboard': 
+                                colorClass = 'border-[#22D3EE]/40 bg-[#22D3EE]/10 text-[#22D3EE] shadow-[0_0_15px_rgba(34,211,238,0.15)]';
+                                shimmerClass = 'via-[#22D3EE]/30';
+                                break;
+                              case 'ugate': 
+                              case 'miniugate':
+                                colorClass = 'border-[#3B82F6]/40 bg-[#3B82F6]/10 text-[#3B82F6] shadow-[0_0_15px_rgba(59,130,246,0.15)]';
+                                shimmerClass = 'via-[#3B82F6]/30';
+                                break;
+                              case 'uzero': 
+                                colorClass = 'border-[#10B981]/40 bg-[#10B981]/10 text-[#10B981] shadow-[0_0_15px_rgba(16,185,129,0.15)]';
+                                shimmerClass = 'via-[#10B981]/30';
+                                break;
+                              default:
+                                colorClass = 'border-[#22D3EE]/40 bg-[#22D3EE]/10 text-[#22D3EE] shadow-[0_0_15px_rgba(34,211,238,0.15)]';
+                                shimmerClass = 'via-[#22D3EE]/30';
+                            }
+                            return (
+                              <span 
+                                key={tag}
+                                className={`px-3 py-1 rounded-md border text-[10px] md:text-xs font-bold tracking-wider relative overflow-hidden ${colorClass}`}
+                              >
+                                <div className={`absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent to-transparent group-hover:animate-[shimmer_2s_infinite] ${shimmerClass}`}></div>
+                                <span className="relative z-10">{tag}</span>
+                              </span>
+                            );
+                          })}
+                        </div>
+                        
+                        <button 
+                          className="flex items-center gap-2 text-[#22D3EE] font-bold text-sm hover:gap-3 transition-all w-fit group/btn"
+                        >
+                          {lang === 'EN' ? 'View Details' : 'Xem chi tiết'}
+                          <span className="material-symbols-outlined text-base group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                
-                <button 
-                  onClick={() => setSelectedCase(c)}
-                  className="flex items-center gap-2 text-[#22D3EE] font-bold text-sm hover:gap-3 transition-all"
-                >
-                  {lang === 'EN' ? 'View Details' : 'Xem chi tiết'}
-                  <span className="material-symbols-outlined text-base">arrow_forward</span>
-                </button>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
       </div>

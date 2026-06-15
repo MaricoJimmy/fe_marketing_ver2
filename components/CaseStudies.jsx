@@ -11,9 +11,9 @@ const images = [
   "/images/cases/case2.png",
   "/images/cases/case3.png",
   "/images/cases/case4.png",
-  "https://images.unsplash.com/photo-1586772002130-b0f3daa6288b?auto=format&fit=crop&q=80&w=800",
-  "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
-  "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800"
+  "/images/cases/case5.png",
+  "/images/cases/case6.png",
+  "/images/cases/case7.png"
 ];
 
 const CASE_STUDIES = USE_CASES_DATA.slice(0, 7).map((caseData, index) => ({
@@ -34,7 +34,7 @@ export default function CaseStudies() {
         if (isLastInPreview) {
           setModalOpen(true);
         } else {
-          setSelectedCase(study);
+          window.location.href = '/use-case#usecase-grid';
         }
       }}
       className="group relative aspect-[3/4] md:aspect-[4/5] lg:aspect-[3/4] rounded-2xl overflow-hidden glass-card transition-all duration-700 hover:-translate-y-2 cursor-pointer border border-surface-border hover:border-electric-cyan/50"
@@ -126,7 +126,7 @@ export default function CaseStudies() {
                   key={idx} 
                   onClick={() => {
                     setModalOpen(false);
-                    router.push('/use-case#usecase-grid');
+                    window.location.href = '/use-case#usecase-grid';
                   }}
                   className="group relative aspect-[16/10] rounded-xl overflow-hidden glass-card cursor-pointer border border-surface-border hover:border-electric-cyan/50 transition-all duration-300"
                 >

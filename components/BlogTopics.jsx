@@ -7,46 +7,64 @@ const TOPICS = [
     id: 'aiot',
     title: { VI: 'AIoT và dữ liệu vận hành', EN: 'AIoT & Operational Data' },
     desc: { VI: 'Khai thác dữ liệu từ thiết bị và hệ thống để tối ưu hiệu suất và ra quyết định.', EN: 'Leverage data from equipment and systems to optimize performance and make decisions.' },
-    icon: 'bar_chart'
+    icon: 'bar_chart',
+    catVI: 'AIoT và dữ liệu vận hành',
+    catEN: 'AIoT & Operational Data'
   },
   {
     id: 'smart-factory',
     title: { VI: 'Nhà máy thông minh', EN: 'Smart Factory' },
     desc: { VI: 'Giải pháp và mô hình giúp nhà máy tự động hóa, linh hoạt và hiệu quả.', EN: 'Solutions and models to help factories become automated, flexible, and efficient.' },
-    icon: 'precision_manufacturing'
+    icon: 'precision_manufacturing',
+    catVI: 'Nhà máy thông minh',
+    catEN: 'Smart Factory'
   },
   {
     id: 'esg',
     title: { VI: 'ESG, carbon và phát triển bền vững', EN: 'ESG, Carbon & Sustainability' },
     desc: { VI: 'Dữ liệu, công cụ và chiến lược để đo lường, giảm phát thải và phát triển bền vững.', EN: 'Data, tools, and strategies to measure, reduce emissions, and achieve sustainability.' },
-    icon: 'eco'
+    icon: 'eco',
+    catVI: 'ESG và carbon',
+    catEN: 'ESG & Carbon'
   },
   {
     id: 'logistics',
     title: { VI: 'Logistics và chuỗi vận hành', EN: 'Logistics & Supply Chain' },
     desc: { VI: 'Tối ưu chuỗi cung ứng, vận chuyển và kho bãi bằng dữ liệu và AIoT.', EN: 'Optimize supply chain, transportation, and warehousing using data and AIoT.' },
-    icon: 'local_shipping'
+    icon: 'local_shipping',
+    catVI: 'Logistics và chuỗi vận hành',
+    catEN: 'Logistics & Supply Chain'
   },
   {
     id: 'ai-knowledge',
     title: { VI: 'AI trong tri thức nội bộ và chăm sóc khách hàng', EN: 'AI in Internal Knowledge & Customer Care' },
     desc: { VI: 'Ứng dụng AI để quản trị tri thức, tự động hóa và nâng cao trải nghiệm khách hàng.', EN: 'Apply AI for knowledge management, automation, and enhancing customer experience.' },
-    icon: 'chat'
+    icon: 'chat',
+    catVI: 'Tri thức AI',
+    catEN: 'AI Knowledge'
   },
   {
     id: 'strategy',
     title: { VI: 'Góc nhìn chiến lược', EN: 'Strategic Insights' },
     desc: { VI: 'Xu hướng, phân tích và kinh nghiệm giúp doanh nghiệp dẫn đầu trong kỷ nguyên mới.', EN: 'Trends, analysis, and experience to help businesses lead in the new era.' },
-    icon: 'my_location'
+    icon: 'my_location',
+    catVI: 'Góc nhìn chiến lược',
+    catEN: 'Strategic Insights'
   }
 ];
 
 export default function BlogTopics() {
   const { lang } = useLanguage();
 
-  const handleScrollToGrid = (e) => {
+  const handleScrollToGrid = (e, topic) => {
     e.preventDefault();
     const gridSection = document.getElementById('blog-grid');
+    
+    const event = new CustomEvent('blogCategorySelect', { 
+      detail: { VI: topic.catVI, EN: topic.catEN } 
+    });
+    window.dispatchEvent(event);
+
     if (gridSection) {
       gridSection.scrollIntoView({ behavior: 'smooth' });
     }
@@ -78,7 +96,7 @@ export default function BlogTopics() {
           {TOPICS.map((topic) => (
             <div 
               key={topic.id}
-              onClick={handleScrollToGrid}
+              onClick={(e) => handleScrollToGrid(e, topic)}
               className="group cursor-pointer flex flex-row items-start bg-[#0A0E14] border border-white/5 rounded-2xl p-6 hover:border-white/20 transition-all duration-300 relative h-full min-h-[140px]"
             >
               {/* Icon Container (Left) */}

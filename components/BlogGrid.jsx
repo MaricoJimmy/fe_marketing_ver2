@@ -14,6 +14,19 @@ export default function BlogGrid() {
     setActiveCategory(lang === 'VI' ? 'Tất cả' : 'All');
   }, [lang]);
 
+  // Listen for category selection from BlogTopics
+  React.useEffect(() => {
+    const handleCategorySelect = (e) => {
+      const catObj = e.detail;
+      if (catObj && catObj[lang]) {
+        setActiveCategory(catObj[lang]);
+        setDisplayCount(6);
+      }
+    };
+    window.addEventListener('blogCategorySelect', handleCategorySelect);
+    return () => window.removeEventListener('blogCategorySelect', handleCategorySelect);
+  }, [lang]);
+
   // Filter articles based on active category
   const filteredArticles = ALL_ARTICLES.filter(article => {
     if (activeCategory === 'Tất cả' || activeCategory === 'All') return true;

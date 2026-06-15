@@ -81,13 +81,13 @@ export default function SolutionPage() {
               onClick={() => router.push('/dung-thu')}
               className="bg-[#22D3EE] text-[#06101F] px-[clamp(1.5rem,3vw,2rem)] py-[clamp(0.75rem,2vh,0.875rem)] rounded-xl font-bold text-[clamp(0.875rem,2vh,1rem)] transition-all shadow-[0_0_20px_rgba(34,211,238,0.3)] hover:scale-105"
             >
-              {lang === 'EN' ? 'Explore Solutions' : 'Khám phá giải pháp'}
+              {lang === 'EN' ? 'Explore Solutions' : 'Xem tình huống ứng dụng'}
             </HoverFillButton>
             <HoverFillButton 
               onClick={() => router.push('/demo')}
               className="border border-[#22D3EE]/30 bg-[#22D3EE]/5 text-white px-[clamp(1.5rem,3vw,2rem)] py-[clamp(0.75rem,2vh,0.875rem)] rounded-xl font-bold text-[clamp(0.875rem,2vh,1rem)] hover:bg-[#22D3EE]/10 transition-all flex items-center gap-2"
             >
-              {lang === 'EN' ? 'Book a Consultation' : 'Đặt lịch tư vấn'}
+              {lang === 'EN' ? 'Book a Consultation' : 'Đặt lịch Demo'}
             </HoverFillButton>
           </div>
         </div>

@@ -30,8 +30,8 @@ export default function UseCasePage() {
       <div className="relative z-10 w-full">
         <UseCaseHero />
         <UseCaseSteps />
-        <UseCaseGrid />
         <UseCaseMetrics />
+        <UseCaseGrid />
         <UseCaseCTA />
       </div>
     </div>

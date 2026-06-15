@@ -170,15 +170,37 @@ export default function SolutionsByIndustry() {
                   {lang === 'EN' ? 'POWERED BY' : 'ĐƯỢC VẬN HÀNH BỞI'}
                 </div>
                 <div className="flex flex-wrap gap-3 mb-10">
-                  {activeIndustry.poweredBy.map(product => (
-                    <span 
-                      key={product} 
-                      className="px-4 py-1.5 rounded-full bg-[#22D3EE]/10 border border-[#22D3EE]/30 text-xs font-bold text-[#22D3EE] tracking-wider shadow-[0_0_15px_rgba(34,211,238,0.15)] relative overflow-hidden"
-                    >
-                      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-[#22D3EE]/20 to-transparent -translate-x-full animate-[shimmer_2s_infinite]"></div>
-                      <span className="relative z-10">{product}</span>
-                    </span>
-                  ))}
+                  {activeIndustry.poweredBy.map(product => {
+                    let colorClass = "";
+                    let shimmerClass = "";
+                    switch (product.toLowerCase()) {
+                      case 'uboard': 
+                        colorClass = 'border-[#22D3EE]/30 bg-[#22D3EE]/10 text-[#22D3EE] shadow-[0_0_15px_rgba(34,211,238,0.15)]';
+                        shimmerClass = 'via-[#22D3EE]/20';
+                        break;
+                      case 'ugate': 
+                      case 'miniugate':
+                        colorClass = 'border-[#3B82F6]/30 bg-[#3B82F6]/10 text-[#3B82F6] shadow-[0_0_15px_rgba(59,130,246,0.15)]';
+                        shimmerClass = 'via-[#3B82F6]/20';
+                        break;
+                      case 'uzero': 
+                        colorClass = 'border-[#10B981]/30 bg-[#10B981]/10 text-[#10B981] shadow-[0_0_15px_rgba(16,185,129,0.15)]';
+                        shimmerClass = 'via-[#10B981]/20';
+                        break;
+                      default:
+                        colorClass = 'border-[#22D3EE]/30 bg-[#22D3EE]/10 text-[#22D3EE] shadow-[0_0_15px_rgba(34,211,238,0.15)]';
+                        shimmerClass = 'via-[#22D3EE]/20';
+                    }
+                    return (
+                      <span 
+                        key={product} 
+                        className={`px-4 py-1.5 rounded-full border text-xs font-bold tracking-wider relative overflow-hidden ${colorClass}`}
+                      >
+                        <div className={`absolute inset-0 bg-gradient-to-r from-transparent to-transparent -translate-x-full animate-[shimmer_2s_infinite] ${shimmerClass}`}></div>
+                        <span className="relative z-10">{product}</span>
+                      </span>
+                    );
+                  })}
                 </div>
 
                 <HoverFillButton 

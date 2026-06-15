@@ -2,6 +2,7 @@
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { ARTICLE_DETAIL_DATA } from '@/data/articleDetailData';
+import { FEATURED_ARTICLES } from '@/data/blogData';
 
 const TOC_ITEMS = [
   { id: 'section-1', title: { VI: '1. Dữ liệu vận hành là gì?', EN: '1. What is operational data?' } },
@@ -53,75 +54,25 @@ export default function ArticleSidebar({ customTOC, customCTA }) {
         </nav>
       </div>
 
-      {/* Expert CTA */}
-      <div className="bg-gradient-to-br from-[#0C2442] to-[#0A0E14] border border-white/10 rounded-2xl p-6 relative overflow-hidden group">
-        <div className="absolute top-0 right-0 w-32 h-32 bg-[#22D3EE]/10 rounded-full blur-[40px] pointer-events-none"></div>
-        
-        <div className="flex items-center gap-4 mb-4 relative z-10">
-          <div className="w-12 h-12 rounded-full bg-[#111827] border border-white/20 overflow-hidden flex items-center justify-center">
-            {/* Placeholder for Expert Avatar */}
-            <span className="material-symbols-outlined text-2xl text-[#9CA3AF]">support_agent</span>
-          </div>
-          <div>
-            <h3 className="text-base font-bold text-white leading-tight">{t.expertTitle[lang]}</h3>
-            <p className="text-[#22D3EE] text-xs">{t.expertSubtitle[lang]}</p>
-          </div>
-        </div>
-        
-        <p className="text-sm text-[#9CA3AF] mb-6 relative z-10">
-          {t.expertDesc[lang]}
-        </p>
-        
-        <button 
-          onClick={() => window.location.href = '/demo'}
-          className="w-full bg-[#22D3EE] text-[#06101F] font-bold py-3 rounded-xl flex justify-center items-center gap-2 hover:scale-105 transition-transform shadow-[0_0_15px_rgba(34,211,238,0.2)] relative z-10 text-[15px]"
-        >
-          {customCTA || t.expertBtn[lang]}
-          <span className="material-symbols-outlined text-[16px]">arrow_forward</span>
-        </button>
-      </div>
-
-      {/* Featured Products */}
+      {/* Featured Articles */}
       <div className="bg-[#0A0E14] border border-white/10 rounded-2xl p-6">
-        <h3 className="text-base font-bold text-white mb-5">{t.productsTitle[lang]}</h3>
+        <h3 className="text-base font-bold text-white mb-5">{lang === 'EN' ? 'Featured Articles' : 'Bài viết nổi bật'}</h3>
         
         <div className="flex flex-col gap-4">
-          <a href="/product/ugate" className="group flex items-center gap-4 hover:bg-white/5 p-2 rounded-xl transition-colors -mx-2">
-            <div className="w-10 h-10 rounded-lg bg-[#111827] border border-white/10 flex items-center justify-center shrink-0 group-hover:border-[#22D3EE]/30">
-              <span className="material-symbols-outlined text-[#22D3EE] text-xl">router</span>
-            </div>
-            <div className="flex-1 min-w-0">
-              <h4 className="text-sm font-bold text-white group-hover:text-[#22D3EE] transition-colors">Ugate</h4>
-              <p className="text-[#6B7280] text-[11px] truncate">{t.productDescUgate[lang]}</p>
-            </div>
-            <span className="material-symbols-outlined text-[#9CA3AF] text-sm group-hover:translate-x-1 group-hover:text-white transition-all">arrow_forward</span>
-          </a>
-          
-          <div className="w-full h-[1px] bg-white/5"></div>
-
-          <a href="/solution" className="group flex items-center gap-4 hover:bg-white/5 p-2 rounded-xl transition-colors -mx-2">
-            <div className="w-10 h-10 rounded-lg bg-[#111827] border border-white/10 flex items-center justify-center shrink-0 group-hover:border-[#10F0CB]/30">
-              <span className="material-symbols-outlined text-[#10F0CB] text-xl">dashboard</span>
-            </div>
-            <div className="flex-1 min-w-0">
-              <h4 className="text-sm font-bold text-white group-hover:text-[#10F0CB] transition-colors">Uboard</h4>
-              <p className="text-[#6B7280] text-[11px] truncate">{t.productDescUboard[lang]}</p>
-            </div>
-            <span className="material-symbols-outlined text-[#9CA3AF] text-sm group-hover:translate-x-1 group-hover:text-white transition-all">arrow_forward</span>
-          </a>
-          
-          <div className="w-full h-[1px] bg-white/5"></div>
-
-          <a href="/sustainability" className="group flex items-center gap-4 hover:bg-white/5 p-2 rounded-xl transition-colors -mx-2">
-            <div className="w-10 h-10 rounded-lg bg-[#111827] border border-white/10 flex items-center justify-center shrink-0 group-hover:border-[#34D399]/30">
-              <span className="material-symbols-outlined text-[#34D399] text-xl">co2</span>
-            </div>
-            <div className="flex-1 min-w-0">
-              <h4 className="text-sm font-bold text-white group-hover:text-[#34D399] transition-colors">Uzero</h4>
-              <p className="text-[#6B7280] text-[11px] truncate">{t.productDescUzero[lang]}</p>
-            </div>
-            <span className="material-symbols-outlined text-[#9CA3AF] text-sm group-hover:translate-x-1 group-hover:text-white transition-all">arrow_forward</span>
-          </a>
+          {FEATURED_ARTICLES.slice(0, 3).map((article, index) => (
+            <React.Fragment key={article.id}>
+              <a href={`/blog/${article.id}`} className="group flex items-center gap-4 hover:bg-white/5 p-2 rounded-xl transition-colors -mx-2">
+                <div className="w-14 h-14 rounded-lg bg-[#111827] border border-white/10 overflow-hidden shrink-0 group-hover:border-[#22D3EE]/30 relative">
+                  <img src={article.thumbnail} alt="" className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h4 className="text-[13px] font-bold text-white group-hover:text-[#22D3EE] transition-colors line-clamp-2 leading-tight mb-1">{article.title[lang]}</h4>
+                  <p className="text-[#6B7280] text-[11px] truncate">{article.date}</p>
+                </div>
+              </a>
+              {index < 2 && <div className="w-full h-[1px] bg-white/5"></div>}
+            </React.Fragment>
+          ))}
         </div>
       </div>
 

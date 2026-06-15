@@ -6,7 +6,8 @@ export const BLOG_CATEGORIES = [
   { VI: 'Logistics và chuỗi vận hành', EN: 'Logistics & Supply Chain' },
   { VI: 'Tri thức AI', EN: 'AI Knowledge' },
   { VI: 'Góc nhìn chiến lược', EN: 'Strategic Insights' },
-  { VI: 'Tin Udata', EN: 'Udata News' }
+  { VI: 'Tin Udata', EN: 'Udata News' },
+  { VI: 'Ứng dụng thực tế', EN: 'Use Case' }
 ];
 
 export const getCategoryColor = (categoryVI) => {
@@ -18,6 +19,7 @@ export const getCategoryColor = (categoryVI) => {
     case 'Tri thức AI': return 'bg-[#A78BFA]/10 text-[#A78BFA] border-[#A78BFA]/20';
     case 'Góc nhìn chiến lược': return 'bg-[#F472B6]/10 text-[#F472B6] border-[#F472B6]/20';
     case 'Tin Udata': return 'bg-[#60A5FA]/10 text-[#60A5FA] border-[#60A5FA]/20';
+    case 'Ứng dụng thực tế': return 'bg-[#38BDF8]/10 text-[#38BDF8] border-[#38BDF8]/20';
     default: return 'bg-white/5 text-[#6B7280] border-white/10';
   }
 };
@@ -265,5 +267,117 @@ export const ALL_ARTICLES = [
     date: '28/02/2024',
     icon: 'smart_toy',
     thumbnail: '/images/blog/a12_bot.png'
+  },
+  {
+    id: 'elevator-use-case',
+    category: { VI: 'Ứng dụng thực tế', EN: 'Use Case' },
+    title: { 
+      VI: 'Giám sát thang máy và vận hành máy móc', 
+      EN: 'Elevator and Machinery Monitoring' 
+    },
+    excerpt: { 
+      VI: 'Uboard giúp theo dõi trạng thái hoạt động, cảnh báo lỗi, thời gian dừng, lịch sử bảo trì và tình trạng kết nối của thang máy, máy móc hoặc thiết bị hạ tầng trên một dashboard tập trung.', 
+      EN: 'Uboard helps track operating status, fault alerts, downtime, maintenance history, and connection status of elevators, machinery, or infrastructure equipment on a centralized dashboard.' 
+    },
+    readingTime: { VI: '5 phút đọc', EN: '5 min read' },
+    date: '12/06/2026',
+    icon: 'elevator',
+    thumbnail: '/image/uboard/Uboard-2.webp'
+  },
+  {
+    id: 'oee-use-case',
+    category: { VI: 'Ứng dụng thực tế', EN: 'Use Case' },
+    title: { 
+      VI: 'Quản lý hiệu suất và bảo dưỡng máy (OEE)', 
+      EN: 'Overall Equipment Effectiveness (OEE)' 
+    },
+    excerpt: { 
+      VI: 'Uboard giúp nhà máy theo dõi hiệu suất thiết bị, thời gian dừng máy và tình trạng bảo trì trên một nền tảng dữ liệu vận hành tập trung. Từ dữ liệu thu thập theo thời gian thực, doanh nghiệp có thể phát hiện sớm bất thường và tối ưu kế hoạch vận hành.', 
+      EN: 'Uboard helps factories track equipment performance, downtime, and maintenance status on a centralized operational data platform. From real-time collected data, businesses can detect anomalies early and optimize operational plans.' 
+    },
+    readingTime: { VI: '5 phút đọc', EN: '5 min read' },
+    date: '12/06/2026',
+    icon: 'precision_manufacturing',
+    thumbnail: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200'
+  },
+  {
+    id: 'ems-use-case',
+    category: { VI: 'Ứng dụng thực tế', EN: 'Use Case' },
+    title: { 
+      VI: 'Quản lý năng lượng thông minh EMS', 
+      EN: 'Intelligent Energy Management (EMS)' 
+    },
+    excerpt: { 
+      VI: 'Uboard giúp doanh nghiệp theo dõi dữ liệu tiêu thụ điện, nước, khí nén, nhiệt, nhiên liệu và các nguồn tài nguyên quan trọng trong vận hành. Module EMS hỗ trợ phát hiện điểm tiêu thụ bất thường, kiểm soát chi phí năng lượng và quản lý tài nguyên chủ động hơn.', 
+      EN: 'Uboard helps businesses track consumption data of electricity, water, compressed air, heat, fuel and other critical resources. The EMS module detects abnormal consumption points, controls energy costs, and manages resources proactively.' 
+    },
+    readingTime: { VI: '5 phút đọc', EN: '5 min read' },
+    date: '12/06/2026',
+    icon: 'bolt',
+    thumbnail: '/image/uboard/Uboard-4.webp'
+  },
+  {
+    id: 'solar-use-case',
+    category: { VI: 'Ứng dụng thực tế', EN: 'Use Case' },
+    title: { 
+      VI: 'Giám sát vận hành điện mặt trời mái nhà', 
+      EN: 'Solar Rooftop Operation Monitoring' 
+    },
+    excerpt: { 
+      VI: 'Uboard hỗ trợ giám sát và điều khiển hệ điện mặt trời mái nhà thông qua Udata Gateway và Udata Cloud. Module này giúp theo dõi công suất phát, sản lượng điện, trạng thái inverter, dữ liệu công tơ, cảnh báo thiết bị và báo cáo vận hành hệ solar.', 
+      EN: 'Uboard supports monitoring and controlling rooftop solar systems through Udata Gateway and Udata Cloud. This module tracks power output, energy production, inverter status, meter data, device alerts, and solar operation reports.' 
+    },
+    readingTime: { VI: '5 phút đọc', EN: '5 min read' },
+    date: '12/06/2026',
+    icon: 'solar_power',
+    thumbnail: '/image/uboard/Uboard-1.webp'
+  },
+  {
+    id: 'ugate-ai-knowledge-use-case',
+    category: { VI: 'Ứng dụng thực tế', EN: 'Use Case' },
+    title: { 
+      VI: 'Trợ lý AI cho vận hành và quản lý tri thức kỹ thuật', 
+      EN: 'AI Assistant for Operation and Technical Knowledge Management' 
+    },
+    excerpt: { 
+      VI: 'Ugate giúp doanh nghiệp tập trung tài liệu kỹ thuật, kinh nghiệm bảo trì, quy trình xử lý sự cố và dữ liệu vận hành vào một kho tri thức thống nhất.', 
+      EN: 'Ugate helps businesses centralize technical documents, maintenance experience, troubleshooting processes, and operational data into a unified knowledge repository.' 
+    },
+    readingTime: { VI: '6 phút đọc', EN: '6 min read' },
+    date: '12/06/2026',
+    icon: 'smart_toy',
+    thumbnail: '/image/Ugate/Ugate-1.webp'
+  },
+  {
+    id: 'ugate-ai-verification-use-case',
+    category: { VI: 'Ứng dụng thực tế', EN: 'Use Case' },
+    title: { 
+      VI: 'Trợ lý AI hội thoại và xác minh sản phẩm', 
+      EN: 'Conversational AI and Product Verification' 
+    },
+    excerpt: { 
+      VI: 'Ugate hỗ trợ tra cứu thông tin thiết bị, xác minh mã serial, kiểm tra CO/CQ và đối chiếu dữ liệu sản phẩm bằng AI, giảm rủi ro sử dụng linh kiện không rõ nguồn gốc.', 
+      EN: 'Ugate supports looking up equipment info, verifying serials, checking CO/CQ, and cross-referencing product data using AI, reducing risks of unverified components.' 
+    },
+    readingTime: { VI: '5 phút đọc', EN: '5 min read' },
+    date: '12/06/2026',
+    icon: 'verified',
+    thumbnail: '/image/Ugate/Ugate-2.webp'
+  },
+  {
+    id: 'uzero-ghg-use-case',
+    category: { VI: 'Ứng dụng thực tế', EN: 'Use Case' },
+    title: { 
+      VI: 'Quản lý phát thải khí nhà kính GHG', 
+      EN: 'Greenhouse Gas (GHG) Emissions Management' 
+    },
+    excerpt: { 
+      VI: 'Uzero giúp doanh nghiệp thu thập, tính toán và trực quan hóa dữ liệu phát thải khí nhà kính theo Scope 1, Scope 2 và Scope 3.', 
+      EN: 'Uzero helps businesses collect, calculate, and visualize greenhouse gas emissions data across Scope 1, Scope 2, and Scope 3.' 
+    },
+    readingTime: { VI: '5 phút đọc', EN: '5 min read' },
+    date: '12/06/2026',
+    icon: 'co2',
+    thumbnail: '/image/uzero/auto-calculate.webp'
   }
 ];

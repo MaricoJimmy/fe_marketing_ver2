@@ -22,26 +22,7 @@ export default function OeeArticleContent() {
          </p>
       </div>
 
-      {/* Summary Box */}
-      <div className="bg-[#0A0E14] border-l-4 border-[#22D3EE] border-y border-r border-y-white/10 border-r-white/10 rounded-r-2xl p-6 md:p-8 relative">
-        <div className="flex items-center gap-3 mb-4">
-          <span className="material-symbols-outlined text-[#22D3EE] text-2xl">menu_book</span>
-          <h3 className="text-lg font-bold text-white">{lang === 'EN' ? 'Key Takeaways' : 'Nội dung chính'}</h3>
-        </div>
-        <ul className="space-y-3">
-          {[
-            lang === 'EN' ? 'Challenges in real-world factory operations.' : 'Bài toán thực tế trong vận hành nhà máy.',
-            lang === 'EN' ? 'How Uboard supports solving OEE issues.' : 'Uboard hỗ trợ giải quyết vấn đề OEE như thế nào.',
-            lang === 'EN' ? 'Connectable data sources and the value they bring.' : 'Dữ liệu có thể kết nối và giá trị mang lại.',
-            lang === 'EN' ? 'Key metrics for tracking OEE effectively.' : 'Trọng tâm theo dõi OEE hiệu quả.'
-          ].map((point, index) => (
-            <li key={index} className="flex items-start gap-3">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#22D3EE] mt-2.5 shrink-0"></span>
-              <span>{point}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
+
 
       <div className="w-full aspect-[16/9] rounded-2xl overflow-hidden border border-white/10">
          <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200" alt="Factory" className="w-full h-full object-cover" />

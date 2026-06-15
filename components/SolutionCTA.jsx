@@ -26,13 +26,19 @@ export default function SolutionCTA() {
               : 'Hãy cùng Udata đánh giá hiện trạng dữ liệu, xác định bài toán ưu tiên và xây dựng lộ trình triển khai AIoT phù hợp với mục tiêu vận hành, ROI và phát triển bền vững của doanh nghiệp.'}
           </p>
           
-          <div className="flex justify-center">
-            <button 
-              onClick={() => router.push('/demo')}
-              className="w-full sm:w-auto px-8 py-3.5 rounded-xl bg-[#22D3EE] text-[#06101F] font-bold hover:scale-105 hover:bg-[#10F0CB] transition-all duration-300 shadow-[0_0_20px_rgba(34,211,238,0.2)]"
+          <div className="flex flex-wrap justify-center items-center gap-4 pt-[1vh]">
+            <HoverFillButton 
+              onClick={() => router.push('/dung-thu')}
+              className="bg-[#22D3EE] text-[#06101F] px-[clamp(1.5rem,3vw,2rem)] py-[clamp(0.75rem,2vh,0.875rem)] rounded-xl font-bold text-[clamp(0.875rem,2vh,1rem)] transition-all shadow-[0_0_20px_rgba(34,211,238,0.3)] hover:scale-105"
             >
-              {lang === 'EN' ? 'Book a Demo' : 'Đặt lịch Demo'}
-            </button>
+              {lang === 'EN' ? 'Explore Solutions' : 'Xem tình huống ứng dụng'}
+            </HoverFillButton>
+            <HoverFillButton 
+              onClick={() => router.push('/demo')}
+              className="border border-[#22D3EE]/30 bg-[#22D3EE]/5 text-white px-[clamp(1.5rem,3vw,2rem)] py-[clamp(0.75rem,2vh,0.875rem)] rounded-xl font-bold text-[clamp(0.875rem,2vh,1rem)] hover:bg-[#22D3EE]/10 transition-all flex items-center gap-2"
+            >
+              {lang === 'EN' ? 'Book a Consultation' : 'Đặt lịch Demo'}
+            </HoverFillButton>
           </div>
         </div>
       </div>

@@ -319,7 +319,7 @@ const translations = {
     'nav.about': 'Về chúng tôi',
     'nav.platform': 'Nền tảng',
     'nav.solution': 'Giải pháp',
-    'nav.usecase': 'Tình huống sử dụng',
+    'nav.usecase': 'Tình huống ứng dụng',
     'nav.sustainability': 'Phát triển bền vững',
     'nav.blog': 'Bài viết',
     'nav.resource': 'Tuyển dụng',

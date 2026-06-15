@@ -93,16 +93,31 @@ export default function SolutionUseCases() {
                   }`}
                 >
                   <div className="flex flex-wrap gap-2 mb-3">
-                    {useCase.tags.map(tag => (
-                      <span 
-                        key={tag} 
-                        className={`px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-widest ${
-                          isActive ? 'bg-[#22D3EE]/20 text-[#22D3EE]' : 'bg-white/10 text-white/60'
-                        }`}
-                      >
-                        {tag}
-                      </span>
-                    ))}
+                    {useCase.tags.map(tag => {
+                      let tagColor = "";
+                      switch (tag.toLowerCase()) {
+                        case 'uboard': 
+                          tagColor = isActive ? 'bg-[#22D3EE]/20 text-[#22D3EE]' : 'bg-[#22D3EE]/10 text-[#22D3EE]/60'; 
+                          break;
+                        case 'ugate':
+                        case 'miniugate': 
+                          tagColor = isActive ? 'bg-[#3B82F6]/20 text-[#3B82F6]' : 'bg-[#3B82F6]/10 text-[#3B82F6]/60'; 
+                          break;
+                        case 'uzero': 
+                          tagColor = isActive ? 'bg-[#10B981]/20 text-[#10B981]' : 'bg-[#10B981]/10 text-[#10B981]/60'; 
+                          break;
+                        default: 
+                          tagColor = isActive ? 'bg-[#22D3EE]/20 text-[#22D3EE]' : 'bg-white/10 text-white/60';
+                      }
+                      return (
+                        <span 
+                          key={tag} 
+                          className={`px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-widest ${tagColor}`}
+                        >
+                          {tag}
+                        </span>
+                      );
+                    })}
                   </div>
                   <h3 className={`text-lg md:text-xl font-bold ${isActive ? 'text-[#22D3EE]' : 'text-white'}`}>
                     {lang === 'EN' ? useCase.enTitle : useCase.viTitle}

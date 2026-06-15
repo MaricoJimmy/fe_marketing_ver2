@@ -55,14 +55,27 @@ export default function AboutUs() {
         
         <section 
           ref={headerRef} 
-          className="flex flex-col items-center justify-center space-y-sm max-w-6xl mx-auto transition-all duration-700 ease-out"
-          style={{ transform: headerVisible ? 'translateY(0)' : 'translateY(30px)', opacity: headerVisible ? 1 : 0 }}
+          className="flex flex-col items-center justify-center space-y-6 md:space-y-8 min-h-[50vh] md:min-h-[65vh] w-full mx-auto relative z-10"
         >
-          <div className="inline-block bg-primary/10 border border-electric-cyan/30 px-4 py-2 rounded-full mb-4">
-            <span className="font-label-sm text-sm uppercase tracking-widest text-electric-cyan font-bold text-center">{t('about.badge')}</span>
+          <div 
+            className="inline-block bg-[#22D3EE]/10 border border-[#22D3EE]/30 px-6 py-2.5 rounded-full mb-2 backdrop-blur-md shadow-[0_0_30px_rgba(34,211,238,0.2)] transition-all duration-[1200ms] ease-[cubic-bezier(0.23,1,0.32,1)]"
+            style={{ 
+              transform: headerVisible ? 'translateY(0) scale(1)' : 'translateY(-30px) scale(0.9)', 
+              opacity: headerVisible ? 1 : 0 
+            }}
+          >
+            <span className="font-label-sm text-sm md:text-base uppercase tracking-[0.25em] text-[#22D3EE] font-bold text-center">
+              {t('about.badge')}
+            </span>
           </div>
+          
           <h1 
-            className="font-display-lg text-3xl md:text-4xl lg:text-5xl xl:text-[3.5rem] text-white leading-tight drop-shadow-lg font-bold xl:whitespace-nowrap text-center"
+            className="font-display-lg text-4xl md:text-5xl lg:text-6xl xl:text-[4.5rem] text-white leading-[1.2] md:leading-[1.1] font-bold text-center drop-shadow-2xl max-w-6xl mx-auto transition-all duration-[1500ms] delay-100 ease-[cubic-bezier(0.23,1,0.32,1)]"
+            style={{ 
+              transform: headerVisible ? 'translateY(0) scale(1)' : 'translateY(50px) scale(0.95)', 
+              opacity: headerVisible ? 1 : 0,
+              filter: headerVisible ? 'blur(0px)' : 'blur(10px)'
+            }}
             dangerouslySetInnerHTML={{ __html: t('about.hero.subtitle') }}
           />
         </section>
@@ -100,7 +113,11 @@ export default function AboutUs() {
 
             {/* Right Column: Image */}
             <div className="lg:col-span-6 flex justify-center items-center">
-              <img src="/Asset 5.png" alt="Udata Overview" className="w-full max-w-[22rem] lg:max-w-[26rem] object-contain opacity-85 drop-shadow-[0_0_30px_rgba(34,211,238,0.2)] hover:scale-105 hover:opacity-100 transition-all duration-500" />
+              <div className="w-full max-w-[22rem] lg:max-w-[26rem] group cursor-pointer">
+                <div className="transition-transform duration-[800ms] ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-110">
+                  <img src="/Asset 5.png" alt="Udata Overview" className="w-full object-contain opacity-85 drop-shadow-[0_0_40px_rgba(34,211,238,0.25)] group-hover:opacity-100 group-hover:drop-shadow-[0_0_60px_rgba(34,211,238,0.4)] transition-all duration-[800ms] animate-[spin_25s_linear_infinite]" />
+                </div>
+              </div>
             </div>
 
           </div>

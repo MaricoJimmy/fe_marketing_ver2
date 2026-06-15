@@ -1,12 +1,13 @@
 "use client";
 import React, { useState, useEffect, useRef } from 'react';
+import Link from 'next/link';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Workflow() {
   const [activeIndex, setActiveIndex] = useState(0);
   const containerRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -98,12 +99,12 @@ export default function Workflow() {
   return (
     <section ref={containerRef} className="relative w-full border-t border-surface-border md:h-[400vh] h-auto pb-10 md:pb-0">
       
-      <div className="md:sticky relative top-0 w-full md:h-screen h-auto flex flex-col justify-start pt-16 md:pt-32 md:overflow-hidden px-margin-mobile md:px-margin-desktop md:bg-background/90 md:backdrop-blur-md">
+      <div className="md:sticky relative top-0 w-full md:h-[100dvh] h-auto flex flex-col justify-start pt-12 md:pt-16 lg:pt-20 md:pb-8 md:overflow-hidden px-margin-mobile md:px-margin-desktop md:bg-background/90 md:backdrop-blur-md">
         <div className="max-w-[1440px] mx-auto w-full flex flex-col h-full pb-4 md:pb-8">
           
           {/* Header */}
           <div 
-            className={`mb-4 md:mb-6 transition-all duration-1000 ease-out transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}
+            className={`mb-2 md:mb-4 transition-all duration-1000 ease-out transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-16 opacity-0'}`}
           >
             <div className="inline-block bg-primary/10 border border-electric-cyan/30 px-3 py-1.5 rounded-sm mb-2">
               <span className="font-label-sm text-xs uppercase tracking-wider text-electric-cyan">{t('workflow.badge')}</span>
@@ -118,7 +119,7 @@ export default function Workflow() {
 
           {/* Adjacent Accordion (Desktop) / Stacked Cards (Mobile) */}
           <div 
-            className={`flex flex-col md:flex-row w-full flex-1 md:flex-none min-h-[auto] md:h-[350px] md:border border-surface-border md:rounded-2xl md:overflow-hidden transition-all duration-1000 ease-out transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-24 opacity-0'} space-y-4 md:space-y-0`}
+            className={`flex flex-col md:flex-row w-full flex-1 min-h-[auto] md:min-h-[200px] md:max-h-[600px] md:border border-surface-border md:rounded-2xl md:overflow-hidden transition-all duration-1000 ease-out transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-24 opacity-0'} space-y-4 md:space-y-0`}
           >
             {steps.map((step, index) => {
               const isDesktopActive = activeIndex === index;
@@ -187,20 +188,24 @@ export default function Workflow() {
             {/* Horizontal gradient overlay: Dark on the left for text readability, clear on the right */}
             <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/80 to-transparent" />
             
-            <div className="relative z-10 flex flex-col md:flex-row items-center justify-between py-6 md:py-10 lg:py-12 px-5 md:px-6 lg:px-8 gap-4 md:gap-6">
-              <div className="flex-1 space-y-3">
+            <div className="relative z-10 flex flex-col md:flex-row items-center justify-between py-4 md:py-6 lg:py-8 px-5 md:px-6 lg:px-8 gap-4 md:gap-6">
+              <div className="flex-1 space-y-2 md:space-y-3">
                 <h3 className="font-headline-md text-lg md:text-xl lg:text-2xl font-bold text-white max-w-2xl">
                   {t('workflow.cta.title')}
                 </h3>
                 <p className="text-sm md:text-base text-on-surface-variant max-w-2xl">
                   {t('workflow.cta.desc')}
                 </p>
-                <div className="pt-2">
-                  <button className="flex items-center gap-2 bg-gradient-to-r hover:from-[#22D3EE] hover:to-[#10F0CB] bg-white/10 hover:text-[#06101F] text-white border border-white/20 hover:border-transparent px-5 py-2.5 rounded-xl font-bold text-sm transition-all duration-300 group/btn">
+                <div className="pt-2 flex flex-wrap items-center gap-3">
+                  <Link href="/dung-thu" className="flex items-center justify-center gap-2 bg-gradient-to-r hover:from-[#22D3EE] hover:to-[#10F0CB] bg-white/10 hover:text-[#06101F] text-white border border-white/20 hover:border-transparent px-5 py-2.5 rounded-xl font-bold text-sm transition-all duration-300 group/btn">
                     <span className="material-symbols-outlined text-base">forum</span>
                     {t('workflow.cta.btn')}
                     <span className="material-symbols-outlined text-sm group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
-                  </button>
+                  </Link>
+                  <Link href="/solution" className="flex items-center justify-center gap-2 bg-transparent hover:bg-white/5 text-white border border-white/20 hover:border-white/50 px-5 py-2.5 rounded-xl font-bold text-sm transition-all duration-300 group/btn-sec">
+                    {lang === 'EN' ? 'View Solutions' : 'Xem giải pháp'}
+                    <span className="material-symbols-outlined text-sm group-hover/btn-sec:translate-x-1 transition-transform">arrow_forward</span>
+                  </Link>
                 </div>
               </div>
               

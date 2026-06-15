@@ -21,26 +21,7 @@ export default function ElevatorArticleContent() {
          </p>
       </div>
 
-      {/* Summary Box */}
-      <div className="bg-[#0A0E14] border-l-4 border-[#22D3EE] border-y border-r border-y-white/10 border-r-white/10 rounded-r-2xl p-6 md:p-8 relative">
-        <div className="flex items-center gap-3 mb-4">
-          <span className="material-symbols-outlined text-[#22D3EE] text-2xl">menu_book</span>
-          <h3 className="text-lg font-bold text-white">{lang === 'EN' ? 'Key Takeaways' : 'Nội dung chính'}</h3>
-        </div>
-        <ul className="space-y-3">
-          {[
-            lang === 'EN' ? 'What Uboard monitors for machines' : 'Uboard giám sát những gì trong máy móc',
-            lang === 'EN' ? 'Dashboard displays and equipment lists' : 'Các thông số hiển thị trên Dashboard',
-            lang === 'EN' ? 'Automatic alerts and diagnostic reports' : 'Cảnh báo tự động và báo cáo thiết bị',
-            lang === 'EN' ? 'Operational value and suitability' : 'Giá trị vận hành và Đối tượng phù hợp'
-          ].map((point, index) => (
-            <li key={index} className="flex items-start gap-3">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#22D3EE] mt-2.5 shrink-0"></span>
-              <span>{point}</span>
-            </li>
-          ))}
-        </ul>
-      </div>
+
 
       <div className="w-full aspect-[16/9] rounded-2xl overflow-hidden border border-white/10">
          <img src="/image/uboard/Uboard-2.webp" alt="Elevator and Machinery" className="w-full h-full object-cover" />
