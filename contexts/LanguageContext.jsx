@@ -98,7 +98,7 @@ const translations = {
     'workflow.cta.btn': 'Book a demo',
 
     // CaseStudies
-    'case.badge': 'SUCCESS STORIES',
+    'case.badge': 'Highlight Use Cases',
     'case.title': 'See how Udata helps enterprises transform',
     'case.c1.cat': 'Manufacturing',
     'case.c1.title': 'Realtime Factory Operation Optimization',
@@ -410,7 +410,7 @@ const translations = {
     'workflow.cta.btn': 'Đặt lịch demo',
 
     // CaseStudies
-    'case.badge': 'CÂU CHUYỆN THÀNH CÔNG',
+    'case.badge': 'Tình huống ứng dụng nổi bật',
     'case.title': 'Xem cách Udata giúp các doanh nghiệp chuyển đổi',
     'case.c1.cat': 'Manufacturing',
     'case.c1.title': 'Tối ưu vận hành nhà máy bằng dữ liệu realtime',

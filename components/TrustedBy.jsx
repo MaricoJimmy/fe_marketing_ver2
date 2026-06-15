@@ -136,7 +136,7 @@ export default function TrustedBy({ customStats }) {
       `}</style>
 
       <div className="w-full text-center mb-8 px-4">
-        <p className="font-display-md text-sm md:text-base lg:text-lg uppercase tracking-[0.2em] md:tracking-[0.3em] font-bold bg-gradient-to-r from-[#10F0CB] via-[#22D3EE] to-[#10F0CB] bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(34,211,238,0.4)]">
+        <p className="font-display-md text-sm md:text-base lg:text-lg uppercase tracking-wider md:tracking-[0.15em] font-bold bg-gradient-to-r from-[#10F0CB] via-[#22D3EE] to-[#10F0CB] bg-clip-text text-transparent drop-shadow-[0_0_15px_rgba(34,211,238,0.4)]">
           {t('trusted.title')}
         </p>
       </div>
