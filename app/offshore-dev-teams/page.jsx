@@ -17,7 +17,6 @@ export default function OffshoreDevTeamsPage() {
   return (
     <div className="min-h-screen bg-[#06101F] text-white selection:bg-[#22D3EE]/30 selection:text-white flex flex-col font-body-md overflow-x-hidden">
       <AnimatedBackground />
-      <Header />
 
       <main className="flex-grow pt-24 md:pt-32 pb-20 z-10 relative">
         {/* Hero Section */}
@@ -57,13 +56,6 @@ export default function OffshoreDevTeamsPage() {
                         {t('odc.hero.btn1')}
                         <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
                       </HoverFillButton>
-                      <button 
-                        onClick={() => router.push('/portfolio')}
-                        className="w-full sm:w-auto px-8 py-4 rounded-xl bg-white/5 border border-white/10 text-white font-title-lg text-[16px] font-semibold hover:bg-white/10 transition-colors flex items-center justify-center gap-2"
-                      >
-                        <span className="material-symbols-outlined text-[20px]">play_circle</span>
-                        {t('odc.hero.btn2')}
-                      </button>
                     </div>
                   </ScrollReveal>
                 </div>
@@ -186,7 +178,6 @@ export default function OffshoreDevTeamsPage() {
         </section>
 
       </main>
-      <Footer />
     </div>
   );
 }

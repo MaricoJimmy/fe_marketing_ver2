@@ -369,7 +369,7 @@ const translations = {
 
     // Offshore Dev Teams Page
     'odc.hero.badge': 'OFFSHORE DEVELOPMENT CENTER',
-    'odc.hero.title': 'Offshore Dev Teams',
+    'odc.hero.title': 'Offshore Development Teams',
     'odc.hero.subtitle': 'Unlock Offshore Development Excellence. Build your dedicated scalable team with secure facilities and senior expertise.',
     'odc.hero.btn1': 'Book an online consultation',
     'odc.hero.btn2': 'View Portfolio',
