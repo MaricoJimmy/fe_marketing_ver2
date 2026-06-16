@@ -14,6 +14,8 @@ const NAV_ITEMS = [
       { labelKey: 'Ugate', path: '/product/ugate' }, // We just use the string itself if not translated
       { labelKey: 'MiniUgate', path: '/product/miniugate' },
       { labelKey: 'Uzero', path: '/product/uzero' },
+      { labelKey: 'nav.build_to_order', path: '/build-to-order' },
+      { labelKey: 'nav.offshore_dev', path: '/offshore-dev-teams' },
     ],
   },
   { labelKey: 'nav.solution', path: '/solution' },
