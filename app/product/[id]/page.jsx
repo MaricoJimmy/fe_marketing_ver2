@@ -15,7 +15,7 @@ import TrustedBy from '@/components/TrustedBy';
 const PRODUCT_DATA = {
   VI: {
     uboard: {
-      title: 'Giám sát và tối ưu vận hành nhà máy<br />bằng <span class="bg-gradient-to-r from-[#22D3EE] to-[#10F0CB] bg-clip-text text-transparent">AIoT</span>',
+      title: '<span class="whitespace-nowrap">Giám sát & Tối ưu</span><br />vận hành nhà máy bằng <span class="bg-gradient-to-r from-[#22D3EE] to-[#10F0CB] bg-clip-text text-transparent">AIoT</span>',
       subtitle: "Hợp nhất dữ liệu đa nguồn vào một nền tảng trực quan, giúp quản lý toàn diện hiệu suất, năng lượng và thiết bị. Đảm bảo vận hành ổn định, tối ưu chi phí và tạo đà cho chuyển đổi số xanh.",
       videoPlaceholder: "UBOARD INTERACTIVE 3D/VIDEO PLACEHOLDER",
       features: [
@@ -198,7 +198,7 @@ const PRODUCT_DATA = {
   },
   EN: {
     uboard: {
-      title: '<span class="bg-gradient-to-r from-[#22D3EE] to-[#10F0CB] bg-clip-text text-transparent">AIoT-powered</span> Factory Operation<br />Monitoring & Optimization',
+      title: '<span class="bg-gradient-to-r from-[#22D3EE] to-[#10F0CB] bg-clip-text text-transparent">AIoT-powered</span> Factory Operation<br /><span class="whitespace-nowrap">Monitoring & Optimization</span>',
       subtitle: "Consolidate multi-source data into an intuitive platform for comprehensive management of performance, energy, and equipment. Ensure stable operations, optimize costs, and pave the way for green digital transformation.",
       videoPlaceholder: "UBOARD INTERACTIVE 3D/VIDEO PLACEHOLDER",
       features: [
@@ -524,7 +524,7 @@ export default function ProductPage() {
   return (
     <>
       {(['uboard', 'ugate', 'uzero'].includes(id?.toLowerCase())) && (
-        <section className="relative pt-32 pb-20 px-margin-desktop min-h-[90vh] flex flex-col justify-center">
+        <section className="relative pt-32 pb-20 px-4 md:px-margin-desktop min-h-[90vh] flex flex-col justify-center">
           {/* Video Background Layer */}
           <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none flex items-center justify-center -mt-16">
             <video 
@@ -562,7 +562,7 @@ export default function ProductPage() {
               </div>
 
               <h1 
-                className="font-display-lg text-4xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-white leading-[1.2] drop-shadow-lg text-center w-full transition-all duration-1000 ease-out"
+                className="font-display-lg text-[24px] sm:text-3xl md:text-5xl lg:text-5xl xl:text-6xl font-bold text-white leading-[1.3] md:leading-[1.2] drop-shadow-lg text-center w-full transition-all duration-1000 ease-out"
                 style={{ transform: isLoaded ? 'translateY(0)' : 'translateY(40px)', opacity: isLoaded ? 1 : 0 }}
                 dangerouslySetInnerHTML={{ __html: product.title }}
               />
@@ -605,7 +605,7 @@ export default function ProductPage() {
           </div>
         </section>
       )}
-      <div className={`relative ${(['uboard', 'ugate', 'uzero'].includes(id?.toLowerCase())) ? 'pt-0' : 'min-h-screen pt-32'} pb-20 px-margin-desktop bg-[#0A0A0A]`}>
+      <div className={`relative ${(['uboard', 'ugate', 'uzero'].includes(id?.toLowerCase())) ? 'pt-0' : 'min-h-screen pt-32'} pb-20 px-4 md:px-margin-desktop bg-[#0A0A0A]`}>
         <div className={`transition-opacity duration-[1500ms] ${(['uboard', 'ugate', 'uzero'].includes(id?.toLowerCase())) ? (featuresVisible ? 'opacity-100' : 'opacity-0') : 'opacity-100'}`}>
           {renderBackground()}
         </div>

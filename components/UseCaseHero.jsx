@@ -19,7 +19,7 @@ export default function UseCaseHero() {
         </div>
 
         <h1 
-          className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight md:whitespace-nowrap"
+          className="text-[28px] sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight md:whitespace-nowrap"
           dangerouslySetInnerHTML={{ __html: t('usecases.title') }}
         />
 

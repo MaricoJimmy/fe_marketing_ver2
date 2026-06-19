@@ -95,6 +95,81 @@ export default function SolutionsByIndustry() {
   
   const activeIndustry = industries.find(ind => ind.id === activeTab);
 
+  const renderContent = (industry) => (
+    <div className="bg-[#0C1017] border border-white/5 rounded-2xl p-6 md:p-12 h-full flex flex-col relative overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-500">
+      {/* Subtle background glow */}
+      <div className="absolute top-0 right-0 w-64 h-64 bg-[#22D3EE]/5 blur-[80px] pointer-events-none rounded-full"></div>
+
+      <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 relative z-10">
+        {lang === 'EN' ? industry.enTitle : industry.viTitle}
+      </h3>
+
+      <div className="bg-[#121822] border border-white/5 rounded-xl p-6 mb-8 relative z-10">
+        <div className="text-[10px] font-bold tracking-widest text-white/40 uppercase mb-3">
+          {lang === 'EN' ? 'THE CHALLENGE' : 'THÁCH THỨC'}
+        </div>
+        <p className="text-white/80 font-medium leading-relaxed">
+          {lang === 'EN' ? industry.enChallenge : industry.viChallenge}
+        </p>
+      </div>
+
+      <div className="mb-10 relative z-10">
+        <div className="text-[10px] font-bold tracking-widest text-[#22D3EE] uppercase mb-3">
+          {lang === 'EN' ? 'THE SOLUTION' : 'GIẢI PHÁP TỪ UDATA'}
+        </div>
+        <p className="text-[#9CA3AF] text-base md:text-lg leading-relaxed">
+          {lang === 'EN' ? industry.enDesc : industry.viDesc}
+        </p>
+      </div>
+
+      <div className="mt-auto relative z-10">
+        <div className="text-[10px] font-bold tracking-widest text-white/40 uppercase mb-4">
+          {lang === 'EN' ? 'POWERED BY' : 'ĐƯỢC VẬN HÀNH BỞI'}
+        </div>
+        <div className="flex flex-wrap gap-3 mb-10">
+          {industry.poweredBy.map(product => {
+            let colorClass = "";
+            let shimmerClass = "";
+            switch (product.toLowerCase()) {
+              case 'uboard': 
+                colorClass = 'border-[#22D3EE]/30 bg-[#22D3EE]/10 text-[#22D3EE] shadow-[0_0_15px_rgba(34,211,238,0.15)]';
+                shimmerClass = 'via-[#22D3EE]/20';
+                break;
+              case 'ugate': 
+              case 'miniugate':
+                colorClass = 'border-[#3B82F6]/30 bg-[#3B82F6]/10 text-[#3B82F6] shadow-[0_0_15px_rgba(59,130,246,0.15)]';
+                shimmerClass = 'via-[#3B82F6]/20';
+                break;
+              case 'uzero': 
+                colorClass = 'border-[#10B981]/30 bg-[#10B981]/10 text-[#10B981] shadow-[0_0_15px_rgba(16,185,129,0.15)]';
+                shimmerClass = 'via-[#10B981]/20';
+                break;
+              default:
+                colorClass = 'border-[#22D3EE]/30 bg-[#22D3EE]/10 text-[#22D3EE] shadow-[0_0_15px_rgba(34,211,238,0.15)]';
+                shimmerClass = 'via-[#22D3EE]/20';
+            }
+            return (
+              <span 
+                key={product} 
+                className={`px-4 py-1.5 rounded-full border text-xs font-bold tracking-wider relative overflow-hidden ${colorClass}`}
+              >
+                <div className={`absolute inset-0 bg-gradient-to-r from-transparent to-transparent -translate-x-full animate-[shimmer_2s_infinite] ${shimmerClass}`}></div>
+                <span className="relative z-10">{product}</span>
+              </span>
+            );
+          })}
+        </div>
+
+        <HoverFillButton 
+          onClick={() => router.push(industry.link)}
+          className="bg-[#22D3EE] text-[#06101F] px-6 py-3 rounded-xl font-bold text-sm w-max hover:scale-105 transition-all shadow-[0_0_15px_rgba(34,211,238,0.2)]"
+        >
+          {lang === 'EN' ? industry.enCTA : industry.viCTA}
+        </HoverFillButton>
+      </div>
+    </div>
+  );
+
   return (
     <section className="py-20 md:py-28 px-6 md:px-12 bg-[#080B10] relative z-10">
       <div className="max-w-[1200px] mx-auto">
@@ -111,107 +186,40 @@ export default function SolutionsByIndustry() {
 
         <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
           
-          {/* Left Menu */}
+          {/* Menu & Mobile Layout */}
           <div className="w-full lg:w-1/3 flex flex-col gap-2">
             {industries.map((ind) => {
               const isActive = activeTab === ind.id;
               return (
-                <button
-                  key={ind.id}
-                  onClick={() => setActiveTab(ind.id)}
-                  className={`flex items-center gap-4 px-6 py-4 rounded-xl transition-all duration-300 text-left ${
-                    isActive 
-                      ? 'bg-[#22D3EE]/10 border border-[#22D3EE]/20 text-[#22D3EE]' 
-                      : 'bg-transparent border border-transparent text-[#9CA3AF] hover:bg-white/5 hover:text-white'
-                  }`}
-                >
-                  <span className={`material-symbols-outlined ${isActive ? 'text-[#22D3EE]' : 'text-white/40'}`}>
-                    {ind.icon}
-                  </span>
-                  <span className="font-medium text-base">
-                    {lang === 'EN' ? ind.enLabel : ind.viLabel}
-                  </span>
-                </button>
+                <div key={ind.id} className="flex flex-col">
+                  <button
+                    onClick={() => setActiveTab(ind.id)}
+                    className={`flex items-center gap-4 px-6 py-4 rounded-xl transition-all duration-300 text-left ${
+                      isActive 
+                        ? 'bg-[#22D3EE]/10 border border-[#22D3EE]/20 text-[#22D3EE]' 
+                        : 'bg-[#22D3EE]/10 border border-[#22D3EE]/20 text-[#22D3EE] lg:bg-transparent lg:border-transparent lg:text-[#9CA3AF] hover:bg-white/5 hover:text-white'
+                    }`}
+                  >
+                    <span className={`material-symbols-outlined ${isActive ? 'text-[#22D3EE]' : 'text-[#22D3EE] lg:text-white/40'}`}>
+                      {ind.icon}
+                    </span>
+                    <span className="font-medium text-base">
+                      {lang === 'EN' ? ind.enLabel : ind.viLabel}
+                    </span>
+                  </button>
+
+                  {/* Mobile Content (always show) */}
+                  <div className="lg:hidden mt-4 mb-6">
+                    {renderContent(ind)}
+                  </div>
+                </div>
               );
             })}
           </div>
 
-          {/* Right Content */}
-          <div className="w-full lg:w-2/3" key={activeTab}>
-            <div className="bg-[#0C1017] border border-white/5 rounded-2xl p-8 md:p-12 h-full flex flex-col relative overflow-hidden animate-fade-in">
-              
-              {/* Subtle background glow */}
-              <div className="absolute top-0 right-0 w-64 h-64 bg-[#22D3EE]/5 blur-[80px] pointer-events-none rounded-full"></div>
-
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-6 relative z-10">
-                {lang === 'EN' ? activeIndustry.enTitle : activeIndustry.viTitle}
-              </h3>
-
-              <div className="bg-[#121822] border border-white/5 rounded-xl p-6 mb-8 relative z-10">
-                <div className="text-[10px] font-bold tracking-widest text-white/40 uppercase mb-3">
-                  {lang === 'EN' ? 'THE CHALLENGE' : 'THÁCH THỨC'}
-                </div>
-                <p className="text-white/80 font-medium leading-relaxed">
-                  {lang === 'EN' ? activeIndustry.enChallenge : activeIndustry.viChallenge}
-                </p>
-              </div>
-
-              <div className="mb-10 relative z-10">
-                <div className="text-[10px] font-bold tracking-widest text-[#22D3EE] uppercase mb-3">
-                  {lang === 'EN' ? 'THE SOLUTION' : 'GIẢI PHÁP TỪ UDATA'}
-                </div>
-                <p className="text-[#9CA3AF] text-base md:text-lg leading-relaxed">
-                  {lang === 'EN' ? activeIndustry.enDesc : activeIndustry.viDesc}
-                </p>
-              </div>
-
-              <div className="mt-auto relative z-10">
-                <div className="text-[10px] font-bold tracking-widest text-white/40 uppercase mb-4">
-                  {lang === 'EN' ? 'POWERED BY' : 'ĐƯỢC VẬN HÀNH BỞI'}
-                </div>
-                <div className="flex flex-wrap gap-3 mb-10">
-                  {activeIndustry.poweredBy.map(product => {
-                    let colorClass = "";
-                    let shimmerClass = "";
-                    switch (product.toLowerCase()) {
-                      case 'uboard': 
-                        colorClass = 'border-[#22D3EE]/30 bg-[#22D3EE]/10 text-[#22D3EE] shadow-[0_0_15px_rgba(34,211,238,0.15)]';
-                        shimmerClass = 'via-[#22D3EE]/20';
-                        break;
-                      case 'ugate': 
-                      case 'miniugate':
-                        colorClass = 'border-[#3B82F6]/30 bg-[#3B82F6]/10 text-[#3B82F6] shadow-[0_0_15px_rgba(59,130,246,0.15)]';
-                        shimmerClass = 'via-[#3B82F6]/20';
-                        break;
-                      case 'uzero': 
-                        colorClass = 'border-[#10B981]/30 bg-[#10B981]/10 text-[#10B981] shadow-[0_0_15px_rgba(16,185,129,0.15)]';
-                        shimmerClass = 'via-[#10B981]/20';
-                        break;
-                      default:
-                        colorClass = 'border-[#22D3EE]/30 bg-[#22D3EE]/10 text-[#22D3EE] shadow-[0_0_15px_rgba(34,211,238,0.15)]';
-                        shimmerClass = 'via-[#22D3EE]/20';
-                    }
-                    return (
-                      <span 
-                        key={product} 
-                        className={`px-4 py-1.5 rounded-full border text-xs font-bold tracking-wider relative overflow-hidden ${colorClass}`}
-                      >
-                        <div className={`absolute inset-0 bg-gradient-to-r from-transparent to-transparent -translate-x-full animate-[shimmer_2s_infinite] ${shimmerClass}`}></div>
-                        <span className="relative z-10">{product}</span>
-                      </span>
-                    );
-                  })}
-                </div>
-
-                <HoverFillButton 
-                  onClick={() => router.push(activeIndustry.link)}
-                  className="bg-[#22D3EE] text-[#06101F] px-6 py-3 rounded-xl font-bold text-sm w-max hover:scale-105 transition-all shadow-[0_0_15px_rgba(34,211,238,0.2)]"
-                >
-                  {lang === 'EN' ? activeIndustry.enCTA : activeIndustry.viCTA}
-                </HoverFillButton>
-              </div>
-
-            </div>
+          {/* Desktop Right Content */}
+          <div className="hidden lg:block w-full lg:w-2/3" key={activeTab}>
+            {renderContent(activeIndustry)}
           </div>
 
         </div>

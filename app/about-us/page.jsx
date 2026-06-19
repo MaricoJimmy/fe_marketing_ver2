@@ -52,12 +52,11 @@ export default function AboutUs() {
 
   return (
     <div className="pt-24 md:pt-32 pb-10 md:pb-20 px-margin-mobile md:px-margin-desktop min-h-screen overflow-hidden">
-      <AnimatedBackground />
       <div className="max-w-[1440px] mx-auto space-y-xl">
         
         <section 
           ref={headerRef} 
-          className="flex flex-col items-center justify-center space-y-6 md:space-y-8 min-h-[50vh] md:min-h-[65vh] w-full mx-auto relative z-10"
+          className="flex flex-col items-center justify-center space-y-6 md:space-y-8 min-h-[50vh] md:min-h-[65vh] w-full mx-auto relative z-10 px-4"
         >
           <div 
             className="inline-block bg-[#22D3EE]/10 border border-[#22D3EE]/30 px-6 py-2.5 rounded-full mb-2 backdrop-blur-md shadow-[0_0_30px_rgba(34,211,238,0.2)] transition-all duration-[1200ms] ease-[cubic-bezier(0.23,1,0.32,1)]"
@@ -72,7 +71,7 @@ export default function AboutUs() {
           </div>
           
           <h1 
-            className="font-display-lg text-4xl md:text-5xl lg:text-6xl xl:text-[4.5rem] text-white leading-[1.2] md:leading-[1.1] font-bold text-center drop-shadow-2xl max-w-6xl mx-auto transition-all duration-[1500ms] delay-100 ease-[cubic-bezier(0.23,1,0.32,1)]"
+            className="font-display-lg text-[28px] leading-[1.3] sm:text-4xl md:text-5xl lg:text-6xl xl:text-[4.5rem] text-white md:leading-[1.1] font-bold text-center drop-shadow-2xl max-w-6xl mx-auto transition-all duration-[1500ms] delay-100 ease-[cubic-bezier(0.23,1,0.32,1)]"
             style={{ 
               transform: headerVisible ? 'translateY(0) scale(1)' : 'translateY(50px) scale(0.95)', 
               opacity: headerVisible ? 1 : 0,

@@ -31,7 +31,7 @@ export default function CareersPage() {
   return (
     <div className="w-full relative pb-32">
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-margin-desktop overflow-hidden border-b border-surface-border">
+      <section className="relative pt-32 pb-20 px-4 md:px-margin-desktop overflow-hidden border-b border-surface-border">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -63,7 +63,7 @@ export default function CareersPage() {
       </section>
 
       {/* Why Udata */}
-      <section className="py-20 px-margin-desktop relative">
+      <section className="py-20 px-4 md:px-margin-desktop relative">
         <div className="max-w-[1440px] mx-auto text-center mb-16">
           <h2 className="font-headline-lg text-3xl md:text-5xl font-bold text-on-surface mb-4">
             {t('careers.why.title')}
@@ -95,7 +95,7 @@ export default function CareersPage() {
       </section>
 
       {/* Open Positions */}
-      <section id="open-roles" className="py-20 px-margin-desktop relative bg-surface-container-lowest/50">
+      <section id="open-roles" className="py-20 px-4 md:px-margin-desktop relative bg-surface-container-lowest/50">
         <div className="max-w-[1000px] mx-auto">
           <div className="mb-12">
             <h2 className="font-headline-lg text-3xl md:text-5xl font-bold text-on-surface mb-4">
@@ -188,7 +188,7 @@ export default function CareersPage() {
       </section>
 
       {/* Hiring Process */}
-      <section className="py-20 px-margin-desktop relative">
+      <section className="py-20 px-4 md:px-margin-desktop relative">
         <div className="max-w-[1000px] mx-auto text-center">
           <h2 className="font-headline-lg text-3xl md:text-5xl font-bold text-on-surface mb-4">
             {t('careers.process.title')}
@@ -222,7 +222,7 @@ export default function CareersPage() {
       </section>
 
       {/* Open Application CTA */}
-      <section className="pb-20 px-margin-desktop relative">
+      <section className="pb-20 px-4 md:px-margin-desktop relative">
         <div className="max-w-[1000px] mx-auto bg-gradient-to-r from-[#0284c7] to-[#06b6d4] rounded-3xl p-12 md:p-16 text-center text-white shadow-xl relative overflow-hidden">
           {/* Decorative background elements */}
           <div className="absolute -top-24 -left-24 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>

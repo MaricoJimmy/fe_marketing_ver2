@@ -16,7 +16,6 @@ export default function OffshoreDevTeamsPage() {
 
   return (
     <div className="min-h-screen bg-[#06101F] text-white selection:bg-[#22D3EE]/30 selection:text-white flex flex-col font-body-md overflow-x-hidden">
-      <AnimatedBackground />
 
       <main className="flex-grow pt-24 md:pt-32 pb-20 z-10 relative">
         {/* Hero Section */}

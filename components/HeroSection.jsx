@@ -74,7 +74,7 @@ export default function HeroSection({ videoSrc }) {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative pt-32 pb-20 px-margin-desktop min-h-[90vh] flex flex-col justify-center">
+    <section ref={sectionRef} className="relative pt-32 pb-20 px-4 md:px-margin-desktop min-h-[90vh] flex flex-col justify-center">
       {/* Video Background Layer */}
       <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none flex items-center justify-center -mt-16">
         <video 
@@ -96,15 +96,17 @@ export default function HeroSection({ videoSrc }) {
             {t('hero.badge')}
           </div>
 
-          <h1 className="font-display-lg text-[28px] leading-[1.3] sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white md:leading-[1.2] drop-shadow-lg text-center w-full min-h-[120px] md:min-h-[180px] px-2 flex flex-col justify-center">
+          <h1 className="font-display-lg text-[28px] leading-[1.3] sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white md:leading-[1.2] drop-shadow-lg text-center w-full px-2 flex flex-col items-center justify-start min-h-[160px] md:min-h-[200px]">
             <div className="mb-2 md:mb-4">
               {t('hero.title.part1')}
             </div>
-            <div>
-              <span className="bg-gradient-to-r from-[#22D3EE] to-[#10F0CB] bg-clip-text text-transparent">
-                {currentText}
-              </span>
-              <span className="inline-block w-1.5 md:w-2.5 h-[0.85em] bg-[#10F0CB] ml-1 md:ml-2 animate-pulse rounded-full align-baseline translate-y-[1px] md:translate-y-[2px]"></span>
+            <div className="w-full max-w-[800px] h-[80px] sm:h-[96px] md:h-[120px] lg:h-[144px] flex justify-center">
+              <div>
+                <span className="bg-gradient-to-r from-[#22D3EE] to-[#10F0CB] bg-clip-text text-transparent">
+                  {currentText}
+                </span>
+                <span className="inline-block w-1.5 md:w-2.5 h-[0.85em] bg-[#10F0CB] ml-1 md:ml-2 animate-pulse rounded-full align-baseline translate-y-[1px] md:translate-y-[2px]"></span>
+              </div>
             </div>
           </h1>
 

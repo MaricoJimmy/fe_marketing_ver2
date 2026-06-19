@@ -54,7 +54,7 @@ const translations = {
     // BentoGrid / Ecosystem
     'bento.badge': 'UDATA ECOSYSTEM',
     'bento.title': 'AIoT Ecosystem for Smart Operations',
-    'bento.subtitle': 'Udata flexibly connects and analyzes data for specific operational scenarios:<br className="hidden md:block" />from factory monitoring and ESG management to internal knowledge automation.',
+    'bento.subtitle': 'Udata flexibly connects and analyzes data for specific operational scenarios:<br class="hidden md:block" /> from factory monitoring and ESG management to internal knowledge automation.',
 
     'bento.uboard.label': 'Factory Intelligence',
     'bento.uboard.name': 'Uboard',
@@ -268,7 +268,7 @@ const translations = {
     'solutions.coming_soon': 'Solution details page is being designed...',
 
     'usecases.badge': 'PRACTICE LEADS THE WAY',
-    'usecases.title': 'How enterprises use Udata <br className="hidden md:block" />for <span class="text-[#22D3EE] drop-shadow-[0_0_15px_rgba(34,211,238,0.3)]">smart operations</span>',
+    'usecases.title': 'How enterprises use Udata <br class="hidden md:block" />for <span class="text-[#22D3EE] drop-shadow-[0_0_15px_rgba(34,211,238,0.3)]">smart operations</span>',
     'usecases.desc': 'A list of practical use cases from multiple enterprises across various industries. Each case reflects a specific data problem, and how Udata connects, processes, and creates tangible operational value.',
     'usecases.hero.btn1': 'Explore use cases',
     'usecases.hero.btn2': 'Contact for consultation',
@@ -461,7 +461,7 @@ const translations = {
     // BentoGrid / Ecosystem
     'bento.badge': 'HỆ SINH THÁI UDATA',
     'bento.title': 'Hệ sinh thái AIoT cho vận hành thông minh',
-    'bento.subtitle': 'Udata linh hoạt kết nối và tối ưu dữ liệu theo bài toán vận hành thực tế:<br className="hidden md:block" />từ giám sát nhà máy, quản trị ESG đến tự động hóa tri thức nội bộ.',
+    'bento.subtitle': 'Udata linh hoạt kết nối và tối ưu dữ liệu theo bài toán vận hành thực tế:<br class="hidden md:block" /> từ giám sát nhà máy, quản trị ESG đến tự động hóa tri thức nội bộ.',
 
     'bento.uboard.label': 'Trí tuệ Nhà máy',
     'bento.uboard.name': 'Uboard',
@@ -675,7 +675,7 @@ const translations = {
     'solutions.coming_soon': 'Trang chi tiết Giải pháp đang được thiết kế...',
 
     'usecases.badge': 'THỰC TIỄN DẪN ĐƯỜNG',
-    'usecases.title': 'Cách doanh nghiệp ứng dụng Udata <br className="hidden md:block" />vào <span class="text-[#22D3EE] drop-shadow-[0_0_15px_rgba(34,211,238,0.3)]">vận hành thông minh</span>',
+    'usecases.title': 'Cách doanh nghiệp ứng dụng Udata <br class="hidden md:block" />vào <span class="text-[#22D3EE] drop-shadow-[0_0_15px_rgba(34,211,238,0.3)]">vận hành thông minh</span>',
     'usecases.desc': 'Danh sách các tình huống ứng dụng thực tế từ nhiều doanh nghiệp ở đa dạng ngành nghề. Mỗi tình huống phản ánh một bài toán dữ liệu cụ thể, cách Udata kết nối, xử lý và tạo ra giá trị vận hành rõ rệt.',
     'usecases.hero.btn1': 'Khám phá tình huống ứng dụng',
     'usecases.hero.btn2': 'Liên hệ tư vấn giải pháp',

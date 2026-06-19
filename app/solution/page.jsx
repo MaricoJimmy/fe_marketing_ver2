@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -56,15 +56,15 @@ export default function SolutionPage() {
             </span>
           </div>
 
-          <h1 className="text-[clamp(2rem,5vh,3.75rem)] font-bold text-white leading-[1.15] tracking-tight">
+          <h1 className="text-[28px] sm:text-4xl lg:text-[clamp(2.5rem,5vh,3.75rem)] font-bold text-white leading-[1.3] lg:leading-[1.15] tracking-tight">
             {lang === 'EN' ? (
               <>
-                Transform enterprise<br />operations with <span className="text-[#22D3EE]">AIoT</span><br />
+                Transform enterprise operations with <span className="text-[#22D3EE]">AIoT</span><br className="hidden lg:block" />{' '}
                 and <span className="text-[#0EA5E9]">realtime data</span>
               </>
             ) : (
               <>
-                Chuyển đổi vận hành<br />doanh nghiệp bằng <span className="text-[#22D3EE]">AIoT</span><br />
+                Chuyển đổi vận hành doanh nghiệp bằng <span className="text-[#22D3EE]">AIoT</span><br className="hidden lg:block" />{' '}
                 và <span className="text-[#0EA5E9]">dữ liệu realtime</span>
               </>
             )}

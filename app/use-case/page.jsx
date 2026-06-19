@@ -23,7 +23,6 @@ export default function UseCasePage() {
     <div className="min-h-screen bg-[#06101F] overflow-hidden flex flex-col font-body-md">
       {/* Background for Hero */}
       <div className="absolute inset-0 pointer-events-none z-0 overflow-hidden h-[1000px]">
-        <NeuralPatternsBG />
         <div className="absolute bottom-0 w-full h-64 bg-gradient-to-t from-[#0A0E14] to-transparent"></div>
       </div>
 

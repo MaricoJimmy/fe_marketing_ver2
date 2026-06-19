@@ -60,7 +60,59 @@ export default function SolutionUseCases() {
     }
   ];
 
-  const activeCase = useCases[activeTab];
+  const renderContent = (index) => {
+    const caseItem = useCases[index];
+    return (
+      <div className="bg-[#0C1017] border border-white/5 rounded-3xl overflow-hidden shadow-2xl relative animate-in fade-in slide-in-from-bottom-4 duration-500">
+        <div className="h-64 md:h-80 w-full relative">
+          <img 
+            src={images[index]} 
+            alt={lang === 'EN' ? caseItem.enTitle : caseItem.viTitle} 
+            className="w-full h-full object-cover opacity-80 transition-opacity duration-500"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0C1017] to-transparent"></div>
+        </div>
+
+        <div className="p-8 md:p-12 relative z-10 -mt-16 bg-[#0C1017]">
+          <h3 className="text-2xl md:text-4xl font-bold text-white mb-10 drop-shadow-md">
+            {lang === 'EN' ? caseItem.enTitle : caseItem.viTitle}
+          </h3>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 relative">
+              <div className="absolute -top-4 left-6 bg-[#0C1017] px-2 text-[11px] text-white/50 font-bold uppercase tracking-widest flex items-center gap-1">
+                <span className="material-symbols-outlined text-[14px]">report_problem</span>
+                {lang === 'EN' ? 'Challenge' : 'Thách thức'}
+              </div>
+              <p className="text-[#9CA3AF] text-sm leading-relaxed mt-2">
+                {lang === 'EN' ? caseItem.enChallenge : caseItem.viChallenge}
+              </p>
+            </div>
+
+            <div className="bg-[#22D3EE]/5 border border-[#22D3EE]/20 rounded-2xl p-6 relative">
+              <div className="absolute -top-4 left-6 bg-[#0C1017] px-2 text-[11px] text-[#22D3EE] font-bold uppercase tracking-widest flex items-center gap-1">
+                <span className="material-symbols-outlined text-[14px]">lightbulb</span>
+                {lang === 'EN' ? 'Solution' : 'Giải pháp'}
+              </div>
+              <p className="text-[#E5E7EB] text-sm leading-relaxed mt-2">
+                {lang === 'EN' ? caseItem.enSolution : caseItem.viSolution}
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-gradient-to-r from-[#22D3EE]/10 to-transparent border-l-4 border-[#22D3EE] rounded-r-2xl p-6">
+            <div className="text-[11px] text-[#22D3EE] font-bold uppercase tracking-widest mb-2 flex items-center gap-1.5">
+              <span className="material-symbols-outlined text-sm">trending_up</span>
+              {lang === 'EN' ? 'Business Impact' : 'Tác động kinh doanh'}
+            </div>
+            <p className="text-white text-base font-medium leading-relaxed">
+              {lang === 'EN' ? caseItem.enImpact : caseItem.viImpact}
+            </p>
+          </div>
+        </div>
+      </div>
+    );
+  };
 
   return (
     <section className="py-20 md:py-28 px-6 md:px-12 bg-[#080B10] border-t border-white/5 relative z-10">
@@ -78,103 +130,64 @@ export default function SolutionUseCases() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
           
-          {/* Left Column: Tabs */}
+          {/* Menu & Mobile Layout */}
           <div className="lg:col-span-4 flex flex-col gap-4 h-full">
             {useCases.map((useCase, index) => {
               const isActive = activeTab === index;
               return (
-                <button 
-                  key={index}
-                  onClick={() => setActiveTab(index)}
-                  className={`flex-1 flex flex-col justify-center text-left p-6 rounded-2xl border transition-all duration-300 ${
-                    isActive 
-                      ? 'bg-[#22D3EE]/10 border-[#22D3EE]/50 shadow-[0_0_30px_rgba(34,211,238,0.1)]' 
-                      : 'bg-[#0C1017] border-white/5 hover:bg-white/5 hover:border-white/20 opacity-70 hover:opacity-100'
-                  }`}
-                >
-                  <div className="flex flex-wrap gap-2 mb-3">
-                    {useCase.tags.map(tag => {
-                      let tagColor = "";
-                      switch (tag.toLowerCase()) {
-                        case 'uboard': 
-                          tagColor = isActive ? 'bg-[#22D3EE]/20 text-[#22D3EE]' : 'bg-[#22D3EE]/10 text-[#22D3EE]/60'; 
-                          break;
-                        case 'ugate':
-                        case 'miniugate': 
-                          tagColor = isActive ? 'bg-[#3B82F6]/20 text-[#3B82F6]' : 'bg-[#3B82F6]/10 text-[#3B82F6]/60'; 
-                          break;
-                        case 'uzero': 
-                          tagColor = isActive ? 'bg-[#10B981]/20 text-[#10B981]' : 'bg-[#10B981]/10 text-[#10B981]/60'; 
-                          break;
-                        default: 
-                          tagColor = isActive ? 'bg-[#22D3EE]/20 text-[#22D3EE]' : 'bg-white/10 text-white/60';
-                      }
-                      return (
-                        <span 
-                          key={tag} 
-                          className={`px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-widest ${tagColor}`}
-                        >
-                          {tag}
-                        </span>
-                      );
-                    })}
+                <div key={index} className="flex flex-col">
+                  <button 
+                    onClick={() => setActiveTab(index)}
+                    className={`flex-1 flex flex-col justify-center text-left p-6 rounded-2xl border transition-all duration-300 ${
+                      isActive 
+                        ? 'bg-[#22D3EE]/10 border-[#22D3EE]/50 shadow-[0_0_30px_rgba(34,211,238,0.1)]' 
+                        : 'bg-[#22D3EE]/10 border-[#22D3EE]/50 shadow-[0_0_30px_rgba(34,211,238,0.1)] lg:bg-[#0C1017] lg:border-white/5 lg:shadow-none hover:bg-white/5 hover:border-white/20 opacity-100 lg:opacity-70 lg:hover:opacity-100'
+                    }`}
+                  >
+                    <div className="flex flex-wrap gap-2 mb-3">
+                      {useCase.tags.map(tag => {
+                        let tagColor = "";
+                        switch (tag.toLowerCase()) {
+                          case 'uboard': 
+                            tagColor = isActive ? 'bg-[#22D3EE]/20 text-[#22D3EE]' : 'bg-[#22D3EE]/20 text-[#22D3EE] lg:bg-[#22D3EE]/10 lg:text-[#22D3EE]/60'; 
+                            break;
+                          case 'ugate':
+                          case 'miniugate': 
+                            tagColor = isActive ? 'bg-[#3B82F6]/20 text-[#3B82F6]' : 'bg-[#3B82F6]/20 text-[#3B82F6] lg:bg-[#3B82F6]/10 lg:text-[#3B82F6]/60'; 
+                            break;
+                          case 'uzero': 
+                            tagColor = isActive ? 'bg-[#10B981]/20 text-[#10B981]' : 'bg-[#10B981]/20 text-[#10B981] lg:bg-[#10B981]/10 lg:text-[#10B981]/60'; 
+                            break;
+                          default: 
+                            tagColor = isActive ? 'bg-[#22D3EE]/20 text-[#22D3EE]' : 'bg-[#22D3EE]/20 text-[#22D3EE] lg:bg-white/10 lg:text-white/60';
+                        }
+                        return (
+                          <span 
+                            key={tag} 
+                            className={`px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-widest ${tagColor}`}
+                          >
+                            {tag}
+                          </span>
+                        );
+                      })}
+                    </div>
+                    <h3 className={`text-lg md:text-xl font-bold ${isActive ? 'text-[#22D3EE]' : 'text-[#22D3EE] lg:text-white'}`}>
+                      {lang === 'EN' ? useCase.enTitle : useCase.viTitle}
+                    </h3>
+                  </button>
+
+                  {/* Mobile Content (always show) */}
+                  <div className="lg:hidden mt-4 mb-4">
+                    {renderContent(index)}
                   </div>
-                  <h3 className={`text-lg md:text-xl font-bold ${isActive ? 'text-[#22D3EE]' : 'text-white'}`}>
-                    {lang === 'EN' ? useCase.enTitle : useCase.viTitle}
-                  </h3>
-                </button>
+                </div>
               );
             })}
           </div>
 
-          {/* Right Column: Content */}
-          <div className="lg:col-span-8 bg-[#0C1017] border border-white/5 rounded-3xl overflow-hidden shadow-2xl relative">
-            <div className="h-64 md:h-80 w-full relative">
-              <img 
-                src={images[activeTab]} 
-                alt={lang === 'EN' ? activeCase.enTitle : activeCase.viTitle} 
-                className="w-full h-full object-cover opacity-80 transition-opacity duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0C1017] to-transparent"></div>
-            </div>
-
-            <div className="p-8 md:p-12 relative z-10 -mt-16 bg-[#0C1017]">
-              <h3 className="text-2xl md:text-4xl font-bold text-white mb-10 drop-shadow-md">
-                {lang === 'EN' ? activeCase.enTitle : activeCase.viTitle}
-              </h3>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
-                <div className="bg-white/5 border border-white/10 rounded-2xl p-6 relative">
-                  <div className="absolute -top-4 left-6 bg-[#0C1017] px-2 text-[11px] text-white/50 font-bold uppercase tracking-widest flex items-center gap-1">
-                    <span className="material-symbols-outlined text-[14px]">report_problem</span>
-                    {lang === 'EN' ? 'Challenge' : 'Thách thức'}
-                  </div>
-                  <p className="text-[#9CA3AF] text-sm leading-relaxed mt-2">
-                    {lang === 'EN' ? activeCase.enChallenge : activeCase.viChallenge}
-                  </p>
-                </div>
-
-                <div className="bg-[#22D3EE]/5 border border-[#22D3EE]/20 rounded-2xl p-6 relative">
-                  <div className="absolute -top-4 left-6 bg-[#0C1017] px-2 text-[11px] text-[#22D3EE] font-bold uppercase tracking-widest flex items-center gap-1">
-                    <span className="material-symbols-outlined text-[14px]">lightbulb</span>
-                    {lang === 'EN' ? 'Solution' : 'Giải pháp'}
-                  </div>
-                  <p className="text-[#E5E7EB] text-sm leading-relaxed mt-2">
-                    {lang === 'EN' ? activeCase.enSolution : activeCase.viSolution}
-                  </p>
-                </div>
-              </div>
-
-              <div className="bg-gradient-to-r from-[#22D3EE]/10 to-transparent border-l-4 border-[#22D3EE] rounded-r-2xl p-6">
-                <div className="text-[11px] text-[#22D3EE] font-bold uppercase tracking-widest mb-2 flex items-center gap-1.5">
-                  <span className="material-symbols-outlined text-sm">trending_up</span>
-                  {lang === 'EN' ? 'Business Impact' : 'Tác động kinh doanh'}
-                </div>
-                <p className="text-white text-base font-medium leading-relaxed">
-                  {lang === 'EN' ? activeCase.enImpact : activeCase.viImpact}
-                </p>
-              </div>
-            </div>
+          {/* Desktop Right Column: Content */}
+          <div className="hidden lg:block lg:col-span-8">
+            {renderContent(activeTab)}
           </div>
         </div>
 

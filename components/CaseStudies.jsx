@@ -115,9 +115,11 @@ export default function CaseStudies() {
           <div className="relative w-full max-w-[1440px] h-full overflow-y-auto overflow-x-hidden py-12 px-4 md:px-12 z-[105]">
             <div className="mb-10 text-center">
               <h2 className="text-3xl md:text-5xl font-display-lg font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#22D3EE] to-[#10F0CB] drop-shadow-lg">
-                Tất cả câu chuyện thành công ({CASE_STUDIES.length})
+                {lang === 'EN' ? `All Use Cases (${CASE_STUDIES.length})` : `Tất cả tình huống ứng dụng (${CASE_STUDIES.length})`}
               </h2>
-              <p className="text-white/80 mt-4 font-body-md text-lg">Khám phá cách các doanh nghiệp chuyển đổi số cùng UDATA</p>
+              <p className="text-white/80 mt-4 font-body-md text-lg">
+                {lang === 'EN' ? 'Discover how enterprises transform with UDATA' : 'Khám phá cách các doanh nghiệp chuyển đổi số cùng UDATA'}
+              </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
