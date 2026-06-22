@@ -96,11 +96,11 @@ export default function HeroSection({ videoSrc }) {
             {t('hero.badge')}
           </div>
 
-          <h1 className="font-display-lg text-[28px] leading-[1.3] sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white md:leading-[1.2] drop-shadow-lg text-center w-full px-2 flex flex-col items-center justify-start min-h-[160px] md:min-h-[200px]">
-            <div className="mb-2 md:mb-4">
+          <h1 className="font-display-lg text-[28px] leading-[1.3] sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white md:leading-[1.2] drop-shadow-lg text-center w-full px-2 flex flex-col items-center justify-start min-h-[140px] md:min-h-[200px]">
+            <div className="mb-1 md:mb-4">
               {t('hero.title.part1')}
             </div>
-            <div className="w-full max-w-[800px] h-[80px] sm:h-[96px] md:h-[120px] lg:h-[144px] flex justify-center">
+            <div className="w-full max-w-[800px] h-[60px] sm:h-[96px] md:h-[120px] lg:h-[144px] flex justify-center">
               <div>
                 <span className="bg-gradient-to-r from-[#22D3EE] to-[#10F0CB] bg-clip-text text-transparent">
                   {currentText}
@@ -111,24 +111,24 @@ export default function HeroSection({ videoSrc }) {
           </h1>
 
           <p 
-            className="font-body-md text-base md:text-xl text-white/70 w-full max-w-3xl mx-auto drop-shadow-md mt-6 text-center px-2 md:px-0 leading-relaxed"
+            className="font-body-md text-sm md:text-xl text-white/70 w-full max-w-3xl mx-auto drop-shadow-md mt-2 md:mt-6 text-center px-2 md:px-0 leading-relaxed line-clamp-3 md:line-clamp-none"
             dangerouslySetInnerHTML={{ __html: t('hero.subtitle') }}
           />
 
-          <div className="flex flex-wrap justify-center items-center gap-4 pt-8">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-3 md:gap-4 pt-4 md:pt-8 w-full px-4 sm:px-0">
             <HoverFillButton 
               onClick={() => router.push('/dung-thu')}
-              className="bg-gradient-to-r from-[#22D3EE] to-[#10F0CB] text-[#06101F] px-8 py-3.5 rounded-xl font-bold text-base shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all flex items-center gap-2"
+              className="w-full sm:w-auto justify-center bg-gradient-to-r from-[#22D3EE] to-[#10F0CB] text-[#06101F] px-6 md:px-8 py-3 md:py-3.5 rounded-xl font-bold text-sm md:text-base shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all flex items-center gap-2"
             >
               {t('hero.btn.freeTrial')}
-              <span className="material-symbols-outlined text-sm font-bold">arrow_outward</span>
+              <span className="material-symbols-outlined text-xs md:text-sm font-bold">arrow_outward</span>
             </HoverFillButton>
             <HoverFillButton 
               onClick={() => setShowVideo(true)}
               rippleColor="bg-[#22D3EE]" 
-              className="border border-white/20 text-white px-8 py-3.5 rounded-xl font-bold text-base hover:bg-white/5 transition-all backdrop-blur-sm flex items-center gap-2"
+              className="w-full sm:w-auto justify-center border border-white/20 text-white px-6 md:px-8 py-3 md:py-3.5 rounded-xl font-bold text-sm md:text-base hover:bg-white/5 transition-all backdrop-blur-sm flex items-center gap-2"
             >
-              <span className="material-symbols-outlined text-base" style={{ fontVariationSettings: '"FILL" 1' }}>play_arrow</span>
+              <span className="material-symbols-outlined text-sm md:text-base" style={{ fontVariationSettings: '"FILL" 1' }}>play_arrow</span>
               {t('hero.btn.seePlatform')}
             </HoverFillButton>
           </div>

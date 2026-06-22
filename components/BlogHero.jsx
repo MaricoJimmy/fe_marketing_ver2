@@ -44,13 +44,13 @@ export default function BlogHero() {
           </span>
         </div>
 
-        <h1 className="text-4xl md:text-5xl lg:text-[64px] font-bold text-white leading-[1.1] mb-6 max-w-4xl tracking-tight">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[64px] font-bold text-white leading-tight md:leading-[1.1] mb-4 md:mb-6 max-w-4xl tracking-tight text-balance">
           {lang === 'VI' 
             ? <>Tri thức vận hành cho doanh nghiệp trong kỷ nguyên <span className="text-[#22D3EE]">dữ liệu và AIoT</span></>
             : <>Operational knowledge for businesses in the <span className="text-[#22D3EE]">data and AIoT</span> era</>}
         </h1>
         
-        <p className="text-[#9CA3AF] text-lg md:text-xl leading-relaxed max-w-2xl mb-10">
+        <p className="text-[#9CA3AF] text-sm sm:text-base md:text-xl leading-relaxed max-w-2xl mb-8 md:mb-10 text-balance">
           {lang === 'VI' 
             ? 'Cập nhật những xu hướng công nghệ mới nhất, case study thực tế và chiến lược triển khai chuyển đổi số xanh dành cho doanh nghiệp sản xuất và hạ tầng.'
             : 'Update on the latest technology trends, real-world case studies, and green digital transformation deployment strategies for manufacturing and infrastructure businesses.'}

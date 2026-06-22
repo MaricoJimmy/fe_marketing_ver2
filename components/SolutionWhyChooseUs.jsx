@@ -1,9 +1,41 @@
 "use client";
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function SolutionWhyChooseUs() {
   const { lang } = useLanguage();
+  const scrollContainerRef = useRef(null);
+
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+    
+    let scrollInterval;
+    const checkAndScroll = () => {
+      if (window.innerWidth < 768) { // md breakpoint
+        scrollInterval = setInterval(() => {
+          const maxScrollLeft = container.scrollWidth - container.clientWidth;
+          if (container.scrollLeft >= maxScrollLeft - 10) {
+            container.scrollTo({ left: 0, behavior: 'smooth' });
+          } else {
+            container.scrollBy({ left: container.clientWidth * 0.8, behavior: 'smooth' });
+          }
+        }, 3500);
+      }
+    };
+
+    checkAndScroll();
+    
+    return () => {
+      if (scrollInterval) clearInterval(scrollInterval);
+    };
+  }, []);
+
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: window.innerWidth * 0.8, behavior: 'smooth' });
+    }
+  };
 
   const reasons = [
     {
@@ -76,7 +108,8 @@ export default function SolutionWhyChooseUs() {
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-6">
+        {/* Desktop Layout */}
+        <div className="hidden md:flex flex-wrap justify-center gap-6">
           {reasons.map((reason, index) => (
             <div 
               key={index} 
@@ -95,6 +128,43 @@ export default function SolutionWhyChooseUs() {
               </p>
             </div>
           ))}
+        </div>
+
+        {/* Mobile Horizontal Slider */}
+        <div className="md:hidden relative group/scroll w-full">
+          <div 
+            ref={scrollContainerRef}
+            className="flex flex-row overflow-x-auto snap-x snap-mandatory gap-4 pb-6 scrollbar-hide"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
+            {reasons.map((reason, index) => (
+              <div 
+                key={index} 
+                className="w-[85vw] sm:w-[60vw] shrink-0 snap-center bg-[#0C1017] border border-white/5 rounded-2xl p-6"
+              >
+                <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-6 ${reason.bgColor}`}>
+                  <span className={`material-symbols-outlined ${reason.color}`}>{reason.icon}</span>
+                </div>
+                
+                <h3 className="text-xl font-bold text-white mb-4">
+                  {lang === 'EN' ? reason.enTitle : reason.viTitle}
+                </h3>
+                
+                <p className="text-[#9CA3AF] text-sm leading-relaxed">
+                  {lang === 'EN' ? reason.enDesc : reason.viDesc}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          {/* Faint arrow indicator for mobile */}
+          <button 
+            onClick={scrollRight}
+            className="absolute right-1 top-[45%] -translate-y-1/2 w-8 h-8 rounded-full bg-white/5 backdrop-blur-md border border-white/10 flex items-center justify-center z-10 text-white/40 active:bg-white/10 transition-colors"
+            aria-label="Scroll right"
+          >
+            <span className="material-symbols-outlined text-base">chevron_right</span>
+          </button>
         </div>
       </div>
     </section>

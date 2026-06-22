@@ -1,10 +1,11 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function SolutionUseCases() {
   const { lang } = useLanguage();
   const [activeTab, setActiveTab] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
 
   const images = [
     "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200", // Factory
@@ -60,52 +61,83 @@ export default function SolutionUseCases() {
     }
   ];
 
+  const tabsRef = useRef(null);
+  const scrollDirection = useRef(1);
+
+  // Auto-scroll effect for mobile tabs
+  useEffect(() => {
+    if (isHovered) return;
+    const container = tabsRef.current;
+    if (!container) return;
+
+    const timer = setInterval(() => {
+      if (scrollDirection.current === 1) {
+        container.scrollBy({ left: 150, behavior: 'smooth' });
+        // Check if we reached the right end
+        if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 20) {
+          scrollDirection.current = -1;
+        }
+      } else {
+        container.scrollBy({ left: -150, behavior: 'smooth' });
+        // Check if we reached the left end
+        if (container.scrollLeft <= 20) {
+          scrollDirection.current = 1;
+        }
+      }
+    }, 4000); // Scroll every 4 seconds
+
+    return () => clearInterval(timer);
+  }, [isHovered]);
+
   const renderContent = (index) => {
     const caseItem = useCases[index];
     return (
-      <div className="bg-[#0C1017] border border-white/5 rounded-3xl overflow-hidden shadow-2xl relative animate-in fade-in slide-in-from-bottom-4 duration-500">
-        <div className="h-64 md:h-80 w-full relative">
+      <div className="bg-[#0C1017] border border-white/5 rounded-3xl overflow-hidden shadow-2xl relative animate-in fade-in slide-in-from-bottom-4 duration-500 flex flex-col">
+        
+        {/* Header with Background Image */}
+        <div className="relative min-h-[120px] md:min-h-[200px] flex items-end p-5 md:p-10">
           <img 
             src={images[index]} 
             alt={lang === 'EN' ? caseItem.enTitle : caseItem.viTitle} 
-            className="w-full h-full object-cover opacity-80 transition-opacity duration-500"
+            className="absolute inset-0 w-full h-full object-cover opacity-40 transition-opacity duration-500"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0C1017] to-transparent"></div>
-        </div>
-
-        <div className="p-8 md:p-12 relative z-10 -mt-16 bg-[#0C1017]">
-          <h3 className="text-2xl md:text-4xl font-bold text-white mb-10 drop-shadow-md">
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0C1017] via-[#0C1017]/60 to-transparent"></div>
+          
+          <h3 className="relative z-10 text-lg md:text-4xl font-bold text-white drop-shadow-md leading-tight">
             {lang === 'EN' ? caseItem.enTitle : caseItem.viTitle}
           </h3>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
-            <div className="bg-white/5 border border-white/10 rounded-2xl p-6 relative">
-              <div className="absolute -top-4 left-6 bg-[#0C1017] px-2 text-[11px] text-white/50 font-bold uppercase tracking-widest flex items-center gap-1">
-                <span className="material-symbols-outlined text-[14px]">report_problem</span>
+        {/* Text Content */}
+        <div className="p-4 pt-2 md:p-10 md:pt-4 relative z-10 flex flex-col gap-4 md:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
+            <div className="bg-white/5 border border-white/10 rounded-xl md:rounded-2xl p-3 md:p-6 relative mt-2 md:mt-0">
+              <div className="absolute -top-3 md:-top-4 left-3 md:left-6 bg-[#0C1017] px-2 text-[9px] md:text-[11px] text-white/50 font-bold uppercase tracking-widest flex items-center gap-1">
+                <span className="material-symbols-outlined text-[12px] md:text-[14px]">report_problem</span>
                 {lang === 'EN' ? 'Challenge' : 'Thách thức'}
               </div>
-              <p className="text-[#9CA3AF] text-sm leading-relaxed mt-2">
+              <p className="text-[#9CA3AF] text-xs md:text-sm leading-relaxed mt-1 md:mt-2">
                 {lang === 'EN' ? caseItem.enChallenge : caseItem.viChallenge}
               </p>
             </div>
 
-            <div className="bg-[#22D3EE]/5 border border-[#22D3EE]/20 rounded-2xl p-6 relative">
-              <div className="absolute -top-4 left-6 bg-[#0C1017] px-2 text-[11px] text-[#22D3EE] font-bold uppercase tracking-widest flex items-center gap-1">
-                <span className="material-symbols-outlined text-[14px]">lightbulb</span>
+            <div className="bg-[#22D3EE]/5 border border-[#22D3EE]/20 rounded-xl md:rounded-2xl p-3 md:p-6 relative mt-2 md:mt-0">
+              <div className="absolute -top-3 md:-top-4 left-3 md:left-6 bg-[#0C1017] px-2 text-[9px] md:text-[11px] text-[#22D3EE] font-bold uppercase tracking-widest flex items-center gap-1">
+                <span className="material-symbols-outlined text-[12px] md:text-[14px]">lightbulb</span>
                 {lang === 'EN' ? 'Solution' : 'Giải pháp'}
               </div>
-              <p className="text-[#E5E7EB] text-sm leading-relaxed mt-2">
+              <p className="text-[#E5E7EB] text-xs md:text-sm leading-relaxed mt-1 md:mt-2">
                 {lang === 'EN' ? caseItem.enSolution : caseItem.viSolution}
               </p>
             </div>
           </div>
 
-          <div className="bg-gradient-to-r from-[#22D3EE]/10 to-transparent border-l-4 border-[#22D3EE] rounded-r-2xl p-6">
-            <div className="text-[11px] text-[#22D3EE] font-bold uppercase tracking-widest mb-2 flex items-center gap-1.5">
-              <span className="material-symbols-outlined text-sm">trending_up</span>
+          <div className="bg-gradient-to-r from-[#22D3EE]/10 to-transparent border-l-[3px] md:border-l-4 border-[#22D3EE] rounded-r-xl md:rounded-r-2xl p-3 md:p-6">
+            <div className="text-[9px] md:text-[11px] text-[#22D3EE] font-bold uppercase tracking-widest mb-1 md:mb-2 flex items-center gap-1.5">
+              <span className="material-symbols-outlined text-[12px] md:text-sm">trending_up</span>
               {lang === 'EN' ? 'Business Impact' : 'Tác động kinh doanh'}
             </div>
-            <p className="text-white text-base font-medium leading-relaxed">
+            <p className="text-white text-[13px] md:text-base font-medium leading-[1.4] md:leading-relaxed">
               {lang === 'EN' ? caseItem.enImpact : caseItem.viImpact}
             </p>
           </div>
@@ -115,7 +147,16 @@ export default function SolutionUseCases() {
   };
 
   return (
-    <section className="py-20 md:py-28 px-6 md:px-12 bg-[#080B10] border-t border-white/5 relative z-10">
+    <section 
+      className="py-20 md:py-28 px-6 md:px-12 bg-[#080B10] border-t border-white/5 relative z-10"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onTouchStart={() => setIsHovered(true)}
+      onTouchEnd={() => {
+        // Resume auto-play shortly after touch ends
+        setTimeout(() => setIsHovered(false), 3000);
+      }}
+    >
       <div className="max-w-[1440px] mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
@@ -130,8 +171,8 @@ export default function SolutionUseCases() {
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
           
-          {/* Menu & Mobile Layout */}
-          <div className="lg:col-span-4 flex flex-col gap-4 h-full">
+          {/* Menu for Desktop */}
+          <div className="hidden lg:flex lg:col-span-4 flex-col gap-4 h-full">
             {useCases.map((useCase, index) => {
               const isActive = activeTab === index;
               return (
@@ -140,8 +181,8 @@ export default function SolutionUseCases() {
                     onClick={() => setActiveTab(index)}
                     className={`flex-1 flex flex-col justify-center text-left p-6 rounded-2xl border transition-all duration-300 ${
                       isActive 
-                        ? 'bg-[#22D3EE]/10 border-[#22D3EE]/50 shadow-[0_0_30px_rgba(34,211,238,0.1)]' 
-                        : 'bg-[#22D3EE]/10 border-[#22D3EE]/50 shadow-[0_0_30px_rgba(34,211,238,0.1)] lg:bg-[#0C1017] lg:border-white/5 lg:shadow-none hover:bg-white/5 hover:border-white/20 opacity-100 lg:opacity-70 lg:hover:opacity-100'
+                        ? 'bg-transparent border-transparent lg:bg-[#22D3EE]/10 lg:border-[#22D3EE]/50 shadow-[0_0_30px_rgba(34,211,238,0.1)]' 
+                        : 'bg-transparent border-transparent lg:bg-[#0C1017] lg:border-white/5 lg:shadow-none hover:bg-white/5 hover:border-white/20 opacity-100 lg:opacity-70 lg:hover:opacity-100'
                     }`}
                   >
                     <div className="flex flex-wrap gap-2 mb-3">
@@ -149,17 +190,17 @@ export default function SolutionUseCases() {
                         let tagColor = "";
                         switch (tag.toLowerCase()) {
                           case 'uboard': 
-                            tagColor = isActive ? 'bg-[#22D3EE]/20 text-[#22D3EE]' : 'bg-[#22D3EE]/20 text-[#22D3EE] lg:bg-[#22D3EE]/10 lg:text-[#22D3EE]/60'; 
+                            tagColor = isActive ? 'bg-[#22D3EE]/20 text-[#22D3EE]' : 'lg:bg-[#22D3EE]/10 lg:text-[#22D3EE]/60'; 
                             break;
                           case 'ugate':
                           case 'miniugate': 
-                            tagColor = isActive ? 'bg-[#3B82F6]/20 text-[#3B82F6]' : 'bg-[#3B82F6]/20 text-[#3B82F6] lg:bg-[#3B82F6]/10 lg:text-[#3B82F6]/60'; 
+                            tagColor = isActive ? 'bg-[#3B82F6]/20 text-[#3B82F6]' : 'lg:bg-[#3B82F6]/10 lg:text-[#3B82F6]/60'; 
                             break;
                           case 'uzero': 
-                            tagColor = isActive ? 'bg-[#10B981]/20 text-[#10B981]' : 'bg-[#10B981]/20 text-[#10B981] lg:bg-[#10B981]/10 lg:text-[#10B981]/60'; 
+                            tagColor = isActive ? 'bg-[#10B981]/20 text-[#10B981]' : 'lg:bg-[#10B981]/10 lg:text-[#10B981]/60'; 
                             break;
                           default: 
-                            tagColor = isActive ? 'bg-[#22D3EE]/20 text-[#22D3EE]' : 'bg-[#22D3EE]/20 text-[#22D3EE] lg:bg-white/10 lg:text-white/60';
+                            tagColor = isActive ? 'bg-[#22D3EE]/20 text-[#22D3EE]' : 'lg:bg-white/10 lg:text-white/60';
                         }
                         return (
                           <span 
@@ -171,15 +212,10 @@ export default function SolutionUseCases() {
                         );
                       })}
                     </div>
-                    <h3 className={`text-lg md:text-xl font-bold ${isActive ? 'text-[#22D3EE]' : 'text-[#22D3EE] lg:text-white'}`}>
+                    <h3 className={`text-lg md:text-xl font-bold ${isActive ? 'text-[#22D3EE]' : 'lg:text-white'}`}>
                       {lang === 'EN' ? useCase.enTitle : useCase.viTitle}
                     </h3>
                   </button>
-
-                  {/* Mobile Content (always show) */}
-                  <div className="lg:hidden mt-4 mb-4">
-                    {renderContent(index)}
-                  </div>
                 </div>
               );
             })}
@@ -188,6 +224,37 @@ export default function SolutionUseCases() {
           {/* Desktop Right Column: Content */}
           <div className="hidden lg:block lg:col-span-8">
             {renderContent(activeTab)}
+          </div>
+
+          {/* Mobile Tabs Selector */}
+          <div className="lg:hidden col-span-1 flex flex-col gap-6">
+            <div 
+              ref={tabsRef}
+              className="flex flex-row overflow-x-auto gap-3 pb-2 scrollbar-hide snap-x" 
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
+              {useCases.map((useCase, index) => {
+                const isActive = activeTab === index;
+                return (
+                  <button 
+                    key={index}
+                    onClick={() => setActiveTab(index)}
+                    className={`whitespace-nowrap px-5 py-3 rounded-full border text-sm font-bold snap-center transition-all ${
+                      isActive 
+                        ? 'bg-[#22D3EE] text-[#06101F] border-[#22D3EE] shadow-[0_0_15px_rgba(34,211,238,0.3)]' 
+                        : 'bg-[#22D3EE]/5 text-[#9CA3AF] border-white/10 hover:bg-white/5 hover:text-white'
+                    }`}
+                  >
+                    {lang === 'EN' ? useCase.enTitle : useCase.viTitle}
+                  </button>
+                );
+              })}
+            </div>
+
+            {/* Mobile Active Content */}
+            <div className="w-full" key={activeTab}>
+              {renderContent(activeTab)}
+            </div>
           </div>
         </div>
 

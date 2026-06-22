@@ -14,8 +14,8 @@ export default function BlogFeatured() {
       <div className="max-w-7xl mx-auto w-full relative z-10">
         
         {/* Section Header */}
-        <div className="flex flex-wrap items-center justify-between gap-4 mb-10 md:mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white">
+        <div className="flex flex-wrap items-center justify-between gap-4 mb-8 md:mb-12">
+          <h2 className="text-2xl md:text-4xl font-bold text-white">
             {lang === 'VI' ? 'Bài viết nổi bật' : 'Featured Articles'}
           </h2>
           <button 
@@ -44,11 +44,11 @@ export default function BlogFeatured() {
                     {mainArticle.category[lang]}
                   </span>
                   
-                  <h3 className="text-2xl lg:text-3xl font-bold text-white mb-4 group-hover:text-[#22D3EE] transition-colors leading-snug">
+                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-white mb-3 md:mb-4 group-hover:text-[#22D3EE] transition-colors leading-snug text-balance">
                     {mainArticle.title[lang]}
                   </h3>
                   
-                  <p className="text-[#9CA3AF] text-sm leading-relaxed mb-8">
+                  <p className="text-[#9CA3AF] text-xs sm:text-sm leading-relaxed mb-6 md:mb-8 line-clamp-3">
                     {mainArticle.excerpt[lang]}
                   </p>
                 </div>
@@ -105,11 +105,11 @@ export default function BlogFeatured() {
                     {article.category[lang]}
                   </span>
                   
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-[#22D3EE] transition-colors leading-snug">
+                  <h3 className="text-lg md:text-xl font-bold text-white mb-2 md:mb-3 group-hover:text-[#22D3EE] transition-colors leading-snug line-clamp-2">
                     {article.title[lang]}
                   </h3>
                   
-                  <p className="text-[#9CA3AF] text-sm leading-relaxed mb-6 line-clamp-2">
+                  <p className="text-[#9CA3AF] text-xs md:text-sm leading-relaxed mb-4 md:mb-6 line-clamp-2">
                     {article.excerpt[lang]}
                   </p>
                 </div>

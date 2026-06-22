@@ -75,19 +75,19 @@ export default function BlogTopics() {
       <div className="max-w-7xl mx-auto w-full relative z-10">
         
         {/* Section Header with Lines */}
-        <div className="flex items-center justify-center gap-4 mb-16">
-          <div className="flex items-center">
-            <div className="w-1.5 h-1.5 rounded-full bg-[#22D3EE]/50"></div>
-            <div className="w-16 md:w-32 h-[1px] bg-gradient-to-l from-[#22D3EE]/50 to-transparent"></div>
+        <div className="flex items-center justify-center gap-2 md:gap-4 mb-10 md:mb-16">
+          <div className="flex items-center shrink-0">
+            <div className="w-1 h-1 md:w-1.5 md:h-1.5 rounded-full bg-[#22D3EE]/50"></div>
+            <div className="w-6 sm:w-16 md:w-32 h-[1px] bg-gradient-to-l from-[#22D3EE]/50 to-transparent"></div>
           </div>
           
-          <h2 className="text-2xl md:text-3xl font-bold text-white text-center px-4">
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-white text-center px-2 md:px-4 text-balance leading-snug">
             {lang === 'VI' ? 'Các chủ đề Udata đang tập trung' : 'Topics Udata is Focusing On'}
           </h2>
           
-          <div className="flex items-center">
-            <div className="w-16 md:w-32 h-[1px] bg-gradient-to-r from-[#22D3EE]/50 to-transparent"></div>
-            <div className="w-1.5 h-1.5 rounded-full bg-[#22D3EE]/50"></div>
+          <div className="flex items-center shrink-0">
+            <div className="w-6 sm:w-16 md:w-32 h-[1px] bg-gradient-to-r from-[#22D3EE]/50 to-transparent"></div>
+            <div className="w-1 h-1 md:w-1.5 md:h-1.5 rounded-full bg-[#22D3EE]/50"></div>
           </div>
         </div>
 

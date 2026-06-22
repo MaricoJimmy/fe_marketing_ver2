@@ -7,8 +7,8 @@ export default function Footer() {
 
   return (
     <footer className="bg-surface-container-lowest/90 backdrop-blur-xl border-t border-surface-border relative z-10">
-      <div className="px-margin-mobile md:px-margin-desktop py-10 md:py-xl max-w-[1440px] mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-[220px_1fr_1fr_1fr] gap-10 md:gap-xl">
+      <div className="px-margin-mobile md:px-margin-desktop py-8 md:py-12 max-w-[1440px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-[220px_1fr_1fr_1fr] gap-8 md:gap-12">
 
           {/* Col 1: Logo */}
           <div className="flex flex-col">
@@ -22,7 +22,7 @@ export default function Footer() {
           </div>
 
           {/* Col 2: Đường dẫn nhanh + Copyright */}
-          <div className="space-y-6 md:space-y-lg flex flex-col h-full">
+          <div className="space-y-4 md:space-y-6 flex flex-col h-full">
             <h4 className="font-bold text-on-surface text-base">{t('footer.quick_links')}</h4>
 
             <div className="space-y-xs">
@@ -53,7 +53,7 @@ export default function Footer() {
           </div>
 
           {/* Col 3: Thông tin liên hệ */}
-          <div className="space-y-4 md:space-y-md">
+          <div className="space-y-3 md:space-y-4">
             <h4 className="font-bold text-on-surface text-base">{t('footer.contact')}</h4>
 
             {/* Phone */}
@@ -92,7 +92,7 @@ export default function Footer() {
           </div>
 
           {/* Col 4: Hồ sơ năng lực & Social */}
-          <div className="space-y-4 md:space-y-md">
+          <div className="space-y-3 md:space-y-4">
             <h4 className="font-bold text-on-surface text-base">{t('footer.profile')}</h4>
             
             {/* Download Button */}

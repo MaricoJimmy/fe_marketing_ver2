@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import HoverFillButton from '@/components/ui/HoverFillButton';
 import { useRouter } from 'next/navigation';
@@ -92,6 +92,51 @@ export default function SolutionsByIndustry() {
   ];
 
   const [activeTab, setActiveTab] = useState(industries[0].id);
+  const [mobileSelectedIndustry, setMobileSelectedIndustry] = useState(null);
+  const scrollContainerRef = useRef(null);
+
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+    
+    let scrollInterval;
+    const checkAndScroll = () => {
+      if (window.innerWidth < 1024) { // lg breakpoint
+        scrollInterval = setInterval(() => {
+          const maxScrollLeft = container.scrollWidth - container.clientWidth;
+          if (container.scrollLeft >= maxScrollLeft - 10) {
+            container.scrollTo({ left: 0, behavior: 'smooth' });
+          } else {
+            container.scrollBy({ left: container.clientWidth * 0.8, behavior: 'smooth' });
+          }
+        }, 3500);
+      }
+    };
+
+    checkAndScroll();
+    
+    return () => {
+      if (scrollInterval) clearInterval(scrollInterval);
+    };
+  }, []);
+
+  // Prevent background scrolling when mobile modal is open
+  useEffect(() => {
+    if (mobileSelectedIndustry) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [mobileSelectedIndustry]);
+
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: window.innerWidth * 0.8, behavior: 'smooth' });
+    }
+  };
   
   const activeIndustry = industries.find(ind => ind.id === activeTab);
 
@@ -113,7 +158,7 @@ export default function SolutionsByIndustry() {
         </p>
       </div>
 
-      <div className="mb-10 relative z-10">
+      <div className="mb-6 relative z-10">
         <div className="text-[10px] font-bold tracking-widest text-[#22D3EE] uppercase mb-3">
           {lang === 'EN' ? 'THE SOLUTION' : 'GIẢI PHÁP TỪ UDATA'}
         </div>
@@ -122,11 +167,11 @@ export default function SolutionsByIndustry() {
         </p>
       </div>
 
-      <div className="mt-auto relative z-10">
+      <div className="mt-2 mb-8 relative z-10">
         <div className="text-[10px] font-bold tracking-widest text-white/40 uppercase mb-4">
           {lang === 'EN' ? 'POWERED BY' : 'ĐƯỢC VẬN HÀNH BỞI'}
         </div>
-        <div className="flex flex-wrap gap-3 mb-10">
+        <div className="flex flex-wrap gap-3">
           {industry.poweredBy.map(product => {
             let colorClass = "";
             let shimmerClass = "";
@@ -159,7 +204,9 @@ export default function SolutionsByIndustry() {
             );
           })}
         </div>
+      </div>
 
+      <div className="relative z-10 mt-auto">
         <HoverFillButton 
           onClick={() => router.push(industry.link)}
           className="bg-[#22D3EE] text-[#06101F] px-6 py-3 rounded-xl font-bold text-sm w-max hover:scale-105 transition-all shadow-[0_0_15px_rgba(34,211,238,0.2)]"
@@ -171,23 +218,23 @@ export default function SolutionsByIndustry() {
   );
 
   return (
-    <section className="py-20 md:py-28 px-6 md:px-12 bg-[#080B10] relative z-10">
+    <section className="py-10 md:py-28 px-6 md:px-12 bg-[#080B10] relative z-10">
       <div className="max-w-[1200px] mx-auto">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+        <div className="text-center mb-8 md:mb-16">
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 md:mb-6">
             {lang === 'EN' ? 'Solutions by Industry and Operational Model' : 'Giải pháp theo ngành và mô hình vận hành'}
           </h2>
-          <p className="text-lg text-[#9CA3AF] max-w-4xl mx-auto">
+          <p className="text-lg text-[#9CA3AF] max-w-3xl mx-auto">
             {lang === 'EN' 
-              ? 'Udata is flexibly designed to adapt to each business model. Each solution starts with a real-world problem, then connects data, analyzes operational flows, and generates valuable insights for every management level.'
-              : 'Udata được thiết kế linh hoạt để thích ứng với từng mô hình doanh nghiệp. Mỗi giải pháp bắt đầu từ bài toán thực tế, sau đó kết nối dữ liệu, phân tích dòng chảy vận hành và tạo ra insight có giá trị cho từng cấp quản trị.'}
+              ? 'Udata is flexibly designed for any business model. We connect data and analyze operations to generate valuable insights for every management level.'
+              : 'Udata thiết kế linh hoạt cho mọi mô hình doanh nghiệp. Nền tảng kết nối dữ liệu và phân tích vận hành để tạo ra insight giá trị cho từng cấp quản trị.'}
           </p>
         </div>
 
-        <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
+        <div className="flex flex-col lg:flex-row gap-4 lg:gap-16">
           
-          {/* Menu & Mobile Layout */}
-          <div className="w-full lg:w-1/3 flex flex-col gap-2">
+          {/* Menu for Desktop */}
+          <div className="hidden lg:flex lg:w-1/3 flex-col gap-2">
             {industries.map((ind) => {
               const isActive = activeTab === ind.id;
               return (
@@ -196,22 +243,17 @@ export default function SolutionsByIndustry() {
                     onClick={() => setActiveTab(ind.id)}
                     className={`flex items-center gap-4 px-6 py-4 rounded-xl transition-all duration-300 text-left ${
                       isActive 
-                        ? 'bg-[#22D3EE]/10 border border-[#22D3EE]/20 text-[#22D3EE]' 
-                        : 'bg-[#22D3EE]/10 border border-[#22D3EE]/20 text-[#22D3EE] lg:bg-transparent lg:border-transparent lg:text-[#9CA3AF] hover:bg-white/5 hover:text-white'
+                        ? 'bg-transparent border-transparent text-[#22D3EE]' 
+                        : 'bg-transparent border-transparent text-[#9CA3AF] hover:bg-white/5 hover:text-white'
                     }`}
                   >
-                    <span className={`material-symbols-outlined ${isActive ? 'text-[#22D3EE]' : 'text-[#22D3EE] lg:text-white/40'}`}>
+                    <span className={`material-symbols-outlined ${isActive ? 'text-[#22D3EE]' : 'text-white/40'}`}>
                       {ind.icon}
                     </span>
                     <span className="font-medium text-base">
                       {lang === 'EN' ? ind.enLabel : ind.viLabel}
                     </span>
                   </button>
-
-                  {/* Mobile Content (always show) */}
-                  <div className="lg:hidden mt-4 mb-6">
-                    {renderContent(ind)}
-                  </div>
                 </div>
               );
             })}
@@ -222,8 +264,69 @@ export default function SolutionsByIndustry() {
             {renderContent(activeIndustry)}
           </div>
 
+          {/* Mobile Grid (App-like Dashboard) */}
+          <div className="lg:hidden w-full grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
+            {industries.map((ind) => (
+              <button
+                key={ind.id}
+                onClick={() => setMobileSelectedIndustry(ind.id)}
+                className="group relative bg-gradient-to-b from-[#1A2230] to-[#0C1017] border border-[#22D3EE]/20 hover:border-[#22D3EE]/50 rounded-2xl p-4 flex flex-col items-center justify-center text-center gap-3 aspect-square transition-all duration-300 shadow-[0_4px_20px_rgba(34,211,238,0.05)] active:scale-95 overflow-hidden"
+              >
+                {/* Subtle shine effect */}
+                <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-active:opacity-100 transition-opacity"></div>
+                
+                <div className="relative w-12 h-12 rounded-full bg-[#22D3EE]/15 flex items-center justify-center border border-[#22D3EE]/30 shadow-[0_0_20px_rgba(34,211,238,0.2)]">
+                  <span className="material-symbols-outlined text-[#22D3EE] text-2xl drop-shadow-[0_0_8px_rgba(34,211,238,0.5)]">{ind.icon}</span>
+                </div>
+                
+                <div className="flex flex-col items-center gap-1">
+                  <span className="font-bold text-sm text-white leading-tight">
+                    {lang === 'EN' ? ind.enLabel : ind.viLabel}
+                  </span>
+                  <span className="text-[9px] text-[#22D3EE]/70 uppercase tracking-widest flex items-center gap-0.5 mt-1">
+                    {lang === 'EN' ? 'Tap to view' : 'Chạm để xem'}
+                    <span className="material-symbols-outlined text-[10px]">ads_click</span>
+                  </span>
+                </div>
+              </button>
+            ))}
+          </div>
+
         </div>
       </div>
+
+      {/* Mobile Bottom Sheet Modal */}
+      {mobileSelectedIndustry && (
+        <div className="lg:hidden fixed inset-0 z-[100] flex flex-col justify-end">
+          {/* Backdrop */}
+          <div 
+            className="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity duration-300"
+            onClick={() => setMobileSelectedIndustry(null)}
+          />
+          
+          {/* Bottom Sheet */}
+          <div className="relative bg-[#080B10] w-full max-h-[85vh] rounded-t-3xl border-t border-[#22D3EE]/20 shadow-[0_-10px_40px_rgba(34,211,238,0.15)] flex flex-col overflow-hidden animate-in slide-in-from-bottom duration-300">
+            {/* Drag Handle & Close Button */}
+            <div className="sticky top-0 z-20 flex justify-center items-center p-4 bg-[#080B10]/80 backdrop-blur-md border-b border-white/5">
+              <div className="w-12 h-1.5 bg-white/20 rounded-full absolute top-2 left-1/2 -translate-x-1/2"></div>
+              <button 
+                onClick={() => setMobileSelectedIndustry(null)}
+                className="absolute right-4 w-8 h-8 flex items-center justify-center rounded-full bg-white/10 text-white/60 hover:text-white"
+              >
+                <span className="material-symbols-outlined text-sm">close</span>
+              </button>
+              <span className="font-bold text-white/80 text-sm mt-2 uppercase tracking-widest">
+                {lang === 'EN' ? 'Details' : 'Chi tiết'}
+              </span>
+            </div>
+            
+            {/* Content Container */}
+            <div className="overflow-y-auto p-4 pb-8 flex-1 scrollbar-hide">
+              {renderContent(industries.find(ind => ind.id === mobileSelectedIndustry))}
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

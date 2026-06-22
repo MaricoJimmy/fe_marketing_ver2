@@ -1,9 +1,41 @@
 "use client";
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function SolutionChallenges() {
   const { lang } = useLanguage();
+  const scrollContainerRef = useRef(null);
+
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+    
+    let scrollInterval;
+    const checkAndScroll = () => {
+      if (window.innerWidth < 768) {
+        scrollInterval = setInterval(() => {
+          const maxScrollLeft = container.scrollWidth - container.clientWidth;
+          if (container.scrollLeft >= maxScrollLeft - 10) {
+            container.scrollTo({ left: 0, behavior: 'smooth' });
+          } else {
+            container.scrollBy({ left: container.clientWidth * 0.8, behavior: 'smooth' });
+          }
+        }, 3500);
+      }
+    };
+
+    checkAndScroll();
+    
+    return () => {
+      if (scrollInterval) clearInterval(scrollInterval);
+    };
+  }, []);
+
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: window.innerWidth * 0.8, behavior: 'smooth' });
+    }
+  };
 
   const challenges = [
     {
@@ -50,23 +82,38 @@ export default function SolutionChallenges() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {challenges.map((card, idx) => (
-            <div 
-              key={idx} 
-              className="bg-[#0C1017] border border-white/5 rounded-2xl p-8 hover:border-[#22D3EE]/30 transition-all duration-300 group"
-            >
-              <div className="w-12 h-12 bg-[#161B22] border border-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#22D3EE]/10 group-hover:border-[#22D3EE]/30 transition-all duration-300">
-                <span className="material-symbols-outlined text-[#22D3EE]">{card.icon}</span>
+        <div className="relative group/scroll">
+          <div 
+            ref={scrollContainerRef}
+            className="flex flex-row overflow-x-auto snap-x snap-mandatory md:grid md:grid-cols-2 gap-4 md:gap-6 pb-6 md:pb-0 scrollbar-hide"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
+            {challenges.map((card, idx) => (
+              <div 
+                key={idx} 
+                className="w-[85vw] sm:w-[60vw] md:w-auto shrink-0 snap-center bg-[#0C1017] border border-white/5 rounded-2xl p-6 pr-12 md:p-8 hover:border-[#22D3EE]/30 transition-all duration-300 group"
+              >
+                <div className="w-12 h-12 bg-[#161B22] border border-white/10 rounded-xl flex items-center justify-center mb-6 group-hover:bg-[#22D3EE]/10 group-hover:border-[#22D3EE]/30 transition-all duration-300">
+                  <span className="material-symbols-outlined text-[#22D3EE]">{card.icon}</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-4 pr-2">
+                  {lang === 'EN' ? card.enTitle : card.viTitle}
+                </h3>
+                <p className="text-[#9CA3AF] text-sm md:text-[15px] leading-relaxed">
+                  {lang === 'EN' ? card.enDesc : card.viDesc}
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-white mb-4">
-                {lang === 'EN' ? card.enTitle : card.viTitle}
-              </h3>
-              <p className="text-[#9CA3AF] text-[15px] leading-relaxed">
-                {lang === 'EN' ? card.enDesc : card.viDesc}
-              </p>
-            </div>
-          ))}
+            ))}
+          </div>
+
+          {/* Faint arrow indicator for mobile */}
+          <button 
+            onClick={scrollRight}
+            className="md:hidden absolute right-1 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-white/5 backdrop-blur-md border border-white/10 flex items-center justify-center z-10 text-white/40 active:bg-white/10 transition-colors"
+            aria-label="Scroll right"
+          >
+            <span className="material-symbols-outlined text-base">chevron_right</span>
+          </button>
         </div>
       </div>
     </section>

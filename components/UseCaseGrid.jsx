@@ -617,31 +617,32 @@ export default function UseCaseGrid() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6">
           {filteredCases.map((c, i) => {
             const imageSrc = caseImages[i % caseImages.length];
             return (
               <div 
                 key={i} 
                 onClick={() => setSelectedCase(c)}
-                className="group relative min-h-[400px] md:min-h-[450px] rounded-2xl overflow-hidden glass-card transition-all duration-700 hover:-translate-y-2 cursor-pointer border border-white/5 hover:border-[#22D3EE]/50 shadow-lg"
+                className="group relative min-h-[200px] sm:min-h-[240px] md:min-h-[450px] rounded-xl md:rounded-2xl overflow-hidden glass-card transition-all duration-700 hover:-translate-y-2 cursor-pointer border border-white/5 hover:border-[#22D3EE]/50 shadow-lg"
               >
                 <img alt={lang === 'EN' ? c.enTitle : c.viTitle} className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:opacity-20 group-hover:scale-110 transition-all duration-700" src={imageSrc} />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#06101F]/95 via-[#06101F]/70 to-transparent group-hover:from-[#06101F] group-hover:via-[#06101F]/90 transition-all duration-500"></div>
 
-                <div className="absolute inset-0 p-8 flex flex-col justify-end z-20">
-                  <div className="flex items-center gap-2 mb-4">
-                    <span className="material-symbols-outlined text-[#22D3EE] text-xl">{c.icon}</span>
-                    <span className="text-[10px] font-bold text-white/50 uppercase tracking-widest">
+                <div className="absolute inset-0 p-4 sm:p-5 md:p-8 flex flex-col justify-end z-20">
+                  <div className="flex items-center gap-1.5 md:gap-2 mb-2 md:mb-4">
+                    <span className="material-symbols-outlined text-[#22D3EE] text-base md:text-xl">{c.icon}</span>
+                    <span className="text-[9px] md:text-[10px] font-bold text-white/50 uppercase tracking-widest line-clamp-1">
                       {lang === 'EN' ? c.category.en : c.category.vi}
                     </span>
                   </div>
                   
-                  <h3 className="text-xl md:text-2xl font-bold text-white mb-2 group-hover:text-[#22D3EE] transition-colors duration-300 leading-tight">
+                  <h3 className="text-sm sm:text-base md:text-2xl font-bold text-white mb-1 md:mb-2 group-hover:text-[#22D3EE] transition-colors duration-300 leading-snug md:leading-tight line-clamp-3">
                     {lang === 'EN' ? c.enTitle : c.viTitle}
                   </h3>
                   
-                  <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]">
+                  {/* Hover content - Hidden on mobile to keep cards compact, visible on md+ */}
+                  <div className="hidden md:grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]">
                     <div className="overflow-hidden flex flex-col">
                       <p className="text-[#9CA3AF] text-sm mt-3 mb-6 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 flex-1">
                         {lang === 'EN' ? c.enDesc : c.viDesc}
@@ -673,7 +674,7 @@ export default function UseCaseGrid() {
                             return (
                               <span 
                                 key={tag}
-                                className={`px-3 py-1 rounded-md border text-[10px] md:text-xs font-bold tracking-wider relative overflow-hidden ${colorClass}`}
+                                className={`px-3 py-1 rounded-md border text-xs font-bold tracking-wider relative overflow-hidden ${colorClass}`}
                               >
                                 <div className={`absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent to-transparent group-hover:animate-[shimmer_2s_infinite] ${shimmerClass}`}></div>
                                 <span className="relative z-10">{tag}</span>

@@ -4,6 +4,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function CoreInsight() {
   const sectionRef = useRef(null);
+  const scrollContainerRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
   const { t } = useLanguage();
 
@@ -16,6 +17,26 @@ export default function CoreInsight() {
     );
     if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
+  }, []);
+
+  useEffect(() => {
+    // Auto scroll logic for mobile slider
+    let interval = setInterval(() => {
+      if (scrollContainerRef.current && window.innerWidth < 640) {
+        const container = scrollContainerRef.current;
+        const maxScrollLeft = container.scrollWidth - container.clientWidth;
+        
+        // If we reached the end (with a small 10px buffer), go back to start
+        if (container.scrollLeft >= maxScrollLeft - 10) {
+          container.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          // Scroll by roughly one card width
+          container.scrollBy({ left: window.innerWidth * 0.8, behavior: 'smooth' });
+        }
+      }
+    }, 3500); // Auto slide every 3.5s
+
+    return () => clearInterval(interval);
   }, []);
 
   const features = [
@@ -53,21 +74,41 @@ export default function CoreInsight() {
               {t('core.subtitle')}
             </p>
 
-            <div className="space-y-2">
-              {features.map((f) => (
-                <div key={f.titleKey} className={`flex items-start gap-3 p-3 glass-card rounded-lg ${f.border}`}>
-                  <span
-                    className={`material-symbols-outlined text-xl shrink-0 mt-0.5 ${f.color}`}
-                    style={{ fontVariationSettings: '"FILL" 1' }}
+            <div className="relative group/scroll">
+              <div 
+                ref={scrollContainerRef}
+                className="flex flex-row sm:flex-col overflow-x-auto sm:overflow-visible snap-x snap-mandatory sm:snap-none gap-3 sm:gap-2 pb-4 sm:pb-0 scrollbar-hide"
+                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+              >
+                {features.map((f) => (
+                  <div 
+                    key={f.titleKey} 
+                    className={`flex items-start gap-3 p-4 pr-12 sm:p-3 glass-card rounded-lg w-[85vw] max-w-[85vw] sm:w-auto sm:max-w-none shrink-0 snap-center sm:snap-align-none ${f.border}`}
                   >
-                    {f.icon}
-                  </span>
-                  <div>
-                    <h4 className="text-sm font-bold text-on-surface">{t(f.titleKey)}</h4>
-                    <p className="text-xs text-on-surface-variant mt-0.5 leading-relaxed">{t(f.descKey)}</p>
+                    <span
+                      className={`material-symbols-outlined text-xl sm:text-2xl shrink-0 mt-0.5 ${f.color}`}
+                      style={{ fontVariationSettings: '"FILL" 1' }}
+                    >
+                      {f.icon}
+                    </span>
+                    <div>
+                      <h4 className="text-sm sm:text-base font-bold text-on-surface">{t(f.titleKey)}</h4>
+                      <p className="text-xs sm:text-sm text-on-surface-variant mt-1 sm:mt-0.5 leading-relaxed pr-2">{t(f.descKey)}</p>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
+
+              {/* Faint arrow indicator for mobile */}
+              <button 
+                onClick={() => {
+                  if (scrollContainerRef.current) scrollContainerRef.current.scrollBy({ left: window.innerWidth * 0.8, behavior: 'smooth' });
+                }}
+                className={`sm:hidden absolute right-1 top-[45%] -translate-y-1/2 w-8 h-8 rounded-full bg-white/5 backdrop-blur-md border border-white/10 flex items-center justify-center z-10 text-white/40 active:bg-white/10 transition-colors ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+                aria-label="Scroll right"
+              >
+                <span className="material-symbols-outlined text-base">chevron_right</span>
+              </button>
             </div>
           </div>
 

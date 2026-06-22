@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import { useRouter } from 'next/navigation';
 import { useLanguage } from '@/contexts/LanguageContext';
@@ -26,29 +26,51 @@ export default function CaseStudies() {
   const router = useRouter();
   const [selectedCase, setSelectedCase] = useState(null);
   const [modalOpen, setModalOpen] = useState(false);
+  const scrollContainerRef = useRef(null);
+
+  useEffect(() => {
+    const container = scrollContainerRef.current;
+    if (!container) return;
+    
+    let scrollInterval;
+    const checkAndScroll = () => {
+      if (window.innerWidth < 768) {
+        scrollInterval = setInterval(() => {
+          const maxScrollLeft = container.scrollWidth - container.clientWidth;
+          if (container.scrollLeft >= maxScrollLeft - 10) {
+            container.scrollTo({ left: 0, behavior: 'smooth' });
+          } else {
+            container.scrollBy({ left: container.clientWidth * 0.8, behavior: 'smooth' });
+          }
+        }, 3500);
+      }
+    };
+
+    checkAndScroll();
+    
+    return () => {
+      if (scrollInterval) clearInterval(scrollInterval);
+    };
+  }, []);
+
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({ left: window.innerWidth * 0.8, behavior: 'smooth' });
+    }
+  };
 
   // Reusable Card Component
-  const StudyCard = ({ study, isLastInPreview }) => (
+  const StudyCard = ({ study, isGrid }) => (
     <div 
       onClick={() => {
-        if (isLastInPreview) {
-          setModalOpen(true);
-        } else {
-          window.location.href = '/use-case#usecase-grid';
-        }
+        window.location.href = '/use-case#usecase-grid';
       }}
-      className="group relative aspect-[3/4] md:aspect-[4/5] lg:aspect-[3/4] rounded-2xl overflow-hidden glass-card transition-all duration-700 hover:-translate-y-2 cursor-pointer border border-surface-border hover:border-electric-cyan/50"
+      className={`group relative aspect-[4/3] md:aspect-[3/2] lg:aspect-video shrink-0 snap-center rounded-2xl overflow-hidden glass-card transition-all duration-700 hover:-translate-y-2 cursor-pointer border border-surface-border hover:border-electric-cyan/50 ${
+        isGrid ? 'w-full' : 'w-[85vw] sm:w-[45vw] lg:w-[30vw]'
+      }`}
     >
       <img alt={lang === 'EN' ? study.enTitle : study.viTitle} className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-30 group-hover:scale-110 transition-all duration-700" src={study.image} />
       <div className="absolute inset-0 bg-gradient-to-t from-[#06101F]/95 via-[#06101F]/60 to-transparent group-hover:from-[#06101F] group-hover:via-[#06101F]/80 transition-all duration-500"></div>
-      
-      {/* The +X Overlay for the last preview card */}
-      {isLastInPreview && (
-        <div className="absolute inset-0 bg-black/60 backdrop-blur-sm z-30 flex flex-col items-center justify-center transition-all duration-500 group-hover:bg-black/80">
-          <span className="text-white text-6xl font-display-lg font-bold drop-shadow-lg">+{CASE_STUDIES.length - 3}</span>
-          <span className="text-white/80 font-body-md mt-2 text-lg">Xem tất cả</span>
-        </div>
-      )}
       
       <div className="absolute inset-0 p-6 flex flex-col justify-end z-20">
         <div className="mb-4">
@@ -89,10 +111,33 @@ export default function CaseStudies() {
               {t('case.title')}
             </h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
-            {CASE_STUDIES.slice(0, 4).map((study, index) => (
-              <StudyCard key={study.viTitle} study={study} isLastInPreview={index === 3} />
-            ))}
+          <div className="relative group/scroll">
+            {/* Desktop Grid Layout */}
+            <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 pb-8">
+              {CASE_STUDIES.map((study) => (
+                <StudyCard key={study.viTitle} study={study} isGrid={true} />
+              ))}
+            </div>
+
+            {/* Mobile Horizontal Slider */}
+            <div 
+              ref={scrollContainerRef}
+              className="md:hidden flex flex-row overflow-x-auto snap-x snap-mandatory gap-4 mt-8 pb-8 scrollbar-hide"
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
+              {CASE_STUDIES.map((study) => (
+                <StudyCard key={study.viTitle} study={study} isGrid={false} />
+              ))}
+            </div>
+
+            {/* Faint arrow indicator for mobile */}
+            <button 
+              onClick={scrollRight}
+              className="md:hidden absolute right-1 top-[55%] -translate-y-1/2 w-8 h-8 rounded-full bg-white/5 backdrop-blur-md border border-white/10 flex items-center justify-center z-10 text-white/40 active:bg-white/10 transition-colors"
+              aria-label="Scroll right"
+            >
+              <span className="material-symbols-outlined text-base">chevron_right</span>
+            </button>
           </div>
         </div>
       </section>

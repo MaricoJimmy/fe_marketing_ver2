@@ -771,10 +771,10 @@ export default function ProductPage() {
               <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A] via-transparent to-[#0A0A0A] opacity-80"></div>
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[800px] h-[400px] bg-electric-cyan/20 blur-[120px] rounded-full pointer-events-none"></div>
               
-              <h2 className="relative z-10 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display-md font-bold text-white leading-tight max-w-4xl mx-auto drop-shadow-lg">
+              <h2 className="relative z-10 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display-md font-bold text-white leading-tight max-w-4xl mx-auto drop-shadow-lg text-balance">
                 {content.heading}
               </h2>
-              <p className="relative z-10 text-on-surface-variant font-body-md text-lg md:text-2xl max-w-4xl mx-auto leading-relaxed mt-6">
+              <p className="relative z-10 text-on-surface-variant font-body-md text-lg md:text-2xl max-w-4xl mx-auto leading-relaxed mt-6 text-balance">
                 {content.desc}
               </p>
               <div className="relative z-10 flex flex-wrap justify-center items-center gap-6 pt-10">

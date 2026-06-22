@@ -6,8 +6,29 @@ import { useLanguage } from '@/contexts/LanguageContext';
 export default function Workflow() {
   const [activeIndex, setActiveIndex] = useState(0);
   const containerRef = useRef(null);
+  const scrollContainerRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
   const { t, lang } = useLanguage();
+
+  useEffect(() => {
+    // Auto scroll logic for mobile slider
+    let interval = setInterval(() => {
+      if (scrollContainerRef.current && window.innerWidth < 768) { // md breakpoint for Workflow
+        const container = scrollContainerRef.current;
+        const maxScrollLeft = container.scrollWidth - container.clientWidth;
+        
+        // If we reached the end (with a small 10px buffer), go back to start
+        if (container.scrollLeft >= maxScrollLeft - 10) {
+          container.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          // Scroll by roughly one card width
+          container.scrollBy({ left: window.innerWidth * 0.85, behavior: 'smooth' });
+        }
+      }
+    }, 3500); // Auto slide every 3.5s
+
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -117,10 +138,13 @@ export default function Workflow() {
             </p>
           </div>
 
-          {/* Adjacent Accordion (Desktop) / Stacked Cards (Mobile) */}
-          <div 
-            className={`flex flex-col md:flex-row w-full flex-1 min-h-[auto] md:min-h-[200px] md:max-h-[600px] md:border border-surface-border md:rounded-2xl md:overflow-hidden transition-all duration-1000 ease-out transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-24 opacity-0'} space-y-4 md:space-y-0`}
-          >
+          {/* Adjacent Accordion (Desktop) / Horizontal Slider (Mobile) */}
+          <div className="relative group/scroll w-full flex-1 md:min-h-[200px] md:max-h-[600px]">
+            <div 
+              ref={scrollContainerRef}
+              className={`flex flex-row w-full h-full md:border border-surface-border md:rounded-2xl transition-all duration-1000 ease-out transform ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-24 opacity-0'} overflow-x-auto md:overflow-hidden snap-x snap-mandatory gap-4 md:gap-0 pb-4 md:pb-0 scrollbar-hide`}
+              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            >
             {steps.map((step, index) => {
               const isDesktopActive = activeIndex === index;
 
@@ -131,7 +155,8 @@ export default function Workflow() {
                     relative transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]
                     md:border-r border-surface-border md:last:border-r-0 overflow-hidden
                     h-auto min-h-[220px] md:h-full rounded-2xl md:rounded-none border border-surface-border md:border-0
-                    ${isDesktopActive ? 'md:flex-1 md:bg-transparent' : 'md:basis-[90px] md:shrink-0 md:grow-0 md:bg-surface-container-lowest/30'}
+                    w-[85vw] sm:w-[60vw] shrink-0 snap-center md:snap-align-none
+                    ${isDesktopActive ? 'md:flex-1 md:bg-transparent md:w-auto md:shrink md:grow' : 'md:basis-[90px] md:shrink-0 md:grow-0 md:bg-surface-container-lowest/30 md:w-auto'}
                   `}
                 >
                   {/* Dynamic Background Image */}
@@ -142,7 +167,7 @@ export default function Workflow() {
                   {/* Horizontal gradient overlay */}
                   <div className={`absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-transparent transition-opacity duration-1000 opacity-100 md:opacity-0 ${isDesktopActive ? 'md:opacity-100' : ''}`} />
 
-                  <div className="p-5 md:p-6 h-full flex flex-col relative z-10">
+                  <div className="p-5 pr-12 md:p-6 md:pr-6 h-full flex flex-col relative z-10">
                     
                     {/* Header: ID + Title */}
                     <div className="flex items-center whitespace-normal md:whitespace-nowrap mb-2 md:mb-4 opacity-100 md:opacity-80 shrink-0">
@@ -175,10 +200,42 @@ export default function Workflow() {
                 </div>
               );
             })}
-          </div>
 
-          {/* CTA Section - Old layout with step-like background image */}
-          <div className={`relative mt-2 md:mt-3 w-full glass-card rounded-2xl overflow-hidden border border-[#22D3EE]/20 transition-all duration-1000 ease-out transform shrink-0 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-24 opacity-0'} group`} style={{ transitionDelay: '300ms' }}>
+            {/* Mobile CTA (Inside the slider) */}
+            <div className={`md:hidden relative transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] overflow-hidden h-auto min-h-[220px] rounded-2xl w-[85vw] sm:w-[60vw] shrink-0 snap-center border border-[#22D3EE]/20 group flex flex-col justify-end`}>
+              <div 
+                className="absolute inset-0 bg-cover bg-[center_42%] transition-transform duration-1000 ease-in-out opacity-70 group-hover:scale-105"
+                style={{ backgroundImage: `url('/images/workflow/cta.png')` }}
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/80 to-transparent" />
+              <div className="relative z-10 p-5 pr-12 flex flex-col h-full justify-end">
+                <h3 className="font-headline-md text-lg font-bold text-white mb-2 pr-2">{t('workflow.cta.title')}</h3>
+                <p className="text-sm text-on-surface-variant mb-4">{t('workflow.cta.desc')}</p>
+                <div className="flex flex-col gap-2">
+                  <Link href="/dung-thu" className="flex items-center justify-center gap-2 bg-gradient-to-r from-[#22D3EE] to-[#10F0CB] text-[#06101F] px-4 py-2.5 rounded-xl font-bold text-sm">
+                    {t('workflow.cta.btn')}
+                  </Link>
+                  <Link href="/solution" className="flex items-center justify-center gap-2 bg-transparent border border-white/20 text-white px-4 py-2.5 rounded-xl font-bold text-sm">
+                    {lang === 'EN' ? 'View Solutions' : 'Xem giải pháp'}
+                  </Link>
+                </div>
+              </div>
+            </div>
+            </div>
+
+            {/* Faint arrow indicator for mobile */}
+            <button 
+              onClick={() => {
+                if (scrollContainerRef.current) scrollContainerRef.current.scrollBy({ left: window.innerWidth * 0.8, behavior: 'smooth' });
+              }}
+              className={`md:hidden absolute right-1 top-[45%] -translate-y-1/2 w-8 h-8 rounded-full bg-white/5 backdrop-blur-md border border-white/10 flex items-center justify-center z-10 text-white/40 active:bg-white/10 transition-colors ${isVisible ? 'opacity-100' : 'opacity-0'}`}
+              aria-label="Scroll right"
+            >
+              <span className="material-symbols-outlined text-base">chevron_right</span>
+            </button>
+          </div>
+          {/* CTA Section - Desktop only */}
+          <div className={`hidden md:block relative mt-2 md:mt-3 w-full glass-card rounded-2xl overflow-hidden border border-[#22D3EE]/20 transition-all duration-1000 ease-out transform shrink-0 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-24 opacity-0'} group`} style={{ transitionDelay: '300ms' }}>
             
             {/* Background Image matching the steps aesthetic */}
             <div 
