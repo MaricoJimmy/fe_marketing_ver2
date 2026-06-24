@@ -220,6 +220,10 @@ const translations = {
     'footer.hcm_address': '6th Floor, DHG Building, 31-33<br/>Street 18, Thong Tay Hoi Ward,<br/>Ho Chi Minh City.',
     'footer.profile': 'Company Profile',
     'footer.download_profile': 'Download Company Profile (PDF)',
+    'footer.slogan': 'AIoT platform for green digital<br/>transformation for businesses',
+    'footer.download_udata_profile': 'Download Udata Profile',
+    'footer.main_services': 'Main Services',
+    'footer.explore': 'Explore',
 
     'about.awards.title': 'Awards & Recognition',
     'about.awards.subtitle': "A milestone recognizing Udata's AIoT capabilities",
@@ -627,6 +631,10 @@ const translations = {
     'footer.hcm_address': 'Tầng 6, Tòa nhà DHG, Số 31–33,<br/>Đường 18, Phường Thông Tây Hội,<br/>Thành phố Hồ Chí Minh.',
     'footer.profile': 'Hồ sơ năng lực',
     'footer.download_profile': 'Tải Profile Công ty (PDF)',
+    'footer.slogan': 'Nền tảng AIoT chuyển<br/>đổi số xanh dành cho<br/>doanh nghiệp',
+    'footer.download_udata_profile': 'Tải hồ sơ năng lực Udata',
+    'footer.main_services': 'Dịch vụ chính',
+    'footer.explore': 'Khám phá',
 
     'about.awards.title': 'Giải thưởng & ghi nhận',
     'about.awards.subtitle': 'Dấu mốc ghi nhận năng lực AIoT của Udata',
