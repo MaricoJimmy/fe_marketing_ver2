@@ -20,8 +20,11 @@ export default function MiniUgatePage() {
   const [isChallengesVisible, setIsChallengesVisible] = useState(false);
   const solutionsRef = useRef(null);
   const [isSolutionsVisible, setIsSolutionsVisible] = useState(false);
+  const solutionsSliderRef = useRef(null);
+
   const featuresRef = useRef(null);
   const [isFeaturesVisible, setIsFeaturesVisible] = useState(false);
+  const featuresSliderRef = useRef(null);
 
   useEffect(() => {
     document.title = lang === 'EN' ? 'MiniUgate – AI Chatbot for Website | Udata' : 'MiniUgate – AI Chatbot cho Website | Udata';
@@ -72,6 +75,24 @@ export default function MiniUgatePage() {
       solutionsObserver.disconnect();
       featuresObserver.disconnect();
     };
+  }, []);
+
+  // Auto scroll effect
+  useEffect(() => {
+    const scrollInterval = setInterval(() => {
+      [solutionsSliderRef, featuresSliderRef].forEach(ref => {
+        if (ref.current) {
+          const { scrollLeft, scrollWidth, clientWidth } = ref.current;
+          if (scrollLeft + clientWidth >= scrollWidth - 20) {
+            ref.current.scrollTo({ left: 0, behavior: 'smooth' });
+          } else {
+            // Scroll right by roughly one card width (snap will correct it)
+            ref.current.scrollBy({ left: 300, behavior: 'smooth' });
+          }
+        }
+      });
+    }, 5000);
+    return () => clearInterval(scrollInterval);
   }, []);
 
   return (
@@ -291,7 +312,7 @@ export default function MiniUgatePage() {
       {/* ── Challenges Section ───────────────────────────────────────── */}
       <section 
         ref={challengesRef}
-        className="relative w-full max-w-[1440px] mx-auto px-8 md:px-20 pb-28 z-10"
+        className="relative w-full max-w-[1440px] mx-auto px-4 md:px-8 pb-28 z-10"
       >
         <div 
           className="text-center space-y-4 mb-16 transition-all duration-1000 ease-out"
@@ -308,76 +329,73 @@ export default function MiniUgatePage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {/* Card 1 */}
+        <div className="w-full max-w-[1200px] mx-auto border border-white/10 rounded-[2rem] overflow-hidden bg-[#0A0E14] grid grid-cols-2 lg:grid-cols-4">
+          
+          {/* Block 1 */}
           <div 
-            className="bg-[#111114] border border-white/10 rounded-3xl p-8 hover:bg-white/5 hover:border-[#4AA0F0]/50 hover:shadow-[0_0_30px_rgba(74,160,240,0.15)] transition-all duration-300 ease-out group"
+            className="flex flex-col items-center justify-center p-6 md:p-10 text-center border-b border-r border-white/10 lg:border-b-0 hover:bg-white/5 transition-colors"
             style={{ 
               opacity: isChallengesVisible ? 1 : 0, 
-              transform: isChallengesVisible ? 'translateY(0)' : 'translateY(40px)',
               transitionDelay: '100ms'
             }}
           >
-            <span className="material-symbols-outlined text-4xl text-[#4AA0F0] mb-6 group-hover:scale-110 transition-transform duration-300">person_off</span>
-            <h3 className="text-4xl font-bold text-white mb-4">
-              <AnimatedNumber value={65} isVisible={isChallengesVisible} />–<AnimatedNumber value={75} isVisible={isChallengesVisible} />%
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">
+              <AnimatedNumber value={65} isVisible={isChallengesVisible} />–<AnimatedNumber value={75} isVisible={isChallengesVisible} />
+              <span className="text-[#4AA0F0]">%</span>
             </h3>
-            <p className="text-white/60 leading-relaxed font-medium">
-              {lang === 'EN' ? "visitors leave the website when not supported immediately" : "khách rời website khi không được hỗ trợ ngay"}
+            <p className="text-[10px] md:text-[11px] font-semibold uppercase tracking-widest text-white/50">
+              {lang === 'EN' ? "visitors leave if not supported immediately" : "khách rời đi khi không hỗ trợ ngay"}
             </p>
           </div>
           
-          {/* Card 2 */}
+          {/* Block 2 */}
           <div 
-            className="bg-[#111114] border border-white/10 rounded-3xl p-8 hover:bg-white/5 hover:border-[#4AA0F0]/50 hover:shadow-[0_0_30px_rgba(74,160,240,0.15)] transition-all duration-300 ease-out group"
+            className="flex flex-col items-center justify-center p-6 md:p-10 text-center border-b border-white/10 lg:border-r lg:border-b-0 hover:bg-white/5 transition-colors"
             style={{ 
               opacity: isChallengesVisible ? 1 : 0, 
-              transform: isChallengesVisible ? 'translateY(0)' : 'translateY(40px)',
               transitionDelay: '200ms'
             }}
           >
-            <span className="material-symbols-outlined text-4xl text-[#4AA0F0] mb-6 group-hover:scale-110 transition-transform duration-300">schedule</span>
-            <h3 className="text-4xl font-bold text-white mb-4">
-              <AnimatedNumber value={15} isVisible={isChallengesVisible} />–<AnimatedNumber value={60} isVisible={isChallengesVisible} /> {lang === 'EN' ? 'min' : 'phút'}
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">
+              <AnimatedNumber value={15} isVisible={isChallengesVisible} />–<AnimatedNumber value={60} isVisible={isChallengesVisible} />
+              <span className="text-[#4AA0F0] text-xl ml-1">{lang === 'EN' ? 'min' : 'phút'}</span>
             </h3>
-            <p className="text-white/60 leading-relaxed font-medium">
-              {lang === 'EN' ? "is the common customer service response time" : "là thời gian phản hồi CSKH phổ biến"}
+            <p className="text-[10px] md:text-[11px] font-semibold uppercase tracking-widest text-white/50">
+              {lang === 'EN' ? "common customer service response time" : "thời gian phản hồi CSKH trung bình"}
             </p>
           </div>
 
-          {/* Card 3 */}
+          {/* Block 3 */}
           <div 
-            className="bg-[#111114] border border-white/10 rounded-3xl p-8 hover:bg-white/5 hover:border-[#4AA0F0]/50 hover:shadow-[0_0_30px_rgba(74,160,240,0.15)] transition-all duration-300 ease-out group"
+            className="flex flex-col items-center justify-center p-6 md:p-10 text-center border-r border-white/10 hover:bg-white/5 transition-colors"
             style={{ 
               opacity: isChallengesVisible ? 1 : 0, 
-              transform: isChallengesVisible ? 'translateY(0)' : 'translateY(40px)',
               transitionDelay: '300ms'
             }}
           >
-            <span className="material-symbols-outlined text-4xl text-[#4AA0F0] mb-6 group-hover:scale-110 transition-transform duration-300">sync</span>
-            <h3 className="text-4xl font-bold text-white mb-4">
-              <AnimatedNumber value={40} isVisible={isChallengesVisible} />–<AnimatedNumber value={50} isVisible={isChallengesVisible} />%
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">
+              <AnimatedNumber value={40} isVisible={isChallengesVisible} />–<AnimatedNumber value={50} isVisible={isChallengesVisible} />
+              <span className="text-[#4AA0F0]">%</span>
             </h3>
-            <p className="text-white/60 leading-relaxed font-medium">
-              {lang === 'EN' ? "customer service questions repeated daily" : "câu hỏi CSKH bị lặp lại mỗi ngày"}
+            <p className="text-[10px] md:text-[11px] font-semibold uppercase tracking-widest text-white/50">
+              {lang === 'EN' ? "customer service questions repeated daily" : "câu hỏi CSKH lặp lại mỗi ngày"}
             </p>
           </div>
 
-          {/* Card 4 */}
+          {/* Block 4 */}
           <div 
-            className="bg-[#111114] border border-white/10 rounded-3xl p-8 hover:bg-white/5 hover:border-[#4AA0F0]/50 hover:shadow-[0_0_30px_rgba(74,160,240,0.15)] transition-all duration-300 ease-out group"
+            className="flex flex-col items-center justify-center p-6 md:p-10 text-center hover:bg-white/5 transition-colors"
             style={{ 
               opacity: isChallengesVisible ? 1 : 0, 
-              transform: isChallengesVisible ? 'translateY(0)' : 'translateY(40px)',
               transitionDelay: '400ms'
             }}
           >
-            <span className="material-symbols-outlined text-4xl text-[#4AA0F0] mb-6 group-hover:scale-110 transition-transform duration-300">trending_down</span>
-            <h3 className="text-4xl font-bold text-white mb-4">
-              <AnimatedNumber value={2} isVisible={isChallengesVisible} />–<AnimatedNumber value={3} isVisible={isChallengesVisible} />%
+            <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">
+              <AnimatedNumber value={2} isVisible={isChallengesVisible} />–<AnimatedNumber value={3} isVisible={isChallengesVisible} />
+              <span className="text-[#4AA0F0]">%</span>
             </h3>
-            <p className="text-white/60 leading-relaxed font-medium">
-              {lang === 'EN' ? "average website conversion rate" : "conversion rate website trung bình"}
+            <p className="text-[10px] md:text-[11px] font-semibold uppercase tracking-widest text-white/50">
+              {lang === 'EN' ? "average website conversion rate" : "tỷ lệ chuyển đổi website trung bình"}
             </p>
           </div>
         </div>
@@ -413,11 +431,14 @@ export default function MiniUgatePage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div 
+          ref={solutionsSliderRef}
+          className="flex overflow-x-auto hide-scrollbar gap-6 pb-8 snap-x snap-mandatory px-4 md:px-0"
+        >
           
           {/* Card 1: Hiệu quả AI Chatbot */}
           <div 
-            className="bg-[#111114] border border-white/10 rounded-3xl p-8 flex flex-col hover:border-[#4AA0F0]/50 hover:shadow-[0_0_30px_rgba(74,160,240,0.15)] transition-all duration-300 ease-out"
+            className="shrink-0 w-[85vw] md:w-[400px] snap-center bg-[#111114] border border-white/10 rounded-3xl p-8 flex flex-col hover:border-[#4AA0F0]/50 hover:shadow-[0_0_30px_rgba(74,160,240,0.15)] transition-all duration-300 ease-out"
             style={{ 
               opacity: isSolutionsVisible ? 1 : 0, 
               transform: isSolutionsVisible ? 'translateY(0)' : 'translateY(40px)',
@@ -473,7 +494,7 @@ export default function MiniUgatePage() {
 
           {/* Card 2: Tương tác & chuyển đổi */}
           <div 
-            className="bg-[#111114] border border-white/10 rounded-3xl p-8 flex flex-col hover:border-[#4AA0F0]/50 hover:shadow-[0_0_30px_rgba(74,160,240,0.15)] transition-all duration-300 ease-out"
+            className="shrink-0 w-[85vw] md:w-[400px] snap-center bg-[#111114] border border-white/10 rounded-3xl p-8 flex flex-col hover:border-[#4AA0F0]/50 hover:shadow-[0_0_30px_rgba(74,160,240,0.15)] transition-all duration-300 ease-out"
             style={{ 
               opacity: isSolutionsVisible ? 1 : 0, 
               transform: isSolutionsVisible ? 'translateY(0)' : 'translateY(40px)',
@@ -528,7 +549,7 @@ export default function MiniUgatePage() {
 
           {/* Card 3: Tối ưu nguồn lực */}
           <div 
-            className="bg-[#111114] border border-white/10 rounded-3xl p-8 flex flex-col hover:border-[#4AA0F0]/50 hover:shadow-[0_0_30px_rgba(74,160,240,0.15)] transition-all duration-300 ease-out"
+            className="shrink-0 w-[85vw] md:w-[400px] snap-center bg-[#111114] border border-white/10 rounded-3xl p-8 flex flex-col hover:border-[#4AA0F0]/50 hover:shadow-[0_0_30px_rgba(74,160,240,0.15)] transition-all duration-300 ease-out"
             style={{ 
               opacity: isSolutionsVisible ? 1 : 0, 
               transform: isSolutionsVisible ? 'translateY(0)' : 'translateY(40px)',
@@ -695,11 +716,14 @@ export default function MiniUgatePage() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div 
+          ref={featuresSliderRef}
+          className="flex overflow-x-auto hide-scrollbar gap-6 pb-8 snap-x snap-mandatory px-4 md:px-0"
+        >
           
           {/* Card 1 */}
           <div 
-            className="bg-[#111114] border border-white/10 rounded-3xl p-8 hover:border-[#4AA0F0]/50 hover:shadow-[0_0_30px_rgba(74,160,240,0.15)] transition-all duration-300 ease-out group"
+            className="shrink-0 w-[85vw] md:w-[350px] lg:w-[400px] snap-center bg-[#111114] border border-white/10 rounded-3xl p-8 hover:border-[#4AA0F0]/50 hover:shadow-[0_0_30px_rgba(74,160,240,0.15)] transition-all duration-300 ease-out group flex flex-col"
             style={{ 
               opacity: isFeaturesVisible ? 1 : 0, 
               transform: isFeaturesVisible ? 'translateY(0)' : 'translateY(40px)',
@@ -717,7 +741,7 @@ export default function MiniUgatePage() {
 
           {/* Card 2 */}
           <div 
-            className="bg-[#111114] border border-white/10 rounded-3xl p-8 hover:border-[#4AA0F0]/50 hover:shadow-[0_0_30px_rgba(74,160,240,0.15)] transition-all duration-300 ease-out group"
+            className="shrink-0 w-[85vw] md:w-[350px] lg:w-[400px] snap-center bg-[#111114] border border-white/10 rounded-3xl p-8 hover:border-[#4AA0F0]/50 hover:shadow-[0_0_30px_rgba(74,160,240,0.15)] transition-all duration-300 ease-out group flex flex-col"
             style={{ 
               opacity: isFeaturesVisible ? 1 : 0, 
               transform: isFeaturesVisible ? 'translateY(0)' : 'translateY(40px)',
@@ -735,7 +759,7 @@ export default function MiniUgatePage() {
 
           {/* Card 3 */}
           <div 
-            className="bg-[#111114] border border-white/10 rounded-3xl p-8 hover:border-[#4AA0F0]/50 hover:shadow-[0_0_30px_rgba(74,160,240,0.15)] transition-all duration-300 ease-out group"
+            className="shrink-0 w-[85vw] md:w-[350px] lg:w-[400px] snap-center bg-[#111114] border border-white/10 rounded-3xl p-8 hover:border-[#4AA0F0]/50 hover:shadow-[0_0_30px_rgba(74,160,240,0.15)] transition-all duration-300 ease-out group flex flex-col"
             style={{ 
               opacity: isFeaturesVisible ? 1 : 0, 
               transform: isFeaturesVisible ? 'translateY(0)' : 'translateY(40px)',
@@ -753,7 +777,7 @@ export default function MiniUgatePage() {
 
           {/* Card 4 */}
           <div 
-            className="bg-[#111114] border border-white/10 rounded-3xl p-8 hover:border-[#4AA0F0]/50 hover:shadow-[0_0_30px_rgba(74,160,240,0.15)] transition-all duration-300 ease-out group"
+            className="shrink-0 w-[85vw] md:w-[350px] lg:w-[400px] snap-center bg-[#111114] border border-white/10 rounded-3xl p-8 hover:border-[#4AA0F0]/50 hover:shadow-[0_0_30px_rgba(74,160,240,0.15)] transition-all duration-300 ease-out group flex flex-col"
             style={{ 
               opacity: isFeaturesVisible ? 1 : 0, 
               transform: isFeaturesVisible ? 'translateY(0)' : 'translateY(40px)',
@@ -771,7 +795,7 @@ export default function MiniUgatePage() {
 
           {/* Card 5 */}
           <div 
-            className="bg-[#111114] border border-white/10 rounded-3xl p-8 hover:border-[#4AA0F0]/50 hover:shadow-[0_0_30px_rgba(74,160,240,0.15)] transition-all duration-300 ease-out group"
+            className="shrink-0 w-[85vw] md:w-[350px] lg:w-[400px] snap-center bg-[#111114] border border-white/10 rounded-3xl p-8 hover:border-[#4AA0F0]/50 hover:shadow-[0_0_30px_rgba(74,160,240,0.15)] transition-all duration-300 ease-out group flex flex-col"
             style={{ 
               opacity: isFeaturesVisible ? 1 : 0, 
               transform: isFeaturesVisible ? 'translateY(0)' : 'translateY(40px)',

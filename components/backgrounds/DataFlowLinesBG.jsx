@@ -39,8 +39,13 @@ export default function DataFlowLinesBG() {
       const W = canvas.width;
       const H = canvas.height;
       ctx.clearRect(0, 0, W, H);
-
       time += 1;
+      
+      // Disable heavy drawing on mobile (<768px) to reduce lag
+      if (window.innerWidth < 768) {
+        animId = requestAnimationFrame(draw);
+        return;
+      }
       
       // Smooth mouse tracking
       mouseX += (targetMouseX - mouseX) * 0.1;

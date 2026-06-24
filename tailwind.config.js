@@ -105,12 +105,13 @@ export default {
               "margin-desktop": "64px"
           },
           "fontFamily": {
-              "title-md": ["Inter"],
-              "headline-lg-mobile": ["Geist"],
-              "body-md": ["Inter"],
-              "display-lg": ["Geist"],
-              "headline-lg": ["Geist"],
-              "label-sm": ["JetBrains Mono"]
+              "title-md": ["Geist", "sans-serif"],
+              "headline-lg-mobile": ["Geist", "sans-serif"],
+              "body-md": ["Geist", "sans-serif"],
+              "display-lg": ["Geist", "sans-serif"],
+              "headline-lg": ["Geist", "sans-serif"],
+              "label-sm": ["Geist", "sans-serif"],
+              "sans": ["Geist", "sans-serif"],
           },
           "fontSize": {
               "title-md": ["20px", {"lineHeight": "1.5", "letterSpacing": "0em", "fontWeight": "500"}],

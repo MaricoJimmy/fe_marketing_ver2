@@ -22,11 +22,11 @@ export default function ExperienceCTA() {
   const col2Y = useTransform(scrollYProgress, [0, 1], [-400, 400]);
 
   return (
-    <section ref={sectionRef} className="relative overflow-hidden bg-[#0D1117] border-t border-white/5 min-h-[90vh]">
+    <section ref={sectionRef} className="relative overflow-hidden bg-[#0D1117] border-t border-white/5 min-h-[60vh] md:min-h-[90vh]">
 
-      {/* 2 Parallel Columns 3D Background */}
+      {/* 2 Parallel Columns 3D Background - Desktop Only */}
       <div 
-        className="absolute inset-0 z-0 overflow-visible pointer-events-none flex items-center justify-end pr-[5%] lg:pr-[15%]"
+        className="hidden md:flex absolute inset-0 z-0 overflow-visible pointer-events-none items-center justify-end pr-[5%] lg:pr-[15%]"
         style={{ perspective: "2000px" }}
       >
         <motion.div 
@@ -59,8 +59,17 @@ export default function ExperienceCTA() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#0D1117] via-transparent to-transparent w-full max-w-4xl z-20" />
       </div>
 
+      {/* Static Background - Mobile Only (No Parallax Lag) */}
+      <div className="md:hidden absolute inset-0 z-0 overflow-hidden pointer-events-none">
+        <div className="absolute -right-[20%] top-[10%] w-[120%] opacity-30 transform -rotate-[15deg]">
+           <img src="/images/dashboard_mockup_1.png" alt="Mockup" className="w-full rounded-2xl shadow-2xl" />
+        </div>
+        <div className="absolute inset-0 bg-[#0D1117]/60 z-10" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0D1117] via-transparent to-[#0D1117] z-20" />
+      </div>
+
       {/* Content */}
-      <div className="max-w-[1440px] mx-auto relative z-50 w-full px-4 md:px-12 lg:px-24 pt-32 pb-32">
+      <div className="max-w-[1440px] mx-auto relative z-50 w-full px-4 md:px-12 lg:px-24 py-16 md:pt-32 md:pb-32 flex flex-col justify-center min-h-[60vh] md:min-h-[90vh]">
         <div className="max-w-2xl relative z-50">
           <h2 className="font-display-lg text-4xl md:text-6xl font-bold text-white leading-[1.15] drop-shadow-2xl tracking-tight mb-6">
             {t('cta.title.part1')}

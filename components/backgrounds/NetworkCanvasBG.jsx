@@ -110,6 +110,13 @@ export default function NetworkCanvasBG() {
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+      
+      // Disable heavy drawing and particle calculation on mobile (<768px) to reduce lag
+      if (window.innerWidth < 768) {
+        animationFrameId = requestAnimationFrame(animate);
+        return;
+      }
+
       for (let i = 0; i < particles.length; i++) {
         particles[i].update();
         particles[i].draw();

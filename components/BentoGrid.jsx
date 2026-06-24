@@ -53,8 +53,14 @@ const items = [
 const VideoPlayer = ({ src, isActive }) => {
   const videoRef = useRef(null);
   const bgVideoRef = useRef(null);
+  const [hasLoaded, setHasLoaded] = useState(false);
 
   useEffect(() => {
+    // Only load the video if it becomes active at least once to save bandwidth/RAM
+    if (isActive && !hasLoaded) {
+      setHasLoaded(true);
+    }
+    
     if (isActive) {
       if (videoRef.current) videoRef.current.play().catch(e => console.log("Video play interrupted", e));
       if (bgVideoRef.current) bgVideoRef.current.play().catch(e => console.log("Bg video play interrupted", e));
@@ -62,28 +68,32 @@ const VideoPlayer = ({ src, isActive }) => {
       if (videoRef.current) videoRef.current.pause();
       if (bgVideoRef.current) bgVideoRef.current.pause();
     }
-  }, [isActive]);
+  }, [isActive, hasLoaded]);
 
   return (
     <div className="relative w-full h-full rounded-lg overflow-hidden flex items-center justify-center bg-black/30">
-      {/* Blurred background video */}
-      <video
-        ref={bgVideoRef}
-        src={src}
-        loop
-        muted
-        playsInline
-        className="absolute inset-0 w-full h-full object-cover blur-[40px] opacity-60 scale-110"
-      />
-      {/* Main video */}
-      <video
-        ref={videoRef}
-        src={src}
-        loop
-        muted
-        playsInline
-        className="relative z-10 w-full h-full object-contain"
-      />
+      {/* Blurred background video - hidden on mobile to save GPU */}
+      {hasLoaded && (
+        <>
+          <video
+            ref={bgVideoRef}
+            src={src}
+            loop
+            muted
+            playsInline
+            className="hidden md:block absolute inset-0 w-full h-full object-cover blur-[40px] opacity-60 scale-110"
+          />
+          {/* Main video */}
+          <video
+            ref={videoRef}
+            src={src}
+            loop
+            muted
+            playsInline
+            className="relative z-10 w-full h-full object-contain"
+          />
+        </>
+      )}
     </div>
   );
 };
@@ -93,12 +103,16 @@ export default function BentoGrid() {
   const [activeIndex, setActiveIndex] = useState(0);
   const sectionRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [isSectionInView, setIsSectionInView] = useState(false);
   const { t } = useLanguage();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setIsVisible(true); },
-      { threshold: 0.15 }
+      ([entry]) => { 
+        if (entry.isIntersecting) setIsVisible(true); 
+        setIsSectionInView(entry.isIntersecting);
+      },
+      { threshold: 0.1 }
     );
     if (sectionRef.current) observer.observe(sectionRef.current);
     return () => observer.disconnect();
@@ -169,7 +183,7 @@ export default function BentoGrid() {
                   <div className="block lg:hidden w-full aspect-video relative rounded-xl overflow-hidden mb-4 bg-black/40 border border-white/5 shadow-lg">
                     {item.hasVideo ? (
                       <>
-                        <VideoPlayer src={item.video} isActive={activeIndex === index && isVisible} />
+                        <VideoPlayer src={item.video} isActive={activeIndex === index && isSectionInView} />
                         <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-20 pointer-events-none">
                           <p className="text-white text-xs md:text-sm font-semibold tracking-wide drop-shadow-md border-l-2 border-[#22D3EE] pl-2">{t(item.visualTextKey)}</p>
                         </div>
@@ -211,7 +225,7 @@ export default function BentoGrid() {
               >
                 {item.hasVideo ? (
                   <div className="w-full h-full relative">
-                    <VideoPlayer src={item.video} isActive={isActiveDesktop && isVisible} />
+                    <VideoPlayer src={item.video} isActive={isActiveDesktop && isSectionInView} />
                     <div className="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-20 pointer-events-none">
                       <p className="text-white text-xl md:text-2xl font-semibold tracking-wide drop-shadow-md border-l-4 border-[#22D3EE] pl-4">{t(item.visualTextKey)}</p>
                     </div>

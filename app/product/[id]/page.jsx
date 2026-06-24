@@ -11,6 +11,7 @@ import GridSystemBG from '@/components/backgrounds/GridSystemBG';
 import MacbookScroll from '@/components/MacbookScroll';
 import HeroSection from '@/components/HeroSection';
 import TrustedBy from '@/components/TrustedBy';
+import ProductFeaturesSlider from '@/components/ProductFeaturesSlider';
 
 const PRODUCT_DATA = {
   VI: {
@@ -432,10 +433,10 @@ const UseCaseBlock = ({ useCase }) => {
         <div className="w-16 h-16 rounded-2xl bg-[#1A1A1D] border border-white/5 flex items-center justify-center shadow-lg">
           <span className="material-symbols-outlined text-3xl text-electric-cyan">{useCase.icon}</span>
         </div>
-        <h2 className="text-white font-display-md text-4xl lg:text-5xl leading-tight font-bold">
+        <h2 className="text-white font-display-md text-3xl lg:text-4xl leading-tight font-bold">
           {useCase.title}
         </h2>
-        <p className="text-on-surface-variant font-body-md text-lg lg:text-xl leading-relaxed">
+        <p className="text-on-surface-variant font-body-md text-base lg:text-lg leading-relaxed">
           {useCase.description}
         </p>
         
@@ -678,13 +679,13 @@ export default function ProductPage() {
         {/* Features Section */}
         {product.features && product.features.length > 0 && (
           <div ref={featuresRef}>
-            <MacbookScroll features={product.features} />
+            <ProductFeaturesSlider features={product.features} />
           </div>
         )}
 
         {/* Use Cases Section (Zig-zag layout) */}
         {product.useCases && product.useCases.length > 0 && (
-          <div className="mt-32 max-w-[1280px] mx-auto text-left space-y-32 pb-24">
+          <div className="mt-12 md:mt-16 max-w-[1280px] mx-auto text-left space-y-24 md:space-y-32 pb-24">
             {product.useCases.map((useCase, idx) => (
               <UseCaseBlock key={idx} useCase={useCase} />
             ))}
@@ -766,40 +767,50 @@ export default function ProductPage() {
           const content = ctaContent[id?.toLowerCase()];
 
           return (
-            <div className="mt-20 mb-32 max-w-[1280px] w-full mx-auto text-center space-y-8 bg-[#0C1017] py-16 px-6 sm:p-16 md:p-24 rounded-[40px] border border-white/10 relative overflow-hidden">
-              <div className="absolute inset-0 bg-[url('/images/tech_dashboard_bg.png')] bg-cover bg-center opacity-30 mix-blend-screen"></div>
-              <div className="absolute inset-0 bg-gradient-to-b from-[#0A0A0A] via-transparent to-[#0A0A0A] opacity-80"></div>
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-[800px] h-[400px] bg-electric-cyan/20 blur-[120px] rounded-full pointer-events-none"></div>
-              
-              <h2 className="relative z-10 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display-md font-bold text-white leading-tight max-w-4xl mx-auto drop-shadow-lg text-balance">
-                {content.heading}
-              </h2>
-              <p className="relative z-10 text-on-surface-variant font-body-md text-lg md:text-2xl max-w-4xl mx-auto leading-relaxed mt-6 text-balance">
-                {content.desc}
-              </p>
-              <div className="relative z-10 flex flex-wrap justify-center items-center gap-6 pt-10">
-                <HoverFillButton 
-                  onClick={() => { 
-                    if (id?.toLowerCase() === 'ugate') {
-                      window.location.href = 'https://ugate.udata.ai/vi/welcome'; 
-                    } else {
-                      router.push('/dung-thu');
-                    }
-                  }}
-                  className="bg-gradient-to-r from-[#22D3EE] to-[#10F0CB] text-[#06101F] px-10 py-4 rounded-xl font-bold text-lg shadow-[0_0_30px_rgba(34,211,238,0.3)] transition-all flex items-center gap-2 hover:scale-105"
-                >
-                  {lang === 'EN' ? `Get Demo ${id?.toLowerCase() === 'miniugate' ? 'MiniUgate' : id?.charAt(0).toUpperCase() + id?.slice(1).toLowerCase()}` : `Nhận Demo ${id?.toLowerCase() === 'miniugate' ? 'MiniUgate' : id?.charAt(0).toUpperCase() + id?.slice(1).toLowerCase()}`}
-                  <span className="material-symbols-outlined text-xl font-bold">arrow_outward</span>
-                </HoverFillButton>
+            <div className="px-4 md:px-8 max-w-[1440px] mx-auto mt-20 mb-32">
+              <div className="relative w-full rounded-[2.5rem] overflow-hidden border border-[#22D3EE]/20 glass-card bg-[#0A0E14]/60 backdrop-blur-2xl shadow-[0_0_80px_rgba(34,211,238,0.05)] py-16 px-6 sm:px-12 md:py-24 md:px-20 text-center group">
+                {/* Animated Conic Gradient Background */}
+                <div className="absolute inset-0 opacity-30 transition-opacity duration-1000 group-hover:opacity-50">
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[200%] md:w-[200%] bg-[conic-gradient(from_0deg,transparent_0_340deg,#22D3EE_360deg)] md:animate-[spin_8s_linear_infinite] opacity-20"></div>
+                </div>
                 
-                <HoverFillButton 
-                  onClick={() => setShowVideo(true)}
-                  rippleColor="bg-[#22D3EE]" 
-                  className="border border-white/20 text-white px-10 py-4 rounded-xl font-bold text-lg hover:bg-white/10 transition-all backdrop-blur-sm flex items-center gap-2 hover:scale-105 bg-black/40"
-                >
-                  <span className="material-symbols-outlined text-xl">play_arrow</span>
-                  {lang === 'EN' ? "Explore Solutions" : "Khám phá giải pháp"}
-                </HoverFillButton>
+                {/* Aesthetic Grid Pattern */}
+                <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px] opacity-30 [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_80%)]"></div>
+                
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0A0E14] via-[#0A0E14]/80 to-transparent"></div>
+                
+                <div className="relative z-10 flex flex-col items-center">
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display-md font-bold text-white leading-tight max-w-3xl mx-auto drop-shadow-lg text-balance mb-4">
+                    {content.heading}
+                  </h2>
+                  <p className="text-[#9CA3AF] text-sm md:text-base lg:text-lg max-w-2xl mx-auto leading-relaxed mb-8 text-balance">
+                    {content.desc}
+                  </p>
+                  <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 w-full sm:w-auto">
+                    <HoverFillButton 
+                      onClick={() => { 
+                        if (id?.toLowerCase() === 'ugate') {
+                          window.location.href = 'https://ugate.udata.ai/vi/welcome'; 
+                        } else {
+                          router.push('/dung-thu');
+                        }
+                      }}
+                      className="w-full sm:w-auto bg-gradient-to-r from-[#22D3EE] to-[#10F0CB] text-[#06101F] px-6 py-3 rounded-2xl font-bold text-sm md:text-base shadow-[0_0_30px_rgba(34,211,238,0.4)] transition-all flex items-center justify-center gap-2 hover:scale-105"
+                    >
+                      <span>{lang === 'EN' ? `Get Demo ${id?.toLowerCase() === 'miniugate' ? 'MiniUgate' : id?.charAt(0).toUpperCase() + id?.slice(1).toLowerCase()}` : `Nhận Demo ${id?.toLowerCase() === 'miniugate' ? 'MiniUgate' : id?.charAt(0).toUpperCase() + id?.slice(1).toLowerCase()}`}</span>
+                      <span className="material-symbols-outlined text-lg font-bold">arrow_outward</span>
+                    </HoverFillButton>
+                    
+                    <HoverFillButton 
+                      onClick={() => setShowVideo(true)}
+                      rippleColor="bg-[#22D3EE]" 
+                      className="w-full sm:w-auto border border-white/20 text-white px-6 py-3 rounded-2xl font-bold text-sm md:text-base hover:bg-white/10 transition-all backdrop-blur-sm flex items-center justify-center gap-2 hover:scale-105 bg-black/40"
+                    >
+                      <span className="material-symbols-outlined text-lg">play_arrow</span>
+                      <span>{lang === 'EN' ? "Explore Solutions" : "Khám phá giải pháp"}</span>
+                    </HoverFillButton>
+                  </div>
+                </div>
               </div>
             </div>
           );

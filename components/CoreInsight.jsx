@@ -5,13 +5,19 @@ import { useLanguage } from '@/contexts/LanguageContext';
 export default function CoreInsight() {
   const sectionRef = useRef(null);
   const scrollContainerRef = useRef(null);
+  const videoRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
   const { t } = useLanguage();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) setIsVisible(true);
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          if (videoRef.current) videoRef.current.play().catch(() => {});
+        } else {
+          if (videoRef.current) videoRef.current.pause();
+        }
       },
       { threshold: 0.1 }
     );
@@ -122,7 +128,7 @@ export default function CoreInsight() {
             }}
           >
             <video 
-              autoPlay 
+              ref={videoRef}
               loop 
               muted 
               playsInline

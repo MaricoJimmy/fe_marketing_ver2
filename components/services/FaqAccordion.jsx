@@ -10,7 +10,7 @@ const FaqItem = ({ question, answer, isOpen, onClick }) => {
         onClick={onClick}
         className="flex items-center justify-between w-full p-5 sm:p-6 text-left"
       >
-        <h3 className="text-white font-title-lg text-[16px] sm:text-[18px] font-semibold pr-4">
+        <h3 className="text-white font-title-lg text-[15px] sm:text-[16px] font-semibold pr-4">
           {question}
         </h3>
         <span 
@@ -28,7 +28,7 @@ const FaqItem = ({ question, answer, isOpen, onClick }) => {
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <div className="px-5 sm:px-6 pb-5 sm:pb-6 text-white/70 font-body-md text-[15px] leading-relaxed border-t border-white/5 pt-4">
+            <div className="px-5 sm:px-6 pb-5 sm:pb-6 text-white/70 font-body-md text-[14px] leading-relaxed border-t border-white/5 pt-4">
               {answer}
             </div>
           </motion.div>

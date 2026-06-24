@@ -38,6 +38,12 @@ export default function GridSystemBG() {
     const draw = () => {
       ctx.clearRect(0, 0, W, H);
       
+      // Disable heavy drawing on mobile (<768px) to reduce lag
+      if (window.innerWidth < 768) {
+        animId = requestAnimationFrame(draw);
+        return;
+      }
+      
       // Smooth mouse interpolation
       mouseX += (targetMouseX - mouseX) * 0.1;
       mouseY += (targetMouseY - mouseY) * 0.1;

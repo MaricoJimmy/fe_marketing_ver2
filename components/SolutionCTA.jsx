@@ -19,7 +19,7 @@ export default function SolutionCTA() {
           
           {/* Animated Conic Gradient Background */}
           <div className="absolute inset-0 opacity-30 transition-opacity duration-1000 group-hover:opacity-50">
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[200%] md:w-[200%] bg-[conic-gradient(from_0deg,transparent_0_340deg,#22D3EE_360deg)] animate-[spin_8s_linear_infinite] opacity-20"></div>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[200%] md:w-[200%] bg-[conic-gradient(from_0deg,transparent_0_340deg,#22D3EE_360deg)] md:animate-[spin_8s_linear_infinite] opacity-20"></div>
           </div>
           
           {/* Aesthetic Grid Pattern */}

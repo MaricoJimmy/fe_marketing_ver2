@@ -92,7 +92,7 @@ export default function HeroSection({ videoSrc }) {
       <div className="max-w-[1440px] w-full mx-auto text-center relative z-10 -mt-16">
         <div className="max-w-[1200px] mx-auto space-y-md flex flex-col items-center w-full px-4">
           {/* Badge */}
-          <div className="inline-block border border-[#22D3EE]/20 bg-[#22D3EE]/5 text-[#22D3EE] px-4 py-1.5 rounded-full text-xs font-bold tracking-widest uppercase mb-4 backdrop-blur-sm">
+          <div className="inline-block border border-[#22D3EE]/20 bg-[#22D3EE]/5 text-[#22D3EE] px-3 md:px-4 py-1 md:py-1.5 rounded-full text-[10px] sm:text-xs font-bold tracking-widest uppercase mb-4 md:mb-6 backdrop-blur-sm max-w-[90vw] md:max-w-none text-center">
             {t('hero.badge')}
           </div>
 

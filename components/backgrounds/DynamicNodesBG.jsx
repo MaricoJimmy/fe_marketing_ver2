@@ -22,6 +22,12 @@ export default function DynamicNodesBG() {
     window.addEventListener('mousemove', handleMouseMove);
 
     const updateParallax = () => {
+      // Disable parallax tracking on mobile (<768px) to reduce lag
+      if (window.innerWidth < 768) {
+        animId = requestAnimationFrame(updateParallax);
+        return;
+      }
+
       // Smooth interpolation
       mouseX += (targetX - mouseX) * 0.1;
       mouseY += (targetY - mouseY) * 0.1;
@@ -48,7 +54,7 @@ export default function DynamicNodesBG() {
   }, []);
 
   return (
-    <div ref={containerRef} className="pointer-events-none fixed inset-0 w-full h-full overflow-hidden flex items-center justify-center opacity-80" style={{ zIndex: 0 }}>
+    <div ref={containerRef} className="hidden md:flex pointer-events-none fixed inset-0 w-full h-full overflow-hidden items-center justify-center opacity-80" style={{ zIndex: 0 }}>
       <style>{`
         @keyframes sonar-pulse {
           0% { transform: scale(0.2); opacity: 0.8; border-width: 2px; }

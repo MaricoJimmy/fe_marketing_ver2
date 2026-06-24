@@ -60,17 +60,29 @@ export default function CaseStudies() {
   };
 
   // Reusable Card Component
-  const StudyCard = ({ study, isGrid }) => (
+  const StudyCard = ({ study, isGrid, isLastInPreview }) => (
     <div 
       onClick={() => {
-        window.location.href = '/use-case#usecase-grid';
+        if (isLastInPreview) {
+          setModalOpen(true);
+        } else {
+          window.location.href = '/use-case#usecase-grid';
+        }
       }}
-      className={`group relative aspect-[4/3] md:aspect-[3/2] lg:aspect-video shrink-0 snap-center rounded-2xl overflow-hidden glass-card transition-all duration-700 hover:-translate-y-2 cursor-pointer border border-surface-border hover:border-electric-cyan/50 ${
+      className={`group relative min-h-[420px] shrink-0 snap-center rounded-2xl overflow-hidden glass-card transition-all duration-700 hover:-translate-y-2 cursor-pointer border border-surface-border hover:border-electric-cyan/50 ${
         isGrid ? 'w-full' : 'w-[85vw] sm:w-[45vw] lg:w-[30vw]'
       }`}
     >
       <img alt={lang === 'EN' ? study.enTitle : study.viTitle} className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-30 group-hover:scale-110 transition-all duration-700" src={study.image} />
       <div className="absolute inset-0 bg-gradient-to-t from-[#06101F]/95 via-[#06101F]/60 to-transparent group-hover:from-[#06101F] group-hover:via-[#06101F]/80 transition-all duration-500"></div>
+      
+      {/* The +X Overlay for the last preview card */}
+      {isLastInPreview && (
+        <div className="absolute inset-0 bg-black/60 backdrop-blur-sm z-30 flex flex-col items-center justify-center transition-all duration-500 group-hover:bg-black/80">
+          <span className="text-white text-4xl lg:text-6xl font-display-lg font-bold drop-shadow-lg">+{CASE_STUDIES.length - 3}</span>
+          <span className="text-white/80 font-body-md mt-2 text-sm lg:text-lg">{lang === 'EN' ? 'View All' : 'Xem tất cả'}</span>
+        </div>
+      )}
       
       <div className="absolute inset-0 p-6 flex flex-col justify-end z-20">
         <div className="mb-4">
@@ -85,7 +97,7 @@ export default function CaseStudies() {
         
         <div className="grid grid-rows-[0fr] group-hover:grid-rows-[1fr] transition-[grid-template-rows] duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]">
           <div className="overflow-hidden">
-            <p className="text-on-surface-variant text-sm mt-3 mb-5 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
+            <p className="text-on-surface-variant text-sm mt-3 mb-5 leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100 line-clamp-3">
               {lang === 'EN' ? study.enDesc : study.viDesc}
             </p>
             
@@ -113,9 +125,9 @@ export default function CaseStudies() {
           </div>
           <div className="relative group/scroll">
             {/* Desktop Grid Layout */}
-            <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12 pb-8">
-              {CASE_STUDIES.map((study) => (
-                <StudyCard key={study.viTitle} study={study} isGrid={true} />
+            <div className="hidden md:grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12 pb-8">
+              {CASE_STUDIES.slice(0, 4).map((study, index) => (
+                <StudyCard key={study.viTitle} study={study} isGrid={true} isLastInPreview={index === 3} />
               ))}
             </div>
 
@@ -126,7 +138,7 @@ export default function CaseStudies() {
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
               {CASE_STUDIES.map((study) => (
-                <StudyCard key={study.viTitle} study={study} isGrid={false} />
+                <StudyCard key={study.viTitle} study={study} isGrid={false} isLastInPreview={false} />
               ))}
             </div>
 

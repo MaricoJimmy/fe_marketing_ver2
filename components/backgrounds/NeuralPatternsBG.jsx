@@ -42,6 +42,12 @@ export default function NeuralPatternsBG() {
       const H = canvas.height;
       ctx.clearRect(0, 0, W, H);
 
+      // Disable heavy drawing on mobile (<768px) to reduce lag
+      if (window.innerWidth < 768) {
+        animId = requestAnimationFrame(draw);
+        return;
+      }
+
       // Update positions
       nodes.forEach(node => {
         node.x += node.vx;
@@ -129,8 +135,6 @@ export default function NeuralPatternsBG() {
         ctx.fill();
       });
 
-
-
       animId = requestAnimationFrame(draw);
     };
 
@@ -155,4 +159,3 @@ export default function NeuralPatternsBG() {
     />
   );
 }
-

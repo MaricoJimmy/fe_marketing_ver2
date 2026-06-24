@@ -48,6 +48,12 @@ export default function AnimatedBackground({ className, style }) {
       const H = canvas.height;
       ctx.clearRect(0, 0, W, H);
 
+      // Disable heavy drawing on mobile (<768px) to reduce lag
+      if (window.innerWidth < 768) {
+        animId = requestAnimationFrame(draw);
+        return;
+      }
+
       // Smooth mouse interpolation
       mouseX += (targetMouseX - mouseX) * 0.05;
       mouseY += (targetMouseY - mouseY) * 0.05;
