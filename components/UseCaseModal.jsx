@@ -125,10 +125,10 @@ export default function UseCaseModal({ isOpen, onClose, useCase }) {
           {/* Hero Section */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center mb-16">
             <div className="space-y-6">
-              <h1 className="text-3xl md:text-4xl font-bold text-white leading-tight">
+              <h1 className="text-2xl md:text-4xl font-bold text-white leading-tight">
                 {lang === 'EN' ? useCase.enTitle : useCase.viTitle}
               </h1>
-              <p className="text-[#9CA3AF] text-lg leading-relaxed">
+              <p className="text-[#9CA3AF] text-base md:text-lg leading-relaxed">
                 {lang === 'EN' ? useCase.enDesc : useCase.viDesc}
               </p>
               
@@ -171,14 +171,14 @@ export default function UseCaseModal({ isOpen, onClose, useCase }) {
                   </div>
 
                   <div className="bg-[#0C1017] border border-white/5 rounded-2xl p-6 md:p-8 hover:border-white/10 transition-colors shadow-sm group">
-                    <h3 className="text-xl font-bold mb-6 flex items-center gap-3">
-                      <span className="text-[#22D3EE]/40 text-sm font-mono">{idx + 1}.</span>
+                    <h3 className="text-lg md:text-xl font-bold mb-6 flex items-center gap-3">
+                      <span className="text-[#22D3EE]/40 text-xs md:text-sm font-mono">{idx + 1}.</span>
                       <span className="bg-gradient-to-r from-[#22D3EE] to-[#10F0CB] bg-clip-text text-transparent">{title}</span>
                     </h3>
                     
                     {/* Render standard text */}
                     {section.type === 'text' && !isCheckList && !isPills && !isGrid && !isStepper && (
-                      <div className="text-[#9CA3AF] leading-relaxed text-base">
+                      <div className="text-[#9CA3AF] leading-relaxed text-sm md:text-base">
                         {section.content.split('\n').map((line, i) => (
                           <p key={i} className="mb-2 last:mb-0">{line}</p>
                         ))}
@@ -189,8 +189,8 @@ export default function UseCaseModal({ isOpen, onClose, useCase }) {
                     {section.type === 'list' && !isCheckList && !isPills && !isGrid && !isStepper && (
                       <ul className="space-y-4">
                         {section.items.map((item, i) => (
-                          <li key={i} className="flex items-start gap-3 text-[#9CA3AF] leading-relaxed">
-                            <span className="w-1.5 h-1.5 rounded-full bg-[#22D3EE]/50 mt-2.5 flex-shrink-0"></span>
+                          <li key={i} className="flex items-start gap-3 text-[#9CA3AF] leading-relaxed text-sm md:text-base">
+                            <span className="w-1.5 h-1.5 rounded-full bg-[#22D3EE]/50 mt-2 flex-shrink-0"></span>
                             <span>{item}</span>
                           </li>
                         ))}
@@ -201,7 +201,7 @@ export default function UseCaseModal({ isOpen, onClose, useCase }) {
                     {isPills && section.type === 'list' && (
                       <div className="flex flex-wrap gap-3">
                         {section.items.map((item, i) => (
-                          <span key={i} className="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-sm text-[#E5E7EB] hover:bg-[#22D3EE]/10 hover:border-[#22D3EE]/50 hover:text-[#22D3EE] transition-all cursor-default shadow-sm hover:shadow-[0_0_15px_rgba(34,211,238,0.15)]">
+                          <span key={i} className="px-4 py-2 rounded-xl bg-white/5 border border-white/10 text-xs md:text-sm text-[#E5E7EB] hover:bg-[#22D3EE]/10 hover:border-[#22D3EE]/50 hover:text-[#22D3EE] transition-all cursor-default shadow-sm hover:shadow-[0_0_15px_rgba(34,211,238,0.15)]">
                             {item}
                           </span>
                         ))}
@@ -224,7 +224,7 @@ export default function UseCaseModal({ isOpen, onClose, useCase }) {
                     {isCheckList && section.type === 'text' && (
                       <div className="flex items-start gap-3 text-[#E5E7EB] leading-relaxed bg-white/5 rounded-xl p-5 border border-white/5">
                         <span className="material-symbols-outlined text-[#10F0CB] text-2xl flex-shrink-0 mt-0.5">diamond</span>
-                        <p className="text-base">{section.content}</p>
+                        <p className="text-sm md:text-base">{section.content}</p>
                       </div>
                     )}
 
@@ -260,7 +260,7 @@ export default function UseCaseModal({ isOpen, onClose, useCase }) {
                               <div className="w-10 h-10 rounded-full bg-[#0C1017] border-2 border-[#22D3EE] text-[#22D3EE] flex items-center justify-center font-bold mb-4 shadow-[0_0_15px_rgba(34,211,238,0.2)]">
                                 {i + 1}
                               </div>
-                              <span className="text-sm font-medium text-[#E5E7EB] leading-relaxed">
+                              <span className="text-xs md:text-sm font-medium text-[#E5E7EB] leading-relaxed">
                                 {item}
                               </span>
                             </div>

@@ -74,7 +74,7 @@ export default function SolutionFAQ() {
                   onClick={() => toggleFAQ(index)}
                   className="w-full flex items-center justify-between py-6 px-4 text-left focus:outline-none group"
                 >
-                  <span className="text-lg font-bold text-white group-hover:text-[#22D3EE] transition-colors">
+                  <span className="text-base md:text-lg font-bold text-white group-hover:text-[#22D3EE] transition-colors">
                     {lang === 'EN' ? faq.enQ : faq.viQ}
                   </span>
                   <span className={`material-symbols-outlined text-[#9CA3AF] transition-transform duration-300 ${isOpen ? 'rotate-180 text-[#22D3EE]' : ''}`}>
@@ -85,7 +85,7 @@ export default function SolutionFAQ() {
                 <div 
                   className={`px-4 transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 pb-6 opacity-100' : 'max-h-0 pb-0 opacity-0'}`}
                 >
-                  <p className="text-[#9CA3AF] leading-relaxed">
+                  <p className="text-[#9CA3AF] text-sm md:text-[15px] leading-relaxed">
                     {lang === 'EN' ? faq.enA : faq.viA}
                   </p>
                 </div>

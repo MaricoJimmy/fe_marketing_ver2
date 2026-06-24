@@ -64,30 +64,16 @@ export default function SolutionUseCases() {
   const tabsRef = useRef(null);
   const scrollDirection = useRef(1);
 
-  // Auto-scroll effect for mobile tabs
+  // Auto-cycle tabs (no scrolling needed as marquee handles it)
   useEffect(() => {
     if (isHovered) return;
-    const container = tabsRef.current;
-    if (!container) return;
 
     const timer = setInterval(() => {
-      if (scrollDirection.current === 1) {
-        container.scrollBy({ left: 150, behavior: 'smooth' });
-        // Check if we reached the right end
-        if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 20) {
-          scrollDirection.current = -1;
-        }
-      } else {
-        container.scrollBy({ left: -150, behavior: 'smooth' });
-        // Check if we reached the left end
-        if (container.scrollLeft <= 20) {
-          scrollDirection.current = 1;
-        }
-      }
-    }, 4000); // Scroll every 4 seconds
+      setActiveTab((prev) => (prev + 1) % useCases.length);
+    }, 5000); // Switch every 5 seconds
 
     return () => clearInterval(timer);
-  }, [isHovered]);
+  }, [isHovered, useCases.length]);
 
   const renderContent = (index) => {
     const caseItem = useCases[index];
@@ -95,7 +81,7 @@ export default function SolutionUseCases() {
       <div className="bg-[#0C1017] border border-white/5 rounded-3xl overflow-hidden shadow-2xl relative animate-in fade-in slide-in-from-bottom-4 duration-500 flex flex-col">
         
         {/* Header with Background Image */}
-        <div className="relative min-h-[120px] md:min-h-[200px] flex items-end p-5 md:p-10">
+        <div className="relative min-h-[140px] md:min-h-[200px] flex items-end p-5 md:p-10">
           <img 
             src={images[index]} 
             alt={lang === 'EN' ? caseItem.enTitle : caseItem.viTitle} 
@@ -103,9 +89,28 @@ export default function SolutionUseCases() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0C1017] via-[#0C1017]/60 to-transparent"></div>
           
-          <h3 className="relative z-10 text-lg md:text-4xl font-bold text-white drop-shadow-md leading-tight">
-            {lang === 'EN' ? caseItem.enTitle : caseItem.viTitle}
-          </h3>
+          <div className="relative z-10 w-full flex flex-col gap-3">
+            <div className="flex flex-wrap gap-2">
+              {caseItem.tags.map(tag => {
+                let tagColor = "";
+                switch (tag.toLowerCase()) {
+                  case 'uboard': tagColor = 'bg-[#22D3EE]/20 text-[#22D3EE] border border-[#22D3EE]/30'; break;
+                  case 'ugate':
+                  case 'miniugate': tagColor = 'bg-[#3B82F6]/20 text-[#3B82F6] border border-[#3B82F6]/30'; break;
+                  case 'uzero': tagColor = 'bg-[#10B981]/20 text-[#10B981] border border-[#10B981]/30'; break;
+                  default: tagColor = 'bg-[#22D3EE]/20 text-[#22D3EE] border border-[#22D3EE]/30';
+                }
+                return (
+                  <span key={tag} className={`px-2.5 py-1 rounded-md text-[10px] md:text-[11px] font-bold uppercase tracking-widest backdrop-blur-sm ${tagColor}`}>
+                    {tag}
+                  </span>
+                );
+              })}
+            </div>
+            <h3 className="text-xl md:text-4xl font-bold text-white drop-shadow-md leading-tight">
+              {lang === 'EN' ? caseItem.enTitle : caseItem.viTitle}
+            </h3>
+          </div>
         </div>
 
         {/* Text Content */}
@@ -169,92 +174,55 @@ export default function SolutionUseCases() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
+        <div className="flex flex-col gap-8">
           
-          {/* Menu for Desktop */}
-          <div className="hidden lg:flex lg:col-span-4 flex-col gap-4 h-full">
-            {useCases.map((useCase, index) => {
-              const isActive = activeTab === index;
-              return (
-                <div key={index} className="flex flex-col">
-                  <button 
-                    onClick={() => setActiveTab(index)}
-                    className={`flex-1 flex flex-col justify-center text-left p-6 rounded-2xl border transition-all duration-300 ${
-                      isActive 
-                        ? 'bg-transparent border-transparent lg:bg-[#22D3EE]/10 lg:border-[#22D3EE]/50 shadow-[0_0_30px_rgba(34,211,238,0.1)]' 
-                        : 'bg-transparent border-transparent lg:bg-[#0C1017] lg:border-white/5 lg:shadow-none hover:bg-white/5 hover:border-white/20 opacity-100 lg:opacity-70 lg:hover:opacity-100'
-                    }`}
-                  >
-                    <div className="flex flex-wrap gap-2 mb-3">
-                      {useCase.tags.map(tag => {
-                        let tagColor = "";
-                        switch (tag.toLowerCase()) {
-                          case 'uboard': 
-                            tagColor = isActive ? 'bg-[#22D3EE]/20 text-[#22D3EE]' : 'lg:bg-[#22D3EE]/10 lg:text-[#22D3EE]/60'; 
-                            break;
-                          case 'ugate':
-                          case 'miniugate': 
-                            tagColor = isActive ? 'bg-[#3B82F6]/20 text-[#3B82F6]' : 'lg:bg-[#3B82F6]/10 lg:text-[#3B82F6]/60'; 
-                            break;
-                          case 'uzero': 
-                            tagColor = isActive ? 'bg-[#10B981]/20 text-[#10B981]' : 'lg:bg-[#10B981]/10 lg:text-[#10B981]/60'; 
-                            break;
-                          default: 
-                            tagColor = isActive ? 'bg-[#22D3EE]/20 text-[#22D3EE]' : 'lg:bg-white/10 lg:text-white/60';
-                        }
-                        return (
-                          <span 
-                            key={tag} 
-                            className={`px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-widest ${tagColor}`}
-                          >
-                            {tag}
-                          </span>
-                        );
-                      })}
-                    </div>
-                    <h3 className={`text-lg md:text-xl font-bold ${isActive ? 'text-[#22D3EE]' : 'lg:text-white'}`}>
-                      {lang === 'EN' ? useCase.enTitle : useCase.viTitle}
-                    </h3>
-                  </button>
-                </div>
-              );
-            })}
+          {/* Unified Horizontal Menu (Continuous Marquee) */}
+          <style>{`
+            @keyframes marqueeUseCases {
+              0% { transform: translateX(0); }
+              100% { transform: translateX(-50%); }
+            }
+            .animate-marquee-usecases {
+              animation: marqueeUseCases 35s linear infinite;
+              display: flex;
+              width: max-content;
+            }
+            .animate-marquee-usecases:hover {
+              animation-play-state: paused;
+            }
+          `}</style>
+          
+          <div 
+            className="w-full overflow-hidden pb-6 relative"
+            style={{ WebkitMaskImage: 'linear-gradient(to right, transparent, black 5%, black 95%, transparent)', maskImage: 'linear-gradient(to right, transparent, black 5%, black 95%, transparent)' }}
+          >
+            <div className="animate-marquee-usecases gap-4 px-4">
+              {[...Array(2)].map((_, groupIdx) => (
+                <React.Fragment key={groupIdx}>
+                  {useCases.map((useCase, index) => {
+                    const isActive = activeTab === index;
+                    return (
+                      <button 
+                        key={`${groupIdx}-${index}`}
+                        onClick={() => setActiveTab(index)}
+                        className={`whitespace-nowrap px-6 py-3.5 rounded-full border text-sm md:text-base font-bold transition-all duration-300 mx-2 ${
+                          isActive 
+                            ? 'bg-[#22D3EE] text-[#06101F] border-[#22D3EE] shadow-[0_0_20px_rgba(34,211,238,0.4)] scale-105' 
+                            : 'bg-[#22D3EE]/5 text-[#9CA3AF] border-white/10 hover:bg-white/10 hover:text-white hover:border-white/20'
+                        }`}
+                      >
+                        {lang === 'EN' ? useCase.enTitle : useCase.viTitle}
+                      </button>
+                    );
+                  })}
+                </React.Fragment>
+              ))}
+            </div>
           </div>
 
-          {/* Desktop Right Column: Content */}
-          <div className="hidden lg:block lg:col-span-8">
+          {/* Active Content */}
+          <div className="w-full relative transition-all duration-500">
             {renderContent(activeTab)}
-          </div>
-
-          {/* Mobile Tabs Selector */}
-          <div className="lg:hidden col-span-1 flex flex-col gap-6">
-            <div 
-              ref={tabsRef}
-              className="flex flex-row overflow-x-auto gap-3 pb-2 scrollbar-hide snap-x" 
-              style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-            >
-              {useCases.map((useCase, index) => {
-                const isActive = activeTab === index;
-                return (
-                  <button 
-                    key={index}
-                    onClick={() => setActiveTab(index)}
-                    className={`whitespace-nowrap px-5 py-3 rounded-full border text-sm font-bold snap-center transition-all ${
-                      isActive 
-                        ? 'bg-[#22D3EE] text-[#06101F] border-[#22D3EE] shadow-[0_0_15px_rgba(34,211,238,0.3)]' 
-                        : 'bg-[#22D3EE]/5 text-[#9CA3AF] border-white/10 hover:bg-white/5 hover:text-white'
-                    }`}
-                  >
-                    {lang === 'EN' ? useCase.enTitle : useCase.viTitle}
-                  </button>
-                );
-              })}
-            </div>
-
-            {/* Mobile Active Content */}
-            <div className="w-full" key={activeTab}>
-              {renderContent(activeTab)}
-            </div>
           </div>
         </div>
 

@@ -118,9 +118,9 @@ export default function Workflow() {
   ];
 
   return (
-    <section ref={containerRef} className="relative w-full border-t border-surface-border md:h-[400vh] h-auto pb-10 md:pb-0">
+    <section ref={containerRef} className="relative w-full border-t border-surface-border md:h-auto h-auto pb-10 md:pb-0">
       
-      <div className="md:sticky relative top-0 w-full md:h-[100dvh] h-auto flex flex-col justify-start pt-12 md:pt-16 lg:pt-20 md:pb-8 md:overflow-hidden px-margin-mobile md:px-margin-desktop md:bg-background/90 md:backdrop-blur-md">
+      <div className="relative top-0 w-full h-auto flex flex-col justify-start pt-12 md:pt-16 lg:pt-20 md:pb-8 px-margin-mobile md:px-margin-desktop">
         <div className="max-w-[1440px] mx-auto w-full flex flex-col h-full pb-4 md:pb-8">
           
           {/* Header */}
@@ -154,38 +154,36 @@ export default function Workflow() {
                   className={`
                     relative transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]
                     md:border-r border-surface-border md:last:border-r-0 overflow-hidden
-                    h-auto min-h-[220px] md:h-full rounded-2xl md:rounded-none border border-surface-border md:border-0
+                    h-auto min-h-[220px] md:h-auto md:min-h-[320px] rounded-2xl md:rounded-none border border-surface-border md:border-0
                     w-[85vw] sm:w-[60vw] shrink-0 snap-center md:snap-align-none
-                    ${isDesktopActive ? 'md:flex-1 md:bg-transparent md:w-auto md:shrink md:grow' : 'md:basis-[90px] md:shrink-0 md:grow-0 md:bg-surface-container-lowest/30 md:w-auto'}
+                    md:flex-1 md:bg-transparent md:w-auto md:shrink md:grow
                   `}
                 >
                   {/* Dynamic Background Image */}
                   <div 
-                    className={`absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-in-out opacity-70 md:opacity-0 md:scale-105 ${isDesktopActive ? 'md:opacity-70 md:scale-100' : ''}`}
+                    className="absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-in-out opacity-70"
                     style={{ backgroundImage: `url(${step.bgImage})` }}
                   />
                   {/* Horizontal gradient overlay */}
-                  <div className={`absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-transparent transition-opacity duration-1000 opacity-100 md:opacity-0 ${isDesktopActive ? 'md:opacity-100' : ''}`} />
+                  <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-transparent transition-opacity duration-1000 opacity-100" />
 
                   <div className="p-5 pr-12 md:p-6 md:pr-6 h-full flex flex-col relative z-10">
                     
                     {/* Header: ID + Title */}
                     <div className="flex items-center whitespace-normal md:whitespace-nowrap mb-2 md:mb-4 opacity-100 md:opacity-80 shrink-0">
-                      <span className={`font-mono text-xl font-bold mr-2 transition-colors duration-500 text-electric-cyan md:text-on-surface-variant ${isDesktopActive ? 'md:text-electric-cyan' : ''}`}>
+                      <span className="font-mono text-xl font-bold mr-2 transition-colors duration-500 text-electric-cyan">
                         {step.id}.
                       </span>
                       <h3 className="font-title-md text-xl md:text-2xl font-bold">{t(step.titleKey)}</h3>
                     </div>
 
                     {/* Icon */}
-                    <span className={`material-symbols-outlined text-3xl md:text-4xl mb-2 md:mb-4 transition-colors duration-500 shrink-0 text-electric-cyan md:text-on-surface-variant md:opacity-60 ${isDesktopActive ? 'md:text-electric-cyan md:opacity-100' : ''}`} style={{ fontVariationSettings: '"FILL" 0' }}>
+                    <span className="material-symbols-outlined text-3xl md:text-4xl mb-2 md:mb-4 transition-colors duration-500 shrink-0 text-electric-cyan" style={{ fontVariationSettings: '"FILL" 0' }}>
                       {step.icon}
                     </span>
 
                     {/* Description - Fades in only when active on desktop, always visible on mobile */}
-                    <div 
-                      className={`transition-all duration-700 ease-in-out opacity-100 translate-y-0 md:opacity-0 md:translate-y-4 md:hidden ${isDesktopActive ? 'md:!block md:!opacity-100 md:!translate-y-0' : ''}`}
-                    >
+                    <div className="transition-all duration-700 ease-in-out opacity-100 translate-y-0">
                       <p className="font-body-md text-sm md:text-base leading-relaxed text-on-surface-variant max-w-[450px]">
                         {t(step.descKey)}
                       </p>
@@ -193,10 +191,10 @@ export default function Workflow() {
                   </div>
 
                   {/* Active Highlight Line */}
-                  <div className={`absolute top-0 left-0 transition-all duration-700 bg-electric-cyan
+                  <div className="absolute top-0 left-0 transition-all duration-700 bg-electric-cyan
                     md:w-full md:h-[2px] w-[4px] h-full
-                    opacity-100 md:opacity-0 ${isDesktopActive ? 'md:opacity-100' : ''}
-                  `} />
+                    opacity-100
+                  " />
                 </div>
               );
             })}

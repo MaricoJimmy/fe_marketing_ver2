@@ -140,8 +140,8 @@ export default function SolutionsByIndustry() {
   
   const activeIndustry = industries.find(ind => ind.id === activeTab);
 
-  const renderContent = (industry) => (
-    <div className="bg-[#0C1017] border border-white/5 rounded-2xl p-6 md:p-12 h-full flex flex-col relative overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-500">
+  const renderContent = (industry, isModal = false) => (
+    <div className={`bg-[#0C1017] border border-white/5 rounded-2xl p-6 md:p-12 flex flex-col relative animate-in fade-in slide-in-from-bottom-4 duration-500 ${isModal ? 'h-auto' : 'h-full overflow-hidden'}`}>
       {/* Subtle background glow */}
       <div className="absolute top-0 right-0 w-64 h-64 bg-[#22D3EE]/5 blur-[80px] pointer-events-none rounded-full"></div>
 
@@ -322,7 +322,7 @@ export default function SolutionsByIndustry() {
             
             {/* Content Container */}
             <div className="overflow-y-auto p-4 pb-8 flex-1 scrollbar-hide">
-              {renderContent(industries.find(ind => ind.id === mobileSelectedIndustry))}
+              {renderContent(industries.find(ind => ind.id === mobileSelectedIndustry), true)}
             </div>
           </div>
         </div>

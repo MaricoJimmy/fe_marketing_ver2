@@ -1,9 +1,10 @@
 "use client";
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function SolutionProcess() {
   const { t } = useLanguage();
+  const [activeStep, setActiveStep] = useState(0);
 
   const steps = [
     {
@@ -28,10 +29,17 @@ export default function SolutionProcess() {
     }
   ];
 
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveStep((prev) => (prev + 1) % steps.length);
+    }, 4500);
+    return () => clearInterval(timer);
+  }, [steps.length]);
+
   return (
     <section className="py-20 md:py-28 px-6 md:px-12 bg-[#080B10] border-t border-white/5 relative z-10 overflow-hidden">
       <div className="max-w-[1200px] mx-auto relative">
-        <div className="text-center mb-24">
+        <div className="text-center mb-20 md:mb-24">
           <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
             {t('workflow.title')}
           </h2>
@@ -40,47 +48,89 @@ export default function SolutionProcess() {
           </p>
         </div>
 
-        {/* Timeline Container */}
-        <div className="relative">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-4 relative z-10">
-            {steps.map((step, index) => (
-              <div key={index} className="flex flex-row md:flex-col items-start md:items-center text-left md:text-center group relative gap-6 md:gap-0">
-                
-                {/* Mobile vertical line to next step */}
-                {index !== steps.length - 1 && (
-                  <div className="md:hidden absolute top-[64px] left-[32px] -translate-x-1/2 w-0.5 bg-[#22D3EE]/30" style={{ height: 'calc(100% - 32px)' }}>
-                    <div className="absolute top-0 left-0 w-full h-full bg-[#22D3EE] shadow-[0_0_10px_rgba(34,211,238,0.8)]"></div>
+        {/* Desktop View */}
+        <div className="hidden md:flex flex-row items-start justify-between relative w-full">
+          {steps.map((step, idx) => (
+            <div key={idx} className="relative flex-1 flex flex-col items-center">
+              
+              {/* Arrow to next step */}
+              {idx < steps.length - 1 && (
+                <div className={`absolute top-[48px] left-[50%] w-full z-0 px-8 transition-opacity duration-500 ${activeStep === idx ? 'opacity-100' : 'opacity-20'}`}>
+                  <div className="w-full h-[2px] bg-gradient-to-r from-transparent via-[#22D3EE]/50 to-[#22D3EE] relative rounded-full">
+                    <div className="absolute -right-[1px] top-1/2 -translate-y-1/2 w-0 h-0 border-t-[5px] border-t-transparent border-b-[5px] border-b-transparent border-l-[6px] border-l-[#22D3EE]"></div>
+                  </div>
+                </div>
+              )}
+              
+              {/* Step Card */}
+              <div 
+                className={`relative z-10 flex flex-col items-center text-center px-4 transition-all duration-500 cursor-pointer ${activeStep === idx ? 'opacity-100 scale-105' : 'opacity-40 scale-100 hover:opacity-70'}`}
+                onClick={() => setActiveStep(idx)}
+              >
+                <div className={`w-24 h-24 rounded-3xl flex items-center justify-center mb-6 transition-all duration-500 ${activeStep === idx ? 'bg-[#22D3EE]/20 border border-[#22D3EE]/50 shadow-[0_0_40px_rgba(34,211,238,0.3)]' : 'bg-white/5 border border-white/10'}`}>
+                  <span className={`text-4xl font-bold transition-colors duration-500 ${activeStep === idx ? 'text-[#22D3EE]' : 'text-white/50'}`}>{step.num}</span>
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3">
+                  {step.title}
+                </h3>
+                <p className="text-white/60 text-sm leading-relaxed max-w-[220px]">
+                  {step.desc}
+                </p>
+              </div>
+              
+            </div>
+          ))}
+        </div>
+
+        {/* Mobile View */}
+        <div className="flex md:hidden flex-col items-center relative w-full mt-4">
+          
+          {/* Progress Indicator */}
+          <div className="flex items-center justify-center gap-2 mb-10 w-full max-w-[280px] mx-auto">
+            {steps.map((_, idx) => (
+              <React.Fragment key={idx}>
+                <div 
+                  onClick={() => setActiveStep(idx)}
+                  className={`w-8 h-8 shrink-0 rounded-full flex items-center justify-center text-sm font-bold cursor-pointer transition-all duration-300 z-10 ${
+                    activeStep === idx 
+                      ? 'bg-[#22D3EE] text-[#06101F] shadow-[0_0_15px_rgba(34,211,238,0.5)]' 
+                      : (activeStep > idx ? 'bg-[#22D3EE]/20 text-[#22D3EE] border border-[#22D3EE]/50' : 'bg-white/5 text-white/40 border border-white/10')
+                  }`}
+                >
+                  {idx + 1}
+                </div>
+                {idx < steps.length - 1 && (
+                  <div className="flex-1 h-[2px] bg-white/10 relative rounded-full overflow-hidden">
+                     <div className={`absolute top-0 left-0 h-full bg-[#22D3EE] transition-all duration-500 ${activeStep > idx ? 'w-full' : 'w-0'}`} />
                   </div>
                 )}
+              </React.Fragment>
+            ))}
+          </div>
 
-                {/* Desktop horizontal line to next step */}
-                {index !== steps.length - 1 && (
-                  <div className="hidden md:block absolute top-10 left-[50%] w-full h-0.5 bg-[#22D3EE]/30">
-                    {/* Active line glow */}
-                    <div className="absolute top-0 left-0 w-full h-full bg-[#22D3EE] shadow-[0_0_10px_rgba(34,211,238,0.8)]"></div>
-                  </div>
-                )}
-
-                {/* Circle Number */}
-                <div className="w-16 h-16 md:w-20 md:h-20 shrink-0 rounded-full bg-[#080B10] border-2 border-[#22D3EE] flex items-center justify-center md:mb-6 relative z-10 shadow-[0_0_20px_rgba(34,211,238,0.2)] group-hover:shadow-[0_0_30px_rgba(34,211,238,0.5)] group-hover:scale-110 transition-all duration-300">
-                  <span className="text-lg md:text-xl font-bold text-white">{step.num}</span>
-                  {/* Outer subtle glow */}
-                  <div className="absolute inset-0 rounded-full border border-[#22D3EE]/30 scale-125 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          {/* Steps Container */}
+          <div className="w-full relative min-h-[300px]">
+            {steps.map((step, idx) => (
+              <div 
+                key={idx}
+                className={`absolute inset-0 flex flex-col items-center text-center transition-all duration-500 ${
+                  activeStep === idx 
+                    ? 'opacity-100 z-10 translate-x-0' 
+                    : (activeStep > idx ? 'opacity-0 -translate-x-10 pointer-events-none' : 'opacity-0 translate-x-10 pointer-events-none')
+                }`}
+              >
+                <div className={`w-24 h-24 rounded-3xl flex items-center justify-center mb-6 bg-[#22D3EE]/20 border border-[#22D3EE]/50 shadow-[0_0_40px_rgba(34,211,238,0.3)]`}>
+                  <span className="text-4xl font-bold text-[#22D3EE]">{step.num}</span>
                 </div>
-
-                {/* Content */}
-                <div className="flex-1 pt-1 md:pt-0">
-                  <h3 className="text-lg font-bold text-white mb-2 md:mb-3 md:px-4">
-                    {step.title}
-                  </h3>
-                  <p className="text-[#9CA3AF] text-sm leading-relaxed max-w-none md:max-w-[220px] md:mx-auto md:px-2">
-                    {step.desc}
-                  </p>
-                </div>
+                <h3 className="text-xl font-bold text-white mb-3 px-4">
+                  {step.title}
+                </h3>
+                <p className="text-white/60 text-sm whitespace-pre-line px-4 leading-relaxed">{step.desc}</p>
               </div>
             ))}
           </div>
         </div>
+
       </div>
     </section>
   );
