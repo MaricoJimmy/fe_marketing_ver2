@@ -64,15 +64,28 @@ export default function SolutionUseCases() {
   const tabsRef = useRef(null);
   const scrollDirection = useRef(1);
 
-  // Auto-scroll active tab into view
+  // Continuous JS Marquee for tabs
   useEffect(() => {
     const container = tabsRef.current;
-    const tab = document.getElementById(`usecase-tab-${activeTab}`);
-    if (container && tab) {
-      const scrollLeft = tab.offsetLeft - container.clientWidth / 2 + tab.clientWidth / 2;
-      container.scrollTo({ left: scrollLeft, behavior: 'smooth' });
-    }
-  }, [activeTab]);
+    if (!container) return;
+
+    let animationFrameId;
+
+    const scrollStep = () => {
+      if (!isHovered) {
+        container.scrollLeft += 1; // smooth 1px scroll
+        // Seamless loop back to start if it reached the midpoint of duplicated content
+        if (container.scrollLeft >= container.scrollWidth / 2) {
+          container.scrollLeft -= container.scrollWidth / 2;
+        }
+      }
+      animationFrameId = requestAnimationFrame(scrollStep);
+    };
+
+    animationFrameId = requestAnimationFrame(scrollStep);
+
+    return () => cancelAnimationFrame(animationFrameId);
+  }, [isHovered]);
 
   // Auto-cycle tabs
   useEffect(() => {
@@ -193,23 +206,27 @@ export default function SolutionUseCases() {
             style={{ WebkitMaskImage: 'linear-gradient(to right, transparent, black 5%, black 95%, transparent)', maskImage: 'linear-gradient(to right, transparent, black 5%, black 95%, transparent)' }}
           >
             <div className="flex gap-4 px-8 w-max">
-              {useCases.map((useCase, index) => {
-                const isActive = activeTab === index;
-                return (
-                  <button 
-                    key={index}
-                    id={`usecase-tab-${index}`}
-                    onClick={() => setActiveTab(index)}
-                    className={`whitespace-nowrap px-6 py-3.5 rounded-full border text-sm md:text-base font-bold transition-all duration-300 mx-2 snap-center ${
-                      isActive 
-                        ? 'bg-[#22D3EE] text-[#06101F] border-[#22D3EE] shadow-[0_0_20px_rgba(34,211,238,0.4)] scale-105' 
-                        : 'bg-[#22D3EE]/5 text-[#9CA3AF] border-white/10 hover:bg-white/10 hover:text-white hover:border-white/20'
-                    }`}
-                  >
-                    {lang === 'EN' ? useCase.enTitle : useCase.viTitle}
-                  </button>
-                );
-              })}
+              {[...Array(2)].map((_, groupIdx) => (
+                <React.Fragment key={groupIdx}>
+                  {useCases.map((useCase, index) => {
+                    const isActive = activeTab === index;
+                    return (
+                      <button 
+                        key={`${groupIdx}-${index}`}
+                        id={`usecase-tab-${groupIdx}-${index}`}
+                        onClick={() => setActiveTab(index)}
+                        className={`whitespace-nowrap px-6 py-3.5 rounded-full border text-sm md:text-base font-bold transition-all duration-300 mx-2 snap-center ${
+                          isActive 
+                            ? 'bg-[#22D3EE] text-[#06101F] border-[#22D3EE] shadow-[0_0_20px_rgba(34,211,238,0.4)] scale-105' 
+                            : 'bg-[#22D3EE]/5 text-[#9CA3AF] border-white/10 hover:bg-white/10 hover:text-white hover:border-white/20'
+                        }`}
+                      >
+                        {lang === 'EN' ? useCase.enTitle : useCase.viTitle}
+                      </button>
+                    );
+                  })}
+                </React.Fragment>
+              ))}
             </div>
           </div>
 
