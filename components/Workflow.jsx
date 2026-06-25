@@ -5,6 +5,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 
 export default function Workflow() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [hasHovered, setHasHovered] = useState(false);
   const containerRef = useRef(null);
   const scrollContainerRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
@@ -57,19 +58,23 @@ export default function Workflow() {
           const { top, height } = containerRef.current.getBoundingClientRect();
           const viewportHeight = window.innerHeight;
           
-          let progress = -top / (height - viewportHeight);
-          progress = Math.max(0, Math.min(1, progress));
-          
-          const totalSteps = 4;
-          const stepSize = 1 / totalSteps;
-          let index = totalSteps - 1; // default to last step
-          for (let i = 0; i < totalSteps; i++) {
-            if (progress < (i + 1) * stepSize) {
-              index = i;
-              break;
+          if (height > viewportHeight) {
+            let progress = -top / (height - viewportHeight);
+            progress = Math.max(0, Math.min(1, progress));
+            
+            const totalSteps = 4;
+            const stepSize = 1 / totalSteps;
+            let index = totalSteps - 1; // default to last step
+            for (let i = 0; i < totalSteps; i++) {
+              if (progress < (i + 1) * stepSize) {
+                index = i;
+                break;
+              }
+            }
+            if (window.innerWidth >= 768 && !hasHovered) {
+              setActiveIndex(index);
             }
           }
-          setActiveIndex(index);
           
           ticking = false;
         });
@@ -118,10 +123,10 @@ export default function Workflow() {
   ];
 
   return (
-    <section ref={containerRef} className="relative w-full border-t border-surface-border md:h-auto h-auto pb-10 md:pb-0">
+    <section ref={containerRef} className="relative w-full border-t border-surface-border md:h-[250vh] h-auto pb-10 md:pb-0">
       
-      <div className="relative top-0 w-full h-auto flex flex-col justify-start pt-12 md:pt-16 lg:pt-20 md:pb-8 px-margin-mobile md:px-margin-desktop">
-        <div className="max-w-[1440px] mx-auto w-full flex flex-col h-full pb-4 md:pb-8">
+      <div className="relative md:sticky md:top-0 w-full h-auto md:h-screen flex flex-col justify-start md:justify-center pt-12 md:pt-0 md:pb-0 px-margin-mobile md:px-margin-desktop">
+        <div className="max-w-[1440px] mx-auto w-full flex flex-col pb-4 md:pb-8">
           
           {/* Header */}
           <div 
@@ -130,7 +135,7 @@ export default function Workflow() {
             <div className="inline-block bg-primary/10 border border-electric-cyan/30 px-3 py-1.5 rounded-sm mb-2">
               <span className="font-label-sm text-xs uppercase tracking-wider text-electric-cyan">{t('workflow.badge')}</span>
             </div>
-            <h2 className="font-display-lg text-3xl md:text-4xl xl:text-5xl max-w-none leading-tight text-white font-bold mb-2 lg:whitespace-nowrap">
+            <h2 className="font-display-lg text-3xl md:text-4xl xl:text-5xl max-w-none leading-tight text-white font-bold mb-2">
               {t('workflow.title')}
             </h2>
             <p className="font-body-md text-sm md:text-base text-on-surface-variant max-w-3xl">
@@ -151,40 +156,41 @@ export default function Workflow() {
               return (
                 <div 
                   key={index}
+                  onMouseEnter={() => window.innerWidth >= 768 && setActiveIndex(index)}
                   className={`
                     relative transition-all duration-700 ease-[cubic-bezier(0.25,1,0.5,1)]
                     md:border-r border-surface-border md:last:border-r-0 overflow-hidden
-                    h-auto min-h-[220px] md:h-auto md:min-h-[320px] rounded-2xl md:rounded-none border border-surface-border md:border-0
-                    w-[85vw] sm:w-[60vw] shrink-0 snap-center md:snap-align-none
-                    md:flex-1 md:bg-transparent md:w-auto md:shrink md:grow
+                    h-auto min-h-[220px] md:h-auto md:min-h-[300px] lg:min-h-[360px] rounded-2xl md:rounded-none border border-surface-border md:border-0
+                    w-[85vw] sm:w-[60vw] shrink-0 snap-center md:snap-align-none md:bg-transparent
+                    ${isDesktopActive ? 'md:w-[40%] lg:w-[46%]' : 'md:w-[20%] lg:w-[18%]'} md:shrink-0
                   `}
                 >
                   {/* Dynamic Background Image */}
                   <div 
-                    className="absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-in-out opacity-70"
+                    className={`absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-in-out ${isDesktopActive ? 'opacity-70 scale-105' : 'opacity-30 md:opacity-10 scale-100'}`}
                     style={{ backgroundImage: `url(${step.bgImage})` }}
                   />
                   {/* Horizontal gradient overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-transparent transition-opacity duration-1000 opacity-100" />
+                  <div className={`absolute inset-0 transition-all duration-1000 ${isDesktopActive ? 'bg-gradient-to-r from-background/90 via-background/70 to-transparent opacity-100' : 'bg-background/80'}`} />
 
                   <div className="p-5 pr-12 md:p-6 md:pr-6 h-full flex flex-col relative z-10">
                     
                     {/* Header: ID + Title */}
-                    <div className="flex items-center whitespace-normal md:whitespace-nowrap mb-2 md:mb-4 opacity-100 md:opacity-80 shrink-0">
-                      <span className="font-mono text-xl font-bold mr-2 transition-colors duration-500 text-electric-cyan">
+                    <div className="flex items-start whitespace-normal mb-2 md:mb-4 shrink-0 transition-opacity duration-500">
+                      <span className={`font-mono text-xl font-bold mr-2 transition-colors duration-500 mt-1 shrink-0 ${isDesktopActive ? 'text-electric-cyan' : 'text-on-surface-variant'}`}>
                         {step.id}.
                       </span>
-                      <h3 className="font-title-md text-xl md:text-2xl font-bold">{t(step.titleKey)}</h3>
+                      <h3 className={`font-title-md text-xl md:text-2xl font-bold leading-tight transition-colors duration-500 ${isDesktopActive ? 'text-white' : 'text-on-surface-variant md:opacity-70'}`}>{t(step.titleKey)}</h3>
                     </div>
 
                     {/* Icon */}
-                    <span className="material-symbols-outlined text-3xl md:text-4xl mb-2 md:mb-4 transition-colors duration-500 shrink-0 text-electric-cyan" style={{ fontVariationSettings: '"FILL" 0' }}>
+                    <span className={`material-symbols-outlined text-3xl md:text-4xl mb-2 md:mb-4 transition-colors duration-500 shrink-0 ${isDesktopActive ? 'text-electric-cyan' : 'text-on-surface-variant'}`} style={{ fontVariationSettings: '"FILL" 0' }}>
                       {step.icon}
                     </span>
 
                     {/* Description - Fades in only when active on desktop, always visible on mobile */}
-                    <div className="transition-all duration-700 ease-in-out opacity-100 translate-y-0">
-                      <p className="font-body-md text-sm md:text-base leading-relaxed text-on-surface-variant max-w-[450px]">
+                    <div className={`transition-all duration-700 ease-in-out md:overflow-hidden ${isDesktopActive ? 'opacity-100 translate-y-0 md:max-h-[500px]' : 'md:opacity-0 md:translate-y-4 md:max-h-0 opacity-100 translate-y-0'}`}>
+                      <p className="font-body-md text-sm md:text-base leading-relaxed text-on-surface-variant w-full md:w-[320px] lg:w-[450px]">
                         {t(step.descKey)}
                       </p>
                     </div>

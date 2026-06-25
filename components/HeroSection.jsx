@@ -25,8 +25,8 @@ export default function HeroSection({ videoSrc }) {
 
   useEffect(() => {
     const typingWords = lang === 'EN' 
-      ? ['Real-time Operational Intelligence', 'Centralized Data Monitoring', 'Net Zero Emissions Calculation', 'Smart AI Technical Support', 'Machinery & Inverter Monitoring', 'Web App AI Integration']
-      : ['trí tuệ vận hành thời gian thực', 'giám sát dữ liệu tập trung', 'tính toán phát thải Net Zero', 'hỗ trợ kỹ thuật thông minh AI', 'giám sát máy móc & biến tần', 'tích hợp AI Chatbot Web App'];
+      ? ['Intelligent Operations', 'Financial Visibility', 'Domain-Specific AI Agents']
+      : ['Vận hành thông minh', 'Minh bạch tài chính', 'AI Agent chuyên ngành'];
       
     let timer;
     const currentWord = typingWords[currentWordIndex];
@@ -96,8 +96,8 @@ export default function HeroSection({ videoSrc }) {
             {t('hero.badge')}
           </div>
 
-          <h1 className="font-display-lg text-[28px] leading-[1.3] sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white md:leading-[1.2] drop-shadow-lg text-center w-full px-2 flex flex-col items-center justify-start min-h-[140px] md:min-h-[200px]">
-            <div className="mb-1 md:mb-4">
+          <h1 className="font-display-lg text-[clamp(22px,6.5vw,28px)] tracking-tighter sm:tracking-normal leading-[1.3] sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white md:leading-[1.2] drop-shadow-lg text-center w-full px-0 sm:px-2 flex flex-col items-center justify-start min-h-[140px] md:min-h-[200px]">
+            <div className="mb-1 md:mb-4 whitespace-nowrap sm:whitespace-normal">
               {t('hero.title.part1')}
             </div>
             <div className="w-full max-w-[800px] h-[60px] sm:h-[96px] md:h-[120px] lg:h-[144px] flex justify-center">
@@ -110,9 +110,15 @@ export default function HeroSection({ videoSrc }) {
             </div>
           </h1>
 
+          {/* Desktop Subtitle */}
           <p 
-            className="font-body-md text-sm md:text-xl text-white/70 w-full max-w-3xl mx-auto drop-shadow-md mt-2 md:mt-6 text-center px-2 md:px-0 leading-relaxed line-clamp-3 md:line-clamp-none"
+            className="hidden md:block font-body-md text-xl text-white/70 w-full max-w-3xl mx-auto drop-shadow-md mt-6 text-center px-0 leading-relaxed"
             dangerouslySetInnerHTML={{ __html: t('hero.subtitle') }}
+          />
+          {/* Mobile Subtitle */}
+          <p 
+            className="md:hidden font-body-md text-sm text-white/70 w-full max-w-3xl mx-auto drop-shadow-md mt-2 text-center px-2 leading-relaxed"
+            dangerouslySetInnerHTML={{ __html: t('hero.subtitle.mobile') }}
           />
 
           <div className="flex flex-col sm:flex-row justify-center items-center gap-3 md:gap-4 pt-4 md:pt-8 w-full px-4 sm:px-0">
