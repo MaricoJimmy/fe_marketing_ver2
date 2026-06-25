@@ -333,10 +333,14 @@ export default function MiniUgatePage() {
           }}
         >
           <h2 className="text-4xl md:text-5xl font-bold text-white">
-            {lang === 'EN' ? "Website has traffic, but..." : "Website có traffic, nhưng..."}
+            {lang === 'EN' ? "Traditional websites have traffic, but..." : "Website truyền thống có traffic, nhưng..."}
           </h2>
           <p className="text-lg text-white/60">
-            {lang === 'EN' ? "These are the challenges most businesses face" : "Đây là những thách thức mà hầu hết doanh nghiệp đang gặp phải"}
+            {lang === 'EN' ? (
+              <>These are the <span className="text-[#F59E0B] font-semibold">challenges</span> most businesses face</>
+            ) : (
+              <>Đây là những <span className="text-[#F59E0B] font-semibold">thách thức</span> mà hầu hết doanh nghiệp đang gặp phải</>
+            )}
           </p>
         </div>
 
@@ -352,7 +356,7 @@ export default function MiniUgatePage() {
           >
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">
               <AnimatedNumber value={65} isVisible={isChallengesVisible} />–<AnimatedNumber value={75} isVisible={isChallengesVisible} />
-              <span className="text-[#4AA0F0]">%</span>
+              <span className="text-[#F59E0B]">%</span>
             </h3>
             <p className="text-[10px] md:text-[11px] font-semibold uppercase tracking-widest text-white/50">
               {lang === 'EN' ? "visitors leave if not supported immediately" : "khách rời đi khi không hỗ trợ ngay"}
@@ -369,7 +373,7 @@ export default function MiniUgatePage() {
           >
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">
               <AnimatedNumber value={15} isVisible={isChallengesVisible} />–<AnimatedNumber value={60} isVisible={isChallengesVisible} />
-              <span className="text-[#4AA0F0] text-xl ml-1">{lang === 'EN' ? 'min' : 'phút'}</span>
+              <span className="text-[#F59E0B] text-xl ml-1">{lang === 'EN' ? 'min' : 'phút'}</span>
             </h3>
             <p className="text-[10px] md:text-[11px] font-semibold uppercase tracking-widest text-white/50">
               {lang === 'EN' ? "common customer service response time" : "thời gian phản hồi CSKH trung bình"}
@@ -386,7 +390,7 @@ export default function MiniUgatePage() {
           >
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">
               <AnimatedNumber value={40} isVisible={isChallengesVisible} />–<AnimatedNumber value={50} isVisible={isChallengesVisible} />
-              <span className="text-[#4AA0F0]">%</span>
+              <span className="text-[#F59E0B]">%</span>
             </h3>
             <p className="text-[10px] md:text-[11px] font-semibold uppercase tracking-widest text-white/50">
               {lang === 'EN' ? "customer service questions repeated daily" : "câu hỏi CSKH lặp lại mỗi ngày"}
@@ -403,7 +407,7 @@ export default function MiniUgatePage() {
           >
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-2">
               <AnimatedNumber value={2} isVisible={isChallengesVisible} />–<AnimatedNumber value={3} isVisible={isChallengesVisible} />
-              <span className="text-[#4AA0F0]">%</span>
+              <span className="text-[#F59E0B]">%</span>
             </h3>
             <p className="text-[10px] md:text-[11px] font-semibold uppercase tracking-widest text-white/50">
               {lang === 'EN' ? "average website conversion rate" : "tỷ lệ chuyển đổi website trung bình"}
@@ -818,12 +822,12 @@ export default function MiniUgatePage() {
 
         <div 
           ref={featuresSliderRef}
-          className="flex overflow-x-auto hide-scrollbar gap-6 pb-8 snap-x snap-mandatory px-4 md:px-0"
+          className="flex overflow-x-auto lg:grid lg:grid-cols-5 lg:overflow-visible hide-scrollbar gap-4 xl:gap-6 pb-8 snap-x snap-mandatory lg:snap-none px-4 md:px-0"
         >
           
           {/* Card 1 */}
           <div 
-            className="shrink-0 w-[85vw] md:w-[350px] lg:w-[400px] snap-center bg-[#111114] border border-white/10 rounded-3xl p-8 hover:border-[#4AA0F0]/50 hover:shadow-[0_0_30px_rgba(74,160,240,0.15)] transition-all duration-300 ease-out group flex flex-col"
+            className="shrink-0 w-[85vw] md:w-[350px] lg:w-auto snap-center bg-[#111114] border border-white/10 rounded-3xl p-6 lg:p-5 xl:p-8 hover:border-[#4AA0F0]/50 hover:shadow-[0_0_30px_rgba(74,160,240,0.15)] transition-all duration-300 ease-out group flex flex-col"
             style={{ 
               opacity: isFeaturesVisible ? 1 : 0, 
               transform: isFeaturesVisible ? 'translateY(0)' : 'translateY(40px)',
@@ -841,7 +845,7 @@ export default function MiniUgatePage() {
 
           {/* Card 2 */}
           <div 
-            className="shrink-0 w-[85vw] md:w-[350px] lg:w-[400px] snap-center bg-[#111114] border border-white/10 rounded-3xl p-8 hover:border-[#4AA0F0]/50 hover:shadow-[0_0_30px_rgba(74,160,240,0.15)] transition-all duration-300 ease-out group flex flex-col"
+            className="shrink-0 w-[85vw] md:w-[350px] lg:w-auto snap-center bg-[#111114] border border-white/10 rounded-3xl p-6 lg:p-5 xl:p-8 hover:border-[#4AA0F0]/50 hover:shadow-[0_0_30px_rgba(74,160,240,0.15)] transition-all duration-300 ease-out group flex flex-col"
             style={{ 
               opacity: isFeaturesVisible ? 1 : 0, 
               transform: isFeaturesVisible ? 'translateY(0)' : 'translateY(40px)',
@@ -859,7 +863,7 @@ export default function MiniUgatePage() {
 
           {/* Card 3 */}
           <div 
-            className="shrink-0 w-[85vw] md:w-[350px] lg:w-[400px] snap-center bg-[#111114] border border-white/10 rounded-3xl p-8 hover:border-[#4AA0F0]/50 hover:shadow-[0_0_30px_rgba(74,160,240,0.15)] transition-all duration-300 ease-out group flex flex-col"
+            className="shrink-0 w-[85vw] md:w-[350px] lg:w-auto snap-center bg-[#111114] border border-white/10 rounded-3xl p-6 lg:p-5 xl:p-8 hover:border-[#4AA0F0]/50 hover:shadow-[0_0_30px_rgba(74,160,240,0.15)] transition-all duration-300 ease-out group flex flex-col"
             style={{ 
               opacity: isFeaturesVisible ? 1 : 0, 
               transform: isFeaturesVisible ? 'translateY(0)' : 'translateY(40px)',
@@ -877,7 +881,7 @@ export default function MiniUgatePage() {
 
           {/* Card 4 */}
           <div 
-            className="shrink-0 w-[85vw] md:w-[350px] lg:w-[400px] snap-center bg-[#111114] border border-white/10 rounded-3xl p-8 hover:border-[#4AA0F0]/50 hover:shadow-[0_0_30px_rgba(74,160,240,0.15)] transition-all duration-300 ease-out group flex flex-col"
+            className="shrink-0 w-[85vw] md:w-[350px] lg:w-auto snap-center bg-[#111114] border border-white/10 rounded-3xl p-6 lg:p-5 xl:p-8 hover:border-[#4AA0F0]/50 hover:shadow-[0_0_30px_rgba(74,160,240,0.15)] transition-all duration-300 ease-out group flex flex-col"
             style={{ 
               opacity: isFeaturesVisible ? 1 : 0, 
               transform: isFeaturesVisible ? 'translateY(0)' : 'translateY(40px)',
@@ -895,7 +899,7 @@ export default function MiniUgatePage() {
 
           {/* Card 5 */}
           <div 
-            className="shrink-0 w-[85vw] md:w-[350px] lg:w-[400px] snap-center bg-[#111114] border border-white/10 rounded-3xl p-8 hover:border-[#4AA0F0]/50 hover:shadow-[0_0_30px_rgba(74,160,240,0.15)] transition-all duration-300 ease-out group flex flex-col"
+            className="shrink-0 w-[85vw] md:w-[350px] lg:w-auto snap-center bg-[#111114] border border-white/10 rounded-3xl p-6 lg:p-5 xl:p-8 hover:border-[#4AA0F0]/50 hover:shadow-[0_0_30px_rgba(74,160,240,0.15)] transition-all duration-300 ease-out group flex flex-col"
             style={{ 
               opacity: isFeaturesVisible ? 1 : 0, 
               transform: isFeaturesVisible ? 'translateY(0)' : 'translateY(40px)',
@@ -926,7 +930,7 @@ export default function MiniUgatePage() {
 
         <div 
           ref={industriesSliderRef}
-          className="flex overflow-x-auto hide-scrollbar gap-4 md:gap-6 pb-8 snap-x snap-mandatory px-4 md:px-0"
+          className="flex overflow-x-auto lg:grid lg:grid-cols-5 lg:overflow-visible hide-scrollbar gap-4 md:gap-6 pb-8 snap-x snap-mandatory lg:snap-none px-4 md:px-0"
         >
           {[
             { icon: "shopping_cart", textEN: "E-commerce", textVI: "Website\nbán hàng" },
@@ -935,11 +939,11 @@ export default function MiniUgatePage() {
             { icon: "domain", textEN: "Real Estate", textVI: "Bất động sản" },
             { icon: "business_center", textEN: "B2B\nBusiness", textVI: "Doanh nghiệp\nB2B" },
           ].map((item, idx) => (
-            <div key={idx} className="shrink-0 w-[75vw] md:w-[220px] snap-center bg-[#111114] border border-white/10 rounded-3xl p-6 flex items-center gap-5 hover:border-[#4AA0F0]/50 hover:shadow-[0_0_20px_rgba(74,160,240,0.15)] transition-all duration-300">
+            <div key={idx} className="shrink-0 w-[75vw] md:w-[220px] lg:w-auto snap-center bg-[#111114] border border-white/10 rounded-3xl p-6 flex flex-col md:flex-row xl:flex-row items-center gap-4 xl:gap-5 hover:border-[#4AA0F0]/50 hover:shadow-[0_0_20px_rgba(74,160,240,0.15)] transition-all duration-300">
                <div className="w-12 h-12 rounded-xl bg-[#4AA0F0]/10 flex items-center justify-center shrink-0">
                   <span className="material-symbols-outlined text-[#4AA0F0] text-2xl">{item.icon}</span>
                </div>
-               <span className="text-white font-medium whitespace-pre-line text-sm md:text-base leading-tight">
+               <span className="text-white font-medium whitespace-pre-line text-sm md:text-base leading-tight text-center md:text-left">
                  {lang === 'EN' ? item.textEN : item.textVI}
                </span>
             </div>
