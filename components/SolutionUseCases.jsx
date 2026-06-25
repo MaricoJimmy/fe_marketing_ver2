@@ -187,8 +187,10 @@ export default function SolutionUseCases() {
               display: flex;
               width: max-content;
             }
-            .animate-marquee-usecases:hover {
-              animation-play-state: paused;
+            @media (hover: hover) {
+              .animate-marquee-usecases:hover {
+                animation-play-state: paused;
+              }
             }
           `}</style>
           
