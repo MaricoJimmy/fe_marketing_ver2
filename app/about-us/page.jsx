@@ -22,9 +22,37 @@ export default function AboutUs() {
   const [coreValuesVisible, setCoreValuesVisible] = useState(false);
   const [awardsVisible, setAwardsVisible] = useState(false);
 
+  // Refs for auto-scrolling containers
+  const visionScrollRef = useRef(null);
+  const coreScrollRef = useRef(null);
+
   useEffect(() => {
     document.title = lang === 'EN' ? "About Us | Udata" : "Về chúng tôi | Udata";
   }, [lang]);
+
+  // Auto-scroll logic for mobile
+  useEffect(() => {
+    const autoScroll = (ref) => {
+      const container = ref.current;
+      if (!container || window.innerWidth >= 768) return; // Only on mobile
+      
+      const maxScroll = container.scrollWidth - container.clientWidth;
+      if (maxScroll <= 0) return;
+
+      let nextScroll = container.scrollLeft + container.clientWidth * 0.8; // scroll roughly one card width
+      if (nextScroll >= maxScroll - 10) {
+        nextScroll = 0; // reset to start
+      }
+      container.scrollTo({ left: nextScroll, behavior: 'smooth' });
+    };
+
+    const interval = setInterval(() => {
+      autoScroll(visionScrollRef);
+      autoScroll(coreScrollRef);
+    }, 3500);
+
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     const observerOptions = { threshold: 0.15 };
@@ -130,66 +158,66 @@ export default function AboutUs() {
         </section>
 
         {/* Vision, Mission & Position Section */}
-        <section className="relative transition-all duration-[900ms] ease-out">
-          <div className="flex flex-col gap-8">
+        <section className="relative transition-all duration-[900ms] ease-out -mx-margin-mobile md:mx-0 px-margin-mobile md:px-0">
+          <div ref={visionScrollRef} className="flex overflow-x-auto md:flex-col gap-6 md:gap-8 snap-x snap-mandatory pb-6 md:pb-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
             {/* Vision */}
-            <div className="glass-card p-6 md:p-10 rounded-3xl border border-surface-border bg-surface-container-lowest/30 hover:border-[#22D3EE]/50 transition-colors flex flex-col md:flex-row items-center gap-8 md:gap-12 group overflow-hidden relative">
+            <div className="w-[85vw] shrink-0 md:w-full md:shrink snap-center glass-card p-6 md:p-10 rounded-3xl border border-surface-border bg-surface-container-lowest/30 hover:border-[#22D3EE]/50 transition-colors flex flex-col md:flex-row items-center gap-6 md:gap-12 group overflow-hidden relative">
               <div className="absolute inset-0 bg-gradient-to-r from-[#22D3EE]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               
               <div className="w-full md:w-[45%] shrink-0 rounded-2xl overflow-hidden relative shadow-lg">
-                <img src="/image/about_us/udata_vision.png" alt="Vision" className="w-full h-[250px] md:h-[320px] object-cover hover:scale-110 transition-transform duration-700" />
+                <img src="/image/about_us/udata_vision.png" alt="Vision" className="w-full h-[200px] sm:h-[250px] md:h-[320px] object-cover hover:scale-110 transition-transform duration-700" />
               </div>
               
               <div className="w-full md:w-[55%] flex flex-col relative z-10">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-2xl bg-[#22D3EE]/10 flex items-center justify-center shrink-0 shadow-inner">
-                    <span className="material-symbols-outlined text-[#22D3EE] text-4xl" style={{ fontVariationSettings: '"FILL" 1' }}>visibility</span>
+                <div className="flex items-center gap-4 mb-4 md:mb-6">
+                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-[#22D3EE]/10 flex items-center justify-center shrink-0 shadow-inner">
+                    <span className="material-symbols-outlined text-[#22D3EE] text-3xl md:text-4xl" style={{ fontVariationSettings: '"FILL" 1' }}>visibility</span>
                   </div>
-                  <h3 className="font-display-md text-3xl text-white font-bold">{t('about.vision.title')}</h3>
+                  <h3 className="font-display-md text-2xl md:text-3xl text-white font-bold">{t('about.vision.title')}</h3>
                 </div>
-                <p className="font-body-md text-lg text-on-surface-variant leading-relaxed">
+                <p className="font-body-md text-base md:text-lg text-on-surface-variant leading-relaxed">
                   {t('about.vision.desc')}
                 </p>
               </div>
             </div>
 
             {/* Mission */}
-            <div className="glass-card p-6 md:p-10 rounded-3xl border border-surface-border bg-surface-container-lowest/30 hover:border-[#10B981]/50 transition-colors flex flex-col md:flex-row-reverse items-center gap-8 md:gap-12 group overflow-hidden relative">
+            <div className="w-[85vw] shrink-0 md:w-full md:shrink snap-center glass-card p-6 md:p-10 rounded-3xl border border-surface-border bg-surface-container-lowest/30 hover:border-[#10B981]/50 transition-colors flex flex-col md:flex-row-reverse items-center gap-6 md:gap-12 group overflow-hidden relative">
               <div className="absolute inset-0 bg-gradient-to-l from-[#10B981]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               
               <div className="w-full md:w-[45%] shrink-0 rounded-2xl overflow-hidden relative shadow-lg">
-                <img src="/image/about_us/udata_mission.png" alt="Mission" className="w-full h-[250px] md:h-[320px] object-cover hover:scale-110 transition-transform duration-700" />
+                <img src="/image/about_us/udata_mission.png" alt="Mission" className="w-full h-[200px] sm:h-[250px] md:h-[320px] object-cover hover:scale-110 transition-transform duration-700" />
               </div>
               
               <div className="w-full md:w-[55%] flex flex-col relative z-10">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-2xl bg-[#10B981]/10 flex items-center justify-center shrink-0 shadow-inner">
-                    <span className="material-symbols-outlined text-[#10B981] text-4xl" style={{ fontVariationSettings: '"FILL" 1' }}>flag</span>
+                <div className="flex items-center gap-4 mb-4 md:mb-6">
+                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-[#10B981]/10 flex items-center justify-center shrink-0 shadow-inner">
+                    <span className="material-symbols-outlined text-[#10B981] text-3xl md:text-4xl" style={{ fontVariationSettings: '"FILL" 1' }}>flag</span>
                   </div>
-                  <h3 className="font-display-md text-3xl text-white font-bold">{t('about.mission.title')}</h3>
+                  <h3 className="font-display-md text-2xl md:text-3xl text-white font-bold">{t('about.mission.title')}</h3>
                 </div>
-                <p className="font-body-md text-lg text-on-surface-variant leading-relaxed">
+                <p className="font-body-md text-base md:text-lg text-on-surface-variant leading-relaxed">
                   {t('about.mission.desc')}
                 </p>
               </div>
             </div>
 
             {/* Position */}
-            <div className="glass-card p-6 md:p-10 rounded-3xl border border-surface-border bg-surface-container-lowest/30 hover:border-[#3B82F6]/50 transition-colors flex flex-col md:flex-row items-center gap-8 md:gap-12 group overflow-hidden relative">
+            <div className="w-[85vw] shrink-0 md:w-full md:shrink snap-center glass-card p-6 md:p-10 rounded-3xl border border-surface-border bg-surface-container-lowest/30 hover:border-[#3B82F6]/50 transition-colors flex flex-col md:flex-row items-center gap-6 md:gap-12 group overflow-hidden relative">
               <div className="absolute inset-0 bg-gradient-to-r from-[#3B82F6]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               
               <div className="w-full md:w-[45%] shrink-0 rounded-2xl overflow-hidden relative shadow-lg">
-                <img src="/image/about_us/udata_position.png" alt="Position" className="w-full h-[250px] md:h-[320px] object-cover hover:scale-110 transition-transform duration-700" />
+                <img src="/image/about_us/udata_position.png" alt="Position" className="w-full h-[200px] sm:h-[250px] md:h-[320px] object-cover hover:scale-110 transition-transform duration-700" />
               </div>
               
               <div className="w-full md:w-[55%] flex flex-col relative z-10">
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 rounded-2xl bg-[#3B82F6]/10 flex items-center justify-center shrink-0 shadow-inner">
-                    <span className="material-symbols-outlined text-[#3B82F6] text-4xl" style={{ fontVariationSettings: '"FILL" 1' }}>adjust</span>
+                <div className="flex items-center gap-4 mb-4 md:mb-6">
+                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-xl md:rounded-2xl bg-[#3B82F6]/10 flex items-center justify-center shrink-0 shadow-inner">
+                    <span className="material-symbols-outlined text-[#3B82F6] text-3xl md:text-4xl" style={{ fontVariationSettings: '"FILL" 1' }}>adjust</span>
                   </div>
-                  <h3 className="font-display-md text-3xl text-white font-bold">{t('about.position.title')}</h3>
+                  <h3 className="font-display-md text-2xl md:text-3xl text-white font-bold">{t('about.position.title')}</h3>
                 </div>
-                <p className="font-body-md text-lg text-on-surface-variant leading-relaxed">
+                <p className="font-body-md text-base md:text-lg text-on-surface-variant leading-relaxed">
                   {t('about.position.desc')}
                 </p>
               </div>
@@ -213,9 +241,9 @@ export default function AboutUs() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-xl">
+          <div ref={coreScrollRef} className="flex overflow-x-auto md:grid md:grid-cols-3 gap-6 md:gap-xl snap-x snap-mandatory pb-6 md:pb-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] -mx-margin-mobile md:mx-0 px-margin-mobile md:px-0">
             {/* Intelligent */}
-            <div className="space-y-4 p-6 glass-card border border-white/5 bg-white/[0.02] rounded-xl hover:bg-white/[0.04] transition-colors">
+            <div className="w-[85vw] shrink-0 md:w-auto md:shrink snap-center space-y-4 p-6 glass-card border border-white/5 bg-white/[0.02] rounded-xl hover:bg-white/[0.04] transition-colors">
               <div className="mx-auto w-24 h-24 flex items-center justify-center text-electric-cyan">
                 <span className="material-symbols-outlined" style={{ fontSize: '80px', fontVariationSettings: '"FILL" 1' }}>psychology</span>
               </div>
@@ -226,7 +254,7 @@ export default function AboutUs() {
             </div>
 
             {/* Reliable */}
-            <div className="space-y-4 p-6 glass-card border border-white/5 bg-white/[0.02] rounded-xl hover:bg-white/[0.04] transition-colors">
+            <div className="w-[85vw] shrink-0 md:w-auto md:shrink snap-center space-y-4 p-6 glass-card border border-white/5 bg-white/[0.02] rounded-xl hover:bg-white/[0.04] transition-colors">
               <div className="mx-auto w-24 h-24 flex items-center justify-center text-[#4AA0F0]">
                 <span className="material-symbols-outlined" style={{ fontSize: '80px', fontVariationSettings: '"FILL" 1' }}>verified_user</span>
               </div>
@@ -237,7 +265,7 @@ export default function AboutUs() {
             </div>
 
             {/* Sustainable */}
-            <div className="space-y-4 p-6 glass-card border border-white/5 bg-white/[0.02] rounded-xl hover:bg-white/[0.04] transition-colors">
+            <div className="w-[85vw] shrink-0 md:w-auto md:shrink snap-center space-y-4 p-6 glass-card border border-white/5 bg-white/[0.02] rounded-xl hover:bg-white/[0.04] transition-colors">
               <div className="mx-auto w-24 h-24 flex items-center justify-center text-sustainability-green">
                 <span className="material-symbols-outlined" style={{ fontSize: '80px', fontVariationSettings: '"FILL" 1' }}>eco</span>
               </div>
