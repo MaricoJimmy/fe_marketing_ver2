@@ -64,8 +64,16 @@ export default function SolutionUseCases() {
   const tabsRef = useRef(null);
   const scrollDirection = useRef(1);
 
-  // Auto-cycle tabs (no scrolling needed as marquee handles it)
+  // Auto-cycle tabs and scroll active tab into view
   useEffect(() => {
+    // Center the active tab
+    const container = tabsRef.current;
+    const tab = document.getElementById(`usecase-tab-${activeTab}`);
+    if (container && tab) {
+      const scrollLeft = tab.offsetLeft - container.clientWidth / 2 + tab.clientWidth / 2;
+      container.scrollTo({ left: scrollLeft, behavior: 'smooth' });
+    }
+
     if (isHovered) return;
 
     const timer = setInterval(() => {
@@ -73,7 +81,7 @@ export default function SolutionUseCases() {
     }, 5000); // Switch every 5 seconds
 
     return () => clearInterval(timer);
-  }, [isHovered, useCases.length]);
+  }, [activeTab, isHovered, useCases.length]);
 
   const renderContent = (index) => {
     const caseItem = useCases[index];
@@ -176,49 +184,30 @@ export default function SolutionUseCases() {
 
         <div className="flex flex-col gap-8">
           
-          {/* Unified Horizontal Menu (Continuous Marquee) */}
-          <style>{`
-            @keyframes marqueeUseCases {
-              0% { transform: translateX(0); }
-              100% { transform: translateX(-50%); }
-            }
-            .animate-marquee-usecases {
-              animation: marqueeUseCases 35s linear infinite;
-              display: flex;
-              width: max-content;
-            }
-            @media (hover: hover) {
-              .animate-marquee-usecases:hover {
-                animation-play-state: paused;
-              }
-            }
-          `}</style>
-          
+          {/* Scrollable Horizontal Menu */}
           <div 
-            className="w-full overflow-hidden pb-6 relative"
+            ref={tabsRef}
+            className="w-full overflow-x-auto pb-6 relative hide-scrollbar [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden scroll-smooth"
             style={{ WebkitMaskImage: 'linear-gradient(to right, transparent, black 5%, black 95%, transparent)', maskImage: 'linear-gradient(to right, transparent, black 5%, black 95%, transparent)' }}
           >
-            <div className="animate-marquee-usecases gap-4 px-4">
-              {[...Array(2)].map((_, groupIdx) => (
-                <React.Fragment key={groupIdx}>
-                  {useCases.map((useCase, index) => {
-                    const isActive = activeTab === index;
-                    return (
-                      <button 
-                        key={`${groupIdx}-${index}`}
-                        onClick={() => setActiveTab(index)}
-                        className={`whitespace-nowrap px-6 py-3.5 rounded-full border text-sm md:text-base font-bold transition-all duration-300 mx-2 ${
-                          isActive 
-                            ? 'bg-[#22D3EE] text-[#06101F] border-[#22D3EE] shadow-[0_0_20px_rgba(34,211,238,0.4)] scale-105' 
-                            : 'bg-[#22D3EE]/5 text-[#9CA3AF] border-white/10 hover:bg-white/10 hover:text-white hover:border-white/20'
-                        }`}
-                      >
-                        {lang === 'EN' ? useCase.enTitle : useCase.viTitle}
-                      </button>
-                    );
-                  })}
-                </React.Fragment>
-              ))}
+            <div className="flex gap-4 px-8 w-max">
+              {useCases.map((useCase, index) => {
+                const isActive = activeTab === index;
+                return (
+                  <button 
+                    key={index}
+                    id={`usecase-tab-${index}`}
+                    onClick={() => setActiveTab(index)}
+                    className={`whitespace-nowrap px-6 py-3.5 rounded-full border text-sm md:text-base font-bold transition-all duration-300 mx-2 snap-center ${
+                      isActive 
+                        ? 'bg-[#22D3EE] text-[#06101F] border-[#22D3EE] shadow-[0_0_20px_rgba(34,211,238,0.4)] scale-105' 
+                        : 'bg-[#22D3EE]/5 text-[#9CA3AF] border-white/10 hover:bg-white/10 hover:text-white hover:border-white/20'
+                    }`}
+                  >
+                    {lang === 'EN' ? useCase.enTitle : useCase.viTitle}
+                  </button>
+                );
+              })}
             </div>
           </div>
 
