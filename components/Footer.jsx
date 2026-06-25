@@ -28,8 +28,8 @@ export default function Footer() {
               {t('footer.download_udata_profile')}
             </a>
             
-            {/* Social Icons Box */}
-            <div className="bg-white/5 border border-white/10 px-6 py-3 rounded flex items-center justify-center gap-4">
+            {/* Social Icons */}
+            <div className="flex items-center justify-center gap-4 mt-2">
               <a href="tel:1800255698" className="w-7 h-7 rounded-full border border-white/20 flex items-center justify-center hover:border-electric-cyan transition-colors">
                 <span className="material-symbols-outlined text-[14px] text-on-surface-variant">call</span>
               </a>
