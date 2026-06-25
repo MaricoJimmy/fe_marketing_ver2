@@ -64,16 +64,18 @@ export default function SolutionUseCases() {
   const tabsRef = useRef(null);
   const scrollDirection = useRef(1);
 
-  // Auto-cycle tabs and scroll active tab into view
+  // Auto-scroll active tab into view
   useEffect(() => {
-    // Center the active tab
     const container = tabsRef.current;
     const tab = document.getElementById(`usecase-tab-${activeTab}`);
     if (container && tab) {
       const scrollLeft = tab.offsetLeft - container.clientWidth / 2 + tab.clientWidth / 2;
       container.scrollTo({ left: scrollLeft, behavior: 'smooth' });
     }
+  }, [activeTab]);
 
+  // Auto-cycle tabs
+  useEffect(() => {
     if (isHovered) return;
 
     const timer = setInterval(() => {
@@ -81,7 +83,7 @@ export default function SolutionUseCases() {
     }, 5000); // Switch every 5 seconds
 
     return () => clearInterval(timer);
-  }, [activeTab, isHovered, useCases.length]);
+  }, [isHovered, useCases.length]);
 
   const renderContent = (index) => {
     const caseItem = useCases[index];
