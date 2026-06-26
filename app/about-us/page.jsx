@@ -84,8 +84,18 @@ export default function AboutUs() {
         
         <section 
           ref={headerRef} 
-          className="flex flex-col items-center justify-center space-y-6 md:space-y-8 min-h-[50vh] md:min-h-[65vh] w-full mx-auto relative z-10 px-4"
+          className="flex flex-col items-center justify-center space-y-6 md:space-y-8 min-h-[50vh] md:min-h-[65vh] w-full mx-auto relative z-10 px-4 md:py-20"
         >
+          {/* Animated Background for PC */}
+          <div className="hidden md:block absolute inset-0 z-[-1] pointer-events-none overflow-hidden rounded-[2.5rem] bg-surface-container-lowest/30 border border-surface-border/50">
+            <div className="absolute inset-0 opacity-60">
+              <AnimatedBackground />
+            </div>
+            {/* Subtle glow and gradient overlays */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] bg-electric-cyan/5 blur-[100px] rounded-full" />
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/20 to-background/90" />
+          </div>
+
           <div 
             className="inline-block bg-[#22D3EE]/10 border border-[#22D3EE]/30 px-6 py-2.5 rounded-full mb-2 backdrop-blur-md shadow-[0_0_30px_rgba(34,211,238,0.2)] transition-all duration-[1200ms] ease-[cubic-bezier(0.23,1,0.32,1)]"
             style={{ 
@@ -99,7 +109,7 @@ export default function AboutUs() {
           </div>
           
           <h1 
-            className="font-display-lg text-[28px] leading-[1.3] sm:text-4xl md:text-5xl lg:text-6xl xl:text-[4.5rem] text-white md:leading-[1.1] font-bold text-center drop-shadow-2xl max-w-6xl mx-auto transition-all duration-[1500ms] delay-100 ease-[cubic-bezier(0.23,1,0.32,1)]"
+            className="font-display-lg text-[22px] min-[375px]:text-[24px] leading-[1.3] sm:text-3xl md:text-4xl lg:text-[40px] xl:text-[48px] text-white md:leading-[1.2] font-bold text-center drop-shadow-2xl max-w-6xl mx-auto transition-all duration-[1500ms] delay-100 ease-[cubic-bezier(0.23,1,0.32,1)]"
             style={{ 
               transform: headerVisible ? 'translateY(0) scale(1)' : 'translateY(50px) scale(0.95)', 
               opacity: headerVisible ? 1 : 0,
@@ -127,17 +137,17 @@ export default function AboutUs() {
             {/* Left Column: Intro & History */}
             <div className="lg:col-span-6 flex flex-col justify-center h-full pr-0 lg:pr-4">
               <div className="space-y-5 lg:space-y-6">
-                <h2 className="font-display-lg text-4xl lg:text-5xl text-white font-bold mb-4 lg:mb-6 leading-tight drop-shadow-md">
+                <h2 className="font-display-lg text-2xl min-[375px]:text-3xl md:text-4xl lg:text-5xl text-white font-bold mb-4 lg:mb-6 leading-tight drop-shadow-md">
                   {t('about.intro.title')}
                 </h2>
-                <p className="font-body-md text-[1.05rem] lg:text-[1.1rem] text-on-surface leading-[1.8]" dangerouslySetInnerHTML={{ __html: t('about.intro.p1') }} />
-                <p className="font-body-md text-[1.05rem] lg:text-[1.1rem] text-on-surface-variant leading-[1.8]">
+                <p className="font-body-md text-[0.95rem] md:text-[1.05rem] lg:text-[1.1rem] text-on-surface leading-[1.7] md:leading-[1.8]" dangerouslySetInnerHTML={{ __html: t('about.intro.p1') }} />
+                <p className="font-body-md text-[0.95rem] md:text-[1.05rem] lg:text-[1.1rem] text-on-surface-variant leading-[1.7] md:leading-[1.8]">
                   {t('about.intro.p2')}
                 </p>
-                <p className="font-body-md text-[1.05rem] lg:text-[1.1rem] text-on-surface-variant leading-[1.8]" dangerouslySetInnerHTML={{ __html: t('about.intro.p3') }} />
+                <p className="font-body-md text-[0.95rem] md:text-[1.05rem] lg:text-[1.1rem] text-on-surface-variant leading-[1.7] md:leading-[1.8]" dangerouslySetInnerHTML={{ __html: t('about.intro.p3') }} />
                 <div className="pt-3 lg:pt-5">
-                  <div className="inline-block border-l-4 border-electric-cyan pl-5 py-2">
-                    <p className="font-title-md text-lg lg:text-xl text-white italic leading-relaxed">
+                  <div className="inline-block border-l-[3px] md:border-l-4 border-electric-cyan pl-4 md:pl-5 py-1 md:py-2">
+                    <p className="font-title-md text-base md:text-lg lg:text-xl text-white italic leading-relaxed">
                       "{t('about.intro.quote')}"
                     </p>
                   </div>
@@ -233,45 +243,42 @@ export default function AboutUs() {
         >
           <div className="max-w-3xl mx-auto mb-16 space-y-6">
             <h2 className="font-display-md text-4xl text-white font-bold">{t('about.core.title')}</h2>
-            <h3 className="font-title-lg text-2xl text-electric-cyan font-bold leading-tight">
-              {t('about.core.subtitle')}
-            </h3>
-            <p className="font-body-md text-lg text-on-surface-variant leading-relaxed">
-              {t('about.core.desc')}
-            </p>
           </div>
 
           <div ref={coreScrollRef} className="flex overflow-x-auto md:grid md:grid-cols-3 gap-6 md:gap-xl snap-x snap-mandatory pb-6 md:pb-0 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] -mx-margin-mobile md:mx-0 px-margin-mobile md:px-0">
-            {/* Intelligent */}
-            <div className="w-[85vw] shrink-0 md:w-auto md:shrink snap-center space-y-4 p-6 glass-card border border-white/5 bg-white/[0.02] rounded-xl hover:bg-white/[0.04] transition-colors">
-              <div className="mx-auto w-24 h-24 flex items-center justify-center text-electric-cyan">
-                <span className="material-symbols-outlined" style={{ fontSize: '80px', fontVariationSettings: '"FILL" 1' }}>psychology</span>
+            {/* FIT */}
+            <div className="w-[85vw] shrink-0 md:w-auto md:shrink snap-center space-y-4 p-6 glass-card border border-white/5 bg-white/[0.02] rounded-xl hover:bg-white/[0.04] transition-colors text-left md:text-center">
+              <div className="md:mx-auto w-24 h-24 md:w-32 md:h-32 flex items-center justify-start md:justify-center text-electric-cyan">
+                <span className="material-symbols-outlined" style={{ fontSize: 'clamp(80px, 8vw, 130px)', fontVariationSettings: '"FILL" 1' }}>psychology</span>
               </div>
-              <h3 className="font-title-lg text-2xl text-white font-bold uppercase tracking-wide">Intelligent</h3>
+              <h3 className="font-title-lg text-2xl text-electric-cyan font-bold uppercase tracking-wide">FIT</h3>
+              <h4 className="text-lg text-white font-bold leading-snug">{t('about.core.fit.title')}</h4>
               <p className="font-body-md text-on-surface-variant leading-relaxed text-base">
-                {t('about.core.intelligent.desc')}
+                {t('about.core.fit.desc')}
               </p>
             </div>
 
-            {/* Reliable */}
-            <div className="w-[85vw] shrink-0 md:w-auto md:shrink snap-center space-y-4 p-6 glass-card border border-white/5 bg-white/[0.02] rounded-xl hover:bg-white/[0.04] transition-colors">
-              <div className="mx-auto w-24 h-24 flex items-center justify-center text-[#4AA0F0]">
-                <span className="material-symbols-outlined" style={{ fontSize: '80px', fontVariationSettings: '"FILL" 1' }}>verified_user</span>
+            {/* FAST */}
+            <div className="w-[85vw] shrink-0 md:w-auto md:shrink snap-center space-y-4 p-6 glass-card border border-white/5 bg-white/[0.02] rounded-xl hover:bg-white/[0.04] transition-colors text-left md:text-center">
+              <div className="md:mx-auto w-24 h-24 md:w-32 md:h-32 flex items-center justify-start md:justify-center text-[#4AA0F0]">
+                <span className="material-symbols-outlined" style={{ fontSize: 'clamp(80px, 8vw, 130px)', fontVariationSettings: '"FILL" 1' }}>verified_user</span>
               </div>
-              <h3 className="font-title-lg text-2xl text-white font-bold uppercase tracking-wide">Reliable</h3>
+              <h3 className="font-title-lg text-2xl text-[#4AA0F0] font-bold uppercase tracking-wide">FAST</h3>
+              <h4 className="text-lg text-white font-bold leading-snug">{t('about.core.fast.title')}</h4>
               <p className="font-body-md text-on-surface-variant leading-relaxed text-base">
-                {t('about.core.reliable.desc')}
+                {t('about.core.fast.desc')}
               </p>
             </div>
 
-            {/* Sustainable */}
-            <div className="w-[85vw] shrink-0 md:w-auto md:shrink snap-center space-y-4 p-6 glass-card border border-white/5 bg-white/[0.02] rounded-xl hover:bg-white/[0.04] transition-colors">
-              <div className="mx-auto w-24 h-24 flex items-center justify-center text-sustainability-green">
-                <span className="material-symbols-outlined" style={{ fontSize: '80px', fontVariationSettings: '"FILL" 1' }}>eco</span>
+            {/* FLEXIBLE */}
+            <div className="w-[85vw] shrink-0 md:w-auto md:shrink snap-center space-y-4 p-6 glass-card border border-white/5 bg-white/[0.02] rounded-xl hover:bg-white/[0.04] transition-colors text-left md:text-center">
+              <div className="md:mx-auto w-24 h-24 md:w-32 md:h-32 flex items-center justify-start md:justify-center text-sustainability-green">
+                <span className="material-symbols-outlined" style={{ fontSize: 'clamp(80px, 8vw, 130px)', fontVariationSettings: '"FILL" 1' }}>eco</span>
               </div>
-              <h3 className="font-title-lg text-2xl text-white font-bold uppercase tracking-wide">Sustainable</h3>
+              <h3 className="font-title-lg text-2xl text-sustainability-green font-bold uppercase tracking-wide">FLEXIBLE</h3>
+              <h4 className="text-lg text-white font-bold leading-snug">{t('about.core.flexible.title')}</h4>
               <p className="font-body-md text-on-surface-variant leading-relaxed text-base">
-                {t('about.core.sustainable.desc')}
+                {t('about.core.flexible.desc')}
               </p>
             </div>
           </div>
@@ -284,15 +291,14 @@ export default function AboutUs() {
           style={{ transform: awardsVisible ? 'translateY(0)' : 'translateY(50px)', opacity: awardsVisible ? 1 : 0 }}
         >
           <div className="mb-8">
-            <h2 className="font-display-md text-4xl text-white font-bold mb-3">{t('about.awards.title')}</h2>
-            <h3 className="font-title-lg text-2xl text-electric-cyan font-bold leading-tight">
+            <h2 className="font-display-md text-3xl md:text-4xl text-white font-bold mb-3">{t('about.awards.title')}</h2>
+            <h3 className="font-title-lg text-xl md:text-2xl text-[#22D3EE] font-medium leading-tight opacity-90">
               {t('about.awards.subtitle')}
             </h3>
           </div>
           
           <div className="space-y-6 mb-12 w-full">
-            <p className="font-body-md text-[1.1rem] text-on-surface-variant leading-[1.8]" dangerouslySetInnerHTML={{ __html: t('about.awards.p1') }} />
-            <p className="font-body-md text-[1.1rem] text-on-surface-variant leading-[1.8]" dangerouslySetInnerHTML={{ __html: t('about.awards.p2') }} />
+            <p className="font-body-md text-base md:text-[1.1rem] text-white/80 leading-[1.8]" dangerouslySetInnerHTML={{ __html: t('about.awards.p1') }} />
           </div>
 
           <div className="flex flex-col md:flex-row gap-md items-stretch">

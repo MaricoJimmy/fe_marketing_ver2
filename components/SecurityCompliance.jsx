@@ -42,14 +42,14 @@ export default function SecurityCompliance() {
             <div className="w-8 h-px bg-[#22D3EE]/50"></div>
           </div>
           
-          <h2 className="font-display-lg text-3xl md:text-4xl lg:text-5xl text-on-surface font-bold mb-4 leading-tight">
+          <h2 className="font-display-lg text-2xl md:text-3xl lg:text-4xl xl:text-[44px] text-white font-bold mb-4 leading-tight max-w-6xl mx-auto">
             {t('compliance.title.line1')}
             <br className="hidden md:block" />
             <span className="bg-gradient-to-r from-[#22D3EE] to-[#10F0CB] bg-clip-text text-transparent ml-1 md:ml-0">
               {t('compliance.title.highlight1')}
             </span>
             {t('compliance.title.mid')}
-            <span className="bg-gradient-to-r from-[#22D3EE] to-[#10F0CB] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#22D3EE] to-[#10F0CB] bg-clip-text text-transparent whitespace-nowrap">
               {t('compliance.title.highlight2')}
             </span>
           </h2>

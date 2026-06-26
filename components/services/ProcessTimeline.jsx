@@ -3,7 +3,7 @@ import React, { useRef, useEffect } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { motion } from 'framer-motion';
 
-const ProcessTimeline = ({ tPrefix = 'dt' }) => {
+const ProcessTimeline = ({ tPrefix = 'dt', stepCount = 4 }) => {
   const { t } = useLanguage();
   const scrollContainerRef = useRef(null);
 
@@ -32,32 +32,14 @@ const ProcessTimeline = ({ tPrefix = 'dt' }) => {
     };
   }, []);
 
-  const steps = [
-    {
-      id: '01',
-      icon: 'search',
-      title: t(`${tPrefix}.process.s1.title`),
-      desc: t(`${tPrefix}.process.s1.desc`),
-    },
-    {
-      id: '02',
-      icon: 'design_services',
-      title: t(`${tPrefix}.process.s2.title`),
-      desc: t(`${tPrefix}.process.s2.desc`),
-    },
-    {
-      id: '03',
-      icon: 'code',
-      title: t(`${tPrefix}.process.s3.title`),
-      desc: t(`${tPrefix}.process.s3.desc`),
-    },
-    {
-      id: '04',
-      icon: 'bug_report',
-      title: t(`${tPrefix}.process.s4.title`),
-      desc: t(`${tPrefix}.process.s4.desc`),
-    }
-  ];
+  const iconMap = ['search', 'design_services', 'code', 'account_tree', 'verified', 'rocket_launch'];
+  const steps = Array.from({ length: stepCount }, (_, i) => ({
+    id: `0${i + 1}`,
+    icon: iconMap[i % iconMap.length],
+    title: t(`${tPrefix}.process.s${i + 1}.title`),
+    desc: t(`${tPrefix}.process.s${i + 1}.desc`),
+    deliverable: t(`${tPrefix}.process.s${i + 1}.deliverable`)
+  }));
 
   return (
     <div className="relative py-4 md:py-12">
@@ -89,6 +71,12 @@ const ProcessTimeline = ({ tPrefix = 'dt' }) => {
                   <div className="text-[#22D3EE] font-display-md text-[16px] mb-2">{step.id}</div>
                   <h3 className="text-white font-title-lg text-[20px] font-bold mb-3">{step.title}</h3>
                   <p className="text-white/70 font-body-md text-[15px] leading-relaxed">{step.desc}</p>
+                  {step.deliverable && !step.deliverable.includes('.deliverable') && (
+                    <div className="mt-5 pt-4 border-t border-white/10 text-left">
+                      <span className="text-[#22D3EE] text-sm font-bold block mb-1 uppercase tracking-wider">Deliverable</span>
+                      <p className="text-white font-body-sm text-[14px] leading-relaxed">{step.deliverable}</p>
+                    </div>
+                  )}
                 </div>
               </div>
             </motion.div>
