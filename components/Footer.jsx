@@ -30,7 +30,7 @@ export default function Footer() {
             
             {/* Social Icons */}
             <div className="flex items-center justify-center gap-4 mt-2">
-              <a href="tel:1800255698" className="w-7 h-7 rounded-full border border-white/20 flex items-center justify-center hover:border-electric-cyan transition-colors">
+              <a href="tel:+84 965778589" className="w-7 h-7 rounded-full border border-white/20 flex items-center justify-center hover:border-electric-cyan transition-colors">
                 <span className="material-symbols-outlined text-[14px] text-on-surface-variant">call</span>
               </a>
               <a href="https://www.facebook.com/profile.php?id=61566884154567" target="_blank" rel="noopener noreferrer" className="w-7 h-7 rounded-full bg-[#1877F2] flex items-center justify-center hover:opacity-80 transition-opacity">
@@ -76,7 +76,7 @@ export default function Footer() {
               
               <div className="flex items-center gap-3">
                 <span className="material-symbols-outlined text-[#1877F2] text-lg">call</span>
-                <span>1800 255 698</span>
+                <span> +84 965778589</span>
               </div>
               
               <div className="flex items-center gap-3">
