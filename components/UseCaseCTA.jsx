@@ -1,0 +1,67 @@
+"use client";
+import React from 'react';
+import { useRouter } from 'next/navigation';
+import { useLanguage } from '@/contexts/LanguageContext';
+
+export default function UseCaseCTA() {
+  const { t, lang } = useLanguage();
+  const router = useRouter();
+
+  return (
+    <section className="py-20 md:py-32 px-6 md:px-12 bg-[#080B10] border-t border-white/5 relative z-10 flex justify-center overflow-hidden">
+      {/* Background decorations */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[500px] bg-[#22D3EE]/10 blur-[150px] rounded-[100%] pointer-events-none"></div>
+
+      <div className="w-full max-w-[1200px] relative">
+        <div className="relative w-full rounded-[2.5rem] overflow-hidden border border-[#22D3EE]/20 glass-card bg-[#0A0E14]/60 backdrop-blur-2xl shadow-[0_0_80px_rgba(34,211,238,0.05)] py-16 px-6 sm:px-12 md:py-24 md:px-20 text-center group">
+          
+          {/* Animated Conic Gradient */}
+          <div className="absolute inset-0 opacity-30 transition-opacity duration-1000 group-hover:opacity-50">
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150%] h-[200%] md:w-[200%] bg-[conic-gradient(from_0deg,transparent_0_340deg,#22D3EE_360deg)] animate-[spin_8s_linear_infinite] opacity-20"></div>
+          </div>
+          
+          {/* Grid Pattern */}
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:40px_40px] opacity-30 [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_80%)]"></div>
+          
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0A0E14] via-[#0A0E14]/80 to-transparent"></div>
+
+          <div className="relative z-10 flex flex-col items-center">
+            {/* Tag */}
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 mb-8 backdrop-blur-md">
+              <span className="w-2 h-2 rounded-full bg-[#22D3EE] animate-pulse shadow-[0_0_10px_#22D3EE]"></span>
+              <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-[#22D3EE]">
+                {lang === 'EN' ? 'Talk to Experts' : 'Trao đổi với chuyên gia'}
+              </span>
+            </div>
+
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight max-w-4xl drop-shadow-lg text-balance mx-auto text-center">
+              {t('usecases.cta.title')}
+            </h2>
+            <p className="text-[#9CA3AF] text-sm md:text-lg lg:text-xl mb-12 max-w-3xl mx-auto leading-relaxed text-balance text-center">
+              {t('usecases.cta.desc')}
+            </p>
+
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 w-full sm:w-auto">
+              <button 
+                onClick={() => router.push('/demo')}
+                className="w-full sm:w-auto bg-gradient-to-r from-[#22D3EE] to-[#10F0CB] text-[#06101F] px-8 py-4 rounded-2xl font-bold text-sm md:text-base lg:text-lg transition-all shadow-[0_0_30px_rgba(34,211,238,0.4)] hover:shadow-[0_0_50px_rgba(34,211,238,0.6)] hover:scale-105 flex items-center justify-center gap-2 group/btn"
+              >
+                <span>{t('usecases.cta.btn1')}</span>
+                <span className="material-symbols-outlined text-xl group-hover/btn:translate-x-1 transition-transform">arrow_forward</span>
+              </button>
+              
+              <button 
+                onClick={() => router.push('/dung-thu')}
+                className="w-full sm:w-auto border border-white/20 bg-white/5 text-white px-8 py-4 rounded-2xl font-bold text-sm md:text-base lg:text-lg hover:bg-white/10 hover:border-white/40 transition-all flex items-center justify-center gap-2"
+              >
+                <span className="material-symbols-outlined text-xl">play_circle</span>
+                <span>{t('usecases.cta.btn2')}</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
