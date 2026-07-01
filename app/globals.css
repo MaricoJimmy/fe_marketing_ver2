@@ -1,0 +1,107 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  body {
+    @apply bg-background text-on-surface selection:bg-electric-cyan selection:text-background overflow-x-hidden;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    background: rgba(10, 20, 40, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .glow-cyan {
+    box-shadow: 0 0 20px rgba(0, 251, 255, 0.2);
+  }
+}
+
+/* Sustainability Vertical Flow Styles */
+.flow-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    opacity: 0.25;
+}
+
+.vertical-flow-stream {
+    width: 1px;
+    height: 200%;
+    background: linear-gradient(to bottom, transparent, #10B981, transparent);
+    filter: blur(1px);
+    position: relative;
+}
+
+@keyframes waving-vertical {
+    0% { transform: translateY(-50%) translateX(-10px); }
+    50% { transform: translateY(-48%) translateX(10px); }
+    100% { transform: translateY(-50%) translateX(-10px); }
+}
+
+@keyframes pulse-flow {
+    0%, 100% { opacity: 0.3; stroke-width: 1; }
+    50% { opacity: 0.8; stroke-width: 2; }
+}
+
+.sustainability-glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.05) 0%, rgba(16, 185, 129, 0) 70%);
+    border-radius: 50%;
+    filter: blur(60px);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Fragmented Data Animation Styles */
+@keyframes orbit {
+    from { transform: rotate(0deg) translateX(var(--distance)) rotate(0deg); }
+    to { transform: rotate(360deg) translateX(var(--distance)) rotate(-360deg); }
+}
+@keyframes drift {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(var(--drift-x), var(--drift-y)); }
+}
+@keyframes pulse-node {
+    0%, 100% { transform: scale(1); opacity: 1; box-shadow: 0 0 20px rgba(0, 251, 255, 0.4); }
+    50% { transform: scale(1.1); opacity: 0.8; box-shadow: 0 0 40px rgba(0, 251, 255, 0.6); }
+}
+.satellite-node {
+    animation: orbit var(--duration) linear infinite, drift var(--drift-duration) ease-in-out infinite;
+}
+.center-node {
+    animation: pulse-node 4s ease-in-out infinite;
+}
+
+.animate-pulse-flow {
+    animation: pulse-flow 4s infinite;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+@keyframes float-node {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+@keyframes flow-dash {
+    to { stroke-dashoffset: -24; }
+}
+.animate-flow-dash {
+    animation: flow-dash 1s linear infinite;
+}

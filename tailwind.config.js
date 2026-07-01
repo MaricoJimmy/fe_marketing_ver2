@@ -1,8 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./lib/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   darkMode: "class",
   theme: {
@@ -68,10 +69,23 @@ export default {
               "marquee": {
                   "0%": { "transform": "translateX(0%)" },
                   "100%": { "transform": "translateX(-100%)" }
+              },
+              "float-node": {
+                  "0%, 100%": { "transform": "translateY(0)" },
+                  "50%": { "transform": "translateY(-10px)" }
+              },
+              "flow-dash": {
+                  "to": { "stroke-dashoffset": "-24" }
+              },
+              "shimmer": {
+                  "100%": { "transform": "translateX(100%)" }
               }
           },
           "animation": {
-              "marquee": "marquee 30s linear infinite"
+              "marquee": "marquee 30s linear infinite",
+              "float-node": "float-node 4s ease-in-out infinite",
+              "flow-dash": "flow-dash 1s linear infinite",
+              "shimmer": "shimmer 2.5s infinite"
           },
           "borderRadius": {
               "DEFAULT": "0.25rem",
@@ -91,12 +105,13 @@ export default {
               "margin-desktop": "64px"
           },
           "fontFamily": {
-              "title-md": ["Inter"],
-              "headline-lg-mobile": ["Geist"],
-              "body-md": ["Inter"],
-              "display-lg": ["Geist"],
-              "headline-lg": ["Geist"],
-              "label-sm": ["JetBrains Mono"]
+              "title-md": ["Geist", "sans-serif"],
+              "headline-lg-mobile": ["Geist", "sans-serif"],
+              "body-md": ["Geist", "sans-serif"],
+              "display-lg": ["Geist", "sans-serif"],
+              "headline-lg": ["Geist", "sans-serif"],
+              "label-sm": ["Geist", "sans-serif"],
+              "sans": ["Geist", "sans-serif"],
           },
           "fontSize": {
               "title-md": ["20px", {"lineHeight": "1.5", "letterSpacing": "0em", "fontWeight": "500"}],
