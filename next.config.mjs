@@ -15,6 +15,21 @@ const nextConfig = {
         source: '/tuyen-dung',
         destination: '/careers',
         permanent: true,
+      },
+      {
+        source: '/en',
+        destination: '/product/uboard',
+        permanent: true,
+      },
+      {
+        source: '/san-pham/ugate',
+        destination: '/product/ugate',
+        permanent: true,
+      },
+      {
+        source: '/san-pham/uzero',
+        destination: '/product/uzero',
+        permanent: true,
       }
     ];
   },
