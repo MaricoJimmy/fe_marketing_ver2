@@ -1,0 +1,1363 @@
+{
+  "Index": {
+    "titleSocial": "Nền tảng thu thập, giám sát và phân tích dữ liệu",
+    "desc": "Nền tảng thu thập, giám sát và phân tích dữ liệu",
+    "solutions": {
+      "title": "Các giải pháp của Udata",
+      "list": {
+        "uboard": "Giám sát và phân tích dữ liệu",
+        "ugate": "Hỗ trợ kỹ thuật thông minh AI",
+        "uzero": "Tính toán phát thải"
+      }
+    },
+    "fieldsOfApplication": {
+      "title": "Lĩnh vực áp dụng",
+      "list": {
+        "solar": {
+          "title": "Điện mặt trời mái nhà",
+          "desc": "Nhà đầu tư và đơn vị vận hành có thể chủ động quản lý hệ thống điện mặt trời mái nhà một cách hiệu quả."
+        },
+        "elevator": {
+          "title": "Thang máy",
+          "desc": "Nhà sản xuất và đơn vị bảo trì có thể chủ động theo dõi, phát hiện sớm bất thường và tối ưu hiệu quả bảo trì thang máy một cách toàn diện."
+        },
+        "oee": {
+          "title": "Quản lý hiệu suất và bảo dưỡng máy (OEE)",
+          "desc": "Phân tích dữ liệu hoạt động sản xuất dựa trên những dữ liệu thu thập được nhằm đưa ra các báo cáo, cảnh báo giúp nhà máy kịp thời đưa ra các quyết định chính xác."
+        },
+        "ems": {
+          "title": "Quản lý năng lượng (EMS)",
+          "desc": "Theo dõi, phân tích và tối ưu dữ liệu tiêu thụ từ các nguồn năng lượng như điện, khí, nhiệt, nước... giúp doanh nghiệp giảm chi phí, nâng cao hiệu suất và hướng đến vận hành bền vững."
+        },
+        "ghg": {
+          "title": "Quản lý phát thải khí nhà kính",
+          "desc": "Đo lường, trực quan hóa và quản lý phát thải khí nhà kính theo Phạm vi 1, 2 và 3, giúp doanh nghiệp tuân thủ các tiêu chuẩn ESG và nâng cao hiệu quả bền vững."
+        },
+        "ai": {
+          "title": "Trợ lý AI",
+          "desc": "Giúp doanh nghiệp tập trung dữ liệu vận hành, tiêu chuẩn hóa quy trình làm việc và quản trị tri thức để mọi đội nhóm phối hợp hiệu quả. Giúp kỹ sư, quản lý và doanh nghiệp tra cứu tri thức tức thì, xác minh thiết bị chính hãng và minh bạch CO/CQ để giảm rủi ro và nâng cao hiệu quả."
+        }
+      }
+    },
+    "customers": {
+      "title": "Đối tác - Khách hàng"
+    },
+    "about-us": {
+      "title": "Về chúng tôi",
+      "content": "<p>Được phát triển từ năm 2022. Năm 2024, Udata được đầu tư bởi DHG. Năm 2025, Udata vinh dự nhận giải thưởng Sao Khuê như sự ghi nhận những nỗ lực đổi mới của Udata.</p> <p>Udata là nền tảng phần mềm tiên phong tại Việt Nam trong lĩnh vực thu thập, giám sát và phân tích dữ liệu IoT, giúp doanh nghiệp vận hành thông minh và phát triển bền vững. Với các sản phẩm chủ lực như Uboard, Umaintain, Uzero, Uvisual và Ubot, Udata đang đồng hành cùng các nhà máy, tòa nhà, khu công nghiệp, doanh nghiệp sản xuất trong hành trình chuyển đổi số và tối ưu hóa năng lượng theo tiêu chuẩn ISO 50001, COP26, COP28.</p>"
+    },
+    "notification": "Thông báo",
+    "news": "Tin tức nổi bật",
+    "button": {
+      "details": "Xem chi tiết",
+      "full": "Xem tất cả",
+      "start": "Dùng thử"
+    },
+    "noData": "Hiện chưa có bài viết nào!"
+  },
+  "Header": {
+    "news": {
+      "title": "Tin tức",
+      "notification": "Thông báo",
+      "blog": "Blog"
+    },
+    "products": {
+      "title": "Sản phẩm",
+      "menus": {
+        "saas": "Nền tảng SaaS",
+        "integrate": "Tích hợp dữ liệu"
+      },
+      "subMenus": {
+        "pms": "Tối ưu năng lượng, tiết kiệm chi phí"
+      }
+    },
+    "solutions": {
+      "title": "Lĩnh vực áp dụng",
+      "menusByObject": {
+        "title": "Theo đối tượng",
+        "investors": "Chủ đầu tư - quản lý cấp cao",
+        "managers": "Cấp quản lý",
+        "operators": "Cấp vận hành"
+      },
+      "menusByField": {
+        "title": "Theo lĩnh vực",
+        "factory": "Nhà máy",
+        "fishing": "Thủy sản"
+      },
+      "solar": "Năng lượng mặt trời áp mái",
+      "elevator": "Thang máy",
+      "oee": "OEE",
+      "ems": "EMS",
+      "ghg": "GHG",
+      "aiForBusiness": "Trợ lý AI cho doanh nghiệp",
+      "aiForAssistant": "Trợ lý AI cho hỏi đáp"
+    },
+    "contact": "Dùng thử",
+    "about-us": "Về công ty",
+    "bookDemo": "Yêu cầu dùng thử",
+    "career": "Tuyển dụng"
+  },
+  "Contact": {
+    "title": "Trải nghiệm nền tảng Udata trong 30 phút demo trực tiếp.",
+    "subTitle": "Luôn hoạt động. Luôn chính xác. <br/> Udata - Đồng hành cùng doanh nghiệp trong kỷ nguyên công nghệ và bền vững.",
+    "titleSection": {
+      "first": "Thông tin liên hệ",
+      "second": "Đăng ký tư vấn và dùng thử miễn phí 30 ngày cùng Udata",
+      "third": "Dùng thử miễn phí nền tảng Udata trong 30 ngày!",
+      "fourth": "Hướng dẫn đăng ký dùng thử"
+    },
+    "form": {
+      "name": {
+        "label": "Họ và tên",
+        "phd": "Nhập họ và tên"
+      },
+      "company": {
+        "label": "Tên công ty",
+        "phd": "Nhập tên công ty"
+      },
+      "email": {
+        "label": "Email",
+        "phd": "Nhập email"
+      },
+      "phone": {
+        "label": "Số điện thoại",
+        "phd": "Nhập số điện thoại"
+      },
+      "fields": {
+        "label": "Ngành nghề",
+        "lists": [
+          "Năng lượng mặt trời áp mái",
+          "Công nghiệp",
+          "Thủy sản",
+          "Nông nghiệp",
+          "Y tế",
+          "Quan trắc môi trường",
+          "Ngân hàng - Bán lẻ",
+          "Viễn thông",
+          "Xăng dầu",
+          "Khác"
+        ]
+      },
+      "requests": {
+        "label": "Nội dung yêu cầu thông tin",
+        "lists": [
+          "Hỗ trợ thanh toán/tài khoản",
+          "Yêu cầu thông tin về tuân thủ",
+          "Hỗ trợ bán hàng",
+          "Hỗ trợ kỹ thuật",
+          "Đăng ký dùng thử"
+        ]
+      },
+      "target": {
+        "label": "Tôi đang hoàn thành biểu mẫu này liên quan đến",
+        "for-self": "Lợi ích cá nhân",
+        "for-customer": "Lợi ích kinh doanh"
+      },
+      "message": {
+        "label": "Nội dung",
+        "phd": "Nhập nội dung"
+      },
+      "checkboxSure": "Có, tôi muốn Udata chia sẻ cho tôi các tin tức mới nhất về dịch vụ Udata và các chương trình khuyến mãi có liên quan qua email hoặc điện thoại.",
+      "button": "Gửi",
+      "error": {
+        "name": "Họ và tên không được để trống!",
+        "company": "Tên công ty không được để trống!",
+        "phone": {
+          "blank": "Số điện thoại không được để trống!",
+          "valid": "Số điện thoại không hợp lệ!"
+        },
+        "email": "Email không được để trống!",
+        "fields": "Ngành nghề không được để trống!",
+        "requests": "Ngành nghề không được để trống!",
+        "sure": "Vui lòng chấp nhận điều khoản"
+      }
+    },
+    "noti": {
+      "success": "Đặt lịch thành công!",
+      "error": "Đã xảy ra lỗi!"
+    },
+    "discoveries": {
+      "title": "Trong buổi demo 30 phút, chúng tôi sẽ cùng bạn khám phá:",
+      "list": [
+        {
+          "title": "Tối ưu chi phí và hiệu suất",
+          "content": " Xem trực tiếp cách hệ thống Udata giúp tiết kiệm điện năng, giảm chi phí vận hành và nâng cao hiệu suất thiết bị."
+        },
+        {
+          "title": "Trải nghiệm demo tương tác",
+          "content": "Dùng thử dashboard thực tế - theo dõi dữ liệu năng lượng, cảnh báo và báo cáo tự động."
+        },
+        {
+          "title": "Tư vấn 1:1 cùng chuyên gia",
+          "content": "Trao đổi về nhu cầu cụ thể của doanh nghiệp bạn, đề xuất giải pháp phù hợp cho từng mô hình vận hành."
+        },
+        {
+          "title": "Tài liệu hướng dẫn & bản dùng thử miễn phí 30 ngày",
+          "content": " Nhận hướng dẫn triển khai chi tiết và quyền truy cập nền tảng Udata trong 30 ngày hoàn toàn miễn phí."
+        }
+      ]
+    }
+  },
+  "Common": {
+    "news": "Tin tức nổi bật",
+    "relatedPost": "Bài viết liên quan",
+    "date": "Ngày xuất bản",
+    "document": {
+      "oee": "Tài liệu Pambu OEE",
+      "descOEE": "Giải Pháp Toàn Diện Về Quản Lý Hiệu Suất Và Bảo Dưỡng Máy",
+      "pms": "Tài liệu Pambu PMS",
+      "descPMS": "Giám Sát Và Quản Lý Năng Lượng"
+    },
+    "titleNews": "Khám phá các tin tức mới nhất của Pambu"
+  },
+  "Footer": {
+    "section": {
+      "first": {
+        "title": "Đường dẫn nhanh",
+        "links": {
+          "company": "Công ty",
+          "trial": "Dùng thử",
+          "career": "Tuyển dụng",
+          "solutions": {
+            "title": "Lĩnh vực áp dụng",
+            "solar": "Năng lượng mặt trời áp mái",
+            "elevator": "Thang máy",
+            "oee": "OEE",
+            "ems": "EMS",
+            "ghg": "GHG",
+            "aiForBusiness": "Trợ lý AI cho doanh nghiệp",
+            "aiForAssistant": "Trợ lý AI cho hỏi đáp"
+          },
+          "products": {
+            "title": "Sản phẩm"
+          },
+          "blog": "Tin tức",
+          "notification": "Thông báo"
+        }
+      },
+      "second": {
+        "title": "Thông tin liên hệ",
+        "addressHN": {
+          "title": "Văn phòng Hà Nội",
+          "address": "Tầng 9, Tòa nhà Thiên Niên Kỷ, Số 4 Quang Trung, Phường Hà Đông, Hà Nội."
+        },
+        "addressHCM": {
+          "title": "Văn phòng Hồ Chí Minh",
+          "address": "Tầng 6, Tòa nhà DHG, Số 31–33, Đường 18, Phường Thông Tây Hội, Thành phố Hồ Chí Minh."
+        }
+      },
+      "third": {
+        "title": "Giờ làm việc",
+        "time": "Thứ Hai - Thứ Sáu: 8:00 - 17:30 <br /> Thứ Bảy: 8:00 - 12:00"
+      }
+    }
+  },
+  "AboutUs": {
+    "title": "Về chúng tôi",
+    "content": "<p>Được phát triển từ năm 2022. Năm 2024, Udata được đầu tư bởi DHG. Năm 2025, Udata vinh dự nhận giải thưởng Sao Khuê như sự ghi nhận những nỗ lực đổi mới của Udata.</p> <p>Udata là nền tảng phần mềm hàng đầu của Việt Nam, chuyên về tích hợp AI và IoT cho doanh nghiệp.</p> <p>Chúng tôi cung cấp các công cụ mạnh mẽ dựa trên dữ liệu như Uboard, Ugate, Uzero - giúp doanh nghiệp theo dõi hiệu suất, tối ưu sử dụng và đáp ứng các tiêu chuẩn môi trường như ISO 50001, COP26, COP28.</p>",
+    "vision": {
+      "title": "Tầm nhìn",
+      "content": "Biến dữ liệu thành tác động bền vững và trở thành nền tảng AIoT hàng đầu tại Việt Nam và Đông Nam Á, giúp doanh nghiệp xây dựng hoạt động thông minh hơn, xanh hơn và linh hoạt hơn."
+    },
+    "mission": {
+      "title": "Sứ mệnh",
+      "content": "Hỗ trợ doanh nghiệp số hóa và tối ưu hóa hoạt động, nâng cao hiệu quả, giảm chi phí và tiến tới phát triển bền vững."
+    },
+    "excerpt": "Chúng tôi <strong> không chỉ xây dựng phần mềm - chúng tôi xây dựng giải pháp </strong> để mở khóa tiềm năng dữ liệu vận hành.",
+    "whyChooseUs": {
+      "title": "Giá trị cốt lõi",
+      "contents": [
+        {
+          "id": 1,
+          "title": "FIT",
+          "content": "Sẵn sàng đáp ứng nhu cầu người sử dụng trong nhiều lĩnh vực kinh tế",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-mouse-pointer-click'><path d='M14 4.1 12 6'/><path d='m5.1 8-2.9-.8'/><path d='m6 12-1.9 2'/><path d='M7.2 2.2 8 5.1'/><path d='M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z'/></svg>"
+        },
+        {
+          "id": 2,
+          "title": "FAST",
+          "content": "Triển khai nhanh chóng, vận hành mượt mà, đáp ứng nhanh các yêu cầu",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-lightbulb'><path d='M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5'/><path d='M9 18h6'/><path d='M10 22h4'/></svg>"
+        },
+        {
+          "id": 3,
+          "title": "FLEXIBLE",
+          "content": "Dễ dàng mở rộng, tích hợp với các hệ thống khác và điều chỉnh linh hoạt theo nhu cầu người sử dụng",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevrons-left-right'><path d='m9 7-5 5 5 5'/><path d='m15 7 5 5-5 5'/></svg>"
+        }
+      ]
+    },
+    "awards": {
+      "title": "Giải thưởng",
+      "content": "<p>Năm 2025, Udata đã được vinh danh tại <strong>Giải thưởng Sao Khuê</strong> ở hạng mục <strong>“Sản phẩm, giải pháp, phần mềm, dịch vụ mới”</strong>.</p> <p>Giải thưởng Sao Khuê là <strong>sự công nhận uy tín nhất của Việt Nam</strong> dành cho ngành phần mềm và CNTT, do Hiệp hội Phần mềm và Dịch vụ CNTT Việt Nam (VINASA) tổ chức hằng năm từ năm 2003.</p> <p>VINASA là <strong>hiệp hội quốc gia hàng đầu</strong>, đại diện cho hơn 500 doanh nghiệp CNTT hàng đầu, thúc đẩy đổi mới sáng tạo, chuẩn mực ngành và hợp tác quốc tế. Việc được VINASA ghi nhận khẳng định vị thế của Udata là một nhà đổi mới sáng tạo đáng tin cậy và là đơn vị dẫn đầu trong các giải pháp chuyển đổi số.</p>"
+    }
+  },
+  "Solar": {
+    "heroSection": {
+      "title": "Giải pháp giám sát vận hành điện mặt trời mái nhà",
+      "subTitle": "Giải pháp quản lý vận hành điện mặt trời áp mái",
+      "desc": "Với hệ thống giám sát thông minh của Udata, nhà đầu tư và đơn vị vận hành có thể chủ động quản lý hệ thống điện mặt trời mái nhà một cách hiệu quả.",
+      "contact": "Dùng thử"
+    },
+    "problems": {
+      "title": "Vấn đề của ngành",
+      "list": [
+        "Không phát hiện kịp inverter lỗi, mất kết nối, tụt sản lượng",
+        "Dữ liệu phân tán, thiếu cảnh báo dẫn đến thiết bị giảm hiệu suất mà không biết",
+        "Không đánh giá được hiệu quả đầu tư",
+        "Chủ đầu tư phụ thuộc vào báo cáo từ EPC hoặc vận hành thủ công"
+      ]
+    },
+    "allFeatures": {
+      "title": "Tính năng áp dụng",
+      "lists": [
+        {
+          "id": "1",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-timer'><line x1='10' x2='14' y1='2' y2='2'/><line x1='12' x2='15' y1='14' y2='11'/><circle cx='12' cy='14' r='8'/></svg>",
+          "title": "Theo dõi hiệu suất thời gian thực",
+          "content": "Giám sát sản lượng và hiệu suất từng inverter liên tục để phát hiện bất thường sớm."
+        },
+        {
+          "id": "2",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-bell'><path d='M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9'/><path d='M10.3 21a1.94 1.94 0 0 0 3.4 0'/></svg>",
+          "title": "Truy vết lỗi thiết bị",
+          "content": "Tự động ghi nhận, khoanh vùng nguyên nhân suy giảm hiệu suất và lưu lịch sử lỗi."
+        },
+        {
+          "id": "3",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'stroke-linecap='round'stroke-linejoin='round'class='lucide lucide-bug'><path d=\"M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z\"/><path d=\"M12 15h.01\"/><path d=\"M12 7v4\"/></svg>",
+          "title": "Cảnh báo sớm thông minh",
+          "content": "Gửi cảnh báo ngay khi inverter quá nhiệt, mất kết nối hoặc tụt sản lượng."
+        },
+        {
+          "id": "4",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><path d=\"M7 10H6a4 4 0 0 1-4-4 1 1 0 0 1 1-1h4\"/><path d=\"M7 5a1 1 0 0 1 1-1h13a1 1 0 0 1 1 1 7 7 0 0 1-7 7H8a1 1 0 0 1-1-1z\"/><path d=\"M9 12v5\"/><path d=\"M15 12v5\"/><path d=\"M5 20a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3 1 1 0 0 1-1 1H6a1 1 0 0 1-1-1\"/></svg>",
+          "title": "Định lượng thất thoát năng lượng",
+          "content": "Tính toán sản lượng tổn thất và quy đổi trực tiếp thành chi phí cụ thể."
+        },
+        {
+          "id": "5",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><rect width='7' height='7' x='14' y='3' rx='1'/><path d='M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3'/></svg>",
+          "title": "Phân tích hiệu suất đa tầng",
+          "content": "So sánh theo ngày, tuần, tháng và lọc theo từng inverter để đánh giá xu hướng."
+        },
+        {
+          "id": "5",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><rect width=\"18\" height=\"12\" x=\"3\" y=\"4\" rx=\"2\" ry=\"2\"/><line x1=\"2\" x2=\"22\" y1=\"20\" y2=\"20\"/></svg>",
+          "title": "Giám sát mọi lúc, mọi nơi",
+          "content": "Truy cập dễ dàng trên mọi thiết bị - cập nhật dữ liệu tức thời."
+        }
+      ]
+    },
+    "benefits": {
+      "title": "Lợi ích",
+      "list": [
+        {
+          "content": "Tăng sản lượng điện phát từ 2-5%",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-zap-icon lucide-zap\"><path d=\"M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z\"/></svg>"
+        },
+        {
+          "content": "Cắt giảm chi phí bảo trì, giảm tổn thất sản lượng do sự cố âm thầm",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-diamond-minus-icon lucide-diamond-minus\"><path d=\"M2.7 10.3a2.41 2.41 0 0 0 0 3.41l7.59 7.59a2.41 2.41 0 0 0 3.41 0l7.59-7.59a2.41 2.41 0 0 0 0-3.41L13.7 2.71a2.41 2.41 0 0 0-3.41 0z\"/><path d=\"M8 12h8\"/></svg>"
+        },
+        {
+          "content": "Đáp ứng Quyết định số 378/QĐ-EVN",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-check-icon lucide-check\"><path d=\"M20 6 9 17l-5-5\"/></svg>"
+        }
+      ]
+    }
+  },
+  "Elevator": {
+    "heroSection": {
+      "title": "Giải pháp giám sát vận hành máy móc (Ứng dụng trong thang máy)",
+      "subTitle": "Giải pháp quản lý vận hành điện mặt trời áp mái",
+      "desc": "Với hệ thống giám sát thông minh của Udata, nhà sản xuất và đơn vị bảo trì có thể chủ động theo dõi, phát hiện sớm bất thường và tối ưu hiệu quả bảo trì thang máy một cách toàn diện.",
+      "contact": "Dùng thử"
+    },
+    "problems": {
+      "title": "Vấn đề của ngành",
+      "list": [
+        "Thiếu công cụ giám sát để tiết kiệm năng lượng",
+        "Không có dữ liệu để tính đúng chi phí sản xuất",
+        "Khó kiểm soát lỗi gây ảnh hưởng đến vận hành",
+        "Không xác định được thiết bị đang hoạt động kém"
+      ]
+    },
+    "allFeatures": {
+      "title": "Tính năng áp dụng",
+      "lists": [
+        {
+          "id": "1",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-timer'><path d=\"M5 21v-6\"/><path d=\"M12 21V3\"/><path d=\"M19 21V9\"/></svg>",
+          "title": "Thống kê sản lượng từng máy",
+          "content": "Tự động ghi nhận và tổng hợp số lượng sản phẩm được tạo ra ở mỗi thiết bị."
+        },
+        {
+          "id": "2",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-bell'><path d='M16 14v2.2l1.6 1'/><path d='M16 4h2a2 2 0 0 1 2 2v.832'/><path d='M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h2'/><circle cx='16' cy='16' r='6'/><rect x='8' y='2' width='8' height='4' rx='1'/></svg>",
+          "title": "Ghi nhận lỗi dừng máy",
+          "content": "Phân loại, thống kê và phân tích nguyên nhân dừng máy để cải thiện quy trình."
+        },
+        {
+          "id": "3",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'stroke-linecap='round'stroke-linejoin='round'class='lucide lucide-bug'><rect width=\"16\" height=\"20\" x=\"4\" y=\"2\" rx=\"2\"/><line x1=\"8\" x2=\"16\" y1=\"6\" y2=\"6\"/><line x1=\"16\" x2=\"16\" y1=\"14\" y2=\"18\"/><path d=\"M16 10h.01\"/><path d=\"M12 10h.01\"/><path d=\"M8 10h.01\"/><path d=\"M12 14h.01\"/><path d=\"M8 14h.01\"/><path d=\"M12 18h.01\"/><path d=\"M8 18h.01\"/></svg>",
+          "title": "Tính toán chỉ số hiệu suất OEE",
+          "content": "Đánh giá tổng thể năng suất, độ sẵn sàng và chất lượng của từng máy."
+        },
+        {
+          "id": "4",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><path d=\"M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0\"/><circle cx=\"12\" cy=\"12\" r=\"3\"/></svg>",
+          "title": "Theo dõi tình trạng vận hành theo ca",
+          "content": "Giám sát trạng thái thiết bị theo từng ca sản xuất để phát hiện sớm bất thường."
+        },
+        {
+          "id": "5",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\"/><path d=\"M3 5V19A9 3 0 0 0 21 19V5\"/><path d=\"M3 12A9 3 0 0 0 21 12\"/></svg>",
+          "title": "Lưu trữ dữ liệu vận hành và bảo trì",
+          "content": "Ghi nhận người vận hành, lịch sử sửa chữa, thay thế vật tư theo từng thiết bị."
+        },
+        {
+          "id": "6",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><circle cx=\"12\" cy=\"12\" r=\"10\"/><line x1=\"12\" x2=\"12\" y1=\"8\" y2=\"12\"/><line x1=\"12\" x2=\"12.01\" y1=\"16\" y2=\"16\"/></svg>",
+          "title": "Cảnh báo bảo trì và vật tư dự báo",
+          "content": "Tự động nhắc lịch bảo trì, cảnh báo vật tư sắp hết hạn để tránh dừng máy đột ngột."
+        }
+      ]
+    },
+    "benefits": {
+      "title": "Lợi ích",
+      "list": [
+        {
+          "content": "Tính chi phí sản xuất chính xác theo từng ca/máy/sản phẩm",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-zap-icon lucide-zap\"><line x1=\"12\" x2=\"12\" y1=\"2\" y2=\"22\"/><path d=\"M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6\"/></svg>"
+        },
+        {
+          "content": "Tăng 20 - 25% hiệu suất sử dụng thiết bị (OEE)",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-diamond-minus-icon lucide-diamond-minus\"><path d=\"M9 13a1 1 0 0 0-1-1H5.061a1 1 0 0 1-.75-1.811l6.836-6.835a1.207 1.207 0 0 1 1.707 0l6.835 6.835a1 1 0 0 1-.75 1.811H16a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1z\"/></svg>"
+        },
+        {
+          "content": "Tối ưu kế hoạch sản xuất và bảo trì",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-check-icon lucide-check\"><path d=\"M16 7h6v6\"/><path d=\"m22 7-8.5 8.5-5-5L2 17\"/></svg>"
+        }
+      ]
+    }
+  },
+  "OEE": {
+    "heroSection": {
+      "title": "Giải pháp quản lý hiệu suất và bảo dưỡng máy (OEE)",
+      "subTitle": "Giải pháp quản lý vận hành điện mặt trời áp mái",
+      "desc": "Phân tích dữ liệu hoạt động sản xuất dựa trên những dữ liệu thu thập được nhằm đưa ra các báo cáo, cảnh báo giúp nhà máy kịp thời đưa ra các quyết định chính xác.",
+      "contact": "Dùng thử"
+    },
+    "problems": {
+      "title": "Vấn đề của ngành",
+      "list": [
+        "Thiếu công cụ giám sát để tiết kiệm năng lượng",
+        "Không có dữ liệu để tính đúng chi phí sản xuất",
+        "Khó kiểm soát lỗi gây ảnh hưởng đến vận hành",
+        "Không xác định được thiết bị đang hoạt động kém"
+      ]
+    },
+    "allFeatures": {
+      "title": "Tính năng áp dụng",
+      "lists": [
+        {
+          "id": "1",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-timer'><path d=\"M5 21v-6\"/><path d=\"M12 21V3\"/><path d=\"M19 21V9\"/></svg>",
+          "title": "Thống kê sản lượng theo máy",
+          "content": "Tự động thu thập và tổng hợp số lượng sản phẩm được sản xuất trên từng máy."
+        },
+        {
+          "id": "2",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-bell'><path d='M16 14v2.2l1.6 1'/><path d='M16 4h2a2 2 0 0 1 2 2v.832'/><path d='M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h2'/><circle cx='16' cy='16' r='6'/><rect x='8' y='2' width='8' height='4' rx='1'/></svg>",
+          "title": "Ghi nhận lỗi dừng máy",
+          "content": "Phát hiện, phân loại và thống kê nguyên nhân dừng máy để cải thiện quy trình vận hành."
+        },
+        {
+          "id": "3",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'stroke-linecap='round'stroke-linejoin='round'class='lucide lucide-bug'><rect width=\"16\" height=\"20\" x=\"4\" y=\"2\" rx=\"2\"/><line x1=\"8\" x2=\"16\" y1=\"6\" y2=\"6\"/><line x1=\"16\" x2=\"16\" y1=\"14\" y2=\"18\"/><path d=\"M16 10h.01\"/><path d=\"M12 10h.01\"/><path d=\"M8 10h.01\"/><path d=\"M12 14h.01\"/><path d=\"M8 14h.01\"/><path d=\"M12 18h.01\"/><path d=\"M8 18h.01\"/></svg>",
+          "title": "Tính toán hiệu suất tổng thể (OEE)",
+          "content": "Đo lường và phân tích năng suất, độ sẵn sàng và chất lượng thiết bị theo chuẩn quốc tế."
+        },
+        {
+          "id": "4",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><path d=\"M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0\"/><circle cx=\"12\" cy=\"12\" r=\"3\"/></svg>",
+          "title": "Theo dõi tình trạng theo ca sản xuất",
+          "content": "Cập nhật liên tục trạng thái vận hành của từng máy trong từng ca làm việc."
+        },
+        {
+          "id": "5",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\"/><path d=\"M3 5V19A9 3 0 0 0 21 19V5\"/><path d=\"M3 12A9 3 0 0 0 21 12\"/></svg>",
+          "title": "Quản lý dữ liệu vận hành & bảo trì",
+          "content": "Lưu trữ người vận hành, lịch sử sửa chữa và thông tin vật tư cho từng thiết bị."
+        },
+        {
+          "id": "6",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><circle cx=\"12\" cy=\"12\" r=\"10\"/><line x1=\"12\" x2=\"12\" y1=\"8\" y2=\"12\"/><line x1=\"12\" x2=\"12.01\" y1=\"16\" y2=\"16\"/></svg>",
+          "title": "Cảnh báo bảo trì & vật tư dự báo",
+          "content": "Tự động cảnh báo vật tư sắp hết hạn và nhắc lịch bảo dưỡng để ngăn ngừa hư hỏng."
+        }
+      ]
+    },
+    "benefits": {
+      "title": "Lợi ích",
+      "list": [
+        {
+          "content": "Tính chi phí sản xuất chính xác theo từng ca/máy/sản phẩm",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-zap-icon lucide-zap\"><line x1=\"12\" x2=\"12\" y1=\"2\" y2=\"22\"/><path d=\"M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6\"/></svg>"
+        },
+        {
+          "content": "Tăng 20 - 25% hiệu suất sử dụng thiết bị (OEE)",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-diamond-minus-icon lucide-diamond-minus\"><path d=\"M9 13a1 1 0 0 0-1-1H5.061a1 1 0 0 1-.75-1.811l6.836-6.835a1.207 1.207 0 0 1 1.707 0l6.835 6.835a1 1 0 0 1-.75 1.811H16a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1z\"/></svg>"
+        },
+        {
+          "content": "Tối ưu kế hoạch sản xuất và bảo trì",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-check-icon lucide-check\"><path d=\"M16 7h6v6\"/><path d=\"m22 7-8.5 8.5-5-5L2 17\"/></svg>"
+        }
+      ]
+    }
+  },
+  "EMS": {
+    "heroSection": {
+      "title": "Giải pháp quản lý năng lượng thông minh (EMS)",
+      "subTitle": "Giải pháp quản lý vận hành điện mặt trời áp mái",
+      "desc": "Theo dõi, phân tích và tối ưu dữ liệu tiêu thụ từ các nguồn năng lượng như điện, khí, nhiệt, nước... giúp doanh nghiệp giảm chi phí, nâng cao hiệu suất và hướng đến vận hành bền vững.",
+      "contact": "Dùng thử"
+    },
+    "problems": {
+      "title": "Vấn đề của ngành",
+      "list": [
+        "Không biết năng lượng đang được sử dụng ở đâu, bao nhiêu, có hợp lý không",
+        "Thiếu dữ liệu để ra quyết định cắt giảm chi phí năng lượng",
+        "Không có cảnh báo khi vượt ngưỡng tiêu thụ hoặc xảy ra sự cố",
+        "Không thể chứng minh hiệu quả với ban lãnh đạo hoặc cơ quan kiểm toán"
+      ]
+    },
+    "allFeatures": {
+      "title": "Tính năng áp dụng",
+      "lists": [
+        {
+          "id": "1",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-timer'><path d=\"M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z\"/><path d=\"m14.5 12.5 2-2\"/><path d=\"m11.5 9.5 2-2\"/><path d=\"m8.5 6.5 2-2\"/><path d=\"m17.5 15.5 2-2\"/></svg>",
+          "title": "Đo lường dữ liệu năng lượng thời gian thực",
+          "content": "Thu thập và phân tích điện, nước, khí nén… liên tục để nắm bắt hiệu suất tiêu thụ tức thì."
+        },
+        {
+          "id": "2",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-bell'><path d=\"M5 21v-6\"/><path d=\"M12 21V3\"/><path d=\"M19 21V9\"/></svg>",
+          "title": "Theo dõi tiêu thụ theo khu vực và thiết bị",
+          "content": "Thống kê chi tiết mức sử dụng và hiệu suất theo từng máy, khu vực, hoặc ca vận hành."
+        },
+        {
+          "id": "3",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'stroke-linecap='round'stroke-linejoin='round'class='lucide lucide-bug'><circle cx=\"12\" cy=\"12\" r=\"10\"/><circle cx=\"12\" cy=\"12\" r=\"6\"/><circle cx=\"12\" cy=\"12\" r=\"2\"/></svg>",
+          "title": "Thiết lập KPI và mục tiêu tiết kiệm năng lượng",
+          "content": "Đặt chỉ tiêu tiêu thụ cho từng thiết bị hoặc khu vực để kiểm soát và tối ưu hiệu quả."
+        },
+        {
+          "id": "4",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><circle cx=\"12\" cy=\"12\" r=\"10\"/><line x1=\"12\" x2=\"12\" y1=\"8\" y2=\"12\"/><line x1=\"12\" x2=\"12.01\" y1=\"16\" y2=\"16\"/></svg>",
+          "title": "Cảnh báo sớm vượt ngưỡng tiêu thụ",
+          "content": "Phát hiện và thông báo ngay khi có dấu hiệu bất thường hoặc vượt mức giới hạn đặt ra."
+        },
+        {
+          "id": "5",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\"/><path d=\"M3 5V19A9 3 0 0 0 21 19V5\"/><path d=\"M3 12A9 3 0 0 0 21 12\"/></svg>",
+          "title": "Phân tích tỷ trọng tiêu thụ năng lượng",
+          "content": "Xác định thiết bị hoặc khu vực chiếm tỷ trọng tiêu thụ lớn để ưu tiên cải thiện."
+        },
+        {
+          "id": "6",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><circle cx=\"12\" cy=\"12\" r=\"10\"/><line x1=\"12\" x2=\"12\" y1=\"8\" y2=\"12\"/><line x1=\"12\" x2=\"12.01\" y1=\"16\" y2=\"16\"/></svg>",
+          "title": "Lưu trữ và truy xuất lịch sử dữ liệu",
+          "content": "Ghi nhận toàn bộ dữ liệu tiêu thụ giúp hỗ trợ phân tích, bảo trì và ra quyết định chiến lược."
+        }
+      ]
+    },
+    "benefits": {
+      "title": "Lợi ích",
+      "list": [
+        {
+          "content": "Tiết kiệm 4–15% năng lượng ngay năm đầu triển khai",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-zap-icon lucide-zap\"><path d=\"M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z\"/></svg>"
+        },
+        {
+          "content": "Tăng ROI cho thiết bị, kéo dài tuổi thọ, giảm lỗi hệ thống",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-diamond-minus-icon lucide-diamond-minus\"><path d=\"M9 13a1 1 0 0 0-1-1H5.061a1 1 0 0 1-.75-1.811l6.836-6.835a1.207 1.207 0 0 1 1.707 0l6.835 6.835a1 1 0 0 1-.75 1.811H16a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1z\"/></svg>"
+        },
+        {
+          "content": "Quản trị năng lượng hiệu quả và chủ động",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-check-icon lucide-check\"><path d=\"M16 7h6v6\"/><path d=\"m22 7-8.5 8.5-5-5L2 17\"/></svg>"
+        }
+      ]
+    }
+  },
+  "GHG": {
+    "heroSection": {
+      "title": "Quản lý phát thải khí nhà kính (GHG)",
+      "subTitle": "Giải pháp quản lý vận hành điện mặt trời áp mái",
+      "desc": "Đo lường, trực quan hóa và quản lý phát thải khí nhà kính theo Phạm vi 1, 2 và 3, giúp doanh nghiệp tuân thủ các tiêu chuẩn ESG và nâng cao hiệu quả bền vững.",
+      "contact": "Dùng thử"
+    },
+    "problems": {
+      "title": "Vấn đề của ngành",
+      "list": [
+        "Không có nền tảng tập trung",
+        "Tính toán thủ công tốn nhiều thời gian",
+        "Khó đáp ứng yêu cầu công bố ESG",
+        "Thiếu minh bạch"
+      ]
+    },
+    "allFeatures": {
+      "title": "Tính năng áp dụng",
+      "lists": [
+        {
+          "id": "1",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-timer'><path d=\"M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z\"/><path d=\"m14.5 12.5 2-2\"/><path d=\"m11.5 9.5 2-2\"/><path d=\"m8.5 6.5 2-2\"/><path d=\"m17.5 15.5 2-2\"/></svg>",
+          "title": "Thu thập và tổng hợp dữ liệu phát thải",
+          "content": "Tự động lấy dữ liệu từ nhiều nguồn để tạo hồ sơ phát thải đầy đủ."
+        },
+        {
+          "id": "2",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-bell'><rect width=\"16\" height=\"20\" x=\"4\" y=\"2\" rx=\"2\"/><line x1=\"8\" x2=\"16\" y1=\"6\" y2=\"6\"/><line x1=\"16\" x2=\"16\" y1=\"14\" y2=\"18\"/><path d=\"M16 10h.01\"/><path d=\"M12 10h.01\"/><path d=\"M8 10h.01\"/><path d=\"M12 14h.01\"/><path d=\"M8 14h.01\"/><path d=\"M12 18h.01\"/><path d=\"M8 18h.01\"/></svg>",
+          "title": "Tính toán phát thải theo GHG Protocol",
+          "content": "Phân loại và tính toán phát thải theo Phạm vi 1, 2, 3 đảm bảo chuẩn mực quốc tế."
+        },
+        {
+          "id": "3",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'stroke-linecap='round'stroke-linejoin='round'class='lucide lucide-bug'><circle cx=\"12\" cy=\"12\" r=\"10\"/><circle cx=\"12\" cy=\"12\" r=\"6\"/><circle cx=\"12\" cy=\"12\" r=\"2\"/></svg>",
+          "title": "Bảng điều khiển trực quan thời gian thực",
+          "content": "Hiển thị xu hướng và “điểm nóng” phát thải qua dashboard trực quan, hỗ trợ ra quyết định nhanh."
+        },
+        {
+          "id": "4",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><path d=\"M15 12h-5\"/><path d=\"M15 8h-5\"/><path d=\"M19 17V5a2 2 0 0 0-2-2H4\"/><path d=\"M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3\"/></svg>",
+          "title": "Tạo báo cáo ESG đạt chuẩn quốc tế",
+          "content": "Xuất báo cáo tuân thủ ISO 14064-3 và các khung tiêu chuẩn quốc "
+        },
+        {
+          "id": "5",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\"/><path d=\"M3 5V19A9 3 0 0 0 21 19V5\"/><path d=\"M3 12A9 3 0 0 0 21 12\"/></svg>",
+          "title": "Mô phỏng kịch bản giảm phát thải",
+          "content": "Đánh giá tác động khi áp dụng biện pháp tiết kiệm năng lượng hoặc chuyển sang năng lượng tái tạo."
+        },
+        {
+          "id": "6",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><path d=\"M10 22V7a1 1 0 0 0-1-1H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a1 1 0 0 0-1-1H2\"/><rect x=\"14\" y=\"2\" width=\"8\" height=\"8\" rx=\"1\"/></svg>",
+          "title": "Tích hợp với hệ thống đối tác toàn cầu",
+          "content": "Kết nối với đối tác như Zeroboard để đảm bảo minh bạch dữ liệu và tuân thủ chuẩn Net Zero quốc tế."
+        }
+      ]
+    },
+    "benefits": {
+      "title": "Lợi ích",
+      "list": [
+        {
+          "content": "Đảm bảo độ chính xác báo cáo và sẵn sàng kiểm toán để tuân thủ ESG",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-zap-icon lucide-zap\"><path d=\"M20 6 9 17l-5-5\"/></svg>"
+        },
+        {
+          "content": "Giảm đến 80% thời gian so với phương pháp thủ công",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-diamond-minus-icon lucide-diamond-minus\"><path d=\"M15 11a1 1 0 0 0 1 1h2.939a1 1 0 0 1 .75 1.811l-6.835 6.836a1.207 1.207 0 0 1-1.707 0L4.31 13.81a1 1 0 0 1 .75-1.811H8a1 1 0 0 0 1-1V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1z\"/></svg>"
+        },
+        {
+          "content": "Xác định nguồn phát thải chính để xây dựng chiến lược giảm thiểu hiệu quả",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-check-icon lucide-check\"><path d=\"M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z\"/></svg>"
+        }
+      ]
+    }
+  },
+  "AIForBusiness": {
+    "heroSection": {
+      "title": "Trợ lý AI cho vận hành & quản lý tri thức kỹ thuật",
+      "subTitle": "Giải pháp quản lý vận hành điện mặt trời áp mái",
+      "desc": "Giúp doanh nghiệp tập trung dữ liệu vận hành, tiêu chuẩn hóa quy trình làm việc và quản trị tri thức để mọi đội nhóm phối hợp hiệu quả.",
+      "contact": "Dùng thử"
+    },
+    "problems": {
+      "title": "Vấn đề của ngành",
+      "list": [
+        "Dữ liệu & hệ thống bị phân mảnh",
+        "Thiếu hụt kỹ sư giàu kinh nghiệm, khó đào tạo nhanh nhân sự mới",
+        "Ticket thất lạc, chậm phản hồi",
+        "Xử lý dữ liệu thủ công"
+      ]
+    },
+    "allFeatures": {
+      "title": "Tính năng áp dụng",
+      "lists": [
+        {
+          "id": "1",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-timer'><path d=\"M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z\"/><path d=\"m3.3 7 8.7 5 8.7-5\"/><path d=\"M12 22V12\"/></svg>",
+          "title": "Quản lý tài nguyên tập trung",
+          "content": "Tổ chức danh mục thiết bị, phụ tùng, nhà cung cấp và danh sách phân bổ trên một nền tảng duy nhất."
+        },
+        {
+          "id": "2",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-bell'><path d=\"M10 22V7a1 1 0 0 0-1-1H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a1 1 0 0 0-1-1H2\"/><rect x=\"14\" y=\"2\" width=\"8\" height=\"8\" rx=\"1\"/></svg>",
+          "title": "Tích hợp hệ thống doanh nghiệp",
+          "content": "Kết nối liền mạch với ERP, HRM và các nền tảng nội bộ để đồng bộ dữ liệu và quy trình."
+        },
+        {
+          "id": "3",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'stroke-linecap='round'stroke-linejoin='round'class='lucide lucide-bug'><path d=\"M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z\"/><circle cx=\"7.5\" cy=\"7.5\" r=\".5\" fill=\"currentColor\"/></svg>",
+          "title": "Quản lý Ticket toàn trình",
+          "content": "Tiếp nhận, phân công, theo dõi SLA và phản hồi khép kín trên một luồng xử lý thống nhất."
+        },
+        {
+          "id": "4",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><path d=\"M18 6 7 17l-5-5\"/><path d=\"m22 10-7.5 7.5L13 16\"/></svg>",
+          "title": "Quản lý checklist và phê duyệt",
+          "content": "Tạo checklist kiểm tra, phê duyệt công việc và báo cáo năng suất đội nhóm minh bạch."
+        },
+        {
+          "id": "5",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><path d=\"M12 21V7\"/><path d=\"m16 12 2 2 4-4\"/><path d=\"M22 6V4a1 1 0 0 0-1-1h-5a4 4 0 0 0-4 4 4 4 0 0 0-4-4H3a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6a1 1 0 0 0 1-1v-1.3\"/></svg>",
+          "title": "Kho tri thức bảo trì số hóa",
+          "content": "Lưu trữ SOP, log lỗi và kinh nghiệm vận hành; gắn thẻ thiết bị để tra cứu nhanh và tái sử dụng."
+        },
+        {
+          "id": "6",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><path d=\"M12 6V2H8\"/><path d=\"M15 11v2\"/><path d=\"M2 12h2\"/><path d=\"M20 12h2\"/><path d=\"M20 16a2 2 0 0 1-2 2H8.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 4 20.286V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z\"/><path d=\"M9 11v2\"/></svg>",
+          "title": "Hội thoại AI hỗ trợ vận hành",
+          "content": "Tương tác hỏi–đáp tự nhiên với kho tri thức và ticket đang xử lý để tìm giải pháp tức thì."
+        }
+      ]
+    },
+    "benefits": {
+      "title": "Lợi ích",
+      "list": [
+        {
+          "content": "Tập trung dữ liệu & vận hành",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-zap-icon lucide-zap\"><ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\"/><path d=\"M3 5V19A9 3 0 0 0 21 19V5\"/><path d=\"M3 12A9 3 0 0 0 21 12\"/></svg>"
+        },
+        {
+          "content": "Rút ngắn 50% thời gian xử lý yêu cầu",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-diamond-minus-icon lucide-diamond-minus\"><path d=\"M15 11a1 1 0 0 0 1 1h2.939a1 1 0 0 1 .75 1.811l-6.835 6.836a1.207 1.207 0 0 1-1.707 0L4.31 13.81a1 1 0 0 1 .75-1.811H8a1 1 0 0 0 1-1V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1z\"/></svg>"
+        },
+        {
+          "content": "Bảo toàn & tái sử dụng tri thức",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-check-icon lucide-check\"><path d=\"M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8\"/><path d=\"M3 3v5h5\"/></svg>"
+        }
+      ]
+    }
+  },
+  "AIForAssistant": {
+    "heroSection": {
+      "title": "Trợ lý AI hội thoại & xác minh sản phẩm",
+      "subTitle": "Giải pháp quản lý vận hành điện mặt trời áp mái",
+      "desc": "Giúp kỹ sư, quản lý và doanh nghiệp tra cứu tri thức tức thì, xác minh thiết bị chính hãng và minh bạch CO/CQ để giảm rủi ro và nâng cao hiệu quả.",
+      "contact": "Dùng thử"
+    },
+    "problems": {
+      "title": "Vấn đề của ngành",
+      "list": [
+        "Khối lượng dữ liệu bảo trì, bảo dưỡng lớn",
+        "Kỹ sư mất nhiều thời gian tra cứu tài liệu hoặc hỏi chuyên gia",
+        "Thiếu minh bạch trong CO/CQ, khó đối soát khi kiểm toán.",
+        "Hàng giả, hàng kém chất lượng"
+      ]
+    },
+    "allFeatures": {
+      "title": "Tính năng áp dụng",
+      "lists": [
+        {
+          "id": "1",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-timer'><path d=\"M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z\"/><path d=\"m3.3 7 8.7 5 8.7-5\"/><path d=\"M12 22V12\"/></svg>",
+          "title": "Phân tích lỗi bằng AI",
+          "content": "Nhập mã lỗi hoặc hình ảnh, AI tự động xác định nguyên nhân và hướng dẫn cách khắc phục"
+        },
+        {
+          "id": "2",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-bell'><path d=\"M10 22V7a1 1 0 0 0-1-1H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a1 1 0 0 0-1-1H2\"/><rect x=\"14\" y=\"2\" width=\"8\" height=\"8\" rx=\"1\"/></svg>",
+          "title": "Xác minh linh kiện chính hãng",
+          "content": "Quét mã vạch hoặc serial để đối chiếu với cơ sở dữ liệu nhà sản xuất, loại bỏ rủi ro hàng giả."
+        },
+        {
+          "id": "3",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'stroke-linecap='round'stroke-linejoin='round'class='lucide lucide-bug'><path d=\"M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z\"/><circle cx=\"7.5\" cy=\"7.5\" r=\".5\" fill=\"currentColor\"/></svg>",
+          "title": "Hỏi - đáp kỹ thuật bằng ngôn ngữ tự nhiên",
+          "content": "Kỹ sư đặt câu hỏi trực tiếp tại hiện trường, AI phản hồi tức thì với hướng dẫn cụ thể."
+        },
+        {
+          "id": "4",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><path d=\"M18 6 7 17l-5-5\"/><path d=\"m22 10-7.5 7.5L13 16\"/></svg>",
+          "title": "Kho tri thức kỹ thuật tập trung",
+          "content": "Lưu trữ SOP, log sự cố và kinh nghiệm thực tế để tra cứu và tái sử dụng hiệu quả."
+        },
+        {
+          "id": "5",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><path d=\"M12 21V7\"/><path d=\"m16 12 2 2 4-4\"/><path d=\"M22 6V4a1 1 0 0 0-1-1h-5a4 4 0 0 0-4 4 4 4 0 0 0-4-4H3a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6a1 1 0 0 0 1-1v-1.3\"/></svg>",
+          "title": "Phân quyền và kiểm soát truy cập",
+          "content": "Quản lý quyền truy cập dựa trên vai trò và cơ cấu tổ chức, đảm bảo an toàn dữ liệu."
+        },
+        {
+          "id": "6",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><path d=\"M12 6V2H8\"/><path d=\"M15 11v2\"/><path d=\"M2 12h2\"/><path d=\"M20 12h2\"/><path d=\"M20 16a2 2 0 0 1-2 2H8.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 4 20.286V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z\"/><path d=\"M9 11v2\"/></svg>",
+          "title": "Truy xuất chứng từ CO/CQ nhanh chóng",
+          "content": "Tra cứu tức thì chứng nhận xuất xứ và chất lượng khi cần đối soát hoặc kiểm tra thiết bị."
+        }
+      ]
+    },
+    "benefits": {
+      "title": "Lợi ích",
+      "list": [
+        {
+          "content": "Giảm 90% thời gian tra cứu & xác minh",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-diamond-minus-icon lucide-diamond-minus\"><path d=\"M15 11a1 1 0 0 0 1 1h2.939a1 1 0 0 1 .75 1.811l-6.835 6.836a1.207 1.207 0 0 1-1.707 0L4.31 13.81a1 1 0 0 1 .75-1.811H8a1 1 0 0 0 1-1V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1z\"/></svg>"
+        },
+        {
+          "content": "Đảm bảo thiết bị chính hãng, giảm rủi ro hàng giả",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-diamond-minus-icon lucide-diamond-minus\"><path d=\"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z\"/><path d=\"m9 12 2 2 4-4\"/></svg>"
+        },
+        {
+          "content": "Rút ngắn 50% thời gian xử lý sự cố, hỗ trợ kỹ sư mới nhanh chóng thành thạo",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-check-icon lucide-check\"><path d=\"m7 6 5 5 5-5\"/><path d=\"m7 13 5 5 5-5\"/></svg>"
+        }
+      ]
+    }
+  },
+  "Uboard": {
+    "heroSection": {
+      "heading": "Chào mừng đến với Uboard",
+      "excerpt": "Giám sát dữ liệu tập trung - Quyết định nhanh, vận hành chuẩn",
+      "color": "blue",
+      "contact": "Dùng thử"
+    },
+    "features": {
+      "title": "Tính năng nổi bật",
+      "lists": [
+        {
+          "img": "/image/products/uboard/central-monitor.webp",
+          "title": "Quản lý tập trung",
+          "desc": "Uboard cho phép quản lý mọi thiết bị, tại mọi khu vực, chỉ trên một nền tảng duy nhất giúp quản lý dễ dàng mà không cần di chuyển."
+        },
+        {
+          "img": "/image/products/uboard/report-features.webp",
+          "title": "Báo cáo AI",
+          "desc": "Xuất báo cáo PDF/Excel định kỳ, AI hỗ trợ giải đáp các vấn đề từ dữ liệu báo cáo."
+        },
+        {
+          "img": "/image/products/uboard/data-collect.webp",
+          "title": "Thu thập và phân tích dữ liệu thời gian thực",
+          "desc": "Bằng việc giám sát liên tục các hoạt động, Uboard giúp bạn phát hiện sớm các vấn đề tiềm ẩn và đưa ra các giải pháp kịp thời."
+        },
+        {
+          "img": "/image/products/uboard/authorization.webp",
+          "title": "Phân quyền theo vai trò",
+          "desc": "Vai trò rõ ràng, dữ liệu tách biệt, đảm bảo bảo mật và kiểm soát chặt chẽ."
+        },
+        {
+          "img": "/image/products/uboard/smart-warning.webp",
+          "title": "Cảnh báo thông minh theo KPI",
+          "desc": "Thiết lập ngưỡng cảnh báo, phát hiện sớm bất thường, cảnh báo tức thì."
+        },
+        {
+          "img": "/image/products/uboard/data-security.webp",
+          "title": "Bảo mật tuyệt đối",
+          "desc": "Lưu trữ cloud ổn định & bảo mật. Truy cập mọi nơi, hỗ trợ cloud riêng, lưu 30 ngày khi mất kết nối."
+        }
+      ]
+    },
+    "singleFeature": {
+      "first": {
+        "title": "Ứng dụng trong giám sát vận hành điện mặt trời mái nhà",
+        "subTitle": "",
+        "desc": "Với hệ thống giám sát thông minh của Udata, nhà đầu tư và đơn vị vận hành có thể chủ động quản lý hệ thống điện mặt trời mái nhà một cách hiệu quả. Đem lại các lợi ích: Tăng sản lượng điện phát từ 2-5%; Cắt giảm chi phí bảo trì, giảm tổn thất sản lượng do sự cố âm thầm",
+        "img": "/image/products/uboard/Uboard-1.webp"
+      },
+      "second": {
+        "title": "Ứng dụng trong thang máy, giám sát vận hành máy móc",
+        "subTitle": "",
+        "desc": "Với hệ thống giám sát thông minh của Udata, nhà sản xuất và đơn vị bảo trì có thể chủ động theo dõi, phát hiện sớm bất thường và tối ưu hiệu quả bảo trì thang máy một cách toàn diện. Đem lại các lợi ích: Giảm 25% thời gian bảo trì định kỳ; Nâng cao hiệu quả của kỹ thuật viên; Tối ưu chi phí bảo trì & nhân sự kỹ thuật",
+        "img": "/image/products/uboard/Uboard-2.webp"
+      },
+      "third": {
+        "title": "Ứng dụng trong quản lý hiệu suất và bảo dưỡng máy (OEE)",
+        "subTitle": "",
+        "desc": "Phân tích dữ liệu hoạt động sản xuất dựa trên những dữ liệu thu thập được nhằm đưa ra các báo cáo, cảnh báo giúp nhà máy kịp thời đưa ra các quyết định chính xác. Đem lại các lợi ích: Tính chi phí sản xuất chính xác theo từng ca/máy/sản phẩm; Tăng 20 - 25% hiệu suất sử dụng thiết bị (OEE); Tối ưu kế hoạch sản xuất và bảo trì.",
+        "img": "/image/products/uboard/Uboard-3.webp"
+      },
+      "fourth": {
+        "title": "Ứng dụng trong quản lý năng lượng thông minh (EMS)",
+        "subTitle": "",
+        "desc": "Theo dõi, phân tích và tối ưu dữ liệu tiêu thụ từ các nguồn năng lượng như điện, khí, nhiệt, nước... giúp doanh nghiệp giảm chi phí, nâng cao hiệu suất và hướng đến vận hành bền vững. Đem lại các lợi ích: Tiết kiệm 4–15% năng lượng ngay năm đầu triển khai; Tăng ROI cho thiết bị, kéo dài tuổi thọ, giảm lỗi hệ thống; Quản trị năng lượng hiệu quả và chủ động.",
+        "img": "/image/products/uboard/Uboard-4.webp"
+      }
+    },
+    "whyChooseUs": {
+      "title": "Vì sao nên chọn <span class='text-primary'>Uboard</span>",
+      "subTitle": "Đạt được mục tiêu của bạn một cách hiệu quả",
+      "contents": [
+        {
+          "id": 1,
+          "title": "Tập trung hơn",
+          "content": "Quản lý mọi thiết bị, mọi nơi chỉ trên một nền tảng.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-mouse-pointer-click'><path d=\"M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z\"/></svg>"
+        },
+        {
+          "id": 2,
+          "title": "Hiệu quả hơn",
+          "content": "Giảm chi phí, tăng tốc vận hành nhờ dữ liệu thời gian thực.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-lightbulb'><path d=\"M16 7h6v6\"/><path d=\"m22 7-8.5 8.5-5-5L2 17\"/></svg>"
+        },
+        {
+          "id": 3,
+          "title": "An toàn hơn",
+          "content": "Hệ thống ổn định, phân quyền chặt chẽ, bảo mật tối đa.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevrons-left-right'><path d=\"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z\"/><path d=\"m9 12 2 2 4-4\"/></svg>"
+        }
+      ]
+    },
+    "questions": {
+      "title": "Câu hỏi thường gặp",
+      "list": [
+        {
+          "question": "Uboard có thể kết nối với những loại thiết bị và hệ thống nào của doanh nghiệp?",
+          "answer": "Uboard tích hợp linh hoạt, hỗ trợ kết nối với nhiều nguồn dữ liệu như đồng hồ đo điện/nước, Data Logger/bộ lưu trữ dữ liệu, PLC/bộ điều khiển, Sensors/cảm biến, VFDs/biến tần, và cả hệ thống ERP/HRM. Nền tảng hỗ trợ các giao thức chuẩn như Modbus RTU/TCP, OPC UA, Open API, và kết nối với SCADA, BMS, IoT."
+        },
+        {
+          "question": "Tính năng cảnh báo thông minh của Uboard hoạt động như thế nào?",
+          "answer": "Uboard cung cấp Cảnh báo thông minh bằng cách phát hiện bất thường , dự đoán sự cố, và cảnh báo bảo trì qua SMS/Email/Ứng dụng."
+        },
+        {
+          "question": "Uboard đảm bảo dữ liệu không bị mất khi có sự cố mất kết nối mạng (Internet, 4G/5G) tại nhà máy không?",
+          "answer": "Có, thông qua Udata Gateway, dữ liệu vẫn được lưu trữ khi mất kết nối mạng nhờ chức năng Đệm dữ liệu (Data Buffering). Uboard cũng lưu trữ dữ liệu trong 30 ngày khi mất kết nối"
+        }
+      ]
+    }
+  },
+  "Ugate": {
+    "heroSection": {
+      "heading": "Chào mừng đến với Ugate",
+      "excerpt": "Hỗ trợ Kỹ thuật thông minh & AI cho doanh nghiệp",
+      "color": "blue",
+      "contact": "Dùng thử"
+    },
+    "features": {
+      "title": "Tính năng nổi bật",
+      "lists": [
+        {
+          "img": "/image/products/ugate/AI-chat.webp",
+          "title": "Hỏi đáp với AI",
+          "desc": "Chụp ảnh lỗi thiết bị, AI đọc mã lỗi & cung cấp quy trình xử lý sự cố chuẩn hóa."
+        },
+        {
+          "img": "/image/products/ugate/knowledge.webp",
+          "title": "Kho tri thức chung",
+          "desc": "Quản lý tri thức tổ chức: lưu giữ kinh nghiệm xử lý sự cố, biến thành “kho tri thức chung” cho toàn công ty."
+        },
+        {
+          "img": "/image/products/ugate/qr.webp",
+          "title": "Quét mã vạch/serial",
+          "desc": "AI quét mã vạch để đối chiếu, đảm bảo linh kiện chính hãng, giảm rủi ro hàng giả."
+        },
+        {
+          "img": "/image/products/ugate/authorization.webp",
+          "title": "Phân quyền theo vai trò",
+          "desc": "Vai trò rõ ràng, dữ liệu tách biệt, đảm bảo bảo mật và kiểm soát chặt chẽ."
+        },
+        {
+          "img": "/image/products/ugate/fixing.webp",
+          "title": "Lên kế hoạch sửa chữa và bảo trì",
+          "desc": "Tự động phân tích dữ liệu thiết bị để đề xuất lịch bảo trì tối ưu, giúp giảm sự cố và kéo dài tuổi thọ vận hành."
+        },
+        {
+          "img": "/image/products/ugate/resources-management.webp",
+          "title": "Quản lý tài nguyên",
+          "desc": "Quản lý danh mục thiết bị, phụ tùng, nhà cung cấp và danh sách phân bổ."
+        }
+      ]
+    },
+    "singleFeature": {
+      "first": {
+        "title": "Ứng dụng trong Trợ lý AI cho vận hành & quản lý tri thức kỹ thuật",
+        "subTitle": "",
+        "desc": "Giúp doanh nghiệp tập trung dữ liệu vận hành, tiêu chuẩn hóa quy trình làm việc và quản trị tri thức để mọi đội nhóm phối hợp hiệu quả. Đem lại các lợi ích: Tập trung dữ liệu & vận hành; Rút ngắn 50% thời gian xử lý yêu cầu; Bảo toàn & tái sử dụng tri thức.",
+        "img": "/image/products/ugate/Ugate-1.webp"
+      },
+      "second": {
+        "title": "Ứng dụng trong Trợ lý AI hội thoại & xác minh sản phẩm",
+        "subTitle": "",
+        "desc": "Giúp kỹ sư, quản lý và doanh nghiệp tra cứu tri thức tức thì, xác minh thiết bị chính hãng và minh bạch CO/CQ để giảm rủi ro và nâng cao hiệu quả. Đem lại các lợi ích: Giảm 90% thời gian tra cứu & xác minh; Đảm bảo thiết bị chính hãng, giảm rủi ro hàng giả; Rút ngắn 50% thời gian xử lý sự cố, hỗ trợ kỹ sư mới nhanh chóng thành thạo.",
+        "img": "/image/products/ugate/Ugate-2.webp"
+      }
+    },
+    "whyChooseUs": {
+      "title": "Vì sao nên chọn <span class='text-primary'>Ugate</span>",
+      "subTitle": "Đạt được mục tiêu của bạn một cách hiệu quả",
+      "contents": [
+        {
+          "id": 1,
+          "title": "AI hỗ trợ thông minh",
+          "content": "Hỏi đáp kỹ thuật và trợ lý doanh nghiệp trên cùng nền tảng.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-mouse-pointer-click'><path d=\"M12 6V2H8\"/><path d=\"M15 11v2\"/><path d=\"M2 12h2\"/><path d=\"M20 12h2\"/><path d=\"M20 16a2 2 0 0 1-2 2H8.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 4 20.286V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z\"/><path d=\"M9 11v2\"/></svg>"
+        },
+        {
+          "id": 2,
+          "title": "Tự động hóa vận hành",
+          "content": "Giải quyết vấn đề nhanh, giảm tải cho đội kỹ thuật.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-lightbulb'><circle cx=\"18\" cy=\"18\" r=\"3\"/><circle cx=\"6\" cy=\"6\" r=\"3\"/><path d=\"M13 6h3a2 2 0 0 1 2 2v7\"/><path d=\"M11 18H8a2 2 0 0 1-2-2V9\"/></svg>"
+        },
+        {
+          "id": 3,
+          "title": "Tùy chỉnh linh hoạt",
+          "content": "Huấn luyện AI theo dữ liệu và nhu cầu từng tổ chức.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevrons-left-right'><path d=\"M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z\"/></svg>"
+        }
+      ]
+    },
+    "questions": {
+      "title": "Câu hỏi thường gặp",
+      "list": [
+        {
+          "question": "Các chức năng AI trong Ugate cụ thể là gì và mang lại lợi ích gì cho việc vận hành?",
+          "answer": "Hệ thống AI trong Udata (bao gồm Ugate) bao gồm: Trợ lý AI Phân tích dữ liệu (Phát hiện bất thường và cảnh báo sớm), Trợ lý AI Dự đoán (Dự báo giá trị dữ liệu trong ngắn hạn hoặc dài hạn), và Trợ lý AI Báo cáo (Tối ưu hóa vận hành và hỗ trợ ra quyết định)."
+        },
+        {
+          "question": "Ugate hỗ trợ quy trình kỹ thuật và vận hành như thế nào?",
+          "answer": "Ugate là Trợ lý AI kỹ thuật và vận hành, có các tính năng cốt lõi là Truy vấn AI, Ticket và Tri thức kỹ thuật"
+        }
+      ]
+    }
+  },
+  "Uzero": {
+    "heroSection": {
+      "heading": "Chào mừng đến với Uzero",
+      "excerpt": "Tính toán phát thải - Hướng tới doanh nghiệp Net Zero 2050",
+      "color": "blue",
+      "contact": "Dùng thử"
+    },
+    "features": {
+      "title": "Tính năng nổi bật",
+      "lists": [
+        {
+          "img": "/image/products/uzero/auto-calculate.webp",
+          "title": "Tính toán tự động",
+          "desc": "Tự động lấy dữ liệu công tơ điện để tính phát thải gián tiếp (Scope 2)"
+        },
+        {
+          "img": "/image/products/uzero/auto-report.webp",
+          "title": "Báo cáo tự động",
+          "desc": "Tự động xuất báo cáo theo ISO 14064, GHG Protocol, CDP, CBAM"
+        },
+        {
+          "img": "/image/products/uzero/data-collect.webp",
+          "title": "Thu thập dữ liệu từ nhiều nguồn",
+          "desc": "Nhập dữ liệu đa dạng hình thức: trực tiếp, tải lên file excel, API,..."
+        },
+        {
+          "img": "/image/products/uzero/summary.webp",
+          "title": "Tóm tắt phát thải",
+          "desc": "So sánh, tính phát thải theo sản phẩm, đơn vị, sản lượng thực tế."
+        },
+        {
+          "img": "/image/products/uzero/calculate-all-sites.webp",
+          "title": "Tính toán cho toàn bộ chi nhánh",
+          "desc": "Tính toán và quản lý phát thải cho tất cả các chi nhánh của doanh nghiệp."
+        },
+        {
+          "img": "/image/products/uzero/param-display.webp",
+          "title": "Hiển thị thông số trực quan",
+          "desc": "Hiển thị các thông số và dữ liệu phát thải qua biểu đồ, dashboard dễ hiểu."
+        }
+      ]
+    },
+    "singleFeature": {
+      "first": {
+        "title": "Ứng dụng trong Quản lý phát thải khí nhà kính (GHG)",
+        "subTitle": "",
+        "desc": "Đo lường, trực quan hóa và quản lý phát thải khí nhà kính theo Phạm vi 1, 2 và 3, giúp doanh nghiệp tuân thủ các tiêu chuẩn ESG và nâng cao hiệu quả bền vững. Đem lại các lợi ích: Đảm bảo độ chính xác báo cáo và sẵn sàng kiểm toán để tuân thủ ESG; Giảm đến 80% thời gian so với phương pháp thủ công; Xác định nguồn phát thải chính để xây dựng chiến lược giảm thiểu hiệu quả",
+        "img": "/image/products/uzero/Uzero.webp"
+      }
+    },
+    "whyChooseUs": {
+      "title": "Vì sao nên chọn <span class='text-primary'>Uzero</span>",
+      "subTitle": "Đạt được mục tiêu của bạn một cách hiệu quả",
+      "contents": [
+        {
+          "id": 1,
+          "title": "Đo phát thải chính xác",
+          "content": "Tính toán và hiển thị dữ liệu khí nhà kính trên đám mây.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-mouse-pointer-click'><rect width=\"16\" height=\"20\" x=\"4\" y=\"2\" rx=\"2\"/><line x1=\"8\" x2=\"16\" y1=\"6\" y2=\"6\"/><line x1=\"16\" x2=\"16\" y1=\"14\" y2=\"18\"/><path d=\"M16 10h.01\"/><path d=\"M12 10h.01\"/><path d=\"M8 10h.01\"/><path d=\"M12 14h.01\"/><path d=\"M8 14h.01\"/><path d=\"M12 18h.01\"/><path d=\"M8 18h.01\"/></svg>"
+        },
+        {
+          "id": 2,
+          "title": "Phân tích thông minh",
+          "content": "Gợi ý giải pháp giảm phát thải, hỗ trợ mục tiêu ESG.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-lightbulb'><path d=\"M3 3v16a2 2 0 0 0 2 2h16\"/><path d=\"m19 9-5 5-4-4-3 3\"/></svg>"
+        },
+        {
+          "id": 3,
+          "title": "An toàn, dễ mở rộng",
+          "content": "Bảo mật cao, linh hoạt khi doanh nghiệp phát triển.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevrons-left-right'><path d=\"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z\"/></svg>"
+        }
+      ]
+    },
+    "questions": {
+      "title": "Câu hỏi thường gặp",
+      "list": [
+        {
+          "question": "Uzero có thể giúp doanh nghiệp Việt Nam tuân thủ các quy định quốc tế và Cơ chế CBAM sắp tới như thế nào?",
+          "answer": "Uzero được ra mắt thông qua hợp tác với Zeroboard (công ty công nghệ môi trường hàng đầu Nhật Bản), hỗ trợ các doanh nghiệp tính toán, trực quan hóa và quản lý phát thải khí nhà kính (GHG) theo Phạm vi 1, 2 và 3. Nền tảng hỗ trợ tự động xuất báo cáo theo các tiêu chuẩn quốc tế và yêu cầu tuân thủ như ISO 14064, ESG, CDP và CBAM."
+        },
+        {
+          "question": "Việc tính toán phát thải Scope 2 có được tự động hóa không?",
+          "answer": "Có, Uzero là một nền tảng quản lý phát thải khí nhà kính có tính năng tự động tính toán phát thải."
+        },
+        {
+          "question": "Dữ liệu phát thải được quản lý và phân tích như thế nào để tiến tới Net Zero?",
+          "answer": "Uzero có chức năng Phân tích số liệu phát thải (tiến tới Net Zero) , giúp doanh nghiệp đưa dữ liệu phát thải vào lộ trình bền vững và đạt mục tiêu ESG."
+        }
+      ]
+    }
+  },
+  "Career": {
+    "title": "Tất cả công việc",
+    "excerpt": "Các công việc đang được tuyển dụng",
+    "careers": [
+      {
+        "title": "Nhân viên kinh doanh (Phần mềm & giải pháp IOT)",
+        "location": {
+          "main": "Toàn quốc",
+          "sub": ""
+        },
+        "exp": "2-5 năm kinh nghiệm",
+        "link": "https://docs.google.com/forms/d/e/1FAIpQLScVtfyqXj0Lz7y-Ve8qNSPJ9ztRQpIVXUUl2vUSF-OpMrM97A/viewform?usp=sharing&ouid=101703931519939730296"
+      }
+    ]
+  },
+  "Factory": {
+    "heroSection": {
+      "title": "Tối ưu hóa quy trình và hiệu quả sản xuất để tăng khả năng cạnh tranh trong ngành công nghiệp",
+      "subTitle": "Giải pháp toàn diện cho các nhà máy công nghiệp",
+      "desc": "Udata cung cấp các công nghệ tiên tiến giúp tối ưu hóa quá trình sản xuất, giảm tiêu thụ năng lượng và chi phí vận hành. Các giải pháp của chúng tôi bao gồm nâng cấp hệ thống giám sát năng lượng, giám sát hoạt động của máy, giám sát hệ thống kho lạnh, giám sát hệ thống phòng sạch và phòng thí nghiệm, giám sát trạm quan trắc môi trường, giám sát hệ thống nước sạch và nước thải.",
+      "contact": "Liên hệ"
+    },
+    "allFeatures": {
+      "title": "Các tính năng chính",
+      "lists": [
+        {
+          "id": "1",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-power'><path d='M12 2v10'/><path d='M18.4 6.6a9 9 0 1 1-12.77.04'/></svg>",
+          "title": "Giám sát hệ thống năng lượng",
+          "content": "Giám sát thông số U, I, P, Q, Hz,…; Phân tích tiêu thụ năng lượng giờ cao điểm, thấp điểm; Phân tích khí phát thải Scope 1, Scope 2"
+        },
+        {
+          "id": "2",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-activity'><path d='M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2'/></svg>",
+          "title": "Giám sát hoạt động của máy",
+          "content": "Giám sát hiệu suất thiết bị: Nhiệt độ vận hành (°C), Áp suất vận hành (bar), Tiếng ồn (dB), độ rung. Giám sát hiệu quả sản xuất: Tốc độ sản xuất (sản phẩm/phút), Thời gian dừng máy (phút), Tỷ lệ phế phẩm (%)."
+        },
+        {
+          "id": "3",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-snowflake'><line x1='2' x2='22' y1='12' y2='12'/><line x1='12' x2='12' y1='2' y2='22'/><path d='m20 16-4-4 4-4'/><path d='m4 8 4 4-4 4'/><path d='m16 4-4 4-4-4'/><path d='m8 20 4-4 4 4'/></svg>",
+          "title": "Giám sát hệ thống kho lạnh",
+          "content": "Giám sát thông số U, I, P; Giám sát nhiệt độ, độ ẩm, áp suất; Giám sát trạng thái máy nén, quạt; Phân tích tiêu thụ năng lượng giờ cao điểm, thấp điểm"
+        },
+        {
+          "id": "4",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-beaker'><path d='M4.5 3h15'/><path d='M6 3v16a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V3'/><path d='M6 14h12'/></svg>",
+          "title": "Giám sát hệ thống phòng sạch, phòng thí nghiệm",
+          "content": "Giám sát các thông số môi trường như nhiệt độ, độ ẩm, áp suất, độ bụi"
+        },
+        {
+          "id": "5",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-cloud'><path d='M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z'/></svg>",
+          "title": "Giám sát trạm quan trắc môi trường",
+          "content": "Giám sát các yếu tố môi trường như chất lượng không khí, nước thải, tiếng ồn"
+        },
+        {
+          "id": "6",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-droplet'><path d='M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5C6 11.1 5 13 5 15a7 7 0 0 0 7 7z'/></svg>",
+          "title": "Giám sát hệ thống nước sạch, nước thải",
+          "content": "Lưu lượng nước thải, pH, Nồng độ kim loại nặng, độ đục"
+        }
+      ]
+    },
+    "singleFeature": {
+      "first": {
+        "title": "Giám sát hiệu suất theo thời gian thực",
+        "subTitle": "Một phần tập trung vào cách dữ liệu theo thời gian thực và phân tích hiệu suất cung cấp sự minh bạch về hiệu suất hệ thống.",
+        "desc": "Nền tảng của chúng tôi cung cấp các biểu đồ thống kê phân tích về các thông số của nhà máy. Sử dụng dữ liệu hiệu suất trong quá khứ để xác định những điểm kém hiệu quả và đưa ra các quyết định dựa trên dữ liệu để tối ưu hóa việc sử dụng năng lượng.",
+        "img": "/image/solutions/factory/factory-feature-1.webp"
+      },
+      "second": {
+        "title": "Cảnh báo tự động và bảo trì chủ động",
+        "subTitle": "Giải thích cách hệ thống gửi thông báo khi vượt qua các ngưỡng hiệu suất, giúp thực hiện hành động nhanh chóng đối với các lỗi hệ thống.",
+        "desc": "Tránh thời gian chết với hệ thống cảnh báo thông minh của chúng tôi. Nhận thông báo theo thời gian thực về mọi vấn đề ảnh hưởng đến sản lượng hệ thống nhà máy của bạn, đảm bảo hệ thống của bạn hoạt động ở hiệu suất cao nhất.",
+        "img": "/image/solutions/factory/factory-feature-2.webp"
+      },
+      "third": {
+        "title": "Báo cáo điểm bất thường",
+        "subTitle": "Tập trung vào khả năng tổng hợp thông tin từ điểm bất thường đưa ra cảnh báo về sự thất thoát doanh thu.",
+        "desc": "Chúng tôi cung cấp cho bạn các báo cáo bất thường theo ngày, tuần, tháng. Với các con số cụ thể và trực quan, nắm bắt được ngay lập tức vấn đề đang xảy ra trong hệ thống, giúp bạn đưa ra quyết định ngay lập tức.",
+        "img": "/image/solutions/factory/factory-feature-3.webp"
+      },
+      "four": {
+        "title": "Quản lý đa địa điểm, đa thiết bị",
+        "subTitle": "Tập trung vào khả năng quản lý đồng bộ nhiều địa điểm, nhiều thiết bị từ các nhà sản xuất khác nhau trên cùng một nền tảng.",
+        "desc": "Udata tương thích với nhiều nền tảng khác nhau như máy tính để bàn, máy tính bảng và điện thoại di động, giúp người dùng truy cập hệ thống mọi lúc, mọi nơi. Điều này đặc biệt hữu ích cho các doanh nghiệp có chi nhánh trải rộng trên nhiều quốc gia.",
+        "img": "/image/solutions/factory/factory-feature-4.webp"
+      }
+    },
+    "callToAction": {
+      "title": "Sẵn sàng làm việc theo cách tập trung, đơn giản và hiệu quả?",
+      "content": "Hãy trao đổi với một trong những chuyên gia của chúng tôi để xác định giải pháp phù hợp với nhu cầu của bạn",
+      "actions": [
+        {
+          "title": "Xác định giải pháp lý tưởng của bạn",
+          "desc": "Bạn đang tìm kiếm giải pháp phù hợp nhất? Chúng tôi sẽ đồng hành cùng bạn. Các chuyên gia của chúng tôi sẽ lắng nghe nhu cầu của bạn và đưa ra những gợi ý phù hợp, giúp bạn tìm ra giải pháp tối ưu."
+        },
+        {
+          "title": "Thiết lập ban đầu của giải pháp tùy chỉnh",
+          "desc": "Chúng tôi sẽ triển khai giải pháp một cách chuyên nghiệp. Các chuyên gia của chúng tôi sẽ cấu hình và tùy chỉnh hệ thống để đáp ứng yêu cầu cụ thể của bạn."
+        }
+      ],
+      "button": "Đặt lịch demo"
+    }
+  },
+  "Notification": {
+    "title": "Thông báo từ Udata",
+    "button": {
+      "back": "Quay lại"
+    },
+    "noData": {
+      "home": "Không có bài viết nào!",
+      "related": "Không có bài viết nào liên quan!"
+    },
+    "news": "Tin tức nổi bật",
+    "relatedPost": "Bài viết liên quan",
+    "date": "Ngày xuất bản"
+  },
+  "404": {
+    "title": "Không tìm thấy trang",
+    "content": "Trang bạn đang tìm kiếm không tồn tại hoặc đã bị xóa.",
+    "button": "Trở về trang chủ"
+  },
+  "MiniUgate": {
+    "heroSection": {
+      "heading": "MiniUgate – AI Chatbot cho Website",
+      "excerpt": "Tạo chatbot AI thông minh cho website chỉ trong vài phút. Không cần code. Không cần IT. Thuộc hệ sinh thái Ugate – Udata.",
+      "color": "blue",
+      "contact": "Dùng thử miễn phí"
+    },
+    "features": {
+      "title": "Tính năng nổi bật",
+      "lists": [
+        {
+          "title": "No-code AI Chatbot",
+          "desc": "Ai cũng tạo được chatbot. Không cần kiến thức kỹ thuật, không cần developer."
+        },
+        {
+          "title": "Train từ Website, Documents & FAQs",
+          "desc": "Chatbot hiểu đúng nội dung doanh nghiệp. Tự động học từ dữ liệu của bạn."
+        },
+        {
+          "title": "Chat Sessions",
+          "desc": "Xem & phân tích hội thoại khách hàng. Hiểu insight và tối ưu liên tục."
+        },
+        {
+          "title": "Support Tickets",
+          "desc": "AI + con người xử lý yêu cầu quan trọng. Không bỏ sót khách hàng tiềm năng."
+        },
+        {
+          "title": "Tuỳ chỉnh giao diện chatbot",
+          "desc": "Màu sắc, giọng điệu, thương hiệu. Chatbot mang đậm dấu ấn doanh nghiệp."
+        }
+      ]
+    },
+    "singleFeature": {
+      "first": {
+        "title": "Website có traffic, nhưng…",
+        "subTitle": "Đây là những thách thức mà hầu hết doanh nghiệp đang gặp phải",
+        "desc": "<ul><li><strong>65–75%</strong> khách rời website khi không được hỗ trợ ngay</li><li><strong>15–60 phút</strong> là thời gian phản hồi CSKH phổ biến</li><li><strong>40–50%</strong> câu hỏi CSKH bị lặp lại mỗi ngày</li><li><strong>2–3%</strong> conversion rate website trung bình</li></ul>",
+        "img": "/image/products/mini-ugate/MiniUgate-1.webp"
+      },
+      "second": {
+        "title": "MiniUgate giúp thay đổi điều đó",
+        "subTitle": "Kết quả thực tế khi triển khai AI Chatbot cho website của bạn",
+        "desc": "<ul><li><strong>Hiệu quả AI Chatbot:</strong> 45–65% câu hỏi được AI xử lý tự động, < 5 giây thời gian phản hồi, 24/7 – 100% hoạt động liên tục</li><li><strong>Tương tác & chuyển đổi:</strong> 50–70% khách bắt đầu chat, +20–30% time-on-site, +15–30% conversion rate</li><li><strong>Tối ưu nguồn lực:</strong> 40–60% giảm workload CSKH, 30–50% giảm chi phí vận hành</li></ul>",
+        "img": "/image/products/mini-ugate/MiniUgate-2.webp"
+      }
+    },
+    "whyChooseUs": {
+      "title": "Phù hợp với <span class='text-primary'>nhiều ngành nghề</span>",
+      "subTitle": "MiniUgate hỗ trợ đa dạng lĩnh vực kinh doanh",
+      "contents": [
+        {
+          "id": 1,
+          "title": "Website bán hàng",
+          "content": "Chatbot AI tự động tư vấn sản phẩm, trả lời câu hỏi mua hàng, hỗ trợ đơn hàng 24/7.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='8' cy='21' r='1'/><circle cx='19' cy='21' r='1'/><path d='M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12'/></svg>"
+        },
+        {
+          "id": 2,
+          "title": "Doanh nghiệp dịch vụ",
+          "content": "Hỗ trợ khách hàng đặt lịch hẹn, giải đáp thắc mắc dịch vụ, giảm tải đội ngũ CSKH.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16'/><rect width='20' height='14' x='2' y='6' rx='2'/></svg>"
+        },
+        {
+          "id": 3,
+          "title": "Giáo dục – đào tạo",
+          "content": "Trả lời câu hỏi tuyển sinh, tư vấn khoá học, hỗ trợ học viên tự động.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z'/><path d='M22 10v6'/><path d='M6 12.5V16a6 3 0 0 0 12 0v-3.5'/></svg>"
+        },
+        {
+          "id": 4,
+          "title": "Bất động sản",
+          "content": "Giới thiệu dự án, tư vấn giá, đặt lịch xem nhà tự động qua chatbot.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect width='16' height='20' x='4' y='2' rx='2' ry='2'/><path d='M9 22v-4h6v4'/><path d='M8 6h.01'/><path d='M16 6h.01'/><path d='M12 6h.01'/><path d='M12 10h.01'/><path d='M12 14h.01'/><path d='M16 10h.01'/><path d='M16 14h.01'/><path d='M8 10h.01'/><path d='M8 14h.01'/></svg>"
+        },
+        {
+          "id": 5,
+          "title": "Doanh nghiệp B2B",
+          "content": "Hỗ trợ kỹ thuật, tư vấn giải pháp, xử lý yêu cầu ticketing tự động.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2'/><circle cx='9' cy='7' r='4'/><path d='M22 21v-2a4 4 0 0 0-3-3.87'/><path d='M16 3.13a4 4 0 0 1 0 7.75'/></svg>"
+        }
+      ]
+    },
+    "questions": {
+      "title": "Câu hỏi thường gặp",
+      "list": [
+        {
+          "question": "MiniUgate là gì?",
+          "answer": "MiniUgate là nền tảng AI Chatbot no-code cho website, giúp bạn tạo chatbot thông minh chỉ trong vài phút. Không cần code, không cần IT – ai cũng có thể sử dụng!"
+        },
+        {
+          "question": "Tạo chatbot mất bao lâu?",
+          "answer": "Bạn có thể tạo chatbot AI cho website chỉ trong vài phút với 3 bước đơn giản: (1) Dán link website, (2) Setup prompt/giọng điệu, (3) Copy embed code và nhúng vào website."
+        },
+        {
+          "question": "MiniUgate học dữ liệu từ đâu?",
+          "answer": "Chatbot MiniUgate học từ nhiều nguồn: Website của bạn, Documents (tài liệu), và FAQs mà bạn cung cấp. Chatbot sẽ hiểu đúng nội dung và ngữ cảnh của doanh nghiệp bạn."
+        },
+        {
+          "question": "Có cần lập trình không?",
+          "answer": "Không cần lập trình! MiniUgate là nền tảng no-code, nghĩa là bất kỳ ai cũng có thể tạo và quản lý chatbot mà không cần kiến thức kỹ thuật hay IT."
+        },
+        {
+          "question": "Cách nhúng chatbot vào website?",
+          "answer": "Rất đơn giản! Sau khi setup chatbot, bạn chỉ cần copy đoạn embed code và dán vào website của mình. Chatbot sẽ hoạt động ngay lập tức."
+        },
+        {
+          "question": "MiniUgate có ticket hỗ trợ không?",
+          "answer": "Có! MiniUgate có tính năng Support Tickets giúp AI + con người phối hợp xử lý các yêu cầu quan trọng. Khi chatbot không thể trả lời, yêu cầu sẽ được chuyển thành ticket."
+        },
+        {
+          "question": "MiniUgate mang lại lợi ích gì?",
+          "answer": "MiniUgate giúp: Giảm tải CSKH & Sales, tăng time-on-site 20-30%, tăng conversion rate 15-30%, tiết kiệm chi phí vận hành 30-50%, và hoạt động 24/7."
+        },
+        {
+          "question": "MiniUgate có miễn phí không?",
+          "answer": "Bạn có thể dùng thử MiniUgate miễn phí! Truy cập mini.ugate.ai để đăng ký và bắt đầu tạo chatbot AI cho website ngay hôm nay."
+        },
+        {
+          "question": "Cách MiniUgate hoạt động?",
+          "answer": "Chỉ 3 bước đơn giản: Bước 1 – Website của bạn: Nội dung được quét & huấn luyện. Bước 2 – MiniUgate AI: Xử lý & hiểu ngữ cảnh. Bước 3 – Live Chat: Trả lời khách hàng tức thì. Hoàn thành trong vài phút."
+        }
+      ]
+    }
+  }
+}

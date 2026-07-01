@@ -1,228 +1,60 @@
-# Project Overview: Udata.ai Marketing Website
+# Udata FE Marketing
 
-This is a modern marketing website for Udata.ai, built with Next.js and Tailwind CSS. The site is designed to introduce and promote AI & IoT solutions, products, and services, targeting a wide range of industries and customers.
+Dự án Frontend Marketing (Trang chủ & giới thiệu sản phẩm) của hệ sinh thái **Udata**, được xây dựng bằng công nghệ hiện đại đảm bảo hiệu năng cao, trải nghiệm người dùng mượt mà và giao diện Dark Mode ấn tượng.
 
-## Main Pages & Structure
-
-- **Homepage** (`/`):
-  - Hero section with background image and call-to-action.
-  - List of main products/solutions with logos and links.
-  - Fields of application (industries, use cases).
-  - Customer showcase with logos.
-
-- **About Us** (`/ve-cong-ty`):
-  - Company introduction, mission, vision, and values.
-  - Team, achievements, and company images.
-
-- **Careers** (`/tuyen-dung`):
-  - List of open positions, job descriptions, and application links.
-
-- **Try Now / Contact** (`/dung-thu`):
-  - Contact form for demo requests or inquiries.
-  - Collects user/company info, requirements, and interests.
-
-- **Products** (`/san-pham/[product]`):
-  - Dedicated landing pages for each product (Uboard, Ugate, Uzero).
-  - Each page includes hero section, main features, benefits, and FAQs.
-  - Product images and feature highlights.
-
-- **Solutions** (`/giai-phap/[solution]`):
-  - Solution pages for AI Assistant, AI Business, EMS, GHG, OEE, Solar Rooftop, Elevator, etc.
-  - Each page covers problems, benefits, and main features with illustrations.
-
-- **Blog** (`/blog`):
-  - List of blog posts, articles, and news.
-  - Each post has its own detail page.
-
-- **Notifications** (`/thong-bao`):
-  - Announcements and updates for users.
-
-## Information & Images
-
-- Uses a variety of images for backgrounds, product logos, customer logos, and solution illustrations (see `public/image/`).
-- SEO optimized with meta tags for each page.
-- Multilingual support (EN, VI, JP, TH) via `locales/`.
-- Responsive design for desktop and mobile.
-
-## User Flow
-
-1. User lands on the homepage, learns about Udata.ai and its offerings.
-2. Navigates to product or solution pages for more details.
-3. Can view company info, blog, or announcements.
-4. Interested users can contact or request a demo via the Try Now page.
-5. Job seekers can view and apply for open positions.
-
-## Note on Viettel Network Blocking
-
-## Getting Started
-
-### Prerequisites
-
-- [Node.js](https://nodejs.org/) (v16 or later recommended)
-- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
-
-### Install dependencies
-
-```
-npm install
-# or
-yarn install
-```
-
-### Run the development server
-
-```
-npm run dev
-# or
-yarn dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) to view the site in your browser.
-
-### Environment variables
-
-Create `.env.local` and define:
-
-```
-NEXT_PUBLIC_CHAT_WIDGET_API_URL=https://mini.ugate.ai
-NEXT_PUBLIC_CHAT_WIDGET_ORIGIN=https://mini.ugate.ai
-NEXT_PUBLIC_CHAT_WIDGET_COLOR=#1890ff
-NEXT_PUBLIC_CHAT_WIDGET_TOKEN=your-widget-token
-NEXT_PUBLIC_CHAT_WIDGET_SCRIPT_SRC=https://mini.ugate.ai/chat-widget.js
-```
-
-### Build for production
-
-```
-npm run build
-# or
-yarn build
-```
-
-### Start the production server
-
-```
-npm start
-# or
-yarn start
-```
-
-### Lint the code
-
-```
-npm run lint
-# or
-yarn lint
-```
-
-### Deployment
-
-You can deploy this project to any platform that supports Node.js, such as Vercel, Netlify, or your own server. For best results, follow the platform's official Next.js deployment guide.
+## 🚀 Công nghệ sử dụng
+- **Core:** React.js + Vite (Build tool siêu tốc)
+- **Styling:** Tailwind CSS
+- **Animation:** Framer Motion
+- **Router:** React Router v6
 
 ---
 
-Due to access restrictions by the Viettel network when using Vercel or Netlify hosting, users in Vietnam may experience issues accessing the website. To resolve this, a reverse proxy is deployed on DigitalOcean (DO) to redirect requests, ensuring stable access for all users.
+## 💻 Hướng dẫn chạy dự án (Môi trường Local)
 
-## Docker Deployment
+### 1. Yêu cầu hệ thống
+- Môi trường chạy: [Node.js](https://nodejs.org/) (khuyến nghị phiên bản 18+).
+- Package Manager: `npm` (hoặc `yarn`).
 
-This project includes Docker support for containerized deployment.
-
-### Prerequisites
-
-- [Docker](https://www.docker.com/) (v20.10 or later)
-- [Docker Compose](https://docs.docker.com/compose/) (v2.0 or later)
-
-### Quick Start with Docker Compose
-
-1. **Build and run the container:**
-
+### 2. Cài đặt thư viện
+Mở Terminal / Command Prompt tại thư mục dự án và chạy lệnh:
 ```bash
-docker-compose up -d
+npm install
 ```
 
-2. **View logs:**
-
+### 3. Cấu hình biến môi trường
+Dự án cung cấp sẵn file `.env.example`. Hãy copy nội dung file này và tạo thành file mới tên là `.env` ở cùng thư mục:
 ```bash
-docker-compose logs -f
+cp .env.example .env
+```
+*(Bạn có thể mở file `.env` để cấu hình lại các thông số nếu cần).*
+
+### 4. Khởi chạy dự án (Môi trường phát triển)
+```bash
+npm run dev
+```
+Sau đó truy cập vào link: `http://localhost:5173` trên trình duyệt.
+
+### 5. Build dự án (Môi trường Production)
+```bash
+npm run build
+```
+Toàn bộ source code sau khi đóng gói sẽ nằm ở thư mục `dist/`. Bạn có thể dùng thư mục này để đưa lên server chạy thực tế.
+
+---
+
+## 🐳 Hướng dẫn deploy bằng Docker
+
+Dự án đã được cấu hình sẵn `Dockerfile` với Nginx để tối ưu hoá việc phục vụ các file tĩnh (static files) và xử lý routing chuẩn của React (SPA).
+
+### 1. Build Docker image
+Chạy lệnh sau tại thư mục gốc chứa `Dockerfile`:
+```bash
+docker build -t udata-fe-marketing .
 ```
 
-3. **Stop the container:**
-
+### 2. Khởi chạy Docker container
 ```bash
-docker-compose down
+docker run -d -p 8080:80 --name udata-fe udata-fe-marketing
 ```
-
-4. **Rebuild after changes:**
-
-```bash
-docker-compose up -d --build
-```
-
-The application will be available at [http://localhost:3000](http://localhost:3000)
-
-### Manual Docker Build
-
-1. **Build the Docker image:**
-
-```bash
-docker build -t nextjs-app .
-```
-
-2. **Run the container:**
-
-```bash
-docker run -p 3000:3000 nextjs-app
-```
-
-### Build for Production (AMD64 Architecture)
-
-For deployment to cloud platforms like Azure, AWS, or GCP:
-
-```bash
-docker build --platform linux/amd64 \
-  --build-arg WORDPRESS_GRAPHQL_ENDPOINT=https://pambu-cms.org/graphql \
-  -t your-registry/your-image:tag .
-```
-
-### Push to Azure Container Registry
-
-1. **Login to Azure Container Registry:**
-
-```bash
-az acr login --name your-registry-name
-```
-
-2. **Build and tag the image:**
-
-```bash
-docker build --platform linux/amd64 \
-  --build-arg WORDPRESS_GRAPHQL_ENDPOINT=https://pambu-cms.org/graphql \
-  -t your-registry.azurecr.io/your-repo/your-image:tag .
-```
-
-3. **Push to registry:**
-
-```bash
-docker push your-registry.azurecr.io/your-repo/your-image:tag
-```
-
-### Environment Variables for Docker
-
-The Docker setup supports the following environment variables:
-
-- `WORDPRESS_GRAPHQL_ENDPOINT` - GraphQL API endpoint (required for build)
-- `NODE_ENV` - Set to `production` for production builds
-- `PORT` - Application port (default: 3000)
-
-You can configure these in `docker-compose.yml` or pass them during build/run.
-
-### Docker Image Optimization
-
-The Dockerfile uses multi-stage builds to minimize image size:
-
-- **Base stage**: Node.js Alpine image
-- **Dependencies stage**: Installs npm packages
-- **Builder stage**: Builds the Next.js application
-- **Runner stage**: Production-ready image with minimal footprint
-
-The final image runs as a non-root user (`nextjs`) for enhanced security.
+Sau khi chạy thành công, truy cập ứng dụng của bạn tại: `http://localhost:8080`

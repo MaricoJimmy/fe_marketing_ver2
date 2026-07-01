@@ -1,8 +1,0 @@
-# *
-User-agent: *
-Allow: /
-Allow: /*
-
-# Sitemap
-Sitemap: https://udata.ai/sitemap.xml
-Sitemap: https://www.udata.ai/sitemap.xml

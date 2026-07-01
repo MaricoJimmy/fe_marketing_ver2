@@ -1,0 +1,1273 @@
+{
+  "Index": {
+    "titleSocial": "Data collection, monitoring and analysis platform",
+    "desc": "Data collection, monitoring and analysis platform",
+    "solutions": {
+      "title": "Udata Solutions",
+      "list": {
+        "uboard": "Data monitoring and analysis",
+        "ugate": "Smart AI technical support",
+        "uzero": "Emission calculation"
+      }
+    },
+    "fieldsOfApplication": {
+      "title": "Fields of Application",
+      "list": {
+        "solar": {
+          "title": "Rooftop Solar Power",
+          "desc": "Investors and operators can proactively manage rooftop solar power systems effectively."
+        },
+        "elevator": {
+          "title": "Elevators",
+          "desc": "Manufacturers and maintenance units can proactively monitor, detect anomalies early, and optimize elevator maintenance efficiency comprehensively."
+        },
+        "oee": {
+          "title": "Performance Management and Machine Maintenance (OEE)",
+          "desc": "Analyze production activity data based on collected data to generate reports and alerts, helping factories make timely and accurate decisions."
+        },
+        "ems": {
+          "title": "Energy Management (EMS)",
+          "desc": "Monitor, analyze, and optimize consumption data from energy sources such as electricity, gas, heat, water... helping businesses reduce costs, improve efficiency, and move towards sustainable operations."
+        },
+        "ghg": {
+          "title": "Greenhouse Gas Emission Management",
+          "desc": "Measure, visualize, and manage greenhouse gas emissions by Scope 1, 2, and 3, helping businesses comply with ESG standards and improve sustainability."
+        },
+        "ai": {
+          "title": "AI Assistant",
+          "desc": "Helps businesses centralize operational data, standardize workflows, and manage knowledge for effective team collaboration. Helps engineers, managers, and businesses instantly look up knowledge, verify genuine devices, and clarify CO/CQ for transparency and risk reduction."
+        }
+      }
+    },
+    "customers": {
+      "title": "Partners - Customers"
+    },
+    "about-us": {
+      "title": "About Us",
+      "content": "<p>Developed since 2022. In 2024, Udata was invested in by DHG. In 2025, Udata was honored with the Sao Khue Award as recognition for its innovation efforts.</p> <p>Udata is Vietnam's pioneering software platform in the field of IoT data collection, monitoring and analysis, helping businesses operate intelligently and develop sustainably. With core products such as Uboard, Umaintain, Uzero, Uvisual and Ubot, Udata is accompanying factories, buildings, industrial parks, and manufacturing enterprises on the journey of digital transformation and energy optimization according to ISO 50001, COP26, COP28 standards.</p>"
+    },
+    "notification": "Notification",
+    "news": "Featured News",
+    "button": {
+      "details": "View Details",
+      "full": "View All",
+      "start": "Try Now"
+    },
+    "noData": "No posts available yet!"
+  },
+  "Contact": {
+    "title": "Experience the Udata platform in a 30-minute live demo.",
+    "subTitle": "Always operational. Always accurate. <br/> Udata - Empowering businesses in the era of technology and sustainability.",
+    "titleSection": {
+      "first": "Contact Information",
+      "second": "Register for consultation and enjoy a free 30-day trial with Udata",
+      "third": "Try Udata platform free for 30 days!",
+      "fourth": "Trial registration guide"
+    },
+    "form": {
+      "name": {
+        "label": "Full Name",
+        "phd": "Enter your full name"
+      },
+      "company": {
+        "label": "Company Name",
+        "phd": "Enter company name"
+      },
+      "email": {
+        "label": "Email",
+        "phd": "Enter email"
+      },
+      "phone": {
+        "label": "Phone Number",
+        "phd": "Enter phone number"
+      },
+      "fields": {
+        "label": "Industry",
+        "lists": [
+          "Rooftop Solar Power",
+          "Industry",
+          "Aquaculture",
+          "Agriculture",
+          "Healthcare",
+          "Environmental Monitoring",
+          "Banking - Retail",
+          "Telecommunications",
+          "Petroleum",
+          "Other"
+        ]
+      },
+      "requests": {
+        "label": "Request Information",
+        "lists": [
+          "Payment/account support",
+          "Compliance information request",
+          "Sales support",
+          "Technical support",
+          "Trial registration"
+        ]
+      },
+      "target": {
+        "label": "I am completing this form regarding",
+        "for-self": "Personal benefit",
+        "for-customer": "Business benefit"
+      },
+      "message": {
+        "label": "Message",
+        "phd": "Enter your message"
+      },
+      "checkboxSure": "Yes, I want Udata to share the latest news about Udata services and related promotions via email or phone.",
+      "button": "Send",
+      "error": {
+        "name": "Full name cannot be empty!",
+        "company": "Company name cannot be empty!",
+        "phone": {
+          "blank": "Phone number cannot be empty!",
+          "valid": "Invalid phone number!"
+        },
+        "email": "Email cannot be empty!",
+        "fields": "Industry cannot be empty!",
+        "requests": "Industry cannot be empty!",
+        "sure": "Please accept the terms"
+      }
+    },
+    "noti": {
+      "success": "Booking successful!",
+      "error": "An error occurred!"
+    },
+    "discoveries": {
+      "title": "In the 30-minute demo, we will explore together:",
+      "list": [
+        {
+          "title": "Optimize costs and efficiency",
+          "content": "See firsthand how Udata helps save energy, reduce operating costs, and improve equipment performance."
+        },
+        {
+          "title": "Interactive demo experience",
+          "content": "Try the real dashboard – monitor energy data, alerts, and automated reports."
+        },
+        {
+          "title": "1:1 consultation with experts",
+          "content": "Discuss your business's specific needs and get tailored solutions for your operational model."
+        },
+        {
+          "title": "Guides & free 30-day trial",
+          "content": "Receive detailed deployment guides and free access to Udata platform for 30 days."
+        }
+      ]
+    }
+  },
+  "Common": {
+    "news": "Featured news",
+    "relatedPost": "Related posts",
+    "date": "Published date",
+    "document": {
+      "oee": "Pambu OEE documentation",
+      "descOEE": "Comprehensive Solution for Performance Management and Machine Maintenance",
+      "pms": "Pambu PMS documentation",
+      "descPMS": "Energy Monitoring and Management"
+    },
+    "titleNews": "Discover the latest news of Pambu"
+  },
+  "Header": {
+    "news": {
+      "title": "News",
+      "notification": "Notification",
+      "blog": "Blog"
+    },
+    "products": {
+      "title": "Products",
+      "menus": {
+        "saas": "SaaS Platform",
+        "integrate": "Data Integration"
+      },
+      "subMenus": {
+        "pms": "Optimize energy, save costs"
+      }
+    },
+    "solutions": {
+      "title": "Fields of Application",
+      "menusByObject": {
+        "title": "By Object",
+        "investors": "Investors - Senior Management",
+        "managers": "Managers",
+        "operators": "Operators"
+      },
+      "menusByField": {
+        "title": "By Field",
+        "factory": "Factory",
+        "fishing": "Aquaculture"
+      },
+      "solar": "Rooftop Solar Power",
+      "elevator": "Elevator",
+      "oee": "OEE",
+      "ems": "EMS",
+      "ghg": "GHG",
+      "aiForBusiness": "AI Assistant for Business",
+      "aiForAssistant": "AI Assistant for Q&A"
+    },
+    "contact": "Try Now",
+    "about-us": "About Us",
+    "bookDemo": "Request a Trial",
+    "career": "Careers"
+  },
+  "Footer": {
+    "section": {
+      "first": {
+        "title": "Quick Links",
+        "links": {
+          "company": "Company",
+          "trial": "Free Trial",
+          "career": "Careers",
+          "solutions": {
+            "title": "Fields of Application",
+            "solar": "Rooftop Solar Power",
+            "elevator": "Elevator",
+            "oee": "OEE",
+            "ems": "EMS",
+            "ghg": "GHG",
+            "aiForBusiness": "AI Assistant for Business",
+            "aiForAssistant": "AI Assistant for Q&A"
+          },
+          "products": {
+            "title": "Products"
+          },
+          "blog": "News",
+          "notification": "Notification"
+        }
+      },
+      "second": {
+        "title": "Contact Information",
+        "addressHN": {
+          "title": "Hanoi Office",
+          "address": "9th Floor, Thien Nien Ky Building, No. 4 Quang Trung, Ha Dong Ward, Hanoi."
+        },
+        "addressHCM": {
+          "title": "Ho Chi Minh City Office",
+          "address": "6th Floor, DHG Building, 31–33, Street 18, Thong Tay Hoi Ward, Ho Chi Minh City."
+        }
+      },
+      "third": {
+        "title": "Working Hours",
+        "time": "Monday - Friday: 8:00 - 17:30 <br /> Saturday: 8:00 - 12:00"
+      }
+    }
+  },
+  "AboutUs": {
+    "title": "About us",
+    "content": "<p>Developed since 2022. In 2024, Udata was invested in by DHG. In 2025, Udata was honored with the Sao Khue Award as recognition for its innovation efforts.</p> <p>Udata is Vietnam's leading software platform, specializing in AI and IoT integration for businesses.</p> <p>We provide powerful data-driven tools such as Uboard, Ugate, Uzero – helping businesses monitor performance, optimize usage, and meet environmental standards like ISO 50001, COP26, COP28.</p>",
+    "vision": {
+      "title": "Vision",
+      "content": "Transform data into sustainable impact and become the leading AIoT platform in Vietnam and Southeast Asia, helping businesses build smarter, greener, and more flexible operations."
+    },
+    "mission": {
+      "title": "Mission",
+      "content": "Support businesses in digitizing and optimizing operations, improving efficiency, reducing costs, and moving towards sustainable development."
+    },
+    "excerpt": "We <strong>don’t just build software – we build solutions</strong> to unlock the potential of operational data.",
+    "whyChooseUs": {
+      "title": "Core values",
+      "contents": [
+        {
+          "id": 1,
+          "title": "FIT",
+          "content": "Ready to meet user needs in various economic sectors",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-mouse-pointer-click'><path d='M14 4.1 12 6'/><path d='m5.1 8-2.9-.8'/><path d='m6 12-1.9 2'/><path d='M7.2 2.2 8 5.1'/><path d='M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z'/></svg>"
+        },
+        {
+          "id": 2,
+          "title": "FAST",
+          "content": "Rapid deployment, smooth operation, quick response to requirements",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-lightbulb'><path d='M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5'/><path d='M9 18h6'/><path d='M10 22h4'/></svg>"
+        },
+        {
+          "id": 3,
+          "title": "FLEXIBLE",
+          "content": "Easily scalable, integrates with other systems, and flexibly adjusts to user needs",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevrons-left-right'><path d='m9 7-5 5 5 5'/><path d='m15 7 5 5-5 5'/></svg>"
+        }
+      ]
+    },
+    "awards": {
+      "title": "Awards",
+      "content": "<p>In 2025, Udata was honored at the <strong>Sao Khue Award</strong> in the category <strong>“New products, solutions, software, services”</strong>.</p> <p>The Sao Khue Award is <strong>Vietnam's most prestigious recognition</strong> for the software and IT industry, organized annually by the Vietnam Software and IT Services Association (VINASA) since 2003.</p> <p>VINASA is the <strong>leading national association</strong>, representing over 500 top IT enterprises, promoting innovation, industry standards, and international cooperation. Being recognized by VINASA affirms Udata's position as a trusted innovator and leader in digital transformation solutions.</p>"
+    }
+  },
+  "Solar": {
+    "heroSection": {
+      "title": "Rooftop Solar Power Operation Monitoring Solution",
+      "subTitle": "Rooftop Solar Power Management Solution",
+      "desc": "With Udata's smart monitoring system, investors and operators can proactively manage rooftop solar power systems effectively.",
+      "contact": "Try now"
+    },
+    "problems": {
+      "title": "Industry Problems",
+      "list": [
+        "Failure to promptly detect inverter errors, disconnections, or output drops",
+        "Scattered data, lack of alerts leading to reduced device efficiency without awareness",
+        "Unable to evaluate investment effectiveness",
+        "Investors depend on reports from EPC or manual operations"
+      ]
+    },
+    "allFeatures": {
+      "title": "Applicable Features",
+      "lists": [
+        {
+          "id": "1",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-timer'><line x1='10' x2='14' y1='2' y2='2'/><line x1='12' x2='15' y1='14' y2='11'/><circle cx='12' cy='14' r='8'/></svg>",
+          "title": "Real-time performance monitoring",
+          "content": "Continuously monitor the output and performance of each inverter to detect abnormalities early."
+        },
+        {
+          "id": "2",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-bell'><path d='M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9'/><path d='M10.3 21a1.94 1.94 0 0 0 3.4 0'/></svg>",
+          "title": "Device error tracing",
+          "content": "Automatically record, localize the cause of performance degradation, and store error history."
+        },
+        {
+          "id": "3",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'stroke-linecap='round'stroke-linejoin='round'class='lucide lucide-bug'><path d='m8 2 1.88 1.88' /><path d='M14.12 3.88 16 2' /><path d='M9 7.13v-1a3.003 3.003 0 1 1 6 0v1' /><path d='M12 20c-3.3 0-6-2.7-6-6v-3a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v3c0 3.3-2.7 6-6 6' /><path d='M12 20v-9' /><path d='M6.53 9C4.6 8.8 3 7.1 3 5' /><path d='M6 13H2' /><path d='M3 21c0-2.1 1.7-3.9 3.8-4' /><path d='M20.97 5c0 2.1-1.6 3.8-3.5 4' /><path d='M22 13h-4' /><path d='M17.2 17c2.1.1 3.8 1.9 3.8 4' /></svg>",
+          "title": "Smart early warning",
+          "content": "Send alerts immediately when inverter overheats, disconnects, or output drops."
+        },
+        {
+          "id": "4",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><rect width='7' height='7' x='14' y='3' rx='1'/><path d='M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3'/></svg>",
+          "title": "Quantify energy loss",
+          "content": "Calculate lost output and directly convert it into specific costs."
+        },
+        {
+          "id": "5",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><rect width='7' height='7' x='14' y='3' rx='1'/><path d='M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3'/></svg>",
+          "title": "Multi-level performance analysis",
+          "content": "Compare by day, week, month and filter by inverter to assess trends."
+        },
+        {
+          "id": "5",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><rect width='7' height='7' x='14' y='3' rx='1'/><path d='M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3'/></svg>",
+          "title": "Monitor anytime, anywhere",
+          "content": "Easy access on any device – instant data updates."
+        }
+      ]
+    },
+    "benefits": {
+      "title": "Benefits",
+      "list": [
+        {
+          "content": "Increase electricity output by 2–5%",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-zap-icon lucide-zap\"><path d=\"M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z\"/></svg>"
+        },
+        {
+          "content": "Reduce maintenance costs, minimize output loss due to silent failures",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-diamond-minus-icon lucide-diamond-minus\"><path d=\"M2.7 10.3a2.41 2.41 0 0 0 0 3.41l7.59 7.59a2.41 2.41 0 0 0 3.41 0l7.59-7.59a2.41 2.41 0 0 0 0-3.41L13.7 2.71a2.41 2.41 0 0 0-3.41 0z\"/><path d=\"M8 12h8\"/></svg>"
+        },
+        {
+          "content": "Comply with Decision No. 378/QĐ-EVN",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-check-icon lucide-check\"><path d=\"M20 6 9 17l-5-5\"/></svg>"
+        }
+      ]
+    }
+  },
+  "Elevator": {
+    "heroSection": {
+      "title": "Machine Operation Monitoring Solution (Elevator Application)",
+      "subTitle": "Rooftop Solar Power Operation Management Solution",
+      "desc": "With Udata's smart monitoring system, manufacturers and maintenance units can proactively monitor, detect anomalies early, and optimize elevator maintenance efficiency comprehensively.",
+      "contact": "Try now"
+    },
+    "problems": {
+      "title": "Industry Problems",
+      "list": [
+        "Lack of monitoring tools to save energy",
+        "No data to accurately calculate production costs",
+        "Difficult to control errors affecting operations",
+        "Unable to identify underperforming equipment"
+      ]
+    },
+    "allFeatures": {
+      "title": "Applicable Features",
+      "lists": [
+        {
+          "id": "1",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-timer'><path d=\"M5 21v-6\"/><path d=\"M12 21V3\"/><path d=\"M19 21V9\"/></svg>",
+          "title": "Production statistics for each machine",
+          "content": "Automatically record and summarize the number of products created on each device."
+        },
+        {
+          "id": "2",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-bell'><path d='M16 14v2.2l1.6 1'/><path d='M16 4h2a2 2 0 0 1 2 2v.832'/><path d='M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h2'/><circle cx='16' cy='16' r='6'/><rect x='8' y='2' width='8' height='4' rx='1'/></svg>",
+          "title": "Record machine stop errors",
+          "content": "Classify, count, and analyze the causes of machine stops to improve processes."
+        },
+        {
+          "id": "3",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'stroke-linecap='round'stroke-linejoin='round'class='lucide lucide-bug'><rect width=\"16\" height=\"20\" x=\"4\" y=\"2\" rx=\"2\"/><line x1=\"8\" x2=\"16\" y1=\"6\" y2=\"6\"/><line x1=\"16\" x2=\"16\" y1=\"14\" y2=\"18\"/><path d=\"M16 10h.01\"/><path d=\"M12 10h.01\"/><path d=\"M8 10h.01\"/><path d=\"M12 14h.01\"/><path d=\"M8 14h.01\"/><path d=\"M12 18h.01\"/><path d=\"M8 18h.01\"/></svg>",
+          "title": "Calculate OEE performance index",
+          "content": "Evaluate the overall productivity, availability, and quality of each machine."
+        },
+        {
+          "id": "4",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><path d=\"M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0\"/><circle cx=\"12\" cy=\"12\" r=\"3\"/></svg>",
+          "title": "Monitor operating status by shift",
+          "content": "Monitor device status by production shift to detect abnormalities early."
+        },
+        {
+          "id": "5",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\"/><path d=\"M3 5V19A9 3 0 0 0 21 19V5\"/><path d=\"M3 12A9 3 0 0 0 21 12\"/></svg>",
+          "title": "Store operation and maintenance data",
+          "content": "Record operators, repair history, and spare part replacements for each device."
+        },
+        {
+          "id": "6",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><circle cx=\"12\" cy=\"12\" r=\"10\"/><line x1=\"12\" x2=\"12\" y1=\"8\" y2=\"12\"/><line x1=\"12\" x2=\"12.01\" y1=\"16\" y2=\"16\"/></svg>",
+          "title": "Maintenance alerts and spare part forecasts",
+          "content": "Automatically remind maintenance schedules, alert about expiring spare parts to avoid sudden machine stops."
+        }
+      ]
+    },
+    "benefits": {
+      "title": "Benefits",
+      "list": [
+        {
+          "content": "Accurately calculate production costs by shift/machine/product",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-zap-icon lucide-zap\"><line x1=\"12\" x2=\"12\" y1=\"2\" y2=\"22\"/><path d=\"M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6\"/></svg>"
+        },
+        {
+          "content": "Increase equipment utilization efficiency (OEE) by 20–25%",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-diamond-minus-icon lucide-diamond-minus\"><path d=\"M9 13a1 1 0 0 0-1-1H5.061a1 1 0 0 1-.75-1.811l6.836-6.835a1.207 1.207 0 0 1 1.707 0l6.835 6.835a1 1 0 0 1-.75 1.811H16a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1z\"/></svg>"
+        },
+        {
+          "content": "Optimize production and maintenance planning",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-check-icon lucide-check\"><path d=\"M16 7h6v6\"/><path d=\"m22 7-8.5 8.5-5-5L2 17\"/></svg>"
+        }
+      ]
+    }
+  },
+  "OEE": {
+    "heroSection": {
+      "title": "Performance Management and Machine Maintenance Solution (OEE)",
+      "subTitle": "Rooftop Solar Power Operation Management Solution",
+      "desc": "Analyze production activity data based on collected data to generate reports and alerts, helping factories make timely and accurate decisions.",
+      "contact": "Try now"
+    },
+    "problems": {
+      "title": "Industry Problems",
+      "list": [
+        "Lack of monitoring tools to save energy",
+        "No data to accurately calculate production costs",
+        "Difficult to control errors affecting operations",
+        "Unable to identify underperforming equipment"
+      ]
+    },
+    "allFeatures": {
+      "title": "Applicable Features",
+      "lists": [
+        {
+          "id": "1",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-timer'><path d=\"M5 21v-6\"/><path d=\"M12 21V3\"/><path d=\"M19 21V9\"/></svg>",
+          "title": "Production statistics by machine",
+          "content": "Automatically collect and summarize the number of products produced on each machine."
+        },
+        {
+          "id": "2",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-bell'><path d='M16 14v2.2l1.6 1'/><path d='M16 4h2a2 2 0 0 1 2 2v.832'/><path d='M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h2'/><circle cx='16' cy='16' r='6'/><rect x='8' y='2' width='8' height='4' rx='1'/></svg>",
+          "title": "Record machine stop errors",
+          "content": "Detect, classify, and count the causes of machine stops to improve operation processes."
+        },
+        {
+          "id": "3",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'stroke-linecap='round'stroke-linejoin='round'class='lucide lucide-bug'><rect width=\"16\" height=\"20\" x=\"4\" y=\"2\" rx=\"2\"/><line x1=\"8\" x2=\"16\" y1=\"6\" y2=\"6\"/><line x1=\"16\" x2=\"16\" y1=\"14\" y2=\"18\"/><path d=\"M16 10h.01\"/><path d=\"M12 10h.01\"/><path d=\"M8 10h.01\"/><path d=\"M12 14h.01\"/><path d=\"M8 14h.01\"/><path d=\"M12 18h.01\"/><path d=\"M8 18h.01\"/></svg>",
+          "title": "Calculate overall efficiency (OEE)",
+          "content": "Measure and analyze productivity, availability, and equipment quality according to international standards."
+        },
+        {
+          "id": "4",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><path d=\"M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0\"/><circle cx=\"12\" cy=\"12\" r=\"3\"/></svg>",
+          "title": "Monitor status by production shift",
+          "content": "Continuously update the operating status of each machine in each shift."
+        },
+        {
+          "id": "5",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\"/><path d=\"M3 5V19A9 3 0 0 0 21 19V5\"/><path d=\"M3 12A9 3 0 0 0 21 12\"/></svg>",
+          "title": "Manage operation & maintenance data",
+          "content": "Store operators, repair history, and spare part information for each device."
+        },
+        {
+          "id": "6",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><circle cx=\"12\" cy=\"12\" r=\"10\"/><line x1=\"12\" x2=\"12\" y1=\"8\" y2=\"12\"/><line x1=\"12\" x2=\"12.01\" y1=\"16\" y2=\"16\"/></svg>",
+          "title": "Maintenance & spare part forecast alerts",
+          "content": "Automatically alert about expiring spare parts and remind maintenance schedules to prevent failures."
+        }
+      ]
+    },
+    "benefits": {
+      "title": "Benefits",
+      "list": [
+        {
+          "content": "Accurately calculate production costs by shift/machine/product",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-zap-icon lucide-zap\"><line x1=\"12\" x2=\"12\" y1=\"2\" y2=\"22\"/><path d=\"M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6\"/></svg>"
+        },
+        {
+          "content": "Increase equipment utilization efficiency (OEE) by 20–25%",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-diamond-minus-icon lucide-diamond-minus\"><path d=\"M9 13a1 1 0 0 0-1-1H5.061a1 1 0 0 1-.75-1.811l6.836-6.835a1.207 1.207 0 0 1 1.707 0l6.835 6.835a1 1 0 0 1-.75 1.811H16a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1z\"/></svg>"
+        },
+        {
+          "content": "Optimize production and maintenance planning",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-check-icon lucide-check\"><path d=\"M16 7h6v6\"/><path d=\"m22 7-8.5 8.5-5-5L2 17\"/></svg>"
+        }
+      ]
+    }
+  },
+  "EMS": {
+    "heroSection": {
+      "title": "Smart Energy Management Solution (EMS)",
+      "subTitle": "Rooftop Solar Power Operation Management Solution",
+      "desc": "Monitor, analyze, and optimize consumption data from energy sources such as electricity, gas, heat, water... helping businesses reduce costs, improve efficiency, and move towards sustainable operations.",
+      "contact": "Try now"
+    },
+    "problems": {
+      "title": "Industry Problems",
+      "list": [
+        "Don't know where, how much, or whether energy is being used efficiently",
+        "Lack of data to make decisions to cut energy costs",
+        "No alerts when consumption exceeds thresholds or incidents occur",
+        "Cannot demonstrate effectiveness to management or auditors"
+      ]
+    },
+    "allFeatures": {
+      "title": "Applicable Features",
+      "lists": [
+        {
+          "id": "1",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-timer'><path d=\"M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z\"/><path d=\"m14.5 12.5 2-2\"/><path d=\"m11.5 9.5 2-2\"/><path d=\"m8.5 6.5 2-2\"/><path d=\"m17.5 15.5 2-2\"/></svg>",
+          "title": "Real-time energy data measurement",
+          "content": "Continuously collect and analyze electricity, water, compressed air, etc. to capture instant consumption performance."
+        },
+        {
+          "id": "2",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-bell'><path d=\"M5 21v-6\"/><path d=\"M12 21V3\"/><path d=\"M19 21V9\"/></svg>",
+          "title": "Monitor consumption by area and device",
+          "content": "Detailed statistics on usage and performance by machine, area, or operation shift."
+        },
+        {
+          "id": "3",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'stroke-linecap='round'stroke-linejoin='round'class='lucide lucide-bug'><circle cx=\"12\" cy=\"12\" r=\"10\"/><circle cx=\"12\" cy=\"12\" r=\"6\"/><circle cx=\"12\" cy=\"12\" r=\"2\"/></svg>",
+          "title": "Set KPIs and energy saving targets",
+          "content": "Set consumption targets for each device or area to control and optimize efficiency."
+        },
+        {
+          "id": "4",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><circle cx=\"12\" cy=\"12\" r=\"10\"/><line x1=\"12\" x2=\"12\" y1=\"8\" y2=\"12\"/><line x1=\"12\" x2=\"12.01\" y1=\"16\" y2=\"16\"/></svg>",
+          "title": "Early warning of overconsumption",
+          "content": "Detect and notify immediately when there are abnormal signs or limits are exceeded."
+        },
+        {
+          "id": "5",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\"/><path d=\"M3 5V19A9 3 0 0 0 21 19V5\"/><path d=\"M3 12A9 3 0 0 0 21 12\"/></svg>",
+          "title": "Analyze energy consumption ratio",
+          "content": "Identify devices or areas with high consumption to prioritize improvements."
+        },
+        {
+          "id": "6",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><circle cx=\"12\" cy=\"12\" r=\"10\"/><line x1=\"12\" x2=\"12\" y1=\"8\" y2=\"12\"/><line x1=\"12\" x2=\"12.01\" y1=\"16\" y2=\"16\"/></svg>",
+          "title": "Store and retrieve data history",
+          "content": "Record all consumption data to support analysis, maintenance, and strategic decision-making."
+        }
+      ]
+    },
+    "benefits": {
+      "title": "Benefits",
+      "list": [
+        {
+          "content": "Save 4–15% energy in the first year of implementation",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-zap-icon lucide-zap\"><path d=\"M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z\"/></svg>"
+        },
+        {
+          "content": "Increase ROI for equipment, extend lifespan, reduce system errors",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-diamond-minus-icon lucide-diamond-minus\"><path d=\"M9 13a1 1 0 0 0-1-1H5.061a1 1 0 0 1-.75-1.811l6.836-6.835a1.207 1.207 0 0 1 1.707 0l6.835 6.835a1 1 0 0 1-.75 1.811H16a1 1 0 0 0-1 1v6a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1z\"/></svg>"
+        },
+        {
+          "content": "Efficient and proactive energy management",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-check-icon lucide-check\"><path d=\"M16 7h6v6\"/><path d=\"m22 7-8.5 8.5-5-5L2 17\"/></svg>"
+        }
+      ]
+    }
+  },
+  "GHG": {
+    "heroSection": {
+      "title": "Greenhouse Gas Emission Management (GHG)",
+      "subTitle": "Rooftop Solar Power Operation Management Solution",
+      "desc": "Measure, visualize, and manage greenhouse gas emissions by Scope 1, 2, and 3, helping businesses comply with ESG standards and improve sustainability.",
+      "contact": "Try now"
+    },
+    "problems": {
+      "title": "Industry Problems",
+      "list": [
+        "No centralized platform",
+        "Manual calculation takes a lot of time",
+        "Difficult to meet ESG disclosure requirements",
+        "Lack of transparency"
+      ]
+    },
+    "allFeatures": {
+      "title": "Applicable Features",
+      "lists": [
+        {
+          "id": "1",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-timer'><path d=\"M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z\"/><path d=\"m14.5 12.5 2-2\"/><path d=\"m11.5 9.5 2-2\"/><path d=\"m8.5 6.5 2-2\"/><path d=\"m17.5 15.5 2-2\"/></svg>",
+          "title": "Collect and aggregate emission data",
+          "content": "Automatically collect data from multiple sources to create a complete emission profile."
+        },
+        {
+          "id": "2",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-bell'><rect width=\"16\" height=\"20\" x=\"4\" y=\"2\" rx=\"2\"/><line x1=\"8\" x2=\"16\" y1=\"6\" y2=\"6\"/><line x1=\"16\" x2=\"16\" y1=\"14\" y2=\"18\"/><path d=\"M16 10h.01\"/><path d=\"M12 10h.01\"/><path d=\"M8 10h.01\"/><path d=\"M12 14h.01\"/><path d=\"M8 14h.01\"/><path d=\"M12 18h.01\"/><path d=\"M8 18h.01\"/></svg>",
+          "title": "Calculate emissions according to GHG Protocol",
+          "content": "Classify and calculate emissions by Scope 1, 2, 3 to ensure international standards."
+        },
+        {
+          "id": "3",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'stroke-linecap='round'stroke-linejoin='round'class='lucide lucide-bug'><circle cx=\"12\" cy=\"12\" r=\"10\"/><circle cx=\"12\" cy=\"12\" r=\"6\"/><circle cx=\"12\" cy=\"12\" r=\"2\"/></svg>",
+          "title": "Real-time visual dashboard",
+          "content": "Display emission trends and 'hot spots' via an intuitive dashboard, supporting quick decisions."
+        },
+        {
+          "id": "4",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><path d=\"M15 12h-5\"/><path d=\"M15 8h-5\"/><path d=\"M19 17V5a2 2 0 0 0-2-2H4\"/><path d=\"M8 21h12a2 2 0 0 0 2-2v-1a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v1a2 2 0 1 1-4 0V5a2 2 0 1 0-4 0v2a1 1 0 0 0 1 1h3\"/></svg>",
+          "title": "Generate ESG reports meeting international standards",
+          "content": "Export reports compliant with ISO 14064-3 and other standard frameworks."
+        },
+        {
+          "id": "5",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\"/><path d=\"M3 5V19A9 3 0 0 0 21 19V5\"/><path d=\"M3 12A9 3 0 0 0 21 12\"/></svg>",
+          "title": "Simulate emission reduction scenarios",
+          "content": "Evaluate the impact when applying energy-saving measures or switching to renewable energy."
+        },
+        {
+          "id": "6",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><path d=\"M10 22V7a1 1 0 0 0-1-1H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a1 1 0 0 0-1-1H2\"/><rect x=\"14\" y=\"2\" width=\"8\" height=\"8\" rx=\"1\"/></svg>",
+          "title": "Integrate with global partner systems",
+          "content": "Connect with partners like Zeroboard to ensure data transparency and compliance with international Net Zero standards."
+        }
+      ]
+    },
+    "benefits": {
+      "title": "Benefits",
+      "list": [
+        {
+          "content": "Ensure report accuracy and audit readiness for ESG compliance",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-zap-icon lucide-zap\"><path d=\"M20 6 9 17l-5-5\"/></svg>"
+        },
+        {
+          "content": "Reduce up to 80% of time compared to manual methods",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-diamond-minus-icon lucide-diamond-minus\"><path d=\"M15 11a1 1 0 0 0 1 1h2.939a1 1 0 0 1 .75 1.811l-6.835 6.836a1.207 1.207 0 0 1-1.707 0L4.31 13.81a1 1 0 0 1 .75-1.811H8a1 1 0 0 0 1-1V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1z\"/></svg>"
+        },
+        {
+          "content": "Identify main emission sources to build effective reduction strategies",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-check-icon lucide-check\"><path d=\"M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z\"/></svg>"
+        }
+      ]
+    }
+  },
+  "AIForBusiness": {
+    "heroSection": {
+      "title": "AI Assistant for Operations & Technical Knowledge Management",
+      "subTitle": "Rooftop Solar Power Operation Management Solution",
+      "desc": "Helps businesses centralize operational data, standardize workflows, and manage knowledge for effective team collaboration.",
+      "contact": "Try now"
+    },
+    "problems": {
+      "title": "Industry Problems",
+      "list": [
+        "Fragmented data & systems",
+        "Lack of experienced engineers, difficult to quickly train new staff",
+        "Lost tickets, slow response",
+        "Manual data processing"
+      ]
+    },
+    "allFeatures": {
+      "title": "Applicable Features",
+      "lists": [
+        {
+          "id": "1",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-timer'><path d=\"M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z\"/><path d=\"m3.3 7 8.7 5 8.7-5\"/><path d=\"M12 22V12\"/></svg>",
+          "title": "Centralized resource management",
+          "content": "Organize device catalog, spare parts, suppliers, and allocation lists on a single platform."
+        },
+        {
+          "id": "2",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-bell'><path d=\"M10 22V7a1 1 0 0 0-1-1H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a1 1 0 0 0-1-1H2\"/><rect x=\"14\" y=\"2\" width=\"8\" height=\"8\" rx=\"1\"/></svg>",
+          "title": "Enterprise system integration",
+          "content": "Seamlessly connect with ERP, HRM, and internal platforms to synchronize data and processes."
+        },
+        {
+          "id": "3",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'stroke-linecap='round'stroke-linejoin='round'class='lucide lucide-bug'><path d=\"M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z\"/><circle cx=\"7.5\" cy=\"7.5\" r=\".5\" fill=\"currentColor\"/></svg>",
+          "title": "End-to-end ticket management",
+          "content": "Receive, assign, track SLA, and respond in a unified workflow."
+        },
+        {
+          "id": "4",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><path d=\"M18 6 7 17l-5-5\"/><path d=\"m22 10-7.5 7.5L13 16\"/></svg>",
+          "title": "Checklist and approval management",
+          "content": "Create checklists, approve tasks, and transparently report team productivity."
+        },
+        {
+          "id": "5",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><path d=\"M12 21V7\"/><path d=\"m16 12 2 2 4-4\"/><path d=\"M22 6V4a1 1 0 0 0-1-1h-5a4 4 0 0 0-4 4 4 4 0 0 0-4-4H3a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6a1 1 0 0 0 1-1v-1.3\"/></svg>",
+          "title": "Digital maintenance knowledge base",
+          "content": "Store SOPs, error logs, and operational experience; tag devices for quick lookup and reuse."
+        },
+        {
+          "id": "6",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><path d=\"M12 6V2H8\"/><path d=\"M15 11v2\"/><path d=\"M2 12h2\"/><path d=\"M20 12h2\"/><path d=\"M20 16a2 2 0 0 1-2 2H8.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 4 20.286V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z\"/><path d=\"M9 11v2\"/></svg>",
+          "title": "AI-powered operational chat",
+          "content": "Interact naturally with the knowledge base and active tickets to find instant solutions."
+        }
+      ]
+    },
+    "benefits": {
+      "title": "Benefits",
+      "list": [
+        {
+          "content": "Centralized data & operations",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-zap-icon lucide-zap\"><ellipse cx=\"12\" cy=\"5\" rx=\"9\" ry=\"3\"/><path d=\"M3 5V19A9 3 0 0 0 21 19V5\"/><path d=\"M3 12A9 3 0 0 0 21 12\"/></svg>"
+        },
+        {
+          "content": "Reduce request processing time by 50%",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-diamond-minus-icon lucide-diamond-minus\"><path d=\"M15 11a1 1 0 0 0 1 1h2.939a1 1 0 0 1 .75 1.811l-6.835 6.836a1.207 1.207 0 0 1-1.707 0L4.31 13.81a1 1 0 0 1 .75-1.811H8a1 1 0 0 0 1-1V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1z\"/></svg>"
+        },
+        {
+          "content": "Preserve & reuse knowledge",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-check-icon lucide-check\"><path d=\"M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8\"/><path d=\"M3 3v5h5\"/></svg>"
+        }
+      ]
+    }
+  },
+  "AIForAssistant": {
+    "heroSection": {
+      "title": "Conversational AI Assistant & Product Verification",
+      "subTitle": "Rooftop Solar Power Operation Management Solution",
+      "desc": "Helps engineers, managers, and businesses instantly look up knowledge, verify genuine devices, and clarify CO/CQ for transparency and risk reduction.",
+      "contact": "Try now"
+    },
+    "problems": {
+      "title": "Industry Problems",
+      "list": [
+        "Large volume of maintenance data",
+        "Engineers spend a lot of time searching documents or consulting experts",
+        "Lack of transparency in CO/CQ, difficult to reconcile during audits",
+        "Counterfeit or low-quality products"
+      ]
+    },
+    "allFeatures": {
+      "title": "Applicable Features",
+      "lists": [
+        {
+          "id": "1",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-timer'><path d=\"M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z\"/><path d=\"m3.3 7 8.7 5 8.7-5\"/><path d=\"M12 22V12\"/></svg>",
+          "title": "AI-powered error analysis",
+          "content": "Enter error codes or images, AI automatically identifies the cause and provides troubleshooting guidance"
+        },
+        {
+          "id": "2",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-bell'><path d=\"M10 22V7a1 1 0 0 0-1-1H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a1 1 0 0 0-1-1H2\"/><rect x=\"14\" y=\"2\" width=\"8\" height=\"8\" rx=\"1\"/></svg>",
+          "title": "Genuine component verification",
+          "content": "Scan barcodes or serials to cross-check with manufacturer database, eliminating counterfeit risks."
+        },
+        {
+          "id": "3",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2'stroke-linecap='round'stroke-linejoin='round'class='lucide lucide-bug'><path d=\"M12.586 2.586A2 2 0 0 0 11.172 2H4a2 2 0 0 0-2 2v7.172a2 2 0 0 0 .586 1.414l8.704 8.704a2.426 2.426 0 0 0 3.42 0l6.58-6.58a2.426 2.426 0 0 0 0-3.42z\"/><circle cx=\"7.5\" cy=\"7.5\" r=\".5\" fill=\"currentColor\"/></svg>",
+          "title": "Natural language technical Q&A",
+          "content": "Engineers ask questions directly on site, AI instantly responds with specific instructions."
+        },
+        {
+          "id": "4",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><path d=\"M18 6 7 17l-5-5\"/><path d=\"m22 10-7.5 7.5L13 16\"/></svg>",
+          "title": "Centralized technical knowledge base",
+          "content": "Store SOPs, incident logs, and real-world experience for efficient lookup and reuse."
+        },
+        {
+          "id": "5",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><path d=\"M12 21V7\"/><path d=\"m16 12 2 2 4-4\"/><path d=\"M22 6V4a1 1 0 0 0-1-1h-5a4 4 0 0 0-4 4 4 4 0 0 0-4-4H3a1 1 0 0 0-1 1v13a1 1 0 0 0 1 1h6a3 3 0 0 1 3 3 3 3 0 0 1 3-3h6a1 1 0 0 0 1-1v-1.3\"/></svg>",
+          "title": "Role-based access control",
+          "content": "Manage access rights based on roles and organizational structure, ensuring data security."
+        },
+        {
+          "id": "6",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-blocks'><path d=\"M12 6V2H8\"/><path d=\"M15 11v2\"/><path d=\"M2 12h2\"/><path d=\"M20 12h2\"/><path d=\"M20 16a2 2 0 0 1-2 2H8.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 4 20.286V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z\"/><path d=\"M9 11v2\"/></svg>",
+          "title": "Instant CO/CQ document retrieval",
+          "content": "Instantly look up certificates of origin and quality for reconciliation or equipment inspection."
+        }
+      ]
+    },
+    "benefits": {
+      "title": "Benefits",
+      "list": [
+        {
+          "content": "Reduce lookup & verification time by 90%",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-diamond-minus-icon lucide-diamond-minus\"><path d=\"M15 11a1 1 0 0 0 1 1h2.939a1 1 0 0 1 .75 1.811l-6.835 6.836a1.207 1.207 0 0 1-1.707 0L4.31 13.81a1 1 0 0 1 .75-1.811H8a1 1 0 0 0 1-1V5a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1z\"/></svg>"
+        },
+        {
+          "content": "Ensure genuine devices, reduce counterfeit risks",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-diamond-minus-icon lucide-diamond-minus\"><path d=\"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z\"/><path d=\"m9 12 2 2 4-4\"/></svg>"
+        },
+        {
+          "content": "Reduce incident handling time by 50%, help new engineers quickly master",
+          "icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"50\" height=\"50\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"lucide lucide-check-icon lucide-check\"><path d=\"m7 6 5 5 5-5\"/><path d=\"m7 13 5 5 5-5\"/></svg>"
+        }
+      ]
+    }
+  },
+  "Uboard": {
+    "heroSection": {
+      "heading": "Welcome to Uboard",
+      "excerpt": "Centralized data monitoring – Quick decisions, standard operations",
+      "color": "blue",
+      "contact": "Try now"
+    },
+    "features": {
+      "title": "Outstanding features",
+      "lists": [
+        {
+          "img": "/image/products/uboard/central-monitor.webp",
+          "title": "Centralized management",
+          "desc": "Uboard allows you to manage all devices, in all areas, on a single platform, making management easy without moving around."
+        },
+        {
+          "img": "/image/products/uboard/report-features.webp",
+          "title": "AI Reports",
+          "desc": "Export periodic PDF/Excel reports, AI supports answering issues from report data."
+        },
+        {
+          "img": "/image/products/uboard/data-collect.webp",
+          "title": "Real-time data collection and analysis",
+          "desc": "By continuously monitoring activities, Uboard helps you detect potential issues early and provide timely solutions."
+        },
+        {
+          "img": "/image/products/uboard/authorization.webp",
+          "title": "Role-based authorization",
+          "desc": "Clear roles, separated data, ensuring security and strict control."
+        },
+        {
+          "img": "/image/products/uboard/smart-warning.webp",
+          "title": "Smart KPI alerts",
+          "desc": "Set alert thresholds, detect anomalies early, instant notifications."
+        },
+        {
+          "img": "/image/products/uboard/data-security.webp",
+          "title": "Absolute security",
+          "desc": "Stable & secure cloud storage. Access anywhere, support private cloud, store 30 days when disconnected."
+        }
+      ]
+    },
+    "singleFeature": {
+      "first": {
+        "title": "Application in rooftop solar operation monitoring",
+        "subTitle": "",
+        "desc": "With Udata's smart monitoring system, investors and operators can proactively manage rooftop solar systems effectively. Benefits: Increase electricity output by 2-5%; Reduce maintenance costs, minimize output loss due to silent failures.",
+        "img": "/image/products/uboard/Uboard-1.webp"
+      },
+      "second": {
+        "title": "Application in elevators, machinery operation monitoring",
+        "subTitle": "",
+        "desc": "With Udata's smart monitoring system, manufacturers and maintenance units can proactively monitor, detect anomalies early, and optimize elevator maintenance efficiency comprehensively. Benefits: Reduce periodic maintenance time by 25%; Improve technician efficiency; Optimize maintenance & technical personnel costs.",
+        "img": "/image/products/uboard/Uboard-2.webp"
+      },
+      "third": {
+        "title": "Application in performance management and machine maintenance (OEE)",
+        "subTitle": "",
+        "desc": "Analyze production activity data based on collected data to generate reports and alerts, helping factories make timely and accurate decisions. Benefits: Accurately calculate production costs by shift/machine/product; Increase equipment utilization efficiency (OEE) by 20–25%; Optimize production and maintenance plans.",
+        "img": "/image/products/uboard/Uboard-3.webp"
+      },
+      "fourth": {
+        "title": "Application in smart energy management (EMS)",
+        "subTitle": "",
+        "desc": "Monitor, analyze, and optimize consumption data from energy sources such as electricity, gas, heat, water... helping businesses reduce costs, improve efficiency, and move towards sustainable operations. Benefits: Save 4–15% energy in the first year; Increase ROI for equipment, extend lifespan, reduce system errors; Efficient and proactive energy management.",
+        "img": "/image/products/uboard/Uboard-4.webp"
+      }
+    },
+    "whyChooseUs": {
+      "title": "Why choose <span class='text-primary'>Uboard</span>",
+      "subTitle": "Achieve your goals effectively",
+      "contents": [
+        {
+          "id": 1,
+          "title": "More focused",
+          "content": "Manage all devices, everywhere on a single platform.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-mouse-pointer-click'><path d=\"M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z\"/></svg>"
+        },
+        {
+          "id": 2,
+          "title": "More efficient",
+          "content": "Reduce costs, speed up operations thanks to real-time data.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-lightbulb'><path d=\"M16 7h6v6\"/><path d=\"m22 7-8.5 8.5-5-5L2 17\"/></svg>"
+        },
+        {
+          "id": 3,
+          "title": "Safer",
+          "content": "Stable system, strict authorization, maximum security.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevrons-left-right'><path d=\"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z\"/><path d=\"m9 12 2 2 4-4\"/></svg>"
+        }
+      ]
+    },
+    "questions": {
+      "title": "Frequently Asked Questions",
+      "list": [
+        {
+          "question": "What types of devices and systems can Uboard connect to in an enterprise?",
+          "answer": "Uboard offers flexible integration, supporting connections to various data sources such as electricity/water meters, Data Loggers, PLC/controllers, sensors, VFDs, and even ERP/HRM systems. The platform supports standard protocols like Modbus RTU/TCP, OPC UA, Open API, and connects with SCADA, BMS, IoT."
+        },
+        {
+          "question": "How does Uboard's smart alert feature work?",
+          "answer": "Uboard provides smart alerts by detecting anomalies, predicting failures, and sending maintenance notifications via SMS/Email/App."
+        },
+        {
+          "question": "Does Uboard ensure data is not lost during network outages (Internet, 4G/5G) at the factory?",
+          "answer": "Yes, through Udata Gateway, data is still stored during network outages thanks to Data Buffering. Uboard also stores data for 30 days when disconnected."
+        }
+      ]
+    }
+  },
+  "Ugate": {
+    "heroSection": {
+      "heading": "Welcome to Ugate",
+      "excerpt": "Smart technical support & AI for businesses",
+      "color": "blue",
+      "contact": "Try now"
+    },
+    "features": {
+      "title": "Outstanding features",
+      "lists": [
+        {
+          "img": "/image/products/ugate/AI-chat.webp",
+          "title": "AI Q&A",
+          "desc": "Take a photo of device errors, AI reads error codes & provides standardized troubleshooting procedures."
+        },
+        {
+          "img": "/image/products/ugate/knowledge.webp",
+          "title": "Shared knowledge base",
+          "desc": "Manage organizational knowledge: store troubleshooting experience, turning it into a 'shared knowledge base' for the whole company."
+        },
+        {
+          "img": "/image/products/ugate/qr.webp",
+          "title": "Barcode/serial scanning",
+          "desc": "AI scans barcodes for verification, ensures genuine components, reduces counterfeit risks."
+        },
+        {
+          "img": "/image/products/ugate/authorization.webp",
+          "title": "Role-based authorization",
+          "desc": "Clear roles, separated data, ensuring security and strict control."
+        },
+        {
+          "img": "/image/products/ugate/fixing.webp",
+          "title": "Repair and maintenance planning",
+          "desc": "Automatically analyzes device data to suggest optimal maintenance schedules, reducing failures and extending operational lifespan."
+        },
+        {
+          "img": "/image/products/ugate/resources-management.webp",
+          "title": "Resource management",
+          "desc": "Manage device catalog, spare parts, suppliers, and allocation lists."
+        }
+      ]
+    },
+    "singleFeature": {
+      "first": {
+        "title": "Application in AI assistant for operations & technical knowledge management",
+        "subTitle": "",
+        "desc": "Helps businesses centralize operational data, standardize workflows, and manage knowledge for effective team collaboration. Benefits: Centralized data & operations; 50% reduction in request handling time; Preserve & reuse knowledge.",
+        "img": "/image/products/ugate/Ugate-1.webp"
+      },
+      "second": {
+        "title": "Application in conversational AI assistant & product verification",
+        "subTitle": "",
+        "desc": "Helps engineers, managers, and businesses instantly look up knowledge, verify genuine devices, and clarify CO/CQ for transparency and risk reduction. Benefits: 90% reduction in lookup & verification time; Ensure genuine devices, reduce counterfeit risks; 50% reduction in troubleshooting time, support new engineers to quickly master.",
+        "img": "/image/products/ugate/Ugate-2.webp"
+      }
+    },
+    "whyChooseUs": {
+      "title": "Why choose <span class='text-primary'>Ugate</span>",
+      "subTitle": "Achieve your goals effectively",
+      "contents": [
+        {
+          "id": 1,
+          "title": "Smart AI support",
+          "content": "Technical Q&A and business assistant on the same platform.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-mouse-pointer-click'><path d=\"M12 6V2H8\"/><path d=\"M15 11v2\"/><path d=\"M2 12h2\"/><path d=\"M20 12h2\"/><path d=\"M20 16a2 2 0 0 1-2 2H8.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 4 20.286V8a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2z\"/><path d=\"M9 11v2\"/></svg>"
+        },
+        {
+          "id": 2,
+          "title": "Automated operations",
+          "content": "Solve problems quickly, reduce workload for technical teams.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-lightbulb'><circle cx=\"18\" cy=\"18\" r=\"3\"/><circle cx=\"6\" cy=\"6\" r=\"3\"/><path d=\"M13 6h3a2 2 0 0 1 2 2v7\"/><path d=\"M11 18H8a2 2 0 0 1-2-2V9\"/></svg>"
+        },
+        {
+          "id": 3,
+          "title": "Flexible customization",
+          "content": "Train AI according to each organization's data and needs.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevrons-left-right'><path d=\"M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z\"/></svg>"
+        }
+      ]
+    },
+    "questions": {
+      "title": "Frequently Asked Questions",
+      "list": [
+        {
+          "question": "What specific AI features does Ugate offer and how do they benefit operations?",
+          "answer": "The AI system in Udata (including Ugate) includes: AI Data Analysis Assistant (detects anomalies and provides early warnings), AI Prediction Assistant (forecasts data values in the short or long term), and AI Reporting Assistant (optimizes operations and supports decision-making)."
+        },
+        {
+          "question": "How does Ugate support technical and operational workflows?",
+          "answer": "Ugate is an AI assistant for technical and operational tasks, with core features including AI Query, Ticket Management, and Technical Knowledge Base."
+        }
+      ]
+    }
+  },
+  "Uzero": {
+    "heroSection": {
+      "heading": "Welcome to Uzero",
+      "excerpt": "Emission calculation – Towards Net Zero 2050 enterprises",
+      "color": "blue",
+      "contact": "Try now"
+    },
+    "features": {
+      "title": "Outstanding features",
+      "lists": [
+        {
+          "img": "/image/products/uzero/auto-calculate.webp",
+          "title": "Automatic calculation",
+          "desc": "Automatically collect electricity meter data to calculate indirect emissions (Scope 2)"
+        },
+        {
+          "img": "/image/products/uzero/auto-report.webp",
+          "title": "Automatic reporting",
+          "desc": "Automatically export reports according to ISO 14064, GHG Protocol, CDP, CBAM"
+        },
+        {
+          "img": "/image/products/uzero/data-collect.webp",
+          "title": "Collect data from multiple sources",
+          "desc": "Enter data in various forms: direct input, upload excel file, API, etc."
+        },
+        {
+          "img": "/image/products/uzero/summary.webp",
+          "title": "Emission summary",
+          "desc": "Compare and calculate emissions by product, unit, actual output."
+        },
+        {
+          "img": "/image/products/uzero/calculate-all-sites.webp",
+          "title": "Calculation for all branches",
+          "desc": "Calculate and manage emissions for all company branches."
+        },
+        {
+          "img": "/image/products/uzero/param-display.webp",
+          "title": "Intuitive parameter display",
+          "desc": "Display emission parameters and data via easy-to-understand charts and dashboards."
+        }
+      ]
+    },
+    "singleFeature": {
+      "first": {
+        "title": "Application in Greenhouse Gas (GHG) Emission Management",
+        "subTitle": "",
+        "desc": "Measure, visualize, and manage greenhouse gas emissions by Scope 1, 2, and 3, helping businesses comply with ESG standards and improve sustainability. Benefits: Ensure report accuracy and audit readiness for ESG compliance; Reduce up to 80% of time compared to manual methods; Identify main emission sources to build effective reduction strategies.",
+        "img": "/image/products/uzero/Uzero.webp"
+      }
+    },
+    "whyChooseUs": {
+      "title": "Why choose <span class='text-primary'>Uzero</span>",
+      "subTitle": "Achieve your goals effectively",
+      "contents": [
+        {
+          "id": 1,
+          "title": "Accurate emission measurement",
+          "content": "Calculate and display greenhouse gas data on the cloud.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-mouse-pointer-click'><rect width=\"16\" height=\"20\" x=\"4\" y=\"2\" rx=\"2\"/><line x1=\"8\" x2=\"16\" y1=\"6\" y2=\"6\"/><line x1=\"16\" x2=\"16\" y1=\"14\" y2=\"18\"/><path d=\"M16 10h.01\"/><path d=\"M12 10h.01\"/><path d=\"M8 10h.01\"/><path d=\"M12 14h.01\"/><path d=\"M8 14h.01\"/><path d=\"M12 18h.01\"/><path d=\"M8 18h.01\"/></svg>"
+        },
+        {
+          "id": 2,
+          "title": "Smart analysis",
+          "content": "Suggest emission reduction solutions, support ESG goals.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-lightbulb'><path d=\"M3 3v16a2 2 0 0 0 2 2h16\"/><path d=\"m19 9-5 5-4-4-3 3\"/></svg>"
+        },
+        {
+          "id": 3,
+          "title": "Safe, easily scalable",
+          "content": "High security, flexible as your business grows.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='lucide lucide-chevrons-left-right'><path d=\"M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z\"/></svg>"
+        }
+      ]
+    },
+    "questions": {
+      "title": "Frequently Asked Questions",
+      "list": [
+        {
+          "question": "How can Uzero help Vietnamese businesses comply with international regulations and the upcoming CBAM mechanism?",
+          "answer": "Uzero is launched in collaboration with Zeroboard (Japan's leading environmental technology company), supporting businesses to calculate, visualize, and manage greenhouse gas (GHG) emissions by Scope 1, 2, and 3. The platform automatically exports reports according to international standards and compliance requirements such as ISO 14064, ESG, CDP, and CBAM."
+        },
+        {
+          "question": "Is Scope 2 emission calculation automated?",
+          "answer": "Yes, Uzero is a greenhouse gas management platform with automated emission calculation features."
+        },
+        {
+          "question": "How are emission data managed and analyzed to move towards Net Zero?",
+          "answer": "Uzero provides emission data analysis (towards Net Zero), helping businesses incorporate emission data into their sustainability roadmap and achieve ESG goals."
+        }
+      ]
+    }
+  },
+  "Career": {
+    "title": "All jobs",
+    "excerpt": "Open jobs",
+    "careers": [
+      {
+        "title": "Sales Officer (Software & IOT Solutions)",
+        "location": {
+          "main": "Nationwide",
+          "sub": ""
+        },
+        "exp": "2-5 years of experience",
+        "link": "https://drive.google.com/file/d/1e6Q8VctnVtgLmx6AMk-c8GPsNPTLkojx/view?usp=sharing"
+      }
+    ]
+  },
+  "Notification": {
+    "title": "Announcements from Udata",
+    "button": {
+      "back": "Back"
+    },
+    "noData": {
+      "home": "No posts available!",
+      "related": "No related posts available!"
+    },
+    "news": "Featured news",
+    "relatedPost": "Related posts",
+    "date": "Published date"
+  },
+  "404": {
+    "title": "Page not found",
+    "content": "The page you are looking for does not exist or has been moved. Please check the URL and try again.",
+    "button": "Back to home"
+  },
+  "MiniUgate": {
+    "heroSection": {
+      "heading": "MiniUgate – AI Chatbot for Website",
+      "excerpt": "Create a smart AI chatbot for your website in just a few minutes. No code needed. No IT required. Part of the Ugate – Udata ecosystem.",
+      "color": "blue",
+      "contact": "Try for free"
+    },
+    "features": {
+      "title": "Key Features",
+      "lists": [
+        {
+          "title": "No-code AI Chatbot",
+          "desc": "Anyone can create a chatbot. No technical knowledge, no developer needed."
+        },
+        {
+          "title": "Train from Website, Documents & FAQs",
+          "desc": "Chatbot accurately understands your business content. Automatically learns from your data."
+        },
+        {
+          "title": "Chat Sessions",
+          "desc": "View & analyze customer conversations. Understand insights and continuously optimize."
+        },
+        {
+          "title": "Support Tickets",
+          "desc": "AI + humans handle important requests. Never miss a potential customer."
+        },
+        {
+          "title": "Customize chatbot interface",
+          "desc": "Colors, tone, branding. Chatbot carries your business identity."
+        }
+      ]
+    },
+    "singleFeature": {
+      "first": {
+        "title": "Your website has traffic, but...",
+        "subTitle": "These are challenges most businesses face",
+        "desc": "<ul><li><strong>65–75%</strong> of visitors leave when not supported immediately</li><li><strong>15–60 minutes</strong> is the average customer support response time</li><li><strong>40–50%</strong> of support questions are repeated daily</li><li><strong>2–3%</strong> average website conversion rate</li></ul>",
+        "img": "/image/products/mini-ugate/MiniUgate-1.webp"
+      },
+      "second": {
+        "title": "MiniUgate changes everything",
+        "subTitle": "Real results when deploying AI Chatbot for your website",
+        "desc": "<ul><li><strong>AI Chatbot effectiveness:</strong> 45–65% of queries handled automatically, under 5 seconds response time, 24/7 – 100% uptime</li><li><strong>Engagement & conversion:</strong> 50–70% of visitors start chatting, +20–30% time-on-site, +15–30% conversion rate</li><li><strong>Resource optimization:</strong> 40–60% reduced support workload, 30–50% lower operational costs</li></ul>",
+        "img": "/image/products/mini-ugate/MiniUgate-2.webp"
+      }
+    },
+    "whyChooseUs": {
+      "title": "Suitable for <span class='text-primary'>multiple industries</span>",
+      "subTitle": "MiniUgate supports diverse business sectors",
+      "contents": [
+        {
+          "id": 1,
+          "title": "E-commerce websites",
+          "content": "AI chatbot automatically recommends products, answers purchase questions, supports orders 24/7.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><circle cx='8' cy='21' r='1'/><circle cx='19' cy='21' r='1'/><path d='M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12'/></svg>"
+        },
+        {
+          "id": 2,
+          "title": "Service businesses",
+          "content": "Help customers book appointments, answer service inquiries, reduce support team workload.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16'/><rect width='20' height='14' x='2' y='6' rx='2'/></svg>"
+        },
+        {
+          "id": 3,
+          "title": "Education & training",
+          "content": "Answer admission questions, recommend courses, support students automatically.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z'/><path d='M22 10v6'/><path d='M6 12.5V16a6 3 0 0 0 12 0v-3.5'/></svg>"
+        },
+        {
+          "id": 4,
+          "title": "Real estate",
+          "content": "Introduce projects, consult pricing, schedule property viewings automatically via chatbot.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><rect width='16' height='20' x='4' y='2' rx='2' ry='2'/><path d='M9 22v-4h6v4'/><path d='M8 6h.01'/><path d='M16 6h.01'/><path d='M12 6h.01'/><path d='M12 10h.01'/><path d='M12 14h.01'/><path d='M16 10h.01'/><path d='M16 14h.01'/><path d='M8 10h.01'/><path d='M8 14h.01'/></svg>"
+        },
+        {
+          "id": 5,
+          "title": "B2B enterprises",
+          "content": "Technical support, solution consulting, automated ticketing for request handling.",
+          "icon": "<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2'/><circle cx='9' cy='7' r='4'/><path d='M22 21v-2a4 4 0 0 0-3-3.87'/><path d='M16 3.13a4 4 0 0 1 0 7.75'/></svg>"
+        }
+      ]
+    },
+    "questions": {
+      "title": "Frequently Asked Questions",
+      "list": [
+        {
+          "question": "What is MiniUgate?",
+          "answer": "MiniUgate is a no-code AI Chatbot platform for websites, helping you create smart chatbots in just a few minutes. No code, no IT needed – anyone can use it!"
+        },
+        {
+          "question": "How long does it take to create a chatbot?",
+          "answer": "You can create an AI chatbot for your website in just a few minutes with 3 simple steps: (1) Paste your website link, (2) Set up prompt/tone, (3) Copy embed code and add to your website."
+        },
+        {
+          "question": "Where does MiniUgate learn data from?",
+          "answer": "MiniUgate chatbot learns from multiple sources: Your website, Documents, and FAQs that you provide. The chatbot will accurately understand the content and context of your business."
+        },
+        {
+          "question": "Is coding required?",
+          "answer": "No coding needed! MiniUgate is a no-code platform, meaning anyone can create and manage chatbots without technical knowledge or IT skills."
+        },
+        {
+          "question": "How to embed chatbot on website?",
+          "answer": "Very simple! After setting up the chatbot, just copy the embed code and paste it into your website. The chatbot will work immediately."
+        },
+        {
+          "question": "Does MiniUgate have support tickets?",
+          "answer": "Yes! MiniUgate has a Support Tickets feature where AI + humans collaborate to handle important requests. When the chatbot cannot answer, requests are converted into tickets."
+        },
+        {
+          "question": "What benefits does MiniUgate provide?",
+          "answer": "MiniUgate helps: Reduce customer support & sales workload, increase time-on-site by 20-30%, increase conversion rate by 15-30%, save 30-50% operational costs, and operate 24/7."
+        },
+        {
+          "question": "Is MiniUgate free?",
+          "answer": "You can try MiniUgate for free! Visit mini.ugate.ai to sign up and start creating an AI chatbot for your website today."
+        },
+        {
+          "question": "How does MiniUgate work?",
+          "answer": "Just 3 simple steps: Step 1 – Your website: Content is scanned & trained. Step 2 – MiniUgate AI: Processes & understands context. Step 3 – Live Chat: Responds to customers instantly. Completed in minutes."
+        }
+      ]
+    }
+  }
+}
