@@ -595,7 +595,7 @@ const translations = {
     'hero.badge': 'NỀN TẢNG AIoT CHO CHUYỂN ĐỔI SỐ XANH',
     'hero.title.part1': 'Biến dữ liệu doanh nghiệp thành',
     'hero.title.highlight': 'trí tuệ vận hành thời gian thực',
-    'hero.subtitle': 'Udata kết nối AI, IoT và dữ liệu vận hành vào một lớp trí tuệ tập trung, giúp doanh nghiệp nhìn thấy toàn bộ dòng chảy<br className="hidden md:block"/>sản xuất, kho vận, tài chính và năng lượng — từ đó tối ưu hiệu suất, kiểm soát chi phí và phát triển bền vững.',
+    'hero.subtitle': 'Udata kết nối AI, IoT và dữ liệu vận hành vào một lớp trí tuệ tập trung, giúp doanh nghiệp nhìn thấy toàn bộ dòng chảy sản xuất, kho vận, tài chính và năng lượng — từ đó tối ưu hiệu suất, kiểm soát chi phí và phát triển bền vững.',
     'hero.subtitle.mobile': 'Kết nối dữ liệu vận hành và tài chính, xây dựng AI agent, và mở rộng các luồng công việc thông minh của doanh nghiệp.',
     'hero.btn.freeTrial': 'Đặt lịch Demo',
     'hero.btn.seePlatform': 'Khám phá giải pháp',

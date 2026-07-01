@@ -293,14 +293,14 @@ export default function BuildToOrderPage() {
         {/* BTO Use Cases Section */}
         <section id="bto-use-cases" className="max-w-[1440px] mx-auto px-4 md:px-8 mb-24 md:mb-32 scroll-mt-32">
           <ScrollReveal>
-            <div className="text-center mb-16">
+            <div className="text-center mb-8">
               <div className="inline-flex items-center justify-center px-3 md:px-4 py-1.5 md:py-2 rounded-full bg-[#22D3EE]/5 border border-[#22D3EE]/20 text-[#22D3EE] font-display-md text-[10px] sm:text-xs md:text-sm mb-4 md:mb-6 uppercase tracking-widest shadow-[0_0_15px_rgba(34,211,238,0.1)] w-fit mx-auto">
                 <span className="leading-tight">{t('bto.usecase.badge')}</span>
               </div>
               <h2 className="text-3xl md:text-5xl font-display-lg font-bold text-white mb-6">
                 {t('bto.usecase.title')}
               </h2>
-              <p className="text-white/70 font-body-md text-lg max-w-3xl mx-auto">
+              <p className="text-white/70 font-body-md text-lg max-w-5xl mx-auto">
                 {t('bto.usecase.desc')}
               </p>
             </div>
@@ -329,29 +329,29 @@ export default function BuildToOrderPage() {
 
             {/* Active Content */}
             <ScrollReveal key={`usecase-${useCaseTab}`}>
-              <div className="bg-white/5 border border-white/10 rounded-3xl p-8 md:p-12 lg:p-16 flex flex-col group hover:bg-white/10 transition-colors shadow-lg overflow-hidden">
-                <span className="text-[#10F0CB] bg-[#10F0CB]/10 px-4 py-2 rounded-full font-label-md text-sm uppercase tracking-wider w-fit mb-6 border border-[#10F0CB]/20">
+              <div className="bg-white/5 border border-white/10 rounded-3xl p-6 md:p-8 lg:p-10 flex flex-col group hover:bg-white/10 transition-colors shadow-lg overflow-hidden">
+                <span className="text-[#10F0CB] bg-[#10F0CB]/10 px-4 py-2 rounded-full font-label-md text-sm uppercase tracking-wider w-fit mb-4 border border-[#10F0CB]/20">
                   {t(`bto.usecase.u${useCaseTab}.tag`)}
                 </span>
-                <h3 className="text-white font-display-md text-3xl md:text-4xl font-bold mb-8 group-hover:text-[#22D3EE] transition-colors">
+                <h3 className="text-white font-display-md text-3xl md:text-4xl font-bold mb-6 group-hover:text-[#22D3EE] transition-colors">
                   {t(`bto.usecase.u${useCaseTab}.title`)}
                 </h3>
                 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 mb-10">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-8">
                   <div className="relative pl-6 before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-red-400 before:rounded-full">
-                    <span className="text-white font-title-md text-lg font-bold block mb-3">Challenge</span>
-                    <p className="text-white/70 font-body-md text-base leading-relaxed">{t(`bto.usecase.u${useCaseTab}.challenge`)}</p>
+                    <span className="text-white font-title-md text-lg font-bold block mb-2">Challenge</span>
+                    <p className="text-white/70 font-body-md text-sm md:text-base leading-relaxed">{t(`bto.usecase.u${useCaseTab}.challenge`)}</p>
                   </div>
                   <div className="relative pl-6 before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-[#22D3EE] before:rounded-full">
-                    <span className="text-white font-title-md text-lg font-bold block mb-3">Solution</span>
-                    <p className="text-white/70 font-body-md text-base leading-relaxed">{t(`bto.usecase.u${useCaseTab}.solution`)}</p>
+                    <span className="text-white font-title-md text-lg font-bold block mb-2">Solution</span>
+                    <p className="text-white/70 font-body-md text-sm md:text-base leading-relaxed">{t(`bto.usecase.u${useCaseTab}.solution`)}</p>
                   </div>
                   <div className="relative pl-6 before:absolute before:left-0 before:top-2 before:w-2 before:h-2 before:bg-[#10F0CB] before:rounded-full">
-                    <span className="text-white font-title-md text-lg font-bold block mb-3">Outcome</span>
-                    <div className="flex flex-col gap-3">
+                    <span className="text-white font-title-md text-lg font-bold block mb-2">Outcome</span>
+                    <div className="flex flex-col gap-2">
                       {t(`bto.usecase.u${useCaseTab}.outcome`).split(', ').map(out => (
-                        <div key={out} className="flex items-start gap-3 text-white/80 font-body-md text-base">
-                          <span className="material-symbols-outlined text-[#10F0CB] text-[20px] shrink-0 mt-0.5">check</span>
+                        <div key={out} className="flex items-start gap-3 text-white/80 font-body-md text-sm md:text-base">
+                          <span className="material-symbols-outlined text-[#10F0CB] text-[18px] shrink-0 mt-0.5">check</span>
                           <span className="leading-snug">{out}</span>
                         </div>
                       ))}
@@ -359,14 +359,26 @@ export default function BuildToOrderPage() {
                   </div>
                 </div>
                 
-                <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row sm:items-center gap-4 justify-between bg-black/20 -mx-8 md:-mx-12 lg:-mx-16 -mb-8 md:-mb-12 lg:-mb-16 p-8 md:p-12 lg:p-16">
+                <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row sm:items-center gap-4 justify-between bg-black/20 -mx-6 md:-mx-8 lg:-mx-10 -mb-6 md:-mb-8 lg:-mb-10 p-6 md:p-8 lg:p-10">
                   <span className="text-white/60 font-title-sm text-base">Recommended Offerings:</span>
                   <div className="flex flex-wrap gap-3">
-                    {t(`bto.usecase.u${useCaseTab}.offerings`).split(', ').map(offering => (
-                      <span key={offering} className="text-white font-label-lg text-sm bg-white/10 px-4 py-2 rounded-lg border border-white/10 shadow-inner">
-                        {offering}
-                      </span>
-                    ))}
+                    {t(`bto.usecase.u${useCaseTab}.offerings`).split(', ').map(offering => {
+                      let colorClass = 'text-white bg-white/10 border-white/10 shadow-inner';
+                      const lower = offering.trim().toLowerCase();
+                      if (lower.includes('miniugate') || lower.includes('ugate')) {
+                        colorClass = 'text-[#4AA0F0] bg-[#4AA0F0]/10 border-[#4AA0F0]/30 shadow-[0_0_15px_rgba(74,160,240,0.2)]';
+                      } else if (lower.includes('uboard') || lower.includes('uzero')) {
+                        colorClass = 'text-[#10F0CB] bg-[#10F0CB]/10 border-[#10F0CB]/30 shadow-[0_0_15px_rgba(16,240,203,0.2)]';
+                      } else if (lower.includes('bto')) {
+                        colorClass = 'text-[#22D3EE] bg-[#22D3EE]/10 border-[#22D3EE]/30 shadow-[0_0_15px_rgba(34,211,238,0.2)]';
+                      }
+
+                      return (
+                        <span key={offering} className={`font-label-lg text-sm px-4 py-2 rounded-lg border ${colorClass}`}>
+                          {offering}
+                        </span>
+                      );
+                    })}
                   </div>
                 </div>
               </div>
@@ -470,26 +482,29 @@ export default function BuildToOrderPage() {
 
         {/* Final CTA Section */}
         <section className="max-w-[1440px] mx-auto px-4 md:px-8 mt-24 mb-24 md:mb-32">
-          <div className="bg-gradient-to-br from-[#22D3EE] to-[#10F0CB] rounded-[3rem] p-8 md:p-16 relative overflow-hidden text-center shadow-[0_0_50px_rgba(34,211,238,0.2)]">
+          <div className="bg-[#0C1017] border border-[#22D3EE]/20 rounded-[3rem] p-8 md:p-16 text-center text-white shadow-[0_0_40px_rgba(34,211,238,0.1)] relative overflow-hidden">
+            {/* Decorative background elements */}
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#22D3EE]/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+            <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#3B82F6]/10 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
             <div className="absolute top-0 right-0 w-full h-full bg-[url('/grid-pattern.svg')] opacity-10 pointer-events-none mix-blend-overlay" />
             <ScrollReveal className="relative z-10">
-              <h2 className="text-3xl md:text-5xl font-display-lg font-bold text-[#06101F] mb-6 max-w-4xl mx-auto">
+              <h2 className="text-3xl md:text-5xl font-display-lg font-bold text-white mb-6 max-w-4xl mx-auto">
                 {t('bto.cta.title')}
               </h2>
-              <p className="text-[#06101F]/80 font-body-md text-lg md:text-xl max-w-3xl mx-auto mb-10 leading-relaxed">
+              <p className="text-white/70 font-body-md text-lg md:text-xl max-w-3xl mx-auto mb-10 leading-relaxed">
                 {t('bto.cta.subtitle')}
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <HoverFillButton 
+                <button 
                   onClick={() => router.push('/dung-thu')}
-                  className="w-full sm:w-auto bg-[#06101F] text-white px-8 py-4 rounded-xl font-title-lg text-base font-bold shadow-xl transition-all flex items-center justify-center gap-2 group whitespace-nowrap border border-[#06101F]"
+                  className="w-full sm:w-auto bg-[#22D3EE]/10 border border-[#22D3EE]/50 text-[#22D3EE] hover:bg-[#22D3EE] hover:text-[#06101F] shadow-[0_0_20px_rgba(34,211,238,0.2)] hover:shadow-[0_0_30px_rgba(34,211,238,0.4)] px-8 py-4 rounded-xl font-title-lg text-base font-bold transition-all duration-300 hover:-translate-y-1 flex items-center justify-center gap-2 group whitespace-nowrap"
                 >
                   {t('bto.cta.btn1')}
                   <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
-                </HoverFillButton>
+                </button>
                 <button 
                   onClick={() => document.getElementById('bto-use-cases')?.scrollIntoView({ behavior: 'smooth' })}
-                  className="w-full sm:w-auto bg-black/10 border border-black/10 text-[#06101F] px-8 py-4 rounded-xl font-title-lg text-base font-bold hover:bg-black/20 transition-colors flex items-center justify-center gap-2 group whitespace-nowrap"
+                  className="w-full sm:w-auto bg-transparent hover:bg-white/5 text-white/80 hover:text-white border border-white/20 px-8 py-4 rounded-xl font-title-lg text-base font-bold transition-all flex items-center justify-center gap-2 group whitespace-nowrap backdrop-blur-sm"
                 >
                   {t('bto.cta.btn2')}
                   <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>

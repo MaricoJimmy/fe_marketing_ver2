@@ -603,21 +603,24 @@ export default function OffshoreDevTeamsPage() {
 
         {/* Final CTA Section */}
         <section className="max-w-[1440px] mx-auto px-4 md:px-8 mt-24 mb-24 md:mb-32">
-          <div className="bg-gradient-to-br from-[#22D3EE] to-[#10F0CB] rounded-[3rem] p-8 md:p-16 relative overflow-hidden text-center">
+          <div className="bg-[#0C1017] border border-[#22D3EE]/20 rounded-[3rem] p-8 md:p-16 text-center text-white shadow-[0_0_40px_rgba(34,211,238,0.1)] relative overflow-hidden">
+            {/* Decorative background elements */}
+            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#22D3EE]/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+            <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#3B82F6]/10 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
             <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10 mix-blend-overlay pointer-events-none" />
             
             <ScrollReveal>
               <div className="relative z-10 max-w-4xl mx-auto">
-                <h2 className="text-3xl md:text-5xl font-display-lg font-bold text-[#06101F] mb-6">
+                <h2 className="text-3xl md:text-5xl font-display-lg font-bold text-white mb-6">
                   {t('odc.cta.title')}
                 </h2>
-                <p className="text-[#06101F]/80 font-body-md text-lg md:text-xl mb-10 max-w-2xl mx-auto font-medium">
+                <p className="text-white/70 font-body-md text-lg md:text-xl mb-10 max-w-2xl mx-auto font-medium">
                   {t('odc.cta.subtitle')}
                 </p>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                   <button 
                     onClick={() => router.push('/dung-thu')}
-                    className="w-full sm:w-auto bg-[#06101F] text-white px-8 py-4 rounded-xl font-title-lg text-base font-bold shadow-xl hover:-translate-y-1 transition-transform flex items-center justify-center gap-2 group whitespace-nowrap"
+                    className="w-full sm:w-auto bg-[#22D3EE]/10 border border-[#22D3EE]/50 text-[#22D3EE] hover:bg-[#22D3EE] hover:text-[#06101F] shadow-[0_0_20px_rgba(34,211,238,0.2)] hover:shadow-[0_0_30px_rgba(34,211,238,0.4)] px-8 py-4 rounded-xl font-title-lg text-base font-bold transition-all duration-300 hover:-translate-y-1 flex items-center justify-center gap-2 group whitespace-nowrap"
                   >
                     {t('odc.cta.btn1')}
                     <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
@@ -629,7 +632,7 @@ export default function OffshoreDevTeamsPage() {
                         modelsSection.scrollIntoView({ behavior: 'smooth' });
                       }
                     }}
-                    className="w-full sm:w-auto bg-white/20 hover:bg-white/30 text-[#06101F] border border-[#06101F]/10 px-8 py-4 rounded-xl font-title-lg text-base font-bold transition-all flex items-center justify-center gap-2 whitespace-nowrap backdrop-blur-sm"
+                    className="w-full sm:w-auto bg-transparent hover:bg-white/5 text-white/80 hover:text-white border border-white/20 px-8 py-4 rounded-xl font-title-lg text-base font-bold transition-all flex items-center justify-center gap-2 whitespace-nowrap backdrop-blur-sm"
                   >
                     {t('odc.cta.btn2')}
                   </button>

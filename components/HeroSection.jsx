@@ -90,17 +90,17 @@ export default function HeroSection({ videoSrc }) {
       </div>
 
       <div className="max-w-[1440px] w-full mx-auto text-center relative z-10 -mt-16">
-        <div className="max-w-[1200px] mx-auto space-y-md flex flex-col items-center w-full px-4">
+        <div className="max-w-[1200px] mx-auto space-y-md flex flex-col items-center w-full px-4 lg:pt-10">
           {/* Badge */}
           <div className="inline-block border border-[#22D3EE]/20 bg-[#22D3EE]/5 text-[#22D3EE] px-3 md:px-4 py-1 md:py-1.5 rounded-full text-[10px] sm:text-xs font-bold tracking-widest uppercase mb-4 md:mb-6 backdrop-blur-sm max-w-[90vw] md:max-w-none text-center">
             {t('hero.badge')}
           </div>
 
-          <h1 className="font-display-lg text-[clamp(22px,6.5vw,28px)] tracking-tighter sm:tracking-normal leading-[1.3] sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white md:leading-[1.2] drop-shadow-lg text-center w-full px-0 sm:px-2 flex flex-col items-center justify-start min-h-[140px] md:min-h-[200px]">
-            <div className="mb-1 md:mb-4 whitespace-nowrap sm:whitespace-normal">
+          <h1 className="font-display-lg text-[clamp(22px,6.5vw,28px)] tracking-tighter sm:tracking-normal leading-[1.3] sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white md:leading-[1.2] drop-shadow-lg text-center w-full px-0 sm:px-2 flex flex-col items-center justify-start min-h-[140px] md:min-h-[160px]">
+            <div className="mb-1 md:mb-2 whitespace-nowrap sm:whitespace-normal">
               {t('hero.title.part1')}
             </div>
-            <div className="w-full max-w-[800px] h-[60px] sm:h-[96px] md:h-[120px] lg:h-[144px] flex justify-center">
+            <div className="w-full max-w-[800px] h-[60px] sm:h-[96px] md:h-[100px] lg:h-[90px] flex justify-center">
               <div>
                 <span className="bg-gradient-to-r from-[#22D3EE] to-[#10F0CB] bg-clip-text text-transparent">
                   {currentText}
@@ -112,7 +112,7 @@ export default function HeroSection({ videoSrc }) {
 
           {/* Desktop Subtitle */}
           <p 
-            className="hidden md:block font-body-md text-xl text-white/70 w-full max-w-3xl mx-auto drop-shadow-md mt-6 text-center px-0 leading-relaxed"
+            className="hidden md:block font-body-md text-xl text-white/70 w-full max-w-3xl mx-auto drop-shadow-md mt-2 text-center px-0 leading-relaxed"
             dangerouslySetInnerHTML={{ __html: t('hero.subtitle') }}
           />
           {/* Mobile Subtitle */}
@@ -121,7 +121,7 @@ export default function HeroSection({ videoSrc }) {
             dangerouslySetInnerHTML={{ __html: t('hero.subtitle.mobile') }}
           />
 
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-3 md:gap-4 pt-4 md:pt-8 w-full px-4 sm:px-0">
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-3 md:gap-4 pt-4 md:pt-4 w-full px-4 sm:px-0">
             <HoverFillButton 
               onClick={() => router.push('/dung-thu')}
               className="w-full sm:w-auto justify-center bg-gradient-to-r from-[#22D3EE] to-[#10F0CB] text-[#06101F] px-6 md:px-8 py-3 md:py-3.5 rounded-xl font-bold text-sm md:text-base shadow-[0_0_20px_rgba(34,211,238,0.4)] transition-all flex items-center gap-2"

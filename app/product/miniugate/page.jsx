@@ -649,12 +649,9 @@ export default function MiniUgatePage() {
         <div className="hidden md:flex flex-row items-center md:items-start justify-between gap-0 relative w-full">
           
           {/* Step 1 */}
-          <div 
-            className={`flex flex-col items-center text-center z-10 flex-1 px-4 transition-all duration-500 cursor-pointer ${activeWorkflowStep === 0 ? 'opacity-100 scale-105' : 'opacity-40 scale-100 hover:opacity-70'}`}
-            onClick={() => setActiveWorkflowStep(0)}
-          >
-            <div className={`w-24 h-24 rounded-3xl flex items-center justify-center mb-6 transition-all duration-500 ${activeWorkflowStep === 0 ? 'bg-[#4AA0F0]/20 border border-[#4AA0F0]/50 shadow-[0_0_40px_rgba(74,160,240,0.3)]' : 'bg-white/5 border border-white/10'}`}>
-              <span className={`material-symbols-outlined text-5xl transition-colors duration-500 ${activeWorkflowStep === 0 ? 'text-[#4AA0F0]' : 'text-white/50'}`}>language</span>
+          <div className="flex flex-col items-center text-center z-10 flex-1 px-4 opacity-100 transition-transform duration-300 hover:scale-105">
+            <div className="w-24 h-24 rounded-3xl flex items-center justify-center mb-6 bg-[#4AA0F0]/20 border border-[#4AA0F0]/50 shadow-[0_0_40px_rgba(74,160,240,0.3)]">
+              <span className="material-symbols-outlined text-5xl text-[#4AA0F0]">language</span>
             </div>
             <h3 className="text-xl font-bold text-white mb-2">
               <span className="inline-block bg-[#4AA0F0]/20 text-[#4AA0F0] text-xs px-2 py-0.5 rounded-full mr-2 mb-1">{lang === 'EN' ? "Step 1" : "Bước 1"}</span>
@@ -665,19 +662,16 @@ export default function MiniUgatePage() {
           </div>
 
           {/* Arrow 1 */}
-          <div className={`flex absolute top-[48px] left-[calc(16.666%+64px)] right-[calc(50%+64px)] items-center z-0 -translate-y-1/2 transition-opacity duration-500 ${activeWorkflowStep === 0 ? 'opacity-100' : 'opacity-30'}`}>
+          <div className="flex absolute top-[48px] left-[calc(16.666%+64px)] right-[calc(50%+64px)] items-center z-0 -translate-y-1/2 opacity-100">
              <div className="w-full h-[2px] bg-gradient-to-r from-transparent via-[#4AA0F0]/50 to-[#4AA0F0] relative rounded-full">
                 <div className="absolute -right-[1px] top-1/2 -translate-y-1/2 w-0 h-0 border-t-[5px] border-t-transparent border-b-[5px] border-b-transparent border-l-[6px] border-l-[#4AA0F0]"></div>
              </div>
           </div>
 
           {/* Step 2 */}
-          <div 
-            className={`flex flex-col items-center text-center z-10 flex-1 px-4 transition-all duration-500 cursor-pointer ${activeWorkflowStep === 1 ? 'opacity-100 scale-105' : 'opacity-40 scale-100 hover:opacity-70'}`}
-            onClick={() => setActiveWorkflowStep(1)}
-          >
-            <div className={`w-24 h-24 rounded-3xl flex items-center justify-center mb-6 transition-all duration-500 ${activeWorkflowStep === 1 ? 'bg-gradient-to-br from-[#4AA0F0] to-[#76C0F8] shadow-[0_0_50px_rgba(74,160,240,0.5)]' : 'bg-white/5 border border-white/10'}`}>
-              <span className={`material-symbols-outlined text-5xl transition-colors duration-500 ${activeWorkflowStep === 1 ? 'text-[#06101F]' : 'text-white/50'}`}>psychology</span>
+          <div className="flex flex-col items-center text-center z-10 flex-1 px-4 opacity-100 transition-transform duration-300 hover:scale-105">
+            <div className="w-24 h-24 rounded-3xl flex items-center justify-center mb-6 bg-gradient-to-br from-[#4AA0F0] to-[#76C0F8] shadow-[0_0_50px_rgba(74,160,240,0.5)]">
+              <span className="material-symbols-outlined text-5xl text-[#06101F]">psychology</span>
             </div>
             <h3 className="text-xl font-bold text-white mb-2">
               <span className="inline-block bg-[#4AA0F0]/20 text-[#4AA0F0] text-xs px-2 py-0.5 rounded-full mr-2 mb-1">{lang === 'EN' ? "Step 2" : "Bước 2"}</span>
@@ -688,19 +682,16 @@ export default function MiniUgatePage() {
           </div>
 
           {/* Arrow 2 */}
-          <div className={`flex absolute top-[48px] left-[calc(50%+64px)] right-[calc(16.666%+64px)] items-center z-0 -translate-y-1/2 transition-opacity duration-500 ${activeWorkflowStep === 1 ? 'opacity-100' : 'opacity-30'}`}>
+          <div className="flex absolute top-[48px] left-[calc(50%+64px)] right-[calc(16.666%+64px)] items-center z-0 -translate-y-1/2 opacity-100">
              <div className="w-full h-[2px] bg-gradient-to-r from-transparent via-[#4AA0F0]/50 to-[#4AA0F0] relative rounded-full">
                 <div className="absolute -right-[1px] top-1/2 -translate-y-1/2 w-0 h-0 border-t-[5px] border-t-transparent border-b-[5px] border-b-transparent border-l-[6px] border-l-[#4AA0F0]"></div>
              </div>
           </div>
 
           {/* Step 3 */}
-          <div 
-            className={`flex flex-col items-center text-center z-10 flex-1 px-4 transition-all duration-500 cursor-pointer ${activeWorkflowStep === 2 ? 'opacity-100 scale-105' : 'opacity-40 scale-100 hover:opacity-70'}`}
-            onClick={() => setActiveWorkflowStep(2)}
-          >
-            <div className={`w-24 h-24 rounded-3xl flex items-center justify-center mb-6 transition-all duration-500 ${activeWorkflowStep === 2 ? 'bg-[#4AA0F0]/20 border border-[#4AA0F0]/50 shadow-[0_0_40px_rgba(74,160,240,0.3)]' : 'bg-white/5 border border-white/10'}`}>
-              <span className={`material-symbols-outlined text-5xl transition-colors duration-500 ${activeWorkflowStep === 2 ? 'text-[#4AA0F0]' : 'text-white/50'}`}>chat_bubble</span>
+          <div className="flex flex-col items-center text-center z-10 flex-1 px-4 opacity-100 transition-transform duration-300 hover:scale-105">
+            <div className="w-24 h-24 rounded-3xl flex items-center justify-center mb-6 bg-[#4AA0F0]/20 border border-[#4AA0F0]/50 shadow-[0_0_40px_rgba(74,160,240,0.3)]">
+              <span className="material-symbols-outlined text-5xl text-[#4AA0F0]">chat_bubble</span>
             </div>
             <h3 className="text-xl font-bold text-white mb-2">
               <span className="inline-block bg-[#4AA0F0]/20 text-[#4AA0F0] text-xs px-2 py-0.5 rounded-full mr-2 mb-1">{lang === 'EN' ? "Step 3" : "Bước 3"}</span>
@@ -953,7 +944,7 @@ export default function MiniUgatePage() {
 
       {/* ── Final CTA Section ───────────────────────────────────────── */}
       <section className="relative w-full max-w-[1200px] mx-auto px-4 md:px-20 pb-36 z-10">
-        <div className="relative rounded-[40px] p-8 md:p-24 text-center overflow-hidden border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] group transition-all duration-700 hover:border-[#4AA0F0]/30 hover:shadow-[0_0_80px_rgba(74,160,240,0.15)]">
+        <div className="relative rounded-[40px] p-8 md:p-12 lg:p-16 text-center overflow-hidden border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] group transition-all duration-700 hover:border-[#4AA0F0]/30 hover:shadow-[0_0_80px_rgba(74,160,240,0.15)]">
           {/* Animated Background Gradients */}
           <div className="absolute inset-0 bg-gradient-to-b from-[#111114] to-[#050505] z-0"></div>
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] md:w-[800px] h-[400px] md:h-[500px] bg-[#4AA0F0]/15 blur-[100px] md:blur-[120px] rounded-full pointer-events-none group-hover:bg-[#4AA0F0]/25 group-hover:scale-110 transition-all duration-1000 z-0"></div>
@@ -969,7 +960,7 @@ export default function MiniUgatePage() {
             </div>
             
             {/* Heading */}
-            <h2 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white leading-[1.1] mb-6 tracking-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-7xl font-extrabold text-white leading-[1.1] mb-6 tracking-tight text-center">
               {lang === 'EN' ? "Turn your website into a" : "Biến website thành"}<br/>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4AA0F0] via-[#76C0F8] to-[#E0F2FE] drop-shadow-lg">
                 {lang === 'EN' ? "24/7 AI consulting channel" : "kênh tư vấn AI 24/7"}

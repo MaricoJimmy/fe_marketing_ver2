@@ -5,7 +5,8 @@ import { useLanguage } from '@/contexts/LanguageContext';
 export default function SolutionUseCases() {
   const { lang } = useLanguage();
   const [activeTab, setActiveTab] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState(false); // Used to pause auto-cycle
+  const [isDragging, setIsDragging] = useState(false); // Used to pause auto-scroll
 
   const images = [
     "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200", // Factory
@@ -62,7 +63,10 @@ export default function SolutionUseCases() {
   ];
 
   const tabsRef = useRef(null);
-  const scrollDirection = useRef(1);
+  
+  // Drag to scroll refs
+  const startX = useRef(0);
+  const scrollLeftPos = useRef(0);
 
   // Continuous JS Marquee for tabs
   useEffect(() => {
@@ -72,7 +76,8 @@ export default function SolutionUseCases() {
     let animationFrameId;
 
     const scrollStep = () => {
-      if (!isHovered) {
+      // Keep scrolling unless the user is actively dragging the tabs
+      if (!isDragging) {
         container.scrollLeft += 1; // smooth 1px scroll
         // Seamless loop back to start if it reached the midpoint of duplicated content
         if (container.scrollLeft >= container.scrollWidth / 2) {
@@ -85,7 +90,7 @@ export default function SolutionUseCases() {
     animationFrameId = requestAnimationFrame(scrollStep);
 
     return () => cancelAnimationFrame(animationFrameId);
-  }, [isHovered]);
+  }, [isDragging]);
 
   // Auto-cycle tabs
   useEffect(() => {
@@ -202,10 +207,26 @@ export default function SolutionUseCases() {
           {/* Scrollable Horizontal Menu */}
           <div 
             ref={tabsRef}
-            className="w-full overflow-x-auto pb-6 relative hide-scrollbar [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            onMouseDown={(e) => {
+              setIsDragging(true);
+              startX.current = e.pageX - tabsRef.current.offsetLeft;
+              scrollLeftPos.current = tabsRef.current.scrollLeft;
+            }}
+            onMouseLeave={() => setIsDragging(false)}
+            onMouseUp={() => setIsDragging(false)}
+            onMouseMove={(e) => {
+              if (!isDragging) return;
+              e.preventDefault();
+              const x = e.pageX - tabsRef.current.offsetLeft;
+              const walk = (x - startX.current) * 1.5;
+              tabsRef.current.scrollLeft = scrollLeftPos.current - walk;
+            }}
+            onTouchStart={() => setIsDragging(true)}
+            onTouchEnd={() => setIsDragging(false)}
+            className={`w-full overflow-x-auto pb-6 relative hide-scrollbar [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
             style={{ WebkitMaskImage: 'linear-gradient(to right, transparent, black 5%, black 95%, transparent)', maskImage: 'linear-gradient(to right, transparent, black 5%, black 95%, transparent)' }}
           >
-            <div className="flex w-max px-4">
+            <div className="flex w-max px-4 pointer-events-auto">
               {[...Array(2)].map((_, groupIdx) => (
                 <div key={groupIdx} className="flex gap-4 pr-4">
                   {useCases.map((useCase, index) => {
@@ -215,7 +236,7 @@ export default function SolutionUseCases() {
                         key={`${groupIdx}-${index}`}
                         id={`usecase-tab-${groupIdx}-${index}`}
                         onClick={() => setActiveTab(index)}
-                        className={`whitespace-nowrap px-6 py-3.5 rounded-full border text-sm md:text-base font-bold transition-all duration-300 snap-center ${
+                        className={`whitespace-nowrap px-6 py-3.5 rounded-full border text-sm md:text-base font-bold transition-all duration-300 ${
                           isActive 
                             ? 'bg-[#22D3EE] text-[#06101F] border-[#22D3EE] shadow-[0_0_20px_rgba(34,211,238,0.4)] scale-105' 
                             : 'bg-[#22D3EE]/5 text-[#9CA3AF] border-white/10 hover:bg-white/10 hover:text-white hover:border-white/20'

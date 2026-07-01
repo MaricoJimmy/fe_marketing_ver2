@@ -223,20 +223,20 @@ export default function CareersPage() {
 
       {/* Open Application CTA */}
       <section className="pb-20 px-4 md:px-margin-desktop relative">
-        <div className="max-w-[1000px] mx-auto bg-gradient-to-r from-[#0284c7] to-[#06b6d4] rounded-3xl p-12 md:p-16 text-center text-white shadow-xl relative overflow-hidden">
+        <div className="max-w-[1000px] mx-auto bg-[#0C1017] border border-[#22D3EE]/20 rounded-3xl p-12 md:p-16 text-center text-white shadow-[0_0_40px_rgba(34,211,238,0.1)] relative overflow-hidden">
           {/* Decorative background elements */}
-          <div className="absolute -top-24 -left-24 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
-          <div className="absolute -bottom-24 -right-24 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[#22D3EE]/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+          <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#3B82F6]/10 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
           
-          <h2 className="font-headline-lg text-3xl md:text-4xl font-bold mb-4 relative z-10">
+          <h2 className="font-headline-lg text-3xl md:text-4xl font-bold mb-4 relative z-10 text-white">
             {t('careers.cta.title')}
           </h2>
-          <p className="text-white/90 text-lg md:text-xl mb-10 max-w-2xl mx-auto relative z-10 font-body-md">
+          <p className="text-white/70 text-lg md:text-xl mb-10 max-w-2xl mx-auto relative z-10 font-body-md">
             {t('careers.cta.subtitle')}
           </p>
           <a 
             href={`mailto:hr@udata.ai?subject=${encodeURIComponent('Application for Open Application')}`}
-            className="bg-white text-[#0284c7] hover:bg-gray-50 px-8 py-4 rounded-xl font-bold font-title-md transition-all hover:scale-105 flex items-center gap-2 mx-auto w-fit relative z-10 shadow-lg"
+            className="bg-[#22D3EE]/10 border border-[#22D3EE]/50 text-[#22D3EE] hover:bg-[#22D3EE] hover:text-[#06101F] shadow-[0_0_20px_rgba(34,211,238,0.2)] hover:shadow-[0_0_30px_rgba(34,211,238,0.4)] px-8 py-4 rounded-xl font-bold font-title-md transition-all duration-300 hover:-translate-y-1 flex items-center gap-2 mx-auto w-fit relative z-10"
           >
             {t('careers.cta.btn')}
             <span className="material-symbols-outlined text-[20px]">send</span>

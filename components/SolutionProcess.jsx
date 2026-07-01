@@ -51,11 +51,11 @@ export default function SolutionProcess() {
         {/* Desktop View */}
         <div className="hidden md:flex flex-row items-start justify-between relative w-full">
           {steps.map((step, idx) => (
-            <div key={idx} className="relative flex-1 flex flex-col items-center">
+            <div key={idx} className="relative flex-1 flex flex-col items-center group">
               
               {/* Arrow to next step */}
               {idx < steps.length - 1 && (
-                <div className={`absolute top-[48px] left-[50%] w-full z-0 px-8 transition-opacity duration-500 ${activeStep === idx ? 'opacity-100' : 'opacity-20'}`}>
+                <div className="absolute top-[48px] left-[calc(50%+64px)] w-[calc(100%-128px)] z-0 transition-opacity duration-500 opacity-100">
                   <div className="w-full h-[2px] bg-gradient-to-r from-transparent via-[#22D3EE]/50 to-[#22D3EE] relative rounded-full">
                     <div className="absolute -right-[1px] top-1/2 -translate-y-1/2 w-0 h-0 border-t-[5px] border-t-transparent border-b-[5px] border-b-transparent border-l-[6px] border-l-[#22D3EE]"></div>
                   </div>
@@ -63,12 +63,9 @@ export default function SolutionProcess() {
               )}
               
               {/* Step Card */}
-              <div 
-                className={`relative z-10 flex flex-col items-center text-center px-4 transition-all duration-500 cursor-pointer ${activeStep === idx ? 'opacity-100 scale-105' : 'opacity-40 scale-100 hover:opacity-70'}`}
-                onClick={() => setActiveStep(idx)}
-              >
-                <div className={`w-24 h-24 rounded-3xl flex items-center justify-center mb-6 transition-all duration-500 ${activeStep === idx ? 'bg-[#22D3EE]/20 border border-[#22D3EE]/50 shadow-[0_0_40px_rgba(34,211,238,0.3)]' : 'bg-white/5 border border-white/10'}`}>
-                  <span className={`text-4xl font-bold transition-colors duration-500 ${activeStep === idx ? 'text-[#22D3EE]' : 'text-white/50'}`}>{step.num}</span>
+              <div className="relative z-10 flex flex-col items-center text-center px-4 transition-transform duration-300 opacity-100 group-hover:scale-105">
+                <div className="w-24 h-24 rounded-3xl flex items-center justify-center mb-6 transition-all duration-500 bg-[#22D3EE]/20 border border-[#22D3EE]/50 shadow-[0_0_40px_rgba(34,211,238,0.3)]">
+                  <span className="text-4xl font-bold transition-colors duration-500 text-[#22D3EE]">{step.num}</span>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-3">
                   {step.title}

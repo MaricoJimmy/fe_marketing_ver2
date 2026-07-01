@@ -56,7 +56,7 @@ export default function UseCaseSteps() {
               
               {/* Arrow to next step */}
               {idx < steps.length - 1 && (
-                <div className="absolute top-[48px] left-[50%] w-full z-0 px-8 transition-opacity duration-500 opacity-60 group-hover:opacity-100">
+                <div className="absolute top-[48px] left-[calc(50%+64px)] w-[calc(100%-128px)] z-0 transition-opacity duration-500 opacity-60 group-hover:opacity-100">
                   <div className="w-full h-[2px] bg-gradient-to-r from-[#22D3EE]/20 via-[#22D3EE]/50 to-[#22D3EE] relative rounded-full">
                     <div className="absolute -right-[1px] top-1/2 -translate-y-1/2 w-0 h-0 border-t-[5px] border-t-transparent border-b-[5px] border-b-transparent border-l-[6px] border-l-[#22D3EE]"></div>
                   </div>
